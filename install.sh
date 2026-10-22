@@ -2150,7 +2150,13 @@ EOF
             printf "\e[33m[+] \e[36mChat id: \033[0m"
             read YOUR_CHAT_ID
         fi
-        while [[ ! "$YOUR_CHAT_ID" =~ ^-?[0-9]+$ ]]; do
+        # Telegram/Bale use numeric chat IDs; Rubika uses GUIDs like u0abc123...
+        if [ "$MODASR_PLATFORM" = "rubika" ]; then
+            CHATID_REGEX='^[A-Za-z0-9]{20,64}$'
+        else
+            CHATID_REGEX='^-?[0-9]+$'
+        fi
+        while [[ ! "$YOUR_CHAT_ID" =~ $CHATID_REGEX ]]; do
             echo -e "\e[91mInvalid chat ID format. Please try again.\033[0m"
             printf "\e[33m[+] \e[36mChat id: \033[0m"
             read YOUR_CHAT_ID
