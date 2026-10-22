@@ -1,1 +1,482 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vLi4vcmVxdWVzdC5waHAnOwpkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL1RlaHJhbicpOwojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCmZ1bmN0aW9uIHRva2VuX3BhbmVsKCRjb2RlX3BhbmVsLCAkdmVyaWZ5ID0gdHJ1ZSkKewogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAiY29kZV9wYW5lbCIsICRjb2RlX3BhbmVsLCAic2VsZWN0Iik7CgogICAgLy8gQ2hlY2sgaWYgcGFuZWwgZGF0YSBleGlzdHMKICAgIGlmICgkcGFuZWwgPT09IG51bGwpIHsKICAgICAgICByZXR1cm4gbnVsbDsKICAgIH0KCiAgICAkdXJsX2dldF90b2tlbiA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAnL2FwaS9hZG1pbi90b2tlbic7CiAgICAkdXNlcm5hbWVfcGFuZWwgPSAkcGFuZWxbJ3VzZXJuYW1lX3BhbmVsJ107CiAgICAkcGFzc3dvcmRfcGFuZWwgPSAkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ107CiAgICBpZiAoJHBhbmVsWydkYXRlbG9naW4nXSAhPSBudWxsICYmICR2ZXJpZnkpIHsKICAgICAgICAkZGF0ZSA9IGpzb25fZGVjb2RlKCRwYW5lbFsnZGF0ZWxvZ2luJ10sIHRydWUpOwogICAgICAgIGlmIChpc3NldCgkZGF0ZVsndGltZSddKSkgewogICAgICAgICAgICAkc3RhcnRfZGF0ZSA9IHRpbWUoKSAtIHN0cnRvdGltZSgkZGF0ZVsndGltZSddKTsKICAgICAgICAgICAgaWYgKCRzdGFydF9kYXRlIDw9IDM2MDApIHsKICAgICAgICAgICAgICAgIHJldHVybiAkZGF0ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgICRkYXRhX3Rva2VuID0gYXJyYXkoCiAgICAgICAgJ3VzZXJuYW1lJyA9PiAkdXNlcm5hbWVfcGFuZWwsCiAgICAgICAgJ3Bhc3N3b3JkJyA9PiAkcGFzc3dvcmRfcGFuZWwKICAgICk7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZCcsCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmxfZ2V0X3Rva2VuKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkZGF0YV90b2tlbik7CiAgICBpZiAoIWVtcHR5KCRyZXNwb25zZVsnZXJyb3InXSkpIHsKICAgICAgICByZXR1cm4gYXJyYXkoImVycm9yIiA9PiAkcmVzcG9uc2VbJ2Vycm9yJ10pOwogICAgfQogICAgJGJvZHkgPSBqc29uX2RlY29kZSgkcmVzcG9uc2VbJ2JvZHknXSwgdHJ1ZSk7CiAgICBpZiAoaXNzZXQoJGJvZHlbJ2FjY2Vzc190b2tlbiddKSkgewogICAgICAgICR0aW1lID0gZGF0ZSgnWS9tL2QgSDppOnMnKTsKICAgICAgICAkZGF0YSA9IGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICAgICAndGltZScgPT4gJHRpbWUsCiAgICAgICAgICAgICdhY2Nlc3NfdG9rZW4nID0+ICRib2R5WydhY2Nlc3NfdG9rZW4nXQogICAgICAgICkpOwogICAgICAgIHVwZGF0ZSgibWFyemJhbl9wYW5lbCIsICJkYXRlbG9naW4iLCAkZGF0YSwgJ25hbWVfcGFuZWwnLCAkcGFuZWxbJ25hbWVfcGFuZWwnXSk7CiAgICB9CiAgICByZXR1cm4gJGJvZHk7Cn0KIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIwoKZnVuY3Rpb24gZ2V0dXNlcigkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFlbXB0eSgkQ2hlY2tfdG9rZW5bJ2Vycm9yJ10pKSB7CiAgICAgICAgcmV0dXJuICRDaGVja190b2tlbjsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS91c2VyLycgLiAkdXNlcm5hbWVfYWNjb3VudDsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCgpmdW5jdGlvbiBHZXRfTm9kZXMoJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFlbXB0eSgkQ2hlY2tfdG9rZW5bJ2Vycm9yJ10pKSB7CiAgICAgICAgcmV0dXJuICRDaGVja190b2tlbjsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9ub2Rlcyc7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdhY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJENoZWNrX3Rva2VuWydhY2Nlc3NfdG9rZW4nXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5nZXQoKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gR2V0X3VzYWdlX05vZGVzKCRsb2NhdGlvbikKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkQ2hlY2tfdG9rZW4gPSB0b2tlbl9wYW5lbCgkbWFyemJhbl9saXN0X2dldFsnY29kZV9wYW5lbCddKTsKICAgIGlmICghZW1wdHkoJENoZWNrX3Rva2VuWydlcnJvciddKSkgewogICAgICAgIHJldHVybiAkQ2hlY2tfdG9rZW47CiAgICB9CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvbm9kZXMvdXNhZ2UnOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnYWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJwogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRDaGVja190b2tlblsnYWNjZXNzX3Rva2VuJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+Z2V0KCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIEdldF9Ob2RlKCRsb2NhdGlvbiwgJE5vZGVpZCkKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkQ2hlY2tfdG9rZW4gPSB0b2tlbl9wYW5lbCgkbWFyemJhbl9saXN0X2dldFsnY29kZV9wYW5lbCddKTsKICAgIGlmICghZW1wdHkoJENoZWNrX3Rva2VuWydlcnJvciddKSkgewogICAgICAgIHJldHVybiAkQ2hlY2tfdG9rZW47CiAgICB9CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvbm9kZS8nIC4gJE5vZGVpZDsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQoKZnVuY3Rpb24gZ2V0dXNlcnMoJGxvY2F0aW9uLCAkc3RhdHVzKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFlbXB0eSgkQ2hlY2tfdG9rZW5bJ2Vycm9yJ10pKSB7CiAgICAgICAgcmV0dXJuICRDaGVja190b2tlbjsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS91c2Vycz9zdGF0dXM9JyAuICRzdGF0dXM7CiAgICBpZiAoIWlzc2V0KCRDaGVja190b2tlblsnYWNjZXNzX3Rva2VuJ10pKQogICAgICAgIHJldHVybjsKICAgICRoZWFkZXJfdmFsdWUgPSAnQmVhcmVyICc7CgogICAgJGNoID0gY3VybF9pbml0KCk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfVVJMLCAkdXJsKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9IVFRQR0VULCB0cnVlKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfVElNRU9VVF9NUywgKCRHTE9CQUxTWydyZXF1ZXN0X2V4ZWNfdGltZW91dCddID8/IG51bGwpID86IDEwMDAwKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9IVFRQSEVBREVSLCBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnQXV0aG9yaXphdGlvbjogJyAuICRoZWFkZXJfdmFsdWUgLiAkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddCiAgICApKTsKCiAgICAkb3V0cHV0ID0gY3VybF9leGVjKCRjaCk7CiAgICBjdXJsX2Nsb3NlKCRjaCk7CiAgICAkZGF0YV91c2VlciA9IGpzb25fZGVjb2RlKCRvdXRwdXQsIHRydWUpOwogICAgcmV0dXJuICRkYXRhX3VzZWVyOwp9CiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSMKZnVuY3Rpb24gZ2V0aW5ib3VuZHMoJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFpc3NldCgkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKSkKICAgICAgICByZXR1cm4gbnVsbDsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9pbmJvdW5kcyc7CiAgICAkaGVhZGVyX3ZhbHVlID0gJ0JlYXJlciAnOwoKICAgICRjaCA9IGN1cmxfaW5pdCgpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1VSTCwgJHVybCk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfSFRUUEdFVCwgdHJ1ZSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIsIHRydWUpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1RJTUVPVVRfTVMsICgkR0xPQkFMU1sncmVxdWVzdF9leGVjX3RpbWVvdXQnXSA/PyBudWxsKSA/OiAxMDAwMCk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfSFRUUEhFQURFUiwgYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0F1dGhvcml6YXRpb246ICcgLiAkaGVhZGVyX3ZhbHVlIC4gJENoZWNrX3Rva2VuWydhY2Nlc3NfdG9rZW4nXQogICAgKSk7CgogICAgJG91dHB1dCA9IGN1cmxfZXhlYygkY2gpOwogICAgY3VybF9jbG9zZSgkY2gpOwogICAgJGluYm91bmRzID0ganNvbl9kZWNvZGUoJG91dHB1dCwgdHJ1ZSk7CiAgICByZXR1cm4gJGluYm91bmRzOwp9CiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSMKZnVuY3Rpb24gUmVzZXRVc2VyRGF0YVVzYWdlKCR1c2VybmFtZV9hY2NvdW50LCAkbG9jYXRpb24pCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJENoZWNrX3Rva2VuID0gdG9rZW5fcGFuZWwoJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSk7CiAgICBpZiAoIWVtcHR5KCRDaGVja190b2tlblsnZXJyb3InXSkpIHsKICAgICAgICByZXR1cm4gJENoZWNrX3Rva2VuOwogICAgfQogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL3VzZXIvJyAuICR1c2VybmFtZV9hY2NvdW50IC4gJy9yZXNldCc7CgogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnYWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJwogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRDaGVja190b2tlblsnYWNjZXNzX3Rva2VuJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdChhcnJheSgpKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gcmV2b2tlX3N1YigkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFlbXB0eSgkQ2hlY2tfdG9rZW5bJ2Vycm9yJ10pKSB7CiAgICAgICAgcmV0dXJuICRDaGVja190b2tlbjsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS91c2VyLycgLiAkdXNlcm5hbWVfYWNjb3VudCAuICcvcmV2b2tlX3N1Yic7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdhY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJENoZWNrX3Rva2VuWydhY2Nlc3NfdG9rZW4nXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KGFycmF5KCkpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCmZ1bmN0aW9uIGFkZHVzZXIoJGxvY2F0aW9uLCAkZGF0YV9saW1pdCwgJHVzZXJuYW1lX2FjLCAkdGltZXN0YW1wLCAkbm90ZSA9ICcnLCAkZGF0YV9saW1pdF9yZXNldCA9ICdub19yZXNldCcsICRuYW1lX3Byb2R1Y3QgPSBmYWxzZSkKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkQ2hlY2tfdG9rZW4gPSB0b2tlbl9wYW5lbCgkbWFyemJhbl9saXN0X2dldFsnY29kZV9wYW5lbCddKTsKICAgIGlmICghZW1wdHkoJENoZWNrX3Rva2VuWydlcnJvciddKSkgewogICAgICAgIHJldHVybiAkQ2hlY2tfdG9rZW47CiAgICB9CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gIi9hcGkvdXNlciI7CiAgICBpZiAoJG1hcnpiYW5fbGlzdF9nZXRbJ2luYm91bmRzJ10gIT0gbnVsbCBhbmQgJG1hcnpiYW5fbGlzdF9nZXRbJ2luYm91bmRzJ10gIT0gIm51bGwiKSB7CiAgICAgICAgaWYgKCRuYW1lX3Byb2R1Y3QgIT0gZmFsc2UgYW5kICRuYW1lX3Byb2R1Y3QgIT0gInVzZXJ0ZXN0IikgewogICAgICAgICAgICAkc3RtdCA9ICRHTE9CQUxTWydwZG8nXS0+cHJlcGFyZSgiU0VMRUNUICogRlJPTSBwcm9kdWN0IFdIRVJFIG5hbWVfcHJvZHVjdCA9ID8gQU5EIChMb2NhdGlvbiA9ID8gT1IgTG9jYXRpb24gPSAnL2FsbCcpIE9SREVSIEJZIExvY2F0aW9uID0gJy9hbGwnIExJTUlUIDEiKTsKICAgICAgICAgICAgJHN0bXQtPmV4ZWN1dGUoWyRuYW1lX3Byb2R1Y3QsICRsb2NhdGlvbl0pOwogICAgICAgICAgICAkcHJvZHVjdCA9ICRzdG10LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICAgICAgaWYgKCRwcm9kdWN0ID09IGZhbHNlIHx8ICRwcm9kdWN0WydpbmJvdW5kcyddID09IGZhbHNlKSB7CiAgICAgICAgICAgICAgICAkaW5ib3VuZHMgPSBqc29uX2RlY29kZSgkbWFyemJhbl9saXN0X2dldFsnaW5ib3VuZHMnXSwgdHJ1ZSk7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAkaW5ib3VuZHMgPSBqc29uX2RlY29kZSgkcHJvZHVjdFsnaW5ib3VuZHMnXSwgdHJ1ZSk7CiAgICAgICAgICAgICAgICAkbWFyemJhbl9saXN0X2dldFsncHJveGllcyddID0gJHByb2R1Y3RbJ3Byb3hpZXMnXTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRpbmJvdW5kcyA9IGpzb25fZGVjb2RlKCRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kcyddLCB0cnVlKTsKICAgICAgICB9CiAgICB9CiAgICBpZiAoIXBhbmVsUHJvdG9jb2xzQ29uZmlndXJlZCgkbWFyemJhbl9saXN0X2dldFsncHJveGllcyddKSkgewogICAgICAgIHJldHVybiBwYW5lbFByb3RvY29sc01pc3NpbmdFcnJvcigkbWFyemJhbl9saXN0X2dldFsnbmFtZV9wYW5lbCddKTsKICAgIH0KICAgIGlmICgkbWFyemJhbl9saXN0X2dldFsndmVyc2lvbl9wYW5lbCddID09ICIxIikgewogICAgICAgICRkYXRhID0gYXJyYXkoCiAgICAgICAgICAgICJwcm94eV9zZXR0aW5ncyIgPT4ganNvbl9kZWNvZGUoJG1hcnpiYW5fbGlzdF9nZXRbJ3Byb3hpZXMnXSksCiAgICAgICAgICAgICJkYXRhX2xpbWl0IiA9PiAkZGF0YV9saW1pdCwKICAgICAgICAgICAgInVzZXJuYW1lIiA9PiAkdXNlcm5hbWVfYWMsCiAgICAgICAgICAgICJub3RlIiA9PiAkbm90ZSwKICAgICAgICAgICAgImRhdGFfbGltaXRfcmVzZXRfc3RyYXRlZ3kiID0+ICRkYXRhX2xpbWl0X3Jlc2V0CiAgICAgICAgKTsKICAgICAgICBpZiAoaXNzZXQoJGluYm91bmRzKSkgewogICAgICAgICAgICAkZGF0YVsnZ3JvdXBfaWRzJ10gPSAkaW5ib3VuZHM7CiAgICAgICAgfQogICAgICAgIGlmICgkbmFtZV9wcm9kdWN0ID09ICJ1c2VydGVzdCIpIHsKICAgICAgICAgICAgaWYgKCRtYXJ6YmFuX2xpc3RfZ2V0Wydvbl9ob2xkX3Rlc3QnXSA9PSAiMCIpIHsKICAgICAgICAgICAgICAgIGlmICgkdGltZXN0YW1wID09IDApIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSAwOwogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSBkYXRlKCdjJywgJHRpbWVzdGFtcCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBpZiAoJHRpbWVzdGFtcCA9PSAwKSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsic3RhdHVzIl0gPSAib25faG9sZCI7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbIm9uX2hvbGRfZXhwaXJlX2R1cmF0aW9uIl0gPSAkdGltZXN0YW1wIC0gdGltZSgpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgaWYgKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb25lY3RvbiddID09ICJvZmZjb25lY3RvbiIpIHsKICAgICAgICAgICAgICAgIGlmICgkdGltZXN0YW1wID09IDApIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSAwOwogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSBkYXRlKCdjJywgJHRpbWVzdGFtcCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBpZiAoJHRpbWVzdGFtcCA9PSAwKSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsic3RhdHVzIl0gPSAib25faG9sZCI7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbIm9uX2hvbGRfZXhwaXJlX2R1cmF0aW9uIl0gPSAkdGltZXN0YW1wIC0gdGltZSgpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfSBlbHNlIHsKICAgICAgICAkZGF0YSA9IGFycmF5KAogICAgICAgICAgICAicHJveGllcyIgPT4ganNvbl9kZWNvZGUoJG1hcnpiYW5fbGlzdF9nZXRbJ3Byb3hpZXMnXSksCiAgICAgICAgICAgICJkYXRhX2xpbWl0IiA9PiAkZGF0YV9saW1pdCwKICAgICAgICAgICAgInVzZXJuYW1lIiA9PiAkdXNlcm5hbWVfYWMsCiAgICAgICAgICAgICJub3RlIiA9PiAkbm90ZSwKICAgICAgICAgICAgImRhdGFfbGltaXRfcmVzZXRfc3RyYXRlZ3kiID0+ICRkYXRhX2xpbWl0X3Jlc2V0CiAgICAgICAgKTsKICAgICAgICBpZiAoaXNzZXQoJGluYm91bmRzKSkgewogICAgICAgICAgICAkZGF0YVsnaW5ib3VuZHMnXSA9ICRpbmJvdW5kczsKICAgICAgICB9CiAgICAgICAgaWYgKCRuYW1lX3Byb2R1Y3QgPT0gInVzZXJ0ZXN0IikgewogICAgICAgICAgICBpZiAoJG1hcnpiYW5fbGlzdF9nZXRbJ29uX2hvbGRfdGVzdCddID09ICIwIikgewogICAgICAgICAgICAgICAgaWYgKCR0aW1lc3RhbXAgPT0gMCkgewogICAgICAgICAgICAgICAgICAgICRkYXRhWyJleHBpcmUiXSA9IDA7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICRkYXRhWyJleHBpcmUiXSA9ICR0aW1lc3RhbXA7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBpZiAoJHRpbWVzdGFtcCA9PSAwKSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbImV4cGlyZSJdID0gMDsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsic3RhdHVzIl0gPSAib25faG9sZCI7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbIm9uX2hvbGRfZXhwaXJlX2R1cmF0aW9uIl0gPSAkdGltZXN0YW1wIC0gdGltZSgpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgaWYgKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb25lY3RvbiddID09ICJvZmZjb25lY3RvbiIpIHsKICAgICAgICAgICAgICAgIGlmICgkdGltZXN0YW1wID09IDApIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSAwOwogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAkZGF0YVsiZXhwaXJlIl0gPSAkdGltZXN0YW1wOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgaWYgKCR0aW1lc3RhbXAgPT0gMCkgewogICAgICAgICAgICAgICAgICAgICRkYXRhWyJleHBpcmUiXSA9IDA7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICRkYXRhWyJleHBpcmUiXSA9IDA7CiAgICAgICAgICAgICAgICAgICAgJGRhdGFbInN0YXR1cyJdID0gIm9uX2hvbGQiOwogICAgICAgICAgICAgICAgICAgICRkYXRhWyJvbl9ob2xkX2V4cGlyZV9kdXJhdGlvbiJdID0gJHRpbWVzdGFtcCAtIHRpbWUoKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnBvc3QoanNvbl9lbmNvZGUoJGRhdGEpKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KLy8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmZ1bmN0aW9uIEdldF9TeXN0ZW1fU3RhdHMoJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFpc3NldCgkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKSkKICAgICAgICByZXR1cm4gbnVsbDsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9zeXN0ZW0nOwogICAgJGhlYWRlcl92YWx1ZSA9ICdCZWFyZXIgJzsKCiAgICAkY2ggPSBjdXJsX2luaXQoKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9VUkwsICR1cmwpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0hUVFBHRVQsIHRydWUpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSLCB0cnVlKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9USU1FT1VUX01TLCAoJEdMT0JBTFNbJ3JlcXVlc3RfZXhlY190aW1lb3V0J10gPz8gbnVsbCkgPzogMTAwMDApOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0hUVFBIRUFERVIsIGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdBdXRob3JpemF0aW9uOiAnIC4gJGhlYWRlcl92YWx1ZSAuICRDaGVja190b2tlblsnYWNjZXNzX3Rva2VuJ10KICAgICkpOwoKICAgICRvdXRwdXQgPSBjdXJsX2V4ZWMoJGNoKTsKICAgIGN1cmxfY2xvc2UoJGNoKTsKICAgICRHZXRfU3lzdGVtX1N0YXRzID0ganNvbl9kZWNvZGUoJG91dHB1dCwgdHJ1ZSk7CiAgICByZXR1cm4gJEdldF9TeXN0ZW1fU3RhdHM7Cn0KLy8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmZ1bmN0aW9uIHJlbW92ZXVzZXIoJGxvY2F0aW9uLCAkdXNlcm5hbWUpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJENoZWNrX3Rva2VuID0gdG9rZW5fcGFuZWwoJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSk7CiAgICBpZiAoIWVtcHR5KCRDaGVja190b2tlblsnZXJyb3InXSkpIHsKICAgICAgICByZXR1cm4gJENoZWNrX3Rva2VuOwogICAgfQogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL3VzZXIvJyAuICR1c2VybmFtZTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmRlbGV0ZSgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiByZW1vdmVub2RlKCRsb2NhdGlvbiwgJG5vZGVpZCkKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkQ2hlY2tfdG9rZW4gPSB0b2tlbl9wYW5lbCgkbWFyemJhbl9saXN0X2dldFsnY29kZV9wYW5lbCddKTsKICAgIGlmICghZW1wdHkoJENoZWNrX3Rva2VuWydlcnJvciddKSkgewogICAgICAgIHJldHVybiAkQ2hlY2tfdG9rZW47CiAgICB9CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvbm9kZS8nIC4gJG5vZGVpZDsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmRlbGV0ZSgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQovLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZnVuY3Rpb24gTW9kaWZ5dXNlcigkbG9jYXRpb24sICR1c2VybmFtZSwgYXJyYXkgJGRhdGEpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJENoZWNrX3Rva2VuID0gdG9rZW5fcGFuZWwoJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSk7CiAgICBpZiAoIWVtcHR5KCRDaGVja190b2tlblsnZXJyb3InXSkpIHsKICAgICAgICByZXR1cm4gJENoZWNrX3Rva2VuOwogICAgfQogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL3VzZXIvJyAuICR1c2VybmFtZTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcGF5bG9hZCA9IGpzb25fZW5jb2RlKCRkYXRhKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRDaGVja190b2tlblsnYWNjZXNzX3Rva2VuJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cHV0KCRwYXlsb2FkKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KLy8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpmdW5jdGlvbiBNb2RpZnl1c2VyX25vZGUoJGxvY2F0aW9uLCAkaWRfbm9kZSwgYXJyYXkgJGRhdGEpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJENoZWNrX3Rva2VuID0gdG9rZW5fcGFuZWwoJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSk7CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvbm9kZS8nIC4gJGlkX25vZGU7CiAgICAkY3VycmVudE5vZGUgPSBqc29uX2RlY29kZShHZXRfTm9kZSgkbG9jYXRpb24sICRpZF9ub2RlKVsnYm9keSddID8/ICcnLCB0cnVlKTsKICAgIGlmIChpc3NldCgkY3VycmVudE5vZGVbJ2FwaV9wb3J0J10pKSB7CiAgICAgICAgJGRhdGEgKz0gWydhcGlfcG9ydCcgPT4gJGN1cnJlbnROb2RlWydhcGlfcG9ydCddXTsKICAgIH0KICAgICRwYXlsb2FkID0ganNvbl9lbmNvZGUoJGRhdGEpOwogICAgJGNoID0gY3VybF9pbml0KCk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfVVJMLCAkdXJsKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgMSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfQ1VTVE9NUkVRVUVTVCwgJ1BVVCcpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1BPU1RGSUVMRFMsICRwYXlsb2FkKTsKICAgICRoZWFkZXJzID0gYXJyYXkoKTsKICAgICRoZWFkZXJzW10gPSAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJzsKICAgICRoZWFkZXJzW10gPSAnQXV0aG9yaXphdGlvbjogQmVhcmVyICcgLiAkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddOwogICAgJGhlYWRlcnNbXSA9ICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0hUVFBIRUFERVIsICRoZWFkZXJzKTsKCiAgICAkcmVzdWx0ID0gY3VybF9leGVjKCRjaCk7CiAgICBjdXJsX2Nsb3NlKCRjaCk7CiAgICAkZGF0YV91c2VlciA9IGpzb25fZGVjb2RlKCRyZXN1bHQsIHRydWUpOwogICAgcmV0dXJuICRkYXRhX3VzZWVyOwp9Ci8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpmdW5jdGlvbiByZWNvbm5lY3Rfbm9kZSgkbG9jYXRpb24sICRpZF9ub2RlKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRDaGVja190b2tlbiA9IHRva2VuX3BhbmVsKCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10pOwogICAgaWYgKCFlbXB0eSgkQ2hlY2tfdG9rZW5bJ2Vycm9yJ10pKSB7CiAgICAgICAgcmV0dXJuICRDaGVja190b2tlbjsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9ub2RlLycgLiAkaWRfbm9kZSAuICcvcmVjb25uZWN0JzsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkQ2hlY2tfdG9rZW5bJ2FjY2Vzc190b2tlbiddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnBvc3QoYXJyYXkoKSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CgpmdW5jdGlvbiBnZXRfbGlzdF91cGRhdGUoJGxvY2F0aW9uLCAkdXNlcm5hbWUpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJENoZWNrX3Rva2VuID0gdG9rZW5fcGFuZWwoJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSk7CiAgICBpZiAoIWVtcHR5KCRDaGVja190b2tlblsnZXJyb3InXSkpIHsKICAgICAgICByZXR1cm4gJENoZWNrX3Rva2VuOwogICAgfQogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICIvYXBpL3VzZXIvJHVzZXJuYW1lL3N1Yl91cGRhdGU/b2Zmc2V0PTAmbGltaXQ9MSI7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdhY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJENoZWNrX3Rva2VuWydhY2Nlc3NfdG9rZW4nXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5nZXQoKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0K
+<?php
+require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../request.php';
+date_default_timezone_set('Asia/Tehran');
+#-----------------------------#
+function token_panel($code_panel, $verify = true)
+{
+    $panel = select("marzban_panel", "*", "code_panel", $code_panel, "select");
+
+    // Check if panel data exists
+    if ($panel === null) {
+        return null;
+    }
+
+    $url_get_token = $panel['url_panel'] . '/api/admin/token';
+    $username_panel = $panel['username_panel'];
+    $password_panel = $panel['password_panel'];
+    if ($panel['datelogin'] != null && $verify) {
+        $date = json_decode($panel['datelogin'], true);
+        if (isset($date['time'])) {
+            $start_date = time() - strtotime($date['time']);
+            if ($start_date <= 3600) {
+                return $date;
+            }
+        }
+    }
+    $data_token = array(
+        'username' => $username_panel,
+        'password' => $password_panel
+    );
+    $headers = array(
+        'Content-Type: application/x-www-form-urlencoded',
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url_get_token);
+    $req->setHeaders($headers);
+    $response = $req->post($data_token);
+    if (!empty($response['error'])) {
+        return array("error" => $response['error']);
+    }
+    $body = json_decode($response['body'], true);
+    if (isset($body['access_token'])) {
+        $time = date('Y/m/d H:i:s');
+        $data = json_encode(array(
+            'time' => $time,
+            'access_token' => $body['access_token']
+        ));
+        update("marzban_panel", "datelogin", $data, 'name_panel', $panel['name_panel']);
+    }
+    return $body;
+}
+#-----------------------------#
+
+function getuser($username_account, $location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/user/' . $username_account;
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->get();
+    return $response;
+}
+#-----------------------------#
+
+function Get_Nodes($location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/nodes';
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->get();
+    return $response;
+}
+function Get_usage_Nodes($location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/nodes/usage';
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->get();
+    return $response;
+}
+function Get_Node($location, $Nodeid)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/node/' . $Nodeid;
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->get();
+    return $response;
+}
+
+function getusers($location, $status)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/users?status=' . $status;
+    if (!isset($Check_token['access_token']))
+        return;
+    $header_value = 'Bearer ';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT_MS, ($GLOBALS['request_exec_timeout'] ?? null) ?: 10000);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Accept: application/json',
+        'Authorization: ' . $header_value . $Check_token['access_token']
+    ));
+
+    $output = curl_exec($ch);
+    curl_close($ch);
+    $data_useer = json_decode($output, true);
+    return $data_useer;
+}
+#-----------------------------#
+function getinbounds($location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!isset($Check_token['access_token']))
+        return null;
+    $url = $marzban_list_get['url_panel'] . '/api/inbounds';
+    $header_value = 'Bearer ';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT_MS, ($GLOBALS['request_exec_timeout'] ?? null) ?: 10000);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Accept: application/json',
+        'Authorization: ' . $header_value . $Check_token['access_token']
+    ));
+
+    $output = curl_exec($ch);
+    curl_close($ch);
+    $inbounds = json_decode($output, true);
+    return $inbounds;
+}
+#-----------------------------#
+function ResetUserDataUsage($username_account, $location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/user/' . $username_account . '/reset';
+
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->post(array());
+    return $response;
+}
+function revoke_sub($username_account, $location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/user/' . $username_account . '/revoke_sub';
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->post(array());
+    return $response;
+}
+#-----------------------------#
+function adduser($location, $data_limit, $username_ac, $timestamp, $note = '', $data_limit_reset = 'no_reset', $name_product = false)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . "/api/user";
+    if ($marzban_list_get['inbounds'] != null and $marzban_list_get['inbounds'] != "null") {
+        if ($name_product != false and $name_product != "usertest") {
+            $stmt = $GLOBALS['pdo']->prepare("SELECT * FROM product WHERE name_product = ? AND (Location = ? OR Location = '/all') ORDER BY Location = '/all' LIMIT 1");
+            $stmt->execute([$name_product, $location]);
+            $product = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($product == false || $product['inbounds'] == false) {
+                $inbounds = json_decode($marzban_list_get['inbounds'], true);
+            } else {
+                $inbounds = json_decode($product['inbounds'], true);
+                $marzban_list_get['proxies'] = $product['proxies'];
+            }
+        } else {
+            $inbounds = json_decode($marzban_list_get['inbounds'], true);
+        }
+    }
+    if (!panelProtocolsConfigured($marzban_list_get['proxies'])) {
+        return panelProtocolsMissingError($marzban_list_get['name_panel']);
+    }
+    if ($marzban_list_get['version_panel'] == "1") {
+        $data = array(
+            "proxy_settings" => json_decode($marzban_list_get['proxies']),
+            "data_limit" => $data_limit,
+            "username" => $username_ac,
+            "note" => $note,
+            "data_limit_reset_strategy" => $data_limit_reset
+        );
+        if (isset($inbounds)) {
+            $data['group_ids'] = $inbounds;
+        }
+        if ($name_product == "usertest") {
+            if ($marzban_list_get['on_hold_test'] == "0") {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = date('c', $timestamp);
+                }
+            } else {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = 0;
+                    $data["status"] = "on_hold";
+                    $data["on_hold_expire_duration"] = $timestamp - time();
+                }
+            }
+        } else {
+            if ($marzban_list_get['conecton'] == "offconecton") {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = date('c', $timestamp);
+                }
+            } else {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = 0;
+                    $data["status"] = "on_hold";
+                    $data["on_hold_expire_duration"] = $timestamp - time();
+                }
+            }
+        }
+    } else {
+        $data = array(
+            "proxies" => json_decode($marzban_list_get['proxies']),
+            "data_limit" => $data_limit,
+            "username" => $username_ac,
+            "note" => $note,
+            "data_limit_reset_strategy" => $data_limit_reset
+        );
+        if (isset($inbounds)) {
+            $data['inbounds'] = $inbounds;
+        }
+        if ($name_product == "usertest") {
+            if ($marzban_list_get['on_hold_test'] == "0") {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = $timestamp;
+                }
+            } else {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = 0;
+                    $data["status"] = "on_hold";
+                    $data["on_hold_expire_duration"] = $timestamp - time();
+                }
+            }
+        } else {
+            if ($marzban_list_get['conecton'] == "offconecton") {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = $timestamp;
+                }
+            } else {
+                if ($timestamp == 0) {
+                    $data["expire"] = 0;
+                } else {
+                    $data["expire"] = 0;
+                    $data["status"] = "on_hold";
+                    $data["on_hold_expire_duration"] = $timestamp - time();
+                }
+            }
+        }
+    }
+    $headers = array(
+        'accept: application/json',
+        'Content-Type: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->post(json_encode($data));
+    return $response;
+}
+//----------------------------------
+function Get_System_Stats($location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!isset($Check_token['access_token']))
+        return null;
+    $url = $marzban_list_get['url_panel'] . '/api/system';
+    $header_value = 'Bearer ';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT_MS, ($GLOBALS['request_exec_timeout'] ?? null) ?: 10000);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Accept: application/json',
+        'Authorization: ' . $header_value . $Check_token['access_token']
+    ));
+
+    $output = curl_exec($ch);
+    curl_close($ch);
+    $Get_System_Stats = json_decode($output, true);
+    return $Get_System_Stats;
+}
+//----------------------------------
+function removeuser($location, $username)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/user/' . $username;
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->delete();
+    return $response;
+}
+function removenode($location, $nodeid)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/node/' . $nodeid;
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->delete();
+    return $response;
+}
+//----------------------------------
+function Modifyuser($location, $username, array $data)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/user/' . $username;
+    $headers = array(
+        'accept: application/json',
+        'Content-Type: application/json'
+    );
+    $payload = json_encode($data);
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->put($payload);
+    return $response;
+}
+//----------------------------------
+
+function Modifyuser_node($location, $id_node, array $data)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    $url = $marzban_list_get['url_panel'] . '/api/node/' . $id_node;
+    $currentNode = json_decode(Get_Node($location, $id_node)['body'] ?? '', true);
+    if (isset($currentNode['api_port'])) {
+        $data += ['api_port' => $currentNode['api_port']];
+    }
+    $payload = json_encode($data);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+    $headers = array();
+    $headers[] = 'Accept: application/json';
+    $headers[] = 'Authorization: Bearer ' . $Check_token['access_token'];
+    $headers[] = 'Content-Type: application/json';
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+    $data_useer = json_decode($result, true);
+    return $data_useer;
+}
+//----------------------------------
+function reconnect_node($location, $id_node)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/node/' . $id_node . '/reconnect';
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->post(array());
+    return $response;
+}
+
+function get_list_update($location, $username)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $Check_token = token_panel($marzban_list_get['code_panel']);
+    if (!empty($Check_token['error'])) {
+        return $Check_token;
+    }
+    $url = $marzban_list_get['url_panel'] . "/api/user/$username/sub_update?offset=0&limit=1";
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($Check_token['access_token']);
+    $response = $req->get();
+    return $response;
+}

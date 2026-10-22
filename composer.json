@@ -1,1 +1,21 @@
-ewogICAgIm5hbWUiOiAibW9kYXNyL21vZGFzcmJvdCIsCiAgICAiZGVzY3JpcHRpb24iOiAiTW9kYXNyIEJvdCAtIFRlbGVncmFtIFZQTiBzYWxlcyBhbmQgbWFuYWdlbWVudCBib3QiLAogICAgInR5cGUiOiAicHJvamVjdCIsCiAgICAibGljZW5zZSI6ICJBR1BMLTMuMC1vci1sYXRlciIsCiAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL21vZGFzci9tb2Rhc3Jib3QiLAogICAgInJlcXVpcmUiOiB7CiAgICAgICAgInBocCI6ICI+PTguMiIsCiAgICAgICAgImVuZHJvaWQvcXItY29kZSI6ICJeNi4wIiwKICAgICAgICAicGhwb2ZmaWNlL3BocHNwcmVhZHNoZWV0IjogIl41LjgiCiAgICB9LAogICAgImNvbmZpZyI6IHsKICAgICAgICAib3B0aW1pemUtYXV0b2xvYWRlciI6IHRydWUsCiAgICAgICAgInNvcnQtcGFja2FnZXMiOiB0cnVlLAogICAgICAgICJwbGF0Zm9ybSI6IHsKICAgICAgICAgICAgInBocCI6ICI4LjIuMCIKICAgICAgICB9CiAgICB9LAogICAgInByZWZlci1zdGFibGUiOiB0cnVlLAogICAgIm1pbmltdW0tc3RhYmlsaXR5IjogInN0YWJsZSIKfQo=
+{
+    "name": "modasr/modasrbot",
+    "description": "Modasr Bot - Telegram VPN sales and management bot",
+    "type": "project",
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://github.com/modasr/modasrbot",
+    "require": {
+        "php": ">=8.2",
+        "endroid/qr-code": "^6.0",
+        "phpoffice/phpspreadsheet": "^5.8"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2.0"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "stable"
+}

@@ -1,1 +1,63 @@
-PD9waHAKCmNsYXNzIE1hbnVhbHNhbGVQYW5lbERyaXZlciBleHRlbmRzIEJhc2VQYW5lbERyaXZlcgp7CiAgICBwdWJsaWMgZnVuY3Rpb24gY3JlYXRlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRwZG8gPSAkdmFyc1sncGRvJ107CiAgICAgICAgJEdldF9EYXRhX1BhbmVsID0gJHZhcnNbJ0dldF9EYXRhX1BhbmVsJ107CiAgICAgICAgJGNvZGVfcHJvZHVjdCA9ICR2YXJzWydjb2RlX3Byb2R1Y3QnXTsKICAgICAgICAkT3V0cHV0ID0gJHZhcnNbJ091dHB1dCddOwogICAgICAgICR1c2VybmFtZUMgPSAkdmFyc1sndXNlcm5hbWVDJ107CiAgICAgICAgJHN0YXRlbWVudCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAqIEZST00gbWFudWFsc2VsbCBXSEVSRSBjb2RlcGFuZWwgPSA6Y29kZV9wYW5lbCBBTkQgc3RhdHVzID0gJ2FjdGl2ZScgQU5EIGNvZGVwcm9kdWN0ID0gOmNvZGVfcHJvZHVjdCBPUkRFUiBCWSBSQU5EKCkgTElNSVQgMSIpOwogICAgICAgICRzdGF0ZW1lbnQtPmJpbmRQYXJhbSgiOmNvZGVfcGFuZWwiLCAkR2V0X0RhdGFfUGFuZWxbJ2NvZGVfcGFuZWwnXSk7CiAgICAgICAgJHN0YXRlbWVudC0+YmluZFBhcmFtKCI6Y29kZV9wcm9kdWN0IiwgJGNvZGVfcHJvZHVjdCk7CiAgICAgICAgJHN0YXRlbWVudC0+ZXhlY3V0ZSgpOwogICAgICAgICRjb25maWdtYW4gPSAkc3RhdGVtZW50LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICAkT3V0cHV0WydzdGF0dXMnXSA9ICdzdWNjZXNzZnVsJzsKICAgICAgICAkT3V0cHV0Wyd1c2VybmFtZSddID0gJHVzZXJuYW1lQzsKICAgICAgICAkT3V0cHV0WydzdWJzY3JpcHRpb25fdXJsJ10gPSAkY29uZmlnbWFuWydjb250ZW50cmVjb3JkJ107CiAgICAgICAgJE91dHB1dFsnY29uZmlncyddID0gIiI7CiAgICAgICAgdXBkYXRlKCJtYW51YWxzZWxsIiwgInN0YXR1cyIsICJzZWxsZWQiLCAiaWQiLCAkY29uZmlnbWFuWydpZCddKTsKICAgICAgICB1cGRhdGUoIm1hbnVhbHNlbGwiLCAidXNlcm5hbWUiLCAkdXNlcm5hbWVDLCAiaWQiLCAkY29uZmlnbWFuWydpZCddKTsKICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVhZChhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkcGRvID0gJHZhcnNbJ3BkbyddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIG1hbnVhbHNlbGwgV0hFUkUgdXNlcm5hbWUgPSA6dXNlcm5hbWUiKTsKICAgICAgICAkc3RtdC0+YmluZFBhcmFtKCc6dXNlcm5hbWUnLCAkdXNlcm5hbWUpOwogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgJGNvbmZpZ21hbiA9ICRzdG10LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICAkc2VydmljZSA9IHNlbGVjdCgiaW52b2ljZSIsICIqIiwgInVzZXJuYW1lIiwgJHVzZXJuYW1lLCAic2VsZWN0Iik7CiAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAnc3RhdHVzJyA9PiAkc2VydmljZVsnU3RhdHVzJ10sCiAgICAgICAgICAgICd1c2VybmFtZScgPT4gJHNlcnZpY2VbJ3VzZXJuYW1lJ10sCiAgICAgICAgICAgICdkYXRhX2xpbWl0JyA9PiBudWxsLAogICAgICAgICAgICAnZXhwaXJlJyA9PiAkc2VydmljZVsndGltZV9zZWxsJ10sCiAgICAgICAgICAgICdvbmxpbmVfYXQnID0+IG51bGwsCiAgICAgICAgICAgICd1c2VkX3RyYWZmaWMnID0+IG51bGwsCiAgICAgICAgICAgICdsaW5rcycgPT4gW10sCiAgICAgICAgICAgICdzdWJzY3JpcHRpb25fdXJsJyA9PiAkY29uZmlnbWFuWydjb250ZW50cmVjb3JkJ10sCiAgICAgICAgICAgICdzdWJfdXBkYXRlZF9hdCcgPT4gbnVsbCwKICAgICAgICAgICAgJ3N1Yl9sYXN0X3VzZXJfYWdlbnQnID0+IG51bGwsCiAgICAgICAgICAgICd1dWlkJyA9PiBudWxsCiAgICAgICAgKTsKICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVtb3ZlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgdXBkYXRlKCJtYW51YWxzZWxsIiwgInN0YXR1cyIsICJkZWxldGUiLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUpOwogICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ3N1Y2Nlc3NmdWwnLAogICAgICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZSwKICAgICAgICApOwogICAgICAgIHJldHVybiAkT3V0cHV0OwogICAgfQp9Cg==
+<?php
+
+class ManualsalePanelDriver extends BasePanelDriver
+{
+    public function create(array $vars)
+    {
+        $pdo = $vars['pdo'];
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $code_product = $vars['code_product'];
+        $Output = $vars['Output'];
+        $usernameC = $vars['usernameC'];
+        $statement = $pdo->prepare("SELECT * FROM manualsell WHERE codepanel = :code_panel AND status = 'active' AND codeproduct = :code_product ORDER BY RAND() LIMIT 1");
+        $statement->bindParam(":code_panel", $Get_Data_Panel['code_panel']);
+        $statement->bindParam(":code_product", $code_product);
+        $statement->execute();
+        $configman = $statement->fetch(PDO::FETCH_ASSOC);
+        $Output['status'] = 'successful';
+        $Output['username'] = $usernameC;
+        $Output['subscription_url'] = $configman['contentrecord'];
+        $Output['configs'] = "";
+        update("manualsell", "status", "selled", "id", $configman['id']);
+        update("manualsell", "username", $usernameC, "id", $configman['id']);
+        return $Output;
+    }
+
+    public function read(array $vars)
+    {
+        $pdo = $vars['pdo'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $stmt = $pdo->prepare("SELECT * FROM manualsell WHERE username = :username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        $configman = $stmt->fetch(PDO::FETCH_ASSOC);
+        $service = select("invoice", "*", "username", $username, "select");
+        $Output = array(
+            'status' => $service['Status'],
+            'username' => $service['username'],
+            'data_limit' => null,
+            'expire' => $service['time_sell'],
+            'online_at' => null,
+            'used_traffic' => null,
+            'links' => [],
+            'subscription_url' => $configman['contentrecord'],
+            'sub_updated_at' => null,
+            'sub_last_user_agent' => null,
+            'uuid' => null
+        );
+        return $Output;
+    }
+
+    public function remove(array $vars)
+    {
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        update("manualsell", "status", "delete", "username", $username);
+        $Output = array(
+            'status' => 'successful',
+            'username' => $username,
+        );
+        return $Output;
+    }
+}

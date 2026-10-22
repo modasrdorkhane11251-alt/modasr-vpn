@@ -1,1 +1,17 @@
-PEZpbGVzICIuaW5zdGFsbGVkIj4KICAgIFJlcXVpcmUgYWxsIGRlbmllZAo8L0ZpbGVzPgo8SWZNb2R1bGUgbW9kX3Jld3JpdGUuYz4KICAgIFJld3JpdGVFbmdpbmUgT24KICAgIFJld3JpdGVSdWxlIF5yZXdyaXRlLWNoZWNrJCBwcm9iZS5waHAgW0xdCjwvSWZNb2R1bGU+CgpPcHRpb25zIC1JbmRleGVzCgo8RmlsZXNNYXRjaCAiXmVycm9yX2xvZyR8XC5sb2ckfFwubG9nXC5bMC05XSskIj4KICAgIFJlcXVpcmUgYWxsIGRlbmllZAogICAgPElmTW9kdWxlICFtb2RfYXV0aHpfY29yZS5jPgogICAgICAgIE9yZGVyIGRlbnksYWxsb3cKICAgICAgICBEZW55IGZyb20gYWxsCiAgICA8L0lmTW9kdWxlPgo8L0ZpbGVzTWF0Y2g+Cg==
+<Files ".installed">
+    Require all denied
+</Files>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^rewrite-check$ probe.php [L]
+</IfModule>
+
+Options -Indexes
+
+<FilesMatch "^error_log$|\.log$|\.log\.[0-9]+$">
+    Require all denied
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

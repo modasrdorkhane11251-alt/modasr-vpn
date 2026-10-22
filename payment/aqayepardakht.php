@@ -1,1 +1,146 @@
-PD9waHAKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vY29uZmlnLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9ib3RhcGkucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL3BhbmVscy9BcGkvTWFyemJhbi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vZnVuY3Rpb24ucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL3BhbmVscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4va2V5Ym9hcmQucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2pkZi5waHAnOwpyZXF1aXJlIF9fRElSX18gLiAnLy4uL3ZlbmRvci9hdXRvbG9hZC5waHAnOwoKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CgokaW52b2ljZV9pZCA9IGh0bWxzcGVjaWFsY2hhcnMoJF9QT1NUWydpbnZvaWNlX2lkJ10gPz8gJycsIEVOVF9RVU9URVMsICdVVEYtOCcpOwokdHJhbnNpZCA9ICRfUE9TVFsndHJhbnNpZCddID8/ICcnOwppZiAoJGludm9pY2VfaWQgPT09ICcnIHx8ICR0cmFuc2lkID09PSAnJykgewogICAgaHR0cF9yZXNwb25zZV9jb2RlKDQwMCk7CiAgICBleGl0KCdpbnZhbGlkIHJlcXVlc3QnKTsKfQokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiRQYXlTZXR0aW5nID0gc2VsZWN0KCJQYXlTZXR0aW5nIiwgIlZhbHVlUGF5IiwgIk5hbWVQYXkiLCAibWVyY2hhbnRfaWRfYXFheWVwYXJkYWtodCIsInNlbGVjdCIpWydWYWx1ZVBheSddOwokcGF5bWVudF9yb3cgPSBzZWxlY3QoIlBheW1lbnRfcmVwb3J0IiwgIioiLCAiaWRfb3JkZXIiLCAkaW52b2ljZV9pZCwgInNlbGVjdCIpOwppZiAoIWlzX2FycmF5KCRwYXltZW50X3JvdykpIHsKICAgIGh0dHBfcmVzcG9uc2VfY29kZSg0MDQpOwogICAgZXhpdCgnb3JkZXIgbm90IGZvdW5kJyk7Cn0KaWYgKCRwYXltZW50X3Jvd1sncGF5bWVudF9TdGF0dXMnXSA9PSAiZXhwaXJlIikgewogICAgZXhpdCgnb3JkZXIgZXhwaXJlZCcpOwp9CiRQYXltZW50X3JlcG9ydCA9ICRwYXltZW50X3Jvd1sncHJpY2UnXTsKJHByaWNlID0gJFBheW1lbnRfcmVwb3J0OwovLyB2ZXJpZnkgVHJhbnNhY3Rpb24KCiRkYXRhID0gWwoncGluJyAgICA9PiAkUGF5U2V0dGluZywKJ2Ftb3VudCcgICAgPT4gJFBheW1lbnRfcmVwb3J0LAondHJhbnNpZCcgPT4gJHRyYW5zaWQsCl07CiRkYXRhID0ganNvbl9lbmNvZGUoJGRhdGEpOwokY2ggPSBjdXJsX2luaXQoJ2h0dHBzOi8vcGFuZWwuYXFheWVwYXJkYWtodC5pci9hcGkvdjIvdmVyaWZ5Jyk7CmN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSk7CmN1cmxfc2V0b3B0KCRjaCwgQ1VSTElORk9fSEVBREVSX09VVCwgdHJ1ZSk7CmN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9QT1NULCB0cnVlKTsKY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1BPU1RGSUVMRFMsICRkYXRhKTsKCmN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9IVFRQSEVBREVSLCBhcnJheSgKJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCidDb250ZW50LUxlbmd0aDogJyAuIHN0cmxlbigkZGF0YSkpCik7CiRyZXN1bHQgPSBjdXJsX2V4ZWMoJGNoKTsKY3VybF9jbG9zZSgkY2gpOwokcmVzdWx0ID0ganNvbl9kZWNvZGUoJHJlc3VsdCk7CmlmIChpc19vYmplY3QoJHJlc3VsdCkgJiYgJHJlc3VsdC0+Y29kZSA9PSAiMSIpIHsKICAgICRwYXltZW50X3N0YXR1cyA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnc3RhdHVzU3VjY2VzcyddOwogICAgJHByaWNlID0gJFBheW1lbnRfcmVwb3J0OwogICAgJGRlY19wYXltZW50X3N0YXR1cyA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnZGVzY1RoYW5rcyddOwogICAgJFBheW1lbnRfcmVwb3J0ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImlkX29yZGVyIiwgJGludm9pY2VfaWQsInNlbGVjdCIpOwogICAgaWYoY2xhaW1QYXltZW50UGFpZCgkaW52b2ljZV9pZCkpewogICAgJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKICAgIHRyeSB7CiAgICAgICAgRGlyZWN0UGF5bWVudCgkaW52b2ljZV9pZCwiLi4vaW1hZ2VzLmpwZyIpOwogICAgfSBjYXRjaCAoVGhyb3dhYmxlICRkaXJlY3RQYXltZW50RXJyb3IpIHsKICAgICAgICBlcnJvcl9sb2coIkRpcmVjdFBheW1lbnQgZmFpbGVkIGZvciBvcmRlciB7JGludm9pY2VfaWR9OiAiIC4gJGRpcmVjdFBheW1lbnRFcnJvci0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICByZXR1cm47CiAgICB9CiAgICAkcHJpY2VjYXNoYmFjayA9IHNlbGVjdCgiUGF5U2V0dGluZyIsICJWYWx1ZVBheSIsICJOYW1lUGF5IiwgImNoYXNoYmFja2FxYXlwYXJkb2todCIsInNlbGVjdCIpWydWYWx1ZVBheSddOwogICAgJF9fcTE2ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUICogRlJPTSB1c2VyIFdIRVJFIGlkID0gPyBMSU1JVCAxIik7CiAgICAkX19xMTYtPmJpbmRWYWx1ZSgxLCAkUGF5bWVudF9yZXBvcnRbJ2lkX3VzZXInXSwgUERPOjpQQVJBTV9TVFIpOwogICAgJF9fcTE2LT5leGVjdXRlKCk7CiAgICAkQmFsYW5jZV9pZCA9ICRfX3ExNi0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQyk7CiAgICBpZigkcHJpY2VjYXNoYmFjayAhPSAiMCIpewogICAgICAgICRyZXN1bHQgPSAoJFBheW1lbnRfcmVwb3J0WydwcmljZSddICogJHByaWNlY2FzaGJhY2spIC8gMTAwOwogICAgICAgICRCYWxhbmNlX2NvbmZyaW0gPSBpbnR2YWwoJEJhbGFuY2VfaWRbJ0JhbGFuY2UnXSkgKyRyZXN1bHQ7CiAgICAgICAgdXBkYXRlKCJ1c2VyIiwiQmFsYW5jZSIsJEJhbGFuY2VfY29uZnJpbSwgImlkIiwkQmFsYW5jZV9pZFsnaWQnXSk7IAogICAgICAgICRwcmljZWNhc2hiYWNrID0gIG51bWJlcl9mb3JtYXQoJHByaWNlY2FzaGJhY2spOwogICAgICAgICR0ZXh0X3JlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydnaWZ0UmVwb3J0J10sICRyZXN1bHQpOwogICAgICAgIHNlbmRtZXNzYWdlKCRCYWxhbmNlX2lkWydpZCddLCAkdGV4dF9yZXBvcnQsIG51bGwsICdIVE1MJyk7CiAgICB9CiAgICAkcGF5bWVudHJlcG9ydHMgPSBzZWxlY3QoInRvcGljaWQiLCJpZHJlcG9ydCIsInJlcG9ydCIsInBheW1lbnRyZXBvcnQiLCJzZWxlY3QiKVsnaWRyZXBvcnQnXTsKCiR0ZXh0X3JlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydyZXBvcnRBcWF5ZXBhcmRha2h0J10sICRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddLCAkQmFsYW5jZV9pZFsndXNlcm5hbWUnXSwgJHByaWNlKTsKICAgIGlmIChzdHJsZW4oJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10pID4gMCkgewogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsWwogICAgICAgICdjaGF0X2lkJyA9PiAkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSwKICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICRwYXltZW50cmVwb3J0cywKICAgICAgICAndGV4dCcgPT4gJHRleHRfcmVwb3J0LAogICAgICAgICdwYXJzZV9tb2RlJyA9PiAiSFRNTCIKICAgICAgICBdKTsKICAgIH0KfQp9ZWxzZSB7CiAgICAgICAgJHBheW1lbnRfc3RhdHVzID0gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydzdGF0dXNGYWlsZWQnXTsKICAgICAkZGVjX3BheW1lbnRfc3RhdHVzID0gIiI7Cn0KPz4KPGh0bWw+CjxoZWFkPgogICAgPHRpdGxlPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlVGl0bGUnXSA/PjwvdGl0bGU+CiAgICA8c3R5bGU+CiAgICBAZm9udC1mYWNlIHsKICAgIGZvbnQtZmFtaWx5OiAndmF6aXInOwogICAgc3JjOiB1cmwoJy9WYXppci5lb3QnKTsKICAgIHNyYzogbG9jYWwoJ+KYuicpLCB1cmwoJy4uL2ZvbnRzL1ZhemlyLndvZmYnKSBmb3JtYXQoJ3dvZmYnKSwgdXJsKCcuLi9mb250cy9WYXppci50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KCiAgICAgICAgYm9keSB7CiAgICAgICAgICAgIGZvbnQtZmFtaWx5OnZhemlyOwogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyOwogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHg7CiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICAgICAgICBtaW4taGVpZ2h0OiAxMDB2aDsKICAgICAgICB9CgogICAgICAgIC5jb25maXJtYXRpb24tYm94IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogOHB4OwogICAgICAgICAgICB3aWR0aDoyNSU7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjEpOwogICAgICAgICAgICBwYWRkaW5nOiA0MHB4OwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgfQoKICAgICAgICBoMSB7CiAgICAgICAgICAgIGNvbG9yOiAjMzMzMzMzOwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4OwogICAgICAgIH0KCiAgICAgICAgcCB7CiAgICAgICAgICAgIGNvbG9yOiAjNjY2NjY2OwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4OwogICAgICAgIH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb25maXJtYXRpb24tYm94Ij4KICAgICAgICA8aDE+PD9waHAgZWNobyAkcGF5bWVudF9zdGF0dXMgPz48L2gxPgogICAgICAgIDxwPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlVHJhbnNhY3Rpb25ObyddID8+PHNwYW4+PD9waHAgZWNobyAkaW52b2ljZV9pZCA/Pjwvc3Bhbj48L3A+CiAgICAgICAgPHA+PD9waHAgZWNobyAkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ2ludm9pY2VBbW91bnQnXSA/PiAgPHNwYW4+PD9waHAgZWNobyAgJHByaWNlOyA/Pjwvc3Bhbj48P3BocCBlY2hvICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnaW52b2ljZUFtb3VudFVuaXQnXSA/PjwvcD4KICAgICAgICA8cD48P3BocCBlY2hvICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnaW52b2ljZURhdGUnXSA/PiA8c3Bhbj4gIDw/cGhwIGVjaG8gamRhdGUoJ1kvbS9kJykgID8+ICA8L3NwYW4+PC9wPgogICAgICAgIDxwPjw/cGhwIGVjaG8gJGRlY19wYXltZW50X3N0YXR1cyA/PjwvcD4KICAgIDwvZGl2Pgo8L2JvZHk+CjwvaHRtbD4K
+<?php
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$ManagePanel = new ManagePanel();
+
+$invoice_id = htmlspecialchars($_POST['invoice_id'] ?? '', ENT_QUOTES, 'UTF-8');
+$transid = $_POST['transid'] ?? '';
+if ($invoice_id === '' || $transid === '') {
+    http_response_code(400);
+    exit('invalid request');
+}
+$setting = select("setting", "*");
+$PaySetting = select("PaySetting", "ValuePay", "NamePay", "merchant_id_aqayepardakht","select")['ValuePay'];
+$payment_row = select("Payment_report", "*", "id_order", $invoice_id, "select");
+if (!is_array($payment_row)) {
+    http_response_code(404);
+    exit('order not found');
+}
+if ($payment_row['payment_Status'] == "expire") {
+    exit('order expired');
+}
+$Payment_report = $payment_row['price'];
+$price = $Payment_report;
+// verify Transaction
+
+$data = [
+'pin'    => $PaySetting,
+'amount'    => $Payment_report,
+'transid' => $transid,
+];
+$data = json_encode($data);
+$ch = curl_init('https://panel.aqayepardakht.ir/api/v2/verify');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'Content-Type: application/json',
+'Content-Length: ' . strlen($data))
+);
+$result = curl_exec($ch);
+curl_close($ch);
+$result = json_decode($result);
+if (is_object($result) && $result->code == "1") {
+    $payment_status = $textbotlang['paymentGateway']['statusSuccess'];
+    $price = $Payment_report;
+    $dec_payment_status = $textbotlang['paymentGateway']['descThanks'];
+    $Payment_report = select("Payment_report", "*", "id_order", $invoice_id,"select");
+    if(claimPaymentPaid($invoice_id)){
+    $textbotlang = languagechange();
+    try {
+        DirectPayment($invoice_id,"../images.jpg");
+    } catch (Throwable $directPaymentError) {
+        error_log("DirectPayment failed for order {$invoice_id}: " . $directPaymentError->getMessage());
+        return;
+    }
+    $pricecashback = select("PaySetting", "ValuePay", "NamePay", "chashbackaqaypardokht","select")['ValuePay'];
+    $__q16 = $pdo->prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
+    $__q16->bindValue(1, $Payment_report['id_user'], PDO::PARAM_STR);
+    $__q16->execute();
+    $Balance_id = $__q16->fetch(PDO::FETCH_ASSOC);
+    if($pricecashback != "0"){
+        $result = ($Payment_report['price'] * $pricecashback) / 100;
+        $Balance_confrim = intval($Balance_id['Balance']) +$result;
+        update("user","Balance",$Balance_confrim, "id",$Balance_id['id']); 
+        $pricecashback =  number_format($pricecashback);
+        $text_report = sprintf($textbotlang['paymentGateway']['giftReport'], $result);
+        sendmessage($Balance_id['id'], $text_report, null, 'HTML');
+    }
+    $paymentreports = select("topicid","idreport","report","paymentreport","select")['idreport'];
+
+$text_report = sprintf($textbotlang['paymentGateway']['reportAqayepardakht'], $Payment_report['id_user'], $Balance_id['username'], $price);
+    if (strlen($setting['Channel_Report']) > 0) {
+        telegram('sendmessage',[
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => $paymentreports,
+        'text' => $text_report,
+        'parse_mode' => "HTML"
+        ]);
+    }
+}
+}else {
+        $payment_status = $textbotlang['paymentGateway']['statusFailed'];
+     $dec_payment_status = "";
+}
+?>
+<html>
+<head>
+    <title><?php echo $textbotlang['paymentGateway']['invoiceTitle'] ?></title>
+    <style>
+    @font-face {
+    font-family: 'vazir';
+    src: url('/Vazir.eot');
+    src: local('☺'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
+}
+
+        body {
+            font-family:vazir;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .confirmation-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width:25%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666666;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h1><?php echo $payment_status ?></h1>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceTransactionNo'] ?><span><?php echo $invoice_id ?></span></p>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceAmount'] ?>  <span><?php echo  $price; ?></span><?php echo $textbotlang['paymentGateway']['invoiceAmountUnit'] ?></p>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceDate'] ?> <span>  <?php echo jdate('Y/m/d')  ?>  </span></p>
+        <p><?php echo $dec_payment_status ?></p>
+    </div>
+</body>
+</html>

@@ -1,1 +1,97 @@
-PD9waHAKLyoqCiAqIE1vZGFzciBtdWx0aS1wbGF0Zm9ybSBsYXllci4KICoKICogQWxsb3dzIHRoZSBib3QgY29yZSB0byBydW4gb24gdGhyZWUgbWVzc2VuZ2VyczoKICogICAtIHRlbGVncmFtIDogbmF0aXZlIEJvdCBBUEkgKGRlZmF1bHQgYmVoYXZpb3VyLCB1bmNoYW5nZWQpCiAqICAgLSBiYWxlICAgICA6IEJhbGUgbWVzc2VuZ2VyIEJvdCBBUEkgKFRlbGVncmFtLWNvbXBhdGlibGUsIGRpZmZlcmVudCBiYXNlIFVSTCkKICogICAtIHJ1YmlrYSAgIDogUnViaWthIG1lc3NlbmdlciBCb3QgQVBJIChkaWZmZXJlbnQgc2NoZW1hLCBhZGFwdGVkIGJ5IFJ1YmlrYUNsaWVudCkKICoKICogVGhlIGFjdGl2ZSBwbGF0Zm9ybSBpcyBzZWxlY3RlZCB3aXRoICRwbGF0Zm9ybSBpbiBjb25maWcucGhwOgogKiAgICRwbGF0Zm9ybSA9ICd0ZWxlZ3JhbSc7IC8vIG9yICdiYWxlJyB8ICdydWJpa2EnCiAqLwoKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL1J1YmlrYUNsaWVudC5waHAnOwoKZnVuY3Rpb24gbW9kYXNyX3BsYXRmb3JtKCk6IHN0cmluZwp7CiAgICBnbG9iYWwgJHBsYXRmb3JtOwogICAgJHAgPSBpc3NldCgkcGxhdGZvcm0pID8gc3RydG9sb3dlcih0cmltKChzdHJpbmcpICRwbGF0Zm9ybSkpIDogJ3RlbGVncmFtJzsKICAgIHJldHVybiBpbl9hcnJheSgkcCwgWyd0ZWxlZ3JhbScsICdiYWxlJywgJ3J1YmlrYSddLCB0cnVlKSA/ICRwIDogJ3RlbGVncmFtJzsKfQoKLyoqCiAqIFJvdXRlIGFuIG91dGdvaW5nIEJvdCBBUEkgY2FsbCB0aHJvdWdoIHRoZSBhY3RpdmUgcGxhdGZvcm0uCiAqCiAqIEByZXR1cm4gYXJyYXl7MDpib29sLDE6YXJyYXl9IFtoYW5kbGVkLCB0ZWxlZ3JhbS1zdHlsZSByZXN1bHRdCiAqLwpmdW5jdGlvbiBtb2Rhc3JfcGxhdGZvcm1fcmVxdWVzdChzdHJpbmcgJG1ldGhvZCwgYXJyYXkgJGRhdGFzLCBzdHJpbmcgJHRva2VuKTogYXJyYXkKewogICAgJHAgPSBtb2Rhc3JfcGxhdGZvcm0oKTsKICAgIGlmICgkcCA9PT0gJ3RlbGVncmFtJykgewogICAgICAgIHJldHVybiBbZmFsc2UsIFtdXTsgLy8gZmFsbCB0aHJvdWdoIHRvIHRoZSBvcmlnaW5hbCBUZWxlZ3JhbSB0cmFuc3BvcnQKICAgIH0KCiAgICBpZiAoJHAgPT09ICdiYWxlJykgewogICAgICAgIHJldHVybiBbdHJ1ZSwgbW9kYXNyX2JhbGVfcmVxdWVzdCgkbWV0aG9kLCAkZGF0YXMsICR0b2tlbildOwogICAgfQoKICAgIC8vIHJ1YmlrYQogICAgJGNsaWVudCA9IG5ldyBSdWJpa2FDbGllbnQoJHRva2VuKTsKICAgIHJldHVybiBbdHJ1ZSwgJGNsaWVudC0+Y2FsbCgkbWV0aG9kLCAkZGF0YXMpXTsKfQoKLyoqCiAqIEJhbGUgQm90IEFQSSBpcyB3aXJlLWNvbXBhdGlibGUgd2l0aCB0aGUgVGVsZWdyYW0gQm90IEFQSTsKICogb25seSB0aGUgYmFzZSBVUkwgKGFuZCB0b2tlbiBmb3JtYXQpIGRpZmZlcnMuCiAqLwpmdW5jdGlvbiBtb2Rhc3JfYmFsZV9yZXF1ZXN0KHN0cmluZyAkbWV0aG9kLCBhcnJheSAkZGF0YXMsIHN0cmluZyAkdG9rZW4pOiBhcnJheQp7CiAgICAvLyBCYWxlIGRvZXMgbm90IHN1cHBvcnQgY3VzdG9tIGVtb2ppIHBheWxvYWRzLgogICAgaWYgKGZ1bmN0aW9uX2V4aXN0cygncGF5bG9hZEhhc0N1c3RvbUVtb2ppJykgJiYgcGF5bG9hZEhhc0N1c3RvbUVtb2ppKCRkYXRhcykpIHsKICAgICAgICAkZGF0YXMgPSBzdHJpcEN1c3RvbUVtb2ppUGF5bG9hZCgkZGF0YXMpOwogICAgfQoKICAgICR1cmwgPSAnaHR0cHM6Ly90YXBpLmJhbGUuYWkvYm90JyAuICR0b2tlbiAuICcvJyAuICRtZXRob2Q7CgogICAgJGNoID0gY3VybF9pbml0KCR1cmwpOwogICAgaWYgKCRjaCA9PT0gZmFsc2UpIHsKICAgICAgICByZXR1cm4gWydvaycgPT4gZmFsc2UsICdkZXNjcmlwdGlvbicgPT4gJ1VuYWJsZSB0byBpbml0aWFsaXNlIGNVUkwgZm9yIEJhbGUgcmVxdWVzdC4nXTsKICAgIH0KICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfVElNRU9VVCwgMTApOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0NPTk5FQ1RUSU1FT1VULCA1KTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9QT1NURklFTERTLCAkZGF0YXMpOwoKICAgICRyYXcgPSBjdXJsX2V4ZWMoJGNoKTsKICAgIGlmICgkcmF3ID09PSBmYWxzZSkgewogICAgICAgICRlcnIgPSBjdXJsX2Vycm9yKCRjaCk7CiAgICAgICAgY3VybF9jbG9zZSgkY2gpOwogICAgICAgIHJldHVybiBbJ29rJyA9PiBmYWxzZSwgJ2Rlc2NyaXB0aW9uJyA9PiAkZXJyICE9PSAnJyA/ICRlcnIgOiAnQmFsZSByZXF1ZXN0IGZhaWxlZC4nXTsKICAgIH0KICAgICRjb2RlID0gY3VybF9nZXRpbmZvKCRjaCwgQ1VSTElORk9fSFRUUF9DT0RFKTsKICAgIGN1cmxfY2xvc2UoJGNoKTsKCiAgICAkZGVjb2RlZCA9IGpzb25fZGVjb2RlKCRyYXcsIHRydWUpOwogICAgaWYgKCFpc19hcnJheSgkZGVjb2RlZCkpIHsKICAgICAgICByZXR1cm4gWydvaycgPT4gZmFsc2UsICdlcnJvcl9jb2RlJyA9PiAkY29kZSwgJ2Rlc2NyaXB0aW9uJyA9PiAnSW52YWxpZCByZXNwb25zZSByZWNlaXZlZCBmcm9tIEJhbGUuJ107CiAgICB9CiAgICByZXR1cm4gJGRlY29kZWQ7Cn0KCi8qKgogKiBOb3JtYWxpc2UgYW4gaW5jb21pbmcgd2ViaG9vayB1cGRhdGUgaW50byB0aGUgVGVsZWdyYW0tc3R5bGUgdXBkYXRlCiAqIHN0cnVjdHVyZSB0aGF0IHRoZSByZXN0IG9mIHRoZSBjb2RlYmFzZSBleHBlY3RzLgogKgogKiBCYWxlIGFscmVhZHkgc2VuZHMgVGVsZWdyYW0tc2hhcGVkIHVwZGF0ZXMsIHNvIGl0IHBhc3NlcyB0aHJvdWdoLgogKi8KZnVuY3Rpb24gbW9kYXNyX25vcm1hbGl6ZV9pbmNvbWluZ191cGRhdGUoJHVwZGF0ZSkKewogICAgaWYgKCFpc19hcnJheSgkdXBkYXRlKSkgewogICAgICAgIHJldHVybiAkdXBkYXRlOwogICAgfQogICAgaWYgKG1vZGFzcl9wbGF0Zm9ybSgpICE9PSAncnViaWthJykgewogICAgICAgIHJldHVybiAkdXBkYXRlOwogICAgfQogICAgcmV0dXJuIFJ1YmlrYUNsaWVudDo6bm9ybWFsaXplVXBkYXRlKCR1cGRhdGUpOwp9Cg==
+<?php
+/**
+ * Modasr multi-platform layer.
+ *
+ * Allows the bot core to run on three messengers:
+ *   - telegram : native Bot API (default behaviour, unchanged)
+ *   - bale     : Bale messenger Bot API (Telegram-compatible, different base URL)
+ *   - rubika   : Rubika messenger Bot API (different schema, adapted by RubikaClient)
+ *
+ * The active platform is selected with $platform in config.php:
+ *   $platform = 'telegram'; // or 'bale' | 'rubika'
+ */
+
+require_once __DIR__ . '/RubikaClient.php';
+
+function modasr_platform(): string
+{
+    global $platform;
+    $p = isset($platform) ? strtolower(trim((string) $platform)) : 'telegram';
+    return in_array($p, ['telegram', 'bale', 'rubika'], true) ? $p : 'telegram';
+}
+
+/**
+ * Route an outgoing Bot API call through the active platform.
+ *
+ * @return array{0:bool,1:array} [handled, telegram-style result]
+ */
+function modasr_platform_request(string $method, array $datas, string $token): array
+{
+    $p = modasr_platform();
+    if ($p === 'telegram') {
+        return [false, []]; // fall through to the original Telegram transport
+    }
+
+    if ($p === 'bale') {
+        return [true, modasr_bale_request($method, $datas, $token)];
+    }
+
+    // rubika
+    $client = new RubikaClient($token);
+    return [true, $client->call($method, $datas)];
+}
+
+/**
+ * Bale Bot API is wire-compatible with the Telegram Bot API;
+ * only the base URL (and token format) differs.
+ */
+function modasr_bale_request(string $method, array $datas, string $token): array
+{
+    // Bale does not support custom emoji payloads.
+    if (function_exists('payloadHasCustomEmoji') && payloadHasCustomEmoji($datas)) {
+        $datas = stripCustomEmojiPayload($datas);
+    }
+
+    $url = 'https://tapi.bale.ai/bot' . $token . '/' . $method;
+
+    $ch = curl_init($url);
+    if ($ch === false) {
+        return ['ok' => false, 'description' => 'Unable to initialise cURL for Bale request.'];
+    }
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
+
+    $raw = curl_exec($ch);
+    if ($raw === false) {
+        $err = curl_error($ch);
+        curl_close($ch);
+        return ['ok' => false, 'description' => $err !== '' ? $err : 'Bale request failed.'];
+    }
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    $decoded = json_decode($raw, true);
+    if (!is_array($decoded)) {
+        return ['ok' => false, 'error_code' => $code, 'description' => 'Invalid response received from Bale.'];
+    }
+    return $decoded;
+}
+
+/**
+ * Normalise an incoming webhook update into the Telegram-style update
+ * structure that the rest of the codebase expects.
+ *
+ * Bale already sends Telegram-shaped updates, so it passes through.
+ */
+function modasr_normalize_incoming_update($update)
+{
+    if (!is_array($update)) {
+        return $update;
+    }
+    if (modasr_platform() !== 'rubika') {
+        return $update;
+    }
+    return RubikaClient::normalizeUpdate($update);
+}

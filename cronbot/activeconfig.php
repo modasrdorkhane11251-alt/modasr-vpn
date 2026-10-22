@@ -1,1 +1,33 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CiRNYW5hZ2VQYW5lbCA9IG5ldyBNYW5hZ2VQYW5lbCgpOwoKCiRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIGlkIEZST00gdXNlciBXSEVSRSBjaGVja3N0YXR1cyA9ICcxJyBPUkRFUiBCWSBSQU5EKCkgTElNSVQgMTAiKTsKJHN0bXQtPmV4ZWN1dGUoKTsKd2hpbGUgKCRyZXN1bHQgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICAgICAkc3RtdHMgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIGludm9pY2UgV0hFUkUgaWRfdXNlciA9IDptcDEgQU5EIFN0YXR1cyA9ICdkaXNhYmxlYnlhZG1pbicgIE9SREVSIEJZIFJBTkQoKSBMSU1JVCAxMCIpOwogICAgICAgICRzdG10cy0+ZXhlY3V0ZShbJzptcDEnID0+ICRyZXN1bHRbJ2lkJ11dKTsKICAgICAgICAkc2VsZWN0aW52b2ljZSA9ICRzdG10cy0+ZmV0Y2hBbGwoKTsKICAgICAgICBpZigkc3RtdHMtPnJvd0NvdW50KCkgPT0gMCl7CiAgICAgICAgICAgIHVwZGF0ZSgidXNlciIsImNoZWNrc3RhdHVzIiwiMCIsImlkIiwkcmVzdWx0WydpZCddKTsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgICAgIH0KICAgICAgICBmb3JlYWNoICgkc2VsZWN0aW52b2ljZSBhcyAkaW52b2ljZSl7CiAgICAgICAgJGdldF91c2VybmFtZV9DaGVjayA9ICRNYW5hZ2VQYW5lbC0+RGF0YVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwkaW52b2ljZVsndXNlcm5hbWUnXSk7CiAgICAgICAgJHBhbmVsU3luY2VkID0gdHJ1ZTsKICAgICAgICBpZigkZ2V0X3VzZXJuYW1lX0NoZWNrWydzdGF0dXMnXSA9PSAiZGlzYWJsZWQiKXsKICAgICAgICAkdXNlcmNoZW5nZXN0YXR1cyA9ICRNYW5hZ2VQYW5lbC0+Q2hhbmdlX3N0YXR1cygkaW52b2ljZVsndXNlcm5hbWUnXSwkaW52b2ljZVsnU2VydmljZV9sb2NhdGlvbiddKTsKICAgICAgICAkcGFuZWxTeW5jZWQgPSBpc19hcnJheSgkdXNlcmNoZW5nZXN0YXR1cykgJiYgKCR1c2VyY2hlbmdlc3RhdHVzWydzdGF0dXMnXSA/PyAnJykgIT0gIlVuc3VjY2Vzc2Z1bCI7CiAgICAgICAgfQogICAgICAgIGlmKCRwYW5lbFN5bmNlZCl7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwiU3RhdHVzIiwiYWN0aXZlIiwiaWRfaW52b2ljZSIsJGludm9pY2VbJ2lkX2ludm9pY2UnXSk7CiAgICAgICAgfQogICAgICAgIH0KICAgIH0=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$ManagePanel = new ManagePanel();
+
+
+$stmt = $pdo->prepare("SELECT id FROM user WHERE checkstatus = '1' ORDER BY RAND() LIMIT 10");
+$stmt->execute();
+while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $stmts = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :mp1 AND Status = 'disablebyadmin'  ORDER BY RAND() LIMIT 10");
+        $stmts->execute([':mp1' => $result['id']]);
+        $selectinvoice = $stmts->fetchAll();
+        if($stmts->rowCount() == 0){
+            update("user","checkstatus","0","id",$result['id']);
+            continue;
+            }
+        foreach ($selectinvoice as $invoice){
+        $get_username_Check = $ManagePanel->DataUser($invoice['Service_location'],$invoice['username']);
+        $panelSynced = true;
+        if($get_username_Check['status'] == "disabled"){
+        $userchengestatus = $ManagePanel->Change_status($invoice['username'],$invoice['Service_location']);
+        $panelSynced = is_array($userchengestatus) && ($userchengestatus['status'] ?? '') != "Unsuccessful";
+        }
+        if($panelSynced){
+        update("invoice","Status","active","id_invoice",$invoice['id_invoice']);
+        }
+        }
+    }

@@ -1,1 +1,33 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CiRNYW5hZ2VQYW5lbCA9IG5ldyBNYW5hZ2VQYW5lbCgpOwoKCiRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIGlkIEZST00gdXNlciBXSEVSRSBjaGVja3N0YXR1cyA9ICcyJyBPUkRFUiBCWSBSQU5EKCkgTElNSVQgMTAiKTsKJHN0bXQtPmV4ZWN1dGUoKTsKd2hpbGUgKCRyZXN1bHQgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICAgICAkc3RtdHMgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIGludm9pY2UgV0hFUkUgaWRfdXNlciA9IDptcDEgQU5EIChTdGF0dXMgPSAnYWN0aXZlJyBPUiBTdGF0dXMgPSAnZW5kX29mX3RpbWUnICBPUiBTdGF0dXMgPSAnZW5kX29mX3ZvbHVtZScgT1Igc3RhdHVzID0gJ3NlbmRlZHdhcm4nIE9SIFN0YXR1cyA9ICdzZW5kX29uX2hvbGQnKSAgT1JERVIgQlkgUkFORCgpIExJTUlUIDEwIik7CiAgICAgICAgJHN0bXRzLT5leGVjdXRlKFsnOm1wMScgPT4gJHJlc3VsdFsnaWQnXV0pOwogICAgICAgICRzZWxlY3RpbnZvaWNlID0gJHN0bXRzLT5mZXRjaEFsbCgpOwogICAgICAgIGlmKCRzdG10cy0+cm93Q291bnQoKSA9PSAwKXsKICAgICAgICAgICAgdXBkYXRlKCJ1c2VyIiwiY2hlY2tzdGF0dXMiLCIwIiwiaWQiLCRyZXN1bHRbJ2lkJ10pOwogICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgIGZvcmVhY2ggKCRzZWxlY3RpbnZvaWNlIGFzICRpbnZvaWNlKXsKICAgICAgICAkZ2V0X3VzZXJuYW1lX0NoZWNrID0gJE1hbmFnZVBhbmVsLT5EYXRhVXNlcigkaW52b2ljZVsnU2VydmljZV9sb2NhdGlvbiddLCRpbnZvaWNlWyd1c2VybmFtZSddKTsKICAgICAgICAkcGFuZWxTeW5jZWQgPSB0cnVlOwogICAgICAgIGlmKCRnZXRfdXNlcm5hbWVfQ2hlY2tbJ3N0YXR1cyddID09ICJhY3RpdmUiKXsKICAgICAgICAkdXNlcmNoZW5nZXN0YXR1cyA9ICRNYW5hZ2VQYW5lbC0+Q2hhbmdlX3N0YXR1cygkaW52b2ljZVsndXNlcm5hbWUnXSwkaW52b2ljZVsnU2VydmljZV9sb2NhdGlvbiddKTsKICAgICAgICAkcGFuZWxTeW5jZWQgPSBpc19hcnJheSgkdXNlcmNoZW5nZXN0YXR1cykgJiYgKCR1c2VyY2hlbmdlc3RhdHVzWydzdGF0dXMnXSA/PyAnJykgIT0gIlVuc3VjY2Vzc2Z1bCI7CiAgICAgICAgfQogICAgICAgIGlmKCRwYW5lbFN5bmNlZCl7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwiU3RhdHVzIiwiZGlzYWJsZWJ5YWRtaW4iLCJpZF9pbnZvaWNlIiwkaW52b2ljZVsnaWRfaW52b2ljZSddKTsKICAgICAgICB9CiAgICAgICAgfQogICAgfQ==
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$ManagePanel = new ManagePanel();
+
+
+$stmt = $pdo->prepare("SELECT id FROM user WHERE checkstatus = '2' ORDER BY RAND() LIMIT 10");
+$stmt->execute();
+while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $stmts = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :mp1 AND (Status = 'active' OR Status = 'end_of_time'  OR Status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')  ORDER BY RAND() LIMIT 10");
+        $stmts->execute([':mp1' => $result['id']]);
+        $selectinvoice = $stmts->fetchAll();
+        if($stmts->rowCount() == 0){
+            update("user","checkstatus","0","id",$result['id']);
+            continue;
+            }
+        foreach ($selectinvoice as $invoice){
+        $get_username_Check = $ManagePanel->DataUser($invoice['Service_location'],$invoice['username']);
+        $panelSynced = true;
+        if($get_username_Check['status'] == "active"){
+        $userchengestatus = $ManagePanel->Change_status($invoice['username'],$invoice['Service_location']);
+        $panelSynced = is_array($userchengestatus) && ($userchengestatus['status'] ?? '') != "Unsuccessful";
+        }
+        if($panelSynced){
+        update("invoice","Status","disablebyadmin","id_invoice",$invoice['id_invoice']);
+        }
+        }
+    }

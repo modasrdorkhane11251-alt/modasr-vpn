@@ -1,1 +1,159 @@
-PD9waHAKcmVxdWlyZV9vbmNlICdjb25maWcucGhwJzsKZnVuY3Rpb24gaXNUZWxlZ3JhbUNoYXRJZEVtcHR5KCRjaGF0X2lkKTogYm9vbAp7CiAgICBpZiAoJGNoYXRfaWQgPT09IG51bGwgfHwgJGNoYXRfaWQgPT09IGZhbHNlKSB7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICBpZiAoaXNfYXJyYXkoJGNoYXRfaWQpIHx8IGlzX29iamVjdCgkY2hhdF9pZCkpIHsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgICRjaGF0X2lkID0gdHJpbSgoc3RyaW5nKSAkY2hhdF9pZCk7CiAgICBpZiAoJGNoYXRfaWQgPT09ICcnKSB7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICByZXR1cm4gaXNfbnVtZXJpYygkY2hhdF9pZCkgJiYgKGludCkgJGNoYXRfaWQgPT09IDA7Cn0KZnVuY3Rpb24gdGVsZWdyYW0oJG1ldGhvZCwgJGRhdGFzID0gW10sJGJvdFRva2VuID0gbnVsbCkKewogICAgZ2xvYmFsICRBcGlUb2tlbjsKICAgIGlmKCRib3RUb2tlbiAhPSBudWxsKXsKICAgICAgICAkQXBpVG9rZW4gPSAkYm90VG9rZW47CiAgICB9CiAgICBmb3JlYWNoIChbJ2NoYXRfaWQnLCAnZnJvbV9jaGF0X2lkJ10gYXMgJGNoYXRJZEtleSkgewogICAgICAgIGlmIChhcnJheV9rZXlfZXhpc3RzKCRjaGF0SWRLZXksICRkYXRhcykgJiYgaXNUZWxlZ3JhbUNoYXRJZEVtcHR5KCRkYXRhc1skY2hhdElkS2V5XSkpIHsKICAgICAgICAgICAgcmV0dXJuIFsKICAgICAgICAgICAgICAgICdvaycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnZXJyb3JfY29kZScgPT4gNDAwLAogICAgICAgICAgICAgICAgJ2Rlc2NyaXB0aW9uJyA9PiAnQmFkIFJlcXVlc3Q6IGNoYXRfaWQgaXMgZW1wdHknCiAgICAgICAgICAgIF07CiAgICAgICAgfQogICAgfQogICAgJHVybCA9ICJodHRwczovL2FwaS50ZWxlZ3JhbS5vcmcvYm90IiAuICRBcGlUb2tlbiAuICIvIiAuICRtZXRob2Q7CiAgICAkY2ggPSBjdXJsX2luaXQoKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9VUkwsICR1cmwpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSLCB0cnVlKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9QT1NURklFTERTLCAkZGF0YXMpOwogICAgJHJlcyA9IGN1cmxfZXhlYygkY2gpOwogICAgaWYgKGN1cmxfZXJyb3IoJGNoKSkgewogICAgICAgIHZhcl9kdW1wKGN1cmxfZXJyb3IoJGNoKSk7CiAgICB9IGVsc2UgewogICAgICAgIHJldHVybiBqc29uX2RlY29kZSgkcmVzLHRydWUpOwogICAgfQp9CmZ1bmN0aW9uIHNlbmRtZXNzYWdlKCRjaGF0X2lkLCR0ZXh0LCRrZXlib2FyZCwkcGFyc2VfbW9kZSl7CiAgICBpZiAoaXNUZWxlZ3JhbUNoYXRJZEVtcHR5KCRjaGF0X2lkKSkgewogICAgICAgIHJldHVybiBbJ29rJyA9PiBmYWxzZV07CiAgICB9CiAgICByZXR1cm4gdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJyxbCiAgICAgICAgJ2NoYXRfaWQnID0+ICRjaGF0X2lkLAogICAgICAgICd0ZXh0JyA9PiAkdGV4dCwKICAgICAgICAncmVwbHlfbWFya3VwJyA9PiAka2V5Ym9hcmQsCiAgICAgICAgJ3BhcnNlX21vZGUnID0+ICRwYXJzZV9tb2RlLAogICAgICAgIAogICAgICAgIF0pOwp9CmZ1bmN0aW9uIHNlbmREb2N1bWVudCgkY2hhdF9pZCwgJGRvY3VtZW50UGF0aCwgJGNhcHRpb24pIHsKICAgICAgICB0ZWxlZ3JhbSgnc2VuZERvY3VtZW50JyxbCiAgICAgICAgJ2NoYXRfaWQnID0+ICRjaGF0X2lkLAogICAgICAgICdkb2N1bWVudCcgPT4gbmV3IENVUkxGaWxlKCRkb2N1bWVudFBhdGgpLAogICAgICAgICdjYXB0aW9uJyA9PiAkY2FwdGlvbiwKICAgICAgICBdKTsKfQoKZnVuY3Rpb24gZm9yd2FyZE1lc3NhZ2UoJGNoYXRfaWQsJG1lc3NhZ2VfaWQsJGNoYXRfaWRfdXNlcil7CiAgICB0ZWxlZ3JhbSgnZm9yd2FyZE1lc3NhZ2UnLFsKICAgICAgICAnZnJvbV9jaGF0X2lkJz0+ICRjaGF0X2lkLAogICAgICAgICdtZXNzYWdlX2lkJz0+ICRtZXNzYWdlX2lkLAogICAgICAgICdjaGF0X2lkJz0+ICRjaGF0X2lkX3VzZXIsCiAgICBdKTsKfQpmdW5jdGlvbiBzZW5kcGhvdG8oJGNoYXRfaWQsJHBob3RvaWQsJGNhcHRpb24pewogICAgdGVsZWdyYW0oJ3NlbmRwaG90bycsWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAncGhvdG8nPT4gJHBob3RvaWQsCiAgICAgICAgJ2NhcHRpb24nPT4gJGNhcHRpb24sCiAgICBdKTsKfQpmdW5jdGlvbiBzZW5kdmlkZW8oJGNoYXRfaWQsJHZpZGVvaWQsJGNhcHRpb24pewogICAgdGVsZWdyYW0oJ3NlbmR2aWRlbycsWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAndmlkZW8nPT4gJHZpZGVvaWQsCiAgICAgICAgJ2NhcHRpb24nPT4gJGNhcHRpb24sCiAgICBdKTsKfQpmdW5jdGlvbiBzZW5kZG9jdW1lbnRzaWQoJGNoYXRfaWQsJGRvY3VtZW50aWQsJGNhcHRpb24pewogICAgdGVsZWdyYW0oJ3NlbmREb2N1bWVudCcsWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAnZG9jdW1lbnQnPT4gJGRvY3VtZW50aWQsCiAgICAgICAgJ2NhcHRpb24nPT4gJGNhcHRpb24sCiAgICBdKTsKfQpmdW5jdGlvbiBFZGl0bWVzc2FnZXRleHQoJGNoYXRfaWQsICRtZXNzYWdlX2lkLCAkdGV4dCwgJGtleWJvYXJkLCRwYXJzZV9tb2RlID0gJ0hUTUwnKXsKICAgIHJldHVybiB0ZWxlZ3JhbSgnZWRpdG1lc3NhZ2V0ZXh0JywgWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAnbWVzc2FnZV9pZCcgPT4gJG1lc3NhZ2VfaWQsCiAgICAgICAgJ3RleHQnID0+ICR0ZXh0LAogICAgICAgICdyZXBseV9tYXJrdXAnID0+ICRrZXlib2FyZCwKICAgICAgICAncGFyc2VfbW9kZScgPT4gJHBhcnNlX21vZGUsCgogICAgXSk7Cn0KIGZ1bmN0aW9uIGRlbGV0ZW1lc3NhZ2UoJGNoYXRfaWQsICRtZXNzYWdlX2lkKXsKICB0ZWxlZ3JhbSgnZGVsZXRlbWVzc2FnZScsIFsKJ2NoYXRfaWQnID0+ICRjaGF0X2lkLCAKJ21lc3NhZ2VfaWQnID0+ICRtZXNzYWdlX2lkLApdKTsKIH0KZnVuY3Rpb24gZ2V0RmlsZWRkaXJlKCRwaG90b2lkKXsKICByZXR1cm4gdGVsZWdyYW0oJ2dldEZpbGUnLCBbCidmaWxlX2lkJyA9PiAkcGhvdG9pZCwgCl0pOwogfQpmdW5jdGlvbiBwaW5tZXNzYWdlKCRmcm9tX2lkLCRtZXNzYWdlX2lkKXsKICByZXR1cm4gdGVsZWdyYW0oJ3BpbkNoYXRNZXNzYWdlJywgWwonY2hhdF9pZCcgPT4gJGZyb21faWQsIAonbWVzc2FnZV9pZCcgPT4gJG1lc3NhZ2VfaWQsIApdKTsKIH0KIGZ1bmN0aW9uIHVucGlubWVzc2FnZSgkZnJvbV9pZCl7CiAgcmV0dXJuIHRlbGVncmFtKCd1bnBpbkFsbENoYXRNZXNzYWdlcycsIFsKJ2NoYXRfaWQnID0+ICRmcm9tX2lkLCAKXSk7CiB9CiAgZnVuY3Rpb24gYW5zd2VySW5saW5lUXVlcnkoJGlubGluZV9xdWVyeV9pZCwkcmVzdWx0cyl7CiAgcmV0dXJuIHRlbGVncmFtKCdhbnN3ZXJJbmxpbmVRdWVyeScsIFsKICAgICAgImlubGluZV9xdWVyeV9pZCIgPT4gJGlubGluZV9xdWVyeV9pZCwKICAgICAgICAicmVzdWx0cyIgPT4ganNvbl9lbmNvZGUoJHJlc3VsdHMpCl0pOwogfQogZnVuY3Rpb24gY29udmVydFBlcnNpYW5OdW1iZXJzVG9FbmdsaXNoKCRzdHJpbmcpIHsKICAgICRwZXJzaWFuX251bWJlcnMgPSBbJ9uwJywgJ9uxJywgJ9uyJywgJ9uzJywgJ9u0JywgJ9u1JywgJ9u2JywgJ9u3JywgJ9u4JywgJ9u5J107CiAgICAkZW5nbGlzaF9udW1iZXJzID0gWycwJywgJzEnLCAnMicsICczJywgJzQnLCAnNScsICc2JywgJzcnLCAnOCcsICc5J107CgogICAgcmV0dXJuIHN0cl9yZXBsYWNlKCRwZXJzaWFuX251bWJlcnMsICRlbmdsaXNoX251bWJlcnMsICRzdHJpbmcpOwp9CiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSMKJHVwZGF0ZSA9IGpzb25fZGVjb2RlKGZpbGVfZ2V0X2NvbnRlbnRzKCJwaHA6Ly9pbnB1dCIpLCB0cnVlKTsKJGZyb21faWQgPSAkdXBkYXRlWydtZXNzYWdlJ11bJ2Zyb20nXVsnaWQnXSA/PyAkdXBkYXRlWydjYWxsYmFja19xdWVyeSddWydmcm9tJ11bJ2lkJ10gPz8gJHVwZGF0ZVsiaW5saW5lX3F1ZXJ5Il1bJ2Zyb20nXVsnaWQnXSA/PyAwOwokQ2hhdF90eXBlID0gJHVwZGF0ZVsibWVzc2FnZSJdWyJjaGF0Il1bInR5cGUiXSA/PyAkdXBkYXRlWydjYWxsYmFja19xdWVyeSddWydtZXNzYWdlJ11bJ2NoYXQnXVsndHlwZSddID8/ICcnOwokdGV4dCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsidGV4dCJdICA/PyAnJzsKJHRleHQgPWNvbnZlcnRQZXJzaWFuTnVtYmVyc1RvRW5nbGlzaCgkdGV4dCk7CiR0ZXh0X2lubGluZSA9ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bIm1lc3NhZ2UiXVsndGV4dCddID8/ICcnOwokbWVzc2FnZV9pZCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsibWVzc2FnZV9pZCJdID8/ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bIm1lc3NhZ2UiXVsibWVzc2FnZV9pZCJdID8/IDA7CiRwaG90byA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsicGhvdG8iXSA/PyAwOwokZG9jdW1lbnQgPSAkdXBkYXRlWyJtZXNzYWdlIl1bImRvY3VtZW50Il0gPz8gMDsKJGZpbGVpZCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsiZG9jdW1lbnQiXVsiZmlsZV9pZCJdID8/IDA7CiRwaG90b2lkID0gJHBob3RvID8gZW5kKCRwaG90bylbImZpbGVfaWQiXSA6ICcnOwokY2FwdGlvbiA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsiY2FwdGlvbiJdID8/ICcnOwokdmlkZW8gPSAkdXBkYXRlWyJtZXNzYWdlIl1bInZpZGVvIl0gPz8gMDsKJHZpZGVvaWQgPSAkdmlkZW8gPyAkdmlkZW9bImZpbGVfaWQiXSA6IDA7CiRmb3J3YXJkX2Zyb21faWQgPSAkdXBkYXRlWyJtZXNzYWdlIl1bInJlcGx5X3RvX21lc3NhZ2UiXVsiZm9yd2FyZF9mcm9tIl1bImlkIl0gPz8gMDsKJGRhdGFpbiA9ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bImRhdGEiXSA/PyAnJzsKJGZpcnN0X25hbWUgPSAkdXBkYXRlWydtZXNzYWdlJ11bJ2Zyb20nXVsnZmlyc3RfbmFtZSddICA/PyAkdXBkYXRlWyJjYWxsYmFja19xdWVyeSJdWyJmcm9tIl1bImZpcnN0X25hbWUiXSA/PyAkdXBkYXRlWyJpbmxpbmVfcXVlcnkiXVsnZnJvbSddWydmaXJzdF9uYW1lJ10gPz8gJyc7CiR1c2VybmFtZSA9ICR1cGRhdGVbJ21lc3NhZ2UnXVsnZnJvbSddWyd1c2VybmFtZSddID8/ICR1cGRhdGVbJ2NhbGxiYWNrX3F1ZXJ5J11bJ2Zyb20nXVsndXNlcm5hbWUnXSA/PyAkdXBkYXRlWyJjYWxsYmFja19xdWVyeSJdWyJmcm9tIl1bInVzZXJuYW1lIl0gPz8gJ05PVF9VU0VSTkFNRSc7CiR1c2VyX3Bob25lID0kdXBkYXRlWyJtZXNzYWdlIl1bImNvbnRhY3QiXVsicGhvbmVfbnVtYmVyIl0gPz8gMDsKJGNvbnRhY3RfaWQgPSAkdXBkYXRlWyJtZXNzYWdlIl1bImNvbnRhY3QiXVsidXNlcl9pZCJdID8/IDA7CiRjYWxsYmFja19xdWVyeV9pZCA9ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bImlkIl0gPz8gMDsKJGlubGluZV9xdWVyeV9pZCA9ICR1cGRhdGVbImlubGluZV9xdWVyeSJdWyJpZCJdID8/IDA7CiRxdWVyeSA9ICR1cGRhdGVbImlubGluZV9xdWVyeSJdWyJxdWVyeSJdID8/IDA7
+<?php
+require_once 'config.php';
+function isTelegramChatIdEmpty($chat_id): bool
+{
+    if ($chat_id === null || $chat_id === false) {
+        return true;
+    }
+    if (is_array($chat_id) || is_object($chat_id)) {
+        return true;
+    }
+    $chat_id = trim((string) $chat_id);
+    if ($chat_id === '') {
+        return true;
+    }
+    return is_numeric($chat_id) && (int) $chat_id === 0;
+}
+function telegram($method, $datas = [],$botToken = null)
+{
+    global $ApiToken;
+    if($botToken != null){
+        $ApiToken = $botToken;
+    }
+    foreach (['chat_id', 'from_chat_id'] as $chatIdKey) {
+        if (array_key_exists($chatIdKey, $datas) && isTelegramChatIdEmpty($datas[$chatIdKey])) {
+            return [
+                'ok' => false,
+                'error_code' => 400,
+                'description' => 'Bad Request: chat_id is empty'
+            ];
+        }
+    }
+    $url = "https://api.telegram.org/bot" . $ApiToken . "/" . $method;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
+    $res = curl_exec($ch);
+    if (curl_error($ch)) {
+        var_dump(curl_error($ch));
+    } else {
+        return json_decode($res,true);
+    }
+}
+function sendmessage($chat_id,$text,$keyboard,$parse_mode){
+    if (isTelegramChatIdEmpty($chat_id)) {
+        return ['ok' => false];
+    }
+    return telegram('sendmessage',[
+        'chat_id' => $chat_id,
+        'text' => $text,
+        'reply_markup' => $keyboard,
+        'parse_mode' => $parse_mode,
+        
+        ]);
+}
+function sendDocument($chat_id, $documentPath, $caption) {
+        telegram('sendDocument',[
+        'chat_id' => $chat_id,
+        'document' => new CURLFile($documentPath),
+        'caption' => $caption,
+        ]);
+}
+
+function forwardMessage($chat_id,$message_id,$chat_id_user){
+    telegram('forwardMessage',[
+        'from_chat_id'=> $chat_id,
+        'message_id'=> $message_id,
+        'chat_id'=> $chat_id_user,
+    ]);
+}
+function sendphoto($chat_id,$photoid,$caption){
+    telegram('sendphoto',[
+        'chat_id' => $chat_id,
+        'photo'=> $photoid,
+        'caption'=> $caption,
+    ]);
+}
+function sendvideo($chat_id,$videoid,$caption){
+    telegram('sendvideo',[
+        'chat_id' => $chat_id,
+        'video'=> $videoid,
+        'caption'=> $caption,
+    ]);
+}
+function senddocumentsid($chat_id,$documentid,$caption){
+    telegram('sendDocument',[
+        'chat_id' => $chat_id,
+        'document'=> $documentid,
+        'caption'=> $caption,
+    ]);
+}
+function Editmessagetext($chat_id, $message_id, $text, $keyboard,$parse_mode = 'HTML'){
+    return telegram('editmessagetext', [
+        'chat_id' => $chat_id,
+        'message_id' => $message_id,
+        'text' => $text,
+        'reply_markup' => $keyboard,
+        'parse_mode' => $parse_mode,
+
+    ]);
+}
+ function deletemessage($chat_id, $message_id){
+  telegram('deletemessage', [
+'chat_id' => $chat_id, 
+'message_id' => $message_id,
+]);
+ }
+function getFileddire($photoid){
+  return telegram('getFile', [
+'file_id' => $photoid, 
+]);
+ }
+function pinmessage($from_id,$message_id){
+  return telegram('pinChatMessage', [
+'chat_id' => $from_id, 
+'message_id' => $message_id, 
+]);
+ }
+ function unpinmessage($from_id){
+  return telegram('unpinAllChatMessages', [
+'chat_id' => $from_id, 
+]);
+ }
+  function answerInlineQuery($inline_query_id,$results){
+  return telegram('answerInlineQuery', [
+      "inline_query_id" => $inline_query_id,
+        "results" => json_encode($results)
+]);
+ }
+ function convertPersianNumbersToEnglish($string) {
+    $persian_numbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    $english_numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    return str_replace($persian_numbers, $english_numbers, $string);
+}
+#-----------------------------#
+$update = json_decode(file_get_contents("php://input"), true);
+$from_id = $update['message']['from']['id'] ?? $update['callback_query']['from']['id'] ?? $update["inline_query"]['from']['id'] ?? 0;
+$Chat_type = $update["message"]["chat"]["type"] ?? $update['callback_query']['message']['chat']['type'] ?? '';
+$text = $update["message"]["text"]  ?? '';
+$text =convertPersianNumbersToEnglish($text);
+$text_inline = $update["callback_query"]["message"]['text'] ?? '';
+$message_id = $update["message"]["message_id"] ?? $update["callback_query"]["message"]["message_id"] ?? 0;
+$photo = $update["message"]["photo"] ?? 0;
+$document = $update["message"]["document"] ?? 0;
+$fileid = $update["message"]["document"]["file_id"] ?? 0;
+$photoid = $photo ? end($photo)["file_id"] : '';
+$caption = $update["message"]["caption"] ?? '';
+$video = $update["message"]["video"] ?? 0;
+$videoid = $video ? $video["file_id"] : 0;
+$forward_from_id = $update["message"]["reply_to_message"]["forward_from"]["id"] ?? 0;
+$datain = $update["callback_query"]["data"] ?? '';
+$first_name = $update['message']['from']['first_name']  ?? $update["callback_query"]["from"]["first_name"] ?? $update["inline_query"]['from']['first_name'] ?? '';
+$username = $update['message']['from']['username'] ?? $update['callback_query']['from']['username'] ?? $update["callback_query"]["from"]["username"] ?? 'NOT_USERNAME';
+$user_phone =$update["message"]["contact"]["phone_number"] ?? 0;
+$contact_id = $update["message"]["contact"]["user_id"] ?? 0;
+$callback_query_id = $update["callback_query"]["id"] ?? 0;
+$inline_query_id = $update["inline_query"]["id"] ?? 0;
+$query = $update["inline_query"]["query"] ?? 0;

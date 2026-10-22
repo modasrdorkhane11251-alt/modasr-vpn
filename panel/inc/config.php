@@ -1,1 +1,188 @@
-PD9waHAKCmlmIChzZXNzaW9uX3N0YXR1cygpID09PSBQSFBfU0VTU0lPTl9OT05FKSB7CiAgICBzZXNzaW9uX3NldF9jb29raWVfcGFyYW1zKFsKICAgICAgICAnbGlmZXRpbWUnID0+IDAsCiAgICAgICAgJ3BhdGgnID0+ICcvJywKICAgICAgICAnc2VjdXJlJyA9PiAhZW1wdHkoJF9TRVJWRVJbJ0hUVFBTJ10pICYmICRfU0VSVkVSWydIVFRQUyddICE9PSAnb2ZmJywKICAgICAgICAnaHR0cG9ubHknID0+IHRydWUsCiAgICAgICAgJ3NhbWVzaXRlJyA9PiAnTGF4JywKICAgIF0pOwp9CgpyZXF1aXJlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlIF9fRElSX18gLiAnLy4uLy4uL2Z1bmN0aW9uLnBocCc7CgpkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL1RlaHJhbicpOwoKLy8gUGFuZWwgVUkgbGFuZ3VhZ2Ugc3RyaW5ncyAobG9hZGVkIGZyb20gbGFuZy9mYS5waHAgdmlhIGxhbmd1YWdlY2hhbmdlKCkpCiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CgpmdW5jdGlvbiBkYl9xdWVyeShQRE8gJHBkbywgc3RyaW5nICRzcWwsIGFycmF5ICRwYXJhbXMgPSBbXSk6IFBET1N0YXRlbWVudAp7CiAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoJHNxbCk7CiAgICAkc3RtdC0+ZXhlY3V0ZSgkcGFyYW1zKTsKICAgIHJldHVybiAkc3RtdDsKfQoKZnVuY3Rpb24gZGJfZmV0Y2goUERPICRwZG8sIHN0cmluZyAkc3FsLCBhcnJheSAkcGFyYW1zID0gW10pOiA/YXJyYXkKewogICAgcmV0dXJuIGRiX3F1ZXJ5KCRwZG8sICRzcWwsICRwYXJhbXMpLT5mZXRjaCgpID86IG51bGw7Cn0KCmZ1bmN0aW9uIGRiX2ZldGNoQWxsKFBETyAkcGRvLCBzdHJpbmcgJHNxbCwgYXJyYXkgJHBhcmFtcyA9IFtdKTogYXJyYXkKewogICAgcmV0dXJuIGRiX3F1ZXJ5KCRwZG8sICRzcWwsICRwYXJhbXMpLT5mZXRjaEFsbCgpOwp9CgpmdW5jdGlvbiBkYl9jb3VudChQRE8gJHBkbywgc3RyaW5nICRzcWwsIGFycmF5ICRwYXJhbXMgPSBbXSk6IGludAp7CiAgICByZXR1cm4gKGludCkgZGJfcXVlcnkoJHBkbywgJHNxbCwgJHBhcmFtcyktPmZldGNoQ29sdW1uKCk7Cn0KCmZ1bmN0aW9uIG1vdmVfZGlzcGxheV9vcmRlcihQRE8gJHBkbywgc3RyaW5nICR0YWJsZSwgaW50ICRpZCwgaW50ICRwb3NpdGlvbik6IHZvaWQKewogICAgJGN1cnJlbnQgPSAkcGRvLT5xdWVyeSgiU0VMRUNUIGlkLCBkaXNwbGF5X29yZGVyIEZST00gYCR0YWJsZWAgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQgRk9SIFVQREFURSIpLT5mZXRjaEFsbChQRE86OkZFVENIX0tFWV9QQUlSKTsKICAgICRpZHMgPSBhcnJheV9rZXlzKCRjdXJyZW50KTsKICAgICRmcm9tID0gYXJyYXlfc2VhcmNoKCRpZCwgJGlkcywgdHJ1ZSk7CiAgICAkdG8gPSBtYXgoMCwgbWluKGNvdW50KCRpZHMpIC0gMSwgJHBvc2l0aW9uIC0gMSkpOwogICAgaWYgKCRmcm9tID09PSBmYWxzZSB8fCAkZnJvbSA9PT0gJHRvKSB7CiAgICAgICAgcmV0dXJuOwogICAgfQogICAgYXJyYXlfc3BsaWNlKCRpZHMsICRmcm9tLCAxKTsKICAgIGFycmF5X3NwbGljZSgkaWRzLCAkdG8sIDAsIFskaWRdKTsKICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiVVBEQVRFIGAkdGFibGVgIFNFVCBkaXNwbGF5X29yZGVyID0gPyBXSEVSRSBpZCA9ID8iKTsKICAgIGZvcmVhY2ggKCRpZHMgYXMgJGluZGV4ID0+ICRyb3dJZCkgewogICAgICAgIGlmICgoaW50KSAkY3VycmVudFskcm93SWRdICE9PSAkaW5kZXggKyAxKSB7CiAgICAgICAgICAgICRzdG10LT5leGVjdXRlKFskaW5kZXggKyAxLCAkcm93SWRdKTsKICAgICAgICB9CiAgICB9Cn0KZnVuY3Rpb24gcmVxdWlyZV9hdXRoKCk6IHZvaWQKewogICAgaWYgKHNlc3Npb25fc3RhdHVzKCkgPT09IFBIUF9TRVNTSU9OX05PTkUpCiAgICAgICAgc2Vzc2lvbl9zdGFydCgpOwogICAgZ2xvYmFsICRwZG87CiAgICBpZiAoZW1wdHkoJF9TRVNTSU9OWydhZG1pbl91c2VyJ10pKSB7CiAgICAgICAgaGVhZGVyKCdMb2NhdGlvbjogbG9naW4ucGhwJyk7CiAgICAgICAgZXhpdDsKICAgIH0KICAgIHRyeSB7CiAgICAgICAgJGFkbWluID0gZGJfZmV0Y2goJHBkbywgIlNFTEVDVCBpZF9hZG1pbiwgcnVsZSBGUk9NIGFkbWluIFdIRVJFIHVzZXJuYW1lID0gPyIsIFskX1NFU1NJT05bJ2FkbWluX3VzZXInXV0pOwogICAgICAgIGlmICghJGFkbWluIHx8ICRhZG1pblsncnVsZSddICE9PSAnYWRtaW5pc3RyYXRvcicpIHsKICAgICAgICAgICAgc2Vzc2lvbl9kZXN0cm95KCk7CiAgICAgICAgICAgIGhlYWRlcignTG9jYXRpb246IGxvZ2luLnBocCcpOwogICAgICAgICAgICBleGl0OwogICAgICAgIH0KICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIHNlc3Npb25fZGVzdHJveSgpOwogICAgICAgIGhlYWRlcignTG9jYXRpb246IGxvZ2luLnBocCcpOwogICAgICAgIGV4aXQ7CiAgICB9Cn0KCmZ1bmN0aW9uIGNzcmZfdG9rZW4oKTogc3RyaW5nCnsKICAgIGlmIChzZXNzaW9uX3N0YXR1cygpID09PSBQSFBfU0VTU0lPTl9OT05FKQogICAgICAgIHNlc3Npb25fc3RhcnQoKTsKICAgIGlmIChlbXB0eSgkX1NFU1NJT05bJ2NzcmYnXSkpIHsKICAgICAgICAkX1NFU1NJT05bJ2NzcmYnXSA9IGJpbjJoZXgocmFuZG9tX2J5dGVzKDMyKSk7CiAgICB9CiAgICByZXR1cm4gJF9TRVNTSU9OWydjc3JmJ107Cn0KCmZ1bmN0aW9uIGNzcmZfY2hlY2tfdmFsdWUoc3RyaW5nICR0b2tlbik6IGJvb2wKewogICAgcmV0dXJuIGhhc2hfZXF1YWxzKCRfU0VTU0lPTlsnY3NyZiddID8/ICcnLCAkdG9rZW4pOwp9CgpmdW5jdGlvbiBjc3JmX2NoZWNrX3Bvc3QoKTogdm9pZAp7CiAgICBnbG9iYWwgJHRleHRib3RsYW5nOwogICAgJHRva2VuID0gJF9QT1NUWydfY3NyZiddID8/ICcnOwogICAgaWYgKCFoYXNoX2VxdWFscygkX1NFU1NJT05bJ2NzcmYnXSA/PyAnJywgJHRva2VuKSkgewogICAgICAgIGh0dHBfcmVzcG9uc2VfY29kZSg0MDMpOwogICAgICAgIGRpZSgkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2NvbmZpZ0ludmFsaWRSZXF1ZXN0J10pOwogICAgfQp9CgpmdW5jdGlvbiBjc3JmX2NoZWNrX2dldCgpOiB2b2lkCnsKICAgIGdsb2JhbCAkdGV4dGJvdGxhbmc7CiAgICAkdG9rZW4gPSAkX0dFVFsnX2NzcmYnXSA/PyAnJzsKICAgIGlmICghaGFzaF9lcXVhbHMoJF9TRVNTSU9OWydjc3JmJ10gPz8gJycsICR0b2tlbikpIHsKICAgICAgICBodHRwX3Jlc3BvbnNlX2NvZGUoNDAzKTsKICAgICAgICBkaWUoJHRleHRib3RsYW5nWydwYW5lbCddWydjb25maWdJbnZhbGlkUmVxdWVzdCddKTsKICAgIH0KfQoKZnVuY3Rpb24gZmxhc2goc3RyaW5nICRrZXksIHN0cmluZyAkbXNnKTogdm9pZAp7CiAgICBpZiAoc2Vzc2lvbl9zdGF0dXMoKSA9PT0gUEhQX1NFU1NJT05fTk9ORSkKICAgICAgICBzZXNzaW9uX3N0YXJ0KCk7CiAgICAkX1NFU1NJT05bImZsYXNoX3ska2V5fSJdID0gJG1zZzsKfQoKZnVuY3Rpb24gZ2V0X2ZsYXNoKHN0cmluZyAka2V5KTogP3N0cmluZwp7CiAgICBpZiAoc2Vzc2lvbl9zdGF0dXMoKSA9PT0gUEhQX1NFU1NJT05fTk9ORSkKICAgICAgICBzZXNzaW9uX3N0YXJ0KCk7CiAgICAkbXNnID0gJF9TRVNTSU9OWyJmbGFzaF97JGtleX0iXSA/PyBudWxsOwogICAgdW5zZXQoJF9TRVNTSU9OWyJmbGFzaF97JGtleX0iXSk7CiAgICByZXR1cm4gJG1zZzsKfQoKZnVuY3Rpb24gdHJ1bmMoc3RyaW5nICRzdHIsIGludCAkbWF4ID0gMzApOiBzdHJpbmcKewogICAgcmV0dXJuIG1iX3N0cmxlbigkc3RyLCAnVVRGLTgnKSA+ICRtYXgKICAgICAgICA/IG1iX3N1YnN0cigkc3RyLCAwLCAkbWF4LCAnVVRGLTgnKSAuICfigKYnCiAgICAgICAgOiAkc3RyOwp9CgpmdW5jdGlvbiBzYWZlX2RhdGUoJHRzLCBzdHJpbmcgJGZtdCA9ICdZL20vZCcpOiBzdHJpbmcKewogICAgaWYgKCEkdHMpCiAgICAgICAgcmV0dXJuICfigJQnOwogICAgaWYgKCFpc19udW1lcmljKCR0cykpCiAgICAgICAgcmV0dXJuIGh0bWxzcGVjaWFsY2hhcnMoKHN0cmluZykgJHRzKTsKICAgIHJldHVybiBkYXRlKCRmbXQsIChpbnQpICR0cyk7Cn0KZnVuY3Rpb24gY2hlY2tfbG9naW5fcmF0ZShzdHJpbmcgJGlwKTogYm9vbAp7CiAgICAkZmlsZSA9IHN5c19nZXRfdGVtcF9kaXIoKSAuICcvcGFuZWxfbG9naW5fJyAuIG1kNSgkaXApOwogICAgJGRhdGEgPSBAanNvbl9kZWNvZGUoQGZpbGVfZ2V0X2NvbnRlbnRzKCRmaWxlKSA/OiAne30nLCB0cnVlKSA/OiBbXTsKICAgICRub3cgPSB0aW1lKCk7CiAgICAkZGF0YSA9IGFycmF5X2ZpbHRlcigkZGF0YSwgZm4oJHQpID0+ICgkbm93IC0gJHQpIDwgOTAwKTsKICAgIGlmIChjb3VudCgkZGF0YSkgPj0gMTApCiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgJGRhdGFbXSA9ICRub3c7CiAgICBAZmlsZV9wdXRfY29udGVudHMoJGZpbGUsIGpzb25fZW5jb2RlKGFycmF5X3ZhbHVlcygkZGF0YSkpLCBMT0NLX0VYKTsKICAgIHJldHVybiB0cnVlOwp9CgpmdW5jdGlvbiBjbGVhcl9sb2dpbl9yYXRlKHN0cmluZyAkaXApOiB2b2lkCnsKICAgIEB1bmxpbmsoc3lzX2dldF90ZW1wX2RpcigpIC4gJy9wYW5lbF9sb2dpbl8nIC4gbWQ1KCRpcCkpOwp9CgpmdW5jdGlvbiB1c2VyX3JvbGVfbGFiZWwoc3RyaW5nICRhZ2VudCk6IHN0cmluZwp7CiAgICBnbG9iYWwgJHRleHRib3RsYW5nOwogICAgcmV0dXJuIG1hdGNoICgkYWdlbnQpIHsKICAgICAgICAnbicgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydjb25maWdSb2xlTiddLAogICAgICAgICduMicgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydjb25maWdSb2xlTjInXSwKICAgICAgICAnYWxsJyA9PiAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2NvbmZpZ1JvbGVBbGwnXSwKICAgICAgICBkZWZhdWx0ID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnY29uZmlnUm9sZURlZmF1bHQnXSwKICAgIH07Cn0KCmZ1bmN0aW9uIHVzZXJfcm9sZV90YWcoc3RyaW5nICRhZ2VudCk6IHN0cmluZwp7CiAgICByZXR1cm4gbWF0Y2ggKCRhZ2VudCkgewogICAgICAgICdmJyA9PiAndGFnLWluZm8nLAogICAgICAgICduJyA9PiAndGFnLWluZm8nLAogICAgICAgICduMicgPT4gJ3RhZy13YXJuJywKICAgICAgICAnYWxsJyA9PiAndGFnLW9rJywKICAgICAgICBkZWZhdWx0ID0+ICd0YWctcGxhaW4nLAogICAgfTsKfQo=
+<?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
+}
+
+require __DIR__ . '/../../config.php';
+require __DIR__ . '/../../function.php';
+
+date_default_timezone_set('Asia/Tehran');
+
+// Panel UI language strings (loaded from lang/fa.php via languagechange())
+$textbotlang = languagechange();
+
+function db_query(PDO $pdo, string $sql, array $params = []): PDOStatement
+{
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+    return $stmt;
+}
+
+function db_fetch(PDO $pdo, string $sql, array $params = []): ?array
+{
+    return db_query($pdo, $sql, $params)->fetch() ?: null;
+}
+
+function db_fetchAll(PDO $pdo, string $sql, array $params = []): array
+{
+    return db_query($pdo, $sql, $params)->fetchAll();
+}
+
+function db_count(PDO $pdo, string $sql, array $params = []): int
+{
+    return (int) db_query($pdo, $sql, $params)->fetchColumn();
+}
+
+function move_display_order(PDO $pdo, string $table, int $id, int $position): void
+{
+    $current = $pdo->query("SELECT id, display_order FROM `$table` ORDER BY display_order, id FOR UPDATE")->fetchAll(PDO::FETCH_KEY_PAIR);
+    $ids = array_keys($current);
+    $from = array_search($id, $ids, true);
+    $to = max(0, min(count($ids) - 1, $position - 1));
+    if ($from === false || $from === $to) {
+        return;
+    }
+    array_splice($ids, $from, 1);
+    array_splice($ids, $to, 0, [$id]);
+    $stmt = $pdo->prepare("UPDATE `$table` SET display_order = ? WHERE id = ?");
+    foreach ($ids as $index => $rowId) {
+        if ((int) $current[$rowId] !== $index + 1) {
+            $stmt->execute([$index + 1, $rowId]);
+        }
+    }
+}
+function require_auth(): void
+{
+    if (session_status() === PHP_SESSION_NONE)
+        session_start();
+    global $pdo;
+    if (empty($_SESSION['admin_user'])) {
+        header('Location: login.php');
+        exit;
+    }
+    try {
+        $admin = db_fetch($pdo, "SELECT id_admin, rule FROM admin WHERE username = ?", [$_SESSION['admin_user']]);
+        if (!$admin || $admin['rule'] !== 'administrator') {
+            session_destroy();
+            header('Location: login.php');
+            exit;
+        }
+    } catch (Exception $e) {
+        session_destroy();
+        header('Location: login.php');
+        exit;
+    }
+}
+
+function csrf_token(): string
+{
+    if (session_status() === PHP_SESSION_NONE)
+        session_start();
+    if (empty($_SESSION['csrf'])) {
+        $_SESSION['csrf'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf'];
+}
+
+function csrf_check_value(string $token): bool
+{
+    return hash_equals($_SESSION['csrf'] ?? '', $token);
+}
+
+function csrf_check_post(): void
+{
+    global $textbotlang;
+    $token = $_POST['_csrf'] ?? '';
+    if (!hash_equals($_SESSION['csrf'] ?? '', $token)) {
+        http_response_code(403);
+        die($textbotlang['panel']['configInvalidRequest']);
+    }
+}
+
+function csrf_check_get(): void
+{
+    global $textbotlang;
+    $token = $_GET['_csrf'] ?? '';
+    if (!hash_equals($_SESSION['csrf'] ?? '', $token)) {
+        http_response_code(403);
+        die($textbotlang['panel']['configInvalidRequest']);
+    }
+}
+
+function flash(string $key, string $msg): void
+{
+    if (session_status() === PHP_SESSION_NONE)
+        session_start();
+    $_SESSION["flash_{$key}"] = $msg;
+}
+
+function get_flash(string $key): ?string
+{
+    if (session_status() === PHP_SESSION_NONE)
+        session_start();
+    $msg = $_SESSION["flash_{$key}"] ?? null;
+    unset($_SESSION["flash_{$key}"]);
+    return $msg;
+}
+
+function trunc(string $str, int $max = 30): string
+{
+    return mb_strlen($str, 'UTF-8') > $max
+        ? mb_substr($str, 0, $max, 'UTF-8') . '…'
+        : $str;
+}
+
+function safe_date($ts, string $fmt = 'Y/m/d'): string
+{
+    if (!$ts)
+        return '—';
+    if (!is_numeric($ts))
+        return htmlspecialchars((string) $ts);
+    return date($fmt, (int) $ts);
+}
+function check_login_rate(string $ip): bool
+{
+    $file = sys_get_temp_dir() . '/panel_login_' . md5($ip);
+    $data = @json_decode(@file_get_contents($file) ?: '{}', true) ?: [];
+    $now = time();
+    $data = array_filter($data, fn($t) => ($now - $t) < 900);
+    if (count($data) >= 10)
+        return false;
+    $data[] = $now;
+    @file_put_contents($file, json_encode(array_values($data)), LOCK_EX);
+    return true;
+}
+
+function clear_login_rate(string $ip): void
+{
+    @unlink(sys_get_temp_dir() . '/panel_login_' . md5($ip));
+}
+
+function user_role_label(string $agent): string
+{
+    global $textbotlang;
+    return match ($agent) {
+        'n' => $textbotlang['panel']['configRoleN'],
+        'n2' => $textbotlang['panel']['configRoleN2'],
+        'all' => $textbotlang['panel']['configRoleAll'],
+        default => $textbotlang['panel']['configRoleDefault'],
+    };
+}
+
+function user_role_tag(string $agent): string
+{
+    return match ($agent) {
+        'f' => 'tag-info',
+        'n' => 'tag-info',
+        'n2' => 'tag-warn',
+        'all' => 'tag-ok',
+        default => 'tag-plain',
+    };
+}

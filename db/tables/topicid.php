@@ -1,1 +1,27 @@
-PD9waHAKCiRyZXBvcnRzID0gWwogICAgJ2J1eXJlcG9ydCcsCiAgICAnb3RoZXJzZXJ2aWNlJywKICAgICdwYXltZW50cmVwb3J0JywKICAgICdvdGhlcnJlcG9ydCcsCiAgICAncmVwb3J0dGVzdCcsCiAgICAnZXJyb3JyZXBvcnQnLAogICAgJ3BvcnNhbnRyZXBvcnQnLAogICAgJ3JlcG9ydG5pZ2h0JywKICAgICdyZXBvcnRjcm9uJywKICAgICdiYWNrdXBmaWxlJywKXTsKCiRzZWVkID0gW107CmZvcmVhY2ggKCRyZXBvcnRzIGFzICRyZXBvcnQpIHsKICAgICRzZWVkW10gPSBbJ3JlcG9ydCcgPT4gJHJlcG9ydCwgJ2lkcmVwb3J0JyA9PiAnMCddOwp9CgpyZXR1cm4gWwogICAgJ2NyZWF0ZScgPT4gPDw8U1FMCiAgICAgICAgcmVwb3J0IHZhcmNoYXIoNTAwKSBQUklNQVJZIEtFWSBOT1QgTlVMTCwKICAgICAgICBpZHJlcG9ydCBURVhUIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOT1QgTlVMTAogICAgICAgIFNRTCwKICAgICdzZWVkJyA9PiAkc2VlZCwKXTsK
+<?php
+
+$reports = [
+    'buyreport',
+    'otherservice',
+    'paymentreport',
+    'otherreport',
+    'reporttest',
+    'errorreport',
+    'porsantreport',
+    'reportnight',
+    'reportcron',
+    'backupfile',
+];
+
+$seed = [];
+foreach ($reports as $report) {
+    $seed[] = ['report' => $report, 'idreport' => '0'];
+}
+
+return [
+    'create' => <<<SQL
+        report varchar(500) PRIMARY KEY NOT NULL,
+        idreport TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+        SQL,
+    'seed' => $seed,
+];

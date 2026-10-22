@@ -1,1 +1,32 @@
-PD9waHAKLy8gVGhpcyB2YXJpYWJsZSBhZGRlZCBmb3IgaGlnaCBsb2FkIHBhbmVscyB3aGljaCB0aGVpciByZXNwb25zZSB0aW1lIGlzIGxvbmcgYW5kIGJvdCBjYW4ndCBjb21tdW5pY2F0ZSB3aXRoIG9ubGluZSBwYW5lbCEKLy8gbnVsbCBmb3IgZGVmYXVsdCBzZXR0aW5ncwokcmVxdWVzdF9leGVjX3RpbWVvdXQgPSBudWxsOwokZGJob3N0ID0gJ3tkYXRhYmFzZV91cmx9JzsKJGRibmFtZSA9ICd7ZGF0YWJhc2VfbmFtZX0nOwokdXNlcm5hbWVkYiA9ICd7dXNlcm5hbWVfZGJ9JzsKJHBhc3N3b3JkZGIgPSAne3Bhc3N3b3JkX2RifSc7CiRvcHRpb25zID0gWwogICAgUERPOjpBVFRSX0VSUk1PREUgPT4gUERPOjpFUlJNT0RFX0VYQ0VQVElPTiwKICAgIFBETzo6QVRUUl9ERUZBVUxUX0ZFVENIX01PREUgPT4gUERPOjpGRVRDSF9BU1NPQywKICAgIFBETzo6QVRUUl9FTVVMQVRFX1BSRVBBUkVTID0+IGZhbHNlLAogICAgUERPOjpNWVNRTF9BVFRSX0lOSVRfQ09NTUFORCA9PiAiU0VUIE5BTUVTIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2kiLApdOwokZHNuID0gIm15c3FsOmhvc3Q9JGRiaG9zdDtkYm5hbWU9JGRibmFtZTtjaGFyc2V0PXV0ZjhtYjQiOwp0cnkgewogICAgJHBkbyA9IG5ldyBQRE8oJGRzbiwgJHVzZXJuYW1lZGIsICRwYXNzd29yZGRiLCAkb3B0aW9ucyk7Cn0gY2F0Y2ggKFxQRE9FeGNlcHRpb24gJGUpIHsKICAgIGVycm9yX2xvZygiRGF0YWJhc2UgY29ubmVjdGlvbiBmYWlsZWQ6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgIGRpZSgiZXJyb3I6IGRhdGFiYXNlIGNvbm5lY3Rpb24gZmFpbGVkIik7Cn0KJEFQSUtFWSA9ICd7QVBJX0tFWX0nOwovLyBBY3RpdmUgbWVzc2VuZ2VyIHBsYXRmb3JtOiAndGVsZWdyYW0nIHwgJ2JhbGUnIHwgJ3J1YmlrYScKLy8gRm9yIEJhbGUgdXNlIHRoZSB0b2tlbiBmcm9tIEBCb3RGYXRoZXIgaW4gQmFsZTsgZm9yIFJ1YmlrYSB1c2UgdGhlIHRva2VuCi8vIGZyb20gdGhlIFJ1YmlrYSBib3QgcGFuZWwuIFdlYmhvb2tzIGZvciBCYWxlL1J1YmlrYSBhcmUgY29uZmlndXJlZCBpbiB0aGVpcgovLyByZXNwZWN0aXZlIGJvdCBwYW5lbHMsIHBvaW50aW5nIHRvIHRoaXMgc2FtZSBpbmRleC5waHAgZW5kcG9pbnQuCiRwbGF0Zm9ybSA9ICd7cGxhdGZvcm19JzsKJGFkbWlubnVtYmVyID0gJ3thZG1pbl9udW1iZXJ9JzsKJGRvbWFpbmhvc3RzID0gJ3tkb21haW5fbmFtZX0nOwokdXNlcm5hbWVib3QgPSAne3VzZXJuYW1lX2JvdH0nOwoKPz4K
+<?php
+// This variable added for high load panels which their response time is long and bot can't communicate with online panel!
+// null for default settings
+$request_exec_timeout = null;
+$dbhost = '{database_url}';
+$dbname = '{database_name}';
+$usernamedb = '{username_db}';
+$passworddb = '{password_db}';
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci",
+];
+$dsn = "mysql:host=$dbhost;dbname=$dbname;charset=utf8mb4";
+try {
+    $pdo = new PDO($dsn, $usernamedb, $passworddb, $options);
+} catch (\PDOException $e) {
+    error_log("Database connection failed: " . $e->getMessage());
+    die("error: database connection failed");
+}
+$APIKEY = '{API_KEY}';
+// Active messenger platform: 'telegram' | 'bale' | 'rubika'
+// For Bale use the token from @BotFather in Bale; for Rubika use the token
+// from the Rubika bot panel. Webhooks for Bale/Rubika are configured in their
+// respective bot panels, pointing to this same index.php endpoint.
+$platform = '{platform}';
+$adminnumber = '{admin_number}';
+$domainhosts = '{domain_name}';
+$usernamebot = '{username_bot}';
+
+?>

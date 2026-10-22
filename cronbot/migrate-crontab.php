@@ -1,1 +1,372 @@
-IyEvdXNyL2Jpbi9lbnYgcGhwCjw/cGhwCgpkZWNsYXJlKHN0cmljdF90eXBlcz0xKTsKCiRvcHRzID0gZ2V0b3B0KCcnLCBbJ3VzZXI6OicsICdzY2FuOjonLCAncm9vdHM6OicsICdkcnktcnVuJywgJ2FwcGx5JywgJ2hlbHAnXSk7CmlmIChpc3NldCgkb3B0c1snaGVscCddKSkgewogICAgZndyaXRlKFNURE9VVCwgPDw8VFhUClVzYWdlOgogIHBocCBtaWdyYXRlLWNyb250YWIucGhwIFstLWRyeS1ydW5dIFstLWFwcGx5XSBbLS11c2VyPXd3dy1kYXRhXSBbLS1zY2FuPS92YXIvd3d3LC9ob21lXSBbLS1yb290cz0vYSwvYl0KCiAgLS1kcnktcnVuICAgU2hvdyBkaXNjb3ZlcmVkIGJvdHMgYW5kIG5ldyBjcm9udGFiIChkZWZhdWx0IGlmIC0tYXBwbHkgaXMgb21pdHRlZCkKICAtLWFwcGx5ICAgICBXcml0ZSBjcm9udGFiIGFmdGVyIGJhY2t1cAogIC0tdXNlciAgICAgIENyb250YWIgb3duZXIgKGRlZmF1bHQ6IHd3dy1kYXRhKQogIC0tc2NhbiAgICAgIENvbW1hLXNlcGFyYXRlZCBkaXJzIHRvIHNlYXJjaCBmb3IgYm90IGluc3RhbGxzCiAgLS1yb290cyAgICAgRXhwbGljaXQgYm90IGluc3RhbGwgcm9vdHMgKHNraXBzIGRpc2NvdmVyeSkKClRYVCk7CiAgICBleGl0KDApOwp9CgokdXNlciA9ICRvcHRzWyd1c2VyJ10gPz8gJ3d3dy1kYXRhJzsKJGFwcGx5ID0gaXNzZXQoJG9wdHNbJ2FwcGx5J10pOwokZHJ5UnVuID0gISRhcHBseSB8fCBpc3NldCgkb3B0c1snZHJ5LXJ1biddKTsKaWYgKGlzc2V0KCRvcHRzWydhcHBseSddKSAmJiBpc3NldCgkb3B0c1snZHJ5LXJ1biddKSkgewogICAgJGRyeVJ1biA9IHRydWU7CiAgICAkYXBwbHkgPSBmYWxzZTsKfQoKJGNyb250YWJCaW4gPSB0cmltKChzdHJpbmcpIHNoZWxsX2V4ZWMoJ2NvbW1hbmQgLXYgY3JvbnRhYiAyPi9kZXYvbnVsbCcpKTsKaWYgKCRjcm9udGFiQmluID09PSAnJykgewogICAgZm9yZWFjaCAoWycvdXNyL2Jpbi9jcm9udGFiJywgJy91c3Ivc2Jpbi9jcm9udGFiJ10gYXMgJGNhbmRpZGF0ZSkgewogICAgICAgIGlmIChpc19leGVjdXRhYmxlKCRjYW5kaWRhdGUpKSB7CiAgICAgICAgICAgICRjcm9udGFiQmluID0gJGNhbmRpZGF0ZTsKICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgfQogICAgfQp9CmlmICgkY3JvbnRhYkJpbiA9PT0gJycpIHsKICAgIGZ3cml0ZShTVERFUlIsICJjcm9udGFiIG5vdCBmb3VuZFxuIik7CiAgICBleGl0KDEpOwp9CgokcGhwQmluID0gUEhQX0JJTkRJUiAuICcvcGhwJzsKaWYgKCFpc19leGVjdXRhYmxlKCRwaHBCaW4pKSB7CiAgICAkcGhwQmluID0gaXNfZXhlY3V0YWJsZSgnL3Vzci9iaW4vcGhwJykgPyAnL3Vzci9iaW4vcGhwJyA6ICdwaHAnOwp9CgokZXhpc3RpbmcgPSBtaXJ6YV9yZWFkX2Nyb250YWIoJGNyb250YWJCaW4sICR1c2VyKTsKJHJvb3RzID0gW107CgppZiAoaXNzZXQoJG9wdHNbJ3Jvb3RzJ10pICYmIHRyaW0oKHN0cmluZykgJG9wdHNbJ3Jvb3RzJ10pICE9PSAnJykgewogICAgZm9yZWFjaCAoZXhwbG9kZSgnLCcsIChzdHJpbmcpICRvcHRzWydyb290cyddKSBhcyAkcm9vdCkgewogICAgICAgICRyb290ID0gcnRyaW0odHJpbSgkcm9vdCksICcvJyk7CiAgICAgICAgaWYgKCRyb290ICE9PSAnJyAmJiBtaXJ6YV9pc19ib3Rfcm9vdCgkcm9vdCkpIHsKICAgICAgICAgICAgJHJvb3RzWyRyb290XSA9IHRydWU7CiAgICAgICAgfQogICAgfQp9IGVsc2UgewogICAgJHNjYW5EaXJzID0gWycvdmFyL3d3dycsICcvaG9tZScsIGRpcm5hbWUoX19ESVJfXywgMildOwogICAgaWYgKGlzc2V0KCRvcHRzWydzY2FuJ10pICYmIHRyaW0oKHN0cmluZykgJG9wdHNbJ3NjYW4nXSkgIT09ICcnKSB7CiAgICAgICAgJHNjYW5EaXJzID0gYXJyYXlfbWFwKHN0YXRpYyBmdW5jdGlvbiAoJGRpcikgewogICAgICAgICAgICByZXR1cm4gcnRyaW0odHJpbSgkZGlyKSwgJy8nKTsKICAgICAgICB9LCBleHBsb2RlKCcsJywgKHN0cmluZykgJG9wdHNbJ3NjYW4nXSkpOwogICAgfQoKICAgIGZvcmVhY2ggKG1pcnphX3Jvb3RzX2Zyb21fY3JvbnRhYigkZXhpc3RpbmcpIGFzICRyb290KSB7CiAgICAgICAgJHJvb3RzWyRyb290XSA9IHRydWU7CiAgICB9CiAgICBmb3JlYWNoIChtaXJ6YV9yb290c19mcm9tX3Zob3N0cygpIGFzICRyb290KSB7CiAgICAgICAgJHJvb3RzWyRyb290XSA9IHRydWU7CiAgICB9CiAgICBmb3JlYWNoICgkc2NhbkRpcnMgYXMgJGRpcikgewogICAgICAgIGlmICgkZGlyID09PSAnJyB8fCAhaXNfZGlyKCRkaXIpKSB7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KICAgICAgICBmb3JlYWNoIChtaXJ6YV9zY2FuX2JvdF9yb290cygkZGlyLCA1KSBhcyAkcm9vdCkgewogICAgICAgICAgICAkcm9vdHNbJHJvb3RdID0gdHJ1ZTsKICAgICAgICB9CiAgICB9Cn0KCiRyb290cyA9IGFycmF5X2tleXMoJHJvb3RzKTsKc29ydCgkcm9vdHMpOwoKJGhvc3RNYXAgPSBtaXJ6YV92aG9zdF9ob3N0X21hcCgpOwokZG9tYWluUm9vdHMgPSBbXTsKZm9yZWFjaCAoJHJvb3RzIGFzICRyb290KSB7CiAgICAkZG9tYWluID0gbWlyemFfZG9tYWluX2Zyb21fY29uZmlnKCRyb290KTsKICAgIGlmICgkZG9tYWluICE9PSAnJykgewogICAgICAgICRkb21haW5Sb290c1skZG9tYWluXSA9ICRyb290OwogICAgfQp9Cgoka2VwdCA9IFtdOwokcmVtb3ZlZCA9IDA7CmZvcmVhY2ggKCRleGlzdGluZyBhcyAkbGluZSkgewogICAgaWYgKG1pcnphX2lzX2Nyb25ib3RfbGluZSgkbGluZSkpIHsKICAgICAgICAkcmVtb3ZlZCsrOwogICAgICAgICRkaXNjb3ZlcmVkID0gbWlyemFfcm9vdF9mcm9tX2Nyb25fbGluZSgkbGluZSwgJGhvc3RNYXAsICRkb21haW5Sb290cyk7CiAgICAgICAgaWYgKCRkaXNjb3ZlcmVkICE9PSBudWxsICYmIG1pcnphX2lzX2JvdF9yb290KCRkaXNjb3ZlcmVkKSkgewogICAgICAgICAgICAkcm9vdHNbXSA9ICRkaXNjb3ZlcmVkOwogICAgICAgIH0KICAgICAgICBjb250aW51ZTsKICAgIH0KICAgICRrZXB0W10gPSAkbGluZTsKfQoKJHJvb3RzID0gYXJyYXlfdmFsdWVzKGFycmF5X3VuaXF1ZSgkcm9vdHMpKTsKc29ydCgkcm9vdHMpOwoKJG5ld0xpbmVzID0gJGtlcHQ7CiRhZGRlZCA9IDA7CiRza2lwcGVkID0gW107CmZvcmVhY2ggKCRyb290cyBhcyAkcm9vdCkgewogICAgJHJ1biA9ICRyb290IC4gJy9jcm9uYm90L3J1bi5waHAnOwogICAgaWYgKCFpc19maWxlKCRydW4pKSB7CiAgICAgICAgJHNraXBwZWRbXSA9ICRyb290IC4gJyAobWlzc2luZyBjcm9uYm90L3J1bi5waHApJzsKICAgICAgICBjb250aW51ZTsKICAgIH0KICAgICRzZWVkID0gbWlyemFfZG9tYWluX2Zyb21fY29uZmlnKCRyb290KTsKICAgIGlmICgkc2VlZCA9PT0gJycpIHsKICAgICAgICAkc2VlZCA9ICRyb290OwogICAgfQogICAgJHNsZWVwID0gKGludCkgKHNwcmludGYoJyV1JywgY3JjMzIoJHNlZWQpKSAlIDIwKTsKICAgICRsaW5lID0gJyogKiAqICogKiBzbGVlcCAnIC4gJHNsZWVwIC4gJzsgJyAuICRwaHBCaW4gLiAnICcgLiAkcnVuIC4gJyA+L2Rldi9udWxsIDI+JjEnOwogICAgaWYgKCFpbl9hcnJheSgkbGluZSwgJG5ld0xpbmVzLCB0cnVlKSkgewogICAgICAgICRuZXdMaW5lc1tdID0gJGxpbmU7CiAgICAgICAgJGFkZGVkKys7CiAgICB9Cn0KCmZ3cml0ZShTVERPVVQsICdVc2VyOiAnIC4gJHVzZXIgLiBQSFBfRU9MKTsKZndyaXRlKFNURE9VVCwgJ01vZGU6ICcgLiAoJGFwcGx5ID8gJ2FwcGx5JyA6ICdkcnktcnVuJykgLiBQSFBfRU9MKTsKZndyaXRlKFNURE9VVCwgJ0JvdHMgZm91bmQ6ICcgLiBjb3VudCgkcm9vdHMpIC4gUEhQX0VPTCk7CmZ3cml0ZShTVERPVVQsICdDcm9uYm90IGxpbmVzIHJlbW92ZWQ6ICcgLiAkcmVtb3ZlZCAuIFBIUF9FT0wpOwpmd3JpdGUoU1RET1VULCAnRGlzcGF0Y2hlciBsaW5lcyBhZGRlZDogJyAuICRhZGRlZCAuIFBIUF9FT0wpOwppZiAoJHNraXBwZWQgIT09IFtdKSB7CiAgICBmd3JpdGUoU1RET1VULCAiU2tpcHBlZDpcbi0gIiAuIGltcGxvZGUoIlxuLSAiLCAkc2tpcHBlZCkgLiBQSFBfRU9MKTsKfQpmd3JpdGUoU1RET1VULCAiXG5EaXNjb3ZlcmVkIHJvb3RzOlxuIik7CmZvcmVhY2ggKCRyb290cyBhcyAkcm9vdCkgewogICAgZndyaXRlKFNURE9VVCwgJy0gJyAuICRyb290IC4gUEhQX0VPTCk7Cn0KZndyaXRlKFNURE9VVCwgIlxuTmV3IGNyb250YWI6XG4iKTsKZndyaXRlKFNURE9VVCwgKCRuZXdMaW5lcyA9PT0gW10gPyAiKGVtcHR5KVxuIiA6IGltcGxvZGUoUEhQX0VPTCwgJG5ld0xpbmVzKSAuIFBIUF9FT0wpKTsKCmlmICghJGFwcGx5KSB7CiAgICBmd3JpdGUoU1RET1VULCAiXG5EcnktcnVuIG9ubHkuIFJlLXJ1biB3aXRoIC0tYXBwbHkgdG8gd3JpdGUuXG4iKTsKICAgIGV4aXQoMCk7Cn0KCiRiYWNrdXBEaXIgPSBpc19kaXIoJy9yb290JykgJiYgaXNfd3JpdGFibGUoJy9yb290JykgPyAnL3Jvb3QnIDogKGdldGVudignSE9NRScpID86IHN5c19nZXRfdGVtcF9kaXIoKSk7CiRiYWNrdXAgPSBydHJpbSgkYmFja3VwRGlyLCAnLycpIC4gJy93d3ctZGF0YS5jcm9uLmJhay4nIC4gZGF0ZSgnWW1kSGlzJyk7CmZpbGVfcHV0X2NvbnRlbnRzKCRiYWNrdXAsICgkZXhpc3RpbmcgPT09IFtdID8gJycgOiBpbXBsb2RlKFBIUF9FT0wsICRleGlzdGluZykgLiBQSFBfRU9MKSk7CmZ3cml0ZShTVERPVVQsICdCYWNrdXA6ICcgLiAkYmFja3VwIC4gUEhQX0VPTCk7CgokdG1wID0gdGVtcG5hbShzeXNfZ2V0X3RlbXBfZGlyKCksICdtaXJ6YS1jcm9uJyk7CmlmICgkdG1wID09PSBmYWxzZSkgewogICAgZndyaXRlKFNUREVSUiwgIlVuYWJsZSB0byBjcmVhdGUgdGVtcCBmaWxlXG4iKTsKICAgIGV4aXQoMSk7Cn0KZmlsZV9wdXRfY29udGVudHMoJHRtcCwgJG5ld0xpbmVzID09PSBbXSA/ICcnIDogaW1wbG9kZShQSFBfRU9MLCAkbmV3TGluZXMpIC4gUEhQX0VPTCk7CiRjbWQgPSBlc2NhcGVzaGVsbGFyZygkY3JvbnRhYkJpbikgLiAnIC11ICcgLiBlc2NhcGVzaGVsbGFyZygkdXNlcikgLiAnICcgLiBlc2NhcGVzaGVsbGFyZygkdG1wKSAuICcgMj4mMSc7CmV4ZWMoJGNtZCwgJG91dCwgJGNvZGUpOwp1bmxpbmsoJHRtcCk7CmlmICgkY29kZSAhPT0gMCkgewogICAgZndyaXRlKFNUREVSUiwgImNyb250YWIgd3JpdGUgZmFpbGVkOlxuIiAuIGltcGxvZGUoUEhQX0VPTCwgJG91dCkgLiBQSFBfRU9MKTsKICAgIGV4aXQoMSk7Cn0KCmZ3cml0ZShTVERPVVQsICJDcm9udGFiIHVwZGF0ZWQuXG4iKTsKZXhpdCgwKTsKCi8qKgogKiBAcmV0dXJuIGxpc3Q8c3RyaW5nPgogKi8KZnVuY3Rpb24gbWlyemFfcmVhZF9jcm9udGFiKHN0cmluZyAkYmluLCBzdHJpbmcgJHVzZXIpOiBhcnJheQp7CiAgICAkY21kID0gZXNjYXBlc2hlbGxhcmcoJGJpbikgLiAnIC11ICcgLiBlc2NhcGVzaGVsbGFyZygkdXNlcikgLiAnIC1sIDI+L2Rldi9udWxsJzsKICAgICRyYXcgPSAoc3RyaW5nKSBzaGVsbF9leGVjKCRjbWQpOwogICAgJHJhdyA9IHRyaW0oJHJhdyk7CiAgICBpZiAoJHJhdyA9PT0gJycgfHwgc3RyaXBvcygkcmF3LCAnbm8gY3JvbnRhYicpICE9PSBmYWxzZSkgewogICAgICAgIHJldHVybiBbXTsKICAgIH0KCiAgICAkbGluZXMgPSBwcmVnX3NwbGl0KCcvXHI/XG4vJywgJHJhdykgPzogW107CiAgICByZXR1cm4gYXJyYXlfdmFsdWVzKGFycmF5X2ZpbHRlcihhcnJheV9tYXAoJ3RyaW0nLCAkbGluZXMpLCBzdGF0aWMgZnVuY3Rpb24gKCRsaW5lKSB7CiAgICAgICAgcmV0dXJuICRsaW5lICE9PSAnJyAmJiBzdHJwb3MoJGxpbmUsICcjJykgIT09IDA7CiAgICB9KSk7Cn0KCmZ1bmN0aW9uIG1pcnphX2lzX2JvdF9yb290KHN0cmluZyAkcm9vdCk6IGJvb2wKewogICAgJHJvb3QgPSBydHJpbSgkcm9vdCwgJy8nKTsKICAgIHJldHVybiBpc19maWxlKCRyb290IC4gJy9jb25maWcucGhwJykKICAgICAgICAmJiBpc19maWxlKCRyb290IC4gJy9mdW5jdGlvbi5waHAnKQogICAgICAgICYmIGlzX2Rpcigkcm9vdCAuICcvY3JvbmJvdCcpCiAgICAgICAgJiYgc3RycG9zKCRyb290LCAnL3ZwbmJvdC8nKSA9PT0gZmFsc2U7Cn0KCmZ1bmN0aW9uIG1pcnphX2lzX2Nyb25ib3RfbGluZShzdHJpbmcgJGxpbmUpOiBib29sCnsKICAgIHJldHVybiBzdHJwb3MoJGxpbmUsICcvY3JvbmJvdC8nKSAhPT0gZmFsc2U7Cn0KCi8qKgogKiBAcGFyYW0gYXJyYXk8c3RyaW5nLCBzdHJpbmc+ICRob3N0TWFwCiAqIEBwYXJhbSBhcnJheTxzdHJpbmcsIHN0cmluZz4gJGRvbWFpblJvb3RzCiAqLwpmdW5jdGlvbiBtaXJ6YV9yb290X2Zyb21fY3Jvbl9saW5lKHN0cmluZyAkbGluZSwgYXJyYXkgJGhvc3RNYXAsIGFycmF5ICRkb21haW5Sb290cyk6ID9zdHJpbmcKewogICAgaWYgKHByZWdfbWF0Y2goJyMoL1teXFxzXSspL2Nyb25ib3QvKD86cnVuXFwucGhwfFtBLVphLXowLTlfXStcXC5waHApIycsICRsaW5lLCAkbSkpIHsKICAgICAgICAkcm9vdCA9ICRtWzFdOwogICAgICAgIGlmIChtaXJ6YV9pc19ib3Rfcm9vdCgkcm9vdCkpIHsKICAgICAgICAgICAgcmV0dXJuICRyb290OwogICAgICAgIH0KICAgIH0KICAgIGlmIChwcmVnX21hdGNoKCcjaHR0cHM/Oi8vKFteL1xcc10rKS9jcm9uYm90LyMnLCAkbGluZSwgJG0pKSB7CiAgICAgICAgJGhvc3QgPSBzdHJ0b2xvd2VyKCRtWzFdKTsKICAgICAgICBpZiAoaXNzZXQoJGRvbWFpblJvb3RzWyRob3N0XSkpIHsKICAgICAgICAgICAgcmV0dXJuICRkb21haW5Sb290c1skaG9zdF07CiAgICAgICAgfQogICAgICAgIGlmIChpc3NldCgkaG9zdE1hcFskaG9zdF0pICYmIG1pcnphX2lzX2JvdF9yb290KCRob3N0TWFwWyRob3N0XSkpIHsKICAgICAgICAgICAgcmV0dXJuICRob3N0TWFwWyRob3N0XTsKICAgICAgICB9CiAgICB9CgogICAgcmV0dXJuIG51bGw7Cn0KCi8qKgogKiBAcGFyYW0gbGlzdDxzdHJpbmc+ICRsaW5lcwogKiBAcmV0dXJuIGxpc3Q8c3RyaW5nPgogKi8KZnVuY3Rpb24gbWlyemFfcm9vdHNfZnJvbV9jcm9udGFiKGFycmF5ICRsaW5lcyk6IGFycmF5CnsKICAgICRyb290cyA9IFtdOwogICAgZm9yZWFjaCAoJGxpbmVzIGFzICRsaW5lKSB7CiAgICAgICAgaWYgKHByZWdfbWF0Y2goJyMoL1teXFxzXSspL2Nyb25ib3QvKD86cnVuXFwucGhwfFtBLVphLXowLTlfXStcXC5waHApIycsICRsaW5lLCAkbSkpIHsKICAgICAgICAgICAgJHJvb3QgPSAkbVsxXTsKICAgICAgICAgICAgaWYgKG1pcnphX2lzX2JvdF9yb290KCRyb290KSkgewogICAgICAgICAgICAgICAgJHJvb3RzW10gPSAkcm9vdDsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICByZXR1cm4gJHJvb3RzOwp9CgovKioKICogQHJldHVybiBsaXN0PHN0cmluZz4KICovCmZ1bmN0aW9uIG1pcnphX3Jvb3RzX2Zyb21fdmhvc3RzKCk6IGFycmF5CnsKICAgICRyb290cyA9IFtdOwogICAgZm9yZWFjaCAobWlyemFfdmhvc3RfaG9zdF9tYXAoKSBhcyAkcm9vdCkgewogICAgICAgIGlmIChtaXJ6YV9pc19ib3Rfcm9vdCgkcm9vdCkpIHsKICAgICAgICAgICAgJHJvb3RzW10gPSAkcm9vdDsKICAgICAgICB9CiAgICB9CgogICAgcmV0dXJuICRyb290czsKfQoKLyoqCiAqIEByZXR1cm4gYXJyYXk8c3RyaW5nLCBzdHJpbmc+IGhvc3QgPT4gZG9jdW1lbnQgcm9vdAogKi8KZnVuY3Rpb24gbWlyemFfdmhvc3RfaG9zdF9tYXAoKTogYXJyYXkKewogICAgc3RhdGljICRtYXA7CiAgICBpZiAoaXNfYXJyYXkoJG1hcCkpIHsKICAgICAgICByZXR1cm4gJG1hcDsKICAgIH0KCiAgICAkbWFwID0gW107CiAgICAkZGlycyA9IFsKICAgICAgICAnL2V0Yy9hcGFjaGUyL3NpdGVzLWVuYWJsZWQnLAogICAgICAgICcvZXRjL2h0dHBkL2NvbmYuZCcsCiAgICAgICAgJy9ldGMvbmdpbngvc2l0ZXMtZW5hYmxlZCcsCiAgICAgICAgJy9ldGMvbmdpbngvY29uZi5kJywKICAgIF07CiAgICBmb3JlYWNoICgkZGlycyBhcyAkZGlyKSB7CiAgICAgICAgaWYgKCFpc19kaXIoJGRpcikpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgIGZvcmVhY2ggKGdsb2IoJGRpciAuICcvKicpID86IFtdIGFzICRmaWxlKSB7CiAgICAgICAgICAgIGlmICghaXNfZmlsZSgkZmlsZSkgJiYgIWlzX2xpbmsoJGZpbGUpKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICAkY29udGVudCA9IEBmaWxlX2dldF9jb250ZW50cygkZmlsZSk7CiAgICAgICAgICAgIGlmICghaXNfc3RyaW5nKCRjb250ZW50KSB8fCAkY29udGVudCA9PT0gJycpIHsKICAgICAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgICAgICB9CiAgICAgICAgICAgICRob3N0cyA9IFtdOwogICAgICAgICAgICAkcm9vdCA9ICcnOwogICAgICAgICAgICBpZiAocHJlZ19tYXRjaF9hbGwoJy9eXHMqKD86U2VydmVyTmFtZXxzZXJ2ZXJfbmFtZSlccysoW147XSspOz9ccyokL21pJywgJGNvbnRlbnQsICRobSkpIHsKICAgICAgICAgICAgICAgIGZvcmVhY2ggKCRobVsxXSBhcyAkY2h1bmspIHsKICAgICAgICAgICAgICAgICAgICBmb3JlYWNoIChwcmVnX3NwbGl0KCcvXHMrLycsIHRyaW0oJGNodW5rKSkgPzogW10gYXMgJGhvc3QpIHsKICAgICAgICAgICAgICAgICAgICAgICAgJGhvc3QgPSBzdHJ0b2xvd2VyKHJ0cmltKCRob3N0LCAnOycpKTsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKCRob3N0ICE9PSAnJyAmJiAkaG9zdCAhPT0gJ18nKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkaG9zdHNbXSA9ICRob3N0OwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmIChwcmVnX21hdGNoKCcvXlxzKig/OkRvY3VtZW50Um9vdHxyb290KVxzKyhbXjtdKyk7P1xzKiQvbWknLCAkY29udGVudCwgJHJtKSkgewogICAgICAgICAgICAgICAgJHJvb3QgPSBydHJpbSh0cmltKCRybVsxXSwgIiBcdFwiJzsiKSwgJy8nKTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoJHJvb3QgPT09ICcnIHx8ICFpc19kaXIoJHJvb3QpKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBmb3JlYWNoICgkaG9zdHMgYXMgJGhvc3QpIHsKICAgICAgICAgICAgICAgICRtYXBbJGhvc3RdID0gJHJvb3Q7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgcmV0dXJuICRtYXA7Cn0KCi8qKgogKiBAcmV0dXJuIGxpc3Q8c3RyaW5nPgogKi8KZnVuY3Rpb24gbWlyemFfc2Nhbl9ib3Rfcm9vdHMoc3RyaW5nICRkaXIsIGludCAkbWF4RGVwdGgsIGludCAkZGVwdGggPSAwKTogYXJyYXkKewogICAgJGZvdW5kID0gW107CiAgICBpZiAoJGRlcHRoID4gJG1heERlcHRoIHx8ICFpc19kaXIoJGRpcikpIHsKICAgICAgICByZXR1cm4gJGZvdW5kOwogICAgfQoKICAgICRiYXNlID0gYmFzZW5hbWUoJGRpcik7CiAgICBpZiAoaW5fYXJyYXkoJGJhc2UsIFsndmVuZG9yJywgJ3ZwbmJvdCcsICdub2RlX21vZHVsZXMnLCAnLmdpdCcsICdzdG9yYWdlJ10sIHRydWUpKSB7CiAgICAgICAgcmV0dXJuICRmb3VuZDsKICAgIH0KCiAgICBpZiAobWlyemFfaXNfYm90X3Jvb3QoJGRpcikpIHsKICAgICAgICByZXR1cm4gWyRkaXJdOwogICAgfQoKICAgICRlbnRyaWVzID0gQHNjYW5kaXIoJGRpcik7CiAgICBpZiAoJGVudHJpZXMgPT09IGZhbHNlKSB7CiAgICAgICAgcmV0dXJuICRmb3VuZDsKICAgIH0KICAgIGZvcmVhY2ggKCRlbnRyaWVzIGFzICRlbnRyeSkgewogICAgICAgIGlmICgkZW50cnkgPT09ICcuJyB8fCAkZW50cnkgPT09ICcuLicpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgICRwYXRoID0gJGRpciAuICcvJyAuICRlbnRyeTsKICAgICAgICBpZiAoIWlzX2RpcigkcGF0aCkgfHwgaXNfbGluaygkcGF0aCkpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgIGZvcmVhY2ggKG1pcnphX3NjYW5fYm90X3Jvb3RzKCRwYXRoLCAkbWF4RGVwdGgsICRkZXB0aCArIDEpIGFzICRyb290KSB7CiAgICAgICAgICAgICRmb3VuZFtdID0gJHJvb3Q7CiAgICAgICAgfQogICAgfQoKICAgIHJldHVybiAkZm91bmQ7Cn0KCmZ1bmN0aW9uIG1pcnphX2RvbWFpbl9mcm9tX2NvbmZpZyhzdHJpbmcgJHJvb3QpOiBzdHJpbmcKewogICAgJGNvbmZpZyA9IEBmaWxlX2dldF9jb250ZW50cygkcm9vdCAuICcvY29uZmlnLnBocCcpOwogICAgaWYgKCFpc19zdHJpbmcoJGNvbmZpZykpIHsKICAgICAgICByZXR1cm4gJyc7CiAgICB9CiAgICBpZiAocHJlZ19tYXRjaCgnL1xcJGRvbWFpbmhvc3RzXFxzKj1cXHMqW1wnIl0oW15cJyJdKylbXCciXS8nLCAkY29uZmlnLCAkbSkpIHsKICAgICAgICByZXR1cm4gc3RydG9sb3dlcigkbVsxXSk7CiAgICB9CgogICAgcmV0dXJuICcnOwp9Cg==
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$opts = getopt('', ['user::', 'scan::', 'roots::', 'dry-run', 'apply', 'help']);
+if (isset($opts['help'])) {
+    fwrite(STDOUT, <<<TXT
+Usage:
+  php migrate-crontab.php [--dry-run] [--apply] [--user=www-data] [--scan=/var/www,/home] [--roots=/a,/b]
+
+  --dry-run   Show discovered bots and new crontab (default if --apply is omitted)
+  --apply     Write crontab after backup
+  --user      Crontab owner (default: www-data)
+  --scan      Comma-separated dirs to search for bot installs
+  --roots     Explicit bot install roots (skips discovery)
+
+TXT);
+    exit(0);
+}
+
+$user = $opts['user'] ?? 'www-data';
+$apply = isset($opts['apply']);
+$dryRun = !$apply || isset($opts['dry-run']);
+if (isset($opts['apply']) && isset($opts['dry-run'])) {
+    $dryRun = true;
+    $apply = false;
+}
+
+$crontabBin = trim((string) shell_exec('command -v crontab 2>/dev/null'));
+if ($crontabBin === '') {
+    foreach (['/usr/bin/crontab', '/usr/sbin/crontab'] as $candidate) {
+        if (is_executable($candidate)) {
+            $crontabBin = $candidate;
+            break;
+        }
+    }
+}
+if ($crontabBin === '') {
+    fwrite(STDERR, "crontab not found\n");
+    exit(1);
+}
+
+$phpBin = PHP_BINDIR . '/php';
+if (!is_executable($phpBin)) {
+    $phpBin = is_executable('/usr/bin/php') ? '/usr/bin/php' : 'php';
+}
+
+$existing = mirza_read_crontab($crontabBin, $user);
+$roots = [];
+
+if (isset($opts['roots']) && trim((string) $opts['roots']) !== '') {
+    foreach (explode(',', (string) $opts['roots']) as $root) {
+        $root = rtrim(trim($root), '/');
+        if ($root !== '' && mirza_is_bot_root($root)) {
+            $roots[$root] = true;
+        }
+    }
+} else {
+    $scanDirs = ['/var/www', '/home', dirname(__DIR__, 2)];
+    if (isset($opts['scan']) && trim((string) $opts['scan']) !== '') {
+        $scanDirs = array_map(static function ($dir) {
+            return rtrim(trim($dir), '/');
+        }, explode(',', (string) $opts['scan']));
+    }
+
+    foreach (mirza_roots_from_crontab($existing) as $root) {
+        $roots[$root] = true;
+    }
+    foreach (mirza_roots_from_vhosts() as $root) {
+        $roots[$root] = true;
+    }
+    foreach ($scanDirs as $dir) {
+        if ($dir === '' || !is_dir($dir)) {
+            continue;
+        }
+        foreach (mirza_scan_bot_roots($dir, 5) as $root) {
+            $roots[$root] = true;
+        }
+    }
+}
+
+$roots = array_keys($roots);
+sort($roots);
+
+$hostMap = mirza_vhost_host_map();
+$domainRoots = [];
+foreach ($roots as $root) {
+    $domain = mirza_domain_from_config($root);
+    if ($domain !== '') {
+        $domainRoots[$domain] = $root;
+    }
+}
+
+$kept = [];
+$removed = 0;
+foreach ($existing as $line) {
+    if (mirza_is_cronbot_line($line)) {
+        $removed++;
+        $discovered = mirza_root_from_cron_line($line, $hostMap, $domainRoots);
+        if ($discovered !== null && mirza_is_bot_root($discovered)) {
+            $roots[] = $discovered;
+        }
+        continue;
+    }
+    $kept[] = $line;
+}
+
+$roots = array_values(array_unique($roots));
+sort($roots);
+
+$newLines = $kept;
+$added = 0;
+$skipped = [];
+foreach ($roots as $root) {
+    $run = $root . '/cronbot/run.php';
+    if (!is_file($run)) {
+        $skipped[] = $root . ' (missing cronbot/run.php)';
+        continue;
+    }
+    $seed = mirza_domain_from_config($root);
+    if ($seed === '') {
+        $seed = $root;
+    }
+    $sleep = (int) (sprintf('%u', crc32($seed)) % 20);
+    $line = '* * * * * sleep ' . $sleep . '; ' . $phpBin . ' ' . $run . ' >/dev/null 2>&1';
+    if (!in_array($line, $newLines, true)) {
+        $newLines[] = $line;
+        $added++;
+    }
+}
+
+fwrite(STDOUT, 'User: ' . $user . PHP_EOL);
+fwrite(STDOUT, 'Mode: ' . ($apply ? 'apply' : 'dry-run') . PHP_EOL);
+fwrite(STDOUT, 'Bots found: ' . count($roots) . PHP_EOL);
+fwrite(STDOUT, 'Cronbot lines removed: ' . $removed . PHP_EOL);
+fwrite(STDOUT, 'Dispatcher lines added: ' . $added . PHP_EOL);
+if ($skipped !== []) {
+    fwrite(STDOUT, "Skipped:\n- " . implode("\n- ", $skipped) . PHP_EOL);
+}
+fwrite(STDOUT, "\nDiscovered roots:\n");
+foreach ($roots as $root) {
+    fwrite(STDOUT, '- ' . $root . PHP_EOL);
+}
+fwrite(STDOUT, "\nNew crontab:\n");
+fwrite(STDOUT, ($newLines === [] ? "(empty)\n" : implode(PHP_EOL, $newLines) . PHP_EOL));
+
+if (!$apply) {
+    fwrite(STDOUT, "\nDry-run only. Re-run with --apply to write.\n");
+    exit(0);
+}
+
+$backupDir = is_dir('/root') && is_writable('/root') ? '/root' : (getenv('HOME') ?: sys_get_temp_dir());
+$backup = rtrim($backupDir, '/') . '/www-data.cron.bak.' . date('YmdHis');
+file_put_contents($backup, ($existing === [] ? '' : implode(PHP_EOL, $existing) . PHP_EOL));
+fwrite(STDOUT, 'Backup: ' . $backup . PHP_EOL);
+
+$tmp = tempnam(sys_get_temp_dir(), 'mirza-cron');
+if ($tmp === false) {
+    fwrite(STDERR, "Unable to create temp file\n");
+    exit(1);
+}
+file_put_contents($tmp, $newLines === [] ? '' : implode(PHP_EOL, $newLines) . PHP_EOL);
+$cmd = escapeshellarg($crontabBin) . ' -u ' . escapeshellarg($user) . ' ' . escapeshellarg($tmp) . ' 2>&1';
+exec($cmd, $out, $code);
+unlink($tmp);
+if ($code !== 0) {
+    fwrite(STDERR, "crontab write failed:\n" . implode(PHP_EOL, $out) . PHP_EOL);
+    exit(1);
+}
+
+fwrite(STDOUT, "Crontab updated.\n");
+exit(0);
+
+/**
+ * @return list<string>
+ */
+function mirza_read_crontab(string $bin, string $user): array
+{
+    $cmd = escapeshellarg($bin) . ' -u ' . escapeshellarg($user) . ' -l 2>/dev/null';
+    $raw = (string) shell_exec($cmd);
+    $raw = trim($raw);
+    if ($raw === '' || stripos($raw, 'no crontab') !== false) {
+        return [];
+    }
+
+    $lines = preg_split('/\r?\n/', $raw) ?: [];
+    return array_values(array_filter(array_map('trim', $lines), static function ($line) {
+        return $line !== '' && strpos($line, '#') !== 0;
+    }));
+}
+
+function mirza_is_bot_root(string $root): bool
+{
+    $root = rtrim($root, '/');
+    return is_file($root . '/config.php')
+        && is_file($root . '/function.php')
+        && is_dir($root . '/cronbot')
+        && strpos($root, '/vpnbot/') === false;
+}
+
+function mirza_is_cronbot_line(string $line): bool
+{
+    return strpos($line, '/cronbot/') !== false;
+}
+
+/**
+ * @param array<string, string> $hostMap
+ * @param array<string, string> $domainRoots
+ */
+function mirza_root_from_cron_line(string $line, array $hostMap, array $domainRoots): ?string
+{
+    if (preg_match('#(/[^\\s]+)/cronbot/(?:run\\.php|[A-Za-z0-9_]+\\.php)#', $line, $m)) {
+        $root = $m[1];
+        if (mirza_is_bot_root($root)) {
+            return $root;
+        }
+    }
+    if (preg_match('#https?://([^/\\s]+)/cronbot/#', $line, $m)) {
+        $host = strtolower($m[1]);
+        if (isset($domainRoots[$host])) {
+            return $domainRoots[$host];
+        }
+        if (isset($hostMap[$host]) && mirza_is_bot_root($hostMap[$host])) {
+            return $hostMap[$host];
+        }
+    }
+
+    return null;
+}
+
+/**
+ * @param list<string> $lines
+ * @return list<string>
+ */
+function mirza_roots_from_crontab(array $lines): array
+{
+    $roots = [];
+    foreach ($lines as $line) {
+        if (preg_match('#(/[^\\s]+)/cronbot/(?:run\\.php|[A-Za-z0-9_]+\\.php)#', $line, $m)) {
+            $root = $m[1];
+            if (mirza_is_bot_root($root)) {
+                $roots[] = $root;
+            }
+        }
+    }
+
+    return $roots;
+}
+
+/**
+ * @return list<string>
+ */
+function mirza_roots_from_vhosts(): array
+{
+    $roots = [];
+    foreach (mirza_vhost_host_map() as $root) {
+        if (mirza_is_bot_root($root)) {
+            $roots[] = $root;
+        }
+    }
+
+    return $roots;
+}
+
+/**
+ * @return array<string, string> host => document root
+ */
+function mirza_vhost_host_map(): array
+{
+    static $map;
+    if (is_array($map)) {
+        return $map;
+    }
+
+    $map = [];
+    $dirs = [
+        '/etc/apache2/sites-enabled',
+        '/etc/httpd/conf.d',
+        '/etc/nginx/sites-enabled',
+        '/etc/nginx/conf.d',
+    ];
+    foreach ($dirs as $dir) {
+        if (!is_dir($dir)) {
+            continue;
+        }
+        foreach (glob($dir . '/*') ?: [] as $file) {
+            if (!is_file($file) && !is_link($file)) {
+                continue;
+            }
+            $content = @file_get_contents($file);
+            if (!is_string($content) || $content === '') {
+                continue;
+            }
+            $hosts = [];
+            $root = '';
+            if (preg_match_all('/^\s*(?:ServerName|server_name)\s+([^;]+);?\s*$/mi', $content, $hm)) {
+                foreach ($hm[1] as $chunk) {
+                    foreach (preg_split('/\s+/', trim($chunk)) ?: [] as $host) {
+                        $host = strtolower(rtrim($host, ';'));
+                        if ($host !== '' && $host !== '_') {
+                            $hosts[] = $host;
+                        }
+                    }
+                }
+            }
+            if (preg_match('/^\s*(?:DocumentRoot|root)\s+([^;]+);?\s*$/mi', $content, $rm)) {
+                $root = rtrim(trim($rm[1], " \t\"';"), '/');
+            }
+            if ($root === '' || !is_dir($root)) {
+                continue;
+            }
+            foreach ($hosts as $host) {
+                $map[$host] = $root;
+            }
+        }
+    }
+
+    return $map;
+}
+
+/**
+ * @return list<string>
+ */
+function mirza_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
+{
+    $found = [];
+    if ($depth > $maxDepth || !is_dir($dir)) {
+        return $found;
+    }
+
+    $base = basename($dir);
+    if (in_array($base, ['vendor', 'vpnbot', 'node_modules', '.git', 'storage'], true)) {
+        return $found;
+    }
+
+    if (mirza_is_bot_root($dir)) {
+        return [$dir];
+    }
+
+    $entries = @scandir($dir);
+    if ($entries === false) {
+        return $found;
+    }
+    foreach ($entries as $entry) {
+        if ($entry === '.' || $entry === '..') {
+            continue;
+        }
+        $path = $dir . '/' . $entry;
+        if (!is_dir($path) || is_link($path)) {
+            continue;
+        }
+        foreach (mirza_scan_bot_roots($path, $maxDepth, $depth + 1) as $root) {
+            $found[] = $root;
+        }
+    }
+
+    return $found;
+}
+
+function mirza_domain_from_config(string $root): string
+{
+    $config = @file_get_contents($root . '/config.php');
+    if (!is_string($config)) {
+        return '';
+    }
+    if (preg_match('/\\$domainhosts\\s*=\\s*[\'"]([^\'"]+)[\'"]/', $config, $m)) {
+        return strtolower($m[1]);
+    }
+
+    return '';
+}

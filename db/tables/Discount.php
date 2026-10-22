@@ -1,1 +1,15 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgY29kZSB2YXJjaGFyKDIwMDApIE5VTEwsCiAgICAgICAgcHJpY2UgdmFyY2hhcigyMDApIE5VTEwsCiAgICAgICAgbGltaXR1c2UgdmFyY2hhcigyMDApIE5VTEwsCiAgICAgICAgbGltaXR1c2VkIHZhcmNoYXIoMjAwKSBOVUxMCiAgICAgICAgU1FMLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ2xpbWl0dXNlJywgbnVsbCwgJ1ZBUkNIQVIoMjAwKSddLAogICAgICAgIFsnbGltaXR1c2VkJywgbnVsbCwgJ1ZBUkNIQVIoMjAwKSddLAogICAgXSwKXTsK
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        code varchar(2000) NULL,
+        price varchar(200) NULL,
+        limituse varchar(200) NULL,
+        limitused varchar(200) NULL
+        SQL,
+    'columns' => [
+        ['limituse', null, 'VARCHAR(200)'],
+        ['limitused', null, 'VARCHAR(200)'],
+    ],
+];

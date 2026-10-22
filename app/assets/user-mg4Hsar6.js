@@ -1,1 +1,6 @@
-aW1wb3J0e2N9ZnJvbSIuL2luZGV4LUMtMmEwRHVyLmpzIjsvKioKICogQGxpY2Vuc2UgbHVjaWRlLXJlYWN0IHYwLjUxMS4wIC0gSVNDCiAqCiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIElTQyBsaWNlbnNlLgogKiBTZWUgdGhlIExJQ0VOU0UgZmlsZSBpbiB0aGUgcm9vdCBkaXJlY3Rvcnkgb2YgdGhpcyBzb3VyY2UgdHJlZS4KICovY29uc3QgZT1bWyJwYXRoIix7ZDoiTTE5IDIxdi0yYTQgNCAwIDAgMC00LTRIOWE0IDQgMCAwIDAtNCA0djIiLGtleToiOTc1a2VsIn1dLFsiY2lyY2xlIix7Y3g6IjEyIixjeToiNyIscjoiNCIsa2V5OiIxN3lzMGQifV1dLHI9YygidXNlciIsZSk7ZXhwb3J0e3IgYXMgVX07Cg==
+import{c}from"./index-C-2a0Dur.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const e=[["path",{d:"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2",key:"975kel"}],["circle",{cx:"12",cy:"7",r:"4",key:"17ys0d"}]],r=c("user",e);export{r as U};

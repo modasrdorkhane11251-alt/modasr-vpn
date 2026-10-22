@@ -1,1 +1,30 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwoKJHNldHRpbmcgPSBzZWxlY3QoInNldHRpbmciLCAiKiIpOwokb3RoZXJyZXBvcnQgPSBzZWxlY3QoInRvcGljaWQiLCJpZHJlcG9ydCIsInJlcG9ydCIsIm90aGVycmVwb3J0Iiwic2VsZWN0IilbJ2lkcmVwb3J0J107Ci8vIGJ1eSBzZXJ2aWNlIAokc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBpZCwgdXNlcm5hbWUgRlJPTSB1c2VyIFdIRVJFIGV4cGlyZSBJUyBOT1QgTlVMTCBBTkQgQ0FTVChleHBpcmUgQVMgVU5TSUdORUQpIDwgOm5vdyIpOwokc3RtdC0+ZXhlY3V0ZShbJzpub3cnID0+IHRpbWUoKV0pOwp3aGlsZSAoJHVzZXIgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICR0ZXh0ZXhwaXJlID0gJHRleHRib3RsYW5nWyd1c2VycyddWydhZ2VudCddWydleHBpcmVkTm90aWNlJ107CiAgICBzZW5kbWVzc2FnZSgkdXNlclsnaWQnXSwkdGV4dGV4cGlyZSwgbnVsbCwgJ0hUTUwnKTsKICAgICRzdG10RXhwaXJlID0gJHBkby0+cHJlcGFyZSgiVVBEQVRFIHVzZXIgU0VUIGFnZW50ID0gJ2YnLCBleHBpcmUgPSBOVUxMIFdIRVJFIGlkID0gPyIpOwogICAgJHN0bXRFeHBpcmUtPmV4ZWN1dGUoWyR1c2VyWydpZCddXSk7CiAgICBjbGVhclNlbGVjdENhY2hlKCd1c2VyJyk7CiAgICAkdGV4dHJlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnRncm91cCddWydhZ2VudEV4cGlyZWRHcm91cENoYW5nZWQnXSwgJHVzZXJbJ2lkJ10sICR1c2VyWyd1c2VybmFtZSddKTsKICAgIGlmIChzdHJsZW4oJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10pID4gMCkgewogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsWwogICAgICAgICAgICAnY2hhdF9pZCcgPT4gJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10sCiAgICAgICAgICAgICdtZXNzYWdlX3RocmVhZF9pZCcgPT4gJG90aGVycmVwb3J0LAogICAgICAgICAgICAndGV4dCcgPT4gJHRleHRyZXBvcnQsCiAgICAgICAgICAgICdwYXJzZV9tb2RlJyA9PiAiSFRNTCIKICAgICAgICBdKTsKICAgIH0KfQ==
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+
+$setting = select("setting", "*");
+$otherreport = select("topicid","idreport","report","otherreport","select")['idreport'];
+// buy service 
+$stmt = $pdo->prepare("SELECT id, username FROM user WHERE expire IS NOT NULL AND CAST(expire AS UNSIGNED) < :now");
+$stmt->execute([':now' => time()]);
+while ($user = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $textexpire = $textbotlang['users']['agent']['expiredNotice'];
+    sendmessage($user['id'],$textexpire, null, 'HTML');
+    $stmtExpire = $pdo->prepare("UPDATE user SET agent = 'f', expire = NULL WHERE id = ?");
+    $stmtExpire->execute([$user['id']]);
+    clearSelectCache('user');
+    $textreport = sprintf($textbotlang['Admin']['reportgroup']['agentExpiredGroupChanged'], $user['id'], $user['username']);
+    if (strlen($setting['Channel_Report']) > 0) {
+        telegram('sendmessage',[
+            'chat_id' => $setting['Channel_Report'],
+            'message_thread_id' => $otherreport,
+            'text' => $textreport,
+            'parse_mode' => "HTML"
+        ]);
+    }
+}

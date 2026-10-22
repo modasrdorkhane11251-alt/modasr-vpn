@@ -1,1 +1,117 @@
-PD9waHAKZnVuY3Rpb24gcmVxdWVzdF9uZXhvcmEoJGxvY2F0aW9uLCAkbWV0aG9kLCAkcGF0aCwgJGJvZHkgPSBudWxsKQp7CiAgICAkcGFuZWwgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KHJ0cmltKCRwYW5lbFsndXJsX3BhbmVsJ10sICcvJykgLiAnL2FwaS92MScgLiAkcGF0aCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcGF5bG9hZCA9ICRib2R5ID09PSBudWxsID8gbnVsbCA6IGpzb25fZW5jb2RlKCRib2R5KTsKICAgIGlmICgkbWV0aG9kID09ICJHRVQiKSB7CiAgICAgICAgcmV0dXJuICRyZXEtPmdldCgpOwogICAgfSBlbHNlaWYgKCRtZXRob2QgPT0gIlBPU1QiKSB7CiAgICAgICAgcmV0dXJuICRyZXEtPnBvc3QoJHBheWxvYWQpOwogICAgfSBlbHNlaWYgKCRtZXRob2QgPT0gIlBVVCIpIHsKICAgICAgICByZXR1cm4gJHJlcS0+cHV0KCRwYXlsb2FkKTsKICAgIH0KICAgIHJldHVybiAkcmVxLT5kZWxldGUoJHBheWxvYWQpOwp9CmZ1bmN0aW9uIGdldHVzZXJfbmV4b3JhKCR1c2VybmFtZV9hY2NvdW50LCAkbG9jYXRpb24pCnsKICAgICRyZXNwb25zZSA9IHJlcXVlc3RfbmV4b3JhKCRsb2NhdGlvbiwgIkdFVCIsICcvdXNlcnM/bGltaXQ9MTAwMCZxPScgLiB1cmxlbmNvZGUoJHVzZXJuYW1lX2FjY291bnQpKTsKICAgICRyZXNwb25zZVsndXNlciddID0gbnVsbDsKICAgICRsaXN0ID0ganNvbl9kZWNvZGUoJHJlc3BvbnNlWydib2R5J10gPz8gJycsIHRydWUpOwogICAgZm9yZWFjaCAoJGxpc3RbJ2l0ZW1zJ10gPz8gW10gYXMgJGl0ZW0pIHsKICAgICAgICBpZiAoc3RyY2FzZWNtcCgkaXRlbVsnbmFtZSddLCAkdXNlcm5hbWVfYWNjb3VudCkgPT0gMCkgewogICAgICAgICAgICAkcmVzcG9uc2VbJ3VzZXInXSA9ICRpdGVtOwogICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICB9CiAgICBpZiAoJHJlc3BvbnNlWyd1c2VyJ10gPT09IG51bGwgJiYgZW1wdHkoJHJlc3BvbnNlWydlcnJvciddKSAmJiAkcmVzcG9uc2VbJ3N0YXR1cyddIDwgNDAwKSB7CiAgICAgICAgJHJlc3BvbnNlWydzdGF0dXMnXSA9IDQwNDsKICAgICAgICAkcmVzcG9uc2VbJ2JvZHknXSA9IGpzb25fZW5jb2RlKGFycmF5KCdlcnJvcicgPT4gJ1VzZXIgbm90IGZvdW5kJykpOwogICAgfQogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBsaW5rc19uZXhvcmEoJHN1Yl91cmwpCnsKICAgICRsaW5rcyA9IChzdHJpbmcpIG91dHB1dGxpbmsoJHN1Yl91cmwpOwogICAgaWYgKGlzQmFzZTY0KCRsaW5rcykpIHsKICAgICAgICAkbGlua3MgPSBiYXNlNjRfZGVjb2RlKCRsaW5rcyk7CiAgICB9CiAgICByZXR1cm4gYXJyYXlfdmFsdWVzKGFycmF5X2ZpbHRlcihhcnJheV9tYXAoJ3RyaW0nLCBleHBsb2RlKCJcbiIsICRsaW5rcykpKSk7Cn0KZnVuY3Rpb24gc3RhdHVzX25leG9yYShhcnJheSAkdXNlcikKewogICAgaWYgKCEkdXNlclsnZW5hYmxlJ10pIHsKICAgICAgICByZXR1cm4gImRpc2FibGVkIjsKICAgIH0KICAgIGlmICgkdXNlclsnZHVyYXRpb24nXSA+IDAgJiYgJHVzZXJbJ2FjdGl2YXRlZEF0J10gPT0gMCkgewogICAgICAgIHJldHVybiAib25faG9sZCI7CiAgICB9CiAgICBpZiAoJHVzZXJbJ2V4cGlyeSddID4gMCAmJiAkdXNlclsnZXhwaXJ5J10gPCB0aW1lKCkpIHsKICAgICAgICByZXR1cm4gImV4cGlyZWQiOwogICAgfQogICAgaWYgKCR1c2VyWyd2b2x1bWUnXSA+IDAgJiYgJHVzZXJbJ3VwJ10gKyAkdXNlclsnZG93biddID49ICR1c2VyWyd2b2x1bWUnXSkgewogICAgICAgIHJldHVybiAibGltaXRlZCI7CiAgICB9CiAgICByZXR1cm4gImFjdGl2ZSI7Cn0KZnVuY3Rpb24gYWRkdXNlcl9uZXhvcmEoJGxvY2F0aW9uLCAkZGF0YV9saW1pdCwgJHVzZXJuYW1lX2FjLCAkdGltZXN0YW1wLCAkbmFtZV9wcm9kdWN0LCAkbm90ZSA9ICcnLCAkbGltaXRpcCA9IG51bGwpCnsKICAgICRwcm9kdWN0ID0gc2VsZWN0KCdwcm9kdWN0JywgIioiLCAibmFtZV9wcm9kdWN0IiwgJG5hbWVfcHJvZHVjdCwgInNlbGVjdCIpOwogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJHRlbXBsYXRlcyA9IGpzb25fZGVjb2RlKCRwcm9kdWN0WydpbmJvdW5kcyddID8/ICRwYW5lbFsncHJveGllcyddID8/ICcnLCB0cnVlKTsKICAgICRkYXRhID0gYXJyYXkoCiAgICAgICAgJ25hbWUnID0+ICR1c2VybmFtZV9hYywKICAgICAgICAnZGVzYycgPT4gJG5vdGUsCiAgICAgICAgJ2VuYWJsZScgPT4gdHJ1ZSwKICAgICAgICAndm9sdW1lJyA9PiAoaW50KSAkZGF0YV9saW1pdCwKICAgICAgICAnZXhwaXJ5JyA9PiAoaW50KSAkdGltZXN0YW1wLAogICAgICAgICdkdXJhdGlvbicgPT4gMCwKICAgICk7CiAgICBpZiAoaXNfYXJyYXkoJHRlbXBsYXRlcykpIHsKICAgICAgICAkZGF0YVsndGVtcGxhdGVJZHMnXSA9ICR0ZW1wbGF0ZXNbJ3RlbXBsYXRlSWRzJ10gPz8gW107CiAgICAgICAgJGRhdGFbJ2FsbFRlbXBsYXRlcyddID0gJHRlbXBsYXRlc1snYWxsVGVtcGxhdGVzJ10gPz8gZmFsc2U7CiAgICAgICAgJGRhdGFbJ2dyb3VwJ10gPSAkdGVtcGxhdGVzWydncm91cCddID8/ICcnOwogICAgfQogICAgaWYgKCRsaW1pdGlwICE9IG51bGwgJiYgJHBhbmVsWydsaW1pdF9pbl9wYW5lbCddID09ICIxIikgewogICAgICAgICRkYXRhWydpcExpbWl0J10gPSBpbnR2YWwoJGxpbWl0aXApOwogICAgfQogICAgJG9uX2hvbGQgPSAkbmFtZV9wcm9kdWN0ID09ICJ1c2VydGVzdCIgPyAkcGFuZWxbJ29uX2hvbGRfdGVzdCddICE9ICIwIiA6ICRwYW5lbFsnY29uZWN0b24nXSAhPSAib2ZmY29uZWN0b24iOwogICAgaWYgKCRvbl9ob2xkICYmICR0aW1lc3RhbXAgIT0gMCkgewogICAgICAgICRkYXRhWydkdXJhdGlvbiddID0gJHRpbWVzdGFtcCAtIHRpbWUoKTsKICAgICAgICAkZGF0YVsnZXhwaXJ5J10gPSAwOwogICAgfQogICAgcmV0dXJuIHJlcXVlc3RfbmV4b3JhKCRsb2NhdGlvbiwgIlBPU1QiLCAnL3VzZXJzJywgJGRhdGEpOwp9CmZ1bmN0aW9uIE1vZGlmeXVzZXJfbmV4b3JhKCRsb2NhdGlvbiwgJHVzZXJuYW1lX2FjY291bnQsIGFycmF5ICRkYXRhKQp7CiAgICAkcmVzcG9uc2UgPSBnZXR1c2VyX25leG9yYSgkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKTsKICAgIGlmICgkcmVzcG9uc2VbJ3VzZXInXSA9PT0gbnVsbCkgewogICAgICAgIHJldHVybiAkcmVzcG9uc2U7CiAgICB9CiAgICByZXR1cm4gcmVxdWVzdF9uZXhvcmEoJGxvY2F0aW9uLCAiUFVUIiwgJy91c2Vycy8nIC4gJHJlc3BvbnNlWyd1c2VyJ11bJ2lkJ10sIGFycmF5X21lcmdlKCRyZXNwb25zZVsndXNlciddLCAkZGF0YSkpOwp9CmZ1bmN0aW9uIHJlbW92ZXVzZXJfbmV4b3JhKCRsb2NhdGlvbiwgJHVzZXJuYW1lX2FjY291bnQpCnsKICAgICRyZXNwb25zZSA9IGdldHVzZXJfbmV4b3JhKCR1c2VybmFtZV9hY2NvdW50LCAkbG9jYXRpb24pOwogICAgaWYgKCRyZXNwb25zZVsndXNlciddID09PSBudWxsKSB7CiAgICAgICAgcmV0dXJuICRyZXNwb25zZTsKICAgIH0KICAgIHJldHVybiByZXF1ZXN0X25leG9yYSgkbG9jYXRpb24sICJERUxFVEUiLCAnL3VzZXJzLycgLiAkcmVzcG9uc2VbJ3VzZXInXVsnaWQnXSk7Cn0KZnVuY3Rpb24gUmVzZXRVc2VyRGF0YVVzYWdlX25leG9yYSgkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKQp7CiAgICAkcmVzcG9uc2UgPSBnZXR1c2VyX25leG9yYSgkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKTsKICAgIGlmICgkcmVzcG9uc2VbJ3VzZXInXSA9PT0gbnVsbCkgewogICAgICAgIHJldHVybiAkcmVzcG9uc2U7CiAgICB9CiAgICByZXR1cm4gcmVxdWVzdF9uZXhvcmEoJGxvY2F0aW9uLCAiUE9TVCIsICcvdXNlcnMvYnVsay9yZXNldC10cmFmZmljJywgYXJyYXkoJ2lkcycgPT4gWyRyZXNwb25zZVsndXNlciddWydpZCddXSkpOwp9CmZ1bmN0aW9uIHJldm9rZV9zdWJfbmV4b3JhKCR1c2VybmFtZV9hY2NvdW50LCAkbG9jYXRpb24pCnsKICAgIHJldHVybiBNb2RpZnl1c2VyX25leG9yYSgkbG9jYXRpb24sICR1c2VybmFtZV9hY2NvdW50LCBhcnJheSgnc3ViSWQnID0+IGJpbjJoZXgocmFuZG9tX2J5dGVzKDEyKSkpKTsKfQo=
+<?php
+function request_nexora($location, $method, $path, $body = null)
+{
+    $panel = select("marzban_panel", "*", "name_panel", $location, "select");
+    $req = new CurlRequest(rtrim($panel['url_panel'], '/') . '/api/v1' . $path);
+    $req->setHeaders(array(
+        'Accept: application/json',
+        'Content-Type: application/json'
+    ));
+    $req->setBearerToken($panel['password_panel']);
+    $payload = $body === null ? null : json_encode($body);
+    if ($method == "GET") {
+        return $req->get();
+    } elseif ($method == "POST") {
+        return $req->post($payload);
+    } elseif ($method == "PUT") {
+        return $req->put($payload);
+    }
+    return $req->delete($payload);
+}
+function getuser_nexora($username_account, $location)
+{
+    $response = request_nexora($location, "GET", '/users?limit=1000&q=' . urlencode($username_account));
+    $response['user'] = null;
+    $list = json_decode($response['body'] ?? '', true);
+    foreach ($list['items'] ?? [] as $item) {
+        if (strcasecmp($item['name'], $username_account) == 0) {
+            $response['user'] = $item;
+            break;
+        }
+    }
+    if ($response['user'] === null && empty($response['error']) && $response['status'] < 400) {
+        $response['status'] = 404;
+        $response['body'] = json_encode(array('error' => 'User not found'));
+    }
+    return $response;
+}
+function links_nexora($sub_url)
+{
+    $links = (string) outputlink($sub_url);
+    if (isBase64($links)) {
+        $links = base64_decode($links);
+    }
+    return array_values(array_filter(array_map('trim', explode("\n", $links))));
+}
+function status_nexora(array $user)
+{
+    if (!$user['enable']) {
+        return "disabled";
+    }
+    if ($user['duration'] > 0 && $user['activatedAt'] == 0) {
+        return "on_hold";
+    }
+    if ($user['expiry'] > 0 && $user['expiry'] < time()) {
+        return "expired";
+    }
+    if ($user['volume'] > 0 && $user['up'] + $user['down'] >= $user['volume']) {
+        return "limited";
+    }
+    return "active";
+}
+function adduser_nexora($location, $data_limit, $username_ac, $timestamp, $name_product, $note = '', $limitip = null)
+{
+    $product = select('product', "*", "name_product", $name_product, "select");
+    $panel = select("marzban_panel", "*", "name_panel", $location, "select");
+    $templates = json_decode($product['inbounds'] ?? $panel['proxies'] ?? '', true);
+    $data = array(
+        'name' => $username_ac,
+        'desc' => $note,
+        'enable' => true,
+        'volume' => (int) $data_limit,
+        'expiry' => (int) $timestamp,
+        'duration' => 0,
+    );
+    if (is_array($templates)) {
+        $data['templateIds'] = $templates['templateIds'] ?? [];
+        $data['allTemplates'] = $templates['allTemplates'] ?? false;
+        $data['group'] = $templates['group'] ?? '';
+    }
+    if ($limitip != null && $panel['limit_in_panel'] == "1") {
+        $data['ipLimit'] = intval($limitip);
+    }
+    $on_hold = $name_product == "usertest" ? $panel['on_hold_test'] != "0" : $panel['conecton'] != "offconecton";
+    if ($on_hold && $timestamp != 0) {
+        $data['duration'] = $timestamp - time();
+        $data['expiry'] = 0;
+    }
+    return request_nexora($location, "POST", '/users', $data);
+}
+function Modifyuser_nexora($location, $username_account, array $data)
+{
+    $response = getuser_nexora($username_account, $location);
+    if ($response['user'] === null) {
+        return $response;
+    }
+    return request_nexora($location, "PUT", '/users/' . $response['user']['id'], array_merge($response['user'], $data));
+}
+function removeuser_nexora($location, $username_account)
+{
+    $response = getuser_nexora($username_account, $location);
+    if ($response['user'] === null) {
+        return $response;
+    }
+    return request_nexora($location, "DELETE", '/users/' . $response['user']['id']);
+}
+function ResetUserDataUsage_nexora($username_account, $location)
+{
+    $response = getuser_nexora($username_account, $location);
+    if ($response['user'] === null) {
+        return $response;
+    }
+    return request_nexora($location, "POST", '/users/bulk/reset-traffic', array('ids' => [$response['user']['id']]));
+}
+function revoke_sub_nexora($username_account, $location)
+{
+    return Modifyuser_nexora($location, $username_account, array('subId' => bin2hex(random_bytes(12))));
+}

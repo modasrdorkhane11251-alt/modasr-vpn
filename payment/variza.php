@@ -1,1 +1,56 @@
-PD9waHAKCmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMvQXBpL01hcnpiYW4ucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2tleWJvYXJkLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9qZGYucGhwJzsKcmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsKCiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7Cgokb3JkZXJfaWQgPSB0cmltKChzdHJpbmcpICgkX0dFVFsnb3JkZXInXSA/PyAkX0dFVFsnb3JkZXJfaWQnXSA/PyAnJykpOwoKZnVuY3Rpb24gdmFyaXphX2ZpbmlzaChib29sICRvaywgc3RyaW5nICR0aXRsZSwgc3RyaW5nICRkZXRhaWwpOiBuZXZlcgp7CiAgICBpZiAoIWhlYWRlcnNfc2VudCgpKSB7CiAgICAgICAgaGVhZGVyKCdDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD11dGYtOCcpOwogICAgfQogICAgZWNobyAnPCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz0iZmEiIGRpcj0icnRsIj48bWV0YSBjaGFyc2V0PSJ1dGYtOCI+JwogICAgICAgIC4gJzxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsaW5pdGlhbC1zY2FsZT0xIj4nCiAgICAgICAgLiAnPGJvZHkgc3R5bGU9ImZvbnQtZmFtaWx5OlRhaG9tYSxzYW5zLXNlcmlmO3RleHQtYWxpZ246Y2VudGVyO3BhZGRpbmc6NDhweCAyMHB4Ij4nCiAgICAgICAgLiAnPGRpdiBzdHlsZT0iZm9udC1zaXplOjQ0cHgiPicgLiAoJG9rID8gJyYjMTAwMDM7JyA6ICcmIzg5ODY7JykgLiAnPC9kaXY+JwogICAgICAgIC4gJzxoMiBzdHlsZT0iY29sb3I6JyAuICgkb2sgPyAnIzJlY2M3MScgOiAnIzM0OThkYicpIC4gJyI+JwogICAgICAgIC4gaHRtbHNwZWNpYWxjaGFycygkdGl0bGUsIEVOVF9RVU9URVMsICdVVEYtOCcpIC4gJzwvaDI+JwogICAgICAgIC4gJzxwIHN0eWxlPSJjb2xvcjojNjY2Ij4nIC4gaHRtbHNwZWNpYWxjaGFycygkZGV0YWlsLCBFTlRfUVVPVEVTLCAnVVRGLTgnKSAuICc8L3A+JwogICAgICAgIC4gJzwvYm9keT48L2h0bWw+JzsKICAgIGV4aXQ7Cn0KCiRmYWlsZWRUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnc3RhdHVzRmFpbGVkJ10gPz8gJ9m+2LHYr9in2K7YqiDZhtin2YXZiNmB2YInOwokc3VjY2Vzc1RpdGxlID0gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydzdGF0dXNTdWNjZXNzJ10gPz8gJ9m+2LHYr9in2K7YqiDZhdmI2YHZgic7CiR3YWl0aW5nVGl0bGUgPSAn2K/YsSDYp9mG2KrYuNin2LEg2KrYo9uM24zYryc7CgppZiAoJG9yZGVyX2lkID09PSAnJykgewogICAgdmFyaXphX2ZpbmlzaChmYWxzZSwgJGZhaWxlZFRpdGxlLCAn2LTZhtin2LPZhyDYs9mB2KfYsdi0INin2LHYs9in2YQg2YbYtNivLicpOwp9CgokcGF5bWVudCA9IHNlbGVjdCgiUGF5bWVudF9yZXBvcnQiLCAiKiIsICJpZF9vcmRlciIsICRvcmRlcl9pZCwgInNlbGVjdCIpOwppZiAoISRwYXltZW50KSB7CiAgICB2YXJpemFfZmluaXNoKGZhbHNlLCAkZmFpbGVkVGl0bGUsICfYp9uM2YYg2LPZgdin2LHYtCDZvtuM2K/YpyDZhti02K8uJyk7Cn0KCmlmICgkcGF5bWVudFsncGF5bWVudF9TdGF0dXMnXSA9PT0gJ3BhaWQnKSB7CiAgICB2YXJpemFfZmluaXNoKHRydWUsICRzdWNjZXNzVGl0bGUsICfZvtix2K/Yp9iu2Kog2LTZhdinINio2Kcg2YXZiNmB2YLbjNiqINiq2KfbjNuM2K8g2LTYry4nKTsKfQoKaWYgKCRwYXltZW50WydQYXltZW50X01ldGhvZCddICE9PSAndmFyaXphJykgewogICAgdmFyaXphX2ZpbmlzaChmYWxzZSwgJGZhaWxlZFRpdGxlLCAn2KfbjNmGINiz2YHYp9ix2LQg2YXYsdio2YjYtyDYqNmHINmI2KfYsduM2LLYpyDZhtuM2LPYqi4nKTsKfQoKLy8gU3RpbGwgVW5wYWlkL3dhaXRpbmcg4oCUIFNNUyBtYXkgbm90IGhhdmUgYXJyaXZlZCB5ZXQuIFRoZSBwdXNoIHRvCi8vIHZhcml6YV93ZWJob29rLnBocCB3aWxsIHNldHRsZSBpdDsgdGhpcyBwYWdlIGp1c3QgZXhwbGFpbnMgdGhlIHdhaXQuCnZhcml6YV9maW5pc2goZmFsc2UsICR3YWl0aW5nVGl0bGUsICfZiNin2LHbjNiyINi02YXYpyDYr9ix24zYp9mB2Kog2LTYryDZiCDYr9ixINin2YbYqti42KfYsSDYqtij24zbjNivINiu2YjYr9qp2KfYsSDZiNin2LHbjNiy2Kcg2KfYs9iqLiDZvtizINin2LIg2KrYp9uM24zYr9iMINiz2LHZiNuM2LMg2KjZhyDYtdmI2LHYqiDYrtmI2K/aqdin2LEg2YHYudin2YQg2K7ZiNin2YfYryDYtNivLicpOwo=
+<?php
+
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$textbotlang = languagechange();
+
+$order_id = trim((string) ($_GET['order'] ?? $_GET['order_id'] ?? ''));
+
+function variza_finish(bool $ok, string $title, string $detail): never
+{
+    if (!headers_sent()) {
+        header('Content-Type: text/html; charset=utf-8');
+    }
+    echo '<!doctype html><html lang="fa" dir="rtl"><meta charset="utf-8">'
+        . '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        . '<body style="font-family:Tahoma,sans-serif;text-align:center;padding:48px 20px">'
+        . '<div style="font-size:44px">' . ($ok ? '&#10003;' : '&#8986;') . '</div>'
+        . '<h2 style="color:' . ($ok ? '#2ecc71' : '#3498db') . '">'
+        . htmlspecialchars($title, ENT_QUOTES, 'UTF-8') . '</h2>'
+        . '<p style="color:#666">' . htmlspecialchars($detail, ENT_QUOTES, 'UTF-8') . '</p>'
+        . '</body></html>';
+    exit;
+}
+
+$failedTitle = $textbotlang['paymentGateway']['statusFailed'] ?? 'پرداخت ناموفق';
+$successTitle = $textbotlang['paymentGateway']['statusSuccess'] ?? 'پرداخت موفق';
+$waitingTitle = 'در انتظار تأیید';
+
+if ($order_id === '') {
+    variza_finish(false, $failedTitle, 'شناسه سفارش ارسال نشد.');
+}
+
+$payment = select("Payment_report", "*", "id_order", $order_id, "select");
+if (!$payment) {
+    variza_finish(false, $failedTitle, 'این سفارش پیدا نشد.');
+}
+
+if ($payment['payment_Status'] === 'paid') {
+    variza_finish(true, $successTitle, 'پرداخت شما با موفقیت تایید شد.');
+}
+
+if ($payment['Payment_Method'] !== 'variza') {
+    variza_finish(false, $failedTitle, 'این سفارش مربوط به واریزا نیست.');
+}
+
+// Still Unpaid/waiting — SMS may not have arrived yet. The push to
+// variza_webhook.php will settle it; this page just explains the wait.
+variza_finish(false, $waitingTitle, 'واریز شما دریافت شد و در انتظار تأیید خودکار واریزا است. پس از تایید، سرویس به صورت خودکار فعال خواهد شد.');

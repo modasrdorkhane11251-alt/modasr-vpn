@@ -1,1 +1,9 @@
-T3B0aW9ucyAtSW5kZXhlcwoKPEZpbGVzTWF0Y2ggIl5lcnJvcl9sb2ckfFwubG9nJHxcLmxvZ1wuWzAtOV0rJCI+CiAgICBSZXF1aXJlIGFsbCBkZW5pZWQKICAgIDxJZk1vZHVsZSAhbW9kX2F1dGh6X2NvcmUuYz4KICAgICAgICBPcmRlciBkZW55LGFsbG93CiAgICAgICAgRGVueSBmcm9tIGFsbAogICAgPC9JZk1vZHVsZT4KPC9GaWxlc01hdGNoPgo=
+Options -Indexes
+
+<FilesMatch "^error_log$|\.log$|\.log\.[0-9]+$">
+    Require all denied
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

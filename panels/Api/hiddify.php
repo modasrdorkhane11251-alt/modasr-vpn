@@ -1,1 +1,95 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vLi4vcmVxdWVzdC5waHAnOwojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCmZ1bmN0aW9uIGdldGRhdGF1c2VyKCR1c2VybmFtZSwgJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS92Mi9hZG1pbi91c2VyLyc7CiAgICAkY2ggPSBjdXJsX2luaXQoKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9VUkwsICR1cmwpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0hUVFBHRVQsIHRydWUpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1RJTUVPVVRfTVMsICgkR0xPQkFMU1sncmVxdWVzdF9leGVjX3RpbWVvdXQnXSA/PyBudWxsKSA/OiA0MDAwKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfSFRUUEhFQURFUiwgYXJyYXkoCiAgICAgICAgJ0F1dGhvcml6YXRpb246IEJhc2ljICcgLiBiYXNlNjRfZW5jb2RlKCJ7JG1hcnpiYW5fbGlzdF9nZXRbJ3NlY3JldF9jb2RlJ119OiIpCiAgICApKTsKCiAgICAkb3V0cHV0ID0gY3VybF9leGVjKCRjaCk7CiAgICAkZGF0YV91c2VlciA9IGpzb25fZGVjb2RlKCRvdXRwdXQsIHRydWUpOwogICAgaWYgKGlzc2V0KCRkYXRhX3VzZWVyWydtZXNzYWdlJ10pKQogICAgICAgIHJldHVybiAkZGF0YV91c2VlcjsKICAgIGlmICghaXNzZXQoJGRhdGFfdXNlZXIpIHx8IGNvdW50KCRkYXRhX3VzZWVyKSA9PSAwKQogICAgICAgIHJldHVybiBbXTsKICAgIGZvcmVhY2ggKCRkYXRhX3VzZWVyIGFzICRkYXRhKSB7CiAgICAgICAgaWYgKCFpc3NldCgkZGF0YVsnbmFtZSddKSkKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgaWYgKCRkYXRhWyduYW1lJ10gPT0gJHVzZXJuYW1lKSB7CiAgICAgICAgICAgIHJldHVybiAkZGF0YTsKICAgICAgICB9CiAgICB9CiAgICByZXR1cm4gbnVsbDsKfQpmdW5jdGlvbiBzZXJ2ZXJzdGF0dXMoJGxvY2F0aW9uKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS92Mi9hZG1pbi9zZXJ2ZXJfc3RhdHVzLyc7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdBdXRob3JpemF0aW9uOiBCYXNpYyAnIC4gYmFzZTY0X2VuY29kZSgieyRtYXJ6YmFuX2xpc3RfZ2V0WydzZWNyZXRfY29kZSddfToiKQogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQovLyAjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCmZ1bmN0aW9uIGFkZHVzZXJoaSgkbG9jYXRpb24sIGFycmF5ICRkYXRhKQp7CiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS92Mi9hZG1pbi91c2VyLyc7CiAgICAkcGF5bG9hZCA9IGpzb25fZW5jb2RlKCRkYXRhLCB0cnVlKTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0hpZGRpZnktQVBJLUtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydzZWNyZXRfY29kZSddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkcGF5bG9hZCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9Ci8vICMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSMKZnVuY3Rpb24gdXBkYXRldXNlcmhpKCR1c2VybmFtZSwgJGxvY2F0aW9uLCBhcnJheSAkZGF0YSkKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkcGFuZWxkYXRhID0gZ2V0ZGF0YXVzZXIoJHVzZXJuYW1lLCAkbG9jYXRpb24pOwogICAgaWYgKCFpc19hcnJheSgkcGFuZWxkYXRhKSB8fCBlbXB0eSgkcGFuZWxkYXRhWyd1dWlkJ10pKSB7CiAgICAgICAgcmV0dXJuIFsnc3RhdHVzJyA9PiBudWxsLCAnYm9keScgPT4gbnVsbCwgJ2Vycm9yJyA9PiAndXNlciBub3QgZm91bmQgb24gcGFuZWwnXTsKICAgIH0KICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS92Mi9hZG1pbi91c2VyLycgLiAkcGFuZWxkYXRhWyd1dWlkJ10gLiAiLyI7CiAgICAkcGF5bG9hZCA9IGpzb25fZW5jb2RlKCRkYXRhLCB0cnVlKTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0hpZGRpZnktQVBJLUtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydzZWNyZXRfY29kZSddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+UEFUQ0goJHBheWxvYWQpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQovLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZnVuY3Rpb24gcmVtb3ZldXNlcmhpKCRsb2NhdGlvbiwgJHV1aWQpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICIvYXBpL3YyL2FkbWluL3VzZXIvJHV1aWQvIjsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0hpZGRpZnktQVBJLUtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydzZWNyZXRfY29kZSddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+ZGVsZXRlKCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9Cg==
+<?php
+require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../request.php';
+#-----------------------------#
+function getdatauser($username, $location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $url = $marzban_list_get['url_panel'] . '/api/v2/admin/user/';
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT_MS, ($GLOBALS['request_exec_timeout'] ?? null) ?: 4000);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Authorization: Basic ' . base64_encode("{$marzban_list_get['secret_code']}:")
+    ));
+
+    $output = curl_exec($ch);
+    $data_useer = json_decode($output, true);
+    if (isset($data_useer['message']))
+        return $data_useer;
+    if (!isset($data_useer) || count($data_useer) == 0)
+        return [];
+    foreach ($data_useer as $data) {
+        if (!isset($data['name']))
+            continue;
+        if ($data['name'] == $username) {
+            return $data;
+        }
+    }
+    return null;
+}
+function serverstatus($location)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $url = $marzban_list_get['url_panel'] . '/api/v2/admin/server_status/';
+    $headers = array(
+        'Authorization: Basic ' . base64_encode("{$marzban_list_get['secret_code']}:")
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->get();
+    return $response;
+}
+// #-----------------------------#
+function adduserhi($location, array $data)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $url = $marzban_list_get['url_panel'] . '/api/v2/admin/user/';
+    $payload = json_encode($data, true);
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'Hiddify-API-Key: ' . $marzban_list_get['secret_code']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($payload);
+    return $response;
+}
+// #-----------------------------#
+function updateuserhi($username, $location, array $data)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $paneldata = getdatauser($username, $location);
+    if (!is_array($paneldata) || empty($paneldata['uuid'])) {
+        return ['status' => null, 'body' => null, 'error' => 'user not found on panel'];
+    }
+    $url = $marzban_list_get['url_panel'] . '/api/v2/admin/user/' . $paneldata['uuid'] . "/";
+    $payload = json_encode($data, true);
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'Hiddify-API-Key: ' . $marzban_list_get['secret_code']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->PATCH($payload);
+    return $response;
+}
+//----------------------------------
+function removeuserhi($location, $uuid)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $url = $marzban_list_get['url_panel'] . "/api/v2/admin/user/$uuid/";
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'Hiddify-API-Key: ' . $marzban_list_get['secret_code']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->delete();
+    return $response;
+}

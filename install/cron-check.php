@@ -1,1 +1,13 @@
-PD9waHAKCmRlY2xhcmUoc3RyaWN0X3R5cGVzPTEpOwoKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy9jaGVja3MucGhwJzsKCm1pcnphX2luc3RhbGxfcHJvYmVfcmVjb3JkKCk7CgpoZWFkZXIoJ0NvbnRlbnQtVHlwZTogdGV4dC9wbGFpbjsgY2hhcnNldD11dGYtOCcpOwpoZWFkZXIoJ0NhY2hlLUNvbnRyb2w6IG5vLXN0b3JlJyk7CmVjaG8gJ01JUlpBX0NST05fUFJPQkVfT0snOwo=
+<?php
+
+declare(strict_types=1);
+
+date_default_timezone_set('Asia/Tehran');
+
+require_once __DIR__ . '/checks.php';
+
+mirza_install_probe_record();
+
+header('Content-Type: text/plain; charset=utf-8');
+header('Cache-Control: no-store');
+echo 'MIRZA_CRON_PROBE_OK';

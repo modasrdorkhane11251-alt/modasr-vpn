@@ -1,1 +1,338 @@
-PD9waHAKCmNsYXNzIE1hcnpiYW5QYW5lbERyaXZlciBleHRlbmRzIEJhc2VQYW5lbERyaXZlcgp7CiAgICBwdWJsaWMgZnVuY3Rpb24gY3JlYXRlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICRkYXRhX2xpbWl0ID0gJHZhcnNbJ2RhdGFfbGltaXQnXTsKICAgICAgICAkdXNlcm5hbWVDID0gJHZhcnNbJ3VzZXJuYW1lQyddOwogICAgICAgICRleHBpcmUgPSAkdmFyc1snZXhwaXJlJ107CiAgICAgICAgJG5vdGUgPSAkdmFyc1snbm90ZSddOwogICAgICAgICRHZXRfRGF0YV9Qcm9kdWN0ID0gJHZhcnNbJ0dldF9EYXRhX1Byb2R1Y3QnXTsKICAgICAgICAkT3V0cHV0ID0gJHZhcnNbJ091dHB1dCddOwogICAgICAgICRpbnZvaWNlID0gJHZhcnNbJ2ludm9pY2UnXTsKICAgICAgICAkZG9tYWluaG9zdHMgPSAkdmFyc1snZG9tYWluaG9zdHMnXTsKICAgICAgICAvL2NyZWF0ZSB1c2VyCiAgICAgICAgJENvbm5lY3RUb1BhbmVsID0gYWRkdXNlcigkR2V0X0RhdGFfUGFuZWxbJ25hbWVfcGFuZWwnXSwgJGRhdGFfbGltaXQsICR1c2VybmFtZUMsICRleHBpcmUsICRub3RlLCAkR2V0X0RhdGFfUHJvZHVjdFsnZGF0YV9saW1pdF9yZXNldCddLCAkR2V0X0RhdGFfUHJvZHVjdFsnbmFtZV9wcm9kdWN0J10pOwogICAgICAgIGlmICghZW1wdHkoJENvbm5lY3RUb1BhbmVsWydzdGF0dXMnXSkgJiYgJENvbm5lY3RUb1BhbmVsWydzdGF0dXMnXSA+PSA0MDApIHsKICAgICAgICAgICAgJGVyckJvZHkgPSBqc29uX2RlY29kZSgkQ29ubmVjdFRvUGFuZWxbJ2JvZHknXSA/PyAnJywgdHJ1ZSk7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gaXNfYXJyYXkoJGVyckJvZHkpICYmICFlbXB0eSgkZXJyQm9keVsnZGV0YWlsJ10pID8gJGVyckJvZHlbJ2RldGFpbCddIDogJENvbm5lY3RUb1BhbmVsWydzdGF0dXMnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICBpZiAoIWVtcHR5KCRDb25uZWN0VG9QYW5lbFsnZXJyb3InXSkpIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkQ29ubmVjdFRvUGFuZWxbJ2Vycm9yJ10KICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgJGRhdGFfT3V0cHV0ID0ganNvbl9kZWNvZGUoJENvbm5lY3RUb1BhbmVsWydib2R5J10sIHRydWUpOwogICAgICAgIGlmICghZW1wdHkoJGRhdGFfT3V0cHV0WydkZXRhaWwnXSkgJiYgJGRhdGFfT3V0cHV0WydkZXRhaWwnXSkgewogICAgICAgICAgICAkT3V0cHV0WydzdGF0dXMnXSA9ICdVbnN1Y2Nlc3NmdWwnOwogICAgICAgICAgICBpZiAoJGRhdGFfT3V0cHV0WydkZXRhaWwnXSkgewogICAgICAgICAgICAgICAgJE91dHB1dFsnbXNnJ10gPSAkZGF0YV9PdXRwdXRbJ2RldGFpbCddOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgJE91dHB1dFsnbXNnJ10gPSAnJzsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRkYXRhX091dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gYWJzb2x1dGVTdWJzY3JpcHRpb25VcmwoJGRhdGFfT3V0cHV0WydzdWJzY3JpcHRpb25fdXJsJ10sICRHZXRfRGF0YV9QYW5lbFsndXJsX3BhbmVsJ10pOwogICAgICAgICAgICBpZiAoJEdldF9EYXRhX1BhbmVsWyd2ZXJzaW9uX3BhbmVsJ10gPT0gIjEiKSB7CiAgICAgICAgICAgICAgICAkb3V0X3B1dF9saW5rID0gb3V0cHV0bGluaygkZGF0YV9PdXRwdXRbJ3N1YnNjcmlwdGlvbl91cmwnXS4iL2xpbmtzIik7CgogICAgICAgICAgICAgICAgJGxpbmtzID0gaXNCYXNlNjQoJG91dF9wdXRfbGluaykKICAgICAgICAgICAgICAgICAgICA/IGJhc2U2NF9kZWNvZGUoJG91dF9wdXRfbGluaykKICAgICAgICAgICAgICAgICAgICA6ICgkZGF0YV9PdXRwdXRbJ2xpbmtzJ10gPz8gKCRvdXRfcHV0X2xpbmsgPzogJycpKTsKCiAgICAgICAgICAgICAgICAkZGF0YV9PdXRwdXRbJ2xpbmtzJ10gPSBpc19hcnJheSgkbGlua3MpCiAgICAgICAgICAgICAgICAgICAgPyAkbGlua3MKICAgICAgICAgICAgICAgICAgICA6IGV4cGxvZGUoIlxuIiwgKHN0cmluZykgJGxpbmtzKTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoJGludm9pY2UgIT0gZmFsc2UpIHsKICAgICAgICAgICAgICAgICRkYXRhX091dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gImh0dHBzOi8vJGRvbWFpbmhvc3RzL3N1Yi8iIC4gJGludm9pY2VbJ2lkX2ludm9pY2UnXTsKICAgICAgICAgICAgfQogICAgICAgICAgICAkT3V0cHV0WydzdGF0dXMnXSA9ICdzdWNjZXNzZnVsJzsKICAgICAgICAgICAgJE91dHB1dFsndXNlcm5hbWUnXSA9ICRkYXRhX091dHB1dFsndXNlcm5hbWUnXTsKICAgICAgICAgICAgJE91dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gJGRhdGFfT3V0cHV0WydzdWJzY3JpcHRpb25fdXJsJ107CiAgICAgICAgICAgICRPdXRwdXRbJ2NvbmZpZ3MnXSA9ICRkYXRhX091dHB1dFsnbGlua3MnXTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICRPdXRwdXQ7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIHJlYWQoYXJyYXkgJHZhcnMpCiAgICB7CiAgICAgICAgJHVzZXJuYW1lID0gJHZhcnNbJ3VzZXJuYW1lJ107CiAgICAgICAgJEdldF9EYXRhX1BhbmVsID0gJHZhcnNbJ0dldF9EYXRhX1BhbmVsJ107CiAgICAgICAgJE91dHB1dCA9ICR2YXJzWydPdXRwdXQnXTsKICAgICAgICAkbmFtZV9wYW5lbCA9ICR2YXJzWyduYW1lX3BhbmVsJ107CiAgICAgICAgJGludm9pY2UgPSAkdmFyc1snaW52b2ljZSddOwogICAgICAgICRkb21haW5ob3N0cyA9ICR2YXJzWydkb21haW5ob3N0cyddOwogICAgICAgICRVc2VybmFtZURhdGEgPSBnZXR1c2VyKCR1c2VybmFtZSwgJEdldF9EYXRhX1BhbmVsWyduYW1lX3BhbmVsJ10pOwogICAgICAgIGlmICghZW1wdHkoJFVzZXJuYW1lRGF0YVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkVXNlcm5hbWVEYXRhWydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlaWYgKCFlbXB0eSgkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSkgJiYgJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10gPT0gNTAwKSB7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkVXNlcm5hbWVEYXRhID0ganNvbl9kZWNvZGUoJFVzZXJuYW1lRGF0YVsnYm9keSddID8/ICcnLCB0cnVlKTsKICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkVXNlcm5hbWVEYXRhKSB8fCAhZW1wdHkoJFVzZXJuYW1lRGF0YVsnZGV0YWlsJ10pIHx8IGVtcHR5KCRVc2VybmFtZURhdGFbJ3VzZXJuYW1lJ10pKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAgICAgJ21zZycgPT4gaXNfYXJyYXkoJFVzZXJuYW1lRGF0YSkgPyAoJFVzZXJuYW1lRGF0YVsnZGV0YWlsJ10gPz8gJ1Vuc3VjY2Vzc2Z1bCcpIDogJ1Vuc3VjY2Vzc2Z1bCcKICAgICAgICAgICAgICAgICk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgJFVzZXJuYW1lRGF0YVsnc3Vic2NyaXB0aW9uX3VybCddID0gYWJzb2x1dGVTdWJzY3JpcHRpb25VcmwoJFVzZXJuYW1lRGF0YVsnc3Vic2NyaXB0aW9uX3VybCddID8/ICcnLCAkR2V0X0RhdGFfUGFuZWxbJ3VybF9wYW5lbCddKTsKICAgICAgICAgICAgaWYgKCRHZXRfRGF0YV9QYW5lbFsndmVyc2lvbl9wYW5lbCddID09ICIxIikgewogICAgICAgICAgICAgICAgJFVzZXJuYW1lRGF0YVsnZXhwaXJlJ10gPSBzdHJ0b3RpbWUoJFVzZXJuYW1lRGF0YVsnZXhwaXJlJ10gPz8gJycpOwogICAgICAgICAgICAgICAgJGxpbmtzID0gJFVzZXJuYW1lRGF0YVsnbGlua3MnXSA/PyBvdXRwdXRsaW5rKCRVc2VybmFtZURhdGFbJ3N1YnNjcmlwdGlvbl91cmwnXS4iL2xpbmtzIik7CiAgICAgICAgICAgICAgICBpZihpc0Jhc2U2NCgkbGlua3MpKSB7CiAgICAgICAgICAgICAgICAgICAgJGxpbmtzID0gYmFzZTY0X2RlY29kZSgkbGlua3MpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgJFVzZXJuYW1lRGF0YVsnbGlua3MnXSA9IGlzX2FycmF5KCRsaW5rcykgPyAkbGlua3MgOiBleHBsb2RlKCJcbiIsIChzdHJpbmcpICRsaW5rcyk7CiAgICAgICAgICAgICAgICAkc3VibGlzdF91cGRhdGUgPSBnZXRfbGlzdF91cGRhdGUoJG5hbWVfcGFuZWwsICR1c2VybmFtZSk7CiAgICAgICAgICAgICAgICBpZiAoIWVtcHR5KCRzdWJsaXN0X3VwZGF0ZVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgICAgICAgICAnbXNnJyA9PiAkc3VibGlzdF91cGRhdGVbJ2Vycm9yJ10KICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfSBlbHNlaWYgKCFlbXB0eSgkc3VibGlzdF91cGRhdGVbJ3N0YXR1cyddKSAmJiAkc3VibGlzdF91cGRhdGVbJ3N0YXR1cyddID09IDUwMCkgewogICAgICAgICAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAgICAgICAgICdtc2cnID0+ICRzdWJsaXN0X3VwZGF0ZVsnc3RhdHVzJ10KICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgJHN1Ymxpc3RfdXBkYXRlX2JvZHkgPSBqc29uX2RlY29kZSgkc3VibGlzdF91cGRhdGVbJ2JvZHknXSA/PyAnJywgdHJ1ZSk7CiAgICAgICAgICAgICAgICBpZiAoIWVtcHR5KCRzdWJsaXN0X3VwZGF0ZV9ib2R5Wyd1cGRhdGVzJ10pICYmIGlzX2FycmF5KCRzdWJsaXN0X3VwZGF0ZV9ib2R5Wyd1cGRhdGVzJ10pKSB7CiAgICAgICAgICAgICAgICAgICAgJGZpcnN0X3VwZGF0ZSA9ICRzdWJsaXN0X3VwZGF0ZV9ib2R5Wyd1cGRhdGVzJ11bMF07CiAgICAgICAgICAgICAgICAgICAgJFVzZXJuYW1lRGF0YVsnc3ViX3VwZGF0ZWRfYXQnXSA9IGlzc2V0KCRmaXJzdF91cGRhdGVbJ2NyZWF0ZWRfYXQnXSkgPyAkZmlyc3RfdXBkYXRlWydjcmVhdGVkX2F0J10gOiBudWxsOwogICAgICAgICAgICAgICAgICAgICRVc2VybmFtZURhdGFbJ3N1Yl9sYXN0X3VzZXJfYWdlbnQnXSA9IGlzc2V0KCRmaXJzdF91cGRhdGVbJ3VzZXJfYWdlbnQnXSkgPyAkZmlyc3RfdXBkYXRlWyd1c2VyX2FnZW50J10gOiBudWxsOwogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAkVXNlcm5hbWVEYXRhWydzdWJfdXBkYXRlZF9hdCddID0gaXNzZXQoJFVzZXJuYW1lRGF0YVsnc3ViX3VwZGF0ZWRfYXQnXSkgPyAkVXNlcm5hbWVEYXRhWydzdWJfdXBkYXRlZF9hdCddIDogbnVsbDsKICAgICAgICAgICAgICAgICAgICAkVXNlcm5hbWVEYXRhWydzdWJfbGFzdF91c2VyX2FnZW50J10gPSBpc3NldCgkVXNlcm5hbWVEYXRhWydzdWJfbGFzdF91c2VyX2FnZW50J10pID8gJFVzZXJuYW1lRGF0YVsnc3ViX2xhc3RfdXNlcl9hZ2VudCddIDogbnVsbDsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICRVc2VybmFtZURhdGFbJ2V4cGlyZSddID0gJFVzZXJuYW1lRGF0YVsnZXhwaXJlJ10gPz8gbnVsbDsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoJGludm9pY2UgIT0gZmFsc2UpIHsKICAgICAgICAgICAgICAgICRVc2VybmFtZURhdGFbJ3N1YnNjcmlwdGlvbl91cmwnXSA9ICJodHRwczovLyRkb21haW5ob3N0cy9zdWIvIiAuICRpbnZvaWNlWydpZF9pbnZvaWNlJ107CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKCRHZXRfRGF0YV9QYW5lbFsndmVyc2lvbl9wYW5lbCddID09ICIxIikgewogICAgICAgICAgICAgICAgJFVzZXJuYW1lRGF0YVsncHJveGllcyddID0gaXNzZXQoJFVzZXJuYW1lRGF0YVsncHJveHlfc2V0dGluZ3MnXSkgPyAkVXNlcm5hbWVEYXRhWydwcm94eV9zZXR0aW5ncyddIDogbnVsbDsKICAgICAgICAgICAgfQogICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSA/PyAnVW5rbm93bicsCiAgICAgICAgICAgICAgICAndXNlcm5hbWUnID0+ICRVc2VybmFtZURhdGFbJ3VzZXJuYW1lJ10gPz8gJHVzZXJuYW1lLAogICAgICAgICAgICAgICAgJ2RhdGFfbGltaXQnID0+ICRVc2VybmFtZURhdGFbJ2RhdGFfbGltaXQnXSA/PyBudWxsLAogICAgICAgICAgICAgICAgJ2V4cGlyZScgPT4gJFVzZXJuYW1lRGF0YVsnZXhwaXJlJ10gPz8gbnVsbCwKICAgICAgICAgICAgICAgICdvbmxpbmVfYXQnID0+ICRVc2VybmFtZURhdGFbJ29ubGluZV9hdCddID8/IG51bGwsCiAgICAgICAgICAgICAgICAndXNlZF90cmFmZmljJyA9PiAkVXNlcm5hbWVEYXRhWyd1c2VkX3RyYWZmaWMnXSA/PyBudWxsLAogICAgICAgICAgICAgICAgJ2xpbmtzJyA9PiAkVXNlcm5hbWVEYXRhWydsaW5rcyddID8/IFtdLAogICAgICAgICAgICAgICAgJ3N1YnNjcmlwdGlvbl91cmwnID0+ICRVc2VybmFtZURhdGFbJ3N1YnNjcmlwdGlvbl91cmwnXSA/PyAnJywKICAgICAgICAgICAgICAgICdzdWJfdXBkYXRlZF9hdCcgPT4gJFVzZXJuYW1lRGF0YVsnc3ViX3VwZGF0ZWRfYXQnXSA/PyBudWxsLAogICAgICAgICAgICAgICAgJ3N1Yl9sYXN0X3VzZXJfYWdlbnQnID0+ICRVc2VybmFtZURhdGFbJ3N1Yl9sYXN0X3VzZXJfYWdlbnQnXSA/PyBudWxsLAogICAgICAgICAgICAgICAgJ3V1aWQnID0+ICRVc2VybmFtZURhdGFbJ3Byb3hpZXMnXSA/PyBudWxsLAogICAgICAgICAgICAgICAgJ2RhdGFfbGltaXRfcmVzZXQnID0+ICRVc2VybmFtZURhdGFbJ2RhdGFfbGltaXRfcmVzZXRfc3RyYXRlZ3knXSA/PyBudWxsCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkT3V0cHV0OwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiByZXZva2VTdWIoYXJyYXkgJHZhcnMpCiAgICB7CiAgICAgICAgJHVzZXJuYW1lID0gJHZhcnNbJ3VzZXJuYW1lJ107CiAgICAgICAgJG5hbWVfcGFuZWwgPSAkdmFyc1snbmFtZV9wYW5lbCddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJEdldF9EYXRhX1BhbmVsID0gJHZhcnNbJ0dldF9EYXRhX1BhbmVsJ107CiAgICAgICAgJHJldm9rZV9zdWIgPSByZXZva2Vfc3ViKCR1c2VybmFtZSwgJG5hbWVfcGFuZWwpOwogICAgICAgIGlmIChpc3NldCgkcmV2b2tlX3N1YlsnZGV0YWlsJ10pICYmICRyZXZva2Vfc3ViWydkZXRhaWwnXSkgewogICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnVW5zdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdtc2cnID0+ICRyZXZva2Vfc3ViWydkZXRhaWwnXQogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICREYXRhX1VzZXIgPSAkdGhpcy0+RGF0YVVzZXIoJG5hbWVfcGFuZWwsICR1c2VybmFtZSk7CiAgICAgICAgICAgICREYXRhX1VzZXJbJ3N1YnNjcmlwdGlvbl91cmwnXSA9IGFic29sdXRlU3Vic2NyaXB0aW9uVXJsKCREYXRhX1VzZXJbJ3N1YnNjcmlwdGlvbl91cmwnXSwgJEdldF9EYXRhX1BhbmVsWyd1cmxfcGFuZWwnXSk7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdzdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdjb25maWdzJyA9PiAkRGF0YV9Vc2VyWydsaW5rcyddLAogICAgICAgICAgICAgICAgJ3N1YnNjcmlwdGlvbl91cmwnID0+ICREYXRhX1VzZXJbJ3N1YnNjcmlwdGlvbl91cmwnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVtb3ZlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJFVzZXJuYW1lRGF0YSA9IHJlbW92ZXVzZXIoJEdldF9EYXRhX1BhbmVsWyduYW1lX3BhbmVsJ10sICR1c2VybmFtZSk7CiAgICAgICAgaWYgKCFlbXB0eSgkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSkgJiYgJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10gIT0gMjAwKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2VpZiAoIWVtcHR5KCRVc2VybmFtZURhdGFbJ2Vycm9yJ10pKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnZXJyb3InXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICAkVXNlcm5hbWVEYXRhID0ganNvbl9kZWNvZGUoJFVzZXJuYW1lRGF0YVsnYm9keSddLCB0cnVlKTsKICAgICAgICBpZiAoJFVzZXJuYW1lRGF0YVsnZGV0YWlsJ10gIT0gIlVzZXIgc3VjY2Vzc2Z1bGx5IGRlbGV0ZWQiKSB7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnZGV0YWlsJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZSwKICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICRPdXRwdXQ7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIG1vZGlmeShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkR2V0X0RhdGFfUGFuZWwgPSAkdmFyc1snR2V0X0RhdGFfUGFuZWwnXTsKICAgICAgICAkdXNlcm5hbWUgPSAkdmFyc1sndXNlcm5hbWUnXTsKICAgICAgICAkbmFtZV9wYW5lbCA9ICR2YXJzWyduYW1lX3BhbmVsJ107CiAgICAgICAgJGNvbmZpZyA9ICR2YXJzWydjb25maWcnXTsKICAgICAgICBpZiAoJEdldF9EYXRhX1BhbmVsWyd2ZXJzaW9uX3BhbmVsJ10gPT0gIjEiKSB7CiAgICAgICAgICAgICRyZXN1bHQgPSBnZXR1c2VyKCR1c2VybmFtZSwgJG5hbWVfcGFuZWwpOwogICAgICAgICAgICAkcmVzdWx0ID0ganNvbl9kZWNvZGUoJHJlc3VsdFsnYm9keSddLCB0cnVlKTsKICAgICAgICAgICAgJGNvbmZpZ1sncHJveHlfc2V0dGluZ3MnXSA9ICRyZXN1bHRbJ3Byb3h5X3NldHRpbmdzJ107CiAgICAgICAgfQogICAgICAgICRtb2RpZnkgPSBNb2RpZnl1c2VyKCRuYW1lX3BhbmVsLCAkdXNlcm5hbWUsICRjb25maWcpOwogICAgICAgIGlmICghZW1wdHkoJG1vZGlmeVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkbW9kaWZ5WydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlaWYgKCFlbXB0eSgkbW9kaWZ5WydzdGF0dXMnXSkgJiYgJG1vZGlmeVsnc3RhdHVzJ10gPT0gNTAwKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+IGZhbHNlLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJ2Vycm9yIGNvZGUgOiAnIC4gJG1vZGlmeVsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgJG1vZGlmeWNoZWNrID0ganNvbl9kZWNvZGUoJG1vZGlmeVsnYm9keSddLCB0cnVlKTsKICAgICAgICBpZiAoIWVtcHR5KCRtb2RpZnljaGVja1snZGV0YWlsJ10pKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+IGZhbHNlLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJG1vZGlmeWNoZWNrWydkZXRhaWwnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICdzdGF0dXMnID0+IHRydWUsCiAgICAgICAgICAgICdkYXRhJyA9PiAkbW9kaWZ5CiAgICAgICAgKTsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gY2hhbmdlU3RhdHVzKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICREYXRhVXNlck91dCA9ICR2YXJzWydEYXRhVXNlck91dCddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRuYW1lX3BhbmVsID0gJHZhcnNbJ25hbWVfcGFuZWwnXTsKICAgICAgICBpZiAoJERhdGFVc2VyT3V0WydzdGF0dXMnXSA9PSAiYWN0aXZlIikgewogICAgICAgICAgICAkc3RhdHVzID0gImRpc2FibGVkIjsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkc3RhdHVzID0gImFjdGl2ZSI7CiAgICAgICAgfQogICAgICAgICRjb25maWdzID0gYXJyYXkoInN0YXR1cyIgPT4gJHN0YXR1cyk7CiAgICAgICAgJHRoaXMtPk1vZGlmeXVzZXIoJHVzZXJuYW1lLCAkbmFtZV9wYW5lbCwgJGNvbmZpZ3MpOwogICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ3N1Y2Nlc3NmdWwnLAogICAgICAgICAgICAnbXNnJyA9PiBudWxsCiAgICAgICAgKTsKICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVzZXRVc2FnZShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkdXNlcm5hbWUgPSAkdmFyc1sndXNlcm5hbWUnXTsKICAgICAgICAkcGFuZWwgPSAkdmFyc1sncGFuZWwnXTsKICAgICAgICAkcmVzZXQgPSBSZXNldFVzZXJEYXRhVXNhZ2UoJHVzZXJuYW1lLCAkcGFuZWxbJ25hbWVfcGFuZWwnXSk7CiAgICAgICAgaWYgKCFlbXB0eSgkcmVzZXRbJ3N0YXR1cyddKSAmJiAkcmVzZXRbJ3N0YXR1cyddICE9IDIwMCkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICdlcnJvciBjb2RlIDogJyAuICRyZXNldFsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2VpZiAoIWVtcHR5KCRyZXNldFsnZXJyb3InXSkpIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAnZXJyb3IgIDogJyAuICRyZXNldFsnZXJyb3InXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICAkcmVzZXQgPSBqc29uX2RlY29kZSgkcmVzZXRbJ2JvZHknXSwgdHJ1ZSk7CiAgICAgICAgaWYgKCFlbXB0eSgkcmVzZXRbJ2RldGFpbCddKSkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICRyZXNldFsnZGV0YWlsJ10KICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAnc3RhdHVzJyA9PiB0cnVlLAogICAgICAgICAgICAnbXNnJyA9PiAnc3VjY2Vzc2Z1bCcKICAgICAgICApOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBleHRlbmRTZXJ2aWNlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRkYXRhX2xpbWl0X25ldyA9ICR2YXJzWydkYXRhX2xpbWl0X25ldyddOwogICAgICAgICR0aW1lX25ldyA9ICR2YXJzWyd0aW1lX25ldyddOwogICAgICAgICRpbmJvdW5kcyA9ICR2YXJzWydpbmJvdW5kcyddOwogICAgICAgICRpbnZvaWNlID0gJHZhcnNbJ2ludm9pY2UnXTsKICAgICAgICAkdXNlcm5hbWUgPSAkdmFyc1sndXNlcm5hbWUnXTsKICAgICAgICAkcGFuZWwgPSAkdmFyc1sncGFuZWwnXTsKICAgICAgICAkZGF0YSA9IGFycmF5KAogICAgICAgICAgICAnZGF0YV9saW1pdCcgPT4gJGRhdGFfbGltaXRfbmV3LAogICAgICAgICAgICAnZXhwaXJlJyA9PiAkdGltZV9uZXcsCiAgICAgICAgICAgICdpbmJvdW5kcycgPT4gJGluYm91bmRzLAogICAgICAgICk7CiAgICAgICAgaWYgKCRpbnZvaWNlICE9IGZhbHNlICYmICRpbnZvaWNlWyd1dWlkJ10gIT0gbnVsbCkgewogICAgICAgICAgICAkZGF0YVsncHJveGllcyddID0ganNvbl9kZWNvZGUoJGludm9pY2VbJ3V1aWQnXSwgdHJ1ZSk7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkdGhpcy0+YXBwbHlNb2RpZnkoJHVzZXJuYW1lLCAkcGFuZWxbJ25hbWVfcGFuZWwnXSwgJGRhdGEpOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBleHRyYVZvbHVtZShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkbmV3X2xpbWl0ID0gJHZhcnNbJ25ld19saW1pdCddOwogICAgICAgICRpbmJvdW5kcyA9ICR2YXJzWydpbmJvdW5kcyddOwogICAgICAgICRpbnZvaWNlID0gJHZhcnNbJ2ludm9pY2UnXTsKICAgICAgICAkdXNlcm5hbWVfYWNjb3VudCA9ICR2YXJzWyd1c2VybmFtZV9hY2NvdW50J107CiAgICAgICAgJHBhbmVsID0gJHZhcnNbJ3BhbmVsJ107CiAgICAgICAgJGRhdGEgPSBhcnJheSgKICAgICAgICAgICAgJ2RhdGFfbGltaXQnID0+ICRuZXdfbGltaXQsCiAgICAgICAgICAgICdpbmJvdW5kcycgPT4gJGluYm91bmRzLAogICAgICAgICk7CiAgICAgICAgaWYgKCRpbnZvaWNlICE9IGZhbHNlICYmICRpbnZvaWNlWyd1dWlkJ10gIT0gbnVsbCkgewogICAgICAgICAgICAkZGF0YVsncHJveGllcyddID0ganNvbl9kZWNvZGUoJGludm9pY2VbJ3V1aWQnXSwgdHJ1ZSk7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkdGhpcy0+YXBwbHlNb2RpZnkoJHVzZXJuYW1lX2FjY291bnQsICRwYW5lbFsnbmFtZV9wYW5lbCddLCAkZGF0YSk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGV4dHJhVGltZShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkbmV3X2xpbWl0ID0gJHZhcnNbJ25ld19saW1pdCddOwogICAgICAgICRpbmJvdW5kcyA9ICR2YXJzWydpbmJvdW5kcyddOwogICAgICAgICRpbnZvaWNlID0gJHZhcnNbJ2ludm9pY2UnXTsKICAgICAgICAkdXNlcm5hbWVfYWNjb3VudCA9ICR2YXJzWyd1c2VybmFtZV9hY2NvdW50J107CiAgICAgICAgJHBhbmVsID0gJHZhcnNbJ3BhbmVsJ107CiAgICAgICAgJGRhdGEgPSBhcnJheSgKICAgICAgICAgICAgJ2V4cGlyZScgPT4gJG5ld19saW1pdCwKICAgICAgICAgICAgJ2luYm91bmRzJyA9PiAkaW5ib3VuZHMsCiAgICAgICAgKTsKICAgICAgICBpZiAoJGludm9pY2UgIT0gZmFsc2UgJiYgJGludm9pY2VbJ3V1aWQnXSAhPSBudWxsKSB7CiAgICAgICAgICAgICRkYXRhWydwcm94aWVzJ10gPSBqc29uX2RlY29kZSgkaW52b2ljZVsndXVpZCddLCB0cnVlKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICR0aGlzLT5hcHBseU1vZGlmeSgkdXNlcm5hbWVfYWNjb3VudCwgJHBhbmVsWyduYW1lX3BhbmVsJ10sICRkYXRhKTsKICAgIH0KfQo=
+<?php
+
+class MarzbanPanelDriver extends BasePanelDriver
+{
+    public function create(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $data_limit = $vars['data_limit'];
+        $usernameC = $vars['usernameC'];
+        $expire = $vars['expire'];
+        $note = $vars['note'];
+        $Get_Data_Product = $vars['Get_Data_Product'];
+        $Output = $vars['Output'];
+        $invoice = $vars['invoice'];
+        $domainhosts = $vars['domainhosts'];
+        //create user
+        $ConnectToPanel = adduser($Get_Data_Panel['name_panel'], $data_limit, $usernameC, $expire, $note, $Get_Data_Product['data_limit_reset'], $Get_Data_Product['name_product']);
+        if (!empty($ConnectToPanel['status']) && $ConnectToPanel['status'] >= 400) {
+            $errBody = json_decode($ConnectToPanel['body'] ?? '', true);
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => is_array($errBody) && !empty($errBody['detail']) ? $errBody['detail'] : $ConnectToPanel['status']
+            );
+        }
+        if (!empty($ConnectToPanel['error'])) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $ConnectToPanel['error']
+            );
+        }
+        $data_Output = json_decode($ConnectToPanel['body'], true);
+        if (!empty($data_Output['detail']) && $data_Output['detail']) {
+            $Output['status'] = 'Unsuccessful';
+            if ($data_Output['detail']) {
+                $Output['msg'] = $data_Output['detail'];
+            } else {
+                $Output['msg'] = '';
+            }
+        } else {
+            $data_Output['subscription_url'] = absoluteSubscriptionUrl($data_Output['subscription_url'], $Get_Data_Panel['url_panel']);
+            if ($Get_Data_Panel['version_panel'] == "1") {
+                $out_put_link = outputlink($data_Output['subscription_url']."/links");
+
+                $links = isBase64($out_put_link)
+                    ? base64_decode($out_put_link)
+                    : ($data_Output['links'] ?? ($out_put_link ?: ''));
+
+                $data_Output['links'] = is_array($links)
+                    ? $links
+                    : explode("\n", (string) $links);
+            }
+            if ($invoice != false) {
+                $data_Output['subscription_url'] = "https://$domainhosts/sub/" . $invoice['id_invoice'];
+            }
+            $Output['status'] = 'successful';
+            $Output['username'] = $data_Output['username'];
+            $Output['subscription_url'] = $data_Output['subscription_url'];
+            $Output['configs'] = $data_Output['links'];
+        }
+        return $Output;
+    }
+
+    public function read(array $vars)
+    {
+        $username = $vars['username'];
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $Output = $vars['Output'];
+        $name_panel = $vars['name_panel'];
+        $invoice = $vars['invoice'];
+        $domainhosts = $vars['domainhosts'];
+        $UsernameData = getuser($username, $Get_Data_Panel['name_panel']);
+        if (!empty($UsernameData['error'])) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['error']
+            );
+        } elseif (!empty($UsernameData['status']) && $UsernameData['status'] == 500) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['status']
+            );
+        } else {
+            $UsernameData = json_decode($UsernameData['body'] ?? '', true);
+            if (!is_array($UsernameData) || !empty($UsernameData['detail']) || empty($UsernameData['username'])) {
+                return array(
+                    'status' => 'Unsuccessful',
+                    'msg' => is_array($UsernameData) ? ($UsernameData['detail'] ?? 'Unsuccessful') : 'Unsuccessful'
+                );
+            }
+            $UsernameData['subscription_url'] = absoluteSubscriptionUrl($UsernameData['subscription_url'] ?? '', $Get_Data_Panel['url_panel']);
+            if ($Get_Data_Panel['version_panel'] == "1") {
+                $UsernameData['expire'] = strtotime($UsernameData['expire'] ?? '');
+                $links = $UsernameData['links'] ?? outputlink($UsernameData['subscription_url']."/links");
+                if(isBase64($links)) {
+                    $links = base64_decode($links);
+                }
+                $UsernameData['links'] = is_array($links) ? $links : explode("\n", (string) $links);
+                $sublist_update = get_list_update($name_panel, $username);
+                if (!empty($sublist_update['error'])) {
+                    return array(
+                        'status' => 'Unsuccessful',
+                        'msg' => $sublist_update['error']
+                    );
+                } elseif (!empty($sublist_update['status']) && $sublist_update['status'] == 500) {
+                    return array(
+                        'status' => 'Unsuccessful',
+                        'msg' => $sublist_update['status']
+                    );
+                }
+                $sublist_update_body = json_decode($sublist_update['body'] ?? '', true);
+                if (!empty($sublist_update_body['updates']) && is_array($sublist_update_body['updates'])) {
+                    $first_update = $sublist_update_body['updates'][0];
+                    $UsernameData['sub_updated_at'] = isset($first_update['created_at']) ? $first_update['created_at'] : null;
+                    $UsernameData['sub_last_user_agent'] = isset($first_update['user_agent']) ? $first_update['user_agent'] : null;
+                } else {
+                    $UsernameData['sub_updated_at'] = isset($UsernameData['sub_updated_at']) ? $UsernameData['sub_updated_at'] : null;
+                    $UsernameData['sub_last_user_agent'] = isset($UsernameData['sub_last_user_agent']) ? $UsernameData['sub_last_user_agent'] : null;
+                }
+            } else {
+                $UsernameData['expire'] = $UsernameData['expire'] ?? null;
+            }
+            if ($invoice != false) {
+                $UsernameData['subscription_url'] = "https://$domainhosts/sub/" . $invoice['id_invoice'];
+            }
+            if ($Get_Data_Panel['version_panel'] == "1") {
+                $UsernameData['proxies'] = isset($UsernameData['proxy_settings']) ? $UsernameData['proxy_settings'] : null;
+            }
+            $Output = array(
+                'status' => $UsernameData['status'] ?? 'Unknown',
+                'username' => $UsernameData['username'] ?? $username,
+                'data_limit' => $UsernameData['data_limit'] ?? null,
+                'expire' => $UsernameData['expire'] ?? null,
+                'online_at' => $UsernameData['online_at'] ?? null,
+                'used_traffic' => $UsernameData['used_traffic'] ?? null,
+                'links' => $UsernameData['links'] ?? [],
+                'subscription_url' => $UsernameData['subscription_url'] ?? '',
+                'sub_updated_at' => $UsernameData['sub_updated_at'] ?? null,
+                'sub_last_user_agent' => $UsernameData['sub_last_user_agent'] ?? null,
+                'uuid' => $UsernameData['proxies'] ?? null,
+                'data_limit_reset' => $UsernameData['data_limit_reset_strategy'] ?? null
+            );
+        }
+        return $Output;
+    }
+
+    public function revokeSub(array $vars)
+    {
+        $username = $vars['username'];
+        $name_panel = $vars['name_panel'];
+        $Output = $vars['Output'];
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $revoke_sub = revoke_sub($username, $name_panel);
+        if (isset($revoke_sub['detail']) && $revoke_sub['detail']) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $revoke_sub['detail']
+            );
+        } else {
+            $Data_User = $this->DataUser($name_panel, $username);
+            $Data_User['subscription_url'] = absoluteSubscriptionUrl($Data_User['subscription_url'], $Get_Data_Panel['url_panel']);
+            $Output = array(
+                'status' => 'successful',
+                'configs' => $Data_User['links'],
+                'subscription_url' => $Data_User['subscription_url']
+            );
+        }
+        return $Output;
+    }
+
+    public function remove(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $UsernameData = removeuser($Get_Data_Panel['name_panel'], $username);
+        if (!empty($UsernameData['status']) && $UsernameData['status'] != 200) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['status']
+            );
+        } elseif (!empty($UsernameData['error'])) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['error']
+            );
+        }
+        $UsernameData = json_decode($UsernameData['body'], true);
+        if ($UsernameData['detail'] != "User successfully deleted") {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['detail']
+            );
+        } else {
+            $Output = array(
+                'status' => 'successful',
+                'username' => $username,
+            );
+        }
+        return $Output;
+    }
+
+    public function modify(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $name_panel = $vars['name_panel'];
+        $config = $vars['config'];
+        if ($Get_Data_Panel['version_panel'] == "1") {
+            $result = getuser($username, $name_panel);
+            $result = json_decode($result['body'], true);
+            $config['proxy_settings'] = $result['proxy_settings'];
+        }
+        $modify = Modifyuser($name_panel, $username, $config);
+        if (!empty($modify['error'])) {
+            return array(
+                'status' => false,
+                'msg' => $modify['error']
+            );
+        } elseif (!empty($modify['status']) && $modify['status'] == 500) {
+            return array(
+                'status' => false,
+                'msg' => 'error code : ' . $modify['status']
+            );
+        }
+        $modifycheck = json_decode($modify['body'], true);
+        if (!empty($modifycheck['detail'])) {
+            return array(
+                'status' => false,
+                'msg' => $modifycheck['detail']
+            );
+        }
+        return array(
+            'status' => true,
+            'data' => $modify
+        );
+    }
+
+    public function changeStatus(array $vars)
+    {
+        $DataUserOut = $vars['DataUserOut'];
+        $username = $vars['username'];
+        $name_panel = $vars['name_panel'];
+        if ($DataUserOut['status'] == "active") {
+            $status = "disabled";
+        } else {
+            $status = "active";
+        }
+        $configs = array("status" => $status);
+        $this->Modifyuser($username, $name_panel, $configs);
+        $Output = array(
+            'status' => 'successful',
+            'msg' => null
+        );
+        return $Output;
+    }
+
+    public function resetUsage(array $vars)
+    {
+        $username = $vars['username'];
+        $panel = $vars['panel'];
+        $reset = ResetUserDataUsage($username, $panel['name_panel']);
+        if (!empty($reset['status']) && $reset['status'] != 200) {
+            return array(
+                'status' => false,
+                'msg' => 'error code : ' . $reset['status']
+            );
+        } elseif (!empty($reset['error'])) {
+            return array(
+                'status' => false,
+                'msg' => 'error  : ' . $reset['error']
+            );
+        }
+        $reset = json_decode($reset['body'], true);
+        if (!empty($reset['detail'])) {
+            return array(
+                'status' => false,
+                'msg' => $reset['detail']
+            );
+        }
+        return array(
+            'status' => true,
+            'msg' => 'successful'
+        );
+    }
+
+    public function extendService(array $vars)
+    {
+        $data_limit_new = $vars['data_limit_new'];
+        $time_new = $vars['time_new'];
+        $inbounds = $vars['inbounds'];
+        $invoice = $vars['invoice'];
+        $username = $vars['username'];
+        $panel = $vars['panel'];
+        $data = array(
+            'data_limit' => $data_limit_new,
+            'expire' => $time_new,
+            'inbounds' => $inbounds,
+        );
+        if ($invoice != false && $invoice['uuid'] != null) {
+            $data['proxies'] = json_decode($invoice['uuid'], true);
+        }
+        return $this->applyModify($username, $panel['name_panel'], $data);
+    }
+
+    public function extraVolume(array $vars)
+    {
+        $new_limit = $vars['new_limit'];
+        $inbounds = $vars['inbounds'];
+        $invoice = $vars['invoice'];
+        $username_account = $vars['username_account'];
+        $panel = $vars['panel'];
+        $data = array(
+            'data_limit' => $new_limit,
+            'inbounds' => $inbounds,
+        );
+        if ($invoice != false && $invoice['uuid'] != null) {
+            $data['proxies'] = json_decode($invoice['uuid'], true);
+        }
+        return $this->applyModify($username_account, $panel['name_panel'], $data);
+    }
+
+    public function extraTime(array $vars)
+    {
+        $new_limit = $vars['new_limit'];
+        $inbounds = $vars['inbounds'];
+        $invoice = $vars['invoice'];
+        $username_account = $vars['username_account'];
+        $panel = $vars['panel'];
+        $data = array(
+            'expire' => $new_limit,
+            'inbounds' => $inbounds,
+        );
+        if ($invoice != false && $invoice['uuid'] != null) {
+            $data['proxies'] = json_decode($invoice['uuid'], true);
+        }
+        return $this->applyModify($username_account, $panel['name_panel'], $data);
+    }
+}

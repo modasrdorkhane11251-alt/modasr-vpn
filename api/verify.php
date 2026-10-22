@@ -1,1 +1,277 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwoKaGVhZGVyKCdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLTgnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKaW5pX3NldCgnZGVmYXVsdF9jaGFyc2V0JywgJ1VURi04Jyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKCmZ1bmN0aW9uIHJlc3BvbmRfanNvbihpbnQgJHN0YXR1c0NvZGUsIGFycmF5ICRwYXlsb2FkKTogdm9pZAp7CiAgICBodHRwX3Jlc3BvbnNlX2NvZGUoJHN0YXR1c0NvZGUpOwogICAgZWNobyBqc29uX2VuY29kZSgkcGF5bG9hZCwgSlNPTl9VTkVTQ0FQRURfVU5JQ09ERSB8IEpTT05fVU5FU0NBUEVEX1NMQVNIRVMpOwogICAgZXhpdDsKfQoKaWYgKCFmdW5jdGlvbl9leGlzdHMoJ2dldGFsbGhlYWRlcnMnKSkgewogICAgZnVuY3Rpb24gZ2V0YWxsaGVhZGVycygpOiBhcnJheQogICAgewogICAgICAgICRoZWFkZXJzID0gW107CiAgICAgICAgZm9yZWFjaCAoJF9TRVJWRVIgYXMgJG5hbWUgPT4gJHZhbHVlKSB7CiAgICAgICAgICAgIGlmIChzdWJzdHIoJG5hbWUsIDAsIDUpICE9PSAnSFRUUF8nKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgJGhlYWRlck5hbWUgPSBzdHJfcmVwbGFjZSgnICcsICctJywgdWN3b3JkcyhzdHJ0b2xvd2VyKHN0cl9yZXBsYWNlKCdfJywgJyAnLCBzdWJzdHIoJG5hbWUsIDUpKSkpKTsKICAgICAgICAgICAgJGhlYWRlcnNbJGhlYWRlck5hbWVdID0gJHZhbHVlOwogICAgICAgIH0KCiAgICAgICAgcmV0dXJuICRoZWFkZXJzOwogICAgfQp9CgpmdW5jdGlvbiBub3JtYWxpemVfaW5pdF92YWx1ZSgkdmFsdWUpOiBzdHJpbmcKewogICAgaWYgKGlzX2Jvb2woJHZhbHVlKSkgewogICAgICAgIHJldHVybiAkdmFsdWUgPyAndHJ1ZScgOiAnZmFsc2UnOwogICAgfQoKICAgIGlmIChpc19hcnJheSgkdmFsdWUpKSB7CiAgICAgICAgcmV0dXJuIGpzb25fZW5jb2RlKCR2YWx1ZSwgSlNPTl9VTkVTQ0FQRURfVU5JQ09ERSB8IEpTT05fVU5FU0NBUEVEX1NMQVNIRVMpOwogICAgfQoKICAgIGlmICgkdmFsdWUgPT09IG51bGwpIHsKICAgICAgICByZXR1cm4gJyc7CiAgICB9CgogICAgcmV0dXJuIChzdHJpbmcpICR2YWx1ZTsKfQoKZnVuY3Rpb24gdmFsaWRhdGVfdGVsZWdyYW1faW5pdF9kYXRhKCRyYXdEYXRhLCBzdHJpbmcgJGJvdFRva2VuKTogYXJyYXkKewogICAgaWYgKGlzX3N0cmluZygkcmF3RGF0YSkpIHsKICAgICAgICAkcmF3RGF0YSA9IHRyaW0oJHJhd0RhdGEpOwogICAgICAgIGlmICgkcmF3RGF0YSA9PT0gJycpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEludmFsaWRBcmd1bWVudEV4Y2VwdGlvbignVGVsZWdyYW0gaW5pdCBkYXRhIGlzIG1pc3Npbmcgb3IgaW52YWxpZCcpOwogICAgICAgIH0KCiAgICAgICAgJGRlY29kZWRRdWVyeSA9IGh0bWxfZW50aXR5X2RlY29kZSgkcmF3RGF0YSwgRU5UX1FVT1RFUyB8IEVOVF9IVE1MNSwgJ1VURi04Jyk7CiAgICAgICAgcGFyc2Vfc3RyKCRkZWNvZGVkUXVlcnksICRpbml0RGF0YSk7CiAgICB9IGVsc2VpZiAoaXNfYXJyYXkoJHJhd0RhdGEpKSB7CiAgICAgICAgJGluaXREYXRhID0gJHJhd0RhdGE7CiAgICB9IGVsc2UgewogICAgICAgIHRocm93IG5ldyBJbnZhbGlkQXJndW1lbnRFeGNlcHRpb24oJ1RlbGVncmFtIGluaXQgZGF0YSBpcyBtaXNzaW5nIG9yIGludmFsaWQnKTsKICAgIH0KCiAgICBpZiAoIWlzX2FycmF5KCRpbml0RGF0YSkgfHwgJGluaXREYXRhID09PSBbXSkgewogICAgICAgIHRocm93IG5ldyBJbnZhbGlkQXJndW1lbnRFeGNlcHRpb24oJ1RlbGVncmFtIGluaXQgZGF0YSBwYXlsb2FkIGlzIGVtcHR5Jyk7CiAgICB9CgogICAgaWYgKCFpc3NldCgkaW5pdERhdGFbJ2hhc2gnXSkpIHsKICAgICAgICB0aHJvdyBuZXcgSW52YWxpZEFyZ3VtZW50RXhjZXB0aW9uKCdUZWxlZ3JhbSBpbml0IGRhdGEgaXMgbWlzc2luZyByZXF1aXJlZCBzaWduYXR1cmUnKTsKICAgIH0KCiAgICAkcmVjZWl2ZWRIYXNoID0gKHN0cmluZykgJGluaXREYXRhWydoYXNoJ107CiAgICB1bnNldCgkaW5pdERhdGFbJ2hhc2gnXSk7CgogICAgJGRhdGFDaGVja0FycmF5ID0gW107CiAgICBmb3JlYWNoICgkaW5pdERhdGEgYXMgJGtleSA9PiAkdmFsdWUpIHsKICAgICAgICBpZiAoJHZhbHVlID09PSBudWxsKSB7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KCiAgICAgICAgJHN0cmluZ1ZhbHVlID0gbm9ybWFsaXplX2luaXRfdmFsdWUoJHZhbHVlKTsKICAgICAgICBpZiAoJHN0cmluZ1ZhbHVlID09PSAnJykgewogICAgICAgICAgICBjb250aW51ZTsKICAgICAgICB9CgogICAgICAgICRkYXRhQ2hlY2tBcnJheVtdID0gJGtleSAuICc9JyAuICRzdHJpbmdWYWx1ZTsKICAgIH0KCiAgICBpZiAoJGRhdGFDaGVja0FycmF5ID09PSBbXSkgewogICAgICAgIHRocm93IG5ldyBJbnZhbGlkQXJndW1lbnRFeGNlcHRpb24oJ1RlbGVncmFtIGluaXQgZGF0YSBwYXlsb2FkIGlzIGVtcHR5Jyk7CiAgICB9CgogICAgc29ydCgkZGF0YUNoZWNrQXJyYXksIFNPUlRfU1RSSU5HKTsKICAgICRkYXRhQ2hlY2tTdHJpbmcgPSBpbXBsb2RlKCJcbiIsICRkYXRhQ2hlY2tBcnJheSk7CgogICAgJHNlY3JldEtleSA9IGhhc2hfaG1hYygnc2hhMjU2JywgJGJvdFRva2VuLCAnV2ViQXBwRGF0YScsIHRydWUpOwogICAgJGNhbGN1bGF0ZWRIYXNoID0gaGFzaF9obWFjKCdzaGEyNTYnLCAkZGF0YUNoZWNrU3RyaW5nLCAkc2VjcmV0S2V5KTsKCiAgICBpZiAoIWhhc2hfZXF1YWxzKCRjYWxjdWxhdGVkSGFzaCwgJHJlY2VpdmVkSGFzaCkpIHsKICAgICAgICB0aHJvdyBuZXcgUnVudGltZUV4Y2VwdGlvbignVXNlciB2ZXJpZmljYXRpb24gZmFpbGVkJyk7CiAgICB9CgogICAgJGF1dGhEYXRlID0gaXNzZXQoJGluaXREYXRhWydhdXRoX2RhdGUnXSkgPyAoaW50KSAkaW5pdERhdGFbJ2F1dGhfZGF0ZSddIDogMDsKICAgIGlmICgkYXV0aERhdGUgPD0gMCkgewogICAgICAgIHRocm93IG5ldyBSdW50aW1lRXhjZXB0aW9uKCdUZWxlZ3JhbSBpbml0IGRhdGEgaXMgbWlzc2luZyBhdXRoX2RhdGUnKTsKICAgIH0KICAgIGlmICh0aW1lKCkgLSAkYXV0aERhdGUgPiA4NjQwMCkgewogICAgICAgIHRocm93IG5ldyBSdW50aW1lRXhjZXB0aW9uKCdUZWxlZ3JhbSBpbml0IGRhdGEgaGFzIGV4cGlyZWQnKTsKICAgIH0KCiAgICAkdXNlclJhdyA9ICRpbml0RGF0YVsndXNlciddID8/IG51bGw7CiAgICBpZiAoaXNfc3RyaW5nKCR1c2VyUmF3KSkgewogICAgICAgICR1c2VyRGF0YSA9IGpzb25fZGVjb2RlKCR1c2VyUmF3LCB0cnVlKTsKICAgIH0gZWxzZWlmIChpc19hcnJheSgkdXNlclJhdykpIHsKICAgICAgICAkdXNlckRhdGEgPSAkdXNlclJhdzsKICAgIH0gZWxzZSB7CiAgICAgICAgJHVzZXJEYXRhID0gbnVsbDsKICAgIH0KCiAgICBpZiAoIWlzX2FycmF5KCR1c2VyRGF0YSkgfHwgIWlzc2V0KCR1c2VyRGF0YVsnaWQnXSkpIHsKICAgICAgICB0aHJvdyBuZXcgUnVudGltZUV4Y2VwdGlvbignVXNlciBkYXRhIGlzIG1pc3Npbmcgb3IgbWFsZm9ybWVkIGluIGluaXQgZGF0YScpOwogICAgfQoKICAgIHJldHVybiAkdXNlckRhdGE7Cn0KCiRyYXdJbnB1dCA9IGZpbGVfZ2V0X2NvbnRlbnRzKCdwaHA6Ly9pbnB1dCcpOwoKaWYgKCRyYXdJbnB1dCA9PT0gZmFsc2UpIHsKICAgIHJlc3BvbmRfanNvbig0MDAsIFsKICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAnbXNnJyA9PiAnRmFpbGVkIHRvIHJlYWQgcmVxdWVzdCBib2R5JywKICAgICAgICAndG9rZW4nID0+IG51bGwsCiAgICBdKTsKfQoKJHJhd0lucHV0ID0gdHJpbSgkcmF3SW5wdXQpOwokZGVjb2RlZEpzb24gPSBudWxsOwppZiAoJHJhd0lucHV0ICE9PSAnJykgewogICAgJGRlY29kZWRKc29uID0ganNvbl9kZWNvZGUoJHJhd0lucHV0LCB0cnVlKTsKICAgIGlmIChqc29uX2xhc3RfZXJyb3IoKSAhPT0gSlNPTl9FUlJPUl9OT05FKSB7CiAgICAgICAgJGRlY29kZWRKc29uID0gbnVsbDsKICAgIH0KfQoKJGhlYWRlcnMgPSBnZXRhbGxoZWFkZXJzKCk7CiRjYW5kaWRhdGVzID0gW107CgokaGVhZGVyS2V5cyA9IFsKICAgICdYLVRlbGVncmFtLUluaXQtRGF0YScsCiAgICAnWC1UZWxlZ3JhbS1XZWItQXBwLUluaXQtRGF0YScsCiAgICAnVGVsZWdyYW0tSW5pdC1EYXRhJywKXTsKCmZvcmVhY2ggKCRoZWFkZXJLZXlzIGFzICRoZWFkZXJLZXkpIHsKICAgICR2YWx1ZSA9IGhlYWRlclZhbHVlKCRoZWFkZXJzLCAkaGVhZGVyS2V5KTsKICAgIGlmICgkdmFsdWUgIT09IG51bGwgJiYgdHJpbSgkdmFsdWUpICE9PSAnJykgewogICAgICAgICRjYW5kaWRhdGVzW10gPSB0cmltKCR2YWx1ZSk7CiAgICB9Cn0KCmZvcmVhY2ggKFsKICAgICRfUE9TVFsnaW5pdERhdGEnXSA/PyBudWxsLAogICAgJF9QT1NUWydpbml0X2RhdGEnXSA/PyBudWxsLAogICAgJF9QT1NUWydpbml0RGF0YVVuc2FmZSddID8/IG51bGwsCiAgICAkX1BPU1RbJ2luaXRfZGF0YV91bnNhZmUnXSA/PyBudWxsLAogICAgJF9HRVRbJ2luaXREYXRhJ10gPz8gbnVsbCwKICAgICRfR0VUWydpbml0X2RhdGEnXSA/PyBudWxsLApdIGFzICR2YWx1ZSkgewogICAgaWYgKCR2YWx1ZSA9PT0gbnVsbCkgewogICAgICAgIGNvbnRpbnVlOwogICAgfQoKICAgIGlmIChpc19zdHJpbmcoJHZhbHVlKSkgewogICAgICAgICR2YWx1ZSA9IHRyaW0oJHZhbHVlKTsKICAgICAgICBpZiAoJHZhbHVlID09PSAnJykgewogICAgICAgICAgICBjb250aW51ZTsKICAgICAgICB9CiAgICB9CgogICAgJGNhbmRpZGF0ZXNbXSA9ICR2YWx1ZTsKfQoKaWYgKCRkZWNvZGVkSnNvbiAhPT0gbnVsbCkgewogICAgZm9yZWFjaCAoWwogICAgICAgICRkZWNvZGVkSnNvbiwKICAgICAgICAkZGVjb2RlZEpzb25bJ2luaXREYXRhJ10gPz8gbnVsbCwKICAgICAgICAkZGVjb2RlZEpzb25bJ2luaXRfZGF0YSddID8/IG51bGwsCiAgICAgICAgJGRlY29kZWRKc29uWydpbml0RGF0YVVuc2FmZSddID8/IG51bGwsCiAgICAgICAgJGRlY29kZWRKc29uWydpbml0X2RhdGFfdW5zYWZlJ10gPz8gbnVsbCwKICAgIF0gYXMgJHZhbHVlKSB7CiAgICAgICAgaWYgKCR2YWx1ZSA9PT0gbnVsbCkgewogICAgICAgICAgICBjb250aW51ZTsKICAgICAgICB9CgogICAgICAgIGlmIChpc19zdHJpbmcoJHZhbHVlKSkgewogICAgICAgICAgICAkdmFsdWUgPSB0cmltKCR2YWx1ZSk7CiAgICAgICAgICAgIGlmICgkdmFsdWUgPT09ICcnKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgJGNhbmRpZGF0ZXNbXSA9ICR2YWx1ZTsKICAgIH0KfSBlbHNlaWYgKCRyYXdJbnB1dCAhPT0gJycpIHsKICAgICRjYW5kaWRhdGVzW10gPSAkcmF3SW5wdXQ7Cn0KCmlmICgkY2FuZGlkYXRlcyA9PT0gW10pIHsKICAgIHJlc3BvbmRfanNvbig0MDAsIFsKICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAnbXNnJyA9PiAnVGVsZWdyYW0gaW5pdCBkYXRhIGlzIG1pc3Npbmcgb3IgaW52YWxpZCcsCiAgICAgICAgJ3Rva2VuJyA9PiBudWxsLAogICAgXSk7Cn0KCiRsYXN0RXhjZXB0aW9uID0gbnVsbDsKJHVzZXJEYXRhID0gbnVsbDsKCmZvcmVhY2ggKCRjYW5kaWRhdGVzIGFzICRjYW5kaWRhdGUpIHsKICAgIHRyeSB7CiAgICAgICAgJHVzZXJEYXRhID0gdmFsaWRhdGVfdGVsZWdyYW1faW5pdF9kYXRhKCRjYW5kaWRhdGUsICRBUElLRVkpOwogICAgICAgIGJyZWFrOwogICAgfSBjYXRjaCAoSW52YWxpZEFyZ3VtZW50RXhjZXB0aW9uICRleGNlcHRpb24pIHsKICAgICAgICAkbGFzdEV4Y2VwdGlvbiA9ICRleGNlcHRpb247CiAgICAgICAgY29udGludWU7CiAgICB9IGNhdGNoIChSdW50aW1lRXhjZXB0aW9uICRleGNlcHRpb24pIHsKICAgICAgICAkbGFzdEV4Y2VwdGlvbiA9ICRleGNlcHRpb247CiAgICAgICAgY29udGludWU7CiAgICB9Cn0KCmlmICgkdXNlckRhdGEgPT09IG51bGwpIHsKICAgICRtZXNzYWdlID0gJGxhc3RFeGNlcHRpb24gPyAkbGFzdEV4Y2VwdGlvbi0+Z2V0TWVzc2FnZSgpIDogJ1RlbGVncmFtIGluaXQgZGF0YSBpcyBtaXNzaW5nIG9yIGludmFsaWQnOwogICAgJHN0YXR1c0NvZGUgPSAkbGFzdEV4Y2VwdGlvbiBpbnN0YW5jZW9mIFJ1bnRpbWVFeGNlcHRpb24gPyA0MDMgOiA0MDA7CgogICAgcmVzcG9uZF9qc29uKCRzdGF0dXNDb2RlLCBbCiAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgJ21zZycgPT4gJG1lc3NhZ2UsCiAgICAgICAgJ3Rva2VuJyA9PiBudWxsLAogICAgXSk7Cn0KCiR1c2VySWQgPSAkdXNlckRhdGFbJ2lkJ107CiR1c2VyUmVjb3JkID0gc2VsZWN0KCd1c2VyJywgJyonLCAnaWQnLCAkdXNlcklkLCAnc2VsZWN0Jyk7CgppZiAoISR1c2VyUmVjb3JkKSB7CiAgICByZXNwb25kX2pzb24oNDA0LCBbCiAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgJ21zZycgPT4gJ1VzZXIgbm90IGZvdW5kJywKICAgICAgICAndG9rZW4nID0+IG51bGwsCiAgICBdKTsKfQoKdHJ5IHsKICAgICRyYW5kb21TdHJpbmcgPSBiaW4yaGV4KHJhbmRvbV9ieXRlcygyMCkpOwp9IGNhdGNoIChFeGNlcHRpb24gJGV4Y2VwdGlvbikgewogICAgZXJyb3JfbG9nKCdGYWlsZWQgdG8gZ2VuZXJhdGUgcmFuZG9tIHRva2VuOiAnIC4gJGV4Y2VwdGlvbi0+Z2V0TWVzc2FnZSgpKTsKICAgIHJlc3BvbmRfanNvbig1MDAsIFsKICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAnbXNnJyA9PiAnRmFpbGVkIHRvIGdlbmVyYXRlIHNlc3Npb24gdG9rZW4nLAogICAgICAgICd0b2tlbicgPT4gbnVsbCwKICAgIF0pOwp9Cgp1cGRhdGUoJ3VzZXInLCAndG9rZW4nLCAkcmFuZG9tU3RyaW5nLCAnaWQnLCAkdXNlcklkKTsKCnJlc3BvbmRfanNvbigyMDAsIFsKICAgICdzdGF0dXMnID0+IHRydWUsCiAgICAnbXNnJyA9PiAnVXNlciB2ZXJpZmllZCcsCiAgICAndG9rZW4nID0+ICRyYW5kb21TdHJpbmcsCl0pOwo=
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+
+header('Content-Type: application/json; charset=utf-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+function respond_json(int $statusCode, array $payload): void
+{
+    http_response_code($statusCode);
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+
+if (!function_exists('getallheaders')) {
+    function getallheaders(): array
+    {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) !== 'HTTP_') {
+                continue;
+            }
+
+            $headerName = str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))));
+            $headers[$headerName] = $value;
+        }
+
+        return $headers;
+    }
+}
+
+function normalize_init_value($value): string
+{
+    if (is_bool($value)) {
+        return $value ? 'true' : 'false';
+    }
+
+    if (is_array($value)) {
+        return json_encode($value, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    }
+
+    if ($value === null) {
+        return '';
+    }
+
+    return (string) $value;
+}
+
+function validate_telegram_init_data($rawData, string $botToken): array
+{
+    if (is_string($rawData)) {
+        $rawData = trim($rawData);
+        if ($rawData === '') {
+            throw new InvalidArgumentException('Telegram init data is missing or invalid');
+        }
+
+        $decodedQuery = html_entity_decode($rawData, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        parse_str($decodedQuery, $initData);
+    } elseif (is_array($rawData)) {
+        $initData = $rawData;
+    } else {
+        throw new InvalidArgumentException('Telegram init data is missing or invalid');
+    }
+
+    if (!is_array($initData) || $initData === []) {
+        throw new InvalidArgumentException('Telegram init data payload is empty');
+    }
+
+    if (!isset($initData['hash'])) {
+        throw new InvalidArgumentException('Telegram init data is missing required signature');
+    }
+
+    $receivedHash = (string) $initData['hash'];
+    unset($initData['hash']);
+
+    $dataCheckArray = [];
+    foreach ($initData as $key => $value) {
+        if ($value === null) {
+            continue;
+        }
+
+        $stringValue = normalize_init_value($value);
+        if ($stringValue === '') {
+            continue;
+        }
+
+        $dataCheckArray[] = $key . '=' . $stringValue;
+    }
+
+    if ($dataCheckArray === []) {
+        throw new InvalidArgumentException('Telegram init data payload is empty');
+    }
+
+    sort($dataCheckArray, SORT_STRING);
+    $dataCheckString = implode("\n", $dataCheckArray);
+
+    $secretKey = hash_hmac('sha256', $botToken, 'WebAppData', true);
+    $calculatedHash = hash_hmac('sha256', $dataCheckString, $secretKey);
+
+    if (!hash_equals($calculatedHash, $receivedHash)) {
+        throw new RuntimeException('User verification failed');
+    }
+
+    $authDate = isset($initData['auth_date']) ? (int) $initData['auth_date'] : 0;
+    if ($authDate <= 0) {
+        throw new RuntimeException('Telegram init data is missing auth_date');
+    }
+    if (time() - $authDate > 86400) {
+        throw new RuntimeException('Telegram init data has expired');
+    }
+
+    $userRaw = $initData['user'] ?? null;
+    if (is_string($userRaw)) {
+        $userData = json_decode($userRaw, true);
+    } elseif (is_array($userRaw)) {
+        $userData = $userRaw;
+    } else {
+        $userData = null;
+    }
+
+    if (!is_array($userData) || !isset($userData['id'])) {
+        throw new RuntimeException('User data is missing or malformed in init data');
+    }
+
+    return $userData;
+}
+
+$rawInput = file_get_contents('php://input');
+
+if ($rawInput === false) {
+    respond_json(400, [
+        'status' => false,
+        'msg' => 'Failed to read request body',
+        'token' => null,
+    ]);
+}
+
+$rawInput = trim($rawInput);
+$decodedJson = null;
+if ($rawInput !== '') {
+    $decodedJson = json_decode($rawInput, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        $decodedJson = null;
+    }
+}
+
+$headers = getallheaders();
+$candidates = [];
+
+$headerKeys = [
+    'X-Telegram-Init-Data',
+    'X-Telegram-Web-App-Init-Data',
+    'Telegram-Init-Data',
+];
+
+foreach ($headerKeys as $headerKey) {
+    $value = headerValue($headers, $headerKey);
+    if ($value !== null && trim($value) !== '') {
+        $candidates[] = trim($value);
+    }
+}
+
+foreach ([
+    $_POST['initData'] ?? null,
+    $_POST['init_data'] ?? null,
+    $_POST['initDataUnsafe'] ?? null,
+    $_POST['init_data_unsafe'] ?? null,
+    $_GET['initData'] ?? null,
+    $_GET['init_data'] ?? null,
+] as $value) {
+    if ($value === null) {
+        continue;
+    }
+
+    if (is_string($value)) {
+        $value = trim($value);
+        if ($value === '') {
+            continue;
+        }
+    }
+
+    $candidates[] = $value;
+}
+
+if ($decodedJson !== null) {
+    foreach ([
+        $decodedJson,
+        $decodedJson['initData'] ?? null,
+        $decodedJson['init_data'] ?? null,
+        $decodedJson['initDataUnsafe'] ?? null,
+        $decodedJson['init_data_unsafe'] ?? null,
+    ] as $value) {
+        if ($value === null) {
+            continue;
+        }
+
+        if (is_string($value)) {
+            $value = trim($value);
+            if ($value === '') {
+                continue;
+            }
+        }
+
+        $candidates[] = $value;
+    }
+} elseif ($rawInput !== '') {
+    $candidates[] = $rawInput;
+}
+
+if ($candidates === []) {
+    respond_json(400, [
+        'status' => false,
+        'msg' => 'Telegram init data is missing or invalid',
+        'token' => null,
+    ]);
+}
+
+$lastException = null;
+$userData = null;
+
+foreach ($candidates as $candidate) {
+    try {
+        $userData = validate_telegram_init_data($candidate, $APIKEY);
+        break;
+    } catch (InvalidArgumentException $exception) {
+        $lastException = $exception;
+        continue;
+    } catch (RuntimeException $exception) {
+        $lastException = $exception;
+        continue;
+    }
+}
+
+if ($userData === null) {
+    $message = $lastException ? $lastException->getMessage() : 'Telegram init data is missing or invalid';
+    $statusCode = $lastException instanceof RuntimeException ? 403 : 400;
+
+    respond_json($statusCode, [
+        'status' => false,
+        'msg' => $message,
+        'token' => null,
+    ]);
+}
+
+$userId = $userData['id'];
+$userRecord = select('user', '*', 'id', $userId, 'select');
+
+if (!$userRecord) {
+    respond_json(404, [
+        'status' => false,
+        'msg' => 'User not found',
+        'token' => null,
+    ]);
+}
+
+try {
+    $randomString = bin2hex(random_bytes(20));
+} catch (Exception $exception) {
+    error_log('Failed to generate random token: ' . $exception->getMessage());
+    respond_json(500, [
+        'status' => false,
+        'msg' => 'Failed to generate session token',
+        'token' => null,
+    ]);
+}
+
+update('user', 'token', $randomString, 'id', $userId);
+
+respond_json(200, [
+    'status' => true,
+    'msg' => 'User verified',
+    'token' => $randomString,
+]);

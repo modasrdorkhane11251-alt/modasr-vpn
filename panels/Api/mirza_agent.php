@@ -1,1 +1,146 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vLi4vcmVxdWVzdC5waHAnOwpkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL1RlaHJhbicpOwoKCmZ1bmN0aW9uIGdldF9wYW5lbF9saXN0KGFycmF5ICRwYW5lbCkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAnP2FjdGlvbnM9bGlzdF9wYW5lbCc7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdhY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJHBhbmVsWydwYXNzd29yZF9wYW5lbCddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQoKCmZ1bmN0aW9uIGNyZWF0ZV91c2VyX21pcnphKGFycmF5ICRwYW5lbCwgaW50ICRkYXRhX2xpbWl0X2diLCBpbnQgJGV4cGlyZV9kYXlzLCBzdHJpbmcgJHVzZXJuYW1lKQp7CiAgICAkdXJsID0gJHBhbmVsWyd1cmxfcGFuZWwnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkZGF0YSA9IGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICdhY3Rpb25zJyA9PiAidXNlcl9jcmVhdGUiLAogICAgICAgICd1c2VybmFtZScgPT4gJHVzZXJuYW1lLAogICAgICAgICdkYXRhX2xpbWl0X2diJyA9PiAkZGF0YV9saW1pdF9nYiwKICAgICAgICAnZXhwaXJlX2RheXMnID0+ICRleHBpcmVfZGF5cywKICAgICAgICAncGFuZWxfaWQnID0+ICRwYW5lbFsnaW5ib3VuZHMnXQogICAgKSk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkZGF0YSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CgoKZnVuY3Rpb24gZ2V0X3VzZXJfZGF0YV9taXJ6YShhcnJheSAkcGFuZWwsIHN0cmluZyAkdXNlcm5hbWUpCnsKICAgICR1cmwgPSAkcGFuZWxbJ3VybF9wYW5lbCddIC4gJz9hY3Rpb25zPWdldF91c2VyX2RhdGEmdXNlcm5hbWU9JyAuIHVybGVuY29kZSgkdXNlcm5hbWUpOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnYWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJwogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5nZXQoKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gYWRkX3RpbWVfc2VydmljZV9taXJ6YShhcnJheSAkcGFuZWwsIGludCAkZXhwaXJlX2RheXMsIHN0cmluZyAkdXNlcm5hbWUpCnsKICAgICR1cmwgPSAkcGFuZWxbJ3VybF9wYW5lbCddOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnYWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJwogICAgKTsKICAgICRkYXRhID0ganNvbl9lbmNvZGUoYXJyYXkoCiAgICAgICAgJ2FjdGlvbnMnID0+ICJhZGRfdGltZV9zZXJ2aWNlIiwKICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZSwKICAgICAgICAndGltZV9kYXknID0+ICRleHBpcmVfZGF5cywKICAgICkpOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJHBhbmVsWydwYXNzd29yZF9wYW5lbCddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnB1dCgkZGF0YSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CgoKZnVuY3Rpb24gYWRkX3ZvbHVtZV9zZXJ2aWNlX21pcnphKGFycmF5ICRwYW5lbCwgaW50ICRkYXRhX2xpbWl0X2diLCBzdHJpbmcgJHVzZXJuYW1lKQp7CiAgICAkdXJsID0gJHBhbmVsWyd1cmxfcGFuZWwnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkZGF0YSA9IGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICdhY3Rpb25zJyA9PiAiYWRkX3ZvbHVtZV9zZXJ2aWNlIiwKICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZSwKICAgICAgICAnZGF0YV9saW1pdF9nYicgPT4gJGRhdGFfbGltaXRfZ2IsCiAgICApKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wdXQoJGRhdGEpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQoKCgpmdW5jdGlvbiBleHRlbmRfc2VydmljZV9taXJ6YShhcnJheSAkcGFuZWwsIGludCAkZGF0YV9saW1pdF9nYiwgaW50ICR0aW1lX2RheSwgc3RyaW5nICR1c2VybmFtZSkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ107CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdhY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nCiAgICApOwogICAgJGRhdGEgPSBqc29uX2VuY29kZShhcnJheSgKICAgICAgICAnYWN0aW9ucycgPT4gImV4dGVuZF9zZXJ2aWNlIiwKICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZSwKICAgICAgICAnZGF0YV9saW1pdF9nYicgPT4gJGRhdGFfbGltaXRfZ2IsCiAgICAgICAgJ3RpbWVfZGF5JyA9PiAkdGltZV9kYXksCiAgICApKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wdXQoJGRhdGEpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQoKZnVuY3Rpb24gcmVtb3ZlX3NlcnZpY2VfbWlyemEoYXJyYXkgJHBhbmVsLCBzdHJpbmcgJHVzZXJuYW1lKQp7CiAgICAkdXJsID0gJHBhbmVsWyd1cmxfcGFuZWwnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ2FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICAgICk7CiAgICAkZGF0YSA9IGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICdhY3Rpb25zJyA9PiAidXNlcl9kZWxldGUiLAogICAgICAgICd1c2VybmFtZScgPT4gJHVzZXJuYW1lLAogICAgKSk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+ZGVsZXRlKCRkYXRhKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KCgpmdW5jdGlvbiByZXZva2Vfc2VydmljZV9taXJ6YShhcnJheSAkcGFuZWwsIHN0cmluZyAkdXNlcm5hbWUpCnsKICAgICR1cmwgPSAkcGFuZWxbJ3VybF9wYW5lbCddOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnYWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJwogICAgKTsKICAgICRkYXRhID0ganNvbl9lbmNvZGUoYXJyYXkoCiAgICAgICAgJ2FjdGlvbnMnID0+ICJjaGFuZ2VfbGluayIsCiAgICAgICAgJ3VzZXJuYW1lJyA9PiAkdXNlcm5hbWUsCiAgICApKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wdXQoJGRhdGEpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQoK
+<?php
+require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../request.php';
+date_default_timezone_set('Asia/Tehran');
+
+
+function get_panel_list(array $panel)
+{
+    $url = $panel['url_panel'] . '?actions=list_panel';
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->get();
+    return $response;
+}
+
+
+function create_user_mirza(array $panel, int $data_limit_gb, int $expire_days, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "user_create",
+        'username' => $username,
+        'data_limit_gb' => $data_limit_gb,
+        'expire_days' => $expire_days,
+        'panel_id' => $panel['inbounds']
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post($data);
+    return $response;
+}
+
+
+function get_user_data_mirza(array $panel, string $username)
+{
+    $url = $panel['url_panel'] . '?actions=get_user_data&username=' . urlencode($username);
+    $headers = array(
+        'accept: application/json'
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->get();
+    return $response;
+}
+function add_time_service_mirza(array $panel, int $expire_days, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "add_time_service",
+        'username' => $username,
+        'time_day' => $expire_days,
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->put($data);
+    return $response;
+}
+
+
+function add_volume_service_mirza(array $panel, int $data_limit_gb, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "add_volume_service",
+        'username' => $username,
+        'data_limit_gb' => $data_limit_gb,
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->put($data);
+    return $response;
+}
+
+
+
+function extend_service_mirza(array $panel, int $data_limit_gb, int $time_day, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "extend_service",
+        'username' => $username,
+        'data_limit_gb' => $data_limit_gb,
+        'time_day' => $time_day,
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->put($data);
+    return $response;
+}
+
+function remove_service_mirza(array $panel, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "user_delete",
+        'username' => $username,
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->delete($data);
+    return $response;
+}
+
+
+function revoke_service_mirza(array $panel, string $username)
+{
+    $url = $panel['url_panel'];
+    $headers = array(
+        'accept: application/json'
+    );
+    $data = json_encode(array(
+        'actions' => "change_link",
+        'username' => $username,
+    ));
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->put($data);
+    return $response;
+}
+

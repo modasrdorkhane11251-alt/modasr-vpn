@@ -1,1 +1,87 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwpyZXF1aXJlIF9fRElSX18gLiAnLy4uL3ZlbmRvci9hdXRvbG9hZC5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vamRmLnBocCc7Cgokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CgppZiAoISRzZXR0aW5nIHx8ICFpc3NldCgkc2V0dGluZ1snc2NvcmVzdGF0dXMnXSkpIHsKICAgIGVycm9yX2xvZygiU2V0dGluZyBkYXRhIGlzIG1pc3Npbmcgb3IgaW5jb21wbGV0ZS4iKTsKICAgIHJldHVybjsKfQoKJGxvdHRlcnlEYXRlRmlsZSA9IGRpcm5hbWUoX19ESVJfXykgLiAnL3N0b3JhZ2UvbG90dGVyeV9kYXRlJzsKCmlmIChpbnR2YWwoJHNldHRpbmdbJ3Njb3Jlc3RhdHVzJ10pID09IDEpIHsKICAgICRvdGhlcnJlcG9ydCA9IHNlbGVjdCgidG9waWNpZCIsICJpZHJlcG9ydCIsICJyZXBvcnQiLCAib3RoZXJyZXBvcnQiLCAic2VsZWN0IilbJ2lkcmVwb3J0J107CgogICAgaWYgKGRhdGUoIkgiKSA9PSAiMDAiICYmIEBmaWxlX2dldF9jb250ZW50cygkbG90dGVyeURhdGVGaWxlKSAhPT0gZGF0ZSgiWS1tLWQiKSkgewogICAgICAgIGZpbGVfcHV0X2NvbnRlbnRzKCRsb3R0ZXJ5RGF0ZUZpbGUsIGRhdGUoIlktbS1kIikpOwogICAgICAgICR0ZW1wID0gW107CiAgICAgICAgJExvdHRlcnlfcHJpemUgPSBqc29uX2RlY29kZSgkc2V0dGluZ1snTG90dGVyeV9wcml6ZSddLCB0cnVlKTsKCiAgICAgICAgaWYgKCFpc19hcnJheSgkTG90dGVyeV9wcml6ZSkpIHsKICAgICAgICAgICAgZXJyb3JfbG9nKCJMb3R0ZXJ5X3ByaXplIGlzIG5vdCBhIHZhbGlkIEpTT04gYXJyYXkuIik7CiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB9CgogICAgICAgIGZvcmVhY2ggKCRMb3R0ZXJ5X3ByaXplIGFzICRsb3R0ZXJ5KSB7CiAgICAgICAgICAgICR0ZW1wW10gPSAkbG90dGVyeTsKICAgICAgICB9CiAgICAgICAgJExvdHRlcnlfcHJpemUgPSAkdGVtcDsKCiAgICAgICAgaWYgKCRzZXR0aW5nWydMb3R0ZXJ5YWdlbnQnXSA9PSAiMSIpIHsKICAgICAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIHVzZXIgV0hFUkUgVXNlcl9TdGF0dXMgPSAnQWN0aXZlJyBBTkQgc2NvcmUgIT0gJzAnIE9SREVSIEJZIHNjb3JlIERFU0MgTElNSVQgMyIpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUICogRlJPTSB1c2VyIFdIRVJFIFVzZXJfU3RhdHVzID0gJ0FjdGl2ZScgQU5EIHNjb3JlICE9ICcwJyBBTkQgYWdlbnQgPSAnZicgT1JERVIgQlkgc2NvcmUgREVTQyBMSU1JVCAzIik7CiAgICAgICAgfQogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgJHdpbm5lcnMgPSAkc3RtdC0+ZmV0Y2hBbGwoUERPOjpGRVRDSF9BU1NPQyk7CiAgICAgICAgdXBkYXRlKCJ1c2VyIiwgInNjb3JlIiwgIjAiLCBudWxsLCBudWxsKTsKCiAgICAgICAgJGNvdW50ID0gMDsKCiAgICAgICAgJHRleHRKc29uID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKICAgICAgICBpZiAoIWlzX2FycmF5KCR0ZXh0SnNvbikpIHsKICAgICAgICAgICAgZXJyb3JfbG9nKCJMYW5ndWFnZSBmaWxlIChsYW5nL2ZhLnBocCkgY291bGQgbm90IGJlIGxvYWRlZC4iKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KICAgICAgICAkdGV4dGxvdHRlcnlncm91cCA9ICR0ZXh0SnNvblsnQWRtaW4nXVsncmVwb3J0J11bJ2xvdHRlcnlUaXRsZSddOwoKICAgICAgICBmb3JlYWNoICgkd2lubmVycyBhcyAkcmVzdWx0KSB7CiAgICAgICAgICAgIGlmICghaXNzZXQoJExvdHRlcnlfcHJpemVbJGNvdW50XSkpIHsKICAgICAgICAgICAgICAgIGVycm9yX2xvZygiTm8gcHJpemUgZGVmaW5lZCBmb3IgcmFuayAiIC4gKCRjb3VudCArIDEpKTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICB9CgogICAgICAgICAgICAkcHJpemVBbW91bnQgPSBpbnR2YWwoJExvdHRlcnlfcHJpemVbJGNvdW50XSk7CiAgICAgICAgICAgICRjcmVkaXRTdG10ID0gJHBkby0+cHJlcGFyZSgiVVBEQVRFIHVzZXIgU0VUIEJhbGFuY2UgPSBCYWxhbmNlICsgOnByaXplIFdIRVJFIGlkID0gOmlkIik7CiAgICAgICAgICAgICRjcmVkaXRTdG10LT5leGVjdXRlKFsnOnByaXplJyA9PiAkcHJpemVBbW91bnQsICc6aWQnID0+ICRyZXN1bHRbJ2lkJ11dKTsKICAgICAgICAgICAgY2xlYXJTZWxlY3RDYWNoZSgndXNlcicpOwoKICAgICAgICAgICAgJGJhbGFuY2VGb3JtYXR0ZWQgPSBudW1iZXJfZm9ybWF0KCRwcml6ZUFtb3VudCk7CiAgICAgICAgICAgICRyYW5rID0gJGNvdW50ICsgMTsKCiAgICAgICAgICAgICR0ZXh0bG90dGVyeSA9IHNwcmludGYoJHRleHRKc29uWyd1c2VycyddWydsb3R0ZXJ5J11bJ3dpbm5lck5vdGljZSddLCAkcmFuaywgJGJhbGFuY2VGb3JtYXR0ZWQpOwogICAgICAgICAgICBzZW5kbWVzc2FnZSgkcmVzdWx0WydpZCddLCAkdGV4dGxvdHRlcnksIG51bGwsICdodG1sJyk7CgogICAgICAgICAgICAkdGV4dGxvdHRlcnlncm91cCAuPSBzcHJpbnRmKCR0ZXh0SnNvblsnQWRtaW4nXVsncmVwb3J0J11bJ2xvdHRlcnlXaW5uZXJSb3cnXSwgJHJlc3VsdFsndXNlcm5hbWUnXSwgJHJlc3VsdFsnaWQnXSwgJGJhbGFuY2VGb3JtYXR0ZWQsICRyYW5rKTsKCiAgICAgICAgICAgICRjb3VudCsrOwogICAgICAgIH0KCiAgICAgICAgaWYgKCRjb3VudCA+IDAgJiYgIWlzVGVsZWdyYW1DaGF0SWRFbXB0eSgkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSA/PyAnJykpIHsKICAgICAgICAgICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJywgWwogICAgICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAgICAgJ21lc3NhZ2VfdGhyZWFkX2lkJyA9PiAkb3RoZXJyZXBvcnQsCiAgICAgICAgICAgICAgICAndGV4dCcgPT4gJHRleHRsb3R0ZXJ5Z3JvdXAsCiAgICAgICAgICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiCiAgICAgICAgICAgIF0pOwogICAgICAgIH0KICAgIH0KfQo=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../jdf.php';
+
+$setting = select("setting", "*");
+
+if (!$setting || !isset($setting['scorestatus'])) {
+    error_log("Setting data is missing or incomplete.");
+    return;
+}
+
+$lotteryDateFile = dirname(__DIR__) . '/storage/lottery_date';
+
+if (intval($setting['scorestatus']) == 1) {
+    $otherreport = select("topicid", "idreport", "report", "otherreport", "select")['idreport'];
+
+    if (date("H") == "00" && @file_get_contents($lotteryDateFile) !== date("Y-m-d")) {
+        file_put_contents($lotteryDateFile, date("Y-m-d"));
+        $temp = [];
+        $Lottery_prize = json_decode($setting['Lottery_prize'], true);
+
+        if (!is_array($Lottery_prize)) {
+            error_log("Lottery_prize is not a valid JSON array.");
+            return;
+        }
+
+        foreach ($Lottery_prize as $lottery) {
+            $temp[] = $lottery;
+        }
+        $Lottery_prize = $temp;
+
+        if ($setting['Lotteryagent'] == "1") {
+            $stmt = $pdo->prepare("SELECT * FROM user WHERE User_Status = 'Active' AND score != '0' ORDER BY score DESC LIMIT 3");
+        } else {
+            $stmt = $pdo->prepare("SELECT * FROM user WHERE User_Status = 'Active' AND score != '0' AND agent = 'f' ORDER BY score DESC LIMIT 3");
+        }
+        $stmt->execute();
+        $winners = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        update("user", "score", "0", null, null);
+
+        $count = 0;
+
+        $textJson = languagechange();
+        if (!is_array($textJson)) {
+            error_log("Language file (lang/fa.php) could not be loaded.");
+            return;
+        }
+        $textlotterygroup = $textJson['Admin']['report']['lotteryTitle'];
+
+        foreach ($winners as $result) {
+            if (!isset($Lottery_prize[$count])) {
+                error_log("No prize defined for rank " . ($count + 1));
+                break;
+            }
+
+            $prizeAmount = intval($Lottery_prize[$count]);
+            $creditStmt = $pdo->prepare("UPDATE user SET Balance = Balance + :prize WHERE id = :id");
+            $creditStmt->execute([':prize' => $prizeAmount, ':id' => $result['id']]);
+            clearSelectCache('user');
+
+            $balanceFormatted = number_format($prizeAmount);
+            $rank = $count + 1;
+
+            $textlottery = sprintf($textJson['users']['lottery']['winnerNotice'], $rank, $balanceFormatted);
+            sendmessage($result['id'], $textlottery, null, 'html');
+
+            $textlotterygroup .= sprintf($textJson['Admin']['report']['lotteryWinnerRow'], $result['username'], $result['id'], $balanceFormatted, $rank);
+
+            $count++;
+        }
+
+        if ($count > 0 && !isTelegramChatIdEmpty($setting['Channel_Report'] ?? '')) {
+            telegram('sendmessage', [
+                'chat_id' => $setting['Channel_Report'],
+                'message_thread_id' => $otherreport,
+                'text' => $textlotterygroup,
+                'parse_mode' => "HTML"
+            ]);
+        }
+    }
+}

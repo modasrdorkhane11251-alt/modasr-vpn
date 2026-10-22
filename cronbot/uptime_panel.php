@@ -1,1 +1,30 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwoKCgokYWRtaW5faWRzID0gc2VsZWN0KCJhZG1pbiIsICJpZF9hZG1pbiIsbnVsbCxudWxsLCJGRVRDSF9DT0xVTU4iKTsKJG1hcnpiYW5saXN0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLG51bGwgLG51bGwgLCJmZXRjaEFsbCIpOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiRzdGF0dXNfY3JvbiA9IGpzb25fZGVjb2RlKCRzZXR0aW5nWydjcm9uX3N0YXR1cyddLHRydWUpOwppZighJHN0YXR1c19jcm9uWyd1cHRpbWVfcGFuZWwnXSlyZXR1cm47CiRpbmJvdW5kcyA9IFtdOwpmb3JlYWNoKCRtYXJ6YmFubGlzdCBhcyAkbG9jYXRpb24pewogICAgJHBhcnNlZF91cmwgPSBwYXJzZV91cmwoJGxvY2F0aW9uWyd1cmxfcGFuZWwnXSk7CiAgICBpZiAoJHBhcnNlZF91cmwgJiYgaXNzZXQoJHBhcnNlZF91cmxbJ2hvc3QnXSkpIHsKICAgICRhZGRyZXNzID0gJHBhcnNlZF91cmxbJ2hvc3QnXTsKICAgICRwb3J0ID0gZW1wdHkoJHBhcnNlZF91cmxbJ3BvcnQnXSkgPyA0NDMgOiAkcGFyc2VkX3VybFsncG9ydCddOwogICAgaWYgKCFjaGVja0Nvbm5lY3Rpb24oJGFkZHJlc3MsICRwb3J0KSkgewogICAgICAgZm9yZWFjaCAoJGFkbWluX2lkcyBhcyAkYWRtaW4pIHsKICAgICAgICAgICAgJHRleHRub2RlID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydCddWydwYW5lbERvd24nXSwgJGxvY2F0aW9uWyduYW1lX3BhbmVsJ10pOwogICAgICAgIHNlbmRtZXNzYWdlKCRhZG1pbiwgJHRleHRub2RlLCBudWxsLCAnaHRtbCcpOwogICAgfQogICAgfQogICAgfQp9Cg==
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+
+
+
+$admin_ids = select("admin", "id_admin",null,null,"FETCH_COLUMN");
+$marzbanlist = select("marzban_panel", "*",null ,null ,"fetchAll");
+$setting = select("setting", "*");
+$status_cron = json_decode($setting['cron_status'],true);
+if(!$status_cron['uptime_panel'])return;
+$inbounds = [];
+foreach($marzbanlist as $location){
+    $parsed_url = parse_url($location['url_panel']);
+    if ($parsed_url && isset($parsed_url['host'])) {
+    $address = $parsed_url['host'];
+    $port = empty($parsed_url['port']) ? 443 : $parsed_url['port'];
+    if (!checkConnection($address, $port)) {
+       foreach ($admin_ids as $admin) {
+            $textnode = sprintf($textbotlang['Admin']['report']['panelDown'], $location['name_panel']);
+        sendmessage($admin, $textnode, null, 'html');
+    }
+    }
+    }
+}

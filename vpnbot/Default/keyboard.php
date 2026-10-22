@@ -1,1 +1,231 @@
-PD9waHAKCiRib3RpbmZvID0gc2VsZWN0KCJib3RzYXoiLCAiKiIsICJib3RfdG9rZW4iLCAkQXBpVG9rZW4sICJzZWxlY3QiKTsKJHVzZXJib3QgPSBzZWxlY3QoInVzZXIiLCAiKiIsICJpZCIsICRib3RpbmZvWydpZF91c2VyJ10sICJzZWxlY3QiKTsKJGhpZGVfcGFuZWwgPSBqc29uX2RlY29kZSgkYm90aW5mb1snaGlkZV9wYW5lbCddLCB0cnVlKTsKJHRleHRfYm90X3ZhciA9ICBqc29uX2RlY29kZShmaWxlX2dldF9jb250ZW50cygndGV4dC5qc29uJyksIHRydWUpOwovLyBrZXlib2FyZCBib3QgCiRrZXlib2FyZGRhdGUgPSBhcnJheSgKICAgICd0ZXh0X3NlbGwnID0+ICR0ZXh0X2JvdF92YXJbJ2J0bl9rZXlib2FyZCddWydidXknXSwKICAgICd0ZXh0X3VzZXJ0ZXN0JyA9PiAkdGV4dF9ib3RfdmFyWydidG5fa2V5Ym9hcmQnXVsndGVzdCddLAogICAgJ3RleHRfUHVyY2hhc2VkX3NlcnZpY2VzJyA9PiAkdGV4dF9ib3RfdmFyWydidG5fa2V5Ym9hcmQnXVsnbXlfc2VydmljZSddLAogICAgJ2FjY291bnR3YWxsZXQnID0+ICR0ZXh0X2JvdF92YXJbJ2J0bl9rZXlib2FyZCddWyd3YWxsZXQnXSwKICAgICd0ZXh0X3N1cHBvcnQnID0+ICR0ZXh0X2JvdF92YXJbJ2J0bl9rZXlib2FyZCddWydzdXBwb3J0J10sCiAgICAndGV4dF9BZG1pbicgPT4gIvCfkajigI3wn5K8INm+2YbZhCDZhdiv24zYsduM2KoiLAopOwokbGlzdF9hZG1pbiA9IHNlbGVjdCgiYm90c2F6IiwgIioiLCAiYm90X3Rva2VuIiwgJEFwaVRva2VuLCAic2VsZWN0Iik7CiRhZG1pbl9pZHNtYWluID0gc2VsZWN0KCJhZG1pbiIsICJpZF9hZG1pbiIsIG51bGwsIG51bGwsICJGRVRDSF9DT0xVTU4iKTsKJGFkbWluX2lkc19kZWNvZGVkID0ganNvbl9kZWNvZGUoJGxpc3RfYWRtaW5bJ2FkbWluX2lkcyddID8/ICdbXScsIHRydWUpOwppZiAoIWlzX2FycmF5KCRhZG1pbl9pZHNfZGVjb2RlZCkpIHsKICAgICRhZG1pbl9pZHNfZGVjb2RlZCA9IFtdOwp9CgppZiAoIWlzX2FycmF5KCRhZG1pbl9pZHNtYWluKSkgewogICAgJGFkbWluX2lkc21haW4gPSBbXTsKfQoKaWYgKCFpbl9hcnJheSgkZnJvbV9pZCwgJGFkbWluX2lkc19kZWNvZGVkKSAmJiAhaW5fYXJyYXkoJGZyb21faWQsICRhZG1pbl9pZHNtYWluKSkgewogICAgdW5zZXQoJGtleWJvYXJkZGF0ZVsndGV4dF9BZG1pbiddKTsKfQoka2V5Ym9hcmQgPSBbJ2tleWJvYXJkJyA9PiBbXSwgJ3Jlc2l6ZV9rZXlib2FyZCcgPT4gdHJ1ZV07CiR0ZW1wQXJyYXkgPSBbXTsKCmZvcmVhY2ggKCRrZXlib2FyZGRhdGUgYXMgJGtleWJvYXJkdGV4dCkgewogICAgJHRlbXBBcnJheVtdID0gWyd0ZXh0JyA9PiAka2V5Ym9hcmR0ZXh0XTsKICAgIGlmIChjb3VudCgkdGVtcEFycmF5KSA9PSAyKSB7CiAgICAgICAgJGtleWJvYXJkWydrZXlib2FyZCddW10gPSAkdGVtcEFycmF5OwogICAgICAgICR0ZW1wQXJyYXkgPSBbXTsKICAgIH0KfQppZiAoY291bnQoJHRlbXBBcnJheSkgPiAwKSB7CiAgICAka2V5Ym9hcmRbJ2tleWJvYXJkJ11bXSA9ICR0ZW1wQXJyYXk7Cn0KJGtleWJvYXJkICA9IGpzb25fZW5jb2RlKCRrZXlib2FyZCk7CgokYmFja3VzZXIgPSBqc29uX2VuY29kZShbCiAgICAna2V5Ym9hcmQnID0+IFsKICAgICAgICBbWyd0ZXh0JyA9PiAi8J+PoCDYqNin2LLar9i02Kog2KjZhyDZhdmG2YjbjCDYp9i12YTbjCJdXQogICAgXSwKICAgICdyZXNpemVfa2V5Ym9hcmQnID0+IHRydWUsCiAgICAnaW5wdXRfZmllbGRfcGxhY2Vob2xkZXInID0+ICLYqNix2KfbjCDYqNin2LLar9i02Kog2LHZiNuMINiv2qnZhdmHINiy24zYsSDaqdmE24zaqSDaqdmG24zYryIKXSk7CgovLyBrZXlib2FyZCBsaXN0IHBhbmVsIGZvciB0ZXN0IAoKJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIG1hcnpiYW5fcGFuZWwgV0hFUkUgVGVzdEFjY291bnQgPSAnT05UZXN0QWNjb3VudCcgQU5EIChhZ2VudCA9IDptcDEgT1IgYWdlbnQgPSAnYWxsJykgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQiKTsKJHN0bXQtPmV4ZWN1dGUoWyc6bXAxJyA9PiAkdXNlcmJvdFsnYWdlbnQnXV0pOwokbGlzdF9tYXJ6YmFuX3BhbmVsX3VzZXJ0ZXN0ID0gWydpbmxpbmVfa2V5Ym9hcmQnID0+IFtdXTsKd2hpbGUgKCRyZXN1bHQgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgIGlmICgkcmVzdWx0WydoaWRlX3VzZXInXSAhPSBudWxsIGFuZCBpbl9hcnJheSgkZnJvbV9pZCwganNvbl9kZWNvZGUoJHJlc3VsdFsnaGlkZV91c2VyJ10sIHRydWUpKSkgY29udGludWU7CiAgICBpZiAoaW5fYXJyYXkoJHJlc3VsdFsnbmFtZV9wYW5lbCddLCAkaGlkZV9wYW5lbCkpIGNvbnRpbnVlOwogICAgJGxpc3RfbWFyemJhbl9wYW5lbF91c2VydGVzdFsnaW5saW5lX2tleWJvYXJkJ11bXSA9IFsKICAgICAgICBbJ3RleHQnID0+ICRyZXN1bHRbJ25hbWVfcGFuZWwnXSwgJ2NhbGxiYWNrX2RhdGEnID0+ICJsb2NhdGlvbnRlc3RfeyRyZXN1bHRbJ2NvZGVfcGFuZWwnXX0iXQogICAgXTsKfQokbGlzdF9tYXJ6YmFuX3BhbmVsX3VzZXJ0ZXN0WydpbmxpbmVfa2V5Ym9hcmQnXVtdID0gWwogICAgWyd0ZXh0JyA9PiAi8J+PoCDYqNin2LLar9i02Kog2KjZhyDZhdmG2YjbjCDYp9i12YTbjCIsICdjYWxsYmFja19kYXRhJyA9PiAiYmFja3VzZXIiXSwKXTsKJGxpc3RfbWFyemJhbl91c2VydGVzdCA9IGpzb25fZW5jb2RlKCRsaXN0X21hcnpiYW5fcGFuZWxfdXNlcnRlc3QpOwoKCiRrZXlib2FyZGFkbWluID0ganNvbl9lbmNvZGUoWwogICAgJ2tleWJvYXJkJyA9PiBbCiAgICAgICAgWwogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5OKINii2YXYp9ixINix2KjYp9iqIl0KICAgICAgICBdLAogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+SsCDYqtmG2LjbjNmF2KfYqiDZgdix2YjYtNqv2KfZhyJdLAogICAgICAgICAgICBbJ3RleHQnID0+ICLimpnvuI8g2YjYtti524zYqiDZgtin2KjZhNuM2Kog2YfYpyJdLAogICAgICAgIF0sCiAgICAgICAgWwogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5SNINis2LPYqtis2Ygg2qnYp9ix2KjYsSJdLAogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5Go4oCN8J+UpyAg2YXYr9uM2LHbjNiqINin2K/ZhduM2YYg2YfYpyJdCiAgICAgICAgXSwKICAgICAgICBbCiAgICAgICAgICAgIFsndGV4dCcgPT4gIvCfk50g2KrZhti424zZhSDZhdiq2YjZhiJdLAogICAgICAgICAgICBbJ3RleHQnID0+ICLwn4aVINii2b7Yr9uM2Kog2LHYqNin2KoiXQogICAgICAgIF0sCiAgICAgICAgWwogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5OeINiq2YbYuNuM2YUg2YbYp9mFINqp2KfYsdio2LHbjCDZvti02KrbjNio2KfZhtuMIl0sCiAgICAgICAgICAgIFsndGV4dCcgPT4gIvCfk6wg2q/Ystin2LHYtCDYsdio2KfYqiJdLAogICAgICAgIF0sCiAgICAgICAgWwogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5OjINis2YjbjNmGINin2KzYqNin2LHbjCJdCiAgICAgICAgXSwKICAgICAgICBbCiAgICAgICAgICAgIFsndGV4dCcgPT4gIvCfj6Ag2KjYp9iy2q/YtNiqINio2Ycg2YXZhtmI24wg2KfYtdmE24wiXQogICAgICAgIF0sCiAgICBdLAogICAgJ3Jlc2l6ZV9rZXlib2FyZCcgPT4gIHRydWUKXSk7Cgoka2V5Ym9hcmRwcmljZSA9IGpzb25fZW5jb2RlKFsKICAgICdrZXlib2FyZCcgPT4gWwogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+UiyDZgtuM2YXYqiDYrdis2YUiXSwKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi4oyb77iPINmC24zZhdiqINiy2YXYp9mGIl0sCiAgICAgICAgXSwKICAgICAgICBbCiAgICAgICAgICAgIFsndGV4dCcgPT4gIvCfkrAg2KrZhti424zZhSDZgtuM2YXYqiDZhdit2LXZiNmEIl0sCiAgICAgICAgICAgIFsndGV4dCcgPT4gIuKcj++4jyDYqtmG2LjbjNmFINmG2KfZhSDZhdit2LXZiNmEIl0sCiAgICAgICAgXSwKICAgICAgICBbCiAgICAgICAgICAgIFsndGV4dCcgPT4gItio2KfYstqv2LTYqiDYqNmHINmF2YbZiNuMINin2K/ZhduM2YYiXQogICAgICAgIF0sCiAgICBdLAogICAgJ3Jlc2l6ZV9rZXlib2FyZCcgPT4gIHRydWUKXSk7Cgoka2V5Ym9hcmRfY2hhbmdlX3ByaWNlID0ganNvbl9lbmNvZGUoWwogICAgJ2tleWJvYXJkJyA9PiBbCiAgICAgICAgWwogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5KOINmF2KrZhiDaqdin2LHYqiJdLAogICAgICAgICAgICBbJ3RleHQnID0+ICLwn5uNINiv2qnZhdmHINiu2LHbjNivIl0KICAgICAgICBdLAogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+UkSDYr9qp2YXZhyDYqtiz2KoiXSwKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+bkiDYr9qp2YXZhyDYs9ix2YjbjNizINmH2KfbjCDZhdmGIl0KICAgICAgICBdLAogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+RpCDYr9qp2YXZhyDYrdiz2KfYqCDaqdin2LHYqNix24wiXSwKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi4piO77iPINmF2KrZhiDYr9qp2YXZhyDZvti02KrbjNio2KfZhtuMIl0KICAgICAgICBdLAogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi8J+SuCDZhdiq2YYg2YXYsdit2YTZhyDYp9mB2LLYp9uM2LQg2YXZiNis2YjYr9uMIl0KICAgICAgICBdLAogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi2KjYp9iy2q/YtNiqINio2Ycg2YXZhtmI24wg2KfYr9mF24zZhiJdCiAgICAgICAgXQogICAgXSwKICAgICdyZXNpemVfa2V5Ym9hcmQnID0+ICB0cnVlCl0pOwoKJGJhY2thZG1pbiA9IGpzb25fZW5jb2RlKFsKICAgICdrZXlib2FyZCcgPT4gWwogICAgICAgIFsKICAgICAgICAgICAgWyd0ZXh0JyA9PiAi2KjYp9iy2q/YtNiqINio2Ycg2YXZhtmI24wg2KfYr9mF24zZhiJdCiAgICAgICAgXSwKICAgIF0sCiAgICAncmVzaXplX2tleWJvYXJkJyA9PiAgdHJ1ZQpdKTsKCi8vLS0tLS0tLS0tLS0tLS0tLS0tICBbIGxpc3RwYW5lbHVzZXJzIF0tLS0tLS0tLS0tLS0tLS0tLy8KJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIG1hcnpiYW5fcGFuZWwgV0hFUkUgc3RhdHVzID0gJ2FjdGl2ZScgQU5EIChhZ2VudCA9IDptcDIgT1IgYWdlbnQgPSAnYWxsJykgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQiKTsKJHN0bXQtPmV4ZWN1dGUoWyc6bXAyJyA9PiAkdXNlcmJvdFsnYWdlbnQnXV0pOwokbGlzdF9tYXJ6YmFuX3BhbmVsX3VzZXJzID0gWydpbmxpbmVfa2V5Ym9hcmQnID0+IFtdXTsKd2hpbGUgKCRyZXN1bHQgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgIGlmICgkcmVzdWx0WydoaWRlX3VzZXInXSAhPSBudWxsIGFuZCBpbl9hcnJheSgkZnJvbV9pZCwganNvbl9kZWNvZGUoJHJlc3VsdFsnaGlkZV91c2VyJ10sIHRydWUpKSkgY29udGludWU7CiAgICBpZiAoaW5fYXJyYXkoJHJlc3VsdFsnbmFtZV9wYW5lbCddLCAkaGlkZV9wYW5lbCkpIGNvbnRpbnVlOwogICAgJGxpc3RfbWFyemJhbl9wYW5lbF91c2Vyc1snaW5saW5lX2tleWJvYXJkJ11bXSA9IFsKICAgICAgICBbJ3RleHQnID0+ICRyZXN1bHRbJ25hbWVfcGFuZWwnXSwgJ2NhbGxiYWNrX2RhdGEnID0+ICJsb2NhdGlvbl97JHJlc3VsdFsnY29kZV9wYW5lbCddfSJdCiAgICBdOwp9CiRsaXN0X21hcnpiYW5fcGFuZWxfdXNlcnNbJ2lubGluZV9rZXlib2FyZCddW10gPSBbCiAgICBbJ3RleHQnID0+ICLwn4+gINio2KfYstqv2LTYqiDYqNmHINmF2YbZiNuMINin2LXZhNuMIiwgJ2NhbGxiYWNrX2RhdGEnID0+ICJiYWNrdXNlciJdLApdOwokbGlzdF9tYXJ6YmFuX3BhbmVsX3VzZXIgPSBqc29uX2VuY29kZSgkbGlzdF9tYXJ6YmFuX3BhbmVsX3VzZXJzKTsKCiRwYXltZW50ID0ganNvbl9lbmNvZGUoWwogICAgJ2lubGluZV9rZXlib2FyZCcgPT4gWwogICAgICAgIFtbJ3RleHQnID0+ICLwn5KwINm+2LHYr9in2K7YqiDZiCDYr9ix24zYp9mB2Kog2LPYsdmI24zYsyIsICdjYWxsYmFja19kYXRhJyA9PiAiY29uZmlybWFuZGdldHNlcnZpY2UiXV0sCiAgICAgICAgW1sndGV4dCcgPT4gIvCfj6Ag2KjYp9iy2q/YtNiqINio2Ycg2YXZhtmI24wg2KfYtdmE24wiLCAgJ2NhbGxiYWNrX2RhdGEnID0+ICJiYWNrdXNlciJdXQogICAgXQpdKTsKJEtleWJvYXJkQmFsYW5jZSA9IGpzb25fZW5jb2RlKFsKICAgICdpbmxpbmVfa2V5Ym9hcmQnID0+IFsKICAgICAgICBbWyd0ZXh0JyA9PiAi8J+SuCDYp9mB2LLYp9uM2LQg2YXZiNis2YjYr9uMIiwgJ2NhbGxiYWNrX2RhdGEnID0+ICJBZGRCYWxhbmNlIl1dLAogICAgICAgIFtbJ3RleHQnID0+ICLwn4+gINio2KfYstqv2LTYqiDYqNmHINmF2YbZiNuMINin2LXZhNuMIiwgICdjYWxsYmFja19kYXRhJyA9PiAiYmFja3VzZXIiXV0KICAgIF0KXSk7CgpmdW5jdGlvbiBLZXlib2FyZFByb2R1Y3QoJGxvY2F0aW9uLCAkcXVlcnksICRwcmljZWRpc2NvdW50LCAkZGF0YWtleWJvYXJkLCAkc3RhdHVzY3VzdG9tID0gZmFsc2UsICRiYWNrdXNlciA9ICJiYWNrdXNlciIsICR2YWx1ZXRvdyA9IG51bGwsICRjdXN0b212b2x1bWUgPSAiY3VzdG9tc2VsbHZvbHVtZSIpCnsKICAgIGdsb2JhbCAkcGRvLCAkdGV4dGJvdGxhbmc7CiAgICAkcHJvZHVjdCA9IFsnaW5saW5lX2tleWJvYXJkJyA9PiBbXV07CiAgICAkc3RhdHVzc2hvd3ByaWNlID0gc2VsZWN0KCJzaG9wU2V0dGluZyIsICIqIiwgIk5hbWV2YWx1ZSIsICJzdGF0dXNzaG93cHJpY2UiLCAic2VsZWN0IilbJ3ZhbHVlJ107CiAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoJHF1ZXJ5KTsKICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAkdmFsdWV0b3cgPSAkdmFsdWV0b3cgIT0gbnVsbCA/ICItJHZhbHVldG93IiA6ICIiOwogICAgd2hpbGUgKCRyZXN1bHQgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICAgICAkcHJvZHVjdGxpc3QgPSByZWFkSnNvbkZpbGVJZkV4aXN0cygncHJvZHVjdC5qc29uJyk7CiAgICAgICAgJHByb2R1Y3RsaXN0X25hbWUgPSByZWFkSnNvbkZpbGVJZkV4aXN0cygncHJvZHVjdF9uYW1lLmpzb24nKTsKICAgICAgICBpZiAoaXNzZXQoJHByb2R1Y3RsaXN0WyRyZXN1bHRbJ2NvZGVfcHJvZHVjdCddXSkpICRyZXN1bHRbJ3ByaWNlX3Byb2R1Y3QnXSA9ICRwcm9kdWN0bGlzdFskcmVzdWx0Wydjb2RlX3Byb2R1Y3QnXV07CiAgICAgICAgJHJlc3VsdFsnbmFtZV9wcm9kdWN0J10gPSBlbXB0eSgkcHJvZHVjdGxpc3RfbmFtZVskcmVzdWx0Wydjb2RlX3Byb2R1Y3QnXV0pID8gJHJlc3VsdFsnbmFtZV9wcm9kdWN0J10gOiAkcHJvZHVjdGxpc3RfbmFtZVskcmVzdWx0Wydjb2RlX3Byb2R1Y3QnXV07CiAgICAgICAgJGhpZGVfcGFuZWwgPSBqc29uX2RlY29kZSgkcmVzdWx0WydoaWRlX3BhbmVsJ10sIHRydWUpOwogICAgICAgIGlmIChpbl9hcnJheSgkbG9jYXRpb24sICRoaWRlX3BhbmVsKSkgY29udGludWU7CiAgICAgICAgaWYgKGludHZhbCgkcHJpY2VkaXNjb3VudCkgIT0gMCkgewogICAgICAgICAgICAkcmVzdWx0cGVyID0gKCRyZXN1bHRbJ3ByaWNlX3Byb2R1Y3QnXSAqICRwcmljZWRpc2NvdW50KSAvIDEwMDsKICAgICAgICAgICAgJHJlc3VsdFsncHJpY2VfcHJvZHVjdCddID0gJHJlc3VsdFsncHJpY2VfcHJvZHVjdCddIC0gJHJlc3VsdHBlcjsKICAgICAgICB9CiAgICAgICAgJG5hbWVrZXlib2FyZCA9ICRyZXN1bHRbJ25hbWVfcHJvZHVjdCddIC4gIiAtICIgLiBudW1iZXJfZm9ybWF0KCRyZXN1bHRbJ3ByaWNlX3Byb2R1Y3QnXSkgLiAi2KrZiNmF2KfZhiI7CiAgICAgICAgaWYgKCRzdGF0dXNzaG93cHJpY2UgPT0gIm9uc2hvd3ByaWNlIikkcmVzdWx0WyduYW1lX3Byb2R1Y3QnXSA9ICRuYW1la2V5Ym9hcmQ7CiAgICAgICAgJHByb2R1Y3RbJ2lubGluZV9rZXlib2FyZCddW10gPSBbCiAgICAgICAgICAgIFsndGV4dCcgPT4gICRyZXN1bHRbJ25hbWVfcHJvZHVjdCddLCAnY2FsbGJhY2tfZGF0YScgPT4gInskZGF0YWtleWJvYXJkfXskcmVzdWx0Wydjb2RlX3Byb2R1Y3QnXX17JHZhbHVldG93fSJdCiAgICAgICAgXTsKICAgIH0KICAgIGlmICgkc3RhdHVzY3VzdG9tKSAkcHJvZHVjdFsnaW5saW5lX2tleWJvYXJkJ11bXSA9IFtbJ3RleHQnID0+ICR0ZXh0Ym90bGFuZ1sndXNlcnMnXVsnY3VzdG9tU2VsbFZvbHVtZSddWyd0aXRsZSddLCAnY2FsbGJhY2tfZGF0YScgPT4gJGN1c3RvbXZvbHVtZV1dOwogICAgJHByb2R1Y3RbJ2lubGluZV9rZXlib2FyZCddW10gPSBbCiAgICAgICAgWyd0ZXh0JyA9PiAkdGV4dGJvdGxhbmdbJ3VzZXJzJ11bJ3N0YXR1cyddWydiYWNraW5mbyddLCAnY2FsbGJhY2tfZGF0YScgPT4gJGJhY2t1c2VyXSwKICAgIF07CiAgICByZXR1cm4ganNvbl9lbmNvZGUoJHByb2R1Y3QpOwp9CmZ1bmN0aW9uIEtleWJvYXJkQ2F0ZWdvcnkoJGxvY2F0aW9uLCAkYWdlbnQsICRiYWNrdXNlciA9ICJiYWNrdXNlciIpCnsKICAgIGdsb2JhbCAkcGRvLCAkdGV4dGJvdGxhbmc7CiAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAqIEZST00gY2F0ZWdvcnkgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQiKTsKICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAkbGlzdF9jYXRlZ29yeSA9IFsnaW5saW5lX2tleWJvYXJkJyA9PiBbXSxdOwogICAgd2hpbGUgKCRyb3cgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICAgICAkc3RtdHMgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIHByb2R1Y3QgV0hFUkUgKExvY2F0aW9uID0gOmxvY2F0aW9uIE9SIExvY2F0aW9uID0gJy9hbGwnKSBBTkQgY2F0ZWdvcnkgPSA6Y2F0ZWdvcnkgQU5EIGFnZW50ID0gOmFnZW50IEFORCBzdGF0dXNfcHJvZHVjdCAhPSAnZGlzYWJsZSciKTsKICAgICAgICAkc3RtdHMtPmJpbmRQYXJhbSgnOmxvY2F0aW9uJywgJGxvY2F0aW9uLCBQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXRzLT5iaW5kUGFyYW0oJzpjYXRlZ29yeScsICRyb3dbJ3JlbWFyayddLCBQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXRzLT5iaW5kUGFyYW0oJzphZ2VudCcsICRhZ2VudCk7CiAgICAgICAgJHN0bXRzLT5leGVjdXRlKCk7CiAgICAgICAgaWYgKCRzdG10cy0+cm93Q291bnQoKSA9PSAwKSBjb250aW51ZTsKICAgICAgICAkbGlzdF9jYXRlZ29yeVsnaW5saW5lX2tleWJvYXJkJ11bXSA9IFtbJ3RleHQnID0+ICRyb3dbJ3JlbWFyayddLCAnY2FsbGJhY2tfZGF0YScgPT4gImNhdGVnb3J5bmFtZXNfIiAuICRyb3dbJ2lkJ11dXTsKICAgIH0KICAgICRsaXN0X2NhdGVnb3J5WydpbmxpbmVfa2V5Ym9hcmQnXVtdID0gWwogICAgICAgIFsndGV4dCcgPT4gIuKWtu+4jyDYqNin2LLar9i02Kog2KjZhyDZhdmG2YjbjCDZgtio2YQiLCAiY2FsbGJhY2tfZGF0YSIgPT4gJGJhY2t1c2VyXSwKICAgIF07CiAgICByZXR1cm4ganNvbl9lbmNvZGUoJGxpc3RfY2F0ZWdvcnkpOwp9Cg==
+<?php
+
+$botinfo = select("botsaz", "*", "bot_token", $ApiToken, "select");
+$userbot = select("user", "*", "id", $botinfo['id_user'], "select");
+$hide_panel = json_decode($botinfo['hide_panel'], true);
+$text_bot_var =  json_decode(file_get_contents('text.json'), true);
+// keyboard bot 
+$keyboarddate = array(
+    'text_sell' => $text_bot_var['btn_keyboard']['buy'],
+    'text_usertest' => $text_bot_var['btn_keyboard']['test'],
+    'text_Purchased_services' => $text_bot_var['btn_keyboard']['my_service'],
+    'accountwallet' => $text_bot_var['btn_keyboard']['wallet'],
+    'text_support' => $text_bot_var['btn_keyboard']['support'],
+    'text_Admin' => "👨‍💼 پنل مدیریت",
+);
+$list_admin = select("botsaz", "*", "bot_token", $ApiToken, "select");
+$admin_idsmain = select("admin", "id_admin", null, null, "FETCH_COLUMN");
+$admin_ids_decoded = json_decode($list_admin['admin_ids'] ?? '[]', true);
+if (!is_array($admin_ids_decoded)) {
+    $admin_ids_decoded = [];
+}
+
+if (!is_array($admin_idsmain)) {
+    $admin_idsmain = [];
+}
+
+if (!in_array($from_id, $admin_ids_decoded) && !in_array($from_id, $admin_idsmain)) {
+    unset($keyboarddate['text_Admin']);
+}
+$keyboard = ['keyboard' => [], 'resize_keyboard' => true];
+$tempArray = [];
+
+foreach ($keyboarddate as $keyboardtext) {
+    $tempArray[] = ['text' => $keyboardtext];
+    if (count($tempArray) == 2) {
+        $keyboard['keyboard'][] = $tempArray;
+        $tempArray = [];
+    }
+}
+if (count($tempArray) > 0) {
+    $keyboard['keyboard'][] = $tempArray;
+}
+$keyboard  = json_encode($keyboard);
+
+$backuser = json_encode([
+    'keyboard' => [
+        [['text' => "🏠 بازگشت به منوی اصلی"]]
+    ],
+    'resize_keyboard' => true,
+    'input_field_placeholder' => "برای بازگشت روی دکمه زیر کلیک کنید"
+]);
+
+// keyboard list panel for test 
+
+$stmt = $pdo->prepare("SELECT * FROM marzban_panel WHERE TestAccount = 'ONTestAccount' AND (agent = :mp1 OR agent = 'all') ORDER BY display_order, id");
+$stmt->execute([':mp1' => $userbot['agent']]);
+$list_marzban_panel_usertest = ['inline_keyboard' => []];
+while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    if ($result['hide_user'] != null and in_array($from_id, json_decode($result['hide_user'], true))) continue;
+    if (in_array($result['name_panel'], $hide_panel)) continue;
+    $list_marzban_panel_usertest['inline_keyboard'][] = [
+        ['text' => $result['name_panel'], 'callback_data' => "locationtest_{$result['code_panel']}"]
+    ];
+}
+$list_marzban_panel_usertest['inline_keyboard'][] = [
+    ['text' => "🏠 بازگشت به منوی اصلی", 'callback_data' => "backuser"],
+];
+$list_marzban_usertest = json_encode($list_marzban_panel_usertest);
+
+
+$keyboardadmin = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "📊 آمار ربات"]
+        ],
+        [
+            ['text' => "💰 تنظیمات فروشگاه"],
+            ['text' => "⚙️ وضعیت قابلیت ها"],
+        ],
+        [
+            ['text' => "🔍 جستجو کاربر"],
+            ['text' => "👨‍🔧  مدیریت ادمین ها"]
+        ],
+        [
+            ['text' => "📝 تنظیم متون"],
+            ['text' => "🆕 آپدیت ربات"]
+        ],
+        [
+            ['text' => "📞 تنظیم نام کاربری پشتیبانی"],
+            ['text' => "📬 گزارش ربات"],
+        ],
+        [
+            ['text' => "📣 جوین اجباری"]
+        ],
+        [
+            ['text' => "🏠 بازگشت به منوی اصلی"]
+        ],
+    ],
+    'resize_keyboard' =>  true
+]);
+
+$keyboardprice = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "🔋 قیمت حجم"],
+            ['text' => "⌛️ قیمت زمان"],
+        ],
+        [
+            ['text' => "💰 تنظیم قیمت محصول"],
+            ['text' => "✏️ تنظیم نام محصول"],
+        ],
+        [
+            ['text' => "بازگشت به منوی ادمین"]
+        ],
+    ],
+    'resize_keyboard' =>  true
+]);
+
+$keyboard_change_price = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "💎 متن کارت"],
+            ['text' => "🛍 دکمه خرید"]
+        ],
+        [
+            ['text' => "🔑 دکمه تست"],
+            ['text' => "🛒 دکمه سرویس های من"]
+        ],
+        [
+            ['text' => "👤 دکمه حساب کاربری"],
+            ['text' => "☎️ متن دکمه پشتیبانی"]
+        ],
+        [
+            ['text' => "💸 متن مرحله افزایش موجودی"]
+        ],
+        [
+            ['text' => "بازگشت به منوی ادمین"]
+        ]
+    ],
+    'resize_keyboard' =>  true
+]);
+
+$backadmin = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "بازگشت به منوی ادمین"]
+        ],
+    ],
+    'resize_keyboard' =>  true
+]);
+
+//------------------  [ listpanelusers ]----------------//
+$stmt = $pdo->prepare("SELECT * FROM marzban_panel WHERE status = 'active' AND (agent = :mp2 OR agent = 'all') ORDER BY display_order, id");
+$stmt->execute([':mp2' => $userbot['agent']]);
+$list_marzban_panel_users = ['inline_keyboard' => []];
+while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    if ($result['hide_user'] != null and in_array($from_id, json_decode($result['hide_user'], true))) continue;
+    if (in_array($result['name_panel'], $hide_panel)) continue;
+    $list_marzban_panel_users['inline_keyboard'][] = [
+        ['text' => $result['name_panel'], 'callback_data' => "location_{$result['code_panel']}"]
+    ];
+}
+$list_marzban_panel_users['inline_keyboard'][] = [
+    ['text' => "🏠 بازگشت به منوی اصلی", 'callback_data' => "backuser"],
+];
+$list_marzban_panel_user = json_encode($list_marzban_panel_users);
+
+$payment = json_encode([
+    'inline_keyboard' => [
+        [['text' => "💰 پرداخت و دریافت سرویس", 'callback_data' => "confirmandgetservice"]],
+        [['text' => "🏠 بازگشت به منوی اصلی",  'callback_data' => "backuser"]]
+    ]
+]);
+$KeyboardBalance = json_encode([
+    'inline_keyboard' => [
+        [['text' => "💸 افزایش موجودی", 'callback_data' => "AddBalance"]],
+        [['text' => "🏠 بازگشت به منوی اصلی",  'callback_data' => "backuser"]]
+    ]
+]);
+
+function KeyboardProduct($location, $query, $pricediscount, $datakeyboard, $statuscustom = false, $backuser = "backuser", $valuetow = null, $customvolume = "customsellvolume")
+{
+    global $pdo, $textbotlang;
+    $product = ['inline_keyboard' => []];
+    $statusshowprice = select("shopSetting", "*", "Namevalue", "statusshowprice", "select")['value'];
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $valuetow = $valuetow != null ? "-$valuetow" : "";
+    while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $productlist = readJsonFileIfExists('product.json');
+        $productlist_name = readJsonFileIfExists('product_name.json');
+        if (isset($productlist[$result['code_product']])) $result['price_product'] = $productlist[$result['code_product']];
+        $result['name_product'] = empty($productlist_name[$result['code_product']]) ? $result['name_product'] : $productlist_name[$result['code_product']];
+        $hide_panel = json_decode($result['hide_panel'], true);
+        if (in_array($location, $hide_panel)) continue;
+        if (intval($pricediscount) != 0) {
+            $resultper = ($result['price_product'] * $pricediscount) / 100;
+            $result['price_product'] = $result['price_product'] - $resultper;
+        }
+        $namekeyboard = $result['name_product'] . " - " . number_format($result['price_product']) . "تومان";
+        if ($statusshowprice == "onshowprice")$result['name_product'] = $namekeyboard;
+        $product['inline_keyboard'][] = [
+            ['text' =>  $result['name_product'], 'callback_data' => "{$datakeyboard}{$result['code_product']}{$valuetow}"]
+        ];
+    }
+    if ($statuscustom) $product['inline_keyboard'][] = [['text' => $textbotlang['users']['customSellVolume']['title'], 'callback_data' => $customvolume]];
+    $product['inline_keyboard'][] = [
+        ['text' => $textbotlang['users']['status']['backinfo'], 'callback_data' => $backuser],
+    ];
+    return json_encode($product);
+}
+function KeyboardCategory($location, $agent, $backuser = "backuser")
+{
+    global $pdo, $textbotlang;
+    $stmt = $pdo->prepare("SELECT * FROM category ORDER BY display_order, id");
+    $stmt->execute();
+    $list_category = ['inline_keyboard' => [],];
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $stmts = $pdo->prepare("SELECT * FROM product WHERE (Location = :location OR Location = '/all') AND category = :category AND agent = :agent AND status_product != 'disable'");
+        $stmts->bindParam(':location', $location, PDO::PARAM_STR);
+        $stmts->bindParam(':category', $row['remark'], PDO::PARAM_STR);
+        $stmts->bindParam(':agent', $agent);
+        $stmts->execute();
+        if ($stmts->rowCount() == 0) continue;
+        $list_category['inline_keyboard'][] = [['text' => $row['remark'], 'callback_data' => "categorynames_" . $row['id']]];
+    }
+    $list_category['inline_keyboard'][] = [
+        ['text' => "▶️ بازگشت به منوی قبل", "callback_data" => $backuser],
+    ];
+    return json_encode($list_category);
+}

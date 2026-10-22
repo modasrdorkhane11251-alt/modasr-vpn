@@ -1,1 +1,5 @@
-UmVxdWlyZSBhbGwgZGVuaWVkCjxJZk1vZHVsZSAhbW9kX2F1dGh6X2NvcmUuYz4KICAgIE9yZGVyIGRlbnksYWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9JZk1vZHVsZT4K
+Require all denied
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+</IfModule>

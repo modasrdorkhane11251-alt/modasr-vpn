@@ -1,1 +1,622 @@
-ewogICAgIl9yZWFkbWUiOiBbCiAgICAgICAgIlRoaXMgZmlsZSBsb2NrcyB0aGUgZGVwZW5kZW5jaWVzIG9mIHlvdXIgcHJvamVjdCB0byBhIGtub3duIHN0YXRlIiwKICAgICAgICAiUmVhZCBtb3JlIGFib3V0IGl0IGF0IGh0dHBzOi8vZ2V0Y29tcG9zZXIub3JnL2RvYy8wMS1iYXNpYy11c2FnZS5tZCNpbnN0YWxsaW5nLWRlcGVuZGVuY2llcyIsCiAgICAgICAgIlRoaXMgZmlsZSBpcyBAZ2VuZXJhdGVkIGF1dG9tYXRpY2FsbHkiCiAgICBdLAogICAgImNvbnRlbnQtaGFzaCI6ICJjMzIxYmUyYWU4OTViNzllYTUxMDMxZjhjYWU2OTliYyIsCiAgICAicGFja2FnZXMiOiBbCiAgICAgICAgewogICAgICAgICAgICAibmFtZSI6ICJiYWNvbi9iYWNvbi1xci1jb2RlIiwKICAgICAgICAgICAgInZlcnNpb24iOiAidjMuMS4xIiwKICAgICAgICAgICAgInNvdXJjZSI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogImdpdCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9CYWNvbi9CYWNvblFyQ29kZS5naXQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICI0ZGEyMjMzZTcyZWVlY2Q5YmUzYjYyZTBkYzJjYzllZDhlMmUzMWMyIgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZGlzdCI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogInppcCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvQmFjb24vQmFjb25RckNvZGUvemlwYmFsbC80ZGEyMjMzZTcyZWVlY2Q5YmUzYjYyZTBkYzJjYzllZDhlMmUzMWMyIiwKICAgICAgICAgICAgICAgICJyZWZlcmVuY2UiOiAiNGRhMjIzM2U3MmVlZWNkOWJlM2I2MmUwZGMyY2M5ZWQ4ZTJlMzFjMiIsCiAgICAgICAgICAgICAgICAic2hhc3VtIjogIiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUiOiB7CiAgICAgICAgICAgICAgICAiZGFzcHJpZC9lbnVtIjogIl4xLjAuMyIsCiAgICAgICAgICAgICAgICAiZXh0LWljb252IjogIioiLAogICAgICAgICAgICAgICAgInBocCI6ICJeOC4xIgogICAgICAgICAgICB9LAogICAgICAgICAgICAicmVxdWlyZS1kZXYiOiB7CiAgICAgICAgICAgICAgICAicGhseS9rZWVwLWEtY2hhbmdlbG9nIjogIl4yLjEyIiwKICAgICAgICAgICAgICAgICJwaHB1bml0L3BocHVuaXQiOiAiXjEwLjUuMTEgfHwgXjExLjAuNCIsCiAgICAgICAgICAgICAgICAic3BhdGllL3BocHVuaXQtc25hcHNob3QtYXNzZXJ0aW9ucyI6ICJeNS4xLjUiLAogICAgICAgICAgICAgICAgInNwYXRpZS9waXhlbG1hdGNoLXBocCI6ICJeMS4yLjAiLAogICAgICAgICAgICAgICAgInNxdWl6bGFicy9waHBfY29kZXNuaWZmZXIiOiAiXjMuOSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInN1Z2dlc3QiOiB7CiAgICAgICAgICAgICAgICAiZXh0LWltYWdpY2siOiAidG8gZ2VuZXJhdGUgUVIgY29kZSBpbWFnZXMiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0eXBlIjogImxpYnJhcnkiLAogICAgICAgICAgICAiYXV0b2xvYWQiOiB7CiAgICAgICAgICAgICAgICAicHNyLTQiOiB7CiAgICAgICAgICAgICAgICAgICAgIkJhY29uUXJDb2RlXFwiOiAic3JjLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJCU0QtMi1DbGF1c2UiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkJlbiBTY2hvbHplbiAnREFTUFJpRCciLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJtYWlsQGRhc3ByaWRzLmRlIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9kYXNwcmlkcy5kZS8iLAogICAgICAgICAgICAgICAgICAgICJyb2xlIjogIkRldmVsb3BlciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgXSwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIkJhY29uUXJDb2RlIGlzIGEgUVIgY29kZSBnZW5lcmF0b3IgZm9yIFBIUC4iLAogICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL0JhY29uL0JhY29uUXJDb2RlIiwKICAgICAgICAgICAgInN1cHBvcnQiOiB7CiAgICAgICAgICAgICAgICAiaXNzdWVzIjogImh0dHBzOi8vZ2l0aHViLmNvbS9CYWNvbi9CYWNvblFyQ29kZS9pc3N1ZXMiLAogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vQmFjb24vQmFjb25RckNvZGUvdHJlZS92My4xLjEiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0aW1lIjogIjIwMjYtMDQtMDVUMjE6MDY6MzUrMDA6MDAiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJuYW1lIjogImNvbXBvc2VyL3BjcmUiLAogICAgICAgICAgICAidmVyc2lvbiI6ICIzLjQuMCIsCiAgICAgICAgICAgICJzb3VyY2UiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJnaXQiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vY29tcG9zZXIvcGNyZS5naXQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICJkNWEzNDFiM2ZiNjFmMzAwMTk3MDk0MGFmYjFkMzMyOTY4YTE4M2VkIgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZGlzdCI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogInppcCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvY29tcG9zZXIvcGNyZS96aXBiYWxsL2Q1YTM0MWIzZmI2MWYzMDAxOTcwOTQwYWZiMWQzMzI5NjhhMTgzZWQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICJkNWEzNDFiM2ZiNjFmMzAwMTk3MDk0MGFmYjFkMzMyOTY4YTE4M2VkIiwKICAgICAgICAgICAgICAgICJzaGFzdW0iOiAiIgogICAgICAgICAgICB9LAogICAgICAgICAgICAicmVxdWlyZSI6IHsKICAgICAgICAgICAgICAgICJwaHAiOiAiXjcuNCB8fCBeOC4wIgogICAgICAgICAgICB9LAogICAgICAgICAgICAiY29uZmxpY3QiOiB7CiAgICAgICAgICAgICAgICAicGhwc3Rhbi9waHBzdGFuIjogIjwyLjIuMiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUtZGV2IjogewogICAgICAgICAgICAgICAgInBocHN0YW4vcGhwc3RhbiI6ICJeMiIsCiAgICAgICAgICAgICAgICAicGhwc3Rhbi9waHBzdGFuLWRlcHJlY2F0aW9uLXJ1bGVzIjogIl4yIiwKICAgICAgICAgICAgICAgICJwaHBzdGFuL3BocHN0YW4tc3RyaWN0LXJ1bGVzIjogIl4yIiwKICAgICAgICAgICAgICAgICJwaHB1bml0L3BocHVuaXQiOiAiXjkiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0eXBlIjogImxpYnJhcnkiLAogICAgICAgICAgICAiZXh0cmEiOiB7CiAgICAgICAgICAgICAgICAicGhwc3RhbiI6IHsKICAgICAgICAgICAgICAgICAgICAiaW5jbHVkZXMiOiBbCiAgICAgICAgICAgICAgICAgICAgICAgICJleHRlbnNpb24ubmVvbiIKICAgICAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgImJyYW5jaC1hbGlhcyI6IHsKICAgICAgICAgICAgICAgICAgICAiZGV2LW1haW4iOiAiMy54LWRldiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgImF1dG9sb2FkIjogewogICAgICAgICAgICAgICAgInBzci00IjogewogICAgICAgICAgICAgICAgICAgICJDb21wb3NlclxcUGNyZVxcIjogInNyYyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJNSVQiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkpvcmRpIEJvZ2dpYW5vIiwKICAgICAgICAgICAgICAgICAgICAiZW1haWwiOiAiai5ib2dnaWFub0BzZWxkLmJlIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cDovL3NlbGQuYmUiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJkZXNjcmlwdGlvbiI6ICJQQ1JFIHdyYXBwaW5nIGxpYnJhcnkgdGhhdCBvZmZlcnMgdHlwZS1zYWZlIHByZWdfKiByZXBsYWNlbWVudHMuIiwKICAgICAgICAgICAgImtleXdvcmRzIjogWwogICAgICAgICAgICAgICAgIlBDUkUiLAogICAgICAgICAgICAgICAgInByZWciLAogICAgICAgICAgICAgICAgInJlZ2V4IiwKICAgICAgICAgICAgICAgICJyZWd1bGFyIGV4cHJlc3Npb24iCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJzdXBwb3J0IjogewogICAgICAgICAgICAgICAgImlzc3VlcyI6ICJodHRwczovL2dpdGh1Yi5jb20vY29tcG9zZXIvcGNyZS9pc3N1ZXMiLAogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vY29tcG9zZXIvcGNyZS90cmVlLzMuNC4wIgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZnVuZGluZyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vcGFja2FnaXN0LmNvbSIsCiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiY3VzdG9tIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9jb21wb3NlciIsCiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiZ2l0aHViIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidGltZSI6ICIyMDI2LTA2LTA3VDExOjQ3OjQ5KzAwOjAwIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAibmFtZSI6ICJkYXNwcmlkL2VudW0iLAogICAgICAgICAgICAidmVyc2lvbiI6ICIxLjAuNyIsCiAgICAgICAgICAgICJzb3VyY2UiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJnaXQiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vREFTUFJpRC9FbnVtLmdpdCIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogImI1ODc0ZmE5ZWQwMDQzMTE2YzcyMTYyZWM3ZjRmYjUwZTAyZTdjY2UiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJkaXN0IjogewogICAgICAgICAgICAgICAgInR5cGUiOiAiemlwIiwKICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9EQVNQUmlEL0VudW0vemlwYmFsbC9iNTg3NGZhOWVkMDA0MzExNmM3MjE2MmVjN2Y0ZmI1MGUwMmU3Y2NlIiwKICAgICAgICAgICAgICAgICJyZWZlcmVuY2UiOiAiYjU4NzRmYTllZDAwNDMxMTZjNzIxNjJlYzdmNGZiNTBlMDJlN2NjZSIsCiAgICAgICAgICAgICAgICAic2hhc3VtIjogIiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUiOiB7CiAgICAgICAgICAgICAgICAicGhwIjogIj49Ny4xIDw5LjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlLWRldiI6IHsKICAgICAgICAgICAgICAgICJwaHB1bml0L3BocHVuaXQiOiAiXjcgfHwgXjggfHwgXjkgfHwgXjEwIHx8IF4xMSIsCiAgICAgICAgICAgICAgICAic3F1aXpsYWJzL3BocF9jb2Rlc25pZmZlciI6ICIqIgogICAgICAgICAgICB9LAogICAgICAgICAgICAidHlwZSI6ICJsaWJyYXJ5IiwKICAgICAgICAgICAgImF1dG9sb2FkIjogewogICAgICAgICAgICAgICAgInBzci00IjogewogICAgICAgICAgICAgICAgICAgICJEQVNQUmlEXFxFbnVtXFwiOiAic3JjLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJCU0QtMi1DbGF1c2UiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkJlbiBTY2hvbHplbiAnREFTUFJpRCciLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJtYWlsQGRhc3ByaWRzLmRlIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9kYXNwcmlkcy5kZS8iLAogICAgICAgICAgICAgICAgICAgICJyb2xlIjogIkRldmVsb3BlciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgXSwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlBIUCA3LjEgZW51bSBpbXBsZW1lbnRhdGlvbiIsCiAgICAgICAgICAgICJrZXl3b3JkcyI6IFsKICAgICAgICAgICAgICAgICJlbnVtIiwKICAgICAgICAgICAgICAgICJtYXAiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJzdXBwb3J0IjogewogICAgICAgICAgICAgICAgImlzc3VlcyI6ICJodHRwczovL2dpdGh1Yi5jb20vREFTUFJpRC9FbnVtL2lzc3VlcyIsCiAgICAgICAgICAgICAgICAic291cmNlIjogImh0dHBzOi8vZ2l0aHViLmNvbS9EQVNQUmlEL0VudW0vdHJlZS8xLjAuNyIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInRpbWUiOiAiMjAyNS0wOS0xNlQxMjoyMzo1NiswMDowMCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgIm5hbWUiOiAiZW5kcm9pZC9xci1jb2RlIiwKICAgICAgICAgICAgInZlcnNpb24iOiAiNi4wLjkiLAogICAgICAgICAgICAic291cmNlIjogewogICAgICAgICAgICAgICAgInR5cGUiOiAiZ2l0IiwKICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2VuZHJvaWQvcXItY29kZS5naXQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICIyMWU4ODhlODU5NzQ0MGIyMjA1ZTJlNWM0ODRiNmM4ZTU1NmJjZDFhIgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZGlzdCI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogInppcCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvZW5kcm9pZC9xci1jb2RlL3ppcGJhbGwvMjFlODg4ZTg1OTc0NDBiMjIwNWUyZTVjNDg0YjZjOGU1NTZiY2QxYSIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogIjIxZTg4OGU4NTk3NDQwYjIyMDVlMmU1YzQ4NGI2YzhlNTU2YmNkMWEiLAogICAgICAgICAgICAgICAgInNoYXN1bSI6ICIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlIjogewogICAgICAgICAgICAgICAgImJhY29uL2JhY29uLXFyLWNvZGUiOiAiXjMuMCIsCiAgICAgICAgICAgICAgICAicGhwIjogIl44LjIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlLWRldiI6IHsKICAgICAgICAgICAgICAgICJlbmRyb2lkL3F1YWxpdHkiOiAiZGV2LW1haW4iLAogICAgICAgICAgICAgICAgImV4dC1nZCI6ICIqIiwKICAgICAgICAgICAgICAgICJraGFuYW1pcnlhbi9xcmNvZGUtZGV0ZWN0b3ItZGVjb2RlciI6ICJeMi4wLjIiLAogICAgICAgICAgICAgICAgInNldGFzaWduL2ZwZGYiOiAiXjEuOC4yIgogICAgICAgICAgICB9LAogICAgICAgICAgICAic3VnZ2VzdCI6IHsKICAgICAgICAgICAgICAgICJleHQtZ2QiOiAiRW5hYmxlcyB5b3UgdG8gd3JpdGUgUE5HIGltYWdlcyIsCiAgICAgICAgICAgICAgICAia2hhbmFtaXJ5YW4vcXJjb2RlLWRldGVjdG9yLWRlY29kZXIiOiAiRW5hYmxlcyB5b3UgdG8gdXNlIHRoZSBpbWFnZSB2YWxpZGF0b3IiLAogICAgICAgICAgICAgICAgInJvYXZlL3NlY3VyaXR5LWFkdmlzb3JpZXMiOiAiTWFrZXMgc3VyZSBwYWNrYWdlIHZlcnNpb25zIHdpdGgga25vd24gc2VjdXJpdHkgaXNzdWVzIGFyZSBub3QgaW5zdGFsbGVkIiwKICAgICAgICAgICAgICAgICJzZXRhc2lnbi9mcGRmIjogIkVuYWJsZXMgeW91IHRvIHVzZSB0aGUgUERGIHdyaXRlciIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInR5cGUiOiAibGlicmFyeSIsCiAgICAgICAgICAgICJleHRyYSI6IHsKICAgICAgICAgICAgICAgICJicmFuY2gtYWxpYXMiOiB7CiAgICAgICAgICAgICAgICAgICAgImRldi1tYWluIjogIjYueC1kZXYiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJhdXRvbG9hZCI6IHsKICAgICAgICAgICAgICAgICJwc3ItNCI6IHsKICAgICAgICAgICAgICAgICAgICAiRW5kcm9pZFxcUXJDb2RlXFwiOiAic3JjLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJNSVQiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkplcm9lbiB2YW4gZGVuIEVuZGVuIiwKICAgICAgICAgICAgICAgICAgICAiZW1haWwiOiAiaW5mb0BlbmRyb2lkLm5sIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiRW5kcm9pZCBRUiBDb2RlIiwKICAgICAgICAgICAgImhvbWVwYWdlIjogImh0dHBzOi8vZ2l0aHViLmNvbS9lbmRyb2lkL3FyLWNvZGUiLAogICAgICAgICAgICAia2V5d29yZHMiOiBbCiAgICAgICAgICAgICAgICAiY29kZSIsCiAgICAgICAgICAgICAgICAiZW5kcm9pZCIsCiAgICAgICAgICAgICAgICAicGhwIiwKICAgICAgICAgICAgICAgICJxciIsCiAgICAgICAgICAgICAgICAicXJjb2RlIgogICAgICAgICAgICBdLAogICAgICAgICAgICAic3VwcG9ydCI6IHsKICAgICAgICAgICAgICAgICJpc3N1ZXMiOiAiaHR0cHM6Ly9naXRodWIuY29tL2VuZHJvaWQvcXItY29kZS9pc3N1ZXMiLAogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vZW5kcm9pZC9xci1jb2RlL3RyZWUvNi4wLjkiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJmdW5kaW5nIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2VuZHJvaWQiLAogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogImdpdGh1YiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgXSwKICAgICAgICAgICAgInRpbWUiOiAiMjAyNS0wNy0xM1QxOTo1OTo0NSswMDowMCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgIm5hbWUiOiAibWFlbm5jaGVuL3ppcHN0cmVhbS1waHAiLAogICAgICAgICAgICAidmVyc2lvbiI6ICIzLjEuMiIsCiAgICAgICAgICAgICJzb3VyY2UiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJnaXQiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWFlbm5jaGVuL1ppcFN0cmVhbS1QSFAuZ2l0IiwKICAgICAgICAgICAgICAgICJyZWZlcmVuY2UiOiAiYWVhZGNmNWM0MTIzMzJlYjQyNmMwZjliNDQ4NWY2YWNjYmEyYTk5ZiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImRpc3QiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJ6aXAiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL21hZW5uY2hlbi9aaXBTdHJlYW0tUEhQL3ppcGJhbGwvYWVhZGNmNWM0MTIzMzJlYjQyNmMwZjliNDQ4NWY2YWNjYmEyYTk5ZiIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogImFlYWRjZjVjNDEyMzMyZWI0MjZjMGY5YjQ0ODVmNmFjY2JhMmE5OWYiLAogICAgICAgICAgICAgICAgInNoYXN1bSI6ICIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlIjogewogICAgICAgICAgICAgICAgImV4dC1tYnN0cmluZyI6ICIqIiwKICAgICAgICAgICAgICAgICJleHQtemxpYiI6ICIqIiwKICAgICAgICAgICAgICAgICJwaHAtNjRiaXQiOiAiXjguMiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUtZGV2IjogewogICAgICAgICAgICAgICAgImJyaWFuaXVtL3BhcmF0ZXN0IjogIl43LjciLAogICAgICAgICAgICAgICAgImV4dC16aXAiOiAiKiIsCiAgICAgICAgICAgICAgICAiZnJpZW5kc29mcGhwL3BocC1jcy1maXhlciI6ICJeMy4xNiIsCiAgICAgICAgICAgICAgICAiZ3V6emxlaHR0cC9ndXp6bGUiOiAiXjcuNSIsCiAgICAgICAgICAgICAgICAibWlrZXkxNzkvdmZzc3RyZWFtIjogIl4xLjYiLAogICAgICAgICAgICAgICAgInBocC1jb3ZlcmFsbHMvcGhwLWNvdmVyYWxscyI6ICJeMi41IiwKICAgICAgICAgICAgICAgICJwaHB1bml0L3BocHVuaXQiOiAiXjExLjAiLAogICAgICAgICAgICAgICAgInZpbWVvL3BzYWxtIjogIl42LjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJzdWdnZXN0IjogewogICAgICAgICAgICAgICAgImd1enpsZWh0dHAvcHNyNyI6ICJeMi40IiwKICAgICAgICAgICAgICAgICJwc3IvaHR0cC1tZXNzYWdlIjogIl4yLjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0eXBlIjogImxpYnJhcnkiLAogICAgICAgICAgICAiYXV0b2xvYWQiOiB7CiAgICAgICAgICAgICAgICAicHNyLTQiOiB7CiAgICAgICAgICAgICAgICAgICAgIlppcFN0cmVhbVxcIjogInNyYy8iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJub3RpZmljYXRpb24tdXJsIjogImh0dHBzOi8vcGFja2FnaXN0Lm9yZy9kb3dubG9hZHMvIiwKICAgICAgICAgICAgImxpY2Vuc2UiOiBbCiAgICAgICAgICAgICAgICAiTUlUIgogICAgICAgICAgICBdLAogICAgICAgICAgICAiYXV0aG9ycyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJQYXVsIER1bmNhbiIsCiAgICAgICAgICAgICAgICAgICAgImVtYWlsIjogInBhYnNAcGFibG90cm9uLm9yZyIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm5hbWUiOiAiSm9uYXRhbiBNw6RubmNoZW4iLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJqb25hdGFuQG1hZW5uY2hlbi5jaCIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm5hbWUiOiAiSmVzc2UgRG9uYXQiLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJkb25hdGpAZ21haWwuY29tIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJBbmRyw6FzIEtvbGVzw6FyIiwKICAgICAgICAgICAgICAgICAgICAiZW1haWwiOiAia29sZXNhckBrb2xlc2FyLmh1IgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiWmlwU3RyZWFtIGlzIGEgbGlicmFyeSBmb3IgZHluYW1pY2FsbHkgc3RyZWFtaW5nIGR5bmFtaWMgemlwIGZpbGVzIGZyb20gUEhQIHdpdGhvdXQgd3JpdGluZyB0byB0aGUgZGlzayBhdCBhbGwgb24gdGhlIHNlcnZlci4iLAogICAgICAgICAgICAia2V5d29yZHMiOiBbCiAgICAgICAgICAgICAgICAic3RyZWFtIiwKICAgICAgICAgICAgICAgICJ6aXAiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJzdXBwb3J0IjogewogICAgICAgICAgICAgICAgImlzc3VlcyI6ICJodHRwczovL2dpdGh1Yi5jb20vbWFlbm5jaGVuL1ppcFN0cmVhbS1QSFAvaXNzdWVzIiwKICAgICAgICAgICAgICAgICJzb3VyY2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL21hZW5uY2hlbi9aaXBTdHJlYW0tUEhQL3RyZWUvMy4xLjIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJmdW5kaW5nIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL21hZW5uY2hlbiIsCiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiZ2l0aHViIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidGltZSI6ICIyMDI1LTAxLTI3VDEyOjA3OjUzKzAwOjAwIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAibmFtZSI6ICJtYXJrYmFrZXIvY29tcGxleCIsCiAgICAgICAgICAgICJ2ZXJzaW9uIjogIjMuMC4yIiwKICAgICAgICAgICAgInNvdXJjZSI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogImdpdCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9NYXJrQmFrZXIvUEhQQ29tcGxleC5naXQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICI5NWM1NmNhYTFjZjVjNzY2YWQ2ZDY1YjYzNDRiODA3YzFlODQwNWI5IgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZGlzdCI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogInppcCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvTWFya0Jha2VyL1BIUENvbXBsZXgvemlwYmFsbC85NWM1NmNhYTFjZjVjNzY2YWQ2ZDY1YjYzNDRiODA3YzFlODQwNWI5IiwKICAgICAgICAgICAgICAgICJyZWZlcmVuY2UiOiAiOTVjNTZjYWExY2Y1Yzc2NmFkNmQ2NWI2MzQ0YjgwN2MxZTg0MDViOSIsCiAgICAgICAgICAgICAgICAic2hhc3VtIjogIiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUiOiB7CiAgICAgICAgICAgICAgICAicGhwIjogIl43LjIgfHwgXjguMCIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInJlcXVpcmUtZGV2IjogewogICAgICAgICAgICAgICAgImRlYWxlcmRpcmVjdC9waHBjb2Rlc25pZmZlci1jb21wb3Nlci1pbnN0YWxsZXIiOiAiZGV2LW1hc3RlciIsCiAgICAgICAgICAgICAgICAicGhwY29tcGF0aWJpbGl0eS9waHAtY29tcGF0aWJpbGl0eSI6ICJeOS4zIiwKICAgICAgICAgICAgICAgICJwaHB1bml0L3BocHVuaXQiOiAiXjcuMCB8fCBeOC4wIHx8IF45LjAiLAogICAgICAgICAgICAgICAgInNxdWl6bGFicy9waHBfY29kZXNuaWZmZXIiOiAiXjMuNyIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInR5cGUiOiAibGlicmFyeSIsCiAgICAgICAgICAgICJhdXRvbG9hZCI6IHsKICAgICAgICAgICAgICAgICJwc3ItNCI6IHsKICAgICAgICAgICAgICAgICAgICAiQ29tcGxleFxcIjogImNsYXNzZXMvc3JjLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJNSVQiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk1hcmsgQmFrZXIiLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJtYXJrQGxhbmdlLmRlbW9uLmNvLnVrIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiUEhQIENsYXNzIGZvciB3b3JraW5nIHdpdGggY29tcGxleCBudW1iZXJzIiwKICAgICAgICAgICAgImhvbWVwYWdlIjogImh0dHBzOi8vZ2l0aHViLmNvbS9NYXJrQmFrZXIvUEhQQ29tcGxleCIsCiAgICAgICAgICAgICJrZXl3b3JkcyI6IFsKICAgICAgICAgICAgICAgICJjb21wbGV4IiwKICAgICAgICAgICAgICAgICJtYXRoZW1hdGljcyIKICAgICAgICAgICAgXSwKICAgICAgICAgICAgInN1cHBvcnQiOiB7CiAgICAgICAgICAgICAgICAiaXNzdWVzIjogImh0dHBzOi8vZ2l0aHViLmNvbS9NYXJrQmFrZXIvUEhQQ29tcGxleC9pc3N1ZXMiLAogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vTWFya0Jha2VyL1BIUENvbXBsZXgvdHJlZS8zLjAuMiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInRpbWUiOiAiMjAyMi0xMi0wNlQxNjoyMTowOCswMDowMCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgIm5hbWUiOiAibWFya2Jha2VyL21hdHJpeCIsCiAgICAgICAgICAgICJ2ZXJzaW9uIjogIjMuMC4xIiwKICAgICAgICAgICAgInNvdXJjZSI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogImdpdCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9NYXJrQmFrZXIvUEhQTWF0cml4LmdpdCIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogIjcyODQzNDIyN2ZlMjFiZTI3ZmY2ZDg2NjIxYTFiMTMxMDdhMjU2MmMiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJkaXN0IjogewogICAgICAgICAgICAgICAgInR5cGUiOiAiemlwIiwKICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9NYXJrQmFrZXIvUEhQTWF0cml4L3ppcGJhbGwvNzI4NDM0MjI3ZmUyMWJlMjdmZjZkODY2MjFhMWIxMzEwN2EyNTYyYyIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogIjcyODQzNDIyN2ZlMjFiZTI3ZmY2ZDg2NjIxYTFiMTMxMDdhMjU2MmMiLAogICAgICAgICAgICAgICAgInNoYXN1bSI6ICIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlIjogewogICAgICAgICAgICAgICAgInBocCI6ICJeNy4xIHx8IF44LjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlLWRldiI6IHsKICAgICAgICAgICAgICAgICJkZWFsZXJkaXJlY3QvcGhwY29kZXNuaWZmZXItY29tcG9zZXItaW5zdGFsbGVyIjogImRldi1tYXN0ZXIiLAogICAgICAgICAgICAgICAgInBocGNvbXBhdGliaWxpdHkvcGhwLWNvbXBhdGliaWxpdHkiOiAiXjkuMyIsCiAgICAgICAgICAgICAgICAicGhwZG9jdW1lbnRvci9waHBkb2N1bWVudG9yIjogIjIuKiIsCiAgICAgICAgICAgICAgICAicGhwbG9jL3BocGxvYyI6ICJeNC4wIiwKICAgICAgICAgICAgICAgICJwaHBtZC9waHBtZCI6ICIyLioiLAogICAgICAgICAgICAgICAgInBocHVuaXQvcGhwdW5pdCI6ICJeNy4wIHx8IF44LjAgfHwgXjkuMCIsCiAgICAgICAgICAgICAgICAic2ViYXN0aWFuL3BocGNwZCI6ICJeNC4wIiwKICAgICAgICAgICAgICAgICJzcXVpemxhYnMvcGhwX2NvZGVzbmlmZmVyIjogIl4zLjciCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0eXBlIjogImxpYnJhcnkiLAogICAgICAgICAgICAiYXV0b2xvYWQiOiB7CiAgICAgICAgICAgICAgICAicHNyLTQiOiB7CiAgICAgICAgICAgICAgICAgICAgIk1hdHJpeFxcIjogImNsYXNzZXMvc3JjLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJNSVQiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk1hcmsgQmFrZXIiLAogICAgICAgICAgICAgICAgICAgICJlbWFpbCI6ICJtYXJrQGRlbW9uLWFuZ2VsLmV1IgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiUEhQIENsYXNzIGZvciB3b3JraW5nIHdpdGggbWF0cmljZXMiLAogICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL01hcmtCYWtlci9QSFBNYXRyaXgiLAogICAgICAgICAgICAia2V5d29yZHMiOiBbCiAgICAgICAgICAgICAgICAibWF0aGVtYXRpY3MiLAogICAgICAgICAgICAgICAgIm1hdHJpeCIsCiAgICAgICAgICAgICAgICAidmVjdG9yIgogICAgICAgICAgICBdLAogICAgICAgICAgICAic3VwcG9ydCI6IHsKICAgICAgICAgICAgICAgICJpc3N1ZXMiOiAiaHR0cHM6Ly9naXRodWIuY29tL01hcmtCYWtlci9QSFBNYXRyaXgvaXNzdWVzIiwKICAgICAgICAgICAgICAgICJzb3VyY2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL01hcmtCYWtlci9QSFBNYXRyaXgvdHJlZS8zLjAuMSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInRpbWUiOiAiMjAyMi0xMi0wMlQyMjoxNzo0MyswMDowMCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgIm5hbWUiOiAicGhwb2ZmaWNlL3BocHNwcmVhZHNoZWV0IiwKICAgICAgICAgICAgInZlcnNpb24iOiAiNS45LjAiLAogICAgICAgICAgICAic291cmNlIjogewogICAgICAgICAgICAgICAgInR5cGUiOiAiZ2l0IiwKICAgICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL1BIUE9mZmljZS9QaHBTcHJlYWRzaGVldC5naXQiLAogICAgICAgICAgICAgICAgInJlZmVyZW5jZSI6ICIwNWU5OWViZjYxMjM4YTcwMjI3YjRkOWNjMDJkMDAzMGQzNGY2MzM5IgogICAgICAgICAgICB9LAogICAgICAgICAgICAiZGlzdCI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogInppcCIsCiAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvUEhQT2ZmaWNlL1BocFNwcmVhZHNoZWV0L3ppcGJhbGwvMDVlOTllYmY2MTIzOGE3MDIyN2I0ZDljYzAyZDAwMzBkMzRmNjMzOSIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogIjA1ZTk5ZWJmNjEyMzhhNzAyMjdiNGQ5Y2MwMmQwMDMwZDM0ZjYzMzkiLAogICAgICAgICAgICAgICAgInNoYXN1bSI6ICIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlIjogewogICAgICAgICAgICAgICAgImNvbXBvc2VyL3BjcmUiOiAiXjF8fF4yfHxeMyIsCiAgICAgICAgICAgICAgICAiZXh0LWN0eXBlIjogIioiLAogICAgICAgICAgICAgICAgImV4dC1kb20iOiAiKiIsCiAgICAgICAgICAgICAgICAiZXh0LWZpbGVpbmZvIjogIioiLAogICAgICAgICAgICAgICAgImV4dC1maWx0ZXIiOiAiKiIsCiAgICAgICAgICAgICAgICAiZXh0LWdkIjogIioiLAogICAgICAgICAgICAgICAgImV4dC1pY29udiI6ICIqIiwKICAgICAgICAgICAgICAgICJleHQtbGlieG1sIjogIioiLAogICAgICAgICAgICAgICAgImV4dC1tYnN0cmluZyI6ICIqIiwKICAgICAgICAgICAgICAgICJleHQtc2ltcGxleG1sIjogIioiLAogICAgICAgICAgICAgICAgImV4dC14bWwiOiAiKiIsCiAgICAgICAgICAgICAgICAiZXh0LXhtbHJlYWRlciI6ICIqIiwKICAgICAgICAgICAgICAgICJleHQteG1sd3JpdGVyIjogIioiLAogICAgICAgICAgICAgICAgImV4dC16aXAiOiAiKiIsCiAgICAgICAgICAgICAgICAiZXh0LXpsaWIiOiAiKiIsCiAgICAgICAgICAgICAgICAibWFlbm5jaGVuL3ppcHN0cmVhbS1waHAiOiAiXjIuMSB8fCBeMy4wIiwKICAgICAgICAgICAgICAgICJtYXJrYmFrZXIvY29tcGxleCI6ICJeMy4wIiwKICAgICAgICAgICAgICAgICJtYXJrYmFrZXIvbWF0cml4IjogIl4zLjAiLAogICAgICAgICAgICAgICAgInBocCI6ICJeOC4yIiwKICAgICAgICAgICAgICAgICJwc3Ivc2ltcGxlLWNhY2hlIjogIl4xLjAgfHwgXjIuMCB8fCBeMy4wIgogICAgICAgICAgICB9LAogICAgICAgICAgICAicmVxdWlyZS1kZXYiOiB7CiAgICAgICAgICAgICAgICAiZGVhbGVyZGlyZWN0L3BocGNvZGVzbmlmZmVyLWNvbXBvc2VyLWluc3RhbGxlciI6ICJkZXYtbWFpbiIsCiAgICAgICAgICAgICAgICAiZG9tcGRmL2RvbXBkZiI6ICJeMi4wIHx8IF4zLjAiLAogICAgICAgICAgICAgICAgImV4dC1pbnRsIjogIioiLAogICAgICAgICAgICAgICAgImZyaWVuZHNvZnBocC9waHAtY3MtZml4ZXIiOiAiXjMuMiIsCiAgICAgICAgICAgICAgICAibWl0b3RlYW0vanBncmFwaCI6ICJeMTAuNSIsCiAgICAgICAgICAgICAgICAibXBkZi9tcGRmIjogIl44LjEuMSIsCiAgICAgICAgICAgICAgICAicGhwY29tcGF0aWJpbGl0eS9waHAtY29tcGF0aWJpbGl0eSI6ICJeOS4zIiwKICAgICAgICAgICAgICAgICJwaHBzdGFuL3BocHN0YW4iOiAiXjEuMSB8fCBeMi4wIiwKICAgICAgICAgICAgICAgICJwaHBzdGFuL3BocHN0YW4tZGVwcmVjYXRpb24tcnVsZXMiOiAiXjEuMCB8fCBeMi4wIiwKICAgICAgICAgICAgICAgICJwaHBzdGFuL3BocHN0YW4tcGhwdW5pdCI6ICJeMS4wIHx8IF4yLjAiLAogICAgICAgICAgICAgICAgInBocHVuaXQvcGhwdW5pdCI6ICJeMTAuNSB8fCBeMTEuMCIsCiAgICAgICAgICAgICAgICAic3F1aXpsYWJzL3BocF9jb2Rlc25pZmZlciI6ICJeMy43IiwKICAgICAgICAgICAgICAgICJ0ZWNuaWNrY29tL3RjcGRmIjogIl42LjUiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJzdWdnZXN0IjogewogICAgICAgICAgICAgICAgImRvbXBkZi9kb21wZGYiOiAiT3B0aW9uIGZvciByZW5kZXJpbmcgUERGIHdpdGggUERGIFdyaXRlciIsCiAgICAgICAgICAgICAgICAiZXh0LWludGwiOiAiUEhQIEludGVybmF0aW9uYWxpemF0aW9uIEZ1bmN0aW9ucywgcmVxdWlyZWQgZm9yIE51bWJlckZvcm1hdCBXaXphcmQgYW5kIFN0cmluZ0hlbHBlcjo6c2V0TG9jYWxlKCkiLAogICAgICAgICAgICAgICAgIm1pdG90ZWFtL2pwZ3JhcGgiOiAiT3B0aW9uIGZvciByZW5kZXJpbmcgY2hhcnRzLCBvciBpbmNsdWRpbmcgY2hhcnRzIHdpdGggUERGIG9yIEhUTUwgV3JpdGVycyIsCiAgICAgICAgICAgICAgICAibXBkZi9tcGRmIjogIk9wdGlvbiBmb3IgcmVuZGVyaW5nIFBERiB3aXRoIFBERiBXcml0ZXIiLAogICAgICAgICAgICAgICAgInRlY25pY2tjb20vdGNwZGYiOiAiT3B0aW9uIGZvciByZW5kZXJpbmcgUERGIHdpdGggUERGIFdyaXRlciIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInR5cGUiOiAibGlicmFyeSIsCiAgICAgICAgICAgICJhdXRvbG9hZCI6IHsKICAgICAgICAgICAgICAgICJwc3ItNCI6IHsKICAgICAgICAgICAgICAgICAgICAiUGhwT2ZmaWNlXFxQaHBTcHJlYWRzaGVldFxcIjogInNyYy9QaHBTcHJlYWRzaGVldCIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgIm5vdGlmaWNhdGlvbi11cmwiOiAiaHR0cHM6Ly9wYWNrYWdpc3Qub3JnL2Rvd25sb2Fkcy8iLAogICAgICAgICAgICAibGljZW5zZSI6IFsKICAgICAgICAgICAgICAgICJNSVQiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk1hYXJ0ZW4gQmFsbGlhdXciLAogICAgICAgICAgICAgICAgICAgICJob21lcGFnZSI6ICJodHRwczovL2Jsb2cubWFhcnRlbmJhbGxpYXV3LmJlIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJNYXJrIEJha2VyIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9tYXJrYmFrZXJ1ay5uZXQiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZyYW5jayBMZWZldnJlIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9yb290c2xhYnMubmV0IgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJFcmlrIFRpbHQiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkFkcmllbiBDcml2ZWxsaSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm5hbWUiOiAiT3dlbiBMZWlibWFuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiUEhQU3ByZWFkc2hlZXQgLSBSZWFkLCBDcmVhdGUgYW5kIFdyaXRlIFNwcmVhZHNoZWV0IGRvY3VtZW50cyBpbiBQSFAgLSBTcHJlYWRzaGVldCBlbmdpbmUiLAogICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL1BIUE9mZmljZS9QaHBTcHJlYWRzaGVldCIsCiAgICAgICAgICAgICJrZXl3b3JkcyI6IFsKICAgICAgICAgICAgICAgICJPcGVuWE1MIiwKICAgICAgICAgICAgICAgICJleGNlbCIsCiAgICAgICAgICAgICAgICAiZ251bWVyaWMiLAogICAgICAgICAgICAgICAgIm9kcyIsCiAgICAgICAgICAgICAgICAicGhwIiwKICAgICAgICAgICAgICAgICJzcHJlYWRzaGVldCIsCiAgICAgICAgICAgICAgICAieGxzIiwKICAgICAgICAgICAgICAgICJ4bHN4IgogICAgICAgICAgICBdLAogICAgICAgICAgICAic3VwcG9ydCI6IHsKICAgICAgICAgICAgICAgICJpc3N1ZXMiOiAiaHR0cHM6Ly9naXRodWIuY29tL1BIUE9mZmljZS9QaHBTcHJlYWRzaGVldC9pc3N1ZXMiLAogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vUEhQT2ZmaWNlL1BocFNwcmVhZHNoZWV0L3RyZWUvNS45LjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0aW1lIjogIjIwMjYtMDctMTJUMTk6MTc6MzkrMDA6MDAiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJuYW1lIjogInBzci9zaW1wbGUtY2FjaGUiLAogICAgICAgICAgICAidmVyc2lvbiI6ICIzLjAuMCIsCiAgICAgICAgICAgICJzb3VyY2UiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJnaXQiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vcGhwLWZpZy9zaW1wbGUtY2FjaGUuZ2l0IiwKICAgICAgICAgICAgICAgICJyZWZlcmVuY2UiOiAiNzY0ZTBiMzkzOWY1Y2E4N2NiOTA0ZjU3MGVmOWJlMmQ3OGEwNzg2NSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImRpc3QiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJ6aXAiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL3BocC1maWcvc2ltcGxlLWNhY2hlL3ppcGJhbGwvNzY0ZTBiMzkzOWY1Y2E4N2NiOTA0ZjU3MGVmOWJlMmQ3OGEwNzg2NSIsCiAgICAgICAgICAgICAgICAicmVmZXJlbmNlIjogIjc2NGUwYjM5MzlmNWNhODdjYjkwNGY1NzBlZjliZTJkNzhhMDc4NjUiLAogICAgICAgICAgICAgICAgInNoYXN1bSI6ICIiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJyZXF1aXJlIjogewogICAgICAgICAgICAgICAgInBocCI6ICI+PTguMC4wIgogICAgICAgICAgICB9LAogICAgICAgICAgICAidHlwZSI6ICJsaWJyYXJ5IiwKICAgICAgICAgICAgImV4dHJhIjogewogICAgICAgICAgICAgICAgImJyYW5jaC1hbGlhcyI6IHsKICAgICAgICAgICAgICAgICAgICAiZGV2LW1hc3RlciI6ICIzLjAueC1kZXYiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJhdXRvbG9hZCI6IHsKICAgICAgICAgICAgICAgICJwc3ItNCI6IHsKICAgICAgICAgICAgICAgICAgICAiUHNyXFxTaW1wbGVDYWNoZVxcIjogInNyYy8iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJub3RpZmljYXRpb24tdXJsIjogImh0dHBzOi8vcGFja2FnaXN0Lm9yZy9kb3dubG9hZHMvIiwKICAgICAgICAgICAgImxpY2Vuc2UiOiBbCiAgICAgICAgICAgICAgICAiTUlUIgogICAgICAgICAgICBdLAogICAgICAgICAgICAiYXV0aG9ycyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJQSFAtRklHIiwKICAgICAgICAgICAgICAgICAgICAiaG9tZXBhZ2UiOiAiaHR0cHM6Ly93d3cucGhwLWZpZy5vcmcvIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiQ29tbW9uIGludGVyZmFjZXMgZm9yIHNpbXBsZSBjYWNoaW5nIiwKICAgICAgICAgICAgImtleXdvcmRzIjogWwogICAgICAgICAgICAgICAgImNhY2hlIiwKICAgICAgICAgICAgICAgICJjYWNoaW5nIiwKICAgICAgICAgICAgICAgICJwc3IiLAogICAgICAgICAgICAgICAgInBzci0xNiIsCiAgICAgICAgICAgICAgICAic2ltcGxlLWNhY2hlIgogICAgICAgICAgICBdLAogICAgICAgICAgICAic3VwcG9ydCI6IHsKICAgICAgICAgICAgICAgICJzb3VyY2UiOiAiaHR0cHM6Ly9naXRodWIuY29tL3BocC1maWcvc2ltcGxlLWNhY2hlL3RyZWUvMy4wLjAiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJ0aW1lIjogIjIwMjEtMTAtMjlUMTM6MjY6MjcrMDA6MDAiCiAgICAgICAgfQogICAgXSwKICAgICJwYWNrYWdlcy1kZXYiOiBbXSwKICAgICJhbGlhc2VzIjogW10sCiAgICAibWluaW11bS1zdGFiaWxpdHkiOiAic3RhYmxlIiwKICAgICJzdGFiaWxpdHktZmxhZ3MiOiB7fSwKICAgICJwcmVmZXItc3RhYmxlIjogdHJ1ZSwKICAgICJwcmVmZXItbG93ZXN0IjogZmFsc2UsCiAgICAicGxhdGZvcm0iOiB7CiAgICAgICAgInBocCI6ICI+PTguMiIKICAgIH0sCiAgICAicGxhdGZvcm0tZGV2Ijoge30sCiAgICAicGxhdGZvcm0tb3ZlcnJpZGVzIjogewogICAgICAgICJwaHAiOiAiOC4yLjAiCiAgICB9LAogICAgInBsdWdpbi1hcGktdmVyc2lvbiI6ICIyLjkuMCIKfQo=
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c321be2ae895b79ea51031f8cae699bc",
+    "packages": [
+        {
+            "name": "bacon/bacon-qr-code",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2",
+                "reference": "4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2",
+                "shasum": ""
+            },
+            "require": {
+                "dasprid/enum": "^1.0.3",
+                "ext-iconv": "*",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phly/keep-a-changelog": "^2.12",
+                "phpunit/phpunit": "^10.5.11 || ^11.0.4",
+                "spatie/phpunit-snapshot-assertions": "^5.1.5",
+                "spatie/pixelmatch-php": "^1.2.0",
+                "squizlabs/php_codesniffer": "^3.9"
+            },
+            "suggest": {
+                "ext-imagick": "to generate QR code images"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BaconQrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "BaconQrCode is a QR code generator for PHP.",
+            "homepage": "https://github.com/Bacon/BaconQrCode",
+            "support": {
+                "issues": "https://github.com/Bacon/BaconQrCode/issues",
+                "source": "https://github.com/Bacon/BaconQrCode/tree/v3.1.1"
+            },
+            "time": "2026-04-05T21:06:35+00:00"
+        },
+        {
+            "name": "composer/pcre",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/pcre.git",
+                "reference": "d5a341b3fb61f3001970940afb1d332968a183ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/d5a341b3fb61f3001970940afb1d332968a183ed",
+                "reference": "d5a341b3fb61f3001970940afb1d332968a183ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan": "<2.2.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2",
+                "phpstan/phpstan-deprecation-rules": "^2",
+                "phpstan/phpstan-strict-rules": "^2",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Pcre\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "PCRE wrapping library that offers type-safe preg_* replacements.",
+            "keywords": [
+                "PCRE",
+                "preg",
+                "regex",
+                "regular expression"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/pcre/issues",
+                "source": "https://github.com/composer/pcre/tree/3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-06-07T11:47:49+00:00"
+        },
+        {
+            "name": "dasprid/enum",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DASPRiD/Enum.git",
+                "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
+                "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1 <9.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7 || ^8 || ^9 || ^10 || ^11",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DASPRiD\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 7.1 enum implementation",
+            "keywords": [
+                "enum",
+                "map"
+            ],
+            "support": {
+                "issues": "https://github.com/DASPRiD/Enum/issues",
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.7"
+            },
+            "time": "2025-09-16T12:23:56+00:00"
+        },
+        {
+            "name": "endroid/qr-code",
+            "version": "6.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endroid/qr-code.git",
+                "reference": "21e888e8597440b2205e2e5c484b6c8e556bcd1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endroid/qr-code/zipball/21e888e8597440b2205e2e5c484b6c8e556bcd1a",
+                "reference": "21e888e8597440b2205e2e5c484b6c8e556bcd1a",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^3.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "endroid/quality": "dev-main",
+                "ext-gd": "*",
+                "khanamiryan/qrcode-detector-decoder": "^2.0.2",
+                "setasign/fpdf": "^1.8.2"
+            },
+            "suggest": {
+                "ext-gd": "Enables you to write PNG images",
+                "khanamiryan/qrcode-detector-decoder": "Enables you to use the image validator",
+                "roave/security-advisories": "Makes sure package versions with known security issues are not installed",
+                "setasign/fpdf": "Enables you to use the PDF writer"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Endroid\\QrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen van den Enden",
+                    "email": "info@endroid.nl"
+                }
+            ],
+            "description": "Endroid QR Code",
+            "homepage": "https://github.com/endroid/qr-code",
+            "keywords": [
+                "code",
+                "endroid",
+                "php",
+                "qr",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/endroid/qr-code/issues",
+                "source": "https://github.com/endroid/qr-code/tree/6.0.9"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/endroid",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-07-13T19:59:45+00:00"
+        },
+        {
+            "name": "maennchen/zipstream-php",
+            "version": "3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maennchen/ZipStream-PHP.git",
+                "reference": "aeadcf5c412332eb426c0f9b4485f6accba2a99f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/aeadcf5c412332eb426c0f9b4485f6accba2a99f",
+                "reference": "aeadcf5c412332eb426c0f9b4485f6accba2a99f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-zlib": "*",
+                "php-64bit": "^8.2"
+            },
+            "require-dev": {
+                "brianium/paratest": "^7.7",
+                "ext-zip": "*",
+                "friendsofphp/php-cs-fixer": "^3.16",
+                "guzzlehttp/guzzle": "^7.5",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^11.0",
+                "vimeo/psalm": "^6.0"
+            },
+            "suggest": {
+                "guzzlehttp/psr7": "^2.4",
+                "psr/http-message": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ZipStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Duncan",
+                    "email": "pabs@pablotron.org"
+                },
+                {
+                    "name": "Jonatan Männchen",
+                    "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com"
+                },
+                {
+                    "name": "András Kolesár",
+                    "email": "kolesar@kolesar.hu"
+                }
+            ],
+            "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
+            "keywords": [
+                "stream",
+                "zip"
+            ],
+            "support": {
+                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/maennchen",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-27T12:07:53+00:00"
+        },
+        {
+            "name": "markbaker/complex",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MarkBaker/PHPComplex.git",
+                "reference": "95c56caa1cf5c766ad6d65b6344b807c1e8405b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MarkBaker/PHPComplex/zipball/95c56caa1cf5c766ad6d65b6344b807c1e8405b9",
+                "reference": "95c56caa1cf5c766ad6d65b6344b807c1e8405b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Complex\\": "classes/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Baker",
+                    "email": "mark@lange.demon.co.uk"
+                }
+            ],
+            "description": "PHP Class for working with complex numbers",
+            "homepage": "https://github.com/MarkBaker/PHPComplex",
+            "keywords": [
+                "complex",
+                "mathematics"
+            ],
+            "support": {
+                "issues": "https://github.com/MarkBaker/PHPComplex/issues",
+                "source": "https://github.com/MarkBaker/PHPComplex/tree/3.0.2"
+            },
+            "time": "2022-12-06T16:21:08+00:00"
+        },
+        {
+            "name": "markbaker/matrix",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MarkBaker/PHPMatrix.git",
+                "reference": "728434227fe21be27ff6d86621a1b13107a2562c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MarkBaker/PHPMatrix/zipball/728434227fe21be27ff6d86621a1b13107a2562c",
+                "reference": "728434227fe21be27ff6d86621a1b13107a2562c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phploc/phploc": "^4.0",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "sebastian/phpcpd": "^4.0",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Matrix\\": "classes/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Baker",
+                    "email": "mark@demon-angel.eu"
+                }
+            ],
+            "description": "PHP Class for working with matrices",
+            "homepage": "https://github.com/MarkBaker/PHPMatrix",
+            "keywords": [
+                "mathematics",
+                "matrix",
+                "vector"
+            ],
+            "support": {
+                "issues": "https://github.com/MarkBaker/PHPMatrix/issues",
+                "source": "https://github.com/MarkBaker/PHPMatrix/tree/3.0.1"
+            },
+            "time": "2022-12-02T22:17:43+00:00"
+        },
+        {
+            "name": "phpoffice/phpspreadsheet",
+            "version": "5.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
+                "reference": "05e99ebf61238a70227b4d9cc02d0030d34f6339"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/05e99ebf61238a70227b4d9cc02d0030d34f6339",
+                "reference": "05e99ebf61238a70227b4d9cc02d0030d34f6339",
+                "shasum": ""
+            },
+            "require": {
+                "composer/pcre": "^1||^2||^3",
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-fileinfo": "*",
+                "ext-filter": "*",
+                "ext-gd": "*",
+                "ext-iconv": "*",
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "ext-xml": "*",
+                "ext-xmlreader": "*",
+                "ext-xmlwriter": "*",
+                "ext-zip": "*",
+                "ext-zlib": "*",
+                "maennchen/zipstream-php": "^2.1 || ^3.0",
+                "markbaker/complex": "^3.0",
+                "markbaker/matrix": "^3.0",
+                "php": "^8.2",
+                "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-main",
+                "dompdf/dompdf": "^2.0 || ^3.0",
+                "ext-intl": "*",
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "mitoteam/jpgraph": "^10.5",
+                "mpdf/mpdf": "^8.1.1",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan": "^1.1 || ^2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
+                "phpunit/phpunit": "^10.5 || ^11.0",
+                "squizlabs/php_codesniffer": "^3.7",
+                "tecnickcom/tcpdf": "^6.5"
+            },
+            "suggest": {
+                "dompdf/dompdf": "Option for rendering PDF with PDF Writer",
+                "ext-intl": "PHP Internationalization Functions, required for NumberFormat Wizard and StringHelper::setLocale()",
+                "mitoteam/jpgraph": "Option for rendering charts, or including charts with PDF or HTML Writers",
+                "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
+                "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpOffice\\PhpSpreadsheet\\": "src/PhpSpreadsheet"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "https://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker",
+                    "homepage": "https://markbakeruk.net"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "https://rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                },
+                {
+                    "name": "Adrien Crivelli"
+                },
+                {
+                    "name": "Owen Leibman"
+                }
+            ],
+            "description": "PHPSpreadsheet - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "https://github.com/PHPOffice/PhpSpreadsheet",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "gnumeric",
+                "ods",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/5.9.0"
+            },
+            "time": "2026-07-12T19:17:39+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
+            },
+            "time": "2021-10-29T13:26:27+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.2"
+    },
+    "platform-dev": {},
+    "platform-overrides": {
+        "php": "8.2.0"
+    },
+    "plugin-api-version": "2.9.0"
+}

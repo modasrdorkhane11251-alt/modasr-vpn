@@ -1,1 +1,25 @@
-PEZpbGVzICIqLnR4dCI+CiAgICBSZXF1aXJlIGFsbCBkZW5pZWQKPC9GaWxlcz4KPEZpbGVzICIqLmpzb24iPgogICAgUmVxdWlyZSBhbGwgZGVuaWVkCjwvRmlsZXM+CjxGaWxlcyAiKi5zcWwiPgogICAgUmVxdWlyZSBhbGwgZGVuaWVkCjwvRmlsZXM+CjxGaWxlcyAiKi56aXAiPgogICAgUmVxdWlyZSBhbGwgZGVuaWVkCjwvRmlsZXM+CjxGaWxlcyAiLnJ1bi5sb2NrIj4KICAgIFJlcXVpcmUgYWxsIGRlbmllZAo8L0ZpbGVzPgoKT3B0aW9ucyAtSW5kZXhlcwoKPEZpbGVzTWF0Y2ggIl5lcnJvcl9sb2ckfFwubG9nJHxcLmxvZ1wuWzAtOV0rJCI+CiAgICBSZXF1aXJlIGFsbCBkZW5pZWQKICAgIDxJZk1vZHVsZSAhbW9kX2F1dGh6X2NvcmUuYz4KICAgICAgICBPcmRlciBkZW55LGFsbG93CiAgICAgICAgRGVueSBmcm9tIGFsbAogICAgPC9JZk1vZHVsZT4KPC9GaWxlc01hdGNoPgo=
+<Files "*.txt">
+    Require all denied
+</Files>
+<Files "*.json">
+    Require all denied
+</Files>
+<Files "*.sql">
+    Require all denied
+</Files>
+<Files "*.zip">
+    Require all denied
+</Files>
+<Files ".run.lock">
+    Require all denied
+</Files>
+
+Options -Indexes
+
+<FilesMatch "^error_log$|\.log$|\.log\.[0-9]+$">
+    Require all denied
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

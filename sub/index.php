@@ -1,1 +1,34 @@
-PD9waHAKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwoKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzL0FwaS9NYXJ6YmFuLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzLnBocCc7CiRNYW5hZ2VQYW5lbCA9IG5ldyBNYW5hZ2VQYW5lbCgpOwpoZWFkZXIoJ0NvbnRlbnQtVHlwZTogdGV4dC9wbGFpbjsgY2hhcnNldD11dGYtOCcpOwokdXJsID0gcGFyc2VfdXJsKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddID8/ICcnLCBQSFBfVVJMX1BBVEgpOwokcGFydHMgPSBleHBsb2RlKCIvc3ViLyIsIChzdHJpbmcpICR1cmwpOwokdG9rZW4gPSB0cmltKCRwYXJ0c1sxXSA/PyAnJyk7CmlmICgkdG9rZW4gPT09ICcnIHx8ICFwcmVnX21hdGNoKCcvXlthLWYwLTldezQsNjR9JC9pJywgJHRva2VuKSkgewogICAgZWNobyAiRVJST1IhIjsKICAgIGV4aXQ7Cn0KdHJ5IHsKICAgICRuYW1lbG9jID0gc2VsZWN0KCJpbnZvaWNlIiwgIioiLCAiaWRfaW52b2ljZSIsICR0b2tlbiwgInNlbGVjdCIpOwogICAgaWYgKCFpc19hcnJheSgkbmFtZWxvYykpIHsKICAgICAgICBlY2hvICJFUlJPUiEiOwogICAgICAgIGV4aXQ7CiAgICB9CiAgICAkRGF0YVVzZXJPdXQgPSAkTWFuYWdlUGFuZWwtPkRhdGFVc2VyKCRuYW1lbG9jWydTZXJ2aWNlX2xvY2F0aW9uJ10sICRuYW1lbG9jWyd1c2VybmFtZSddKTsKICAgICRjb25maWcgPSAiIjsKICAgIGlmIChpc19hcnJheSgkRGF0YVVzZXJPdXQpICYmIGlzc2V0KCREYXRhVXNlck91dFsnbGlua3MnXSkgJiYgaXNfYXJyYXkoJERhdGFVc2VyT3V0WydsaW5rcyddKSkgewogICAgICAgIGZvcmVhY2ggKCREYXRhVXNlck91dFsnbGlua3MnXSBhcyAkTGlua3MpIHsKICAgICAgICAgICAgJGNvbmZpZyAuPSAkTGlua3MgLiAiXHJcciI7CiAgICAgICAgfQogICAgfQogICAgZWNobyAkY29uZmlnOwp9IGNhdGNoIChUaHJvd2FibGUgJGUpIHsKICAgIGVycm9yX2xvZygnc3ViIGVuZHBvaW50IGVycm9yOiAnIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICBlY2hvICJFcnJvciEiOwp9Cg==
+<?php
+ini_set('error_log', 'error_log');
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../panels.php';
+$ManagePanel = new ManagePanel();
+header('Content-Type: text/plain; charset=utf-8');
+$url = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+$parts = explode("/sub/", (string) $url);
+$token = trim($parts[1] ?? '');
+if ($token === '' || !preg_match('/^[a-f0-9]{4,64}$/i', $token)) {
+    echo "ERROR!";
+    exit;
+}
+try {
+    $nameloc = select("invoice", "*", "id_invoice", $token, "select");
+    if (!is_array($nameloc)) {
+        echo "ERROR!";
+        exit;
+    }
+    $DataUserOut = $ManagePanel->DataUser($nameloc['Service_location'], $nameloc['username']);
+    $config = "";
+    if (is_array($DataUserOut) && isset($DataUserOut['links']) && is_array($DataUserOut['links'])) {
+        foreach ($DataUserOut['links'] as $Links) {
+            $config .= $Links . "\r\r";
+        }
+    }
+    echo $config;
+} catch (Throwable $e) {
+    error_log('sub endpoint error: ' . $e->getMessage());
+    echo "Error!";
+}

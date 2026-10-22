@@ -1,1 +1,12 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgZm9yZWFjaCAoWydwcm9kdWN0JywgJ21hcnpiYW5fcGFuZWwnLCAnY2F0ZWdvcnknXSBhcyAkdGFibGUpIHsKICAgICAgICBpZiAoISRzY2hlbWEtPmhhc0NvbHVtbigkdGFibGUsICdkaXNwbGF5X29yZGVyJykpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgIGlmICgoaW50KSAkcGRvLT5xdWVyeSgiU0VMRUNUIENPVU5UKCopIEZST00gYCR0YWJsZWAgV0hFUkUgZGlzcGxheV9vcmRlciAhPSAwIiktPmZldGNoQ29sdW1uKCkgPT09IDApIHsKICAgICAgICAgICAgJHBkby0+ZXhlYygiVVBEQVRFIGAkdGFibGVgIFNFVCBkaXNwbGF5X29yZGVyID0gaWQiKTsKICAgICAgICB9CiAgICB9Cn07Cg==
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    foreach (['product', 'marzban_panel', 'category'] as $table) {
+        if (!$schema->hasColumn($table, 'display_order')) {
+            continue;
+        }
+        if ((int) $pdo->query("SELECT COUNT(*) FROM `$table` WHERE display_order != 0")->fetchColumn() === 0) {
+            $pdo->exec("UPDATE `$table` SET display_order = id");
+        }
+    }
+};

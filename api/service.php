@@ -1,1 +1,61 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CmhlYWRlcignQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PVVURi04Jyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CmluaV9zZXQoJ2RlZmF1bHRfY2hhcnNldCcsICdVVEYtOCcpOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgokaGVhZHJzID0gZ2V0YWxsaGVhZGVycygpOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CmlmICghdmFsaWRhdGVUb2tlbigkaGVhZHJzKSkgewogICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgInRva2VuIGludmFsaWQiLCBbXSwgNDAzKTsKfQoKJG1ldGhvZCA9ICRfU0VSVkVSWydSRVFVRVNUX01FVEhPRCddOwoKJGRhdGEgPSBqc29uX2RlY29kZShmaWxlX2dldF9jb250ZW50cygicGhwOi8vaW5wdXQiKSwgdHJ1ZSk7CmlmICghaXNfYXJyYXkoJGRhdGEpKSB7CiAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiZGF0YSBpbnZhbGlkIiwgW10pOwp9CiRkYXRhID0gc2FuaXRpemVfcmVjdXJzaXZlKCRkYXRhKTsKJGFjdGlvbiA9ICRkYXRhWydhY3Rpb25zJ10gPz8gJyc7Cgpsb2dBcGlSZXF1ZXN0KCRoZWFkcnMsICRkYXRhLCAkYWN0aW9uKTsKCmZ1bmN0aW9uIHN2Y19zZXJ2aWNlcyhhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHZhbGlkYXRlTWV0aG9kKCdHRVQnLCAkbWV0aG9kKTsKCiAgICAvLyAibGltaXQiIHN0YXlzIG9wdGlvbmFsIGFuZCB1bmJvdW5kZWQgYnkgZGVmYXVsdCwgYXMgY2FsbGVycyBvZiB0aGlzCiAgICAvLyBlbmRwb2ludCBoYXZlIGFsd2F5cyByZWxpZWQgb24gZ2V0dGluZyB0aGUgZnVsbCBsaXN0IGJhY2suCiAgICAkbGltaXQgPSBudWxsOwogICAgaWYgKGlzc2V0KCRkYXRhWydsaW1pdCddKSAmJiBpc19udW1lcmljKCRkYXRhWydsaW1pdCddKSkgewogICAgICAgICRsaW1pdCA9IG1pbihtYXgoKGludCkgJGRhdGFbJ2xpbWl0J10sIDEpLCAxMDAwKTsKICAgIH0KCiAgICB0cnkgewogICAgICAgICRzcWwgPSAiU0VMRUNUIGlkLGlkX3VzZXIsdXNlcm5hbWUsdGltZSxwcmljZSx0eXBlLHN0YXR1cyBGUk9NIHNlcnZpY2Vfb3RoZXIiOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgkbGltaXQgPT09IG51bGwgPyAkc3FsIDogJHNxbCAuICIgTElNSVQgOmxpbWl0Iik7CiAgICAgICAgaWYgKCRsaW1pdCAhPT0gbnVsbCkgewogICAgICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6bGltaXQnLCAkbGltaXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICB9CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoKTsKICAgICAgICAkdXNlcnMgPSAkc3RtdC0+ZmV0Y2hBbGwoUERPOjpGRVRDSF9BU1NPQyk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIsICR1c2Vycyk7CiAgICB9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKICAgICAgICBlcnJvcl9sb2coIkRhdGFiYXNlIGVycm9yIGluIHNlcnZpY2VzOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkRhdGFiYXNlIGVycm9yIG9jY3VycmVkIiwgW10sIDUwMCk7CiAgICB9Cn0KCm1hdGNoICgkYWN0aW9uKSB7CiAgICAnc2VydmljZXMnID0+IHN2Y19zZXJ2aWNlcygkZGF0YSwgJG1ldGhvZCksCiAgICBkZWZhdWx0ID0+IHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBY3Rpb24gSW52YWxpZCIpLAp9OwoK
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+$headrs = getallheaders();
+$setting = select("setting", "*");
+if (!validateToken($headrs)) {
+    sendJsonResponse(false, "token invalid", [], 403);
+}
+
+$method = $_SERVER['REQUEST_METHOD'];
+
+$data = json_decode(file_get_contents("php://input"), true);
+if (!is_array($data)) {
+    sendJsonResponse(false, "data invalid", []);
+}
+$data = sanitize_recursive($data);
+$action = $data['actions'] ?? '';
+
+logApiRequest($headrs, $data, $action);
+
+function svc_services(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    // "limit" stays optional and unbounded by default, as callers of this
+    // endpoint have always relied on getting the full list back.
+    $limit = null;
+    if (isset($data['limit']) && is_numeric($data['limit'])) {
+        $limit = min(max((int) $data['limit'], 1), 1000);
+    }
+
+    try {
+        $sql = "SELECT id,id_user,username,time,price,type,status FROM service_other";
+        $stmt = $pdo->prepare($limit === null ? $sql : $sql . " LIMIT :limit");
+        if ($limit !== null) {
+            $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        }
+        $stmt->execute();
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        sendJsonResponse(true, "Successful", $users);
+    } catch (Exception $e) {
+        error_log("Database error in services: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+match ($action) {
+    'services' => svc_services($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};
+

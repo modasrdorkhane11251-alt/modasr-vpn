@@ -1,1 +1,15 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KICA8aGVhZD4KICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04IiAvPgogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiIC8+CiAgICA8dGl0bGU+TW9kYXNyIFdlYiBBcHA8L3RpdGxlPgogICAgPHNjcmlwdCBzcmM9Ii4vanMvdGVsZWdyYW0td2ViLWFwcC5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHR5cGU9Im1vZHVsZSIgY3Jvc3NvcmlnaW4gc3JjPSIuL2Fzc2V0cy9pbmRleC1DLTJhMER1ci5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9Im1vZHVsZXByZWxvYWQiIGNyb3Nzb3JpZ2luIGhyZWY9Ii4vYXNzZXRzL3ZlbmRvci1DSUdKOWcycS5qcyI+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGNyb3Nzb3JpZ2luIGhyZWY9Ii4vYXNzZXRzL2luZGV4LUJvSEJzajBaLmNzcyI+CiAgPC9oZWFkPgogIDxib2R5PgogICAgPGRpdiBpZD0icm9vdCI+PC9kaXY+CiAgPC9ib2R5Pgo8L2h0bWw+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modasr Web App</title>
+    <script src="./js/telegram-web-app.js"></script>
+    <script type="module" crossorigin src="./assets/index-C-2a0Dur.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vendor-CIGJ9g2q.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-BoHBsj0Z.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,1 +1,42 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzL0FwaS9NYXJ6YmFuLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9ib3RhcGkucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CgoKCiRlcnJvcnJlcG9ydCA9IHNlbGVjdCgidG9waWNpZCIsImlkcmVwb3J0IiwicmVwb3J0IiwiZXJyb3JyZXBvcnQiLCJzZWxlY3QiKVsnaWRyZXBvcnQnXTsKJHNldHRpbmcgPSBzZWxlY3QoInNldHRpbmciLCAiKiIpOwokc3RhdHVzX2Nyb24gPSBqc29uX2RlY29kZSgkc2V0dGluZ1snY3Jvbl9zdGF0dXMnXSx0cnVlKTsKaWYoISRzdGF0dXNfY3JvblsndXB0aW1lX25vZGUnXSlyZXR1cm47CiRtYXJ6YmFubGlzdCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwidHlwZSIgLCJtYXJ6YmFuIiAsImZldGNoQWxsIik7CiRpbmJvdW5kcyA9IFtdOwpmb3JlYWNoICgkbWFyemJhbmxpc3QgYXMgJGxvY2F0aW9uKSB7CiAgICAkR2V0ZG5vZGVzID0gR2V0X05vZGVzKCRsb2NhdGlvblsnbmFtZV9wYW5lbCddKTsKICAgIGlmICghZW1wdHkoJEdldGRub2Rlc1snZXJyb3InXSkpCiAgICAgICAgY29udGludWU7CiAgICBpZiAoIWVtcHR5KCRHZXRkbm9kZXNbJ3N0YXR1cyddKSAmJiAkR2V0ZG5vZGVzWydzdGF0dXMnXSAhPSAyMDApCiAgICAgICAgY29udGludWU7CiAgICAkR2V0ZG5vZGVzID0ganNvbl9kZWNvZGUoJEdldGRub2Rlc1snYm9keSddLCB0cnVlKTsKICAgICRHZXRkbm9kZXMgPSAkR2V0ZG5vZGVzWydub2RlcyddID8/ICRHZXRkbm9kZXM7CiAgICBpZiAoZW1wdHkoJEdldGRub2RlcykpCiAgICAgICAgY29udGludWU7CiAgICBmb3JlYWNoICgkR2V0ZG5vZGVzIGFzICRkYXRhKSB7CiAgICAgICAgaWYgKCFpbl9hcnJheSgkZGF0YVsnc3RhdHVzJ10sIFsiY29ubmVjdGVkIiwgImRpc2FibGVkIl0pKSB7CiAgICAgICAgICAgICR0ZXh0bm9kZSA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnQnXVsnbm9kZURvd24nXSwgJGRhdGFbJ25hbWUnXSwgJGRhdGFbJ3N0YXR1cyddLCAkZGF0YVsnbWVzc2FnZSddKTsKICAgICAgICBpZiAoc3RybGVuKCRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddKSA+IDApIHsKICAgICAgICB0ZWxlZ3JhbSgnc2VuZG1lc3NhZ2UnLFsKICAgICAgICAnY2hhdF9pZCcgPT4gJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10sCiAgICAgICAgJ21lc3NhZ2VfdGhyZWFkX2lkJyA9PiAkZXJyb3JyZXBvcnQsCiAgICAgICAgJ3RleHQnID0+ICR0ZXh0bm9kZSwKICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiCiAgICAgICAgXSk7CiAgICB9CiAgICB9Cn0KfQ==
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+
+
+
+$errorreport = select("topicid","idreport","report","errorreport","select")['idreport'];
+$setting = select("setting", "*");
+$status_cron = json_decode($setting['cron_status'],true);
+if(!$status_cron['uptime_node'])return;
+$marzbanlist = select("marzban_panel", "*","type" ,"marzban" ,"fetchAll");
+$inbounds = [];
+foreach ($marzbanlist as $location) {
+    $Getdnodes = Get_Nodes($location['name_panel']);
+    if (!empty($Getdnodes['error']))
+        continue;
+    if (!empty($Getdnodes['status']) && $Getdnodes['status'] != 200)
+        continue;
+    $Getdnodes = json_decode($Getdnodes['body'], true);
+    $Getdnodes = $Getdnodes['nodes'] ?? $Getdnodes;
+    if (empty($Getdnodes))
+        continue;
+    foreach ($Getdnodes as $data) {
+        if (!in_array($data['status'], ["connected", "disabled"])) {
+            $textnode = sprintf($textbotlang['Admin']['report']['nodeDown'], $data['name'], $data['status'], $data['message']);
+        if (strlen($setting['Channel_Report']) > 0) {
+        telegram('sendmessage',[
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => $errorreport,
+        'text' => $textnode,
+        'parse_mode' => "HTML"
+        ]);
+    }
+    }
+}
+}

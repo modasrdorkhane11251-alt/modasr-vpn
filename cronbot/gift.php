@@ -1,1 +1,138 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7Cgppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2JvdGFwaS5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokTWFuYWdlUGFuZWwgPSBuZXcgTWFuYWdlUGFuZWwoKTsKCgokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiRlcnJvcnJlcG9ydCA9IHNlbGVjdCgidG9waWNpZCIsImlkcmVwb3J0IiwicmVwb3J0IiwiZXJyb3JyZXBvcnQiLCJzZWxlY3QiKVsnaWRyZXBvcnQnXTsKCiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CmlmKCFpc19maWxlKCdnaWZ0JykpcmV0dXJuOwppZighaXNfZmlsZSgndXNlcm5hbWUuanNvbicpKXJldHVybjsKCgokdXNlcmlkID0ganNvbl9kZWNvZGUoZmlsZV9nZXRfY29udGVudHMoJ3VzZXJuYW1lLmpzb24nKSk7CmlmKGlzX2ZpbGUoJ2dpZnQnKSl7CiRpbmZvID0ganNvbl9kZWNvZGUoZmlsZV9nZXRfY29udGVudHMoJ2dpZnQnKSx0cnVlKTsKfQokY291bnQgPSAwOwppZihjb3VudCgkdXNlcmlkKSA9PSAwKXsKICAgIGlmKGlzc2V0KCRpbmZvWydpZF9hZG1pbiddKSl7CiAgICBkZWxldGVtZXNzYWdlKCRpbmZvWydpZF9hZG1pbiddLCAkaW5mb1snaWRfbWVzc2FnZSddKTsKICAgIHNlbmRtZXNzYWdlKCRpbmZvWydpZF9hZG1pbiddLCAkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ2dpZnQnXVsnZG9uZSddLCBudWxsLCAnSFRNTCcpOwogICAgdW5saW5rKCdnaWZ0Jyk7CiAgICB1bmxpbmsoJ3VzZXJuYW1lLmpzb24nKTsKICAgIH0KICAgIHJldHVybjsKICAgIAp9CgppZighaXNzZXQoJGluZm9bJ3R5cGVnaWZ0J10pKXJldHVybjsKaWYoJGluZm9bJ3R5cGVnaWZ0J10gPT0gInZvbHVtZSIpewogICAgJGNvdW50ID0gIDA7CmZvcmVhY2ggKCR1c2VyaWQgYXMgJGlkdXNlcil7CiAgICAkY291bnQgKz0xOwogICAgaWYoJGNvdW50ID09IDUpYnJlYWs7CiAgICAkZ2V0X3VzZXJuYW1lX2luZm8gPSAkTWFuYWdlUGFuZWwtPkRhdGFVc2VyKCRpbmZvWyduYW1lX3BhbmVsJ10sJGlkdXNlci0+dXNlcm5hbWUpOwogICAgdW5zZXQoJHVzZXJpZFswXSk7CiAgICAkdXNlcmlkID0gYXJyYXlfdmFsdWVzKCR1c2VyaWQpOwogICAgaWYoIShlbXB0eSgkZ2V0X3VzZXJuYW1lX2luZm9bJ2V4cGlyZSddKSB8fCBlbXB0eSgkZ2V0X3VzZXJuYW1lX2luZm9bJ2RhdGFfbGltaXQnXSkgfHwgJGdldF91c2VybmFtZV9pbmZvWydzdGF0dXMnXSA9PSAiVW5zdWNjZXNzZnVsIikpewogICAgJGludm9jZSA9IHNlbGVjdCgiaW52b2ljZSIsIioiLCJ1c2VybmFtZSIsJGlkdXNlci0+dXNlcm5hbWUsInNlbGVjdCIpOwogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCIqIiwibmFtZV9wYW5lbCIsJGluZm9bJ25hbWVfcGFuZWwnXSwic2VsZWN0Iik7CiAgICAkZGF0YV9saW1pdCA9ICRnZXRfdXNlcm5hbWVfaW5mb1snZGF0YV9saW1pdCddIC8gcG93KDEwMjQsMyk7CiAgICAkZGF0YV9saW1pdF9uZXcgPSAkZGF0YV9saW1pdCArIGludHZhbCgkaW5mb1sndmFsdWUnXSk7CiAgICAkZGF0YV9saW1pdF9ieXRlID0gJGRhdGFfbGltaXRfbmV3ICpwb3coMTAyNCwzKTsKICAgICRleHRyYV92b2x1bWUgPSAkTWFuYWdlUGFuZWwtPmV4dHJhX3ZvbHVtZSgkaW52b2NlWyd1c2VybmFtZSddLCRtYXJ6YmFuX2xpc3RfZ2V0Wydjb2RlX3BhbmVsJ10sJGluZm9bJ3ZhbHVlJ10pOwogICAgIGlmKCRleHRyYV92b2x1bWVbJ3N0YXR1cyddID09IGZhbHNlKXsKICAgICAgICAgICAgJGV4dHJhX3ZvbHVtZVsnbXNnJ10gPSBqc29uX2VuY29kZSgkZXh0cmFfdm9sdW1lWydtc2cnXSk7CiAgICAgICAgICAgICR0ZXh0cmVwb3J0cyA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydnaWZ0J11bJ3ZvbHVtZUFkZEVycm9yJ10sICRtYXJ6YmFuX2xpc3RfZ2V0WyduYW1lX3BhbmVsJ10sICRpZHVzZXItPnVzZXJuYW1lLCAkZXh0cmFfdm9sdW1lWydtc2cnXSk7CiAgICAgICAgICAgIGlmIChzdHJsZW4oJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10pID4gMCkgewogICAgICAgICAgICAgICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJyxbCiAgICAgICAgICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAgICAgICAgICdtZXNzYWdlX3RocmVhZF9pZCcgPT4gJGVycm9ycmVwb3J0LAogICAgICAgICAgICAgICAgICAgICd0ZXh0JyA9PiAkdGV4dHJlcG9ydHMsCiAgICAgICAgICAgICAgICAgICAgJ3BhcnNlX21vZGUnID0+ICJIVE1MIgogICAgICAgICAgICAgICAgXSk7CiAgICAgICAgICAgIH0KICAgICAgICB9ZWxzZXsKc2VuZG1lc3NhZ2UoJGludm9jZVsnaWRfdXNlciddLCRpbmZvWyd0ZXh0J10sbnVsbCwiaHRtbCIpOwp9CiRkYXRhX2Zvcl9kYXRhYmFzZSA9IGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICd2b2x1bWVfdmFsdWUnID0+ICRpbmZvWyd2YWx1ZSddLAogICAgICAgICdvbGRfdm9sdW1lJyA9PiAkZ2V0X3VzZXJuYW1lX2luZm9bJ2RhdGFfbGltaXQnXSwKICAgICAgICAnZXhwaXJlX29sZCcgPT4gJGdldF91c2VybmFtZV9pbmZvWydleHBpcmUnXQogICAgKSk7CiR2b2x1bWVwcmljZWxhc3QgPSAwOwokc3RtdCA9ICRwZG8tPnByZXBhcmUoIklOU0VSVCBJR05PUkUgSU5UTyBzZXJ2aWNlX290aGVyIChpZF91c2VyLCB1c2VybmFtZSwgdmFsdWUsIHR5cGUsIHRpbWUsIHByaWNlLCBvdXRwdXQpIFZBTFVFUyAoOmlkX3VzZXIsIDp1c2VybmFtZSwgOnZhbHVlLCA6dHlwZSwgOnRpbWUsIDpwcmljZSwgOm91dHB1dCkiKTsKICAgICR2YWx1ZSA9ICRkYXRhX2Zvcl9kYXRhYmFzZTsKICAgICRkYXRlYWNjID0gZGF0ZSgnWS9tL2QgSDppOnMnKTsKICAgICR0eXBlID0gImdpZnRfdm9sdW1lIjsKICAgICRzdG10LT5leGVjdXRlKFsKICAgICc6aWRfdXNlcicgPT4gJGludm9jZVsnaWRfdXNlciddLAogICAgJzp1c2VybmFtZScgPT4gJGludm9jZVsndXNlcm5hbWUnXSwKICAgICc6dmFsdWUnID0+ICR2YWx1ZSwKICAgICc6dHlwZScgPT4gJHR5cGUsCiAgICAnOnRpbWUnID0+ICRkYXRlYWNjLAogICAgJzpwcmljZScgPT4gJHZvbHVtZXByaWNlbGFzdCwKICAgICc6b3V0cHV0JyA9PiBqc29uX2VuY29kZSgkZXh0cmFfdm9sdW1lKSwKICAgIF0pOwp9Cn0KfQplbHNlewogICAgCiRjb3VudCA9ICAwOwpmb3JlYWNoICgkdXNlcmlkIGFzICRpZHVzZXIpewogICAgJGNvdW50ICs9MTsKICAgIGlmKCRjb3VudCA9PSA1KWJyZWFrOwogICAgJGdldF91c2VybmFtZV9pbmZvID0gJE1hbmFnZVBhbmVsLT5EYXRhVXNlcigkaW5mb1snbmFtZV9wYW5lbCddLCRpZHVzZXItPnVzZXJuYW1lKTsKICAgIHVuc2V0KCR1c2VyaWRbMF0pOwogICAgJHVzZXJpZCA9IGFycmF5X3ZhbHVlcygkdXNlcmlkKTsKICAgIGlmKCEoZW1wdHkoJGdldF91c2VybmFtZV9pbmZvWydleHBpcmUnXSkgfHwgJGdldF91c2VybmFtZV9pbmZvWydzdGF0dXMnXSA9PSAiVW5zdWNjZXNzZnVsIikpewogICAgJGludm9jZSA9IHNlbGVjdCgiaW52b2ljZSIsIioiLCJ1c2VybmFtZSIsJGlkdXNlci0+dXNlcm5hbWUsInNlbGVjdCIpOwogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCIqIiwibmFtZV9wYW5lbCIsJGluZm9bJ25hbWVfcGFuZWwnXSwic2VsZWN0Iik7CiAgICAkZXh0cmFfdGltZSA9ICRNYW5hZ2VQYW5lbC0+ZXh0cmFfdGltZSgkZ2V0X3VzZXJuYW1lX2luZm9bJ3VzZXJuYW1lJ10sJG1hcnpiYW5fbGlzdF9nZXRbJ2NvZGVfcGFuZWwnXSxpbnR2YWwoJGluZm9bJ3ZhbHVlJ10pKTsKICAgICBpZigkZXh0cmFfdGltZVsnc3RhdHVzJ10gPT0gZmFsc2UpewogICAgICAgICAgICAkZXh0cmFfdGltZVsnbXNnJ10gPSBqc29uX2VuY29kZSgkZXh0cmFfdGltZVsnbXNnJ10pOwogICAgICAgICAgICAkdGV4dHJlcG9ydHMgPSBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1snQWRtaW4nXVsnZ2lmdCddWyd2b2x1bWVBZGRFcnJvcjInXSwgJG1hcnpiYW5fbGlzdF9nZXRbJ25hbWVfcGFuZWwnXSwgJGlkdXNlci0+dXNlcm5hbWUsICRleHRyYV90aW1lWydtc2cnXSk7CiAgICAgICAgICAgIGlmIChzdHJsZW4oJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10pID4gMCkgewogICAgICAgICAgICAgICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJyxbCiAgICAgICAgICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAgICAgICAgICdtZXNzYWdlX3RocmVhZF9pZCcgPT4gJGVycm9ycmVwb3J0LAogICAgICAgICAgICAgICAgICAgICd0ZXh0JyA9PiAkdGV4dHJlcG9ydHMsCiAgICAgICAgICAgICAgICAgICAgJ3BhcnNlX21vZGUnID0+ICJIVE1MIgogICAgICAgICAgICAgICAgXSk7CiAgICAgICAgICAgIH0KICAgICAgICB9ZWxzZXsKICAgICAgICAgICAgc2VuZG1lc3NhZ2UoJGludm9jZVsnaWRfdXNlciddLCRpbmZvWyd0ZXh0J10sbnVsbCwiaHRtbCIpOwogICAgICAgIH0KJGRhdGFfZm9yX2RhdGFiYXNlID0ganNvbl9lbmNvZGUoYXJyYXkoCiAgICAgICAgJ3RpbWVfdmFsdWUnID0+ICRpbmZvWyd2YWx1ZSddLAogICAgICAgICdvbGRfdm9sdW1lJyA9PiAkZ2V0X3VzZXJuYW1lX2luZm9bJ2RhdGFfbGltaXQnXSwKICAgICAgICAnZXhwaXJlX29sZCcgPT4gJGdldF91c2VybmFtZV9pbmZvWydleHBpcmUnXQogICAgKSk7CiR2b2x1bWVwcmljZWxhc3QgPSAwOwokc3RtdCA9ICRwZG8tPnByZXBhcmUoIklOU0VSVCBJR05PUkUgSU5UTyBzZXJ2aWNlX290aGVyIChpZF91c2VyLCB1c2VybmFtZSwgdmFsdWUsIHR5cGUsIHRpbWUsIHByaWNlLCBvdXRwdXQpIFZBTFVFUyAoOmlkX3VzZXIsIDp1c2VybmFtZSwgOnZhbHVlLCA6dHlwZSwgOnRpbWUsIDpwcmljZSwgOm91dHB1dCkiKTsKICAgICR2YWx1ZSA9ICRkYXRhX2Zvcl9kYXRhYmFzZTsKICAgICRkYXRlYWNjID0gZGF0ZSgnWS9tL2QgSDppOnMnKTsKICAgICR0eXBlID0gImdpZnRfdGltZSI7CiAgICAkc3RtdC0+ZXhlY3V0ZShbCiAgICAnOmlkX3VzZXInID0+ICRpbnZvY2VbJ2lkX3VzZXInXSwKICAgICc6dXNlcm5hbWUnID0+ICRpbnZvY2VbJ3VzZXJuYW1lJ10sCiAgICAnOnZhbHVlJyA9PiAkdmFsdWUsCiAgICAnOnR5cGUnID0+ICR0eXBlLAogICAgJzp0aW1lJyA9PiAkZGF0ZWFjYywKICAgICc6cHJpY2UnID0+ICR2b2x1bWVwcmljZWxhc3QsCiAgICAnOm91dHB1dCcgPT4ganNvbl9lbmNvZGUoJGV4dHJhX3RpbWUpLAogICAgXSk7Cn0KfQp9CmZpbGVfcHV0X2NvbnRlbnRzKCd1c2VybmFtZS5qc29uJyxqc29uX2VuY29kZSgkdXNlcmlkLHRydWUpKTs=
+<?php
+chdir(__DIR__);
+
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$ManagePanel = new ManagePanel();
+
+
+$setting = select("setting", "*");
+$errorreport = select("topicid","idreport","report","errorreport","select")['idreport'];
+
+$textbotlang = languagechange();
+if(!is_file('gift'))return;
+if(!is_file('username.json'))return;
+
+
+$userid = json_decode(file_get_contents('username.json'));
+if(is_file('gift')){
+$info = json_decode(file_get_contents('gift'),true);
+}
+$count = 0;
+if(count($userid) == 0){
+    if(isset($info['id_admin'])){
+    deletemessage($info['id_admin'], $info['id_message']);
+    sendmessage($info['id_admin'], $textbotlang['Admin']['gift']['done'], null, 'HTML');
+    unlink('gift');
+    unlink('username.json');
+    }
+    return;
+    
+}
+
+if(!isset($info['typegift']))return;
+if($info['typegift'] == "volume"){
+    $count =  0;
+foreach ($userid as $iduser){
+    $count +=1;
+    if($count == 5)break;
+    $get_username_info = $ManagePanel->DataUser($info['name_panel'],$iduser->username);
+    unset($userid[0]);
+    $userid = array_values($userid);
+    if(!(empty($get_username_info['expire']) || empty($get_username_info['data_limit']) || $get_username_info['status'] == "Unsuccessful")){
+    $invoce = select("invoice","*","username",$iduser->username,"select");
+    $marzban_list_get = select("marzban_panel","*","name_panel",$info['name_panel'],"select");
+    $data_limit = $get_username_info['data_limit'] / pow(1024,3);
+    $data_limit_new = $data_limit + intval($info['value']);
+    $data_limit_byte = $data_limit_new *pow(1024,3);
+    $extra_volume = $ManagePanel->extra_volume($invoce['username'],$marzban_list_get['code_panel'],$info['value']);
+     if($extra_volume['status'] == false){
+            $extra_volume['msg'] = json_encode($extra_volume['msg']);
+            $textreports = sprintf($textbotlang['Admin']['gift']['volumeAddError'], $marzban_list_get['name_panel'], $iduser->username, $extra_volume['msg']);
+            if (strlen($setting['Channel_Report']) > 0) {
+                telegram('sendmessage',[
+                    'chat_id' => $setting['Channel_Report'],
+                    'message_thread_id' => $errorreport,
+                    'text' => $textreports,
+                    'parse_mode' => "HTML"
+                ]);
+            }
+        }else{
+sendmessage($invoce['id_user'],$info['text'],null,"html");
+}
+$data_for_database = json_encode(array(
+        'volume_value' => $info['value'],
+        'old_volume' => $get_username_info['data_limit'],
+        'expire_old' => $get_username_info['expire']
+    ));
+$volumepricelast = 0;
+$stmt = $pdo->prepare("INSERT IGNORE INTO service_other (id_user, username, value, type, time, price, output) VALUES (:id_user, :username, :value, :type, :time, :price, :output)");
+    $value = $data_for_database;
+    $dateacc = date('Y/m/d H:i:s');
+    $type = "gift_volume";
+    $stmt->execute([
+    ':id_user' => $invoce['id_user'],
+    ':username' => $invoce['username'],
+    ':value' => $value,
+    ':type' => $type,
+    ':time' => $dateacc,
+    ':price' => $volumepricelast,
+    ':output' => json_encode($extra_volume),
+    ]);
+}
+}
+}
+else{
+    
+$count =  0;
+foreach ($userid as $iduser){
+    $count +=1;
+    if($count == 5)break;
+    $get_username_info = $ManagePanel->DataUser($info['name_panel'],$iduser->username);
+    unset($userid[0]);
+    $userid = array_values($userid);
+    if(!(empty($get_username_info['expire']) || $get_username_info['status'] == "Unsuccessful")){
+    $invoce = select("invoice","*","username",$iduser->username,"select");
+    $marzban_list_get = select("marzban_panel","*","name_panel",$info['name_panel'],"select");
+    $extra_time = $ManagePanel->extra_time($get_username_info['username'],$marzban_list_get['code_panel'],intval($info['value']));
+     if($extra_time['status'] == false){
+            $extra_time['msg'] = json_encode($extra_time['msg']);
+            $textreports = sprintf($textbotlang['Admin']['gift']['volumeAddError2'], $marzban_list_get['name_panel'], $iduser->username, $extra_time['msg']);
+            if (strlen($setting['Channel_Report']) > 0) {
+                telegram('sendmessage',[
+                    'chat_id' => $setting['Channel_Report'],
+                    'message_thread_id' => $errorreport,
+                    'text' => $textreports,
+                    'parse_mode' => "HTML"
+                ]);
+            }
+        }else{
+            sendmessage($invoce['id_user'],$info['text'],null,"html");
+        }
+$data_for_database = json_encode(array(
+        'time_value' => $info['value'],
+        'old_volume' => $get_username_info['data_limit'],
+        'expire_old' => $get_username_info['expire']
+    ));
+$volumepricelast = 0;
+$stmt = $pdo->prepare("INSERT IGNORE INTO service_other (id_user, username, value, type, time, price, output) VALUES (:id_user, :username, :value, :type, :time, :price, :output)");
+    $value = $data_for_database;
+    $dateacc = date('Y/m/d H:i:s');
+    $type = "gift_time";
+    $stmt->execute([
+    ':id_user' => $invoce['id_user'],
+    ':username' => $invoce['username'],
+    ':value' => $value,
+    ':type' => $type,
+    ':time' => $dateacc,
+    ':price' => $volumepricelast,
+    ':output' => json_encode($extra_time),
+    ]);
+}
+}
+}
+file_put_contents('username.json',json_encode($userid,true));

@@ -1,1 +1,16 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT50YWJsZUV4aXN0cygnbWFyemJhbl9wYW5lbCcpKSB7CiAgICAgICAgcmV0dXJuOwogICAgfQogICAgJHJvd3MgPSAkcGRvLT5xdWVyeSgnU0VMRUNUIGlkLCBNZXRob2RleHRlbmQgRlJPTSBtYXJ6YmFuX3BhbmVsJyktPmZldGNoQWxsKFBETzo6RkVUQ0hfQVNTT0MpOwogICAgJHVwZGF0ZSA9ICRwZG8tPnByZXBhcmUoJ1VQREFURSBtYXJ6YmFuX3BhbmVsIFNFVCBNZXRob2RleHRlbmQgPSA/IFdIRVJFIGlkID0gPycpOwogICAgZm9yZWFjaCAoJHJvd3MgYXMgJHJvdykgewogICAgICAgICRrZXkgPSBleHRlbmRNZXRob2RLZXkoJHJvd1snTWV0aG9kZXh0ZW5kJ10sIG51bGwpOwogICAgICAgIGlmICgka2V5ID09PSBudWxsIHx8ICRrZXkgPT09ICRyb3dbJ01ldGhvZGV4dGVuZCddKSB7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KICAgICAgICAkdXBkYXRlLT5leGVjdXRlKFska2V5LCAkcm93WydpZCddXSk7CiAgICB9Cn07Cg==
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->tableExists('marzban_panel')) {
+        return;
+    }
+    $rows = $pdo->query('SELECT id, Methodextend FROM marzban_panel')->fetchAll(PDO::FETCH_ASSOC);
+    $update = $pdo->prepare('UPDATE marzban_panel SET Methodextend = ? WHERE id = ?');
+    foreach ($rows as $row) {
+        $key = extendMethodKey($row['Methodextend'], null);
+        if ($key === null || $key === $row['Methodextend']) {
+            continue;
+        }
+        $update->execute([$key, $row['id']]);
+    }
+};

@@ -1,1 +1,186 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CgpoZWFkZXIoJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOCcpOwpkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL1RlaHJhbicpOwppbmlfc2V0KCdkZWZhdWx0X2NoYXJzZXQnLCAnVVRGLTgnKTsKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwoKbGlzdCgkaGVhZGVycywgJGRhdGEsICRhY3Rpb24pID0gYXBpUmVxdWVzdENvbnRleHQoKTsKJG1ldGhvZCA9ICRfU0VSVkVSWydSRVFVRVNUX01FVEhPRCddOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CgpmdW5jdGlvbiBjYXRfY2F0ZWdvcnlzKGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgZ2xvYmFsICRwZG87CgogICAgdmFsaWRhdGVNZXRob2QoJ0dFVCcsICRtZXRob2QpOwoKICAgICRwYWdpbmcgPSBwYWdpbmF0aW9uUGFyYW1zKCRkYXRhKTsKICAgICRsaW1pdCA9ICRwYWdpbmdbJ2xpbWl0J107CiAgICAkcGFnZSA9ICRwYWdpbmdbJ3BhZ2UnXTsKICAgICRvZmZzZXQgPSAkcGFnaW5nWydvZmZzZXQnXTsKICAgICRxID0gJHBhZ2luZ1sncSddOwoKICAgIHRyeSB7CiAgICAgICAgJHNlYXJjaCA9ICIlJHElIjsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBDT1VOVCgqKSBhcyB0b3RhbCBGUk9NIGNhdGVnb3J5IFdIRVJFIChyZW1hcmsgTElLRSA6cmVtYXJrICkiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJzpyZW1hcmsnID0+ICRzZWFyY2hdKTsKICAgICAgICAkdG90YWxjYXRlZ29yeSA9IChpbnQpICRzdG10LT5mZXRjaENvbHVtbigpOwogICAgICAgICR0b3RhbFBhZ2VzID0gKGludCkgY2VpbCgkdG90YWxjYXRlZ29yeSAvICRsaW1pdCk7CiAgICAgICAgJHF1ZXJ5ID0gIlNFTEVDVCAqIEZST00gY2F0ZWdvcnkgV0hFUkUgcmVtYXJrICBMSUtFIENPTkNBVCgnJScsIDpyZW1hcmssICclJykgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQgTElNSVQgOmxpbWl0IE9GRlNFVCA6b2Zmc2V0IjsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoJHF1ZXJ5KTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6cmVtYXJrJywgJHEsIFBETzo6UEFSQU1fU1RSKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6bGltaXQnLCAkbGltaXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6b2Zmc2V0JywgJG9mZnNldCwgUERPOjpQQVJBTV9JTlQpOwogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgJGNhdGVnb3J5cyA9ICRzdG10LT5mZXRjaEFsbChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnY2F0ZWdvcnlzJyA9PiAkY2F0ZWdvcnlzLAogICAgICAgICAgICAncGFnaW5hdGlvbicgPT4gWwogICAgICAgICAgICAgICAgJ3RvdGFsX2NhdGVnb3J5cycgPT4gJHRvdGFsY2F0ZWdvcnksCiAgICAgICAgICAgICAgICAndG90YWxfcGFnZXMnID0+ICR0b3RhbFBhZ2VzLAogICAgICAgICAgICAgICAgJ2N1cnJlbnRfcGFnZScgPT4gJHBhZ2UsCiAgICAgICAgICAgICAgICAncGVyX3BhZ2UnID0+ICRsaW1pdAogICAgICAgICAgICBdCiAgICAgICAgXSk7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBjYXRlZ29yeTogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJEYXRhYmFzZSBlcnJvciBvY2N1cnJlZCIsIFtdLCA1MDApOwogICAgfQp9CgpmdW5jdGlvbiBjYXRfY2F0ZWdvcnkoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgaWYgKCFpc3NldCgkZGF0YVsnaWQnXSkgfHwgZW1wdHkoJGRhdGFbJ2lkJ10pKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImlkIGVtcHR5IiwgW10pOwogICAgfQoKICAgIHRyeSB7CiAgICAgICAgJGNhdGVnb3J5ID0gc2VsZWN0KCJjYXRlZ29yeSIsICIqIiwgImlkIiwgJGRhdGFbJ2lkJ10sICJzZWxlY3QiKTsKICAgICAgICBpZiAoISRjYXRlZ29yeSkgewogICAgICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAgICAgJ2NhdGVnb3J5JyA9PiBbXSwKICAgICAgICAgICAgXSk7CiAgICAgICAgfQogICAgICAgIHNlbmRKc29uUmVzcG9uc2UodHJ1ZSwgIlN1Y2Nlc3NmdWwiLCBbCiAgICAgICAgICAgICdjYXRlZ29yeScgPT4gJGNhdGVnb3J5LAogICAgICAgIF0pOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBjYXRlZ29yeTogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJEYXRhYmFzZSBlcnJvciBvY2N1cnJlZCIsIFtdLCA1MDApOwogICAgfQp9CgpmdW5jdGlvbiBjYXRfY2F0ZWdvcnlfYWRkKGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgZ2xvYmFsICRwZG87CgogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKICAgIHJlcXVpcmVGaWVsZHMoJGRhdGEsIFsncmVtYXJrJ10pOwogICAgdHJ5IHsKICAgICAgICAkY2F0ZWdvcnlEYXRhID0gWwogICAgICAgICAgICAncmVtYXJrJyA9PiAkZGF0YVsncmVtYXJrJ10sCiAgICAgICAgXTsKCiAgICAgICAgJGNvbHVtbnMgPSBpbXBsb2RlKCcsJywgYXJyYXlfa2V5cygkY2F0ZWdvcnlEYXRhKSk7CiAgICAgICAgJHBsYWNlaG9sZGVycyA9ICc6JyAuIGltcGxvZGUoJywgOicsIGFycmF5X2tleXMoJGNhdGVnb3J5RGF0YSkpOwoKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoCiAgICAgICAgICAgICJJTlNFUlQgSUdOT1JFIElOVE8gY2F0ZWdvcnkgKHskY29sdW1uc30pIFZBTFVFUyAoeyRwbGFjZWhvbGRlcnN9KSIKICAgICAgICApOwoKICAgICAgICBmb3JlYWNoICgkY2F0ZWdvcnlEYXRhIGFzICRrZXkgPT4gJHZhbHVlKSB7CiAgICAgICAgICAgICRzdG10LT5iaW5kVmFsdWUoIjp7JGtleX0iLCAkdmFsdWUpOwogICAgICAgIH0KCiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoKTsKICAgICAgICAkcGRvLT5wcmVwYXJlKCJVUERBVEUgY2F0ZWdvcnkgU0VUIGRpc3BsYXlfb3JkZXIgPSBpZCBXSEVSRSBpZCA9ID8iKS0+ZXhlY3V0ZShbJHBkby0+bGFzdEluc2VydElkKCldKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIik7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJFcnJvciBpbiBjYXRlZ29yeV9hZGQ6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiQW4gZXJyb3Igb2NjdXJyZWQgd2hpbGUgZWRpdGluZyBjYXRlZ29yeSIpOwogICAgfQp9CgpmdW5jdGlvbiBjYXRfY2F0ZWdvcnlfZWRpdChhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHZhbGlkYXRlTWV0aG9kKCdQT1NUJywgJG1ldGhvZCk7CiAgICByZXF1aXJlRmllbGRzKCRkYXRhLCBbJ2lkJ10pOwogICAgJGNhdGVnb3J5ID0gc2VsZWN0KCJjYXRlZ29yeSIsICIqIiwgImlkIiwgJGRhdGFbJ2lkJ10sICJzZWxlY3QiKTsKICAgIGlmICghJGNhdGVnb3J5KSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImNhdGVnb3J5IG5vdCBmb3VuZCIsIFtdLCAyMDApOwogICAgfQoKICAgIHRyeSB7CiAgICAgICAgJGNhdGVnb3J5RGF0YSA9IFsKICAgICAgICAgICAgJ3JlbWFyaycgPT4gaXNzZXQoJGRhdGFbJ3JlbWFyayddKSA/ICRkYXRhWydyZW1hcmsnXSA6ICRjYXRlZ29yeVsncmVtYXJrJ10sCiAgICAgICAgXTsKCiAgICAgICAgJHNldFBhcnRzID0gW107CiAgICAgICAgZm9yZWFjaCAoJGNhdGVnb3J5RGF0YSBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgICAgICAkc2V0UGFydHNbXSA9ICJ7JGtleX0gPSA6eyRrZXl9IjsKICAgICAgICB9CiAgICAgICAgJHNldENsYXVzZSA9IGltcGxvZGUoIiwgIiwgJHNldFBhcnRzKTsKCiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJVUERBVEUgY2F0ZWdvcnkgU0VUIHskc2V0Q2xhdXNlfSBXSEVSRSBpZCA9IDppZCIpOwoKICAgICAgICBmb3JlYWNoICgkY2F0ZWdvcnlEYXRhIGFzICRrZXkgPT4gJHZhbHVlKSB7CiAgICAgICAgICAgICRzdG10LT5iaW5kVmFsdWUoIjp7JGtleX0iLCAkdmFsdWUpOwogICAgICAgIH0KICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCI6aWQiLCAkZGF0YVsnaWQnXSwgUERPOjpQQVJBTV9JTlQpOwoKICAgICAgICAkc3RtdC0+ZXhlY3V0ZSgpOwoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJjYXRlZ29yeSB1cGRhdGVkIHN1Y2Nlc3NmdWxseSIsIFtdLCAyMDApOwoKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRXJyb3IgaW4gY2F0ZWdvcnlfZWRpdDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBbiBlcnJvciBvY2N1cnJlZCB3aGlsZSBhZGRpbmcgY2F0ZWdvcnkiKTsKICAgIH0KfQoKZnVuY3Rpb24gY2F0X2NhdGVnb3J5X2RlbGV0ZShhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHZhbGlkYXRlTWV0aG9kKCdQT1NUJywgJG1ldGhvZCk7CiAgICByZXF1aXJlRmllbGRzKCRkYXRhLCBbJ2lkJ10pOwogICAgJGNhdGVnb3J5ID0gc2VsZWN0KCJjYXRlZ29yeSIsICIqIiwgImlkIiwgJGRhdGFbJ2lkJ10sICJzZWxlY3QiKTsKICAgIGlmICghJGNhdGVnb3J5KSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImNhdGVnb3J5IG5vdCBmb3VuZCIsIFtdLCAyMDApOwogICAgfQogICAgdHJ5IHsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIkRFTEVURSBGUk9NIGNhdGVnb3J5ICBXSEVSRSBpZCA9IDppZCIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoIjppZCIsICRkYXRhWydpZCddLCBQRE86OlBBUkFNX0lOVCk7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoKTsKCiAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiY2F0ZWdvcnkgZGVsZXRlIHN1Y2Nlc3NmdWxseSIsIFtdLCAyMDApOwoKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRXJyb3IgaW4gY2F0ZWdvcnkgZGVsZXRlIDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBbiBlcnJvciBvY2N1cnJlZCB3aGlsZSBkZWxldGUgcHJvZGN1dCIpOwogICAgfQp9CgptYXRjaCAoJGFjdGlvbikgewogICAgJ2NhdGVnb3J5cycgPT4gY2F0X2NhdGVnb3J5cygkZGF0YSwgJG1ldGhvZCksCiAgICAnY2F0ZWdvcnknID0+IGNhdF9jYXRlZ29yeSgkZGF0YSwgJG1ldGhvZCksCiAgICAnY2F0ZWdvcnlfYWRkJyA9PiBjYXRfY2F0ZWdvcnlfYWRkKCRkYXRhLCAkbWV0aG9kKSwKICAgICdjYXRlZ29yeV9lZGl0JyA9PiBjYXRfY2F0ZWdvcnlfZWRpdCgkZGF0YSwgJG1ldGhvZCksCiAgICAnY2F0ZWdvcnlfZGVsZXRlJyA9PiBjYXRfY2F0ZWdvcnlfZGVsZXRlKCRkYXRhLCAkbWV0aG9kKSwKICAgIGRlZmF1bHQgPT4gc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFjdGlvbiBJbnZhbGlkIiksCn07CgoKPz4=
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+list($headers, $data, $action) = apiRequestContext();
+$method = $_SERVER['REQUEST_METHOD'];
+$setting = select("setting", "*");
+
+function cat_categorys(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM category WHERE (remark LIKE :remark )");
+        $stmt->execute([':remark' => $search]);
+        $totalcategory = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($totalcategory / $limit);
+        $query = "SELECT * FROM category WHERE remark  LIKE CONCAT('%', :remark, '%') ORDER BY display_order, id LIMIT :limit OFFSET :offset";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindValue(':remark', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $categorys = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        sendJsonResponse(true, "Successful", [
+            'categorys' => $categorys,
+            'pagination' => [
+                'total_categorys' => $totalcategory,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+
+    } catch (Exception $e) {
+        error_log("Database error in category: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function cat_category(array $data, string $method): void
+{
+    validateMethod('GET', $method);
+
+    if (!isset($data['id']) || empty($data['id'])) {
+        sendJsonResponse(false, "id empty", []);
+    }
+
+    try {
+        $category = select("category", "*", "id", $data['id'], "select");
+        if (!$category) {
+            sendJsonResponse(true, "Successful", [
+                'category' => [],
+            ]);
+        }
+        sendJsonResponse(true, "Successful", [
+            'category' => $category,
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in category: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function cat_category_add(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['remark']);
+    try {
+        $categoryData = [
+            'remark' => $data['remark'],
+        ];
+
+        $columns = implode(',', array_keys($categoryData));
+        $placeholders = ':' . implode(', :', array_keys($categoryData));
+
+        $stmt = $pdo->prepare(
+            "INSERT IGNORE INTO category ({$columns}) VALUES ({$placeholders})"
+        );
+
+        foreach ($categoryData as $key => $value) {
+            $stmt->bindValue(":{$key}", $value);
+        }
+
+        $stmt->execute();
+        $pdo->prepare("UPDATE category SET display_order = id WHERE id = ?")->execute([$pdo->lastInsertId()]);
+        sendJsonResponse(true, "Successful");
+
+    } catch (Exception $e) {
+        error_log("Error in category_add: " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while editing category");
+    }
+}
+
+function cat_category_edit(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['id']);
+    $category = select("category", "*", "id", $data['id'], "select");
+    if (!$category) {
+        sendJsonResponse(false, "category not found", [], 200);
+    }
+
+    try {
+        $categoryData = [
+            'remark' => isset($data['remark']) ? $data['remark'] : $category['remark'],
+        ];
+
+        $setParts = [];
+        foreach ($categoryData as $key => $value) {
+            $setParts[] = "{$key} = :{$key}";
+        }
+        $setClause = implode(", ", $setParts);
+
+        $stmt = $pdo->prepare("UPDATE category SET {$setClause} WHERE id = :id");
+
+        foreach ($categoryData as $key => $value) {
+            $stmt->bindValue(":{$key}", $value);
+        }
+        $stmt->bindValue(":id", $data['id'], PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        sendJsonResponse(true, "category updated successfully", [], 200);
+
+    } catch (Exception $e) {
+        error_log("Error in category_edit: " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while adding category");
+    }
+}
+
+function cat_category_delete(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['id']);
+    $category = select("category", "*", "id", $data['id'], "select");
+    if (!$category) {
+        sendJsonResponse(false, "category not found", [], 200);
+    }
+    try {
+        $stmt = $pdo->prepare("DELETE FROM category  WHERE id = :id");
+        $stmt->bindValue(":id", $data['id'], PDO::PARAM_INT);
+        $stmt->execute();
+
+        sendJsonResponse(true, "category delete successfully", [], 200);
+
+    } catch (Exception $e) {
+        error_log("Error in category delete : " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while delete prodcut");
+    }
+}
+
+match ($action) {
+    'categorys' => cat_categorys($data, $method),
+    'category' => cat_category($data, $method),
+    'category_add' => cat_category_add($data, $method),
+    'category_edit' => cat_category_edit($data, $method),
+    'category_delete' => cat_category_delete($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};
+
+
+?>

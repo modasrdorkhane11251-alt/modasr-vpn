@@ -1,1 +1,72 @@
-d2luZG93LnBpY2tUaGVtZSA9IGZ1bmN0aW9uICh0KSB7CiAgICBhcHBseVRoZW1lKHQpOwogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLnRoZW1lLWNhcmQnKS5mb3JFYWNoKGZ1bmN0aW9uIChjKSB7CiAgICAgICAgYy5jbGFzc0xpc3QudG9nZ2xlKCdhY3RpdmUnLCBjLmRhdGFzZXQudGsgPT09IHQpOwogICAgfSk7CiAgICB2YXIgbmFtZUVsID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignW2RhdGEtdGs9IicgKyB0ICsgJyJdIC50aGVtZS1uYW1lJyk7CiAgICB0b2FzdCh3aW5kb3cudCgnanNUaGVtZUFjdGl2YXRlZCcsIHsgbmFtZTogKG5hbWVFbCA/IG5hbWVFbC50ZXh0Q29udGVudCA6IHQpIH0pLCAnaW5mbycsIDIyMDApOwp9OwoKd2luZG93LnNldFNpZGViYXJNb2RlID0gZnVuY3Rpb24gKGNvbGxhcHNlZCkgewogICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3BhbmVsLXNiLWNvbGxhcHNlZCcsIGNvbGxhcHNlZCA/ICcxJyA6ICcwJyk7CiAgICB2YXIgc2IgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2lkZWJhcicpOwogICAgaWYgKHNiKSB7CiAgICAgICAgaWYgKGNvbGxhcHNlZCkgc2IuY2xhc3NMaXN0LmFkZCgnY29sbGFwc2VkJyk7CiAgICAgICAgZWxzZSBzYi5jbGFzc0xpc3QucmVtb3ZlKCdjb2xsYXBzZWQnKTsKICAgIH0KICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ1tpZF49Im1vZGUiXScpLmZvckVhY2goZnVuY3Rpb24gKGIpIHsKICAgICAgICBiLnN0eWxlLmJvcmRlckNvbG9yID0gJyc7CiAgICAgICAgYi5zdHlsZS5jb2xvciA9ICcnOwogICAgfSk7CiAgICB2YXIgYnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoY29sbGFwc2VkID8gJ21vZGVDb2xsYXBzZWQnIDogJ21vZGVFeHBhbmRlZCcpOwogICAgaWYgKGJ0bikgeyBidG4uc3R5bGUuYm9yZGVyQ29sb3IgPSAndmFyKC0tYWMpJzsgYnRuLnN0eWxlLmNvbG9yID0gJ3ZhcigtLWFjKSc7IH0KICAgIHRvYXN0KGNvbGxhcHNlZCA/IHdpbmRvdy50KCdqc1NpZGViYXJDb2xsYXBzZWQnKSA6IHdpbmRvdy50KCdqc1NpZGViYXJFeHBhbmRlZCcpLCAnaW5mbycsIDE4MDApOwp9OwoKd2luZG93LnRvZ2dsZVB3ID0gZnVuY3Rpb24gKGlkLCBidG4pIHsKICAgIHZhciBpbnAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCk7CiAgICBpZiAoIWlucCkgcmV0dXJuOwogICAgaWYgKGlucC50eXBlID09PSAncGFzc3dvcmQnKSB7CiAgICAgICAgaW5wLnR5cGUgPSAndGV4dCc7CiAgICAgICAgYnRuLnN0eWxlLmNvbG9yID0gJ3ZhcigtLWFjKSc7CiAgICB9IGVsc2UgewogICAgICAgIGlucC50eXBlID0gJ3Bhc3N3b3JkJzsKICAgICAgICBidG4uc3R5bGUuY29sb3IgPSAndmFyKC0tZGltKSc7CiAgICB9Cn07Cgp3aW5kb3cuY2hlY2tQd1N0ciA9IGZ1bmN0aW9uICh2YWwpIHsKICAgIHZhciBiYXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHdCYXInKTsKICAgIHZhciBoaW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3B3SGludCcpOwogICAgaWYgKCFiYXIgfHwgIWhpbnQpIHJldHVybjsKCiAgICB2YXIgc2NvcmUgPSAwOwogICAgaWYgKHZhbC5sZW5ndGggPj0gNikgc2NvcmUrKzsKICAgIGlmICh2YWwubGVuZ3RoID49IDEwKSBzY29yZSsrOwogICAgaWYgKC9bQS1aXS8udGVzdCh2YWwpKSBzY29yZSsrOwogICAgaWYgKC9bMC05XS8udGVzdCh2YWwpKSBzY29yZSsrOwogICAgaWYgKC9bXkEtWmEtejAtOV0vLnRlc3QodmFsKSkgc2NvcmUrKzsKCiAgICB2YXIgbGV2ZWxzID0gWwogICAgICAgIHsgdzogJzAlJywgYzogJ3ZhcigtLW5vKScsIHQ6IHdpbmRvdy50KCdqc1B3VmVyeVdlYWsnKSB9LAogICAgICAgIHsgdzogJzI1JScsIGM6ICd2YXIoLS1ubyknLCB0OiB3aW5kb3cudCgnanNQd1dlYWsnKSB9LAogICAgICAgIHsgdzogJzUwJScsIGM6ICd2YXIoLS13YXJuKScsIHQ6IHdpbmRvdy50KCdqc1B3TWVkaXVtJykgfSwKICAgICAgICB7IHc6ICc3NSUnLCBjOiAndmFyKC0tb2spJywgdDogd2luZG93LnQoJ2pzUHdHb29kJykgfSwKICAgICAgICB7IHc6ICcxMDAlJywgYzogJ3ZhcigtLW9rKScsIHQ6IHdpbmRvdy50KCdqc1B3RXhjZWxsZW50JykgfSwKICAgIF07CiAgICB2YXIgbHYgPSBsZXZlbHNbTWF0aC5taW4oc2NvcmUsIDQpXTsKICAgIGJhci5zdHlsZS53aWR0aCA9IGx2Lnc7CiAgICBiYXIuc3R5bGUuYmFja2dyb3VuZCA9IGx2LmM7CiAgICBoaW50LnRleHRDb250ZW50ID0gdmFsLmxlbmd0aCA/IGx2LnQgOiB3aW5kb3cudCgnanNQd01pbkhpbnQnKTsKICAgIGhpbnQuc3R5bGUuY29sb3IgPSBsdi5jOwp9OwoKKGZ1bmN0aW9uICgpIHsKICAgIHZhciBjdXIgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgncGFuZWwtdGhlbWUnKSB8fCAnbmF2eSc7CiAgICB2YXIgY2FyZCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLXRrPSInICsgY3VyICsgJyJdJyk7CiAgICBpZiAoY2FyZCkgY2FyZC5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKCiAgICB2YXIgY29sbGFwc2VkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3BhbmVsLXNiLWNvbGxhcHNlZCcpID09PSAnMSc7CiAgICB2YXIgYnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoY29sbGFwc2VkID8gJ21vZGVDb2xsYXBzZWQnIDogJ21vZGVFeHBhbmRlZCcpOwogICAgaWYgKGJ0bikgeyBidG4uc3R5bGUuYm9yZGVyQ29sb3IgPSAndmFyKC0tYWMpJzsgYnRuLnN0eWxlLmNvbG9yID0gJ3ZhcigtLWFjKSc7IH0KfSgpKTsK
+window.pickTheme = function (t) {
+    applyTheme(t);
+    document.querySelectorAll('.theme-card').forEach(function (c) {
+        c.classList.toggle('active', c.dataset.tk === t);
+    });
+    var nameEl = document.querySelector('[data-tk="' + t + '"] .theme-name');
+    toast(window.t('jsThemeActivated', { name: (nameEl ? nameEl.textContent : t) }), 'info', 2200);
+};
+
+window.setSidebarMode = function (collapsed) {
+    localStorage.setItem('panel-sb-collapsed', collapsed ? '1' : '0');
+    var sb = document.getElementById('sidebar');
+    if (sb) {
+        if (collapsed) sb.classList.add('collapsed');
+        else sb.classList.remove('collapsed');
+    }
+    document.querySelectorAll('[id^="mode"]').forEach(function (b) {
+        b.style.borderColor = '';
+        b.style.color = '';
+    });
+    var btn = document.getElementById(collapsed ? 'modeCollapsed' : 'modeExpanded');
+    if (btn) { btn.style.borderColor = 'var(--ac)'; btn.style.color = 'var(--ac)'; }
+    toast(collapsed ? window.t('jsSidebarCollapsed') : window.t('jsSidebarExpanded'), 'info', 1800);
+};
+
+window.togglePw = function (id, btn) {
+    var inp = document.getElementById(id);
+    if (!inp) return;
+    if (inp.type === 'password') {
+        inp.type = 'text';
+        btn.style.color = 'var(--ac)';
+    } else {
+        inp.type = 'password';
+        btn.style.color = 'var(--dim)';
+    }
+};
+
+window.checkPwStr = function (val) {
+    var bar = document.getElementById('pwBar');
+    var hint = document.getElementById('pwHint');
+    if (!bar || !hint) return;
+
+    var score = 0;
+    if (val.length >= 6) score++;
+    if (val.length >= 10) score++;
+    if (/[A-Z]/.test(val)) score++;
+    if (/[0-9]/.test(val)) score++;
+    if (/[^A-Za-z0-9]/.test(val)) score++;
+
+    var levels = [
+        { w: '0%', c: 'var(--no)', t: window.t('jsPwVeryWeak') },
+        { w: '25%', c: 'var(--no)', t: window.t('jsPwWeak') },
+        { w: '50%', c: 'var(--warn)', t: window.t('jsPwMedium') },
+        { w: '75%', c: 'var(--ok)', t: window.t('jsPwGood') },
+        { w: '100%', c: 'var(--ok)', t: window.t('jsPwExcellent') },
+    ];
+    var lv = levels[Math.min(score, 4)];
+    bar.style.width = lv.w;
+    bar.style.background = lv.c;
+    hint.textContent = val.length ? lv.t : window.t('jsPwMinHint');
+    hint.style.color = lv.c;
+};
+
+(function () {
+    var cur = localStorage.getItem('panel-theme') || 'navy';
+    var card = document.querySelector('[data-tk="' + cur + '"]');
+    if (card) card.classList.add('active');
+
+    var collapsed = localStorage.getItem('panel-sb-collapsed') === '1';
+    var btn = document.getElementById(collapsed ? 'modeCollapsed' : 'modeExpanded');
+    if (btn) { btn.style.borderColor = 'var(--ac)'; btn.style.color = 'var(--ac)'; }
+}());

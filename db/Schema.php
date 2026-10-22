@@ -1,1 +1,233 @@
-PD9waHAKCmZpbmFsIGNsYXNzIFNjaGVtYQp7CiAgICBwdWJsaWMgY29uc3QgREVGQVVMVF9PUFRJT05TID0gJ0VOR0lORT1Jbm5vREIgREVGQVVMVCBDSEFSU0VUPXV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2knOwoKICAgIHByaXZhdGUgUERPICRwZG87CiAgICBwcml2YXRlIGFycmF5ICRjb250ZXh0OwogICAgcHJpdmF0ZSBhcnJheSAkcmVzb2x2ZWRDb250ZXh0ID0gW107CiAgICBwcml2YXRlIGFycmF5ICRjYXRhbG9nID0gW107CiAgICBwcml2YXRlID9hcnJheSAkaW5kZXhDYXRhbG9nID0gbnVsbDsKCiAgICBwdWJsaWMgZnVuY3Rpb24gX19jb25zdHJ1Y3QoUERPICRwZG8sIGFycmF5ICRjb250ZXh0ID0gW10pCiAgICB7CiAgICAgICAgJHRoaXMtPnBkbyA9ICRwZG87CiAgICAgICAgJHRoaXMtPmNvbnRleHQgPSAkY29udGV4dDsKICAgICAgICAkdGhpcy0+bG9hZENhdGFsb2coKTsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcGRvKCk6IFBETwogICAgewogICAgICAgIHJldHVybiAkdGhpcy0+cGRvOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBjb250ZXh0KHN0cmluZyAka2V5KQogICAgewogICAgICAgIGlmICghYXJyYXlfa2V5X2V4aXN0cygka2V5LCAkdGhpcy0+cmVzb2x2ZWRDb250ZXh0KSkgewogICAgICAgICAgICAkdmFsdWUgPSAkdGhpcy0+Y29udGV4dFska2V5XSA/PyBudWxsOwogICAgICAgICAgICAkdGhpcy0+cmVzb2x2ZWRDb250ZXh0WyRrZXldID0gJHZhbHVlIGluc3RhbmNlb2YgQ2xvc3VyZSA/ICR2YWx1ZSgpIDogJHZhbHVlOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJHRoaXMtPnJlc29sdmVkQ29udGV4dFska2V5XTsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gdGFibGVFeGlzdHMoc3RyaW5nICR0YWJsZSk6IGJvb2wKICAgIHsKICAgICAgICByZXR1cm4gaXNzZXQoJHRoaXMtPmNhdGFsb2dbc3RydG9sb3dlcigkdGFibGUpXSk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGhhc0NvbHVtbihzdHJpbmcgJHRhYmxlLCBzdHJpbmcgJGNvbHVtbik6IGJvb2wKICAgIHsKICAgICAgICByZXR1cm4gaXNzZXQoJHRoaXMtPmNhdGFsb2dbc3RydG9sb3dlcigkdGFibGUpXVtzdHJ0b2xvd2VyKCRjb2x1bW4pXSk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGFwcGx5VGFibGVzKHN0cmluZyAkZGlyZWN0b3J5LCBhcnJheSAkb3JkZXIgPSBbXSk6IHZvaWQKICAgIHsKICAgICAgICBmb3JlYWNoICgkdGhpcy0+b3JkZXJlZEZpbGVzKCRkaXJlY3RvcnksICRvcmRlcikgYXMgJHRhYmxlID0+ICRmaWxlKSB7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAkdGhpcy0+YXBwbHkoJHRhYmxlLCAkdGhpcy0+bG9hZERlZmluaXRpb24oJGZpbGUpKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlICRlKSB7CiAgICAgICAgICAgICAgICAkdGhpcy0+bG9nRmFpbHVyZSgidGFibGU6JHRhYmxlIiwgJGUpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBhcHBseShzdHJpbmcgJHRhYmxlLCBhcnJheSAkZGVmaW5pdGlvbik6IHZvaWQKICAgIHsKICAgICAgICBpZiAoISR0aGlzLT50YWJsZUV4aXN0cygkdGFibGUpKSB7CiAgICAgICAgICAgICR0aGlzLT5jcmVhdGUoJHRhYmxlLCAkZGVmaW5pdGlvblsnY3JlYXRlJ10sICRkZWZpbml0aW9uWydvcHRpb25zJ10gPz8gc2VsZjo6REVGQVVMVF9PUFRJT05TKTsKICAgICAgICAgICAgZm9yZWFjaCAoJGRlZmluaXRpb25bJ3NlZWRPbkNyZWF0ZSddID8/IFtdIGFzICRyb3cpIHsKICAgICAgICAgICAgICAgICR0aGlzLT5pbnNlcnQoJHRhYmxlLCAkcm93LCB0cnVlKTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGlmICghZW1wdHkoJGRlZmluaXRpb25bJ2Vuc3VyZVV0ZjhtYjQnXSkpIHsKICAgICAgICAgICAgICAgIGVuc3VyZVRhYmxlVXRmOG1iNCgkdGFibGUpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGZvcmVhY2ggKCRkZWZpbml0aW9uWydjb2x1bW5zJ10gPz8gW10gYXMgJGNvbHVtbikgewogICAgICAgICAgICAgICAgJHRoaXMtPmFkZENvbHVtbigkdGFibGUsICRjb2x1bW5bMF0sICRjb2x1bW5bMV0gPz8gbnVsbCwgJGNvbHVtblsyXSA/PyAnVkFSQ0hBUig1MDApJyk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGZvcmVhY2ggKCRkZWZpbml0aW9uWydzZWVkJ10gPz8gW10gYXMgJHJvdykgewogICAgICAgICAgICAkdGhpcy0+aW5zZXJ0KCR0YWJsZSwgJHJvdywgdHJ1ZSk7CiAgICAgICAgfQoKICAgICAgICBpZiAoaXNzZXQoJGRlZmluaXRpb25bJ2FmdGVyJ10pKSB7CiAgICAgICAgICAgICgkZGVmaW5pdGlvblsnYWZ0ZXInXSkoJHRoaXMtPnBkbywgJHRoaXMpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gY3JlYXRlKHN0cmluZyAkdGFibGUsIHN0cmluZyAkYm9keSwgc3RyaW5nICRvcHRpb25zID0gc2VsZjo6REVGQVVMVF9PUFRJT05TKTogdm9pZAogICAgewogICAgICAgIGFzc2VydFNxbElkZW50aWZpZXIoJHRhYmxlKTsKICAgICAgICAkdGhpcy0+cGRvLT5leGVjKHNwcmludGYoIkNSRUFURSBUQUJMRSBgJXNgIChcbiVzXG4pICVzIiwgJHRhYmxlLCAkYm9keSwgJG9wdGlvbnMpKTsKICAgICAgICAkdGhpcy0+cmVmcmVzaFRhYmxlKCR0YWJsZSk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGFkZENvbHVtbihzdHJpbmcgJHRhYmxlLCBzdHJpbmcgJGNvbHVtbiwgJGRlZmF1bHQgPSBudWxsLCBzdHJpbmcgJHR5cGUgPSAnVkFSQ0hBUig1MDApJyk6IGJvb2wKICAgIHsKICAgICAgICBpZiAoISR0aGlzLT50YWJsZUV4aXN0cygkdGFibGUpIHx8ICR0aGlzLT5oYXNDb2x1bW4oJHRhYmxlLCAkY29sdW1uKSkgewogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQogICAgICAgIGFzc2VydFNxbElkZW50aWZpZXIoJHRhYmxlKTsKICAgICAgICBhc3NlcnRTcWxJZGVudGlmaWVyKCRjb2x1bW4pOwogICAgICAgICR0aGlzLT5wZG8tPmV4ZWMoIkFMVEVSIFRBQkxFIGAkdGFibGVgIEFERCBgJGNvbHVtbmAgJHR5cGUiKTsKICAgICAgICAkdGhpcy0+Y2F0YWxvZ1tzdHJ0b2xvd2VyKCR0YWJsZSldW3N0cnRvbG93ZXIoJGNvbHVtbildID0gdHJ1ZTsKCiAgICAgICAgaWYgKCRkZWZhdWx0ICE9PSBudWxsICYmICRkZWZhdWx0ICE9PSAnJykgewogICAgICAgICAgICAkc3RhdGVtZW50ID0gJHRoaXMtPnBkby0+cHJlcGFyZSgiVVBEQVRFIGAkdGFibGVgIFNFVCBgJGNvbHVtbmAgPSA/Iik7CiAgICAgICAgICAgICRzdGF0ZW1lbnQtPmV4ZWN1dGUoWyRkZWZhdWx0XSk7CiAgICAgICAgfQogICAgICAgIGVycm9yX2xvZygiU2NoZW1hOiBjb2x1bW4geyRjb2x1bW59IGFkZGVkIik7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGRyb3BDb2x1bW4oc3RyaW5nICR0YWJsZSwgc3RyaW5nICRjb2x1bW4pOiBib29sCiAgICB7CiAgICAgICAgaWYgKCEkdGhpcy0+aGFzQ29sdW1uKCR0YWJsZSwgJGNvbHVtbikpIHsKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgIH0KICAgICAgICBhc3NlcnRTcWxJZGVudGlmaWVyKCR0YWJsZSk7CiAgICAgICAgYXNzZXJ0U3FsSWRlbnRpZmllcigkY29sdW1uKTsKICAgICAgICAkdGhpcy0+cGRvLT5leGVjKCJBTFRFUiBUQUJMRSBgJHRhYmxlYCBEUk9QIGAkY29sdW1uYCIpOwogICAgICAgIHVuc2V0KCR0aGlzLT5jYXRhbG9nW3N0cnRvbG93ZXIoJHRhYmxlKV1bc3RydG9sb3dlcigkY29sdW1uKV0pOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBpbnNlcnQoc3RyaW5nICR0YWJsZSwgYXJyYXkgJHJvdywgYm9vbCAkaWdub3JlID0gZmFsc2UpOiB2b2lkCiAgICB7CiAgICAgICAgYXNzZXJ0U3FsSWRlbnRpZmllcigkdGFibGUpOwogICAgICAgICRjb2x1bW5zID0gYXJyYXlfa2V5cygkcm93KTsKICAgICAgICBmb3JlYWNoICgkY29sdW1ucyBhcyAkY29sdW1uKSB7CiAgICAgICAgICAgIGFzc2VydFNxbElkZW50aWZpZXIoJGNvbHVtbik7CiAgICAgICAgfQogICAgICAgICRzcWwgPSBzcHJpbnRmKAogICAgICAgICAgICAnSU5TRVJUICVzSU5UTyBgJXNgIChgJXNgKSBWQUxVRVMgKCVzKScsCiAgICAgICAgICAgICRpZ25vcmUgPyAnSUdOT1JFICcgOiAnJywKICAgICAgICAgICAgJHRhYmxlLAogICAgICAgICAgICBpbXBsb2RlKCdgLCBgJywgJGNvbHVtbnMpLAogICAgICAgICAgICBpbXBsb2RlKCcsICcsIGFycmF5X2ZpbGwoMCwgY291bnQoJGNvbHVtbnMpLCAnPycpKQogICAgICAgICk7CiAgICAgICAgJHRoaXMtPnBkby0+cHJlcGFyZSgkc3FsKS0+ZXhlY3V0ZShhcnJheV92YWx1ZXMoJHJvdykpOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBydW5NaWdyYXRpb25zKHN0cmluZyAkZGlyZWN0b3J5KTogdm9pZAogICAgewogICAgICAgICRmaWxlcyA9IGdsb2IoJGRpcmVjdG9yeSAuICcvKi5waHAnKSA/OiBbXTsKICAgICAgICBzb3J0KCRmaWxlcyk7CiAgICAgICAgZm9yZWFjaCAoJGZpbGVzIGFzICRmaWxlKSB7CiAgICAgICAgICAgICRuYW1lID0gYmFzZW5hbWUoJGZpbGUsICcucGhwJyk7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAkbWlncmF0aW9uID0gJHRoaXMtPmxvYWREZWZpbml0aW9uKCRmaWxlKTsKICAgICAgICAgICAgICAgIGlmIChpc19jYWxsYWJsZSgkbWlncmF0aW9uKSkgewogICAgICAgICAgICAgICAgICAgICRtaWdyYXRpb24oJHRoaXMtPnBkbywgJHRoaXMpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgJGUpIHsKICAgICAgICAgICAgICAgICR0aGlzLT5sb2dGYWlsdXJlKCJtaWdyYXRpb246JG5hbWUiLCAkZSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGFwcGx5SW5kZXhlcyhhcnJheSAkaW5kZXhlcyk6IHZvaWQKICAgIHsKICAgICAgICBmb3JlYWNoICgkaW5kZXhlcyBhcyAkaW5kZXgpIHsKICAgICAgICAgICAgWyR0YWJsZSwgJG5hbWUsICRjb2x1bW5zXSA9ICRpbmRleDsKICAgICAgICAgICAgJHVuaXF1ZSA9ICgkaW5kZXhbM10gPz8gZmFsc2UpID8gJ1VOSVFVRSAnIDogJyc7CiAgICAgICAgICAgIGlmICghJHRoaXMtPnRhYmxlRXhpc3RzKCR0YWJsZSkgfHwgJHRoaXMtPmhhc0luZGV4KCR0YWJsZSwgJG5hbWUpKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgYXNzZXJ0U3FsSWRlbnRpZmllcigkdGFibGUpOwogICAgICAgICAgICAgICAgYXNzZXJ0U3FsSWRlbnRpZmllcigkbmFtZSk7CiAgICAgICAgICAgICAgICAkdGhpcy0+cGRvLT5leGVjKCJBTFRFUiBUQUJMRSBgJHRhYmxlYCBBREQgeyR1bmlxdWV9SU5ERVggYCRuYW1lYCAoJGNvbHVtbnMpIik7CiAgICAgICAgICAgICAgICAkdGhpcy0+aW5kZXhDYXRhbG9nW3N0cnRvbG93ZXIoJHRhYmxlKV1bc3RydG9sb3dlcigkbmFtZSldID0gdHJ1ZTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlICRlKSB7CiAgICAgICAgICAgICAgICAkdGhpcy0+bG9nRmFpbHVyZSgiaW5kZXg6JHRhYmxlLiRuYW1lIiwgJGUpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgZnVuY3Rpb24gaGFzSW5kZXgoc3RyaW5nICR0YWJsZSwgc3RyaW5nICRuYW1lKTogYm9vbAogICAgewogICAgICAgIGlmICgkdGhpcy0+aW5kZXhDYXRhbG9nID09PSBudWxsKSB7CiAgICAgICAgICAgICR0aGlzLT5pbmRleENhdGFsb2cgPSBbXTsKICAgICAgICAgICAgJHJvd3MgPSAkdGhpcy0+cGRvCiAgICAgICAgICAgICAgICAtPnF1ZXJ5KCdTRUxFQ1QgVEFCTEVfTkFNRSwgSU5ERVhfTkFNRSBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5TVEFUSVNUSUNTIFdIRVJFIFRBQkxFX1NDSEVNQSA9IERBVEFCQVNFKCknKQogICAgICAgICAgICAgICAgLT5mZXRjaEFsbChQRE86OkZFVENIX05VTSk7CiAgICAgICAgICAgIGZvcmVhY2ggKCRyb3dzIGFzIFskaW5kZXhUYWJsZSwgJGluZGV4TmFtZV0pIHsKICAgICAgICAgICAgICAgICR0aGlzLT5pbmRleENhdGFsb2dbc3RydG9sb3dlcigkaW5kZXhUYWJsZSldW3N0cnRvbG93ZXIoJGluZGV4TmFtZSldID0gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gaXNzZXQoJHRoaXMtPmluZGV4Q2F0YWxvZ1tzdHJ0b2xvd2VyKCR0YWJsZSldW3N0cnRvbG93ZXIoJG5hbWUpXSk7CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiBsb2FkQ2F0YWxvZygpOiB2b2lkCiAgICB7CiAgICAgICAgJHJvd3MgPSAkdGhpcy0+cGRvCiAgICAgICAgICAgIC0+cXVlcnkoJ1NFTEVDVCBUQUJMRV9OQU1FLCBDT0xVTU5fTkFNRSBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5DT0xVTU5TIFdIRVJFIFRBQkxFX1NDSEVNQSA9IERBVEFCQVNFKCknKQogICAgICAgICAgICAtPmZldGNoQWxsKFBETzo6RkVUQ0hfTlVNKTsKICAgICAgICBmb3JlYWNoICgkcm93cyBhcyBbJHRhYmxlLCAkY29sdW1uXSkgewogICAgICAgICAgICAkdGhpcy0+Y2F0YWxvZ1tzdHJ0b2xvd2VyKCR0YWJsZSldW3N0cnRvbG93ZXIoJGNvbHVtbildID0gdHJ1ZTsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiByZWZyZXNoVGFibGUoc3RyaW5nICR0YWJsZSk6IHZvaWQKICAgIHsKICAgICAgICAkc3RhdGVtZW50ID0gJHRoaXMtPnBkby0+cHJlcGFyZSgnU0VMRUNUIENPTFVNTl9OQU1FIEZST00gaW5mb3JtYXRpb25fc2NoZW1hLkNPTFVNTlMgV0hFUkUgVEFCTEVfU0NIRU1BID0gREFUQUJBU0UoKSBBTkQgVEFCTEVfTkFNRSA9ID8nKTsKICAgICAgICAkc3RhdGVtZW50LT5leGVjdXRlKFskdGFibGVdKTsKICAgICAgICAkdGhpcy0+Y2F0YWxvZ1tzdHJ0b2xvd2VyKCR0YWJsZSldID0gW107CiAgICAgICAgZm9yZWFjaCAoJHN0YXRlbWVudC0+ZmV0Y2hBbGwoUERPOjpGRVRDSF9DT0xVTU4pIGFzICRjb2x1bW4pIHsKICAgICAgICAgICAgJHRoaXMtPmNhdGFsb2dbc3RydG9sb3dlcigkdGFibGUpXVtzdHJ0b2xvd2VyKCRjb2x1bW4pXSA9IHRydWU7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgZnVuY3Rpb24gbG9hZERlZmluaXRpb24oc3RyaW5nICRmaWxlKQogICAgewogICAgICAgICRzY2hlbWEgPSAkdGhpczsKICAgICAgICByZXR1cm4gKHN0YXRpYyBmdW5jdGlvbiAoKSB1c2UgKCRmaWxlLCAkc2NoZW1hKSB7CiAgICAgICAgICAgIHJldHVybiByZXF1aXJlICRmaWxlOwogICAgICAgIH0pKCk7CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiBvcmRlcmVkRmlsZXMoc3RyaW5nICRkaXJlY3RvcnksIGFycmF5ICRvcmRlcik6IGFycmF5CiAgICB7CiAgICAgICAgJGZpbGVzID0gW107CiAgICAgICAgZm9yZWFjaCAoZ2xvYigkZGlyZWN0b3J5IC4gJy8qLnBocCcpID86IFtdIGFzICRwYXRoKSB7CiAgICAgICAgICAgICRmaWxlc1tiYXNlbmFtZSgkcGF0aCwgJy5waHAnKV0gPSAkcGF0aDsKICAgICAgICB9CiAgICAgICAgJG9yZGVyZWQgPSBbXTsKICAgICAgICBmb3JlYWNoICgkb3JkZXIgYXMgJG5hbWUpIHsKICAgICAgICAgICAgaWYgKGlzc2V0KCRmaWxlc1skbmFtZV0pKSB7CiAgICAgICAgICAgICAgICAkb3JkZXJlZFskbmFtZV0gPSAkZmlsZXNbJG5hbWVdOwogICAgICAgICAgICAgICAgdW5zZXQoJGZpbGVzWyRuYW1lXSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAga3NvcnQoJGZpbGVzKTsKICAgICAgICByZXR1cm4gJG9yZGVyZWQgKyAkZmlsZXM7CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiBsb2dGYWlsdXJlKHN0cmluZyAkc2NvcGUsIFRocm93YWJsZSAkZSk6IHZvaWQKICAgIHsKICAgICAgICBlcnJvcl9sb2coIltkYjokc2NvcGVdICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgIH0KfQo=
+<?php
+
+final class Schema
+{
+    public const DEFAULT_OPTIONS = 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci';
+
+    private PDO $pdo;
+    private array $context;
+    private array $resolvedContext = [];
+    private array $catalog = [];
+    private ?array $indexCatalog = null;
+
+    public function __construct(PDO $pdo, array $context = [])
+    {
+        $this->pdo = $pdo;
+        $this->context = $context;
+        $this->loadCatalog();
+    }
+
+    public function pdo(): PDO
+    {
+        return $this->pdo;
+    }
+
+    public function context(string $key)
+    {
+        if (!array_key_exists($key, $this->resolvedContext)) {
+            $value = $this->context[$key] ?? null;
+            $this->resolvedContext[$key] = $value instanceof Closure ? $value() : $value;
+        }
+        return $this->resolvedContext[$key];
+    }
+
+    public function tableExists(string $table): bool
+    {
+        return isset($this->catalog[strtolower($table)]);
+    }
+
+    public function hasColumn(string $table, string $column): bool
+    {
+        return isset($this->catalog[strtolower($table)][strtolower($column)]);
+    }
+
+    public function applyTables(string $directory, array $order = []): void
+    {
+        foreach ($this->orderedFiles($directory, $order) as $table => $file) {
+            try {
+                $this->apply($table, $this->loadDefinition($file));
+            } catch (Throwable $e) {
+                $this->logFailure("table:$table", $e);
+            }
+        }
+    }
+
+    public function apply(string $table, array $definition): void
+    {
+        if (!$this->tableExists($table)) {
+            $this->create($table, $definition['create'], $definition['options'] ?? self::DEFAULT_OPTIONS);
+            foreach ($definition['seedOnCreate'] ?? [] as $row) {
+                $this->insert($table, $row, true);
+            }
+        } else {
+            if (!empty($definition['ensureUtf8mb4'])) {
+                ensureTableUtf8mb4($table);
+            }
+            foreach ($definition['columns'] ?? [] as $column) {
+                $this->addColumn($table, $column[0], $column[1] ?? null, $column[2] ?? 'VARCHAR(500)');
+            }
+        }
+
+        foreach ($definition['seed'] ?? [] as $row) {
+            $this->insert($table, $row, true);
+        }
+
+        if (isset($definition['after'])) {
+            ($definition['after'])($this->pdo, $this);
+        }
+    }
+
+    public function create(string $table, string $body, string $options = self::DEFAULT_OPTIONS): void
+    {
+        assertSqlIdentifier($table);
+        $this->pdo->exec(sprintf("CREATE TABLE `%s` (\n%s\n) %s", $table, $body, $options));
+        $this->refreshTable($table);
+    }
+
+    public function addColumn(string $table, string $column, $default = null, string $type = 'VARCHAR(500)'): bool
+    {
+        if (!$this->tableExists($table) || $this->hasColumn($table, $column)) {
+            return false;
+        }
+        assertSqlIdentifier($table);
+        assertSqlIdentifier($column);
+        $this->pdo->exec("ALTER TABLE `$table` ADD `$column` $type");
+        $this->catalog[strtolower($table)][strtolower($column)] = true;
+
+        if ($default !== null && $default !== '') {
+            $statement = $this->pdo->prepare("UPDATE `$table` SET `$column` = ?");
+            $statement->execute([$default]);
+        }
+        error_log("Schema: column {$column} added");
+        return true;
+    }
+
+    public function dropColumn(string $table, string $column): bool
+    {
+        if (!$this->hasColumn($table, $column)) {
+            return false;
+        }
+        assertSqlIdentifier($table);
+        assertSqlIdentifier($column);
+        $this->pdo->exec("ALTER TABLE `$table` DROP `$column`");
+        unset($this->catalog[strtolower($table)][strtolower($column)]);
+        return true;
+    }
+
+    public function insert(string $table, array $row, bool $ignore = false): void
+    {
+        assertSqlIdentifier($table);
+        $columns = array_keys($row);
+        foreach ($columns as $column) {
+            assertSqlIdentifier($column);
+        }
+        $sql = sprintf(
+            'INSERT %sINTO `%s` (`%s`) VALUES (%s)',
+            $ignore ? 'IGNORE ' : '',
+            $table,
+            implode('`, `', $columns),
+            implode(', ', array_fill(0, count($columns), '?'))
+        );
+        $this->pdo->prepare($sql)->execute(array_values($row));
+    }
+
+    public function runMigrations(string $directory): void
+    {
+        $files = glob($directory . '/*.php') ?: [];
+        sort($files);
+        foreach ($files as $file) {
+            $name = basename($file, '.php');
+            try {
+                $migration = $this->loadDefinition($file);
+                if (is_callable($migration)) {
+                    $migration($this->pdo, $this);
+                }
+            } catch (Throwable $e) {
+                $this->logFailure("migration:$name", $e);
+            }
+        }
+    }
+
+    public function applyIndexes(array $indexes): void
+    {
+        foreach ($indexes as $index) {
+            [$table, $name, $columns] = $index;
+            $unique = ($index[3] ?? false) ? 'UNIQUE ' : '';
+            if (!$this->tableExists($table) || $this->hasIndex($table, $name)) {
+                continue;
+            }
+            try {
+                assertSqlIdentifier($table);
+                assertSqlIdentifier($name);
+                $this->pdo->exec("ALTER TABLE `$table` ADD {$unique}INDEX `$name` ($columns)");
+                $this->indexCatalog[strtolower($table)][strtolower($name)] = true;
+            } catch (Throwable $e) {
+                $this->logFailure("index:$table.$name", $e);
+            }
+        }
+    }
+
+    private function hasIndex(string $table, string $name): bool
+    {
+        if ($this->indexCatalog === null) {
+            $this->indexCatalog = [];
+            $rows = $this->pdo
+                ->query('SELECT TABLE_NAME, INDEX_NAME FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = DATABASE()')
+                ->fetchAll(PDO::FETCH_NUM);
+            foreach ($rows as [$indexTable, $indexName]) {
+                $this->indexCatalog[strtolower($indexTable)][strtolower($indexName)] = true;
+            }
+        }
+        return isset($this->indexCatalog[strtolower($table)][strtolower($name)]);
+    }
+
+    private function loadCatalog(): void
+    {
+        $rows = $this->pdo
+            ->query('SELECT TABLE_NAME, COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE()')
+            ->fetchAll(PDO::FETCH_NUM);
+        foreach ($rows as [$table, $column]) {
+            $this->catalog[strtolower($table)][strtolower($column)] = true;
+        }
+    }
+
+    private function refreshTable(string $table): void
+    {
+        $statement = $this->pdo->prepare('SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ?');
+        $statement->execute([$table]);
+        $this->catalog[strtolower($table)] = [];
+        foreach ($statement->fetchAll(PDO::FETCH_COLUMN) as $column) {
+            $this->catalog[strtolower($table)][strtolower($column)] = true;
+        }
+    }
+
+    private function loadDefinition(string $file)
+    {
+        $schema = $this;
+        return (static function () use ($file, $schema) {
+            return require $file;
+        })();
+    }
+
+    private function orderedFiles(string $directory, array $order): array
+    {
+        $files = [];
+        foreach (glob($directory . '/*.php') ?: [] as $path) {
+            $files[basename($path, '.php')] = $path;
+        }
+        $ordered = [];
+        foreach ($order as $name) {
+            if (isset($files[$name])) {
+                $ordered[$name] = $files[$name];
+                unset($files[$name]);
+            }
+        }
+        ksort($files);
+        return $ordered + $files;
+    }
+
+    private function logFailure(string $scope, Throwable $e): void
+    {
+        error_log("[db:$scope] " . $e->getMessage());
+    }
+}

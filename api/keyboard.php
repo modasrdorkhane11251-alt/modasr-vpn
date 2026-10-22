@@ -1,1 +1,76 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CmhlYWRlcignQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PVVURi04Jyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CmluaV9zZXQoJ2RlZmF1bHRfY2hhcnNldCcsICdVVEYtOCcpOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgpyZXF1aXJlQXBpVG9rZW5PckFkbWluU2Vzc2lvbihnZXRhbGxoZWFkZXJzKCkpOwoKJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKCiRrZXlib2FyZFNldHRpbmcgPSBzZWxlY3QoInNldHRpbmciLCAia2V5Ym9hcmRtYWluIiwgbnVsbCwgbnVsbCwgInNlbGVjdCIpOwoka2V5Ym9hcmRtYWluID0ganNvbl9kZWNvZGUoJGtleWJvYXJkU2V0dGluZ1sna2V5Ym9hcmRtYWluJ10gPz8gJycsIHRydWUpOwppZiAoIWlzX2FycmF5KCRrZXlib2FyZG1haW4pIHx8ICFpc3NldCgka2V5Ym9hcmRtYWluWydrZXlib2FyZCddKSB8fCAhaXNfYXJyYXkoJGtleWJvYXJkbWFpblsna2V5Ym9hcmQnXSkpIHsKICAgICRrZXlib2FyZG1haW4gPSBbJ2tleWJvYXJkJyA9PiBbXV07Cn0KCiRsaXN0X2tleWJvYXJkID0gWwogICAgJ3RleHRfc2VsbCcsCiAgICAndGV4dF9leHRlbmQnLAogICAgJ3RleHRfdXNlcnRlc3QnLAogICAgJ3RleHRfd2hlZWxfbHVjaycsCiAgICAndGV4dF9QdXJjaGFzZWRfc2VydmljZXMnLAogICAgJ2FjY291bnR3YWxsZXQnLAogICAgJ3RleHRfYWZmaWxpYXRlcycsCiAgICAndGV4dF9UYXJpZmZfbGlzdCcsCiAgICAndGV4dF9zdXBwb3J0JywKICAgICd0ZXh0X2hlbHAnLAogICAgJ3RleHRfYWdlbnRwYW5lbCcsCiAgICAndGV4dF9yZXF1ZXN0YWdlbnQnLApdOwokdGV4dGJvdGxhbmdbJ3RleHRib3QnXSA9IFsKICAgICd0ZXh0X3NlbGwnID0+ICR0ZXh0Ym90bGFuZ1sndGV4dGJvdCddWydzZWxsJ10sCiAgICAndGV4dF9leHRlbmQnID0+ICR0ZXh0Ym90bGFuZ1sndGV4dGJvdCddWydleHRlbmQnXSwKICAgICd0ZXh0X3VzZXJ0ZXN0JyA9PiAkdGV4dGJvdGxhbmdbJ3RleHRib3QnXVsndXNlclRlc3QnXSwKICAgICd0ZXh0X3doZWVsX2x1Y2snID0+ICR0ZXh0Ym90bGFuZ1sndGV4dGJvdCddWyd3aGVlbEx1Y2snXSwKICAgICd0ZXh0X1B1cmNoYXNlZF9zZXJ2aWNlcycgPT4gJHRleHRib3RsYW5nWyd0ZXh0Ym90J11bJ3B1cmNoYXNlZFNlcnZpY2VzJ10sCiAgICAnYWNjb3VudHdhbGxldCcgPT4gJHRleHRib3RsYW5nWyd0ZXh0Ym90J11bJ2FjY291bnRXYWxsZXQnXSwKICAgICd0ZXh0X2FmZmlsaWF0ZXMnID0+ICR0ZXh0Ym90bGFuZ1sndGV4dGJvdCddWydhZmZpbGlhdGVzJ10sCiAgICAndGV4dF9UYXJpZmZfbGlzdCcgPT4gJHRleHRib3RsYW5nWyd0ZXh0Ym90J11bJ3RhcmlmZkxpc3QnXSwKICAgICd0ZXh0X3N1cHBvcnQnID0+ICR0ZXh0Ym90bGFuZ1sndGV4dGJvdCddWydzdXBwb3J0J10sCiAgICAndGV4dF9oZWxwJyA9PiAkdGV4dGJvdGxhbmdbJ3RleHRib3QnXVsnaGVscCddLAogICAgJ3RleHRfYWdlbnRwYW5lbCcgPT4gJHRleHRib3RsYW5nWyd0ZXh0Ym90J11bJ2FnZW50UGFuZWwnXSwKICAgICd0ZXh0X3JlcXVlc3RhZ2VudCcgPT4gJHRleHRib3RsYW5nWyd0ZXh0Ym90J11bJ3JlcXVlc3RBZ2VudCddLApdOwoKZm9yZWFjaCAoJGtleWJvYXJkbWFpblsna2V5Ym9hcmQnXSBhcyAka2V5Ym9hcmQpIHsKICAgIGlmICghaXNfYXJyYXkoJGtleWJvYXJkKSkgewogICAgICAgIGNvbnRpbnVlOwogICAgfQogICAgZm9yZWFjaCAoJGtleWJvYXJkIGFzICRhcnJrZXkpIHsKICAgICAgICBpZiAoIWlzX2FycmF5KCRhcnJrZXkpIHx8ICFpc3NldCgkYXJya2V5Wyd0ZXh0J10pKSB7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KICAgICAgICAkaW5kZXhfbnVtYmVyID0gYXJyYXlfc2VhcmNoKCRhcnJrZXlbJ3RleHQnXSwgJGxpc3Rfa2V5Ym9hcmQsIHRydWUpOwogICAgICAgIGlmICgkaW5kZXhfbnVtYmVyICE9PSBmYWxzZSkgewogICAgICAgICAgICB1bnNldCgkbGlzdF9rZXlib2FyZFskaW5kZXhfbnVtYmVyXSk7CiAgICAgICAgfQogICAgfQp9CiRsaXN0X2tleWJvYXJkID0gYXJyYXlfdmFsdWVzKCRsaXN0X2tleWJvYXJkKTsKCiRrZXlib2FyZCA9IFtdOwpmb3JlYWNoICgkbGlzdF9rZXlib2FyZCBhcyAka2V5KSB7CiAgICAka2V5Ym9hcmRbXSA9IFtbJ3RleHQnID0+ICRrZXldXTsKfQoKZWNobyBqc29uX2VuY29kZShbCiAgICAna2V5bGlzdCcgPT4gJGtleWJvYXJkLAogICAgJ3VzZXJsaXN0JyA9PiAka2V5Ym9hcmRtYWluWydrZXlib2FyZCddLAogICAgJ3RleHQnID0+IGFycmF5X21hcCgnY3VzdG9tRW1vamlMYWJlbFRleHQnLCAkdGV4dGJvdGxhbmdbJ3RleHRib3QnXSkKXSwgSlNPTl9VTkVTQ0FQRURfVU5JQ09ERSk7Cg==
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+requireApiTokenOrAdminSession(getallheaders());
+
+$textbotlang = languagechange();
+
+$keyboardSetting = select("setting", "keyboardmain", null, null, "select");
+$keyboardmain = json_decode($keyboardSetting['keyboardmain'] ?? '', true);
+if (!is_array($keyboardmain) || !isset($keyboardmain['keyboard']) || !is_array($keyboardmain['keyboard'])) {
+    $keyboardmain = ['keyboard' => []];
+}
+
+$list_keyboard = [
+    'text_sell',
+    'text_extend',
+    'text_usertest',
+    'text_wheel_luck',
+    'text_Purchased_services',
+    'accountwallet',
+    'text_affiliates',
+    'text_Tariff_list',
+    'text_support',
+    'text_help',
+    'text_agentpanel',
+    'text_requestagent',
+];
+$textbotlang['textbot'] = [
+    'text_sell' => $textbotlang['textbot']['sell'],
+    'text_extend' => $textbotlang['textbot']['extend'],
+    'text_usertest' => $textbotlang['textbot']['userTest'],
+    'text_wheel_luck' => $textbotlang['textbot']['wheelLuck'],
+    'text_Purchased_services' => $textbotlang['textbot']['purchasedServices'],
+    'accountwallet' => $textbotlang['textbot']['accountWallet'],
+    'text_affiliates' => $textbotlang['textbot']['affiliates'],
+    'text_Tariff_list' => $textbotlang['textbot']['tariffList'],
+    'text_support' => $textbotlang['textbot']['support'],
+    'text_help' => $textbotlang['textbot']['help'],
+    'text_agentpanel' => $textbotlang['textbot']['agentPanel'],
+    'text_requestagent' => $textbotlang['textbot']['requestAgent'],
+];
+
+foreach ($keyboardmain['keyboard'] as $keyboard) {
+    if (!is_array($keyboard)) {
+        continue;
+    }
+    foreach ($keyboard as $arrkey) {
+        if (!is_array($arrkey) || !isset($arrkey['text'])) {
+            continue;
+        }
+        $index_number = array_search($arrkey['text'], $list_keyboard, true);
+        if ($index_number !== false) {
+            unset($list_keyboard[$index_number]);
+        }
+    }
+}
+$list_keyboard = array_values($list_keyboard);
+
+$keyboard = [];
+foreach ($list_keyboard as $key) {
+    $keyboard[] = [['text' => $key]];
+}
+
+echo json_encode([
+    'keylist' => $keyboard,
+    'userlist' => $keyboardmain['keyboard'],
+    'text' => array_map('customEmojiLabelText', $textbotlang['textbot'])
+], JSON_UNESCAPED_UNICODE);

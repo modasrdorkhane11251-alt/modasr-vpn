@@ -1,1 +1,5 @@
-ZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLmF1dGgtZm9ybScpLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGZ1bmN0aW9uICgpIHsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdsb2dpblRleHQnKS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOwogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xvZ2luU3BpbicpLnN0eWxlLmRpc3BsYXkgPSAnaW5saW5lLWJsb2NrJzsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdsb2dpbkJ0bicpLmRpc2FibGVkID0gdHJ1ZTsKfSk7Cg==
+document.querySelector('.auth-form').addEventListener('submit', function () {
+    document.getElementById('loginText').style.display = 'none';
+    document.getElementById('loginSpin').style.display = 'inline-block';
+    document.getElementById('loginBtn').disabled = true;
+});

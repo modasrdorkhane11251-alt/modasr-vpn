@@ -1,1 +1,148 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCiRwYWdlVGl0bGUgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VzVGl0bGUnXTsKJHBhZ2VMZWRlID0gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlc1N1YnRpdGxlJ107CiRhY3RpdmVOYXYgPSAnc2VydmljZV9vdGhlcic7Cgokc2VhcmNoID0gdHJpbSgkX0dFVFsncSddID8/ICcnKTsKJHN0YXR1cyA9ICRfR0VUWydzdGF0dXMnXSA/PyAnJzsKJHBhZ2UgPSBtYXgoMSwgKGludCkgKCRfR0VUWydwYWdlJ10gPz8gMSkpOwokcGVyUGFnZSA9IDMwOwokb2Zmc2V0ID0gKCRwYWdlIC0gMSkgKiAkcGVyUGFnZTsKCiR3aGVyZSA9IFtdOwokcGFyYW1zID0gW107CmlmICgkc2VhcmNoICE9PSAnJykgewogICR3aGVyZVtdID0gIihpZF91c2VyIExJS0UgPyBPUiBDT0FMRVNDRSh1c2VybmFtZSwnJykgTElLRSA/IE9SIENPQUxFU0NFKHR5cGUsJycpIExJS0UgPykiOwogICRwYXJhbXMgPSBbIiUkc2VhcmNoJSIsICIlJHNlYXJjaCUiLCAiJSRzZWFyY2glIl07Cn0KaWYgKCRzdGF0dXMgIT09ICcnKSB7CiAgJHdoZXJlW10gPSAic3RhdHVzID0gPyI7CiAgJHBhcmFtc1tdID0gJHN0YXR1czsKfQokd2hlcmVTUUwgPSAkd2hlcmUgPyAnV0hFUkUgJyAuIGltcGxvZGUoJyBBTkQgJywgJHdoZXJlKSA6ICcnOwoKdHJ5IHsKICAkdG90YWwgPSBkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gc2VydmljZV9vdGhlciAkd2hlcmVTUUwiLCAkcGFyYW1zKTsKICAkc2VydmljZXMgPSBkYl9mZXRjaEFsbCgkcGRvLCAiU0VMRUNUICogRlJPTSBzZXJ2aWNlX290aGVyICR3aGVyZVNRTCBPUkRFUiBCWSBpZCBERVNDIExJTUlUICRwZXJQYWdlIE9GRlNFVCAkb2Zmc2V0IiwgJHBhcmFtcyk7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICR0b3RhbCA9IDA7CiAgJHNlcnZpY2VzID0gW107CiAgZXJyb3JfbG9nKCdzZXJ2aWNlLnBocCBlcnJvcjogJyAuICRlLT5nZXRNZXNzYWdlKCkpOwp9CiR0b3RhbFBhZ2VzID0gbWF4KDEsIChpbnQpIGNlaWwoJHRvdGFsIC8gJHBlclBhZ2UpKTsKCiR0eXBlTWFwID0gWwogICdjaGFuZ2VfbG9jYXRpb24nID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNoYW5nZUxvY2F0aW9uTGFiZWwnXSwKICAnZXh0cmFfdXNlcicgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlRXh0cmFWb2x1bWVMYWJlbCddLAogICdleHRyYV90aW1lX3VzZXInID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUV4dHJhVGltZUxhYmVsJ10sCiAgJ2V4dGVuZHNfbm90X3VzZXInID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZVJlbmV3TGFiZWwnXSwKICAnZXh0ZW5kX3VzZXInID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZVJlbmV3TGFiZWwyJ10sCiAgJ3RyYW5zZmVydG91c2VyJyA9PiAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VUcmFuc2Zlck9yZGVyTGFiZWwnXQpdOwoKJHBhZ2VUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZXNIZWFkaW5nJ107CiRwYWdlTGVkZSA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZXNTdWJ0aXRsZTInXTsKJGFjdGl2ZU5hdiA9ICdzZXJ2aWNlJzsKaW5jbHVkZSBfX0RJUl9fIC4gJy9pbmMvbGF5b3V0X2hlYWQucGhwJzsKPz4KCjxkaXYgY2xhc3M9ImNhcmQgZmFkZS11cCI+CiAgPGRpdiBjbGFzcz0idG9vbGJhciI+CiAgICA8ZGl2IGNsYXNzPSJ0b29sYmFyLXRpdGxlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlc1BhZ2VIZWFkaW5nJ10gPz4gPHNtYWxsPig8Pz0gbnVtYmVyX2Zvcm1hdCgkdG90YWwpID8+KTwvc21hbGw+PC9kaXY+CiAgICA8Zm9ybSBtZXRob2Q9IkdFVCIgaWQ9InNydkZvcm0iIGNsYXNzPSJ0b29sYmFyLWVuZCI+CiAgICAgIDxzZWxlY3QgbmFtZT0ic3RhdHVzIiBjbGFzcz0ic2VsZWN0IiBzdHlsZT0id2lkdGg6YXV0byIgb25jaGFuZ2U9ImRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzcnZGb3JtJykuc3VibWl0KCkiPgogICAgICAgIDxvcHRpb24gdmFsdWU9IiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNvbFVzZXInXSA/Pjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImRvbmUiIDw/PSAkc3RhdHVzID09PSAnZG9uZScgPyAnc2VsZWN0ZWQnIDogJycgPz4+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNvbFR5cGUnXSA/Pjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InBlbmRpbmciIDw/PSAkc3RhdHVzID09PSAncGVuZGluZycgPyAnc2VsZWN0ZWQnIDogJycgPz4+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNvbFNlcnZpY2UnXSA/Pjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InJlamVjdCIgPD89ICRzdGF0dXMgPT09ICdyZWplY3QnID8gJ3NlbGVjdGVkJyA6ICcnID8+Pjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VDb2xTdGF0dXMnXSA/Pjwvb3B0aW9uPgogICAgICA8L3NlbGVjdD4KICAgICAgPGRpdiBjbGFzcz0ic2VhcmNoLWJveCIgc3R5bGU9Im1pbi13aWR0aDoyNDBweCI+CiAgICAgICAgPD89IGljb24oJ3NlYXJjaCcsIDE0KSA/PgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJxIiBwbGFjZWhvbGRlcj0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlU2VhcmNoU2VydmljZVBsYWNlaG9sZGVyJ10pID8+IiB2YWx1ZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHNlYXJjaCkgPz4iCiAgICAgICAgICBhdXRvY29tcGxldGU9Im9mZiI+CiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJzZWFyY2gtY2xlYXIiPuKclTwvYnV0dG9uPgogICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0ic2VhcmNoLWJ0biI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNvbERhdGUnXSA/PjwvYnV0dG9uPgogICAgICA8L2Rpdj4KICAgICAgPD9waHAgaWYgKCRzZWFyY2ggfHwgJHN0YXR1cyk6ID8+CiAgICAgICAgPGEgaHJlZj0ic2VydmljZS5waHAiIGNsYXNzPSJidG4tbGluayIgc3R5bGU9ImZvbnQtc2l6ZTouNzhyZW0iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VDb2xQYW5lbCddID8+PC9hPgogICAgICA8P3BocCBlbmRpZjsgPz4KICAgIDwvZm9ybT4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0idGJsLXdyYXAiPgogICAgPHRhYmxlIGNsYXNzPSJ0YmwtbGciPgogICAgICA8dGhlYWQ+CiAgICAgICAgPHRyPgogICAgICAgICAgPHRoPiM8L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VDb2xQcm9kdWN0J10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VDb2xBbW91bnQnXSA/PjwvdGg+CiAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZURldGFpbFRpdGxlJ10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VEZXRhaWxVc2VyJ10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VEZXRhaWxUeXBlJ10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VEZXRhaWxTZXJ2aWNlJ10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VEZXRhaWxTdGF0dXMnXSA/PjwvdGg+CiAgICAgICAgPC90cj4KICAgICAgPC90aGVhZD4KICAgICAgPHRib2R5PgogICAgICAgIDw/cGhwIGlmIChlbXB0eSgkc2VydmljZXMpKTogPz4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRkIGNvbHNwYW49IjgiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImVtcHR5Ij4KICAgICAgICAgICAgICAgIDxzdmcgY2xhc3M9ImlsbCIgdmlld0JveD0iMCAwIDE4MCAxNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjMwIiB5PSIzMCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSI4MCIgcng9IjEwIiBmaWxsPSJ2YXIoLS1zZjMpIiAvPgogICAgICAgICAgICAgICAgICA8cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcng9IjYiIGZpbGw9InZhcigtLWJkcykiIC8+CiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjEwMCIgeT0iNTUiIHdpZHRoPSIzNSIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0idmFyKC0tYmQpIiAvPgogICAgICAgICAgICAgICAgICA8cmVjdCB4PSIxMDAiIHk9IjcwIiB3aWR0aD0iMjUiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InZhcigtLWJkKSIgLz4KICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMTAwIiB5PSI4NSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJ2YXIoLS1iZCkiIC8+CiAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MCA2NSBsMTAgMTAgbDIwLTIwIiBzdHJva2U9InZhcigtLWFjKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiIC8+CiAgICAgICAgICAgICAgICA8L3N2Zz4KICAgICAgICAgICAgICAgIDxwPjw/PSAkc2VhcmNoID8gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlTm9TZXJ2aWNlRm91bmQnXSA6ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZU5vTWFudWFsU2VydmljZVlldCddID8+PC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICA8P3BocCBlbHNlOgogICAgICAgICAgJGkgPSAkb2Zmc2V0ICsgMTsKICAgICAgICAgIGZvcmVhY2ggKCRzZXJ2aWNlcyBhcyAkcyk6CiAgICAgICAgICAgICRzdE1hcCA9IFsKICAgICAgICAgICAgICAnZG9uZScgPT4gWyd0YWctb2snLCAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NlcnZpY2VTdGF0dXNEb25lJ11dLAogICAgICAgICAgICAgICdwZW5kaW5nJyA9PiBbJ3RhZy13YXJuJywgJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlU3RhdHVzV2FpdGluZyddXSwKICAgICAgICAgICAgICAncmVqZWN0JyA9PiBbJ3RhZy1ubycsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZVN0YXR1c1JlamVjdGVkJ11dLAogICAgICAgICAgICBdOwogICAgICAgICAgICBbJGNscywgJGxibF0gPSAkc3RNYXBbJHNbJ3N0YXR1cyddID8/ICcnXSA/PyBbJ3RhZy1wbGFpbicsICRzWydzdGF0dXMnXSA/PyAn4oCUJ107CiAgICAgICAgICAgICR0eXBlTGFiZWwgPSAkdHlwZU1hcFskc1sndHlwZSddID8/ICcnXSA/PyAoJHNbJ3R5cGUnXSA/PyAn4oCUJyk7CiAgICAgICAgICAgID8+CiAgICAgICAgICAgIDx0cj4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNmIj48Pz0gJGkrKyA/PjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJHNbJ2lkX3VzZXInXSA/PyAn4oCUJykgPz48L3RkPgogICAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgIDw/PSAhZW1wdHkoJHNbJ3VzZXJuYW1lJ10pID8gJzxzcGFuIGNsYXNzPSJjbSIgc3R5bGU9ImNvbG9yOnZhcigtLWFjKSI+QCcgLiBodG1sc3BlY2lhbGNoYXJzKHRydW5jKCRzWyd1c2VybmFtZSddLCAxOCkpIC4gJzwvc3Bhbj4nIDogJzxzcGFuIGNsYXNzPSJjZiI+4oCUPC9zcGFuPicgPz4KICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgIDx0ZCBzdHlsZT0iZm9udC1zaXplOi44MnJlbTtjb2xvcjp2YXIoLS10ZXh0MikiPjw/PSBodG1sc3BlY2lhbGNoYXJzKCR0eXBlTGFiZWwpID8+PC90ZD4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNuIiBzdHlsZT0iZm9udC1zaXplOi44MnJlbSI+PD89IGh0bWxzcGVjaWFsY2hhcnModHJ1bmMoJHNbJ3ZhbHVlJ10gPz8gJ+KAlCcsIDIwKSkgPz48L3RkPgogICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY24gY3MiPjw/PSBudW1iZXJfZm9ybWF0KChpbnQpICgkc1sncHJpY2UnXSA/PyAwKSkgPz4gPHNwYW4gY2xhc3M9ImNmIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlRGV0YWlsRGF0ZSddID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjZiI+PD89IHNhZmVfZGF0ZSgkc1sndGltZSddID8/IG51bGwsICdZL20vZCcpID8+PC90ZD4KICAgICAgICAgICAgICA8dGQ+PHNwYW4gY2xhc3M9InRhZyA8Pz0gJGNscyA/PiI+PD89ICRsYmwgPz48L3NwYW4+PC90ZD4KICAgICAgICAgICAgPC90cj4KICAgICAgICAgIDw/cGhwIGVuZGZvcmVhY2g7IGVuZGlmOyA/PgogICAgICA8L3Rib2R5PgogICAgPC90YWJsZT4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0idGJsLWZvb3QiPgogICAgPHNwYW4+PD89IG51bWJlcl9mb3JtYXQoJHRvdGFsKSA/PiA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydzZXJ2aWNlRGV0YWlsUGFuZWwnXSA/PiA8Pz0gJHBhZ2UgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnc2VydmljZUNsb3NlQnRuJ10gPz4gPD89ICR0b3RhbFBhZ2VzID8+PC9zcGFuPgogICAgPGRpdiBjbGFzcz0icGFnZXIiPgogICAgICA8P3BocCAkcXMgPSBmbigkcCkgPT4gJz9xPScgLiB1cmxlbmNvZGUoJHNlYXJjaCkgLiAnJnN0YXR1cz0nIC4gdXJsZW5jb2RlKCRzdGF0dXMpIC4gJyZwYWdlPScgLiAkcDsgPz4KICAgICAgPGEgY2xhc3M9Ijw/PSAkcGFnZSA8PSAxID8gJ2RpcycgOiAnJyA/PiIgaHJlZj0iPD89ICRxcyhtYXgoMSwgJHBhZ2UgLSAxKSkgPz4iPuKAuTwvYT4KICAgICAgPD9waHAgZm9yICgkcCA9IG1heCgxLCAkcGFnZSAtIDIpOyAkcCA8PSBtaW4oJHRvdGFsUGFnZXMsICRwYWdlICsgMik7ICRwKyspOiA/PgogICAgICAgIDxhIGNsYXNzPSI8Pz0gJHAgPT09ICRwYWdlID8gJ2N1cicgOiAnJyA/PiIgaHJlZj0iPD89ICRxcygkcCkgPz4iPjw/PSAkcCA/PjwvYT4KICAgICAgPD9waHAgZW5kZm9yOyA/PgogICAgICA8YSBjbGFzcz0iPD89ICRwYWdlID49ICR0b3RhbFBhZ2VzID8gJ2RpcycgOiAnJyA/PiIgaHJlZj0iPD89ICRxcyhtaW4oJHRvdGFsUGFnZXMsICRwYWdlICsgMSkpID8+Ij7igLo8L2E+CiAgICA8L2Rpdj4KICA8L2Rpdj4KPC9kaXY+Cgo8P3BocCBpbmNsdWRlIF9fRElSX18gLiAnL2luYy9sYXlvdXRfZm9vdC5waHAnOyA/Pg==
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+$pageTitle = $textbotlang['panel']['servicesTitle'];
+$pageLede = $textbotlang['panel']['servicesSubtitle'];
+$activeNav = 'service_other';
+
+$search = trim($_GET['q'] ?? '');
+$status = $_GET['status'] ?? '';
+$page = max(1, (int) ($_GET['page'] ?? 1));
+$perPage = 30;
+$offset = ($page - 1) * $perPage;
+
+$where = [];
+$params = [];
+if ($search !== '') {
+  $where[] = "(id_user LIKE ? OR COALESCE(username,'') LIKE ? OR COALESCE(type,'') LIKE ?)";
+  $params = ["%$search%", "%$search%", "%$search%"];
+}
+if ($status !== '') {
+  $where[] = "status = ?";
+  $params[] = $status;
+}
+$whereSQL = $where ? 'WHERE ' . implode(' AND ', $where) : '';
+
+try {
+  $total = db_count($pdo, "SELECT COUNT(*) FROM service_other $whereSQL", $params);
+  $services = db_fetchAll($pdo, "SELECT * FROM service_other $whereSQL ORDER BY id DESC LIMIT $perPage OFFSET $offset", $params);
+} catch (Exception $e) {
+  $total = 0;
+  $services = [];
+  error_log('service.php error: ' . $e->getMessage());
+}
+$totalPages = max(1, (int) ceil($total / $perPage));
+
+$typeMap = [
+  'change_location' => $textbotlang['panel']['serviceChangeLocationLabel'],
+  'extra_user' => $textbotlang['panel']['serviceExtraVolumeLabel'],
+  'extra_time_user' => $textbotlang['panel']['serviceExtraTimeLabel'],
+  'extends_not_user' => $textbotlang['panel']['serviceRenewLabel'],
+  'extend_user' => $textbotlang['panel']['serviceRenewLabel2'],
+  'transfertouser' => $textbotlang['panel']['serviceTransferOrderLabel']
+];
+
+$pageTitle = $textbotlang['panel']['servicesHeading'];
+$pageLede = $textbotlang['panel']['servicesSubtitle2'];
+$activeNav = 'service';
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div class="card fade-up">
+  <div class="toolbar">
+    <div class="toolbar-title"><?= $textbotlang['panel']['servicesPageHeading'] ?> <small>(<?= number_format($total) ?>)</small></div>
+    <form method="GET" id="srvForm" class="toolbar-end">
+      <select name="status" class="select" style="width:auto" onchange="document.getElementById('srvForm').submit()">
+        <option value=""><?= $textbotlang['panel']['serviceColUser'] ?></option>
+        <option value="done" <?= $status === 'done' ? 'selected' : '' ?>><?= $textbotlang['panel']['serviceColType'] ?></option>
+        <option value="pending" <?= $status === 'pending' ? 'selected' : '' ?>><?= $textbotlang['panel']['serviceColService'] ?></option>
+        <option value="reject" <?= $status === 'reject' ? 'selected' : '' ?>><?= $textbotlang['panel']['serviceColStatus'] ?></option>
+      </select>
+      <div class="search-box" style="min-width:240px">
+        <?= icon('search', 14) ?>
+        <input type="text" name="q" placeholder="<?= htmlspecialchars($textbotlang['panel']['serviceSearchServicePlaceholder']) ?>" value="<?= htmlspecialchars($search) ?>"
+          autocomplete="off">
+        <button type="button" class="search-clear">✕</button>
+        <button type="submit" class="search-btn"><?= $textbotlang['panel']['serviceColDate'] ?></button>
+      </div>
+      <?php if ($search || $status): ?>
+        <a href="service.php" class="btn-link" style="font-size:.78rem"><?= $textbotlang['panel']['serviceColPanel'] ?></a>
+      <?php endif; ?>
+    </form>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="tbl-lg">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><?= $textbotlang['panel']['serviceColProduct'] ?></th>
+          <th><?= $textbotlang['panel']['serviceColAmount'] ?></th>
+          <th><?= $textbotlang['panel']['serviceDetailTitle'] ?></th>
+          <th><?= $textbotlang['panel']['serviceDetailUser'] ?></th>
+          <th><?= $textbotlang['panel']['serviceDetailType'] ?></th>
+          <th><?= $textbotlang['panel']['serviceDetailService'] ?></th>
+          <th><?= $textbotlang['panel']['serviceDetailStatus'] ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php if (empty($services)): ?>
+          <tr>
+            <td colspan="8">
+              <div class="empty">
+                <svg class="ill" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="30" width="120" height="80" rx="10" fill="var(--sf3)" />
+                  <rect x="50" y="50" width="40" height="40" rx="6" fill="var(--bds)" />
+                  <rect x="100" y="55" width="35" height="8" rx="4" fill="var(--bd)" />
+                  <rect x="100" y="70" width="25" height="8" rx="4" fill="var(--bd)" />
+                  <rect x="100" y="85" width="30" height="8" rx="4" fill="var(--bd)" />
+                  <path d="M60 65 l10 10 l20-20" stroke="var(--ac)" stroke-width="3" stroke-linecap="round" fill="none" />
+                </svg>
+                <p><?= $search ? $textbotlang['panel']['serviceNoServiceFound'] : $textbotlang['panel']['serviceNoManualServiceYet'] ?></p>
+              </div>
+            </td>
+          </tr>
+        <?php else:
+          $i = $offset + 1;
+          foreach ($services as $s):
+            $stMap = [
+              'done' => ['tag-ok', $textbotlang['panel']['serviceStatusDone']],
+              'pending' => ['tag-warn', $textbotlang['panel']['serviceStatusWaiting']],
+              'reject' => ['tag-no', $textbotlang['panel']['serviceStatusRejected']],
+            ];
+            [$cls, $lbl] = $stMap[$s['status'] ?? ''] ?? ['tag-plain', $s['status'] ?? '—'];
+            $typeLabel = $typeMap[$s['type'] ?? ''] ?? ($s['type'] ?? '—');
+            ?>
+            <tr>
+              <td class="cf"><?= $i++ ?></td>
+              <td class="cm"><?= htmlspecialchars($s['id_user'] ?? '—') ?></td>
+              <td>
+                <?= !empty($s['username']) ? '<span class="cm" style="color:var(--ac)">@' . htmlspecialchars(trunc($s['username'], 18)) . '</span>' : '<span class="cf">—</span>' ?>
+              </td>
+              <td style="font-size:.82rem;color:var(--text2)"><?= htmlspecialchars($typeLabel) ?></td>
+              <td class="cn" style="font-size:.82rem"><?= htmlspecialchars(trunc($s['value'] ?? '—', 20)) ?></td>
+              <td class="cn cs"><?= number_format((int) ($s['price'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['serviceDetailDate'] ?></span></td>
+              <td class="cf"><?= safe_date($s['time'] ?? null, 'Y/m/d') ?></td>
+              <td><span class="tag <?= $cls ?>"><?= $lbl ?></span></td>
+            </tr>
+          <?php endforeach; endif; ?>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-foot">
+    <span><?= number_format($total) ?> <?= $textbotlang['panel']['serviceDetailPanel'] ?> <?= $page ?> <?= $textbotlang['panel']['serviceCloseBtn'] ?> <?= $totalPages ?></span>
+    <div class="pager">
+      <?php $qs = fn($p) => '?q=' . urlencode($search) . '&status=' . urlencode($status) . '&page=' . $p; ?>
+      <a class="<?= $page <= 1 ? 'dis' : '' ?>" href="<?= $qs(max(1, $page - 1)) ?>">‹</a>
+      <?php for ($p = max(1, $page - 2); $p <= min($totalPages, $page + 2); $p++): ?>
+        <a class="<?= $p === $page ? 'cur' : '' ?>" href="<?= $qs($p) ?>"><?= $p ?></a>
+      <?php endfor; ?>
+      <a class="<?= $page >= $totalPages ? 'dis' : '' ?>" href="<?= $qs(min($totalPages, $page + 1)) ?>">›</a>
+    </div>
+  </div>
+</div>
+
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

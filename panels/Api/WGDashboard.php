@@ -1,1 +1,242 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgoKZnVuY3Rpb24gZ2V0X3VzZXJ3ZygkdXNlcm5hbWUsICRuYW1lcGFuZWwpCnsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRuYW1lcGFuZWwsICJzZWxlY3QiKTsKICAgICRjdXJsID0gY3VybF9pbml0KCk7CiAgICBjdXJsX3NldG9wdF9hcnJheSgkY3VybCwgYXJyYXkoCiAgICAgICAgQ1VSTE9QVF9VUkwgPT4gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvZ2V0V2lyZWd1YXJkQ29uZmlndXJhdGlvbkluZm8/Y29uZmlndXJhdGlvbk5hbWU9JyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kaWQnXSwKICAgICAgICBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSID0+IHRydWUsCiAgICAgICAgQ1VSTE9QVF9FTkNPRElORyA9PiAnJywKICAgICAgICBDVVJMT1BUX01BWFJFRElSUyA9PiAxMCwKICAgICAgICBDVVJMT1BUX1RJTUVPVVQgPT4gMCwKICAgICAgICBDVVJMT1BUX0ZPTExPV0xPQ0FUSU9OID0+IHRydWUsCiAgICAgICAgQ1VSTE9QVF9IVFRQX1ZFUlNJT04gPT4gQ1VSTF9IVFRQX1ZFUlNJT05fMV8xLAogICAgICAgIENVUkxPUFRfQ1VTVE9NUkVRVUVTVCA9PiAnR0VUJywKICAgICAgICBDVVJMT1BUX0hUVFBIRUFERVIgPT4gYXJyYXkoCiAgICAgICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddCiAgICAgICAgKSwKICAgICkpOwogICAgJHJlc3BvbnNlID0ganNvbl9kZWNvZGUoY3VybF9leGVjKCRjdXJsKSwgdHJ1ZSk7CiAgICBpZiAoISRyZXNwb25zZVsnc3RhdHVzJ10pCiAgICAgICAgcmV0dXJuICRyZXNwb25zZTsKICAgICRjb25maWd1cmF0aW9uUGVlcnMgPSAkcmVzcG9uc2VbJ2RhdGEnXVsnY29uZmlndXJhdGlvblBlZXJzJ107CiAgICAkY29uZmlndXJhdGlvblJlc3RyaWN0ZWRQZWVycyA9ICRyZXNwb25zZVsnZGF0YSddWydjb25maWd1cmF0aW9uUmVzdHJpY3RlZFBlZXJzJ107CiAgICAkb3V0cHV0ID0gW107CiAgICBmb3JlYWNoICgkY29uZmlndXJhdGlvblBlZXJzIGFzICR1c2VyaW5mbykgewogICAgICAgIGlmICgkdXNlcmluZm9bJ25hbWUnXSA9PSAkdXNlcm5hbWUpIHsKICAgICAgICAgICAgJG91dHB1dCA9ICR1c2VyaW5mbzsKICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgfQogICAgfQogICAgaWYgKGNvdW50KCRvdXRwdXQpICE9IDApCiAgICAgICAgcmV0dXJuICRvdXRwdXQ7CiAgICBmb3JlYWNoICgkY29uZmlndXJhdGlvblJlc3RyaWN0ZWRQZWVycyBhcyAkdXNlcmluZm8pIHsKICAgICAgICBpZiAoJHVzZXJpbmZvWyduYW1lJ10gPT0gJHVzZXJuYW1lKSB7CiAgICAgICAgICAgICRvdXRwdXQgPSAkdXNlcmluZm87CiAgICAgICAgICAgICRvdXRwdXRbJ2NvbmZpZ3VyYXRpb24nXVsnU3RhdHVzJ10gPSBmYWxzZTsKICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgfQogICAgfQogICAgcmV0dXJuICRvdXRwdXQ7Cn0KCmZ1bmN0aW9uIGlwc2xhc3QoJG5hbWVwYW5lbCkKewoKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRuYW1lcGFuZWwsICJzZWxlY3QiKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9nZXRBdmFpbGFibGVJUHMvJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kaWQnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ3dnLWRhc2hib2FyZC1hcGlrZXk6ICcgLiAkbWFyemJhbl9saXN0X2dldFsncGFzc3dvcmRfcGFuZWwnXQogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBkb3dubG9hZGNvbmZpZygkbmFtZXBhbmVsLCAkcHVibGlja2V5KQp7CgogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJG5hbWVwYW5lbCwgInNlbGVjdCIpOwogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICIvYXBpL2Rvd25sb2FkUGVlci97JG1hcnpiYW5fbGlzdF9nZXRbJ2luYm91bmRpZCddfT9pZD0iIC4gdXJsZW5jb2RlKCRwdWJsaWNrZXkpOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+Z2V0KCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIGFkZHBlYXIoJG5hbWVwYW5lbCwgJHVzZXJuYW1lYWMpCnsKCiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbmFtZXBhbmVsLCAic2VsZWN0Iik7CiAgICAkcHViYW5kcHJpdmF0ZSA9IHB1YmxpY2tleSgpOwogICAgJGlwY29uZmlnID0gaXBzbGFzdCgkbmFtZXBhbmVsKTsKICAgIGlmICghZW1wdHkoJGlwY29uZmlnWydzdGF0dXMnXSkgJiYgJGlwY29uZmlnWydzdGF0dXMnXSAhPSAyMDApIHsKICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICdzdGF0dXMnID0+IGZhbHNlLAogICAgICAgICAgICAnbXNnJyA9PiAnZXJyb3IgY29kZSA6ICcgLiAkaXBjb25maWdbJ3N0YXR1cyddCiAgICAgICAgKTsKICAgIH0KICAgIGlmICghZW1wdHkoJGlwY29uZmlnWydlcnJvciddKSkgewogICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICdtc2cnID0+ICRpcGNvbmZpZ1snZXJyb3InXQogICAgICAgICk7CiAgICB9CiAgICAkaXBjb25maWcgPSBqc29uX2RlY29kZSgkaXBjb25maWdbJ2JvZHknXSwgdHJ1ZSk7CiAgICBpZiAoZW1wdHkoJGlwY29uZmlnWydzdGF0dXMnXSkgfHwgZW1wdHkoJGlwY29uZmlnWydkYXRhJ10pKSB7CiAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgJ21zZycgPT4gJGlwY29uZmlnWydtZXNzYWdlJ10gPz8gJ25vIGF2YWlsYWJsZSBpcCcKICAgICAgICApOwogICAgfQogICAgJGtleSA9IGFycmF5X2tleXMoJGlwY29uZmlnWydkYXRhJ10pWzBdOwogICAgJGlwY29uZmlnID0gJGlwY29uZmlnWydkYXRhJ11bJGtleV1bMF07CiAgICAkY29uZmlnID0gYXJyYXkoCiAgICAgICAgJ25hbWUnID0+ICR1c2VybmFtZWFjLAogICAgICAgICdhbGxvd2VkX2lwcycgPT4gWyRpcGNvbmZpZ10sCiAgICAgICAgJ3ByaXZhdGVfa2V5JyA9PiAkcHViYW5kcHJpdmF0ZVsncHJpdmF0ZV9rZXknXSwKICAgICAgICAncHVibGljX2tleScgPT4gJHB1YmFuZHByaXZhdGVbJ3B1YmxpY19rZXknXSwKICAgICAgICAncHJlc2hhcmVkX2tleScgPT4gJHB1YmFuZHByaXZhdGVbJ3ByZXNoYXJlZF9rZXknXSwKICAgICk7CiAgICAkY29uZmlncGFuZWwgPSBqc29uX2VuY29kZSgkY29uZmlnKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9hZGRQZWVycy8nIC4gJG1hcnpiYW5fbGlzdF9nZXRbJ2luYm91bmRpZCddOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkY29uZmlncGFuZWwpOwogICAgJHJlc3VsdF9yZXNwb25zZSA9ICRyZXNwb25zZVsnYm9keSddOwogICAgJHJlc3BvbnNlWydib2R5J10gPSAkY29uZmlnOwogICAgJHJlc3BvbnNlWydib2R5J11bJ3Jlc3BvbnNlJ10gPSAkcmVzdWx0X3Jlc3BvbnNlOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBzZXRqb2IoJG5hbWVwYW5lbCwgJHR5cGUsICR2YWx1ZSwgJHB1YmxpY2tleSkKewogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJG5hbWVwYW5lbCwgInNlbGVjdCIpOwogICAgJGRhdGEgPSBqc29uX2VuY29kZShhcnJheSgKICAgICAgICAiSm9iIiA9PiBhcnJheSgKICAgICAgICAgICAgIkpvYklEIiA9PiBnZW5lcmF0ZVVVSUQoKSwKICAgICAgICAgICAgIkNvbmZpZ3VyYXRpb24iID0+ICRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kaWQnXSwKICAgICAgICAgICAgIlBlZXIiID0+ICRwdWJsaWNrZXksCiAgICAgICAgICAgICJGaWVsZCIgPT4gJHR5cGUsCiAgICAgICAgICAgICJPcGVyYXRvciIgPT4gImxndCIsCiAgICAgICAgICAgICJWYWx1ZSIgPT4gc3RydmFsKCR2YWx1ZSksCiAgICAgICAgICAgICJDcmVhdGlvbkRhdGUiID0+ICIiLAogICAgICAgICAgICAiRXhwaXJlRGF0ZSIgPT4gbnVsbCwKICAgICAgICAgICAgIkFjdGlvbiIgPT4gInJlc3RyaWN0IgogICAgICAgICkKICAgICkpOwogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL3NhdmVQZWVyU2NoZWR1bGVKb2InOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnBvc3QoJGRhdGEpOwogICAgcmV0dXJuICRyZXNwb25zZTsKCn0KZnVuY3Rpb24gdXBkYXRlcGVhcigkbmFtZXBhbmVsLCBhcnJheSAkY29uZmlnKQp7CgogICAgJG1hcnpiYW5fbGlzdF9nZXQgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJG5hbWVwYW5lbCwgInNlbGVjdCIpOwogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL3VwZGF0ZVBlZXJTZXR0aW5ncy8nIC4gJG1hcnpiYW5fbGlzdF9nZXRbJ2luYm91bmRpZCddOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkY29uZmlnKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gZGVsZXRlam9iKCRuYW1lcGFuZWwsIGFycmF5ICRjb25maWcpCnsKCiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbmFtZXBhbmVsLCAic2VsZWN0Iik7CiAgICAkY29uZmlncGFuZWwgPSBqc29uX2VuY29kZSgkY29uZmlnKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9kZWxldGVQZWVyU2NoZWR1bGVKb2InOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnd2ctZGFzaGJvYXJkLWFwaWtleTogJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydwYXNzd29yZF9wYW5lbCddLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnBvc3QoJGNvbmZpZ3BhbmVsKTsKICAgIHJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gUmVzZXRVc2VyRGF0YVVzYWdld2coJHB1YmxpY2tleSwgJG5hbWVwYW5lbCkKewoKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRuYW1lcGFuZWwsICJzZWxlY3QiKTsKICAgICRjb25maWcgPSBhcnJheSgKICAgICAgICAiaWQiID0+ICRwdWJsaWNrZXksCiAgICAgICAgInR5cGUiID0+ICJ0b3RhbCIKICAgICk7CiAgICAkY29uZmlncGFuZWwgPSBqc29uX2VuY29kZSgkY29uZmlnLCB0cnVlKTsKICAgICR1cmwgPSAkbWFyemJhbl9saXN0X2dldFsndXJsX3BhbmVsJ10gLiAnL2FwaS9yZXNldFBlZXJEYXRhLycgLiAkbWFyemJhbl9saXN0X2dldFsnaW5ib3VuZGlkJ107CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICd3Zy1kYXNoYm9hcmQtYXBpa2V5OiAnIC4gJG1hcnpiYW5fbGlzdF9nZXRbJ3Bhc3N3b3JkX3BhbmVsJ10sCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkY29uZmlncGFuZWwpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiByZW1vdmVfdXNlcndnKCRsb2NhdGlvbiwgJHVzZXJuYW1lKQp7CiAgICBhbGxvd0FjY2Vzc1BlZXJzKCRsb2NhdGlvbiwgJHVzZXJuYW1lKTsKICAgICRtYXJ6YmFuX2xpc3RfZ2V0ID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJGRhdGFfdXNlciA9IGpzb25fZGVjb2RlKHNlbGVjdCgiaW52b2ljZSIsICJ1c2VyX2luZm8iLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUsICJzZWxlY3QiKVsndXNlcl9pbmZvJ10sIHRydWUpWydwdWJsaWNfa2V5J107CiAgICAkdXJsID0gJG1hcnpiYW5fbGlzdF9nZXRbJ3VybF9wYW5lbCddIC4gJy9hcGkvZGVsZXRlUGVlcnMvJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kaWQnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ3dnLWRhc2hib2FyZC1hcGlrZXk6ICcgLiAkbWFyemJhbl9saXN0X2dldFsncGFzc3dvcmRfcGFuZWwnXSwKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJywKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICJwZWVycyIgPT4gYXJyYXkoCiAgICAgICAgICAgICRkYXRhX3VzZXIKICAgICAgICApCiAgICApKSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIGFsbG93QWNjZXNzUGVlcnMoJGxvY2F0aW9uLCAkdXNlcm5hbWUpCnsKCiAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkbG9jYXRpb24sICJzZWxlY3QiKTsKICAgICRkYXRhX3VzZXIgPSBqc29uX2RlY29kZShzZWxlY3QoImludm9pY2UiLCAidXNlcl9pbmZvIiwgInVzZXJuYW1lIiwgJHVzZXJuYW1lLCAic2VsZWN0IilbJ3VzZXJfaW5mbyddLCB0cnVlKVsncHVibGljX2tleSddOwogICAgJHVybCA9ICRtYXJ6YmFuX2xpc3RfZ2V0Wyd1cmxfcGFuZWwnXSAuICcvYXBpL2FsbG93QWNjZXNzUGVlcnMvJyAuICRtYXJ6YmFuX2xpc3RfZ2V0WydpbmJvdW5kaWQnXTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ3dnLWRhc2hib2FyZC1hcGlrZXk6ICcgLiAkbWFyemJhbl9saXN0X2dldFsncGFzc3dvcmRfcGFuZWwnXSwKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJywKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KGpzb25fZW5jb2RlKGFycmF5KAogICAgICAgICJwZWVycyIgPT4gYXJyYXkoCiAgICAgICAgICAgICRkYXRhX3VzZXIKICAgICAgICApCiAgICApKSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9Cg==
+<?php
+require_once __DIR__ . '/../../config.php';
+ini_set('error_log', 'error_log');
+
+
+function get_userwg($username, $namepanel)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => $marzban_list_get['url_panel'] . '/api/getWireguardConfigurationInfo?configurationName=' . $marzban_list_get['inboundid'],
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        CURLOPT_HTTPHEADER => array(
+            'Accept: application/json',
+            'wg-dashboard-apikey: ' . $marzban_list_get['password_panel']
+        ),
+    ));
+    $response = json_decode(curl_exec($curl), true);
+    if (!$response['status'])
+        return $response;
+    $configurationPeers = $response['data']['configurationPeers'];
+    $configurationRestrictedPeers = $response['data']['configurationRestrictedPeers'];
+    $output = [];
+    foreach ($configurationPeers as $userinfo) {
+        if ($userinfo['name'] == $username) {
+            $output = $userinfo;
+            break;
+        }
+    }
+    if (count($output) != 0)
+        return $output;
+    foreach ($configurationRestrictedPeers as $userinfo) {
+        if ($userinfo['name'] == $username) {
+            $output = $userinfo;
+            $output['configuration']['Status'] = false;
+            break;
+        }
+    }
+    return $output;
+}
+
+function ipslast($namepanel)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $url = $marzban_list_get['url_panel'] . '/api/getAvailableIPs/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->get();
+    return $response;
+}
+function downloadconfig($namepanel, $publickey)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $url = $marzban_list_get['url_panel'] . "/api/downloadPeer/{$marzban_list_get['inboundid']}?id=" . urlencode($publickey);
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->get();
+    return $response;
+}
+function addpear($namepanel, $usernameac)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $pubandprivate = publickey();
+    $ipconfig = ipslast($namepanel);
+    if (!empty($ipconfig['status']) && $ipconfig['status'] != 200) {
+        return array(
+            'status' => false,
+            'msg' => 'error code : ' . $ipconfig['status']
+        );
+    }
+    if (!empty($ipconfig['error'])) {
+        return array(
+            'status' => false,
+            'msg' => $ipconfig['error']
+        );
+    }
+    $ipconfig = json_decode($ipconfig['body'], true);
+    if (empty($ipconfig['status']) || empty($ipconfig['data'])) {
+        return array(
+            'status' => false,
+            'msg' => $ipconfig['message'] ?? 'no available ip'
+        );
+    }
+    $key = array_keys($ipconfig['data'])[0];
+    $ipconfig = $ipconfig['data'][$key][0];
+    $config = array(
+        'name' => $usernameac,
+        'allowed_ips' => [$ipconfig],
+        'private_key' => $pubandprivate['private_key'],
+        'public_key' => $pubandprivate['public_key'],
+        'preshared_key' => $pubandprivate['preshared_key'],
+    );
+    $configpanel = json_encode($config);
+    $url = $marzban_list_get['url_panel'] . '/api/addPeers/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($configpanel);
+    $result_response = $response['body'];
+    $response['body'] = $config;
+    $response['body']['response'] = $result_response;
+    return $response;
+}
+function setjob($namepanel, $type, $value, $publickey)
+{
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $data = json_encode(array(
+        "Job" => array(
+            "JobID" => generateUUID(),
+            "Configuration" => $marzban_list_get['inboundid'],
+            "Peer" => $publickey,
+            "Field" => $type,
+            "Operator" => "lgt",
+            "Value" => strval($value),
+            "CreationDate" => "",
+            "ExpireDate" => null,
+            "Action" => "restrict"
+        )
+    ));
+    $url = $marzban_list_get['url_panel'] . '/api/savePeerScheduleJob';
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel'],
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($data);
+    return $response;
+
+}
+function updatepear($namepanel, array $config)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $url = $marzban_list_get['url_panel'] . '/api/updatePeerSettings/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel']
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($config);
+    return $response;
+}
+function deletejob($namepanel, array $config)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $configpanel = json_encode($config);
+    $url = $marzban_list_get['url_panel'] . '/api/deletePeerScheduleJob';
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel'],
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($configpanel);
+    return $response;
+}
+function ResetUserDataUsagewg($publickey, $namepanel)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $namepanel, "select");
+    $config = array(
+        "id" => $publickey,
+        "type" => "total"
+    );
+    $configpanel = json_encode($config, true);
+    $url = $marzban_list_get['url_panel'] . '/api/resetPeerData/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel'],
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post($configpanel);
+    return $response;
+}
+function remove_userwg($location, $username)
+{
+    allowAccessPeers($location, $username);
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $data_user = json_decode(select("invoice", "user_info", "username", $username, "select")['user_info'], true)['public_key'];
+    $url = $marzban_list_get['url_panel'] . '/api/deletePeers/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel'],
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post(json_encode(array(
+        "peers" => array(
+            $data_user
+        )
+    )));
+    return $response;
+}
+function allowAccessPeers($location, $username)
+{
+
+    $marzban_list_get = select("marzban_panel", "*", "name_panel", $location, "select");
+    $data_user = json_decode(select("invoice", "user_info", "username", $username, "select")['user_info'], true)['public_key'];
+    $url = $marzban_list_get['url_panel'] . '/api/allowAccessPeers/' . $marzban_list_get['inboundid'];
+    $headers = array(
+        'Accept: application/json',
+        'wg-dashboard-apikey: ' . $marzban_list_get['password_panel'],
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $response = $req->post(json_encode(array(
+        "peers" => array(
+            $data_user
+        )
+    )));
+    return $response;
+}

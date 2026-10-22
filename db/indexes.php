@@ -1,1 +1,22 @@
-PD9waHAKCnJldHVybiBbCiAgICBbJ2ludm9pY2UnLCAnaWR4X2ludm9pY2VfaWRfdXNlcicsICdgaWRfdXNlcmAoMTAwKSddLAogICAgWydpbnZvaWNlJywgJ2lkeF9pbnZvaWNlX3VzZXJuYW1lJywgJ2B1c2VybmFtZWAoMTUwKSddLAogICAgWydpbnZvaWNlJywgJ2lkeF9pbnZvaWNlX3N0YXR1cycsICdgU3RhdHVzYCgxMDApJ10sCiAgICBbJ2ludm9pY2UnLCAnaWR4X2ludm9pY2VfbG9jYXRpb24nLCAnYFNlcnZpY2VfbG9jYXRpb25gKDE1MCknXSwKICAgIFsnaW52b2ljZScsICdpZHhfaW52b2ljZV9pZF9wYXltZW50JywgJ2BpZF9wYXltZW50YCddLAogICAgWydQYXltZW50X3JlcG9ydCcsICdpZHhfcGF5cmVwb3J0X2lkX3VzZXInLCAnYGlkX3VzZXJgKDEwMCknXSwKICAgIFsnUGF5bWVudF9yZXBvcnQnLCAnaWR4X3BheXJlcG9ydF9pZF9vcmRlcicsICdgaWRfb3JkZXJgJ10sCiAgICBbJ1BheW1lbnRfcmVwb3J0JywgJ2lkeF9wYXlyZXBvcnRfc3RhdHVzJywgJ2BwYXltZW50X1N0YXR1c2AoMTAwKSddLAogICAgWydtYXJ6YmFuX3BhbmVsJywgJ2lkeF9wYW5lbF9uYW1lJywgJ2BuYW1lX3BhbmVsYCgxNTApJ10sCiAgICBbJ21hcnpiYW5fcGFuZWwnLCAnaWR4X3BhbmVsX2NvZGUnLCAnYGNvZGVfcGFuZWxgKDEwMCknXSwKICAgIFsncHJvZHVjdCcsICdpZHhfcHJvZHVjdF9jb2RlJywgJ2Bjb2RlX3Byb2R1Y3RgKDUwKSddLAogICAgWydwcm9kdWN0JywgJ2lkeF9wcm9kdWN0X2xvY2F0aW9uJywgJ2BMb2NhdGlvbmAoMTAwKSddLAogICAgWydtYW51YWxzZWxsJywgJ2lkeF9tYW51YWxzZWxsX2NvZGVwYW5lbCcsICdgY29kZXBhbmVsYCgxMDApJ10sCiAgICBbJ3NlcnZpY2Vfb3RoZXInLCAnaWR4X3NlcnZpY2VvdGhlcl91c2VybmFtZScsICdgdXNlcm5hbWVgKDE1MCknXSwKICAgIFsnc2VydmljZV9vdGhlcicsICdpZHhfc2VydmljZW90aGVyX3R5cGUnLCAnYHR5cGVgKDEwMCknXSwKICAgIFsnc2VydmljZV9vdGhlcicsICdpZHhfc2VydmljZW90aGVyX2lkX3BheW1lbnQnLCAnYGlkX3BheW1lbnRgJ10sCiAgICBbJ3VzZXInLCAnaWR4X3VzZXJfYWZmaWxpYXRlcycsICdgYWZmaWxpYXRlc2AnXSwKICAgIFsnZGVwYXJ0bWFuJywgJ3VuaXFfZGVwYXJ0bWFuX2VudHJ5JywgJ2BpZHN1cHBvcnRgKDEwMCksIGBuYW1lX2RlcGFydG1hbmAoMTUwKScsIHRydWVdLApdOwo=
+<?php
+
+return [
+    ['invoice', 'idx_invoice_id_user', '`id_user`(100)'],
+    ['invoice', 'idx_invoice_username', '`username`(150)'],
+    ['invoice', 'idx_invoice_status', '`Status`(100)'],
+    ['invoice', 'idx_invoice_location', '`Service_location`(150)'],
+    ['invoice', 'idx_invoice_id_payment', '`id_payment`'],
+    ['Payment_report', 'idx_payreport_id_user', '`id_user`(100)'],
+    ['Payment_report', 'idx_payreport_id_order', '`id_order`'],
+    ['Payment_report', 'idx_payreport_status', '`payment_Status`(100)'],
+    ['marzban_panel', 'idx_panel_name', '`name_panel`(150)'],
+    ['marzban_panel', 'idx_panel_code', '`code_panel`(100)'],
+    ['product', 'idx_product_code', '`code_product`(50)'],
+    ['product', 'idx_product_location', '`Location`(100)'],
+    ['manualsell', 'idx_manualsell_codepanel', '`codepanel`(100)'],
+    ['service_other', 'idx_serviceother_username', '`username`(150)'],
+    ['service_other', 'idx_serviceother_type', '`type`(100)'],
+    ['service_other', 'idx_serviceother_id_payment', '`id_payment`'],
+    ['user', 'idx_user_affiliates', '`affiliates`'],
+    ['departman', 'uniq_departman_entry', '`idsupport`(100), `name_departman`(150)', true],
+];

@@ -1,1 +1,321 @@
-PGRpdiBhbGlnbj0iY2VudGVyIj4KCiMg8J+kliBNb2Rhc3IgQm90CgojIyMgQSBwb3dlcmZ1bCBUZWxlZ3JhbSBib3QgZm9yIHNlbGxpbmcgVlBOIHNlcnZpY2VzIOKAlCB3aXRoIGZ1bGx5IGF1dG9tYXRlZCBjb25maWcgY3JlYXRpb24uCgo8cD4KICA8YSBocmVmPSJodHRwczovL3QubWUvbWlyemFwYW5lbCI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9UZWxlZ3JhbS1DaGFubmVsLTJDQTVFMD9zdHlsZT1mb3ItdGhlLWJhZGdlJmxvZ289dGVsZWdyYW0mbG9nb0NvbG9yPXdoaXRlIiBhbHQ9IlRlbGVncmFtIENoYW5uZWwiLz4KICA8L2E+CiAgPGEgaHJlZj0iaHR0cHM6Ly90Lm1lL21pcnphcGFuZWxncm91cCI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9UZWxlZ3JhbS1Hcm91cC0yMjlFRDk/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPXRlbGVncmFtJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJUZWxlZ3JhbSBHcm91cCIvPgogIDwvYT4KICA8YSBocmVmPSJodHRwczovL21pcnphYm90LmNvbS9kb2NzLyI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9Eb2NzLW1pcnphYm90LmNvbS0zOEJERjg/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPXJlYWR0aGVkb2NzJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJEb2N1bWVudGF0aW9uIi8+CiAgPC9hPgo8L3A+Cgo8cD4KICA8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbWFoZGlNR0YyL21pcnphYm90L3N0YXJnYXplcnMiPgogICAgPGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vZ2l0aHViL3N0YXJzL21haGRpTUdGMi9taXJ6YWJvdD9zdHlsZT1mbGF0LXNxdWFyZSZjb2xvcj1mNWM1MTgiIGFsdD0iU3RhcnMiLz4KICA8L2E+CiAgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL21haGRpTUdGMi9taXJ6YWJvdC9uZXR3b3JrL21lbWJlcnMiPgogICAgPGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vZ2l0aHViL2ZvcmtzL21haGRpTUdGMi9taXJ6YWJvdD9zdHlsZT1mbGF0LXNxdWFyZSIgYWx0PSJGb3JrcyIvPgogIDwvYT4KICA8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbWFoZGlNR0YyL21pcnphYm90L2lzc3VlcyI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9naXRodWIvaXNzdWVzL21haGRpTUdGMi9taXJ6YWJvdD9zdHlsZT1mbGF0LXNxdWFyZSIgYWx0PSJJc3N1ZXMiLz4KICA8L2E+CiAgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL21haGRpTUdGMi9taXJ6YWJvdC9ibG9iL21haW4vTElDRU5TRSI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9naXRodWIvbGljZW5zZS9tYWhkaU1HRjIvbWlyemFib3Q/c3R5bGU9ZmxhdC1zcXVhcmUiIGFsdD0iTGljZW5zZSIvPgogIDwvYT4KICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9QSFAtOC4yLTc3N0JCND9zdHlsZT1mbGF0LXNxdWFyZSZsb2dvPXBocCZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iUEhQIDguMiIvPgo8L3A+Cgo8L2Rpdj4KCi0tLQoKIyMg8J+TmiBUYWJsZSBvZiBDb250ZW50cwoKLSBb4pyoIE92ZXJ2aWV3XSgjLW92ZXJ2aWV3KQotIFvwn5OWIERvY3VtZW50YXRpb25dKCMtZG9jdW1lbnRhdGlvbikKLSBb8J+nqSBTdXBwb3J0ZWQgUGFuZWxzXSgjLXN1cHBvcnRlZC1wYW5lbHMpCi0gW/CfkrMgUGF5bWVudCBHYXRld2F5c10oIy1wYXltZW50LWdhdGV3YXlzKQotIFvimpnvuI8gRmVhdHVyZXNdKCPvuI8tZmVhdHVyZXMpCi0gW/CfmoAgSW5zdGFsbGF0aW9uXSgjLWluc3RhbGxhdGlvbikKICAtIFtQcmVyZXF1aXNpdGVzXSgjcHJlcmVxdWlzaXRlcykKICAtIFtJbnN0YWxsXSgjaW5zdGFsbCkKICAtIFtVcGRhdGVdKCN1cGRhdGUpCiAgLSBbUmVtb3ZlXSgjcmVtb3ZlKQogIC0gW05vbi1JbnRlcmFjdGl2ZSAoQ0xJKSBVc2FnZV0oI25vbi1pbnRlcmFjdGl2ZS1jbGktdXNhZ2UpCi0gW/Cfko4gRnJlZSB2cy4gUHJvXSgjLWZyZWUtdnMtcHJvKQotIFvwn4yNIExhbmd1YWdlc10oIy1sYW5ndWFnZXMpCi0gW/CfkrUgU3VwcG9ydCB0aGUgUHJvamVjdF0oIy1zdXBwb3J0LXRoZS1wcm9qZWN0KQotIFvwn5GlIENvbnRyaWJ1dG9yc10oIy1jb250cmlidXRvcnMpCgotLS0KCiMjIOKcqCBPdmVydmlldwoKKipNb2Rhc3IgQm90KiogaXMgYSBmZWF0dXJlLXJpY2ggVGVsZWdyYW0gYm90IGZvciBzZWxsaW5nIFZQTiBzdWJzY3JpcHRpb25zIGFuZCBhdXRvbWF0aW5nIHRoZSBlbnRpcmUgc2FsZXMgd29ya2Zsb3cg4oCUIGZyb20gcHVyY2hhc2UgYW5kIHBheW1lbnQgdG8gY29uZmlnIGNyZWF0aW9uIGFuZCBzZXJ2aWNlIG1hbmFnZW1lbnQuCgpJdCBjb25uZWN0cyBkaXJlY3RseSB0byB5b3VyIHBhbmVscywgYnVpbGRzIGNvbmZpZ3VyYXRpb25zIGF1dG9tYXRpY2FsbHksIGFjY2VwdHMgYSB3aWRlIHJhbmdlIG9mIHBheW1lbnQgbWV0aG9kcywgYW5kIGdpdmVzIGJvdGggY3VzdG9tZXJzIGFuZCBhZG1pbnMgYSBjbGVhbiBleHBlcmllbmNlIHRocm91Z2ggYSAqKlRlbGVncmFtIE1pbmkgQXBwKiogYW5kIGEgKip3ZWIgYWRtaW4gcGFuZWwqKi4KCj4gV2hldGhlciB5b3UncmUgaGFuZGluZyBvdXQgdHJpYWwgYWNjb3VudHMgb3IgcnVubmluZyBhIGxhcmdlLXNjYWxlIHJlc2VsbGVyIGJ1c2luZXNzLCBNb2Rhc3IgQm90IGhhcyB0aGUgdG9vbHMgdG8gcnVuIGl0IGVuZCB0byBlbmQuCgotLS0KCiMjIPCfk5YgRG9jdW1lbnRhdGlvbgoKVGhlIGNvbXBsZXRlIHVzZXIgbWFudWFsIGxpdmVzIGF0ICoqW21pcnphYm90LmNvbS9kb2NzXShodHRwczovL21pcnphYm90LmNvbS9kb2NzLykqKiDigJQgNjEgcGFnZXMgY292ZXJpbmcgZXZlcnkgcGFydCBvZiB0aGUgYm90LCB3cml0dGVuIGluICoqUGVyc2lhbiAo2YHYp9ix2LPbjCkqKi4KCkl0IGlzIG5vdCBhIGZlYXR1cmUgbGlzdDogZXZlcnkgbWVudSBpcyBkb2N1bWVudGVkIHdpdGggdGhlIGV4YWN0IG9yZGVyIG9mIHRoZSBzdGVwcyB0aGUgYm90IGFza3MgZm9yLCB3aGF0IGVhY2ggZmllbGQgYWNjZXB0cywgdGhlIGVycm9yIG1lc3NhZ2UgeW91IGdldCB3aGVuIGl0IHJlamVjdHMgeW91ciBpbnB1dCwgYW5kIHRoZSBtaXN0YWtlIHRoYXQgbW9zdCBvZnRlbiBicmVha3MgdGhhdCBmZWF0dXJlLgoKfCBTZWN0aW9uIHwgV2hhdCBpdCBjb3ZlcnMgfAp8LS0tLS0tLS0tfC0tLS0tLS0tLS0tLS0tLS18CnwgKirYtNix2YjYuSoqIChHZXR0aW5nIHN0YXJ0ZWQpIHwgQXJjaGl0ZWN0dXJlLCByZXF1aXJlbWVudHMsIHNlcnZlciBpbnN0YWxsLCBzaGFyZWQtaG9zdCBpbnN0YWxsLCBDTEkgZmxhZ3MsIHVwZGF0aW5nIGFuZCByZW1vdmluZyB8CnwgKirYs9in2K7Yqtin2LEqKiAoU3RydWN0dXJlKSB8IFJlcG9zaXRvcnkgbGF5b3V0LCBkYXRhYmFzZSB0YWJsZXMsIHdoaWNoIGZpbGUgZG9lcyB3aGF0IHwKfCAqKtm+2YbZhOKAjNmH2KcqKiAoUGFuZWxzKSB8IEFkZGluZyBlYWNoIG9mIHRoZSAxMyBwYW5lbCB0eXBlcywgcHJvdG9jb2wgJiBpbmJvdW5kIHNldHVwLCBwZXItcGFuZWwgbWVudXMsIG1hbnVhbCBjb25maWcgY3JlYXRpb24sIG5vZGUgbWFuYWdlbWVudCB8CnwgKirZgdix2YjYtNqv2KfZhyoqIChTaG9wKSB8IFByb2R1Y3RzLCBjYXRlZ29yaWVzLCB0cmlhbCBhY2NvdW50cywgT24tSG9sZCBzZXJ2aWNlcywgYnVsayBwdXJjaGFzZSwgbWFudWFsIHNhbGUsIHJlbmV3YWxzIGFuZCBsb2NhdGlvbiBjaGFuZ2VzIHwKfCAqKtm+2LHYr9in2K7YqioqIChQYXltZW50cykgfCBDYXJkLXRvLWNhcmQgd2l0aCByZWNlaXB0IGFwcHJvdmFsLCBldmVyeSBvbmxpbmUgYW5kIGNyeXB0byBnYXRld2F5LCB3YWxsZXQgYW5kIHJlZnVuZHMgfAp8ICoq2YXYr9uM2LHbjNiqKiogKEFkbWluaXN0cmF0aW9uKSB8IEFkbWluIHJvbGVzLCBmZWF0dXJlIHN3aXRjaGVzLCByZXBvcnQgY2hhbm5lbCBhbmQgdG9waWNzLCB0ZXh0cywgZm9yY2VkLWpvaW4gY2hhbm5lbCwgd2ViIHBhbmVsIHwKfCAqKtix2LTYryDZiCDYqNin2LLYp9ix24zYp9io24wqKiAoR3Jvd3RoKSB8IFJlZmVycmFscywgY2FzaGJhY2ssIGRpc2NvdW50IGFuZCBnaWZ0IGNvZGVzLCBsb3R0ZXJ5IGFuZCB3aGVlbCwgcmVzZWxsZXIgc3lzdGVtIHwKfCAqKtmG2q/Zh9iv2KfYsduMKiogKE9wZXJhdGlvbnMpIHwgQ3JvbiBqb2JzLCBiYWNrdXAgYW5kIHJlc3RvcmUsIG9wdGltaXphdGlvbiwgc2VjdXJpdHkgY2hlY2tsaXN0LCB0cm91Ymxlc2hvb3RpbmcgfAoKPiBUaGUgZG9jcyBhcmUgZ2VuZXJhdGVkIGZyb20gdGhlIGJvdCdzIG93biBzb3VyY2UsIHNvIG1lbnUgbmFtZXMsIGxpbWl0cyBhbmQgZXJyb3Igc3RyaW5ncyBtYXRjaCB0aGUgY29kZSByYXRoZXIgdGhhbiBhbiBvbGRlciByZWxlYXNlLgoKLS0tCgojIyDwn5KsIE11bHRpLVBsYXRmb3JtOiBUZWxlZ3JhbSwgQmFsZSAmIFJ1YmlrYQoKTW9kYXNyIEJvdCBjYW4gcnVuIG9uIHRocmVlIG1lc3NlbmdlcnMgZnJvbSBhIHNpbmdsZSBjb2RlYmFzZS4gU2V0IHRoZSBwbGF0Zm9ybSBpbiBgY29uZmlnLnBocGA6CgpgYGBwaHAKJHBsYXRmb3JtID0gJ3RlbGVncmFtJzsgLy8gb3IgJ2JhbGUnIHwgJ3J1YmlrYScKYGBgCgotICoqVGVsZWdyYW0qKiDigJQgZnVsbCBuYXRpdmUgQm90IEFQSSBzdXBwb3J0IChkZWZhdWx0LCBhbGwgZmVhdHVyZXMpLgotICoqQmFsZSAo2KjZhNmHKSoqIOKAlCBCYWxlJ3MgQm90IEFQSSBpcyB3aXJlLWNvbXBhdGlibGUgd2l0aCBUZWxlZ3JhbSwgc28gbmVhcmx5IGV2ZXJ5IGZlYXR1cmUgd29ya3Mgb3V0IG9mIHRoZSBib3g7IHRoZSBpbnN0YWxsZXIgc2V0cyB0aGUgd2ViaG9vayBvbiBgdGFwaS5iYWxlLmFpYCBhdXRvbWF0aWNhbGx5LgotICoqUnViaWthICjYsdmI2KjbjNqp2KcpKiog4oCUIGFuIGFkYXB0ZXIgbGF5ZXIgKGBwbGF0Zm9ybS9SdWJpa2FDbGllbnQucGhwYCkgdHJhbnNsYXRlcyBtZXNzYWdlcywga2V5cGFkcywgZmlsZXMgYW5kIGNhbGxiYWNrcy4gUmVnaXN0ZXIgdGhlIHdlYmhvb2sgbWFudWFsbHkgaW4gdGhlIFJ1YmlrYSBib3QgcGFuZWwsIHBvaW50aW5nIHRvIGBodHRwczovL3lvdXItZG9tYWluL2luZGV4LnBocGAuIEZlYXR1cmVzIHdpdGggbm8gUnViaWthIGVxdWl2YWxlbnQgKGlubGluZSBxdWVyaWVzLCBpbi1ib3QgcGF5bWVudHMsIFVSTCBidXR0b25zLCBwaW4vdW5waW4pIGRlZ3JhZGUgZ3JhY2VmdWxseS4KCi0tLQoKIyMg8J+nqSBTdXBwb3J0ZWQgUGFuZWxzCgpNb2Rhc3IgQm90IGludGVncmF0ZXMgd2l0aCB0aGUgbW9zdCBwb3B1bGFyIFZQTiBhbmQgbmV0d29yayBtYW5hZ2VtZW50IHBhbmVsczoKCnwgUGFuZWwgfCBQYW5lbCB8CnwtLS0tLS0tfC0tLS0tLS18Cnwg8J+foiAqKk1hcnpiYW4qKiB8IPCfn6IgKipNYXJ6bmVzaGluKiogfAp8IPCfn6IgKipTYW5hZWkgLyBBbGlyZXphKiogfAp8IPCfn6IgKipTLVVJKiogfCDwn5+iICoqSGlkZGlmeSoqIHwKfCDwn5+iICoqV0dEYXNoYm9hcmQqKiAoV2lyZUd1YXJkKSB8IPCfn6IgKipNaWtyb1RpayoqIHwKfCDwn5+iICoqSUJTbmcqKiB8IPCfn6IgKipQYXNhcmd1YXJkKiogfAoKPiBDb25maWdzIGFyZSBnZW5lcmF0ZWQgYXV0b21hdGljYWxseSBhbmQgYXJlIGNvbXBhdGlibGUgd2l0aCBhbGwgY29tbW9uIHByb3RvY29scy4KCi0tLQoKIyMg8J+SsyBQYXltZW50IEdhdGV3YXlzCgp8IEdhdGV3YXkgfCBUeXBlIHwKfC0tLS0tLS0tLXwtLS0tLS18Cnwg8J+StSAqKkNhcmQtdG8tQ2FyZCoqIHwgTWFudWFsIChyZWNlaXB0ICsgYWRtaW4gYXBwcm92YWwpIHwKfCDwn6qZICoqTm93UGF5bWVudHMqKiB8IENyeXB0byB8Cnwg8J+qmSAqKlBsaXNpbyoqIHwgQ3J5cHRvIHwKfCDwn6qZICoqQ3ViZVBheSoqIHwgVFJPTiAvIGNyeXB0byB8Cnwg8J+HrvCfh7cgKipaYXJpbnBhbCoqIHwgT25saW5lIGdhdGV3YXkgfAp8IPCfh67wn4e3ICoqQXFheWVwYXJkYWtodCoqIHwgT25saW5lIGdhdGV3YXkgfAp8IPCfh67wn4e3ICoqSXJhblBheSoqIHwgT25saW5lIGdhdGV3YXkgfAoKLS0tCgojIyDimpnvuI8gRmVhdHVyZXMKCiMjIyDwn5uSIFNhbGVzICYgQ29uZmlndXJhdGlvbgotIOKchSBWUE4gcHVyY2hhc2Ugd2l0aCAqKmZ1bGx5IGF1dG9tYXRlZCoqIGNvbmZpZyBjcmVhdGlvbgotIOKchSBUcmlhbCAvIHRlc3QgYWNjb3VudHMgZm9yIG5ldyB1c2VycwotIOKchSBDb21wYXRpYmlsaXR5IHdpdGggYWxsIGNvbW1vbiBwcm90b2NvbHMKLSDinIUgUVIgY29kZXMgZm9yIGZhc3QgY29uZmlnIGltcG9ydAotIOKchSBQcm90b2NvbC1iYXNlZCBjb25maWd1cmF0aW9uIHNldHRpbmdzCi0g4pyFIFByb2R1Y3QsIHBhbmVsICYgZ2F0ZXdheSBtYW5hZ2VtZW50CgojIyMg8J+RpCBVc2VyIEV4cGVyaWVuY2UKLSDinIUgKipUZWxlZ3JhbSBNaW5pIEFwcCoqIGZvciBhIG1vZGVybiwgaW4tYXBwIGludGVyZmFjZQotIOKchSBWaWV3ICYgbWFuYWdlIHB1cmNoYXNlZCBzZXJ2aWNlczoKICAtIFJlbmV3IGEgc2VydmljZQogIC0gQnV5IGFkZGl0aW9uYWwgdm9sdW1lCiAgLSBSZXRyaWV2ZSBjb25maWcgLyB1cGRhdGUgc3Vic2NyaXB0aW9uIGxpbmtzCi0g4pyFIFdhbGxldCAmIGJhbGFuY2Ugc3lzdGVtCi0g4pyFIERldGFpbGVkIHB1cmNoYXNlICYgdHJpYWwgcmVwb3J0cwotIOKchSBTdXBwb3J0IHNlY3Rpb24sIEZBUSAmIGN1c3RvbWl6YWJsZSB0dXRvcmlhbHMKLSDinIUgUGhvbmUtbnVtYmVyIHZlcmlmaWNhdGlvbgotIOKchSBNYW5kYXRvcnkgY2hhbm5lbCBtZW1iZXJzaGlwIGZvciBwdXJjaGFzZXMKCiMjIyDwn5OIIEdyb3d0aCAmIE1hcmtldGluZwotIOKchSBBZmZpbGlhdGUgLyByZWZlcnJhbCBzeXN0ZW0KLSDinIUgQ2FzaGJhY2sgcmV3YXJkcwotIOKchSBEaXNjb3VudCBjb2RlcwotIOKchSBHaWZ0IGNvZGVzCi0g4pyFIExvdHRlcnkgc3lzdGVtCi0g4pyFICoqQWdlbnQgLyByZXNlbGxlcioqIHN5c3RlbQoKIyMjIPCfm6DvuI8gQWRtaW5pc3RyYXRpb24KLSDinIUgKipXZWIgYWRtaW4gcGFuZWwqKiAobG9naW4tcHJvdGVjdGVkIGRhc2hib2FyZCkKLSDinIUgTXVsdGlwbGUgYWRtaW5zIHN1cHBvcnQKLSDinIUgQmFsYW5jZSAmIHVzZXIgbWFuYWdlbWVudAotIOKchSBGdWxsIHRleHQvbWVzc2FnZSBjdXN0b21pemF0aW9uIGZyb20gdGhlIGJvdAotIOKchSBDb25maWd1cmFibGUgdXNlcm5hbWUtZ2VuZXJhdGlvbiBtZXRob2RzCi0g4pyFIEF1dG9tYXRpYyBiYWNrdXBzCi0g4pyFIE5vdGlmaWNhdGlvbiAmIGV4cGlyeS1yZW1pbmRlciBzZXJ2aWNlcyAoY3JvbikKLSDinIUgT24taG9sZCBjb25maWd1cmF0aW9ucwoKLS0tCgojIyDwn5qAIEluc3RhbGxhdGlvbgoKIyMjIFByZXJlcXVpc2l0ZXMKCnwgUmVxdWlyZW1lbnQgfCBEZXRhaWxzIHwKfC0tLS0tLS0tLS0tLS18LS0tLS0tLS0tfAp8IPCflqXvuI8gKipPUyoqIHwgQSAqKmNsZWFuKiogVWJ1bnR1ICoqMjIuMDQqKiBvciAqKjI0LjA0Kiogc2VydmVyIHwKfCDwn4yQICoqRG9tYWluKiogfCBBIGRvbWFpbiBuYW1lIHBvaW50ZWQgdG8geW91ciBzZXJ2ZXIncyBJUCB8Cnwg4pqZ77iPICoqU3RhY2sqKiB8IFBIUCA4LjIsIEFwYWNoZSwgTXlTUUwsIFNTTCDigJQgKmluc3RhbGxlZCBhdXRvbWF0aWNhbGx5IGJ5IHRoZSBzY3JpcHQqIHwKCj4g8J+SoSBTdGFydCBmcm9tIGEgZnJlc2ggc2VydmVyIHdpdGggbm8gZXhpc3Rpbmcgd2ViIHNlcnZlciwgZGF0YWJhc2UsIG9yIHBhbmVsIGluc3RhbGxlZC4KCiMjIyBJbnN0YWxsCgpSdW4gdGhlIGZvbGxvd2luZyBjb21tYW5kIG9uIHlvdXIgc2VydmVyIGFzICoqcm9vdCoqOgoKYGBgYmFzaApjdXJsIC1vIGluc3RhbGwuc2ggLUwgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL21haGRpTUdGMi9taXJ6YWJvdC9tYWluL2luc3RhbGwuc2ggJiYgYmFzaCBpbnN0YWxsLnNoCmBgYAoKQW4gaW50ZXJhY3RpdmUgbWVudSB3aWxsIGFwcGVhcjoKCmBgYAoxKSBJbnN0YWxsIE1pcnphCjIpIFVwZGF0ZSBNaXJ6YQozKSBSZW1vdmUgTWlyemEKNCkgTWlncmF0ZTogRnJlZSDihpIgUHJvIChCZXRhKQo1KSBSZW5ldyBTU0wgY2VydGlmaWNhdGUKNikgSGVscCAmIFBhcmFtZXRlcnMKNykgRXhpdApgYGAKCuKeoe+4jyBTZWxlY3QgKipgMWAqKiB0byBpbnN0YWxsIHRoZSBib3QsIHRoZW4gZm9sbG93IHRoZSBwcm9tcHRzLgoKIyMjIFVwZGF0ZQoKUnVuIHRoZSBzYW1lIGNvbW1hbmQgYW5kIHNlbGVjdCAqKmAyYCoqOgoKYGBgYmFzaApjdXJsIC1vIGluc3RhbGwuc2ggLUwgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL21haGRpTUdGMi9taXJ6YWJvdC9tYWluL2luc3RhbGwuc2ggJiYgYmFzaCBpbnN0YWxsLnNoCmBgYAoKIyMjIFJlbW92ZQoKUnVuIHRoZSBzYW1lIGNvbW1hbmQgYW5kIHNlbGVjdCAqKmAzYCoqIHRvIGNvbXBsZXRlbHkgcmVtb3ZlIHRoZSBib3QgYW5kIGl0cyBzZXJ2aWNlcy4KCiMjIyBOb24tSW50ZXJhY3RpdmUgKENMSSkgVXNhZ2UKCllvdSBjYW4gYWxzbyBkcml2ZSB0aGUgaW5zdGFsbGVyIGVudGlyZWx5IGZyb20gdGhlIGNvbW1hbmQgbGluZSDigJQgaGFuZHkgZm9yIGF1dG9tYXRpb24gYW5kIHNjcmlwdGVkIGRlcGxveW1lbnRzLgoKKipDb21tYW5kcyoqCgp8IENvbW1hbmQgfCBEZXNjcmlwdGlvbiB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLXwKfCBgaW5zdGFsbGAgfCBJbnN0YWxsIE1pcnphIHwKfCBgdXBkYXRlYCB8IFVwZGF0ZSBNaXJ6YSAoY2hvb3NlIGNoYW5uZWwgLyB2ZXJzaW9uKSB8CnwgYHJlbW92ZWAgfCBSZW1vdmUgTWlyemEgYW5kIGl0cyBzZXJ2aWNlcyB8CnwgYG1pZ3JhdGVgIHwgTWlncmF0ZSBGcmVlIOKGkiBQcm8gfAp8IGByZW5ld2AgfCBSZW5ldyB0aGUgYm90J3MgU1NMIGNlcnRpZmljYXRlIHwKfCBgbWVudWAgfCBPcGVuIHRoZSBpbnRlcmFjdGl2ZSBwYW5lbCAoZGVmYXVsdCkgfAoKKipJbnN0YWxsIHBhcmFtZXRlcnMqKgoKfCBQYXJhbWV0ZXIgfCBEZXNjcmlwdGlvbiB8CnwtLS0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfAp8IGAtLW5hbWVgIHwgQm90IHVzZXJuYW1lIHwKfCBgLS10b2tlbmAgfCBUZWxlZ3JhbSBib3QgdG9rZW4gfAp8IGAtLWFkbWluYCB8IEFkbWluIGNoYXQgSUQgfAp8IGAtLWRvbWFpbmAgfCBEb21haW4gbmFtZSAoZS5nLiBgYm90LmV4YW1wbGUuY29tYCkgfAp8IGAtLWRiLXVzZXJgIHwgRGF0YWJhc2UgdXNlcm5hbWUgfAp8IGAtLWRiLXBhc3NgIHwgRGF0YWJhc2UgcGFzc3dvcmQgfAp8IGAtLXZlcnNpb25gIHwgU3BlY2lmaWMgcmVsZWFzZSB0YWcgKGUuZy4gYDAuMS43YCkgfAp8IGAtLWNoYW5uZWxgIHwgYGJldGFgIMK3IGByZWxlYXNlYCDCtyBgYXV0b2AgfAp8IGAtaGAsIGAtLWhlbHBgIHwgU2hvdyBDTEkgaGVscCBhbmQgZXhpdCB8CgoqKkV4YW1wbGVzKioKCmBgYGJhc2gKIyBBdXRvLXBpY2sgdGhlIGJlc3QgY2hhbm5lbAptaXJ6YSBpbnN0YWxsIC0tY2hhbm5lbCBhdXRvCgojIEZ1bGx5IG5vbi1pbnRlcmFjdGl2ZSBpbnN0YWxsCm1pcnphIGluc3RhbGwgLS1uYW1lIG15dnBuYm90IC0tdG9rZW4gMTIzOkFCQyBcCiAgICAgICAgICAgICAgLS1hZG1pbiAxMTEgLS1kb21haW4gYm90LmV4YW1wbGUuY29tIC0tdmVyc2lvbiAwLjEuNwoKIyBVcGRhdGUgdG8gYSBzcGVjaWZpYyB2ZXJzaW9uIG9yIGNoYW5uZWwKbWlyemEgdXBkYXRlIC0tdmVyc2lvbiAwLjEuNgptaXJ6YSB1cGRhdGUgLS1jaGFubmVsIHJlbGVhc2UKCiMgUmVtb3ZlCm1pcnphIHJlbW92ZQpgYGAKCi0tLQoKIyMg8J+SjiBGcmVlIHZzLiBQcm8KCnwgfCBGcmVlIPCfhpMgfCBQcm8g8J+SjiB8CnwtLS18Oi0tLTp8Oi0tLTp8CnwgQXV0b21hdGVkIFZQTiBzYWxlcyAmIGNvbmZpZyBjcmVhdGlvbiB8IOKchSB8IOKchSB8CnwgVHJpYWwgYWNjb3VudHMsIHdhbGxldCAmIHNlcnZpY2UgbWFuYWdlbWVudCB8IOKchSB8IOKchSB8CnwgQWxsIHN1cHBvcnRlZCBwYW5lbHMgJiBwYXltZW50IGdhdGV3YXlzIHwg4pyFIHwg4pyFIHwKfCBBZHZhbmNlZCBjdXN0b21pemF0aW9uICYgYW5hbHl0aWNzIHwg4oCUIHwg4pyFIHwKfCBFbmhhbmNlZCBtYW5hZ2VtZW50ICYgZXh0cmEgbW9kdWxlcyB8IOKAlCB8IOKchSB8Cgrwn5OMICoqUHJvIHB1cmNoYXNlIGd1aWRlOioqIFtWaWV3IG9uIFRlbGVncmFtIMK7XShodHRwczovL3QubWUvbWlyemFwZXJpbWl1bS80KQoKLS0tCgojIyDwn4yNIExhbmd1YWdlcwoKTWlyemEgQm90IHNoaXBzIHdpdGggZnVsbCB0cmFuc2xhdGlvbnMgZm9yOgoK8J+HrPCfh6cgRW5nbGlzaCDCtyDwn4eu8J+HtyBQZXJzaWFuICjZgdin2LHYs9uMKSDCtyDwn4e38J+HuiBSdXNzaWFuICjQoNGD0YHRgdC60LjQuSkgwrcg8J+HqPCfh7MgQ2hpbmVzZSAo5Lit5paHKQoKLS0tCgojIyDwn5K1IFN1cHBvcnQgdGhlIFByb2plY3QKCklmICoqTW9kYXNyIEJvdCoqIGhlbHBzIHlvdXIgYnVzaW5lc3MsIHBsZWFzZSBjb25zaWRlciBzdXBwb3J0aW5nIGl0cyBkZXZlbG9wbWVudCB3aXRoIGEgY3J5cHRvIGRvbmF0aW9uOgoKPGEgaHJlZj0iaHR0cHM6Ly9ub3dwYXltZW50cy5pby9kb25hdGlvbi9tYWhkaSI+CiAgPGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvRG9uYXRlLU5vd1BheW1lbnRzLTFBMUEyRT9zdHlsZT1mb3ItdGhlLWJhZGdlJmxvZ289Yml0Y29pbiZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iRG9uYXRlIi8+CjwvYT4KCllvdXIgc3VwcG9ydCBrZWVwcyB0aGUgdXBkYXRlcyBhbmQgaW1wcm92ZW1lbnRzIGNvbWluZy4gVGhhbmsgeW91ISDwn5mMCgotLS0KCiMjIPCfkaUgQ29udHJpYnV0b3JzCgpUaGFua3MgdG8gZXZlcnlvbmUgd2hvIGhhcyBjb250cmlidXRlZCB0byBtYWtpbmcgTWlyemEgQm90IGJldHRlcjoKCjxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9tYWhkaU1HRjIvbWlyemFib3QvZ3JhcGhzL2NvbnRyaWJ1dG9ycyI+CiAgPGltZyBzcmM9Imh0dHBzOi8vY29udHJpYi5yb2Nrcy9pbWFnZT9yZXBvPW1haGRpTUdGMi9taXJ6YWJvdCIgYWx0PSJDb250cmlidXRvcnMiLz4KPC9hPgoKLS0tCgo8ZGl2IGFsaWduPSJjZW50ZXIiPgoKKipNYWRlIHdpdGgg4p2k77iPIGJ5IHRoZSBNaXJ6YSBQYW5lbCBjb21tdW5pdHkqKgoK8J+TliBbRG9jdW1lbnRhdGlvbl0oaHR0cHM6Ly9taXJ6YWJvdC5jb20vZG9jcy8pIMK3IPCfkqwgW0NoYW5uZWxdKGh0dHBzOi8vdC5tZS9taXJ6YXBhbmVsKSDCtyDwn5GlIFtHcm91cF0oaHR0cHM6Ly90Lm1lL21pcnphcGFuZWxncm91cCkgwrcg4q2QIFtTdGFyIG9uIEdpdEh1Yl0oaHR0cHM6Ly9naXRodWIuY29tL21haGRpTUdGMi9taXJ6YWJvdCkKCjwvZGl2Pgo=
+<div align="center">
+
+# 🤖 Modasr Bot
+
+### A powerful Telegram bot for selling VPN services — with fully automated config creation.
+
+<p>
+  <a href="https://t.me/mirzapanel">
+    <img src="https://img.shields.io/badge/Telegram-Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel"/>
+  </a>
+  <a href="https://t.me/mirzapanelgroup">
+    <img src="https://img.shields.io/badge/Telegram-Group-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Group"/>
+  </a>
+  <a href="https://mirzabot.com/docs/">
+    <img src="https://img.shields.io/badge/Docs-mirzabot.com-38BDF8?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Documentation"/>
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/mahdiMGF2/mirzabot/stargazers">
+    <img src="https://img.shields.io/github/stars/mahdiMGF2/mirzabot?style=flat-square&color=f5c518" alt="Stars"/>
+  </a>
+  <a href="https://github.com/mahdiMGF2/mirzabot/network/members">
+    <img src="https://img.shields.io/github/forks/mahdiMGF2/mirzabot?style=flat-square" alt="Forks"/>
+  </a>
+  <a href="https://github.com/mahdiMGF2/mirzabot/issues">
+    <img src="https://img.shields.io/github/issues/mahdiMGF2/mirzabot?style=flat-square" alt="Issues"/>
+  </a>
+  <a href="https://github.com/mahdiMGF2/mirzabot/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/mahdiMGF2/mirzabot?style=flat-square" alt="License"/>
+  </a>
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 8.2"/>
+</p>
+
+</div>
+
+---
+
+## 📚 Table of Contents
+
+- [✨ Overview](#-overview)
+- [📖 Documentation](#-documentation)
+- [🧩 Supported Panels](#-supported-panels)
+- [💳 Payment Gateways](#-payment-gateways)
+- [⚙️ Features](#️-features)
+- [🚀 Installation](#-installation)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Update](#update)
+  - [Remove](#remove)
+  - [Non-Interactive (CLI) Usage](#non-interactive-cli-usage)
+- [💎 Free vs. Pro](#-free-vs-pro)
+- [🌍 Languages](#-languages)
+- [💵 Support the Project](#-support-the-project)
+- [👥 Contributors](#-contributors)
+
+---
+
+## ✨ Overview
+
+**Modasr Bot** is a feature-rich Telegram bot for selling VPN subscriptions and automating the entire sales workflow — from purchase and payment to config creation and service management.
+
+It connects directly to your panels, builds configurations automatically, accepts a wide range of payment methods, and gives both customers and admins a clean experience through a **Telegram Mini App** and a **web admin panel**.
+
+> Whether you're handing out trial accounts or running a large-scale reseller business, Modasr Bot has the tools to run it end to end.
+
+---
+
+## 📖 Documentation
+
+The complete user manual lives at **[mirzabot.com/docs](https://mirzabot.com/docs/)** — 61 pages covering every part of the bot, written in **Persian (فارسی)**.
+
+It is not a feature list: every menu is documented with the exact order of the steps the bot asks for, what each field accepts, the error message you get when it rejects your input, and the mistake that most often breaks that feature.
+
+| Section | What it covers |
+|---------|----------------|
+| **شروع** (Getting started) | Architecture, requirements, server install, shared-host install, CLI flags, updating and removing |
+| **ساختار** (Structure) | Repository layout, database tables, which file does what |
+| **پنل‌ها** (Panels) | Adding each of the 13 panel types, protocol & inbound setup, per-panel menus, manual config creation, node management |
+| **فروشگاه** (Shop) | Products, categories, trial accounts, On-Hold services, bulk purchase, manual sale, renewals and location changes |
+| **پرداخت** (Payments) | Card-to-card with receipt approval, every online and crypto gateway, wallet and refunds |
+| **مدیریت** (Administration) | Admin roles, feature switches, report channel and topics, texts, forced-join channel, web panel |
+| **رشد و بازاریابی** (Growth) | Referrals, cashback, discount and gift codes, lottery and wheel, reseller system |
+| **نگهداری** (Operations) | Cron jobs, backup and restore, optimization, security checklist, troubleshooting |
+
+> The docs are generated from the bot's own source, so menu names, limits and error strings match the code rather than an older release.
+
+---
+
+## 💬 Multi-Platform: Telegram, Bale & Rubika
+
+Modasr Bot can run on three messengers from a single codebase. Set the platform in `config.php`:
+
+```php
+$platform = 'telegram'; // or 'bale' | 'rubika'
+```
+
+- **Telegram** — full native Bot API support (default, all features).
+- **Bale (بله)** — Bale's Bot API is wire-compatible with Telegram, so nearly every feature works out of the box; the installer sets the webhook on `tapi.bale.ai` automatically.
+- **Rubika (روبیکا)** — an adapter layer (`platform/RubikaClient.php`) translates messages, keypads, files and callbacks. Register the webhook manually in the Rubika bot panel, pointing to `https://your-domain/index.php`. Features with no Rubika equivalent (inline queries, in-bot payments, URL buttons, pin/unpin) degrade gracefully.
+
+---
+
+## 🧩 Supported Panels
+
+Modasr Bot integrates with the most popular VPN and network management panels:
+
+| Panel | Panel |
+|-------|-------|
+| 🟢 **Marzban** | 🟢 **Marzneshin** |
+| 🟢 **Sanaei / Alireza** |
+| 🟢 **S-UI** | 🟢 **Hiddify** |
+| 🟢 **WGDashboard** (WireGuard) | 🟢 **MikroTik** |
+| 🟢 **IBSng** | 🟢 **Pasarguard** |
+
+> Configs are generated automatically and are compatible with all common protocols.
+
+---
+
+## 💳 Payment Gateways
+
+| Gateway | Type |
+|---------|------|
+| 💵 **Card-to-Card** | Manual (receipt + admin approval) |
+| 🪙 **NowPayments** | Crypto |
+| 🪙 **Plisio** | Crypto |
+| 🪙 **CubePay** | TRON / crypto |
+| 🇮🇷 **Zarinpal** | Online gateway |
+| 🇮🇷 **Aqayepardakht** | Online gateway |
+| 🇮🇷 **IranPay** | Online gateway |
+
+---
+
+## ⚙️ Features
+
+### 🛒 Sales & Configuration
+- ✅ VPN purchase with **fully automated** config creation
+- ✅ Trial / test accounts for new users
+- ✅ Compatibility with all common protocols
+- ✅ QR codes for fast config import
+- ✅ Protocol-based configuration settings
+- ✅ Product, panel & gateway management
+
+### 👤 User Experience
+- ✅ **Telegram Mini App** for a modern, in-app interface
+- ✅ View & manage purchased services:
+  - Renew a service
+  - Buy additional volume
+  - Retrieve config / update subscription links
+- ✅ Wallet & balance system
+- ✅ Detailed purchase & trial reports
+- ✅ Support section, FAQ & customizable tutorials
+- ✅ Phone-number verification
+- ✅ Mandatory channel membership for purchases
+
+### 📈 Growth & Marketing
+- ✅ Affiliate / referral system
+- ✅ Cashback rewards
+- ✅ Discount codes
+- ✅ Gift codes
+- ✅ Lottery system
+- ✅ **Agent / reseller** system
+
+### 🛠️ Administration
+- ✅ **Web admin panel** (login-protected dashboard)
+- ✅ Multiple admins support
+- ✅ Balance & user management
+- ✅ Full text/message customization from the bot
+- ✅ Configurable username-generation methods
+- ✅ Automatic backups
+- ✅ Notification & expiry-reminder services (cron)
+- ✅ On-hold configurations
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+| Requirement | Details |
+|-------------|---------|
+| 🖥️ **OS** | A **clean** Ubuntu **22.04** or **24.04** server |
+| 🌐 **Domain** | A domain name pointed to your server's IP |
+| ⚙️ **Stack** | PHP 8.2, Apache, MySQL, SSL — *installed automatically by the script* |
+
+> 💡 Start from a fresh server with no existing web server, database, or panel installed.
+
+### Install
+
+Run the following command on your server as **root**:
+
+```bash
+curl -o install.sh -L https://raw.githubusercontent.com/mahdiMGF2/mirzabot/main/install.sh && bash install.sh
+```
+
+An interactive menu will appear:
+
+```
+1) Install Mirza
+2) Update Mirza
+3) Remove Mirza
+4) Migrate: Free → Pro (Beta)
+5) Renew SSL certificate
+6) Help & Parameters
+7) Exit
+```
+
+➡️ Select **`1`** to install the bot, then follow the prompts.
+
+### Update
+
+Run the same command and select **`2`**:
+
+```bash
+curl -o install.sh -L https://raw.githubusercontent.com/mahdiMGF2/mirzabot/main/install.sh && bash install.sh
+```
+
+### Remove
+
+Run the same command and select **`3`** to completely remove the bot and its services.
+
+### Non-Interactive (CLI) Usage
+
+You can also drive the installer entirely from the command line — handy for automation and scripted deployments.
+
+**Commands**
+
+| Command | Description |
+|---------|-------------|
+| `install` | Install Mirza |
+| `update` | Update Mirza (choose channel / version) |
+| `remove` | Remove Mirza and its services |
+| `migrate` | Migrate Free → Pro |
+| `renew` | Renew the bot's SSL certificate |
+| `menu` | Open the interactive panel (default) |
+
+**Install parameters**
+
+| Parameter | Description |
+|-----------|-------------|
+| `--name` | Bot username |
+| `--token` | Telegram bot token |
+| `--admin` | Admin chat ID |
+| `--domain` | Domain name (e.g. `bot.example.com`) |
+| `--db-user` | Database username |
+| `--db-pass` | Database password |
+| `--version` | Specific release tag (e.g. `0.1.7`) |
+| `--channel` | `beta` · `release` · `auto` |
+| `-h`, `--help` | Show CLI help and exit |
+
+**Examples**
+
+```bash
+# Auto-pick the best channel
+mirza install --channel auto
+
+# Fully non-interactive install
+mirza install --name myvpnbot --token 123:ABC \
+              --admin 111 --domain bot.example.com --version 0.1.7
+
+# Update to a specific version or channel
+mirza update --version 0.1.6
+mirza update --channel release
+
+# Remove
+mirza remove
+```
+
+---
+
+## 💎 Free vs. Pro
+
+| | Free 🆓 | Pro 💎 |
+|---|:---:|:---:|
+| Automated VPN sales & config creation | ✅ | ✅ |
+| Trial accounts, wallet & service management | ✅ | ✅ |
+| All supported panels & payment gateways | ✅ | ✅ |
+| Advanced customization & analytics | — | ✅ |
+| Enhanced management & extra modules | — | ✅ |
+
+📌 **Pro purchase guide:** [View on Telegram »](https://t.me/mirzaperimium/4)
+
+---
+
+## 🌍 Languages
+
+Mirza Bot ships with full translations for:
+
+🇬🇧 English · 🇮🇷 Persian (فارسی) · 🇷🇺 Russian (Русский) · 🇨🇳 Chinese (中文)
+
+---
+
+## 💵 Support the Project
+
+If **Modasr Bot** helps your business, please consider supporting its development with a crypto donation:
+
+<a href="https://nowpayments.io/donation/mahdi">
+  <img src="https://img.shields.io/badge/Donate-NowPayments-1A1A2E?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Donate"/>
+</a>
+
+Your support keeps the updates and improvements coming. Thank you! 🙌
+
+---
+
+## 👥 Contributors
+
+Thanks to everyone who has contributed to making Mirza Bot better:
+
+<a href="https://github.com/mahdiMGF2/mirzabot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mahdiMGF2/mirzabot" alt="Contributors"/>
+</a>
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the Mirza Panel community**
+
+📖 [Documentation](https://mirzabot.com/docs/) · 💬 [Channel](https://t.me/mirzapanel) · 👥 [Group](https://t.me/mirzapanelgroup) · ⭐ [Star on GitHub](https://github.com/mahdiMGF2/mirzabot)
+
+</div>

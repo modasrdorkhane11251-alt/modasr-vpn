@@ -1,1 +1,154 @@
-PD9waHAKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vY29uZmlnLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9qZGYucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2JvdGFwaS5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzL0FwaS9NYXJ6YmFuLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4va2V5Ym9hcmQucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL3BhbmVscy5waHAnOwpyZXF1aXJlIF9fRElSX18gLiAnLy4uL3ZlbmRvci9hdXRvbG9hZC5waHAnOwoKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CgokQXV0aG9yaXR5ID0gaHRtbHNwZWNpYWxjaGFycygkX0dFVFsnQXV0aG9yaXR5J10gPz8gJycsIEVOVF9RVU9URVMsICdVVEYtOCcpOwokU3RhdHVzUGF5bWVudCA9IGh0bWxzcGVjaWFsY2hhcnMoJF9HRVRbJ1N0YXR1cyddID8/ICcnLCBFTlRfUVVPVEVTLCAnVVRGLTgnKTsKaWYgKCRBdXRob3JpdHkgPT09ICcnKSB7CiAgICBodHRwX3Jlc3BvbnNlX2NvZGUoNDAwKTsKICAgIGV4aXQoJ2ludmFsaWQgcmVxdWVzdCcpOwp9CiRzZXR0aW5nID0gc2VsZWN0KCJzZXR0aW5nIiwgIioiKTsKJFBheVNldHRpbmcgPSBzZWxlY3QoIlBheVNldHRpbmciLCAiVmFsdWVQYXkiLCAiTmFtZVBheSIsICJtZXJjaGFudF96YXJpbnBhbCIsInNlbGVjdCIpWydWYWx1ZVBheSddOwokUGF5bWVudF9yZXBvcnRzID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImRlY19ub3RfY29uZmlybWVkIiwgJEF1dGhvcml0eSwic2VsZWN0Iik7CmlmICghaXNfYXJyYXkoJFBheW1lbnRfcmVwb3J0cykpIHsKICAgIGh0dHBfcmVzcG9uc2VfY29kZSg0MDQpOwogICAgZXhpdCgnb3JkZXIgbm90IGZvdW5kJyk7Cn0KaWYgKCRQYXltZW50X3JlcG9ydHNbJ3BheW1lbnRfU3RhdHVzJ10gPT0gImV4cGlyZSIpIHsKICAgIGV4aXQoJ29yZGVyIGV4cGlyZWQnKTsKfQokcHJpY2UgPSAkUGF5bWVudF9yZXBvcnRzWydwcmljZSddOwokaW52b2ljZV9pZCA9ICRQYXltZW50X3JlcG9ydHNbJ2lkX29yZGVyJ107Ci8vIHZlcmlmeSBUcmFuc2FjdGlvbgokZGVjX3BheW1lbnRfc3RhdHVzID0gIiI7CiRwYXltZW50X3N0YXR1cyA9ICIiOwppZigkU3RhdHVzUGF5bWVudCA9PSAiT0siKXsKICAgICAgICAkY3VybCA9IGN1cmxfaW5pdCgpOwoKY3VybF9zZXRvcHRfYXJyYXkoJGN1cmwsIGFycmF5KAogIENVUkxPUFRfVVJMID0+ICdodHRwczovL2FwaS56YXJpbnBhbC5jb20vcGcvdjQvcGF5bWVudC92ZXJpZnkuanNvbicsCiAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogIENVUkxPUFRfRU5DT0RJTkcgPT4gJycsCiAgQ1VSTE9QVF9NQVhSRURJUlMgPT4gMTAsCiAgQ1VSTE9QVF9USU1FT1VUID0+IDAsCiAgQ1VSTE9QVF9GT0xMT1dMT0NBVElPTiA9PiB0cnVlLAogIENVUkxPUFRfSFRUUF9WRVJTSU9OID0+IENVUkxfSFRUUF9WRVJTSU9OXzFfMSwKICBDVVJMT1BUX0NVU1RPTVJFUVVFU1QgPT4gJ1BPU1QnLAogIENVUkxPUFRfSFRUUEhFQURFUiA9PiBhcnJheSgKICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicKICApLAopKTsKY3VybF9zZXRvcHQoJGN1cmwsIENVUkxPUFRfUE9TVEZJRUxEUywganNvbl9lbmNvZGUoWwogICJtZXJjaGFudF9pZCIgPT4gJFBheVNldHRpbmcsCiAgImFtb3VudCI9PiAkcHJpY2UsCiAgImF1dGhvcml0eSIgPT4gJEF1dGhvcml0eSwKICAiZGVzY3JpcHRpb24iID0+ICRQYXltZW50X3JlcG9ydHNbJ2lkX3VzZXInXQogICAgICAgIF0pKTsKJHJlc3BvbnNlID0gY3VybF9leGVjKCRjdXJsKTsKY3VybF9jbG9zZSgkY3VybCk7CiRyZXNwb25zZSA9IGpzb25fZGVjb2RlKCRyZXNwb25zZSx0cnVlKTsKJHBheW1lbnRfc3RhdHVzID0gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWyd6YXJpbnBhbEVycm9ycyddWyRyZXNwb25zZVsnZXJyb3JzJ11bJ2NvZGUnXSA/PyAnJ10gPz8gJyc7CiBpZigoJHJlc3BvbnNlWydkYXRhJ11bJ21lc3NhZ2UnXSA/PyAnJykgPT0gIlZlcmlmaWVkIiB8fCAoJHJlc3BvbnNlWydkYXRhJ11bJ21lc3NhZ2UnXSA/PyAnJykgPT0gIlBhaWQiKXsKICAgICRwYXltZW50X3N0YXR1cyA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnc3RhdHVzU3VjY2VzcyddOwogICAgJGRlY19wYXltZW50X3N0YXR1cyA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnZGVzY1RoYW5rcyddOwogICAgJFBheW1lbnRfcmVwb3J0ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImlkX29yZGVyIiwgJGludm9pY2VfaWQsInNlbGVjdCIpOwogICAgaWYoY2xhaW1QYXltZW50UGFpZCgkaW52b2ljZV9pZCkpewogICAgJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKICAgIHRyeSB7CiAgICAgICAgRGlyZWN0UGF5bWVudCgkaW52b2ljZV9pZCwiLi4vaW1hZ2VzLmpwZyIpOwogICAgfSBjYXRjaCAoVGhyb3dhYmxlICRkaXJlY3RQYXltZW50RXJyb3IpIHsKICAgICAgICBlcnJvcl9sb2coIkRpcmVjdFBheW1lbnQgZmFpbGVkIGZvciBvcmRlciB7JGludm9pY2VfaWR9OiAiIC4gJGRpcmVjdFBheW1lbnRFcnJvci0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICByZXR1cm47CiAgICB9CiAgICAkcHJpY2VjYXNoYmFjayA9IHNlbGVjdCgiUGF5U2V0dGluZyIsICJWYWx1ZVBheSIsICJOYW1lUGF5IiwgImNoYXNoYmFja3phcmlucGFsIiwic2VsZWN0IilbJ1ZhbHVlUGF5J107CiAgICAkQmFsYW5jZV9pZCA9IHNlbGVjdCgidXNlciIsIioiLCJpZCIsJFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ10sInNlbGVjdCIpOwogICAgaWYoJHByaWNlY2FzaGJhY2sgIT0gIjAiKXsKICAgICAgICAkcmVzdWx0ID0gKCRQYXltZW50X3JlcG9ydFsncHJpY2UnXSAqICRwcmljZWNhc2hiYWNrKSAvIDEwMDsKICAgICAgICAkQmFsYW5jZV9jb25mcmltID0gaW50dmFsKCRCYWxhbmNlX2lkWydCYWxhbmNlJ10pICskcmVzdWx0OwogICAgICAgIHVwZGF0ZSgidXNlciIsIkJhbGFuY2UiLCRCYWxhbmNlX2NvbmZyaW0sICJpZCIsJEJhbGFuY2VfaWRbJ2lkJ10pOyAKICAgICAgICAkcHJpY2VjYXNoYmFjayA9ICBudW1iZXJfZm9ybWF0KCRwcmljZWNhc2hiYWNrKTsKICAgICAgICAkdGV4dF9yZXBvcnQgPSBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnZ2lmdFJlcG9ydCddLCAkcmVzdWx0KTsKICAgICAgICBzZW5kbWVzc2FnZSgkQmFsYW5jZV9pZFsnaWQnXSwgJHRleHRfcmVwb3J0LCBudWxsLCAnSFRNTCcpOwogICAgfQogICAgJHBheW1lbnRyZXBvcnRzID0gc2VsZWN0KCJ0b3BpY2lkIiwiaWRyZXBvcnQiLCJyZXBvcnQiLCJwYXltZW50cmVwb3J0Iiwic2VsZWN0IilbJ2lkcmVwb3J0J107CiAgICAkcmVmY29kZSA9ICRyZXNwb25zZVsnZGF0YSddWydyZWZfaWQnXTsKICAgICRjYXJ0X251bWJlciA9ICRyZXNwb25zZVsnZGF0YSddWydjYXJkX3BhbiddOwogICAgJHByaWNlID0gbnVtYmVyX2Zvcm1hdCgkcHJpY2UpOwokdGV4dF9yZXBvcnQgPSBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsncmVwb3J0WmFyaW5wYWwnXSwgJFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ10sICRCYWxhbmNlX2lkWyd1c2VybmFtZSddLCAkcHJpY2UsICRyZWZjb2RlLCAkY2FydF9udW1iZXIpOwogICAgaWYgKHN0cmxlbigkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSkgPiAwKSB7CiAgICAgICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJyxbCiAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICdtZXNzYWdlX3RocmVhZF9pZCcgPT4gJHBheW1lbnRyZXBvcnRzLAogICAgICAgICd0ZXh0JyA9PiAkdGV4dF9yZXBvcnQsCiAgICAgICAgJ3BhcnNlX21vZGUnID0+ICJIVE1MIgogICAgICAgIF0pOwogICAgfQp9Cn1lbHNlIHsKICAgICAgICAkcGF5bWVudF9zdGF0dXMgPSAkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ3phcmlucGFsUmVzdWx0Q29kZXMnXVskcmVzcG9uc2VbJ2Vycm9ycyddWydjb2RlJ10gPz8gJyddID8/ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnc3RhdHVzRmFpbGVkJ107CiAgICAgJGRlY19wYXltZW50X3N0YXR1cyA9ICIiOwp9Cn0KPz4KPGh0bWw+CjxoZWFkPgogICAgPHRpdGxlPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlVGl0bGUnXSA/PjwvdGl0bGU+CiAgICA8c3R5bGU+CiAgICBAZm9udC1mYWNlIHsKICAgIGZvbnQtZmFtaWx5OiAndmF6aXInOwogICAgc3JjOiB1cmwoJy9WYXppci5lb3QnKTsKICAgIHNyYzogbG9jYWwoJ+KYuicpLCB1cmwoJy4uL2ZvbnRzL1ZhemlyLndvZmYnKSBmb3JtYXQoJ3dvZmYnKSwgdXJsKCcuLi9mb250cy9WYXppci50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KCiAgICAgICAgYm9keSB7CiAgICAgICAgICAgIGZvbnQtZmFtaWx5OnZhemlyOwogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyOwogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHg7CiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICAgICAgICBtaW4taGVpZ2h0OiAxMDB2aDsKICAgICAgICB9CgogICAgICAgIC5jb25maXJtYXRpb24tYm94IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogOHB4OwogICAgICAgICAgICB3aWR0aDoyNSU7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjEpOwogICAgICAgICAgICBwYWRkaW5nOiA0MHB4OwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgfQoKICAgICAgICBoMSB7CiAgICAgICAgICAgIGNvbG9yOiAjMzMzMzMzOwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4OwogICAgICAgIH0KCiAgICAgICAgcCB7CiAgICAgICAgICAgIGNvbG9yOiAjNjY2NjY2OwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4OwogICAgICAgIH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb25maXJtYXRpb24tYm94Ij4KICAgICAgICA8aDE+PD9waHAgZWNobyAkcGF5bWVudF9zdGF0dXMgPz48L2gxPgogICAgICAgIDxwPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlVHJhbnNhY3Rpb25ObyddID8+PHNwYW4+PD9waHAgZWNobyAkaW52b2ljZV9pZCA/Pjwvc3Bhbj48L3A+CiAgICAgICAgPHA+PD9waHAgZWNobyAkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ2ludm9pY2VBbW91bnQnXSA/PiAgPHNwYW4+PD9waHAgZWNobyAgJHByaWNlID8+PC9zcGFuPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlQW1vdW50VW5pdCddID8+PC9wPgogICAgICAgIDxwPjw/cGhwIGVjaG8gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydpbnZvaWNlRGF0ZSddID8+IDxzcGFuPiAgPD9waHAgZWNobyBqZGF0ZSgnWS9tL2QnKSAgPz4gIDwvc3Bhbj48L3A+CiAgICAgICAgPHA+PD9waHAgZWNobyAkZGVjX3BheW1lbnRfc3RhdHVzID8+PC9wPgogICAgPC9kaXY+CjwvYm9keT4KPC9odG1sPgo=
+<?php
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../jdf.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../panels.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$ManagePanel = new ManagePanel();
+
+$Authority = htmlspecialchars($_GET['Authority'] ?? '', ENT_QUOTES, 'UTF-8');
+$StatusPayment = htmlspecialchars($_GET['Status'] ?? '', ENT_QUOTES, 'UTF-8');
+if ($Authority === '') {
+    http_response_code(400);
+    exit('invalid request');
+}
+$setting = select("setting", "*");
+$PaySetting = select("PaySetting", "ValuePay", "NamePay", "merchant_zarinpal","select")['ValuePay'];
+$Payment_reports = select("Payment_report", "*", "dec_not_confirmed", $Authority,"select");
+if (!is_array($Payment_reports)) {
+    http_response_code(404);
+    exit('order not found');
+}
+if ($Payment_reports['payment_Status'] == "expire") {
+    exit('order expired');
+}
+$price = $Payment_reports['price'];
+$invoice_id = $Payment_reports['id_order'];
+// verify Transaction
+$dec_payment_status = "";
+$payment_status = "";
+if($StatusPayment == "OK"){
+        $curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.zarinpal.com/pg/v4/payment/verify.json',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json',
+    'Accept: application/json'
+  ),
+));
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode([
+  "merchant_id" => $PaySetting,
+  "amount"=> $price,
+  "authority" => $Authority,
+  "description" => $Payment_reports['id_user']
+        ]));
+$response = curl_exec($curl);
+curl_close($curl);
+$response = json_decode($response,true);
+$payment_status = $textbotlang['paymentGateway']['zarinpalErrors'][$response['errors']['code'] ?? ''] ?? '';
+ if(($response['data']['message'] ?? '') == "Verified" || ($response['data']['message'] ?? '') == "Paid"){
+    $payment_status = $textbotlang['paymentGateway']['statusSuccess'];
+    $dec_payment_status = $textbotlang['paymentGateway']['descThanks'];
+    $Payment_report = select("Payment_report", "*", "id_order", $invoice_id,"select");
+    if(claimPaymentPaid($invoice_id)){
+    $textbotlang = languagechange();
+    try {
+        DirectPayment($invoice_id,"../images.jpg");
+    } catch (Throwable $directPaymentError) {
+        error_log("DirectPayment failed for order {$invoice_id}: " . $directPaymentError->getMessage());
+        return;
+    }
+    $pricecashback = select("PaySetting", "ValuePay", "NamePay", "chashbackzarinpal","select")['ValuePay'];
+    $Balance_id = select("user","*","id",$Payment_report['id_user'],"select");
+    if($pricecashback != "0"){
+        $result = ($Payment_report['price'] * $pricecashback) / 100;
+        $Balance_confrim = intval($Balance_id['Balance']) +$result;
+        update("user","Balance",$Balance_confrim, "id",$Balance_id['id']); 
+        $pricecashback =  number_format($pricecashback);
+        $text_report = sprintf($textbotlang['paymentGateway']['giftReport'], $result);
+        sendmessage($Balance_id['id'], $text_report, null, 'HTML');
+    }
+    $paymentreports = select("topicid","idreport","report","paymentreport","select")['idreport'];
+    $refcode = $response['data']['ref_id'];
+    $cart_number = $response['data']['card_pan'];
+    $price = number_format($price);
+$text_report = sprintf($textbotlang['paymentGateway']['reportZarinpal'], $Payment_report['id_user'], $Balance_id['username'], $price, $refcode, $cart_number);
+    if (strlen($setting['Channel_Report']) > 0) {
+        telegram('sendmessage',[
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => $paymentreports,
+        'text' => $text_report,
+        'parse_mode' => "HTML"
+        ]);
+    }
+}
+}else {
+        $payment_status = $textbotlang['paymentGateway']['zarinpalResultCodes'][$response['errors']['code'] ?? ''] ?? $textbotlang['paymentGateway']['statusFailed'];
+     $dec_payment_status = "";
+}
+}
+?>
+<html>
+<head>
+    <title><?php echo $textbotlang['paymentGateway']['invoiceTitle'] ?></title>
+    <style>
+    @font-face {
+    font-family: 'vazir';
+    src: url('/Vazir.eot');
+    src: local('☺'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
+}
+
+        body {
+            font-family:vazir;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .confirmation-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width:25%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666666;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h1><?php echo $payment_status ?></h1>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceTransactionNo'] ?><span><?php echo $invoice_id ?></span></p>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceAmount'] ?>  <span><?php echo  $price ?></span><?php echo $textbotlang['paymentGateway']['invoiceAmountUnit'] ?></p>
+        <p><?php echo $textbotlang['paymentGateway']['invoiceDate'] ?> <span>  <?php echo jdate('Y/m/d')  ?>  </span></p>
+        <p><?php echo $dec_payment_status ?></p>
+    </div>
+</body>
+</html>

@@ -1,1 +1,150 @@
-PD9waHAKCgppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2JvdGFwaS5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzL0FwaS9NYXJ6YmFuLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9rZXlib2FyZC5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vamRmLnBocCc7CnJlcXVpcmUgX19ESVJfXyAuICcvLi4vdmVuZG9yL2F1dG9sb2FkLnBocCc7CgokTWFuYWdlUGFuZWwgPSBuZXcgTWFuYWdlUGFuZWwoKTsKCiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CgpmdW5jdGlvbiB2YXJpemFfd2ViaG9va19yZXNwb25kKGludCAkY29kZSwgc3RyaW5nICRtc2cpOiBuZXZlcgp7CiAgICBodHRwX3Jlc3BvbnNlX2NvZGUoJGNvZGUpOwogICAgaGVhZGVyKCdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLTgnKTsKICAgIGVjaG8ganNvbl9lbmNvZGUoWydzdGF0dXMnID0+ICRtc2ddLCBKU09OX1VORVNDQVBFRF9VTklDT0RFKTsKICAgIGV4aXQ7Cn0KCi8vIFJhdyBib2R5IGlzIHdoYXQgdGhlIEhNQUMgaXMgb3ZlciDigJQgbmV2ZXIgdXNlICRfUE9TVCBoZXJlLgokcmF3ID0gZmlsZV9nZXRfY29udGVudHMoJ3BocDovL2lucHV0Jyk7CmlmICgkcmF3ID09PSBmYWxzZSB8fCAkcmF3ID09PSAnJykgewogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCg0MDAsICdlbXB0eSBib2R5Jyk7Cn0KCiRzaWdIZWFkZXIgPSAkX1NFUlZFUlsnSFRUUF9YX1dFQkhPT0tfU0lHTkFUVVJFJ10gPz8gJyc7Ci8vIENsb3VkZmxhcmUvTkdJTlggbWF5IGxvd2VyY2FzZSBoZWFkZXJzOyBjaGVjayBib3RoIGZvcm1zLgppZiAoJHNpZ0hlYWRlciA9PT0gJycgJiYgZnVuY3Rpb25fZXhpc3RzKCdnZXRhbGxoZWFkZXJzJykpIHsKICAgICRoZWFkZXJzID0gZ2V0YWxsaGVhZGVycygpOwogICAgZm9yZWFjaCAoJGhlYWRlcnMgYXMgJGsgPT4gJHYpIHsKICAgICAgICBpZiAoc3RydG9sb3dlcigkaykgPT09ICd4LXdlYmhvb2stc2lnbmF0dXJlJykgewogICAgICAgICAgICAkc2lnSGVhZGVyID0gJHY7CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIH0KICAgIH0KfQoKJHNlY3JldCA9IHRyaW0oKHN0cmluZykgZ2V0UGF5U2V0dGluZ1ZhbHVlKCd2YXJpemFfd2ViaG9va19zZWNyZXQnLCAnJykpOwppZiAoJHNlY3JldCA9PT0gJycgfHwgJHNlY3JldCA9PT0gJzAnKSB7CiAgICBlcnJvcl9sb2coJ3Zhcml6YSB3ZWJob29rOiB3ZWJob29rX3NlY3JldCBub3QgY29uZmlndXJlZCcpOwogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCg1MDAsICdub3QgY29uZmlndXJlZCcpOwp9CgokcHJvdmlkZWQgPSAkc2lnSGVhZGVyOwppZiAoc3RyX3N0YXJ0c193aXRoKCRwcm92aWRlZCwgJ3NoYTI1Nj0nKSkgewogICAgJHByb3ZpZGVkID0gc3Vic3RyKCRwcm92aWRlZCwgNyk7Cn0KCiRleHBlY3RlZCA9IGhhc2hfaG1hYygnc2hhMjU2JywgJHJhdywgJHNlY3JldCk7CmlmICghaGFzaF9lcXVhbHMoJGV4cGVjdGVkLCAkcHJvdmlkZWQpKSB7CiAgICBlcnJvcl9sb2coJ3Zhcml6YSB3ZWJob29rOiBzaWduYXR1cmUgbWlzbWF0Y2gnKTsKICAgIHZhcml6YV93ZWJob29rX3Jlc3BvbmQoNDAwLCAnaW52YWxpZCBzaWduYXR1cmUnKTsKfQoKJGRhdGEgPSBqc29uX2RlY29kZSgkcmF3LCB0cnVlKTsKaWYgKCFpc19hcnJheSgkZGF0YSkpIHsKICAgIHZhcml6YV93ZWJob29rX3Jlc3BvbmQoNDAwLCAnaW52YWxpZCBqc29uJyk7Cn0KCmlmICgoJGRhdGFbJ2V2ZW50J10gPz8gJycpICE9PSAncGF5bWVudC5wYWlkJykgewogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCgyMDAsICdpZ25vcmVkJyk7Cn0KCiRzbHVnID0gKHN0cmluZykgKCRkYXRhWydzbHVnJ10gPz8gJycpOwokYW1vdW50ID0gKGludCkgKCRkYXRhWydhbW91bnQnXSA/PyAwKTsKLy8gYXR0ZW1wdF9jb2RlIGF2YWlsYWJsZSBhcyAkZGF0YVsnYXR0ZW1wdF9jb2RlJ10gZm9yIGF1ZGl0IGlmIG5lZWRlZAoKaWYgKCRzbHVnID09PSAnJykgewogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCg0MDAsICdtaXNzaW5nIHNsdWcnKTsKfQoKLy8gVmFyaXphIHN0b3JlcyBzbHVnIGluIGRlY19ub3RfY29uZmlybWVkIChsaWtlIHphcmlucGFsIEF1dGhvcml0eSkuCiRwYXltZW50ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImRlY19ub3RfY29uZmlybWVkIiwgJHNsdWcsICJzZWxlY3QiKTsKaWYgKCEkcGF5bWVudCkgewogICAgLy8gRmFsbGJhY2s6IHNvbWUgaW5zdGFsbHMgbWF5IGhhdmUgc2x1ZyBpbiBpZF9pbnZvaWNlOyB0cnkgdGhlcmUgdG9vLgogICAgJHBheW1lbnQgPSBzZWxlY3QoIlBheW1lbnRfcmVwb3J0IiwgIioiLCAiaWRfaW52b2ljZSIsICRzbHVnLCAic2VsZWN0Iik7Cn0KaWYgKCEkcGF5bWVudCkgewogICAgZXJyb3JfbG9nKCJ2YXJpemEgd2ViaG9vazogdW5rbm93biBzbHVnIHskc2x1Z30iKTsKICAgIHZhcml6YV93ZWJob29rX3Jlc3BvbmQoNDA0LCAnb3JkZXIgbm90IGZvdW5kJyk7Cn0KCi8vIEFscmVhZHkgc2V0dGxlZCDigJQgaWRlbXBvdGVudC4gVGhlIHJldHJ5IHBvbGljeSBzZW5kcyB1cCB0byA1IHRpbWVzLgppZiAoJHBheW1lbnRbJ3BheW1lbnRfU3RhdHVzJ10gPT09ICdwYWlkJykgewogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCgyMDAsICdhbHJlYWR5IHBhaWQnKTsKfQoKLy8gQW1vdW50IGNoZWNrIOKAlCBib3RoIGluIFRvbWFuLCBkbyBub3QgY3JlZGl0IGlmIGdhdGV3YXkgcmVwb3J0cyBsZXNzIHRoYW4gYmlsbGVkLgokYmlsbGVkID0gKGludCkgJHBheW1lbnRbJ3ByaWNlJ107CmlmICgkYW1vdW50IDwgJGJpbGxlZCkgewogICAgZXJyb3JfbG9nKCJ2YXJpemEgd2ViaG9vazogYW1vdW50IG1pc21hdGNoIGZvciB7JHNsdWd9OiBiaWxsZWQgeyRiaWxsZWR9LCBnb3QgeyRhbW91bnR9Iik7CiAgICB2YXJpemFfd2ViaG9va19yZXNwb25kKDQwMCwgJ2Ftb3VudCBtaXNtYXRjaCcpOwp9Cgokb3JkZXJfaWQgPSAkcGF5bWVudFsnaWRfb3JkZXInXTsKCi8vIE9uZSBjcmVkaXQgcGVyIG9yZGVyLCB3aGF0ZXZlciB0aGUgcGF0aC4KaWYgKCFjbGFpbVBheW1lbnRQYWlkKCRvcmRlcl9pZCkpIHsKICAgIHZhcml6YV93ZWJob29rX3Jlc3BvbmQoMjAwLCAnYWxyZWFkeSBjbGFpbWVkJyk7Cn0KCnRyeSB7CiAgICBEaXJlY3RQYXltZW50KCRvcmRlcl9pZCwgX19ESVJfXyAuICIvLi4vaW1hZ2VzLmpwZyIpOwp9IGNhdGNoIChUaHJvd2FibGUgJGUpIHsKICAgIGVycm9yX2xvZygidmFyaXphIHdlYmhvb2s6IERpcmVjdFBheW1lbnQgZmFpbGVkIGZvciB7JG9yZGVyX2lkfTogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgdmFyaXphX3dlYmhvb2tfcmVzcG9uZCg1MDAsICdkZWxpdmVyeSBmYWlsZWQnKTsKfQoKLy8gQ2FzaGJhY2sgbGlrZSBldmVyeSBvdGhlciBnYXRld2F5LgokY2FzaGJhY2sgPSBpbnR2YWwoZ2V0UGF5U2V0dGluZ1ZhbHVlKCdjaGFzaGJhY2t2YXJpemEnLCAnMCcpKTsKaWYgKCRjYXNoYmFjayA+IDApIHsKICAgICRidXllciA9IHNlbGVjdCgidXNlciIsICIqIiwgImlkIiwgJHBheW1lbnRbJ2lkX3VzZXInXSwgInNlbGVjdCIpOwogICAgaWYgKCRidXllcikgewogICAgICAgICRyZXdhcmQgPSBpbnR2YWwoJGJpbGxlZCAqICRjYXNoYmFjayAvIDEwMCk7CiAgICAgICAgaWYgKCRyZXdhcmQgPiAwKSB7CiAgICAgICAgICAgIHVwZGF0ZSgidXNlciIsICJCYWxhbmNlIiwgaW50dmFsKCRidXllclsnQmFsYW5jZSddKSArICRyZXdhcmQsICJpZCIsICRwYXltZW50WydpZF91c2VyJ10pOwogICAgICAgICAgICAkdGV4dF9naWZ0ID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ2dpZnRSZXBvcnQnXSwgJHJld2FyZCk7CiAgICAgICAgICAgIHNlbmRtZXNzYWdlKCRwYXltZW50WydpZF91c2VyJ10sICR0ZXh0X2dpZnQsIG51bGwsICdIVE1MJyk7CiAgICAgICAgfQogICAgfQp9CgovLyBSZXBvcnQgdG8gQ2hhbm5lbF9SZXBvcnQgbGlrZSB6YXJpbnBhbCBkb2VzLgokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiRwYXltZW50cmVwb3J0cyA9IHNlbGVjdCgidG9waWNpZCIsICJpZHJlcG9ydCIsICJyZXBvcnQiLCAicGF5bWVudHJlcG9ydCIsICJzZWxlY3QiKVsnaWRyZXBvcnQnXSA/PyBudWxsOwppZiAoIWVtcHR5KCRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddKSAmJiAkcGF5bWVudHJlcG9ydHMpIHsKICAgICRidXllciA9IHNlbGVjdCgidXNlciIsICIqIiwgImlkIiwgJHBheW1lbnRbJ2lkX3VzZXInXSwgInNlbGVjdCIpOwogICAgJHRleHRfcmVwb3J0ID0gc3ByaW50ZigKICAgICAgICAkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ3JlcG9ydFZhcml6YSddLAogICAgICAgICRidXllclsndXNlcm5hbWUnXSA/PyAnLScsCiAgICAgICAgJHBheW1lbnRbJ2lkX3VzZXInXSwKICAgICAgICBudW1iZXJfZm9ybWF0KCRiaWxsZWQpLAogICAgICAgICRvcmRlcl9pZCwKICAgICAgICAkc2x1ZwogICAgKTsKICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAnY2hhdF9pZCcgPT4gJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10sCiAgICAgICAgJ21lc3NhZ2VfdGhyZWFkX2lkJyA9PiAkcGF5bWVudHJlcG9ydHMsCiAgICAgICAgJ3RleHQnID0+ICR0ZXh0X3JlcG9ydCwKICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiCiAgICBdKTsKfQoKdmFyaXphX3dlYmhvb2tfcmVzcG9uZCgyMDAsICdvaycpOwo=
+<?php
+
+
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$ManagePanel = new ManagePanel();
+
+$textbotlang = languagechange();
+
+function variza_webhook_respond(int $code, string $msg): never
+{
+    http_response_code($code);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['status' => $msg], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+// Raw body is what the HMAC is over — never use $_POST here.
+$raw = file_get_contents('php://input');
+if ($raw === false || $raw === '') {
+    variza_webhook_respond(400, 'empty body');
+}
+
+$sigHeader = $_SERVER['HTTP_X_WEBHOOK_SIGNATURE'] ?? '';
+// Cloudflare/NGINX may lowercase headers; check both forms.
+if ($sigHeader === '' && function_exists('getallheaders')) {
+    $headers = getallheaders();
+    foreach ($headers as $k => $v) {
+        if (strtolower($k) === 'x-webhook-signature') {
+            $sigHeader = $v;
+            break;
+        }
+    }
+}
+
+$secret = trim((string) getPaySettingValue('variza_webhook_secret', ''));
+if ($secret === '' || $secret === '0') {
+    error_log('variza webhook: webhook_secret not configured');
+    variza_webhook_respond(500, 'not configured');
+}
+
+$provided = $sigHeader;
+if (str_starts_with($provided, 'sha256=')) {
+    $provided = substr($provided, 7);
+}
+
+$expected = hash_hmac('sha256', $raw, $secret);
+if (!hash_equals($expected, $provided)) {
+    error_log('variza webhook: signature mismatch');
+    variza_webhook_respond(400, 'invalid signature');
+}
+
+$data = json_decode($raw, true);
+if (!is_array($data)) {
+    variza_webhook_respond(400, 'invalid json');
+}
+
+if (($data['event'] ?? '') !== 'payment.paid') {
+    variza_webhook_respond(200, 'ignored');
+}
+
+$slug = (string) ($data['slug'] ?? '');
+$amount = (int) ($data['amount'] ?? 0);
+// attempt_code available as $data['attempt_code'] for audit if needed
+
+if ($slug === '') {
+    variza_webhook_respond(400, 'missing slug');
+}
+
+// Variza stores slug in dec_not_confirmed (like zarinpal Authority).
+$payment = select("Payment_report", "*", "dec_not_confirmed", $slug, "select");
+if (!$payment) {
+    // Fallback: some installs may have slug in id_invoice; try there too.
+    $payment = select("Payment_report", "*", "id_invoice", $slug, "select");
+}
+if (!$payment) {
+    error_log("variza webhook: unknown slug {$slug}");
+    variza_webhook_respond(404, 'order not found');
+}
+
+// Already settled — idempotent. The retry policy sends up to 5 times.
+if ($payment['payment_Status'] === 'paid') {
+    variza_webhook_respond(200, 'already paid');
+}
+
+// Amount check — both in Toman, do not credit if gateway reports less than billed.
+$billed = (int) $payment['price'];
+if ($amount < $billed) {
+    error_log("variza webhook: amount mismatch for {$slug}: billed {$billed}, got {$amount}");
+    variza_webhook_respond(400, 'amount mismatch');
+}
+
+$order_id = $payment['id_order'];
+
+// One credit per order, whatever the path.
+if (!claimPaymentPaid($order_id)) {
+    variza_webhook_respond(200, 'already claimed');
+}
+
+try {
+    DirectPayment($order_id, __DIR__ . "/../images.jpg");
+} catch (Throwable $e) {
+    error_log("variza webhook: DirectPayment failed for {$order_id}: " . $e->getMessage());
+    variza_webhook_respond(500, 'delivery failed');
+}
+
+// Cashback like every other gateway.
+$cashback = intval(getPaySettingValue('chashbackvariza', '0'));
+if ($cashback > 0) {
+    $buyer = select("user", "*", "id", $payment['id_user'], "select");
+    if ($buyer) {
+        $reward = intval($billed * $cashback / 100);
+        if ($reward > 0) {
+            update("user", "Balance", intval($buyer['Balance']) + $reward, "id", $payment['id_user']);
+            $text_gift = sprintf($textbotlang['paymentGateway']['giftReport'], $reward);
+            sendmessage($payment['id_user'], $text_gift, null, 'HTML');
+        }
+    }
+}
+
+// Report to Channel_Report like zarinpal does.
+$setting = select("setting", "*");
+$paymentreports = select("topicid", "idreport", "report", "paymentreport", "select")['idreport'] ?? null;
+if (!empty($setting['Channel_Report']) && $paymentreports) {
+    $buyer = select("user", "*", "id", $payment['id_user'], "select");
+    $text_report = sprintf(
+        $textbotlang['paymentGateway']['reportVariza'],
+        $buyer['username'] ?? '-',
+        $payment['id_user'],
+        number_format($billed),
+        $order_id,
+        $slug
+    );
+    telegram('sendmessage', [
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => $paymentreports,
+        'text' => $text_report,
+        'parse_mode' => "HTML"
+    ]);
+}
+
+variza_webhook_respond(200, 'ok');

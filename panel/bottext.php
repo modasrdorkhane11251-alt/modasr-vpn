@@ -1,1 +1,159 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCiRsYW5ncyA9ICR0ZXh0Ym90bGFuZ1snYm90dGV4dCddWydsYW5ncyddOwokbGFuZyA9IGlzc2V0KCRsYW5nc1skX0dFVFsnbGFuZyddID8/ICcnXSkgPyAkX0dFVFsnbGFuZyddIDogJ2ZhJzsKCiRmbGF0VGV4dHMgPSBmdW5jdGlvbiAoYXJyYXkgJHRleHRzKTogYXJyYXkgewogICAgJGZsYXQgPSBbXTsKICAgICRpdGVyYXRvciA9IG5ldyBSZWN1cnNpdmVJdGVyYXRvckl0ZXJhdG9yKG5ldyBSZWN1cnNpdmVBcnJheUl0ZXJhdG9yKCR0ZXh0cykpOwogICAgZm9yZWFjaCAoJGl0ZXJhdG9yIGFzICR2YWx1ZSkgewogICAgICAgICRwYXRoID0gW107CiAgICAgICAgZm9yICgkZGVwdGggPSAwOyAkZGVwdGggPD0gJGl0ZXJhdG9yLT5nZXREZXB0aCgpOyAkZGVwdGgrKykKICAgICAgICAgICAgJHBhdGhbXSA9ICRpdGVyYXRvci0+Z2V0U3ViSXRlcmF0b3IoJGRlcHRoKS0+a2V5KCk7CiAgICAgICAgJGZsYXRbaW1wbG9kZSgnLicsICRwYXRoKV0gPSAoc3RyaW5nKSAkdmFsdWU7CiAgICB9CiAgICByZXR1cm4gJGZsYXQ7Cn07CgokYmFzZVRleHRzID0gYXJyYXlfZGlmZl9rZXkocmVxdWlyZSBkaXJuYW1lKF9fRElSX18pIC4gJy9sYW5nLycgLiAkbGFuZyAuICcucGhwJywgYXJyYXlfZmxpcChbJ2JvdHRleHQnLCAnQWRtaW4nLCAncGFuZWwnXSkpOwokZGVmYXVsdHMgPSAkZmxhdFRleHRzKCRiYXNlVGV4dHMpOwokb3ZlcnJpZGVGaWxlID0gZGlybmFtZShfX0RJUl9fKSAuICcvbGFuZy9vdmVycmlkZS8nIC4gJGxhbmcgLiAnLnBocCc7CiRvdmVycmlkZVRleHRzID0gaXNfZmlsZSgkb3ZlcnJpZGVGaWxlKSA/IGluY2x1ZGUgJG92ZXJyaWRlRmlsZSA6IFtdOwokb3ZlcnJpZGVzID0gYXJyYXlfaW50ZXJzZWN0X2tleSgkZmxhdFRleHRzKGlzX2FycmF5KCRvdmVycmlkZVRleHRzKSA/ICRvdmVycmlkZVRleHRzIDogW10pLCAkZGVmYXVsdHMpOwoKaWYgKCRfU0VSVkVSWydSRVFVRVNUX01FVEhPRCddID09PSAnUE9TVCcpIHsKICAgIGNzcmZfY2hlY2tfcG9zdCgpOwogICAgZm9yZWFjaCAoKGFycmF5KSAoJF9QT1NUWyd0ZXh0cyddID8/IFtdKSBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgIGlmICghaXNzZXQoJGRlZmF1bHRzWyRrZXldKSB8fCAhaXNfc3RyaW5nKCR2YWx1ZSkpCiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgICR2YWx1ZSA9IHN0cl9yZXBsYWNlKCJcclxuIiwgIlxuIiwgJHZhbHVlKTsKICAgICAgICBpZiAodHJpbSgkdmFsdWUpID09PSAnJyB8fCAkdmFsdWUgPT09ICRkZWZhdWx0c1ska2V5XSkKICAgICAgICAgICAgdW5zZXQoJG92ZXJyaWRlc1ska2V5XSk7CiAgICAgICAgZWxzZQogICAgICAgICAgICAkb3ZlcnJpZGVzWyRrZXldID0gJHZhbHVlOwogICAgfQogICAgJG5lc3RlZCA9IFtdOwogICAgZm9yZWFjaCAoJG92ZXJyaWRlcyBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgICRub2RlID0gJiRuZXN0ZWQ7CiAgICAgICAgZm9yZWFjaCAoZXhwbG9kZSgnLicsICRrZXkpIGFzICRzZWdtZW50KQogICAgICAgICAgICAkbm9kZSA9ICYkbm9kZVskc2VnbWVudF07CiAgICAgICAgJG5vZGUgPSAkdmFsdWU7CiAgICAgICAgdW5zZXQoJG5vZGUpOwogICAgfQogICAgaWYgKCRuZXN0ZWQpIHsKICAgICAgICAkb3ZlcnJpZGVEaXIgPSBkaXJuYW1lKCRvdmVycmlkZUZpbGUpOwogICAgICAgICRzYXZlZCA9IChpc19kaXIoJG92ZXJyaWRlRGlyKSB8fCBAbWtkaXIoJG92ZXJyaWRlRGlyLCAwNzU1LCB0cnVlKSkKICAgICAgICAgICAgJiYgQGZpbGVfcHV0X2NvbnRlbnRzKCRvdmVycmlkZUZpbGUsICI8P3BocFxuXG5yZXR1cm4gIiAuIHZhcl9leHBvcnQoJG5lc3RlZCwgdHJ1ZSkgLiAiO1xuIiwgTE9DS19FWCkgIT09IGZhbHNlOwogICAgfSBlbHNlIHsKICAgICAgICAkc2F2ZWQgPSAhaXNfZmlsZSgkb3ZlcnJpZGVGaWxlKSB8fCBAdW5saW5rKCRvdmVycmlkZUZpbGUpOwogICAgfQogICAgaWYgKCRzYXZlZCAmJiBmdW5jdGlvbl9leGlzdHMoJ29wY2FjaGVfaW52YWxpZGF0ZScpKQogICAgICAgIG9wY2FjaGVfaW52YWxpZGF0ZSgkb3ZlcnJpZGVGaWxlLCB0cnVlKTsKICAgICRwaHBVc2VyID0gZnVuY3Rpb25fZXhpc3RzKCdwb3NpeF9nZXRldWlkJykgPyAocG9zaXhfZ2V0cHd1aWQocG9zaXhfZ2V0ZXVpZCgpKVsnbmFtZSddID8/ICd3d3ctZGF0YScpIDogJ3d3dy1kYXRhJzsKICAgIGZsYXNoKCRzYXZlZCA/ICdzdWNjZXNzJyA6ICdlcnJvcicsICRzYXZlZCA/ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnYm90dGV4dFNhdmVkJ10gOiBzdHJ0cigkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRTYXZlRXJyb3InXSwgWwogICAgICAgICd7cGF0aH0nID0+IGRpcm5hbWUoJG92ZXJyaWRlRmlsZSksCiAgICAgICAgJ3tjb21tYW5kfScgPT4gJ2Nob3duIC1SICcgLiAkcGhwVXNlciAuICc6JyAuICRwaHBVc2VyIC4gJyAnIC4gZGlybmFtZSgkb3ZlcnJpZGVGaWxlLCAyKSwKICAgIF0pKTsKICAgIGhlYWRlcignTG9jYXRpb246IGJvdHRleHQucGhwPycgLiAoJF9TRVJWRVJbJ1FVRVJZX1NUUklORyddID8/ICcnKSk7CiAgICBleGl0Owp9CgokZ3JvdXAgPSAkX0dFVFsnZ3JvdXAnXSA/PyBhcnJheV9rZXlfZmlyc3QoJGJhc2VUZXh0cyk7CiRxdWVyeSA9IHRyaW0oJF9HRVRbJ3EnXSA/PyAnJyk7CiRvbmx5Q2hhbmdlZCA9ICFlbXB0eSgkX0dFVFsnY2hhbmdlZCddKTsKCiRncm91cENvdW50cyA9IGFycmF5X2ZpbGxfa2V5cyhhcnJheV9rZXlzKCRiYXNlVGV4dHMpLCAwKTsKJHZpc2libGUgPSBbXTsKZm9yZWFjaCAoJGRlZmF1bHRzIGFzICRrZXkgPT4gJGRlZmF1bHQpIHsKICAgICRjdXJyZW50ID0gJG92ZXJyaWRlc1ska2V5XSA/PyAkZGVmYXVsdDsKICAgIGlmICgkb25seUNoYW5nZWQgJiYgIWlzc2V0KCRvdmVycmlkZXNbJGtleV0pKQogICAgICAgIGNvbnRpbnVlOwogICAgaWYgKCRxdWVyeSAhPT0gJycgJiYgbWJfc3RyaXBvcygka2V5IC4gIlxuIiAuICRkZWZhdWx0IC4gIlxuIiAuICRjdXJyZW50LCAkcXVlcnkpID09PSBmYWxzZSkKICAgICAgICBjb250aW51ZTsKICAgICRncm91cEtleSA9IHN0cnN0cigka2V5LCAnLicsIHRydWUpOwogICAgJGdyb3VwQ291bnRzWyRncm91cEtleV0rKzsKICAgIGlmICgkZ3JvdXAgPT09ICcnIHx8ICRncm91cEtleSA9PT0gJGdyb3VwKQogICAgICAgICR2aXNpYmxlWyRrZXldID0gJGN1cnJlbnQ7Cn0KJHRhYlVybCA9IGZuKCRncm91cEtleSkgPT4gJ2JvdHRleHQucGhwPycgLiBodHRwX2J1aWxkX3F1ZXJ5KFsnbGFuZycgPT4gJGxhbmcsICdncm91cCcgPT4gJGdyb3VwS2V5LCAncScgPT4gJHF1ZXJ5ID86IG51bGwsICdjaGFuZ2VkJyA9PiAkb25seUNoYW5nZWQgPyAxIDogbnVsbF0pOwoKJHBhZ2VUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnYm90dGV4dFBhZ2VUaXRsZSddOwokcGFnZUxlZGUgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRQYWdlTGVkZSddOwokYWN0aXZlTmF2ID0gJ2JvdHRleHQnOwppbmNsdWRlIF9fRElSX18gLiAnL2luYy9sYXlvdXRfaGVhZC5waHAnOwo/PgoKPGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4O2dhcDo0cHg7bWFyZ2luLWJvdHRvbToxNHB4O2JhY2tncm91bmQ6dmFyKC0tc2YpO2JvcmRlcjoxcHggc29saWQgdmFyKC0tYmQpO2JvcmRlci1yYWRpdXM6MTBweDtwYWRkaW5nOjVweDtvdmVyZmxvdy14OmF1dG8iIGNsYXNzPSJmYWRlLXVwIj4KICAgIDw/cGhwIGZvcmVhY2ggKFsnJyA9PiBhcnJheV9zdW0oJGdyb3VwQ291bnRzKV0gKyAkZ3JvdXBDb3VudHMgYXMgJGdyb3VwS2V5ID0+ICRncm91cENvdW50KTogPz4KICAgICAgICA8YSBocmVmPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGFiVXJsKCRncm91cEtleSkpID8+IgogICAgICAgICAgICBzdHlsZT0iZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6NnB4O3BhZGRpbmc6OHB4IDE0cHg7Ym9yZGVyLXJhZGl1czo3cHg7Zm9udC1zaXplOi44MnJlbTtmb250LXdlaWdodDo2MDA7d2hpdGUtc3BhY2U6bm93cmFwO2ZsZXgtc2hyaW5rOjA7dHJhbnNpdGlvbjphbGwgLjE1czt0ZXh0LWRlY29yYXRpb246bm9uZTsKICAgICAgICAgICAgICAgICAgPD89ICRncm91cCA9PT0gKHN0cmluZykgJGdyb3VwS2V5ID8gJ2JhY2tncm91bmQ6dmFyKC0tYWNzKTtjb2xvcjp2YXIoLS1hY2gpO2ZvbnQtd2VpZ2h0OjcwMCcgOiAnY29sb3I6dmFyKC0tbXV0ZSknID8+Ij4KICAgICAgICAgICAgPD89IGh0bWxzcGVjaWFsY2hhcnMoJGdyb3VwS2V5ID09PSAnJyA/ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnYm90dGV4dEFsbEdyb3VwcyddIDogKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnYm90dGV4dEdyb3VwcyddWyRncm91cEtleV0gPz8gJGdyb3VwS2V5KSkgPz4KICAgICAgICAgICAgPHNtYWxsIHN0eWxlPSJvcGFjaXR5Oi43NSI+KDw/PSAkZ3JvdXBDb3VudCA/Pik8L3NtYWxsPgogICAgICAgIDwvYT4KICAgIDw/cGhwIGVuZGZvcmVhY2g7ID8+CjwvZGl2PgoKPGRpdiBjbGFzcz0iY2FyZCBmYWRlLXVwIiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZSI+CiAgICA8ZGl2IGNsYXNzPSJ0b29sYmFyIj4KICAgICAgICA8ZGl2IGNsYXNzPSJ0b29sYmFyLXRpdGxlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0UGFnZVRpdGxlJ10gPz4KICAgICAgICAgICAgPHNtYWxsPig8Pz0gY291bnQoJHZpc2libGUpID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRDb3VudExhYmVsJ10gPz4gwrcgPD89IGNvdW50KCRvdmVycmlkZXMpID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRDaGFuZ2VkTGFiZWwnXSA/Pik8L3NtYWxsPgogICAgICAgIDwvZGl2PgogICAgICAgIDxmb3JtIG1ldGhvZD0iR0VUIiBjbGFzcz0idG9vbGJhci1lbmQiPgogICAgICAgICAgICA8c2VsZWN0IG5hbWU9ImxhbmciIGNsYXNzPSJzZWxlY3QiIHN0eWxlPSJ3aWR0aDphdXRvIiB0aXRsZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0TGFuZ0xhYmVsJ10pID8+IiBvbmNoYW5nZT0idGhpcy5mb3JtLnN1Ym1pdCgpIj4KICAgICAgICAgICAgICAgIDw/cGhwIGZvcmVhY2ggKCRsYW5ncyBhcyAkY29kZSA9PiAkbGFiZWwpOiA/PgogICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCRjb2RlKSA/PiIgPD89ICRsYW5nID09PSAkY29kZSA/ICdzZWxlY3RlZCcgOiAnJyA/Pj48Pz0gaHRtbHNwZWNpYWxjaGFycygkbGFiZWwpID8+PC9vcHRpb24+CiAgICAgICAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyA/PgogICAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iZ3JvdXAiIHZhbHVlPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkZ3JvdXApID8+Ij4KICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VhcmNoLWJveCIgc3R5bGU9Im1pbi13aWR0aDoyMjBweCI+CiAgICAgICAgICAgICAgICA8Pz0gaWNvbignc2VhcmNoJywgMTQpID8+CiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0icSIgdmFsdWU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCRxdWVyeSkgPz4iIHBsYWNlaG9sZGVyPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRTZWFyY2hQbGFjZWhvbGRlciddKSA/PiI+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8bGFiZWwgc3R5bGU9ImRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjZweDtmb250LXNpemU6LjgycmVtO2NvbG9yOnZhcigtLW11dGUpO3doaXRlLXNwYWNlOm5vd3JhcCI+CiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iY2hlY2tib3giIG5hbWU9ImNoYW5nZWQiIHZhbHVlPSIxIiA8Pz0gJG9ubHlDaGFuZ2VkID8gJ2NoZWNrZWQnIDogJycgPz4gb25jaGFuZ2U9InRoaXMuZm9ybS5zdWJtaXQoKSI+CiAgICAgICAgICAgICAgICA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0T25seUNoYW5nZWQnXSA/PgogICAgICAgICAgICA8L2xhYmVsPgogICAgICAgICAgICA8YnV0dG9uIHR5cGU9InN1Ym1pdCIgY2xhc3M9ImJ0biBidG4tZ2hvc3QgYnRuLXNtIj48Pz0gaWNvbignc2VhcmNoJywgMTMpID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRGaWx0ZXJCdG4nXSA/PjwvYnV0dG9uPgogICAgICAgIDwvZm9ybT4KICAgIDwvZGl2PgoKICAgIDw/cGhwIGlmICghJHZpc2libGUpOiA/PgogICAgICAgIDxkaXYgY2xhc3M9ImVtcHR5IiBzdHlsZT0icGFkZGluZzo2MHB4IDIwcHgiPgogICAgICAgICAgICA8cD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0RW1wdHknXSA/PjwvcD4KICAgICAgICA8L2Rpdj4KICAgIDw/cGhwIGVsc2U6ID8+CiAgICAgICAgPGZvcm0gbWV0aG9kPSJQT1NUIiBvbnN1Ym1pdD0idGhpcy5xdWVyeVNlbGVjdG9yQWxsKCd0ZXh0YXJlYScpLmZvckVhY2goZnVuY3Rpb24gKHQpIHsgdC5kaXNhYmxlZCA9IHQudmFsdWUgPT09IHQuZGVmYXVsdFZhbHVlOyB9KSI+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9Il9jc3JmIiB2YWx1ZT0iPD89IGNzcmZfdG9rZW4oKSA/PiI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSIgc3R5bGU9ImRpc3BsYXk6ZmxleDtmbGV4LWRpcmVjdGlvbjpjb2x1bW47Z2FwOjE4cHgiPgogICAgICAgICAgICAgICAgPD9waHAgZm9yZWFjaCAoJHZpc2libGUgYXMgJGtleSA9PiAkY3VycmVudCk6ID8+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9ImRpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iY20iIGRpcj0ibHRyIiBzdHlsZT0iZm9udC1zaXplOi43NXJlbTt3b3JkLWJyZWFrOmJyZWFrLWFsbCI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJGtleSkgPz48L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoaXNzZXQoJG92ZXJyaWRlc1ska2V5XSkpOiA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0YWcgdGFnLXdhcm4iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRDaGFuZ2VkTGFiZWwnXSA/Pjwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgICAgICAgICAgICAgICAgICAgICA8L2xhYmVsPgogICAgICAgICAgICAgICAgICAgICAgICA8dGV4dGFyZWEgbmFtZT0idGV4dHNbPD89IGh0bWxzcGVjaWFsY2hhcnMoJGtleSkgPz5dIiBjbGFzcz0idGV4dGFyZWEiIGRpcj0iYXV0byIgcm93cz0iPD89IG1pbig4LCBzdWJzdHJfY291bnQoJGN1cnJlbnQsICJcbiIpICsgMSkgPz4iPgo8Pz0gaHRtbHNwZWNpYWxjaGFycygkY3VycmVudCkgPz48L3RleHRhcmVhPgogICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoaXNzZXQoJG92ZXJyaWRlc1ska2V5XSkpOiA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQtaGludCIgc3R5bGU9ImRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpmbGV4LXN0YXJ0O2dhcDo4cHgiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIHN0eWxlPSJmbGV4OjE7d2hpdGUtc3BhY2U6cHJlLXdyYXAiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHREZWZhdWx0TGFiZWwnXSA/PiA8Pz0gaHRtbHNwZWNpYWxjaGFycygkZGVmYXVsdHNbJGtleV0pID8+PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0iYnRuIGJ0bi1naG9zdCBidG4tc20iIGRhdGEtZGVmYXVsdD0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJGRlZmF1bHRzWyRrZXldKSA/PiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25jbGljaz0idGhpcy5jbG9zZXN0KCcuZmllbGQnKS5xdWVyeVNlbGVjdG9yKCd0ZXh0YXJlYScpLnZhbHVlID0gdGhpcy5kYXRhc2V0LmRlZmF1bHQiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2JvdHRleHRSZXNldEJ0biddID8+PC9idXR0b24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAgICAgPD9waHAgZW5kaWY7ID8+CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyA/PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0ibW9kYWwtZm9vdCIgc3R5bGU9InBvc2l0aW9uOnN0aWNreTtib3R0b206MDt6LWluZGV4OjU7Ym9yZGVyLXJhZGl1czowIDAgMTBweCAxMHB4O2JveC1zaGFkb3c6MCAtOHB4IDIwcHggcmdiYSgwLDAsMCwuMjUpIj4KICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5Ij48Pz0gaWNvbignY2hlY2snLCAxMykgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnYm90dGV4dFNhdmVCdG4nXSA/PjwvYnV0dG9uPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Zvcm0+CiAgICA8P3BocCBlbmRpZjsgPz4KPC9kaXY+Cgo8P3BocCBpbmNsdWRlIF9fRElSX18gLiAnL2luYy9sYXlvdXRfZm9vdC5waHAnOyA/Pgo=
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+$langs = $textbotlang['bottext']['langs'];
+$lang = isset($langs[$_GET['lang'] ?? '']) ? $_GET['lang'] : 'fa';
+
+$flatTexts = function (array $texts): array {
+    $flat = [];
+    $iterator = new RecursiveIteratorIterator(new RecursiveArrayIterator($texts));
+    foreach ($iterator as $value) {
+        $path = [];
+        for ($depth = 0; $depth <= $iterator->getDepth(); $depth++)
+            $path[] = $iterator->getSubIterator($depth)->key();
+        $flat[implode('.', $path)] = (string) $value;
+    }
+    return $flat;
+};
+
+$baseTexts = array_diff_key(require dirname(__DIR__) . '/lang/' . $lang . '.php', array_flip(['bottext', 'Admin', 'panel']));
+$defaults = $flatTexts($baseTexts);
+$overrideFile = dirname(__DIR__) . '/lang/override/' . $lang . '.php';
+$overrideTexts = is_file($overrideFile) ? include $overrideFile : [];
+$overrides = array_intersect_key($flatTexts(is_array($overrideTexts) ? $overrideTexts : []), $defaults);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    csrf_check_post();
+    foreach ((array) ($_POST['texts'] ?? []) as $key => $value) {
+        if (!isset($defaults[$key]) || !is_string($value))
+            continue;
+        $value = str_replace("\r\n", "\n", $value);
+        if (trim($value) === '' || $value === $defaults[$key])
+            unset($overrides[$key]);
+        else
+            $overrides[$key] = $value;
+    }
+    $nested = [];
+    foreach ($overrides as $key => $value) {
+        $node = &$nested;
+        foreach (explode('.', $key) as $segment)
+            $node = &$node[$segment];
+        $node = $value;
+        unset($node);
+    }
+    if ($nested) {
+        $overrideDir = dirname($overrideFile);
+        $saved = (is_dir($overrideDir) || @mkdir($overrideDir, 0755, true))
+            && @file_put_contents($overrideFile, "<?php\n\nreturn " . var_export($nested, true) . ";\n", LOCK_EX) !== false;
+    } else {
+        $saved = !is_file($overrideFile) || @unlink($overrideFile);
+    }
+    if ($saved && function_exists('opcache_invalidate'))
+        opcache_invalidate($overrideFile, true);
+    $phpUser = function_exists('posix_geteuid') ? (posix_getpwuid(posix_geteuid())['name'] ?? 'www-data') : 'www-data';
+    flash($saved ? 'success' : 'error', $saved ? $textbotlang['panel']['bottextSaved'] : strtr($textbotlang['panel']['bottextSaveError'], [
+        '{path}' => dirname($overrideFile),
+        '{command}' => 'chown -R ' . $phpUser . ':' . $phpUser . ' ' . dirname($overrideFile, 2),
+    ]));
+    header('Location: bottext.php?' . ($_SERVER['QUERY_STRING'] ?? ''));
+    exit;
+}
+
+$group = $_GET['group'] ?? array_key_first($baseTexts);
+$query = trim($_GET['q'] ?? '');
+$onlyChanged = !empty($_GET['changed']);
+
+$groupCounts = array_fill_keys(array_keys($baseTexts), 0);
+$visible = [];
+foreach ($defaults as $key => $default) {
+    $current = $overrides[$key] ?? $default;
+    if ($onlyChanged && !isset($overrides[$key]))
+        continue;
+    if ($query !== '' && mb_stripos($key . "\n" . $default . "\n" . $current, $query) === false)
+        continue;
+    $groupKey = strstr($key, '.', true);
+    $groupCounts[$groupKey]++;
+    if ($group === '' || $groupKey === $group)
+        $visible[$key] = $current;
+}
+$tabUrl = fn($groupKey) => 'bottext.php?' . http_build_query(['lang' => $lang, 'group' => $groupKey, 'q' => $query ?: null, 'changed' => $onlyChanged ? 1 : null]);
+
+$pageTitle = $textbotlang['panel']['bottextPageTitle'];
+$pageLede = $textbotlang['panel']['bottextPageLede'];
+$activeNav = 'bottext';
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div style="display:flex;gap:4px;margin-bottom:14px;background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:5px;overflow-x:auto" class="fade-up">
+    <?php foreach (['' => array_sum($groupCounts)] + $groupCounts as $groupKey => $groupCount): ?>
+        <a href="<?= htmlspecialchars($tabUrl($groupKey)) ?>"
+            style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:7px;font-size:.82rem;font-weight:600;white-space:nowrap;flex-shrink:0;transition:all .15s;text-decoration:none;
+                  <?= $group === (string) $groupKey ? 'background:var(--acs);color:var(--ach);font-weight:700' : 'color:var(--mute)' ?>">
+            <?= htmlspecialchars($groupKey === '' ? $textbotlang['panel']['bottextAllGroups'] : ($textbotlang['panel']['bottextGroups'][$groupKey] ?? $groupKey)) ?>
+            <small style="opacity:.75">(<?= $groupCount ?>)</small>
+        </a>
+    <?php endforeach; ?>
+</div>
+
+<div class="card fade-up" style="overflow:visible">
+    <div class="toolbar">
+        <div class="toolbar-title"><?= $textbotlang['panel']['bottextPageTitle'] ?>
+            <small>(<?= count($visible) ?> <?= $textbotlang['panel']['bottextCountLabel'] ?> · <?= count($overrides) ?> <?= $textbotlang['panel']['bottextChangedLabel'] ?>)</small>
+        </div>
+        <form method="GET" class="toolbar-end">
+            <select name="lang" class="select" style="width:auto" title="<?= htmlspecialchars($textbotlang['panel']['bottextLangLabel']) ?>" onchange="this.form.submit()">
+                <?php foreach ($langs as $code => $label): ?>
+                    <option value="<?= htmlspecialchars($code) ?>" <?= $lang === $code ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+                <?php endforeach; ?>
+            </select>
+            <input type="hidden" name="group" value="<?= htmlspecialchars($group) ?>">
+            <div class="search-box" style="min-width:220px">
+                <?= icon('search', 14) ?>
+                <input type="text" name="q" value="<?= htmlspecialchars($query) ?>" placeholder="<?= htmlspecialchars($textbotlang['panel']['bottextSearchPlaceholder']) ?>">
+            </div>
+            <label style="display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--mute);white-space:nowrap">
+                <input type="checkbox" name="changed" value="1" <?= $onlyChanged ? 'checked' : '' ?> onchange="this.form.submit()">
+                <?= $textbotlang['panel']['bottextOnlyChanged'] ?>
+            </label>
+            <button type="submit" class="btn btn-ghost btn-sm"><?= icon('search', 13) ?> <?= $textbotlang['panel']['bottextFilterBtn'] ?></button>
+        </form>
+    </div>
+
+    <?php if (!$visible): ?>
+        <div class="empty" style="padding:60px 20px">
+            <p><?= $textbotlang['panel']['bottextEmpty'] ?></p>
+        </div>
+    <?php else: ?>
+        <form method="POST" onsubmit="this.querySelectorAll('textarea').forEach(function (t) { t.disabled = t.value === t.defaultValue; })">
+            <input type="hidden" name="_csrf" value="<?= csrf_token() ?>">
+            <div class="card-body" style="display:flex;flex-direction:column;gap:18px">
+                <?php foreach ($visible as $key => $current): ?>
+                    <div class="field">
+                        <label style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+                            <span class="cm" dir="ltr" style="font-size:.75rem;word-break:break-all"><?= htmlspecialchars($key) ?></span>
+                            <?php if (isset($overrides[$key])): ?>
+                                <span class="tag tag-warn"><?= $textbotlang['panel']['bottextChangedLabel'] ?></span>
+                            <?php endif; ?>
+                        </label>
+                        <textarea name="texts[<?= htmlspecialchars($key) ?>]" class="textarea" dir="auto" rows="<?= min(8, substr_count($current, "\n") + 1) ?>">
+<?= htmlspecialchars($current) ?></textarea>
+                        <?php if (isset($overrides[$key])): ?>
+                            <div class="field-hint" style="display:flex;align-items:flex-start;gap:8px">
+                                <span style="flex:1;white-space:pre-wrap"><?= $textbotlang['panel']['bottextDefaultLabel'] ?> <?= htmlspecialchars($defaults[$key]) ?></span>
+                                <button type="button" class="btn btn-ghost btn-sm" data-default="<?= htmlspecialchars($defaults[$key]) ?>"
+                                    onclick="this.closest('.field').querySelector('textarea').value = this.dataset.default"><?= $textbotlang['panel']['bottextResetBtn'] ?></button>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="modal-foot" style="position:sticky;bottom:0;z-index:5;border-radius:0 0 10px 10px;box-shadow:0 -8px 20px rgba(0,0,0,.25)">
+                <button type="submit" class="btn btn-primary"><?= icon('check', 13) ?> <?= $textbotlang['panel']['bottextSaveBtn'] ?></button>
+            </div>
+        </form>
+    <?php endif; ?>
+</div>
+
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

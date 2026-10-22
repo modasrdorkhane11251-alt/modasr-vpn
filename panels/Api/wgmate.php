@@ -1,1 +1,95 @@
-PD9waHAKZnVuY3Rpb24gcmVxdWVzdF93Z21hdGUoJGxvY2F0aW9uLCAkbWV0aG9kLCAkcGF0aCwgJGJvZHkgPSBudWxsKQp7CiAgICAkcGFuZWwgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGxvY2F0aW9uLCAic2VsZWN0Iik7CiAgICAkY2ggPSBjdXJsX2luaXQocnRyaW0oJHBhbmVsWyd1cmxfcGFuZWwnXSwgJy8nKSAuICcvYXBpJyAuICRwYXRoKTsKICAgIGN1cmxfc2V0b3B0X2FycmF5KCRjaCwgYXJyYXkoCiAgICAgICAgQ1VSTE9QVF9DVVNUT01SRVFVRVNUID0+ICRtZXRob2QsCiAgICAgICAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogICAgICAgIENVUkxPUFRfVElNRU9VVF9NUyA9PiAoJEdMT0JBTFNbJ3JlcXVlc3RfZXhlY190aW1lb3V0J10gPz8gbnVsbCkgPzogMzAwMDAsCiAgICAgICAgQ1VSTE9QVF9TU0xfVkVSSUZZUEVFUiA9PiBmYWxzZSwKICAgICAgICBDVVJMT1BUX1NTTF9WRVJJRllIT1NUID0+IGZhbHNlLAogICAgICAgIENVUkxPUFRfSFRUUEhFQURFUiA9PiBhcnJheSgKICAgICAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICAgICAnWC1BUEktS2V5OiAnIC4gJHBhbmVsWydwYXNzd29yZF9wYW5lbCddCiAgICAgICAgKSwKICAgICkpOwogICAgaWYgKCRib2R5ICE9PSBudWxsKSB7CiAgICAgICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1BPU1RGSUVMRFMsIGpzb25fZW5jb2RlKCRib2R5KSk7CiAgICB9CiAgICAkcmVzcG9uc2UgPSBjdXJsX2V4ZWMoJGNoKTsKICAgIGlmICgkcmVzcG9uc2UgPT09IGZhbHNlKSB7CiAgICAgICAgJGVycm9yID0gY3VybF9lcnJvcigkY2gpOwogICAgICAgIGN1cmxfY2xvc2UoJGNoKTsKICAgICAgICByZXR1cm4gYXJyYXkoJ3N0YXR1cycgPT4gbnVsbCwgJ2JvZHknID0+IG51bGwsICdlcnJvcicgPT4gJGVycm9yKTsKICAgIH0KICAgICRzdGF0dXMgPSBjdXJsX2dldGluZm8oJGNoLCBDVVJMSU5GT19IVFRQX0NPREUpOwogICAgY3VybF9jbG9zZSgkY2gpOwogICAgcmV0dXJuIGFycmF5KCdzdGF0dXMnID0+ICRzdGF0dXMsICdib2R5JyA9PiAkcmVzcG9uc2UpOwp9CmZ1bmN0aW9uIGdldHVzZXJfd2dtYXRlKCR1c2VybmFtZV9hY2NvdW50LCAkbG9jYXRpb24pCnsKICAgICRyZXNwb25zZSA9IHJlcXVlc3Rfd2dtYXRlKCRsb2NhdGlvbiwgIkdFVCIsICcvdXNlcnMvYnktdXNlcm5hbWUvJyAuIHJhd3VybGVuY29kZSgkdXNlcm5hbWVfYWNjb3VudCkpOwogICAgJHJlc3BvbnNlWyd1c2VyJ10gPSBqc29uX2RlY29kZSgkcmVzcG9uc2VbJ2JvZHknXSA/PyAnJywgdHJ1ZSlbJ2RhdGEnXSA/PyBudWxsOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBzdGF0dXNfd2dtYXRlKGFycmF5ICR1c2VyKQp7CiAgICBpZiAoJHVzZXJbJ3N0YXR1cyddID09ICJkaXNhYmxlZCIpIHsKICAgICAgICByZXR1cm4gKCR1c2VyWydkaXNhYmxlUmVhc29uJ10gPz8gJycpID09ICJ1c2VyX3F1b3RhIiA/ICJsaW1pdGVkIiA6ICJkaXNhYmxlZCI7CiAgICB9CiAgICBpZiAoJHVzZXJbJ3N0YXR1cyddID09ICJleHBpcmVkIiB8fCAoJHVzZXJbJ2V4cGlyZXNBdCddICE9ICIiICYmIHN0cnRvdGltZSgkdXNlclsnZXhwaXJlc0F0J10pIDwgdGltZSgpKSkgewogICAgICAgIHJldHVybiAiZXhwaXJlZCI7CiAgICB9CiAgICBpZiAoJHVzZXJbJ3F1b3RhQnl0ZXMnXSAmJiAkdXNlclsndXNlZEJ5dGVzJ10gPj0gJHVzZXJbJ3F1b3RhQnl0ZXMnXSkgewogICAgICAgIHJldHVybiAibGltaXRlZCI7CiAgICB9CiAgICByZXR1cm4gJHVzZXJbJ3N0YXR1cyddOwp9CmZ1bmN0aW9uIGxpbmtzX3dnbWF0ZSgkbG9jYXRpb24sICR1c2VyX2lkKQp7CiAgICAkbGlua3MgPSBqc29uX2RlY29kZShyZXF1ZXN0X3dnbWF0ZSgkbG9jYXRpb24sICJHRVQiLCAnL3VzZXJzLycgLiAkdXNlcl9pZCAuICcvbGlua3MnKVsnYm9keSddID8/ICcnLCB0cnVlKVsnZGF0YSddID8/IFtdOwogICAgdW5zZXQoJGxpbmtzWydzdWJzY3JpcHRpb24nXSk7CiAgICByZXR1cm4gYXJyYXlfdmFsdWVzKCRsaW5rcyk7Cn0KZnVuY3Rpb24gYWRkdXNlcl93Z21hdGUoJGxvY2F0aW9uLCAkZGF0YV9saW1pdCwgJHVzZXJuYW1lX2FjLCAkdGltZXN0YW1wLCAkbmFtZV9wcm9kdWN0LCAkbm90ZSA9ICcnLCAkbGltaXRpcCA9IG51bGwpCnsKICAgICRwcm9kdWN0ID0gc2VsZWN0KCdwcm9kdWN0JywgIioiLCAibmFtZV9wcm9kdWN0IiwgJG5hbWVfcHJvZHVjdCwgInNlbGVjdCIpOwogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAibmFtZV9wYW5lbCIsICRsb2NhdGlvbiwgInNlbGVjdCIpOwogICAgJHRlbXBsYXRlID0ganNvbl9kZWNvZGUoJHByb2R1Y3RbJ2luYm91bmRzJ10gPz8gJHBhbmVsWydwcm94aWVzJ10gPz8gJycsIHRydWUpOwogICAgJGRhdGEgPSBhcnJheSgKICAgICAgICAndXNlcm5hbWUnID0+ICR1c2VybmFtZV9hYywKICAgICAgICAnbm90ZScgPT4gJG5vdGUsCiAgICAgICAgJ3F1b3RhQnl0ZXMnID0+IChpbnQpICRkYXRhX2xpbWl0LAogICAgICAgICdleHBpcmVzQXQnID0+ICR0aW1lc3RhbXAgPT0gMCA/ICIiIDogZ21kYXRlKCdZLW0tZFxUSDppOnNcWicsICR0aW1lc3RhbXApLAogICAgKTsKICAgIGlmIChpc19hcnJheSgkdGVtcGxhdGUpKSB7CiAgICAgICAgJGRhdGFbJ3Byb3RvY29scyddID0gJHRlbXBsYXRlWydwcm90b2NvbHMnXSA/PyBbXTsKICAgICAgICAkZGF0YVsnc2VydmVySWQnXSA9ICR0ZW1wbGF0ZVsnc2VydmVySWQnXSA/PyAnJzsKICAgIH0KICAgIGlmICgkbGltaXRpcCAhPSBudWxsICYmICRwYW5lbFsnbGltaXRfaW5fcGFuZWwnXSA9PSAiMSIpIHsKICAgICAgICAkZGF0YVsnY29ubkxpbWl0J10gPSBpbnR2YWwoJGxpbWl0aXApOwogICAgfQogICAgcmV0dXJuIHJlcXVlc3Rfd2dtYXRlKCRsb2NhdGlvbiwgIlBPU1QiLCAnL3VzZXJzJywgJGRhdGEpOwp9CmZ1bmN0aW9uIE1vZGlmeXVzZXJfd2dtYXRlKCRsb2NhdGlvbiwgJHVzZXJuYW1lX2FjY291bnQsIGFycmF5ICRkYXRhKQp7CiAgICAkcmVzcG9uc2UgPSBnZXR1c2VyX3dnbWF0ZSgkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKTsKICAgIGlmICgkcmVzcG9uc2VbJ3VzZXInXSA9PT0gbnVsbCkgewogICAgICAgIHJldHVybiAkcmVzcG9uc2U7CiAgICB9CiAgICAkbW9kaWZ5ID0gcmVxdWVzdF93Z21hdGUoJGxvY2F0aW9uLCAiUEFUQ0giLCAnL3VzZXJzLycgLiAkcmVzcG9uc2VbJ3VzZXInXVsnaWQnXSwgJGRhdGEpOwogICAgaWYgKCRtb2RpZnlbJ3N0YXR1cyddIDwgNDAwICYmICRyZXNwb25zZVsndXNlciddWydzdGF0dXMnXSA9PSAiZGlzYWJsZWQiICYmICgkcmVzcG9uc2VbJ3VzZXInXVsnZGlzYWJsZVJlYXNvbiddID8/ICcnKSA9PSAidXNlcl9xdW90YSIpIHsKICAgICAgICByZXR1cm4gcmVxdWVzdF93Z21hdGUoJGxvY2F0aW9uLCAiUE9TVCIsICcvdXNlcnMvJyAuICRyZXNwb25zZVsndXNlciddWydpZCddIC4gJy9lbmFibGUnKTsKICAgIH0KICAgIHJldHVybiAkbW9kaWZ5Owp9CmZ1bmN0aW9uIGFjdGlvbl93Z21hdGUoJGxvY2F0aW9uLCAkdXNlcm5hbWVfYWNjb3VudCwgJG1ldGhvZCwgJGFjdGlvbiA9ICcnKQp7CiAgICAkcmVzcG9uc2UgPSBnZXR1c2VyX3dnbWF0ZSgkdXNlcm5hbWVfYWNjb3VudCwgJGxvY2F0aW9uKTsKICAgIGlmICgkcmVzcG9uc2VbJ3VzZXInXSA9PT0gbnVsbCkgewogICAgICAgIHJldHVybiAkcmVzcG9uc2U7CiAgICB9CiAgICByZXR1cm4gcmVxdWVzdF93Z21hdGUoJGxvY2F0aW9uLCAkbWV0aG9kLCAnL3VzZXJzLycgLiAkcmVzcG9uc2VbJ3VzZXInXVsnaWQnXSAuICRhY3Rpb24pOwp9Cg==
+<?php
+function request_wgmate($location, $method, $path, $body = null)
+{
+    $panel = select("marzban_panel", "*", "name_panel", $location, "select");
+    $ch = curl_init(rtrim($panel['url_panel'], '/') . '/api' . $path);
+    curl_setopt_array($ch, array(
+        CURLOPT_CUSTOMREQUEST => $method,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT_MS => ($GLOBALS['request_exec_timeout'] ?? null) ?: 30000,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => false,
+        CURLOPT_HTTPHEADER => array(
+            'Accept: application/json',
+            'Content-Type: application/json',
+            'X-API-Key: ' . $panel['password_panel']
+        ),
+    ));
+    if ($body !== null) {
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
+    }
+    $response = curl_exec($ch);
+    if ($response === false) {
+        $error = curl_error($ch);
+        curl_close($ch);
+        return array('status' => null, 'body' => null, 'error' => $error);
+    }
+    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    return array('status' => $status, 'body' => $response);
+}
+function getuser_wgmate($username_account, $location)
+{
+    $response = request_wgmate($location, "GET", '/users/by-username/' . rawurlencode($username_account));
+    $response['user'] = json_decode($response['body'] ?? '', true)['data'] ?? null;
+    return $response;
+}
+function status_wgmate(array $user)
+{
+    if ($user['status'] == "disabled") {
+        return ($user['disableReason'] ?? '') == "user_quota" ? "limited" : "disabled";
+    }
+    if ($user['status'] == "expired" || ($user['expiresAt'] != "" && strtotime($user['expiresAt']) < time())) {
+        return "expired";
+    }
+    if ($user['quotaBytes'] && $user['usedBytes'] >= $user['quotaBytes']) {
+        return "limited";
+    }
+    return $user['status'];
+}
+function links_wgmate($location, $user_id)
+{
+    $links = json_decode(request_wgmate($location, "GET", '/users/' . $user_id . '/links')['body'] ?? '', true)['data'] ?? [];
+    unset($links['subscription']);
+    return array_values($links);
+}
+function adduser_wgmate($location, $data_limit, $username_ac, $timestamp, $name_product, $note = '', $limitip = null)
+{
+    $product = select('product', "*", "name_product", $name_product, "select");
+    $panel = select("marzban_panel", "*", "name_panel", $location, "select");
+    $template = json_decode($product['inbounds'] ?? $panel['proxies'] ?? '', true);
+    $data = array(
+        'username' => $username_ac,
+        'note' => $note,
+        'quotaBytes' => (int) $data_limit,
+        'expiresAt' => $timestamp == 0 ? "" : gmdate('Y-m-d\TH:i:s\Z', $timestamp),
+    );
+    if (is_array($template)) {
+        $data['protocols'] = $template['protocols'] ?? [];
+        $data['serverId'] = $template['serverId'] ?? '';
+    }
+    if ($limitip != null && $panel['limit_in_panel'] == "1") {
+        $data['connLimit'] = intval($limitip);
+    }
+    return request_wgmate($location, "POST", '/users', $data);
+}
+function Modifyuser_wgmate($location, $username_account, array $data)
+{
+    $response = getuser_wgmate($username_account, $location);
+    if ($response['user'] === null) {
+        return $response;
+    }
+    $modify = request_wgmate($location, "PATCH", '/users/' . $response['user']['id'], $data);
+    if ($modify['status'] < 400 && $response['user']['status'] == "disabled" && ($response['user']['disableReason'] ?? '') == "user_quota") {
+        return request_wgmate($location, "POST", '/users/' . $response['user']['id'] . '/enable');
+    }
+    return $modify;
+}
+function action_wgmate($location, $username_account, $method, $action = '')
+{
+    $response = getuser_wgmate($username_account, $location);
+    if ($response['user'] === null) {
+        return $response;
+    }
+    return request_wgmate($location, $method, '/users/' . $response['user']['id'] . $action);
+}

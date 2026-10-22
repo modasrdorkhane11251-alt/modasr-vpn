@@ -1,1 +1,24 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgaWRfdXNlciB2YXJjaGFyKDUwMCkgTk9UIE5VTEwsCiAgICAgICAgdXNlcm5hbWUgdmFyY2hhcigxMDAwKSBOT1QgTlVMTCwKICAgICAgICB2YWx1ZSB2YXJjaGFyKDEwMDApIE5PVCBOVUxMLAogICAgICAgIHRpbWUgdmFyY2hhcigyMDApIE5PVCBOVUxMLAogICAgICAgIHByaWNlIHZhcmNoYXIoMjAwKSBOT1QgTlVMTCwKICAgICAgICB0eXBlIHZhcmNoYXIoMTAwMCkgTk9UIE5VTEwsCiAgICAgICAgc3RhdHVzIHZhcmNoYXIoMjAwKSBOT1QgTlVMTCwKICAgICAgICBvdXRwdXQgVEVYVCBOT1QgTlVMTCwKICAgICAgICBwYXlhYmxlX2Ftb3VudCB2YXJjaGFyKDIwKSBOVUxMLAogICAgICAgIGlkX3BheW1lbnQgdmFyY2hhcigyMCkgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5VTEwKICAgICAgICBTUUwsCiAgICAnY29sdW1ucycgPT4gWwogICAgICAgIFsncHJpY2UnLCBudWxsLCAnVkFSQ0hBUigyMDApJ10sCiAgICAgICAgWydzdGF0dXMnLCBudWxsLCAnVkFSQ0hBUigyMDApJ10sCiAgICAgICAgWydvdXRwdXQnLCBudWxsLCAnVEVYVCddLAogICAgICAgIFsncGF5YWJsZV9hbW91bnQnLCBudWxsLCAnVkFSQ0hBUigyMCkgTlVMTCddLAogICAgICAgIFsnaWRfcGF5bWVudCcsIG51bGwsICdWQVJDSEFSKDIwKSBDSEFSQUNURVIgU0VUIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2kgTlVMTCddLAogICAgXSwKXTsK
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        id_user varchar(500) NOT NULL,
+        username varchar(1000) NOT NULL,
+        value varchar(1000) NOT NULL,
+        time varchar(200) NOT NULL,
+        price varchar(200) NOT NULL,
+        type varchar(1000) NOT NULL,
+        status varchar(200) NOT NULL,
+        output TEXT NOT NULL,
+        payable_amount varchar(20) NULL,
+        id_payment varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL
+        SQL,
+    'columns' => [
+        ['price', null, 'VARCHAR(200)'],
+        ['status', null, 'VARCHAR(200)'],
+        ['output', null, 'TEXT'],
+        ['payable_amount', null, 'VARCHAR(20) NULL'],
+        ['id_payment', null, 'VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL'],
+    ],
+];

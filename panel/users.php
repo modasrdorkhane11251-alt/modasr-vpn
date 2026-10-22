@@ -1,1 +1,228 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCiRzZWFyY2ggPSB0cmltKCRfR0VUWydxJ10gPz8gJycpOwokc3RhdHVzID0gJF9HRVRbJ3N0YXR1cyddID8/ICcnOwokcm9sZSA9ICRfR0VUWydyb2xlJ10gPz8gJyc7CiRwYWdlID0gbWF4KDEsIChpbnQpICgkX0dFVFsncGFnZSddID8/IDEpKTsKJHBlclBhZ2UgPSAyNTsKJG9mZnNldCA9ICgkcGFnZSAtIDEpICogJHBlclBhZ2U7Cgokd2hlcmUgPSBbXTsKJHBhcmFtcyA9IFtdOwoKaWYgKCRzZWFyY2ggIT09ICcnKSB7CiAgICAkd2hlcmVbXSA9ICIoaWQgTElLRSA/IE9SIENPQUxFU0NFKHVzZXJuYW1lLCcnKSBMSUtFID8gT1IgQ09BTEVTQ0UobmFtZWN1c3RvbSwnJykgTElLRSA/IE9SIENPQUxFU0NFKG51bWJlciwnJykgTElLRSA/KSI7CiAgICAkcGFyYW1zID0gWyIlJHNlYXJjaCUiLCAiJSRzZWFyY2glIiwgIiUkc2VhcmNoJSIsICIlJHNlYXJjaCUiXTsKfQoKaWYgKCRzdGF0dXMgIT09ICcnKSB7CiAgICAkd2hlcmVbXSA9ICJVc2VyX1N0YXR1cyA9ID8iOwogICAgJHBhcmFtc1tdID0gJHN0YXR1czsKfQoKaWYgKCRyb2xlICE9PSAnJykgewogICAgJHdoZXJlW10gPSAiYWdlbnQgPSA/IjsKICAgICRwYXJhbXNbXSA9ICRyb2xlOwp9Cgokd2hlcmVTUUwgPSAkd2hlcmUgPyAnV0hFUkUgJyAuIGltcGxvZGUoJyBBTkQgJywgJHdoZXJlKSA6ICcnOwoKdHJ5IHsKICAgICR0b3RhbCA9IGRiX2NvdW50KCRwZG8sICJTRUxFQ1QgQ09VTlQoKikgRlJPTSB1c2VyICR3aGVyZVNRTCIsICRwYXJhbXMpOwogICAgJHVzZXJzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCAqIEZST00gdXNlciAkd2hlcmVTUUwgT1JERVIgQlkgcmVnaXN0ZXIgREVTQyBMSU1JVCAkcGVyUGFnZSBPRkZTRVQgJG9mZnNldCIsICRwYXJhbXMpOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKICAgICR0b3RhbCA9IDA7CiAgICAkdXNlcnMgPSBbXTsKICAgIGVycm9yX2xvZygndXNlcnMucGhwOiAnIC4gJGUtPmdldE1lc3NhZ2UoKSk7Cn0KCiR0b3RhbFBhZ2VzID0gbWF4KDEsIChpbnQpIGNlaWwoJHRvdGFsIC8gJHBlclBhZ2UpKTsKCiRibG9ja2VkQ291bnQgPSAwOwokYWdlbnRDb3VudCA9IDA7CiRhZ2VudEFkdkNvdW50ID0gMDsKCnRyeSB7CiAgICAkYmxvY2tlZENvdW50ID0gZGJfY291bnQoJHBkbywgIlNFTEVDVCBDT1VOVCgqKSBGUk9NIHVzZXIgV0hFUkUgVXNlcl9TdGF0dXM9J2Jsb2NrJyIpOwogICAgJGFnZW50Q291bnQgPSBkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gdXNlciBXSEVSRSBhZ2VudD0nbiciKTsKICAgICRhZ2VudEFkdkNvdW50ID0gZGJfY291bnQoJHBkbywgIlNFTEVDVCBDT1VOVCgqKSBGUk9NIHVzZXIgV0hFUkUgYWdlbnQ9J24yJyIpOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKfQoKJHBhZ2VUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNUaXRsZSddOwokcGFnZUxlZGUgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzU3VidGl0bGUnXTsKJGFjdGl2ZU5hdiA9ICd1c2Vycyc7CmluY2x1ZGUgX19ESVJfXyAuICcvaW5jL2xheW91dF9oZWFkLnBocCc7Cj8+Cgo8ZGl2IGNsYXNzPSJjYXJkIGZhZGUtdXAiPgogICAgPGRpdiBjbGFzcz0idG9vbGJhciI+CiAgICAgICAgPGRpdiBzdHlsZT0iZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6MTBweDtmbGV4LXdyYXA6d3JhcCI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9InRvb2xiYXItdGl0bGUiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzSGVhZGluZyddID8+IDxzbWFsbD4oPD89IG51bWJlcl9mb3JtYXQoJHRvdGFsKSA/Pik8L3NtYWxsPjwvZGl2PgoKICAgICAgICAgICAgPD9waHAgaWYgKCRibG9ja2VkQ291bnQgPiAwKTogPz4KICAgICAgICAgICAgICAgIDxhIGhyZWY9Ij9zdGF0dXM9YmxvY2siIGNsYXNzPSJ0YWcgdGFnLW5vIiBzdHlsZT0iY3Vyc29yOnBvaW50ZXIiPjw/PSAkYmxvY2tlZENvdW50ID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzQ29sSWQnXSA/PjwvYT4KICAgICAgICAgICAgPD9waHAgZW5kaWY7ID8+CiAgICAgICAgICAgIDw/cGhwIGlmICgkYWdlbnRDb3VudCA+IDApOiA/PgogICAgICAgICAgICAgICAgPGEgaHJlZj0iP3JvbGU9biIgY2xhc3M9InRhZyB0YWctaW5mbyIgc3R5bGU9ImN1cnNvcjpwb2ludGVyIj48Pz0gJGFnZW50Q291bnQgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNDb2xOYW1lJ10gPz48L2E+CiAgICAgICAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgICAgICAgICA8P3BocCBpZiAoJGFnZW50QWR2Q291bnQgPiAwKTogPz4KICAgICAgICAgICAgICAgIDxhIGhyZWY9Ij9yb2xlPW4yIiBjbGFzcz0idGFnIHRhZy13YXJuIiBzdHlsZT0iY3Vyc29yOnBvaW50ZXIiPjw/PSAkYWdlbnRBZHZDb3VudCA/PiA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbFVzZXJuYW1lJ10gPz48L2E+CiAgICAgICAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgICAgIDwvZGl2PgoKICAgICAgICA8Zm9ybSBtZXRob2Q9IkdFVCIgaWQ9InVzZXJzRm9ybSIgY2xhc3M9InRvb2xiYXItZW5kIj4KICAgICAgICAgICAgPHNlbGVjdCBuYW1lPSJzdGF0dXMiIGNsYXNzPSJzZWxlY3QiIHN0eWxlPSJ3aWR0aDphdXRvIgogICAgICAgICAgICAgICAgb25jaGFuZ2U9ImRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd1c2Vyc0Zvcm0nKS5zdWJtaXQoKSI+CiAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzQ29sQmFsYW5jZSddID8+PC9vcHRpb24+CiAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJhY3RpdmUiIDw/PSAkc3RhdHVzID09PSAnYWN0aXZlJyA/ICdzZWxlY3RlZCcgOiAnJyA/Pj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbEdyb3VwJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9ImJsb2NrIiA8Pz0gJHN0YXR1cyA9PT0gJ2Jsb2NrJyA/ICdzZWxlY3RlZCcgOiAnJyA/Pj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbFN0YXR1cyddID8+PC9vcHRpb24+CiAgICAgICAgICAgIDwvc2VsZWN0PgoKICAgICAgICAgICAgPHNlbGVjdCBuYW1lPSJyb2xlIiBjbGFzcz0ic2VsZWN0IiBzdHlsZT0id2lkdGg6YXV0byIKICAgICAgICAgICAgICAgIG9uY2hhbmdlPSJkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndXNlcnNGb3JtJykuc3VibWl0KCkiPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbEFjdGlvbnMnXSA/Pjwvb3B0aW9uPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZiIgPD89ICRyb2xlID09PSAnZicgPyAnc2VsZWN0ZWQnIDogJycgPz4+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNDb2xKb2luRGF0ZSddID8+PC9vcHRpb24+CiAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJuIiA8Pz0gJHJvbGUgPT09ICduJyA/ICdzZWxlY3RlZCcgOiAnJyA/Pj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbFBob25lJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Im4yIiA8Pz0gJHJvbGUgPT09ICduMicgPyAnc2VsZWN0ZWQnIDogJycgPz4+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNDb2xDdXN0b21OYW1lJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgPC9zZWxlY3Q+CgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZWFyY2gtYm94IiBzdHlsZT0ibWluLXdpZHRoOjI2MHB4Ij4KICAgICAgICAgICAgICAgIDw/PSBpY29uKCdzZWFyY2gnLCAxNSkgPz4KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJxIiBwbGFjZWhvbGRlcj0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNTZWFyY2hVc2VyUGxhY2Vob2xkZXInXSA/PiIKICAgICAgICAgICAgICAgICAgICB2YWx1ZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHNlYXJjaCkgPz4iIGF1dG9jb21wbGV0ZT0ib2ZmIj4KICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0ic2VhcmNoLWNsZWFyIj7inJU8L2J1dHRvbj4KICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0ic2VhcmNoLWJ0biI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNBbGxHcm91cHMnXSA/PjwvYnV0dG9uPgogICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgIDw/cGhwIGlmICgkc2VhcmNoIHx8ICRzdGF0dXMgfHwgJHJvbGUpOiA/PgogICAgICAgICAgICAgICAgPGEgaHJlZj0idXNlcnMucGhwIiBjbGFzcz0iYnRuLWxpbmsiIHN0eWxlPSJmb250LXNpemU6Ljc4cmVtO3doaXRlLXNwYWNlOm5vd3JhcCI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNBbGxTdGF0dXNlcyddID8+PC9hPgogICAgICAgICAgICA8P3BocCBlbmRpZjsgPz4KICAgICAgICA8L2Zvcm0+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJ0Ymwtd3JhcCI+CiAgICAgICAgPHRhYmxlIGNsYXNzPSJ0YmwteGwiPgogICAgICAgICAgICA8dGhlYWQ+CiAgICAgICAgICAgICAgICA8dHI+CiAgICAgICAgICAgICAgICAgICAgPHRoIHN0eWxlPSJ3aWR0aDozNnB4Ij4jPC90aD4KICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNTZWFyY2hCdG4nXSA/PjwvdGg+CiAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzQ2xlYXJCdG4nXSA/PjwvdGg+CiAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzR3JvdXBGcmVlVXNlciddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNHcm91cE5vcm1hbEFnZW50J10gPz48L3RoPgogICAgICAgICAgICAgICAgICAgIDx0aD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0dyb3VwQWR2YW5jZWRBZ2VudCddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNTdGF0dXNBY3RpdmVGaWx0ZXInXSA/PjwvdGg+CiAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzU3RhdHVzQmxvY2tlZEZpbHRlciddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNQYWdpbmF0aW9uUHJldiddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICA8dGggc3R5bGU9IndpZHRoOjcycHgiPjwvdGg+CiAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICA8L3RoZWFkPgogICAgICAgICAgICA8dGJvZHk+CiAgICAgICAgICAgICAgICA8P3BocCBpZiAoZW1wdHkoJHVzZXJzKSk6ID8+CiAgICAgICAgICAgICAgICAgICAgPHRyPgogICAgICAgICAgICAgICAgICAgICAgICA8dGQgY29sc3Bhbj0iMTAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZW1wdHkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzdmcgY2xhc3M9ImlsbCIgdmlld0JveD0iMCAwIDIwMCAxNjAiIGZpbGw9Im5vbmUiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSI2MCIgcj0iNDAiIGZpbGw9InZhcigtLXNmMykiIC8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjQ3IiByPSIxOCIgZmlsbD0idmFyKC0tYmRzKSIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTYyIDEwNSBRMTAwIDg4IDEzOCAxMDUiIHN0cm9rZT0idmFyKC0tYmRzKSIgc3Ryb2tlLXdpZHRoPSI4IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiAvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3ZnPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwPjw/PSAkc2VhcmNoID8gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc05vUmVzdWx0Rm91bmQnXSA6ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNOb1VzZXJZZXQnXSA/PjwvcD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICA8P3BocCBlbHNlOgogICAgICAgICAgICAgICAgICAgICRpID0gJG9mZnNldCArIDE7CiAgICAgICAgICAgICAgICAgICAgZm9yZWFjaCAoJHVzZXJzIGFzICR1KToKICAgICAgICAgICAgICAgICAgICAgICAgJGFnZW50ID0gJHVbJ2FnZW50J10gPz8gJ2YnOwogICAgICAgICAgICAgICAgICAgICAgICAkaXNCbG9ja2VkID0gKCR1WydVc2VyX1N0YXR1cyddID8/ICcnKSA9PT0gJ2Jsb2NrJzsKICAgICAgICAgICAgICAgICAgICAgICAgJG5hbWUgPSAkdVsnbmFtZWN1c3RvbSddID8/ICcnOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoJG5hbWUgPT09ICdub25lJykKICAgICAgICAgICAgICAgICAgICAgICAgICAgICRuYW1lID0gJyc7CiAgICAgICAgICAgICAgICAgICAgICAgICR1bmFtZSA9ICR1Wyd1c2VybmFtZSddID8/ICcnOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoJHVuYW1lID09PSAnbm9uZScpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkdW5hbWUgPSAnJzsKICAgICAgICAgICAgICAgICAgICAgICAgPz4KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjZiI+PD89ICRpKysgPz48L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJHVbJ2lkJ10pID8+PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoJHVuYW1lKTogPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImNtIiBzdHlsZT0iY29sb3I6dmFyKC0tYWMpIj5APD89IGh0bWxzcGVjaWFsY2hhcnMoJHVuYW1lKSA/Pjwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbHNlOiA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iY2YiPuKAlDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbmRpZjsgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNzIj48Pz0gJG5hbWUgPyBodG1sc3BlY2lhbGNoYXJzKHRydW5jKCRuYW1lLCAyMCkpIDogJzxzcGFuIGNsYXNzPSJjZiI+4oCUPC9zcGFuPicgPz48L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSBjZiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD89ICghZW1wdHkoJHVbJ251bWJlciddKSAmJiAkdVsnbnVtYmVyJ10gIT09ICdub25lJykgPyBodG1sc3BlY2lhbGNoYXJzKCR1WydudW1iZXInXSkgOiAn4oCUJyA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY24gY3MiIHN0eWxlPSJ3aGl0ZS1zcGFjZTpub3dyYXAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/PSBudW1iZXJfZm9ybWF0KChpbnQpICgkdVsnQmFsYW5jZSddID8/IDApKSA/PiA8c3BhbiBjbGFzcz0iY2YiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzUGFnaW5hdGlvbk5leHQnXSA/Pjwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNuIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Pz0gKGludCkgKCR1WydzY29yZSddID8/IDApID4gMAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA/ICc8c3BhbiBzdHlsZT0iY29sb3I6dmFyKC0td2FybikiPuKtkCAnIC4gbnVtYmVyX2Zvcm1hdCgoaW50KSAoJHVbJ3Njb3JlJ10gPz8gMCkpIC4gJzwvc3Bhbj4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDogJzxzcGFuIGNsYXNzPSJjZiI+4oCUPC9zcGFuPicgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNmIj48Pz0gc2FmZV9kYXRlKCR1WydyZWdpc3RlciddID8/IG51bGwpID8+PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoJGlzQmxvY2tlZCk6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0YWcgdGFnLW5vIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc1RvdGFsQ291bnRMYWJlbCddID8+PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGVsc2U6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0YWcgPD89IHVzZXJfcm9sZV90YWcoJGFnZW50KSA/PiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Pz0gdXNlcl9yb2xlX2xhYmVsKCRhZ2VudCkgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPSJkaXNwbGF5OmZsZXg7Z2FwOjRweCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9InVzZXIucGhwP2lkPTw/PSAoaW50KSAkdVsnaWQnXSA/PiIgY2xhc3M9ImJ0biBidG4tZ2hvc3QgYnRuLXNtIGJ0bi1pY29uIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGl0bGU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNWaWV3QnRuJ10pID8+Ij4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/PSBpY29uKCdleWUnLCAxNCkgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoJGlzQmxvY2tlZCk6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YSBocmVmPSJ1c2VyX2FjdGlvbi5waHA/YWN0aW9uPXVuYmxvY2smaWQ9PD89IChpbnQpICR1WydpZCddID8+Jl9jc3JmPTw/PSBjc3JmX3Rva2VuKCkgPz4mYmFjaz11c2Vycy5waHAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImJ0biBidG4tb2sgYnRuLXNtIGJ0bi1pY29uIiB0aXRsZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc1VuYmxvY2tCdG4nXSkgPz4iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YS1jb25maXJtPSI8Pz0gaHRtbHNwZWNpYWxjaGFycyhzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNDb25maXJtVW5ibG9ja1VzZXInXSwgJG5hbWUsICR1WydpZCddKSkgPz4iPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/PSBpY29uKCdjaGVjaycsIDEzKSA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbHNlOiA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj0idXNlcl9hY3Rpb24ucGhwP2FjdGlvbj1ibG9jayZpZD08Pz0gKGludCkgJHVbJ2lkJ10gPz4mX2NzcmY9PD89IGNzcmZfdG9rZW4oKSA/PiZiYWNrPXVzZXJzLnBocCIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGFzcz0iYnRuIGJ0bi1ubyBidG4tc20gYnRuLWljb24iIHRpdGxlPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzQmxvY2tCdG4nXSkgPz4iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YS1jb25maXJtPSI8Pz0gaHRtbHNwZWNpYWxjaGFycyhzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlcnNDb25maXJtQmxvY2tVc2VyJ10sICRuYW1lLCAkdVsnaWQnXSkpID8+Ij4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Pz0gaWNvbignYmxvY2snLCAxMykgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD9waHAgZW5kaWY7ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgIDw/cGhwIGVuZGZvcmVhY2g7IGVuZGlmOyA/PgogICAgICAgICAgICA8L3Rib2R5PgogICAgICAgIDwvdGFibGU+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJ0YmwtZm9vdCI+CiAgICAgICAgPHNwYW4+PD89IG51bWJlcl9mb3JtYXQoJHRvdGFsKSA/PiA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2Vyc0NvbFJlZmVycmVyJ10gPz4gPD89ICRwYWdlID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJzQ29sQWZmaWxpYXRlQ291bnQnXSA/PiA8Pz0gJHRvdGFsUGFnZXMgPz48L3NwYW4+CiAgICAgICAgPGRpdiBjbGFzcz0icGFnZXIiPgogICAgICAgICAgICA8P3BocAogICAgICAgICAgICAkcXMgPSBmbigkcCkgPT4gJz9xPScgLiB1cmxlbmNvZGUoJHNlYXJjaCkKICAgICAgICAgICAgICAgIC4gJyZzdGF0dXM9JyAuIHVybGVuY29kZSgkc3RhdHVzKQogICAgICAgICAgICAgICAgLiAnJnJvbGU9JyAuIHVybGVuY29kZSgkcm9sZSkKICAgICAgICAgICAgICAgIC4gJyZwYWdlPScgLiAkcDsKICAgICAgICAgICAgPz4KICAgICAgICAgICAgPGEgY2xhc3M9Ijw/PSAkcGFnZSA8PSAxID8gJ2RpcycgOiAnJyA/PiIgaHJlZj0iPD89ICRxcyhtYXgoMSwgJHBhZ2UgLSAxKSkgPz4iPuKAuTwvYT4KICAgICAgICAgICAgPD9waHAgZm9yICgkcCA9IG1heCgxLCAkcGFnZSAtIDIpOyAkcCA8PSBtaW4oJHRvdGFsUGFnZXMsICRwYWdlICsgMik7ICRwKyspOiA/PgogICAgICAgICAgICAgICAgPGEgY2xhc3M9Ijw/PSAkcCA9PT0gJHBhZ2UgPyAnY3VyJyA6ICcnID8+IiBocmVmPSI8Pz0gJHFzKCRwKSA/PiI+PD89ICRwID8+PC9hPgogICAgICAgICAgICA8P3BocCBlbmRmb3I7ID8+CiAgICAgICAgICAgIDxhIGNsYXNzPSI8Pz0gJHBhZ2UgPj0gJHRvdGFsUGFnZXMgPyAnZGlzJyA6ICcnID8+IiBocmVmPSI8Pz0gJHFzKG1pbigkdG90YWxQYWdlcywgJHBhZ2UgKyAxKSkgPz4iPuKAujwvYT4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2Pgo8L2Rpdj4KCjxzY3JpcHQgc3JjPSJqcy91c2Vycy5qcyI+PC9zY3JpcHQ+Cjw/cGhwIGluY2x1ZGUgX19ESVJfXyAuICcvaW5jL2xheW91dF9mb290LnBocCc7ID8+
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+$search = trim($_GET['q'] ?? '');
+$status = $_GET['status'] ?? '';
+$role = $_GET['role'] ?? '';
+$page = max(1, (int) ($_GET['page'] ?? 1));
+$perPage = 25;
+$offset = ($page - 1) * $perPage;
+
+$where = [];
+$params = [];
+
+if ($search !== '') {
+    $where[] = "(id LIKE ? OR COALESCE(username,'') LIKE ? OR COALESCE(namecustom,'') LIKE ? OR COALESCE(number,'') LIKE ?)";
+    $params = ["%$search%", "%$search%", "%$search%", "%$search%"];
+}
+
+if ($status !== '') {
+    $where[] = "User_Status = ?";
+    $params[] = $status;
+}
+
+if ($role !== '') {
+    $where[] = "agent = ?";
+    $params[] = $role;
+}
+
+$whereSQL = $where ? 'WHERE ' . implode(' AND ', $where) : '';
+
+try {
+    $total = db_count($pdo, "SELECT COUNT(*) FROM user $whereSQL", $params);
+    $users = db_fetchAll($pdo, "SELECT * FROM user $whereSQL ORDER BY register DESC LIMIT $perPage OFFSET $offset", $params);
+} catch (Exception $e) {
+    $total = 0;
+    $users = [];
+    error_log('users.php: ' . $e->getMessage());
+}
+
+$totalPages = max(1, (int) ceil($total / $perPage));
+
+$blockedCount = 0;
+$agentCount = 0;
+$agentAdvCount = 0;
+
+try {
+    $blockedCount = db_count($pdo, "SELECT COUNT(*) FROM user WHERE User_Status='block'");
+    $agentCount = db_count($pdo, "SELECT COUNT(*) FROM user WHERE agent='n'");
+    $agentAdvCount = db_count($pdo, "SELECT COUNT(*) FROM user WHERE agent='n2'");
+} catch (Exception $e) {
+}
+
+$pageTitle = $textbotlang['panel']['usersTitle'];
+$pageLede = $textbotlang['panel']['usersSubtitle'];
+$activeNav = 'users';
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div class="card fade-up">
+    <div class="toolbar">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <div class="toolbar-title"><?= $textbotlang['panel']['usersHeading'] ?> <small>(<?= number_format($total) ?>)</small></div>
+
+            <?php if ($blockedCount > 0): ?>
+                <a href="?status=block" class="tag tag-no" style="cursor:pointer"><?= $blockedCount ?> <?= $textbotlang['panel']['usersColId'] ?></a>
+            <?php endif; ?>
+            <?php if ($agentCount > 0): ?>
+                <a href="?role=n" class="tag tag-info" style="cursor:pointer"><?= $agentCount ?> <?= $textbotlang['panel']['usersColName'] ?></a>
+            <?php endif; ?>
+            <?php if ($agentAdvCount > 0): ?>
+                <a href="?role=n2" class="tag tag-warn" style="cursor:pointer"><?= $agentAdvCount ?> <?= $textbotlang['panel']['usersColUsername'] ?></a>
+            <?php endif; ?>
+        </div>
+
+        <form method="GET" id="usersForm" class="toolbar-end">
+            <select name="status" class="select" style="width:auto"
+                onchange="document.getElementById('usersForm').submit()">
+                <option value=""><?= $textbotlang['panel']['usersColBalance'] ?></option>
+                <option value="active" <?= $status === 'active' ? 'selected' : '' ?>><?= $textbotlang['panel']['usersColGroup'] ?></option>
+                <option value="block" <?= $status === 'block' ? 'selected' : '' ?>><?= $textbotlang['panel']['usersColStatus'] ?></option>
+            </select>
+
+            <select name="role" class="select" style="width:auto"
+                onchange="document.getElementById('usersForm').submit()">
+                <option value=""><?= $textbotlang['panel']['usersColActions'] ?></option>
+                <option value="f" <?= $role === 'f' ? 'selected' : '' ?>><?= $textbotlang['panel']['usersColJoinDate'] ?></option>
+                <option value="n" <?= $role === 'n' ? 'selected' : '' ?>><?= $textbotlang['panel']['usersColPhone'] ?></option>
+                <option value="n2" <?= $role === 'n2' ? 'selected' : '' ?>><?= $textbotlang['panel']['usersColCustomName'] ?></option>
+            </select>
+
+            <div class="search-box" style="min-width:260px">
+                <?= icon('search', 15) ?>
+                <input type="text" name="q" placeholder="<?= $textbotlang['panel']['usersSearchUserPlaceholder'] ?>"
+                    value="<?= htmlspecialchars($search) ?>" autocomplete="off">
+                <button type="button" class="search-clear">✕</button>
+                <button type="submit" class="search-btn"><?= $textbotlang['panel']['usersAllGroups'] ?></button>
+            </div>
+
+            <?php if ($search || $status || $role): ?>
+                <a href="users.php" class="btn-link" style="font-size:.78rem;white-space:nowrap"><?= $textbotlang['panel']['usersAllStatuses'] ?></a>
+            <?php endif; ?>
+        </form>
+    </div>
+
+    <div class="tbl-wrap">
+        <table class="tbl-xl">
+            <thead>
+                <tr>
+                    <th style="width:36px">#</th>
+                    <th><?= $textbotlang['panel']['usersSearchBtn'] ?></th>
+                    <th><?= $textbotlang['panel']['usersClearBtn'] ?></th>
+                    <th><?= $textbotlang['panel']['usersGroupFreeUser'] ?></th>
+                    <th><?= $textbotlang['panel']['usersGroupNormalAgent'] ?></th>
+                    <th><?= $textbotlang['panel']['usersGroupAdvancedAgent'] ?></th>
+                    <th><?= $textbotlang['panel']['usersStatusActiveFilter'] ?></th>
+                    <th><?= $textbotlang['panel']['usersStatusBlockedFilter'] ?></th>
+                    <th><?= $textbotlang['panel']['usersPaginationPrev'] ?></th>
+                    <th style="width:72px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($users)): ?>
+                    <tr>
+                        <td colspan="10">
+                            <div class="empty">
+                                <svg class="ill" viewBox="0 0 200 160" fill="none">
+                                    <circle cx="100" cy="60" r="40" fill="var(--sf3)" />
+                                    <circle cx="100" cy="47" r="18" fill="var(--bds)" />
+                                    <path d="M62 105 Q100 88 138 105" stroke="var(--bds)" stroke-width="8"
+                                        stroke-linecap="round" fill="none" />
+                                </svg>
+                                <p><?= $search ? $textbotlang['panel']['usersNoResultFound'] : $textbotlang['panel']['usersNoUserYet'] ?></p>
+                            </div>
+                        </td>
+                    </tr>
+                <?php else:
+                    $i = $offset + 1;
+                    foreach ($users as $u):
+                        $agent = $u['agent'] ?? 'f';
+                        $isBlocked = ($u['User_Status'] ?? '') === 'block';
+                        $name = $u['namecustom'] ?? '';
+                        if ($name === 'none')
+                            $name = '';
+                        $uname = $u['username'] ?? '';
+                        if ($uname === 'none')
+                            $uname = '';
+                        ?>
+                        <tr>
+                            <td class="cf"><?= $i++ ?></td>
+                            <td class="cm"><?= htmlspecialchars($u['id']) ?></td>
+                            <td>
+                                <?php if ($uname): ?>
+                                    <span class="cm" style="color:var(--ac)">@<?= htmlspecialchars($uname) ?></span>
+                                <?php else: ?>
+                                    <span class="cf">—</span>
+                                <?php endif; ?>
+                            </td>
+                            <td class="cs"><?= $name ? htmlspecialchars(trunc($name, 20)) : '<span class="cf">—</span>' ?></td>
+                            <td class="cm cf">
+                                <?= (!empty($u['number']) && $u['number'] !== 'none') ? htmlspecialchars($u['number']) : '—' ?>
+                            </td>
+                            <td class="cn cs" style="white-space:nowrap">
+                                <?= number_format((int) ($u['Balance'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['usersPaginationNext'] ?></span>
+                            </td>
+                            <td class="cn">
+                                <?= (int) ($u['score'] ?? 0) > 0
+                                    ? '<span style="color:var(--warn)">⭐ ' . number_format((int) ($u['score'] ?? 0)) . '</span>'
+                                    : '<span class="cf">—</span>' ?>
+                            </td>
+                            <td class="cf"><?= safe_date($u['register'] ?? null) ?></td>
+                            <td>
+                                <?php if ($isBlocked): ?>
+                                    <span class="tag tag-no"><?= $textbotlang['panel']['usersTotalCountLabel'] ?></span>
+                                <?php else: ?>
+                                    <span class="tag <?= user_role_tag($agent) ?>">
+                                        <?= user_role_label($agent) ?>
+                                    </span>
+                                <?php endif; ?>
+                            </td>
+                            <td>
+                                <div style="display:flex;gap:4px">
+                                    <a href="user.php?id=<?= (int) $u['id'] ?>" class="btn btn-ghost btn-sm btn-icon"
+                                        title="<?= htmlspecialchars($textbotlang['panel']['usersViewBtn']) ?>">
+                                        <?= icon('eye', 14) ?>
+                                    </a>
+                                    <?php if ($isBlocked): ?>
+                                        <a href="user_action.php?action=unblock&id=<?= (int) $u['id'] ?>&_csrf=<?= csrf_token() ?>&back=users.php"
+                                            class="btn btn-ok btn-sm btn-icon" title="<?= htmlspecialchars($textbotlang['panel']['usersUnblockBtn']) ?>"
+                                            data-confirm="<?= htmlspecialchars(sprintf($textbotlang['panel']['usersConfirmUnblockUser'], $name, $u['id'])) ?>">
+                                            <?= icon('check', 13) ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <a href="user_action.php?action=block&id=<?= (int) $u['id'] ?>&_csrf=<?= csrf_token() ?>&back=users.php"
+                                            class="btn btn-no btn-sm btn-icon" title="<?= htmlspecialchars($textbotlang['panel']['usersBlockBtn']) ?>"
+                                            data-confirm="<?= htmlspecialchars(sprintf($textbotlang['panel']['usersConfirmBlockUser'], $name, $u['id'])) ?>">
+                                            <?= icon('block', 13) ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php endforeach; endif; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tbl-foot">
+        <span><?= number_format($total) ?> <?= $textbotlang['panel']['usersColReferrer'] ?> <?= $page ?> <?= $textbotlang['panel']['usersColAffiliateCount'] ?> <?= $totalPages ?></span>
+        <div class="pager">
+            <?php
+            $qs = fn($p) => '?q=' . urlencode($search)
+                . '&status=' . urlencode($status)
+                . '&role=' . urlencode($role)
+                . '&page=' . $p;
+            ?>
+            <a class="<?= $page <= 1 ? 'dis' : '' ?>" href="<?= $qs(max(1, $page - 1)) ?>">‹</a>
+            <?php for ($p = max(1, $page - 2); $p <= min($totalPages, $page + 2); $p++): ?>
+                <a class="<?= $p === $page ? 'cur' : '' ?>" href="<?= $qs($p) ?>"><?= $p ?></a>
+            <?php endfor; ?>
+            <a class="<?= $page >= $totalPages ? 'dis' : '' ?>" href="<?= $qs(min($totalPages, $page + 1)) ?>">›</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/users.js"></script>
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

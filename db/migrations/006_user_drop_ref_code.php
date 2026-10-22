@@ -1,1 +1,5 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgJHNjaGVtYS0+ZHJvcENvbHVtbigndXNlcicsICdyZWZfY29kZScpOwp9Owo=
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    $schema->dropColumn('user', 'ref_code');
+};

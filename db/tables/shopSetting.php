@@ -1,1 +1,36 @@
-PD9waHAKCiRhZ2VudENhc2hiYWNrID0ganNvbl9lbmNvZGUoWyduJyA9PiAwLCAnbjInID0+IDBdKTsKCiR2YWx1ZXMgPSBbCiAgICAnY3VzdG9tdm9sbWVmJyA9PiAnNDAwMCcsCiAgICAnY3VzdG9tdm9sbWVuJyA9PiAnNDAwMCcsCiAgICAnY3VzdG9tdm9sbWVuMicgPT4gJzQwMDAnLAogICAgJ2N1c3RvbXRpbWVwcmljZWYnID0+ICc0MDAwJywKICAgICdjdXN0b210aW1lcHJpY2VuJyA9PiAnNDAwMCcsCiAgICAnY3VzdG9tdGltZXByaWNlbjInID0+ICc0MDAwJywKICAgICdzdGF0dXNleHRyYScgPT4gJ29mZmV4dHJhJywKICAgICdzdGF0dXN0aW1lZXh0cmEnID0+ICdvbnRpbWVleHRyYWEnLAogICAgJ3N0YXR1c2RpcmVjdHBhYnV5JyA9PiAnb25kaXJlY3RidXknLAogICAgJ21pbmJhbGFuY2VidXlidWxrJyA9PiAnMCcsCiAgICAnc3RhdHVzZGlzb3JkZXInID0+ICdvZmZkaXNvcmRlcicsCiAgICAnc3RhdHVzY2hhbmdlc2VydmljZScgPT4gJ29uc3RhdHVzJywKICAgICdzdGF0dXNzaG93cHJpY2UnID0+ICdvZmZzaG93cHJpY2UnLAogICAgJ2NvbmZpZ3Nob3cnID0+ICdvbmNvbmZpZycsCiAgICAnYmFja3NlcnZpZWNzdGF0dXMnID0+ICdvbicsCiAgICAnY2hhc2hiYWNrZXh0ZW5kJyA9PiAnMCcsCiAgICAnY2hhc2hiYWNrZXh0ZW5kX2FnZW50JyA9PiAkYWdlbnRDYXNoYmFjaywKXTsKCiRzZWVkID0gW107CmZvcmVhY2ggKCR2YWx1ZXMgYXMgJG5hbWUgPT4gJHZhbHVlKSB7CiAgICAkc2VlZFtdID0gWydOYW1ldmFsdWUnID0+ICRuYW1lLCAndmFsdWUnID0+ICR2YWx1ZV07Cn0KCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBOYW1ldmFsdWUgdmFyY2hhcig1MDApIFBSSU1BUlkgS0VZIE5PVCBOVUxMLAogICAgICAgIHZhbHVlIFRFWFQgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5PVCBOVUxMCiAgICAgICAgU1FMLAogICAgJ3NlZWQnID0+ICRzZWVkLApdOwo=
+<?php
+
+$agentCashback = json_encode(['n' => 0, 'n2' => 0]);
+
+$values = [
+    'customvolmef' => '4000',
+    'customvolmen' => '4000',
+    'customvolmen2' => '4000',
+    'customtimepricef' => '4000',
+    'customtimepricen' => '4000',
+    'customtimepricen2' => '4000',
+    'statusextra' => 'offextra',
+    'statustimeextra' => 'ontimeextraa',
+    'statusdirectpabuy' => 'ondirectbuy',
+    'minbalancebuybulk' => '0',
+    'statusdisorder' => 'offdisorder',
+    'statuschangeservice' => 'onstatus',
+    'statusshowprice' => 'offshowprice',
+    'configshow' => 'onconfig',
+    'backserviecstatus' => 'on',
+    'chashbackextend' => '0',
+    'chashbackextend_agent' => $agentCashback,
+];
+
+$seed = [];
+foreach ($values as $name => $value) {
+    $seed[] = ['Namevalue' => $name, 'value' => $value];
+}
+
+return [
+    'create' => <<<SQL
+        Namevalue varchar(500) PRIMARY KEY NOT NULL,
+        value TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+        SQL,
+    'seed' => $seed,
+];

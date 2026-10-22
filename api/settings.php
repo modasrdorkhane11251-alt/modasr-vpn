@@ -1,1 +1,111 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CgpoZWFkZXIoJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOCcpOwpkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL1RlaHJhbicpOwppbmlfc2V0KCdkZWZhdWx0X2NoYXJzZXQnLCAnVVRGLTgnKTsKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwoKbGlzdCgkaGVhZGVycywgJGRhdGEsICRhY3Rpb24pID0gYXBpUmVxdWVzdENvbnRleHQoKTsKJG1ldGhvZCA9ICRfU0VSVkVSWydSRVFVRVNUX01FVEhPRCddOwoKY29uc3QgREVGQVVMVF9NQUlOX0tFWUJPQVJEID0gJ3sia2V5Ym9hcmQiOltbeyJ0ZXh0IjoidGV4dF9zZWxsIn0seyJ0ZXh0IjoidGV4dF9leHRlbmQifV0sW3sidGV4dCI6InRleHRfdXNlcnRlc3QifSx7InRleHQiOiJ0ZXh0X3doZWVsX2x1Y2sifV0sW3sidGV4dCI6InRleHRfUHVyY2hhc2VkX3NlcnZpY2VzIn0seyJ0ZXh0IjoiYWNjb3VudHdhbGxldCJ9XSxbeyJ0ZXh0IjoidGV4dF9hZmZpbGlhdGVzIn0seyJ0ZXh0IjoidGV4dF9UYXJpZmZfbGlzdCJ9XSxbeyJ0ZXh0IjoidGV4dF9zdXBwb3J0In0seyJ0ZXh0IjoidGV4dF9oZWxwIn1dLFt7InRleHQiOiJ0ZXh0X2FnZW50cGFuZWwifSx7InRleHQiOiJ0ZXh0X3JlcXVlc3RhZ2VudCJ9XV19JzsKCmZ1bmN0aW9uIHNldHRpbmdfa2V5Ym9hcmRfc2V0KGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKCiAgICB0cnkgewogICAgICAgIGlmICghZW1wdHkoJGRhdGFbJ2tleWJvYXJkX3Jlc2V0J10pKSB7CiAgICAgICAgICAgIHVwZGF0ZSgic2V0dGluZyIsICJrZXlib2FyZG1haW4iLCBERUZBVUxUX01BSU5fS0VZQk9BUkQsIG51bGwsIG51bGwpOwogICAgICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgW10sIDIwMCk7CiAgICAgICAgfQoKICAgICAgICBpZiAoIWlzc2V0KCRkYXRhWydrZXlib2FyZCddKSB8fCAhaXNfYXJyYXkoJGRhdGFbJ2tleWJvYXJkJ10pKSB7CiAgICAgICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICdrZXlib2FyZCBpbnZhbGlkJywgW10sIDIwMCk7CiAgICAgICAgfQoKICAgICAgICB1cGRhdGUoInNldHRpbmciLCAia2V5Ym9hcmRtYWluIiwganNvbl9lbmNvZGUoWydrZXlib2FyZCcgPT4gJGRhdGFbJ2tleWJvYXJkJ11dKSwgbnVsbCwgbnVsbCk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIsIFtdLCAyMDApOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBrZXlib2FyZDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJEYXRhYmFzZSBlcnJvciBvY2N1cnJlZCIsIFtdLCAyMDApOwogICAgfQp9CgpmdW5jdGlvbiBzZXR0aW5nX3NldHRpbmdfaW5mbyhhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIHZhbGlkYXRlTWV0aG9kKCdHRVQnLCAkbWV0aG9kKTsKCiAgICB0cnkgewogICAgICAgICRzaG9wc2V0dGluZyA9IHNlbGVjdCgic2hvcFNldHRpbmciLCAiKiIsIG51bGwsIG51bGwsICJmZXRjaEFsbCIpOwogICAgICAgICRzaG9wX3NldHRpbmcgPSBbXTsKICAgICAgICBmb3JlYWNoIChpc19hcnJheSgkc2hvcHNldHRpbmcpID8gJHNob3BzZXR0aW5nIDogW10gYXMgJHJvdykgewogICAgICAgICAgICAkc2hvcF9zZXR0aW5nWyRyb3dbJ05hbWV2YWx1ZSddXSA9ICRyb3dbJ3ZhbHVlJ107CiAgICAgICAgfQoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnc2V0dGluZ19zaG9wJyA9PiAkc2hvcF9zZXR0aW5nLAogICAgICAgICAgICAnc2V0dGluZ19HZW5lcmFsJyA9PiBzZWxlY3QoInNldHRpbmciLCAiKiIsIG51bGwsIG51bGwsICJzZWxlY3QiKQogICAgICAgIF0pOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBzZXR0aW5nOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkRhdGFiYXNlIGVycm9yICIsIFtdLCA1MDApOwogICAgfQp9CgpmdW5jdGlvbiBzZXR0aW5nX3NhdmVfc2V0dGluZ19zaG9wKGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKCiAgICBpZiAoZW1wdHkoJGRhdGFbJ2RhdGEnXSkgfHwgIWlzX2FycmF5KCRkYXRhWydkYXRhJ10pKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImRhdGEgZW1wdHkgIiwgW10sIDIwMCk7CiAgICB9CgogICAgdHJ5IHsKICAgICAgICBmb3JlYWNoICgkZGF0YVsnZGF0YSddIGFzICRyb3cpIHsKICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkcm93KSB8fCAhaXNzZXQoJHJvd1snbmFtZV92YWx1ZSddKSkgewogICAgICAgICAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImludmFsaWQgc2V0dGluZyBlbnRyeSIsIFtdLCAyMDApOwogICAgICAgICAgICB9CgogICAgICAgICAgICAkdmFsdWUgPSAkcm93Wyd2YWx1ZSddID8/IG51bGw7CiAgICAgICAgICAgIGlmICghZW1wdHkoJHJvd1snanNvbiddKSkgewogICAgICAgICAgICAgICAgJHZhbHVlID0ganNvbl9lbmNvZGUoJHZhbHVlKTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgaWYgKCgkcm93Wyd0eXBlJ10gPz8gJycpID09PSAic2hvcCIpIHsKICAgICAgICAgICAgICAgIHVwZGF0ZSgic2hvcFNldHRpbmciLCAidmFsdWUiLCAkdmFsdWUsICJOYW1ldmFsdWUiLCAkcm93WyduYW1lX3ZhbHVlJ10pOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgJHNldHRpbmdGaWVsZCA9IChzdHJpbmcpICRyb3dbJ25hbWVfdmFsdWUnXTsKICAgICAgICAgICAgICAgIGlmICghcHJlZ19tYXRjaCgnL15bQS1aYS16MC05X117MSw2NH0kLycsICRzZXR0aW5nRmllbGQpKSB7CiAgICAgICAgICAgICAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImludmFsaWQgc2V0dGluZyBuYW1lIiwgW10sIDIwMCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAkY29sdW1uQ2hlY2sgPSAkR0xPQkFMU1sncGRvJ10tPnByZXBhcmUoJ1NFTEVDVCBDT1VOVCgqKSBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5jb2x1bW5zIFdIRVJFIHRhYmxlX3NjaGVtYSA9IERBVEFCQVNFKCkgQU5EIHRhYmxlX25hbWUgPSA/IEFORCBjb2x1bW5fbmFtZSA9ID8nKTsKICAgICAgICAgICAgICAgICRjb2x1bW5DaGVjay0+ZXhlY3V0ZShbJ3NldHRpbmcnLCAkc2V0dGluZ0ZpZWxkXSk7CiAgICAgICAgICAgICAgICBpZiAoKGludCkgJGNvbHVtbkNoZWNrLT5mZXRjaENvbHVtbigpID09PSAwKSB7CiAgICAgICAgICAgICAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImludmFsaWQgc2V0dGluZyBuYW1lIiwgW10sIDIwMCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB1cGRhdGUoInNldHRpbmciLCAkc2V0dGluZ0ZpZWxkLCAkdmFsdWUsIG51bGwsIG51bGwpOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJzZXR0aW5nIHVwZGF0ZWQgc3VjY2Vzc2Z1bGx5IiwgW10sIDIwMCk7CiAgICB9IGNhdGNoIChJbnZhbGlkQXJndW1lbnRFeGNlcHRpb24gJGUpIHsKICAgICAgICBlcnJvcl9sb2coIlJlamVjdGVkIHNldHRpbmcgbmFtZTogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpbnZhbGlkIHNldHRpbmcgbmFtZSIsIFtdLCAyMDApOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBzZXR0aW5nOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkRhdGFiYXNlIGVycm9yICIsIFtdLCA1MDApOwogICAgfQp9CgptYXRjaCAoJGFjdGlvbikgewogICAgJ2tleWJvYXJkX3NldCcgPT4gc2V0dGluZ19rZXlib2FyZF9zZXQoJGRhdGEsICRtZXRob2QpLAogICAgJ3NldHRpbmdfaW5mbycgPT4gc2V0dGluZ19zZXR0aW5nX2luZm8oJGRhdGEsICRtZXRob2QpLAogICAgJ3NhdmVfc2V0dGluZ19zaG9wJyA9PiBzZXR0aW5nX3NhdmVfc2V0dGluZ19zaG9wKCRkYXRhLCAkbWV0aG9kKSwKICAgIGRlZmF1bHQgPT4gc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFjdGlvbiBJbnZhbGlkIiksCn07Cg==
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+list($headers, $data, $action) = apiRequestContext();
+$method = $_SERVER['REQUEST_METHOD'];
+
+const DEFAULT_MAIN_KEYBOARD = '{"keyboard":[[{"text":"text_sell"},{"text":"text_extend"}],[{"text":"text_usertest"},{"text":"text_wheel_luck"}],[{"text":"text_Purchased_services"},{"text":"accountwallet"}],[{"text":"text_affiliates"},{"text":"text_Tariff_list"}],[{"text":"text_support"},{"text":"text_help"}],[{"text":"text_agentpanel"},{"text":"text_requestagent"}]]}';
+
+function setting_keyboard_set(array $data, string $method): void
+{
+    validateMethod('POST', $method);
+
+    try {
+        if (!empty($data['keyboard_reset'])) {
+            update("setting", "keyboardmain", DEFAULT_MAIN_KEYBOARD, null, null);
+            sendJsonResponse(true, "Successful", [], 200);
+        }
+
+        if (!isset($data['keyboard']) || !is_array($data['keyboard'])) {
+            sendJsonResponse(false, 'keyboard invalid', [], 200);
+        }
+
+        update("setting", "keyboardmain", json_encode(['keyboard' => $data['keyboard']]), null, null);
+        sendJsonResponse(true, "Successful", [], 200);
+    } catch (Exception $e) {
+        error_log("Database error in keyboard: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 200);
+    }
+}
+
+function setting_setting_info(array $data, string $method): void
+{
+    validateMethod('GET', $method);
+
+    try {
+        $shopsetting = select("shopSetting", "*", null, null, "fetchAll");
+        $shop_setting = [];
+        foreach (is_array($shopsetting) ? $shopsetting : [] as $row) {
+            $shop_setting[$row['Namevalue']] = $row['value'];
+        }
+
+        sendJsonResponse(true, "Successful", [
+            'setting_shop' => $shop_setting,
+            'setting_General' => select("setting", "*", null, null, "select")
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in setting: " . $e->getMessage());
+        sendJsonResponse(false, "Database error ", [], 500);
+    }
+}
+
+function setting_save_setting_shop(array $data, string $method): void
+{
+    validateMethod('POST', $method);
+
+    if (empty($data['data']) || !is_array($data['data'])) {
+        sendJsonResponse(false, "data empty ", [], 200);
+    }
+
+    try {
+        foreach ($data['data'] as $row) {
+            if (!is_array($row) || !isset($row['name_value'])) {
+                sendJsonResponse(false, "invalid setting entry", [], 200);
+            }
+
+            $value = $row['value'] ?? null;
+            if (!empty($row['json'])) {
+                $value = json_encode($value);
+            }
+
+            if (($row['type'] ?? '') === "shop") {
+                update("shopSetting", "value", $value, "Namevalue", $row['name_value']);
+            } else {
+                $settingField = (string) $row['name_value'];
+                if (!preg_match('/^[A-Za-z0-9_]{1,64}$/', $settingField)) {
+                    sendJsonResponse(false, "invalid setting name", [], 200);
+                }
+                $columnCheck = $GLOBALS['pdo']->prepare('SELECT COUNT(*) FROM information_schema.columns WHERE table_schema = DATABASE() AND table_name = ? AND column_name = ?');
+                $columnCheck->execute(['setting', $settingField]);
+                if ((int) $columnCheck->fetchColumn() === 0) {
+                    sendJsonResponse(false, "invalid setting name", [], 200);
+                }
+                update("setting", $settingField, $value, null, null);
+            }
+        }
+
+        sendJsonResponse(true, "setting updated successfully", [], 200);
+    } catch (InvalidArgumentException $e) {
+        error_log("Rejected setting name: " . $e->getMessage());
+        sendJsonResponse(false, "invalid setting name", [], 200);
+    } catch (Exception $e) {
+        error_log("Database error in setting: " . $e->getMessage());
+        sendJsonResponse(false, "Database error ", [], 500);
+    }
+}
+
+match ($action) {
+    'keyboard_set' => setting_keyboard_set($data, $method),
+    'setting_info' => setting_setting_info($data, $method),
+    'save_setting_shop' => setting_save_setting_shop($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};

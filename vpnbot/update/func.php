@@ -1,1 +1,70 @@
-PD9waHAKZnVuY3Rpb24gcmVhZEpzb25GaWxlSWZFeGlzdHMoJHBhdGgsICRkZWZhdWx0ID0gW10pCnsKICAgIGlmICghaXNfZmlsZSgkcGF0aCkpIHsKICAgICAgICByZXR1cm4gJGRlZmF1bHQ7CiAgICB9CgogICAgJGNvbnRlbnQgPSBmaWxlX2dldF9jb250ZW50cygkcGF0aCk7CiAgICBpZiAoJGNvbnRlbnQgPT09IGZhbHNlIHx8ICRjb250ZW50ID09PSAnJykgewogICAgICAgIHJldHVybiAkZGVmYXVsdDsKICAgIH0KCiAgICAkZGVjb2RlZCA9IGpzb25fZGVjb2RlKCRjb250ZW50LCB0cnVlKTsKICAgIHJldHVybiBpc19hcnJheSgkZGVjb2RlZCkgPyAkZGVjb2RlZCA6ICRkZWZhdWx0Owp9CmZ1bmN0aW9uIERpcmVjdFBheW1lbnRib3QoJG9yZGVyX2lkLCAkaW1hZ2UgPSAnaW1hZ2VzLmpwZycpCnsKICAgIGdsb2JhbCAkQ29uZmlybV9wYXksICRmcm9tX2lkLCAkbWVzc2FnZV9pZDsKICAgICRQYXltZW50X3JlcG9ydCA9IHNlbGVjdCgiUGF5bWVudF9yZXBvcnQiLCAiKiIsICJpZF9vcmRlciIsICRvcmRlcl9pZCwgInNlbGVjdCIpOwogICAgJGZvcm1hdF9wcmljZV9jYXJ0ID0gbnVtYmVyX2Zvcm1hdCgkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10pOwogICAgJEJhbGFuY2VfaWQgPSBzZWxlY3QoInVzZXIiLCAiKiIsICJpZCIsICRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddLCAic2VsZWN0Iik7CiAgICAkQmFsYW5jZV9pZFsnQmFsYW5jZSddID0ganNvbl9kZWNvZGUoZmlsZV9nZXRfY29udGVudHMoImRhdGEveyRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddfS97JFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ119Lmpzb24iKSwgdHJ1ZSlbJ0JhbGFuY2UnXTsKICAgIHVwZGF0ZSgidXNlciIsICJQcm9jZXNzaW5nX3ZhbHVlIiwgIjAiLCAiaWQiLCAkQmFsYW5jZV9pZFsnaWQnXSk7CiAgICB1cGRhdGUoInVzZXIiLCAiUHJvY2Vzc2luZ192YWx1ZV9vbmUiLCAiMCIsICJpZCIsICRCYWxhbmNlX2lkWydpZCddKTsKICAgIHVwZGF0ZSgidXNlciIsICJQcm9jZXNzaW5nX3ZhbHVlX3RvdyIsICIwIiwgImlkIiwgJEJhbGFuY2VfaWRbJ2lkJ10pOwogICAgdXBkYXRlKCJ1c2VyIiwgIlByb2Nlc3NpbmdfdmFsdWVfZm91ciIsICIwIiwgImlkIiwgJEJhbGFuY2VfaWRbJ2lkJ10pOwogICAgJEJhbGFuY2VfY29uZnJpbSA9IGludHZhbCgkQmFsYW5jZV9pZFsnQmFsYW5jZSddKSArIGludHZhbCgkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10pOwogICAgJHVzZXJiYWxhbmNlID0ganNvbl9kZWNvZGUoZmlsZV9nZXRfY29udGVudHMoImRhdGEveyRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddfS97JFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ119Lmpzb24iKSwgdHJ1ZSk7CiAgICAkdXNlcmJhbGFuY2VbJ0JhbGFuY2UnXSA9ICRCYWxhbmNlX2NvbmZyaW07CiAgICBmaWxlX3B1dF9jb250ZW50cygiZGF0YS97JFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ119L3skUGF5bWVudF9yZXBvcnRbJ2lkX3VzZXInXX0uanNvbiIsIGpzb25fZW5jb2RlKCR1c2VyYmFsYW5jZSkpOwogICAgdXBkYXRlKCJQYXltZW50X3JlcG9ydCIsICJwYXltZW50X1N0YXR1cyIsICJwYWlkIiwgImlkX29yZGVyIiwgJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddKTsKICAgICRQYXltZW50X3JlcG9ydFsncHJpY2UnXSA9IG51bWJlcl9mb3JtYXQoJFBheW1lbnRfcmVwb3J0WydwcmljZSddLCAwKTsKICAgICRmb3JtYXRfcHJpY2VfY2FydCA9ICRQYXltZW50X3JlcG9ydFsncHJpY2UnXTsKICAgIGlmICgkUGF5bWVudF9yZXBvcnRbJ1BheW1lbnRfTWV0aG9kJ10gPT0gImNhcnQgdG8gY2FydCIgb3IgJFBheW1lbnRfcmVwb3J0WydQYXltZW50X01ldGhvZCddID09ICJhcnplIGRpZ2l0YWwgb2ZmbGluZSIpIHsKICAgICAgICAkdGV4dGNvbmZyb20gPSAi4q2V77iPINuM2qkg2b7Ysdiv2KfYrtiqINis2K/bjNivINin2YbYrNin2YUg2LTYr9mHINin2LPYqgogICAgICAgINin2YHYstin24zYtCDZhdmI2KzZiNiv24wuCvCfkaQg2LTZhtin2LPZhyDaqdin2LHYqNixOiA8Y29kZT57JEJhbGFuY2VfaWRbJ2lkJ119PC9jb2RlPgrwn5uSINqp2K8g2b7bjNqv24zYsduMINm+2LHYr9in2K7YqjogeyRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXX0K4pqc77iPINmG2KfZhSDaqdin2LHYqNix24w6IEB7JEJhbGFuY2VfaWRbJ3VzZXJuYW1lJ119CvCfkrgg2YXYqNmE2Log2b7Ysdiv2KfYrtiq24w6ICRmb3JtYXRfcHJpY2VfY2FydCDYqtmI2YXYp9mGCuKcje+4jyDYqtmI2LbbjNit2KfYqiA6IHskUGF5bWVudF9yZXBvcnRbJ2RlY19ub3RfY29uZmlybWVkJ119IjsKICAgICAgICBFZGl0bWVzc2FnZXRleHQoJGZyb21faWQsICRtZXNzYWdlX2lkLCAkdGV4dGNvbmZyb20sICRDb25maXJtX3BheSk7CiAgICB9CiAgICBzZW5kbWVzc2FnZSgkUGF5bWVudF9yZXBvcnRbJ2lkX3VzZXInXSwgIvCfko4g2qnYp9ix2KjYsSDar9ix2KfZhduMINmF2KjZhNi6IHskUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ119INiq2YjZhdin2YYg2KjZhyDaqduM2YEg2b7ZiNmEINi02YXYpyDZiNin2LHbjNiyINqv2LHYr9uM2K8g2KjYpyDYqti02qnYsdin2LIg2b7Ysdiv2KfYrtiqINi02YXYpy4KICAgICAgICAgICAgICAgIArwn5uSINqp2K8g2b7bjNqv24zYsduMINi02YXYpzogeyRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXX0iLCBudWxsLCAnSFRNTCcpOwp9CmZ1bmN0aW9uIGNoYW5uZWxfY2hlY2soJGlkX2NoYW5uZWwpCnsKICAgIGdsb2JhbCAkZnJvbV9pZDsKICAgIGlmIChpc1RlbGVncmFtQ2hhdElkRW1wdHkoJGlkX2NoYW5uZWwpKSB7CiAgICAgICAgcmV0dXJuIFtdOwogICAgfQogICAgJGNoYW5uZWxfbGluayA9IGFycmF5KCk7CiAgICAkcmVzcG9uc2UgPSB0ZWxlZ3JhbSgnZ2V0Q2hhdE1lbWJlcicsIFsKICAgICAgICAnY2hhdF9pZCcgPT4gJGlkX2NoYW5uZWwsCiAgICAgICAgJ3VzZXJfaWQnID0+ICRmcm9tX2lkCiAgICBdKTsKICAgIGlmICgkcmVzcG9uc2VbJ29rJ10pIHsKICAgICAgICBpZiAoIWluX2FycmF5KCRyZXNwb25zZVsncmVzdWx0J11bJ3N0YXR1cyddLCBbJ21lbWJlcicsICdjcmVhdG9yJywgJ2FkbWluaXN0cmF0b3InXSkpIHsKICAgICAgICAgICAgJGNoYW5uZWxfbGlua1tdID0gJGlkX2NoYW5uZWw7CiAgICAgICAgfQogICAgfQoKICAgIGlmIChjb3VudCgkY2hhbm5lbF9saW5rKSA9PSAwKSB7CiAgICAgICAgcmV0dXJuIFtdOwogICAgfSBlbHNlIHsKICAgICAgICByZXR1cm4gJGNoYW5uZWxfbGluazsKICAgIH0KfQo=
+<?php
+function readJsonFileIfExists($path, $default = [])
+{
+    if (!is_file($path)) {
+        return $default;
+    }
+
+    $content = file_get_contents($path);
+    if ($content === false || $content === '') {
+        return $default;
+    }
+
+    $decoded = json_decode($content, true);
+    return is_array($decoded) ? $decoded : $default;
+}
+function DirectPaymentbot($order_id, $image = 'images.jpg')
+{
+    global $Confirm_pay, $from_id, $message_id;
+    $Payment_report = select("Payment_report", "*", "id_order", $order_id, "select");
+    $format_price_cart = number_format($Payment_report['price']);
+    $Balance_id = select("user", "*", "id", $Payment_report['id_user'], "select");
+    $Balance_id['Balance'] = json_decode(file_get_contents("data/{$Payment_report['id_user']}/{$Payment_report['id_user']}.json"), true)['Balance'];
+    update("user", "Processing_value", "0", "id", $Balance_id['id']);
+    update("user", "Processing_value_one", "0", "id", $Balance_id['id']);
+    update("user", "Processing_value_tow", "0", "id", $Balance_id['id']);
+    update("user", "Processing_value_four", "0", "id", $Balance_id['id']);
+    $Balance_confrim = intval($Balance_id['Balance']) + intval($Payment_report['price']);
+    $userbalance = json_decode(file_get_contents("data/{$Payment_report['id_user']}/{$Payment_report['id_user']}.json"), true);
+    $userbalance['Balance'] = $Balance_confrim;
+    file_put_contents("data/{$Payment_report['id_user']}/{$Payment_report['id_user']}.json", json_encode($userbalance));
+    update("Payment_report", "payment_Status", "paid", "id_order", $Payment_report['id_order']);
+    $Payment_report['price'] = number_format($Payment_report['price'], 0);
+    $format_price_cart = $Payment_report['price'];
+    if ($Payment_report['Payment_Method'] == "cart to cart" or $Payment_report['Payment_Method'] == "arze digital offline") {
+        $textconfrom = "⭕️ یک پرداخت جدید انجام شده است
+        افزایش موجودی.
+👤 شناسه کاربر: <code>{$Balance_id['id']}</code>
+🛒 کد پیگیری پرداخت: {$Payment_report['id_order']}
+⚜️ نام کاربری: @{$Balance_id['username']}
+💸 مبلغ پرداختی: $format_price_cart تومان
+✍️ توضیحات : {$Payment_report['dec_not_confirmed']}";
+        Editmessagetext($from_id, $message_id, $textconfrom, $Confirm_pay);
+    }
+    sendmessage($Payment_report['id_user'], "💎 کاربر گرامی مبلغ {$Payment_report['price']} تومان به کیف پول شما واریز گردید با تشکراز پرداخت شما.
+                
+🛒 کد پیگیری شما: {$Payment_report['id_order']}", null, 'HTML');
+}
+function channel_check($id_channel)
+{
+    global $from_id;
+    if (isTelegramChatIdEmpty($id_channel)) {
+        return [];
+    }
+    $channel_link = array();
+    $response = telegram('getChatMember', [
+        'chat_id' => $id_channel,
+        'user_id' => $from_id
+    ]);
+    if ($response['ok']) {
+        if (!in_array($response['result']['status'], ['member', 'creator', 'administrator'])) {
+            $channel_link[] = $id_channel;
+        }
+    }
+
+    if (count($channel_link) == 0) {
+        return [];
+    } else {
+        return $channel_link;
+    }
+}

@@ -1,1 +1,27 @@
-d2luZG93LnN3aXRjaFRhYiA9IGZ1bmN0aW9uIChuYW1lKSB7CiAgICB2YXIgcGFuZXMgPSB7IG9yZGVyczogJ3BhbmVPcmRlcnMnLCBwYXk6ICdwYW5lUGF5JywgcmVmczogJ3BhbmVSZWZzJyB9OwogICAgdmFyIHRhYnMgPSB7IG9yZGVyczogJ3RhYk9yZGVycycsIHBheTogJ3RhYlBheScsIHJlZnM6ICd0YWJSZWZzJyB9OwoKICAgIE9iamVjdC52YWx1ZXMocGFuZXMpLmZvckVhY2goZnVuY3Rpb24gKGlkKSB7CiAgICAgICAgdmFyIGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpOwogICAgICAgIGlmIChlbCkgZWwuc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICAgIH0pOwoKICAgIE9iamVjdC52YWx1ZXModGFicykuZm9yRWFjaChmdW5jdGlvbiAoaWQpIHsKICAgICAgICB2YXIgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCk7CiAgICAgICAgaWYgKGVsKSB7CiAgICAgICAgICAgIGVsLnN0eWxlLmJhY2tncm91bmQgPSAndHJhbnNwYXJlbnQnOwogICAgICAgICAgICBlbC5zdHlsZS5jb2xvciA9ICd2YXIoLS1tdXRlKSc7CiAgICAgICAgICAgIGVsLnN0eWxlLmJvcmRlciA9ICdub25lJzsKICAgICAgICB9CiAgICB9KTsKCiAgICB2YXIgcGFuZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKHBhbmVzW25hbWVdKTsKICAgIGlmIChwYW5lKSBwYW5lLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOwoKICAgIHZhciB0YWIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCh0YWJzW25hbWVdKTsKICAgIGlmICh0YWIpIHsKICAgICAgICB0YWIuc3R5bGUuYmFja2dyb3VuZCA9ICd2YXIoLS1hYyknOwogICAgICAgIHRhYi5zdHlsZS5jb2xvciA9ICd2YXIoLS1idG4tYWMtdGV4dCwgI2ZmZiknOwogICAgfQp9Owo=
+window.switchTab = function (name) {
+    var panes = { orders: 'paneOrders', pay: 'panePay', refs: 'paneRefs' };
+    var tabs = { orders: 'tabOrders', pay: 'tabPay', refs: 'tabRefs' };
+
+    Object.values(panes).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+
+    Object.values(tabs).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+            el.style.background = 'transparent';
+            el.style.color = 'var(--mute)';
+            el.style.border = 'none';
+        }
+    });
+
+    var pane = document.getElementById(panes[name]);
+    if (pane) pane.style.display = 'block';
+
+    var tab = document.getElementById(tabs[name]);
+    if (tab) {
+        tab.style.background = 'var(--ac)';
+        tab.style.color = 'var(--btn-ac-text, #fff)';
+    }
+};

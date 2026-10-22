@@ -1,1 +1,30 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7Cgokc3RtdCA9ICRwZG8tPnByZXBhcmUoIkRFTEVURSBGUk9NIGludm9pY2UgV0hFUkUgU3RhdHVzIElOICgndW5wYWlkJywgJ1Vuc3VjY2Vzc2Z1bCcpIEFORCBDQVNUKHRpbWVfc2VsbCBBUyBVTlNJR05FRCkgPCA6b2xkZXJUaGFuIEFORCBOT1QgRVhJU1RTIChTRUxFQ1QgMSBGUk9NIFBheW1lbnRfcmVwb3J0IHByIFdIRVJFIHByLmlkX29yZGVyID0gaW52b2ljZS5pZF9wYXltZW50IEFORCBwci5wYXltZW50X1N0YXR1cyBJTiAoJ1VucGFpZCcsICd3YWl0aW5nJykpIik7CiRzdG10LT5leGVjdXRlKFsnOm9sZGVyVGhhbicgPT4gdGltZSgpIC0gODY0MDBdKTsKJGRlbGV0ZWRJbnZvaWNlcyA9ICRzdG10LT5yb3dDb3VudCgpOwoKJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJERUxFVEUgRlJPTSBzZXJ2aWNlX290aGVyIFdIRVJFIHN0YXR1cyA9ICd1bnBhaWQnIEFORCB0aW1lIDwgOm9sZGVyVGhhbiBBTkQgTk9UIEVYSVNUUyAoU0VMRUNUIDEgRlJPTSBQYXltZW50X3JlcG9ydCBwciBXSEVSRSBwci5pZF9vcmRlciA9IHNlcnZpY2Vfb3RoZXIuaWRfcGF5bWVudCBBTkQgcHIucGF5bWVudF9TdGF0dXMgSU4gKCdVbnBhaWQnLCAnd2FpdGluZycpKSIpOwokc3RtdC0+ZXhlY3V0ZShbJzpvbGRlclRoYW4nID0+IGRhdGUoJ1kvbS9kIEg6aTpzJywgdGltZSgpIC0gODY0MDApXSk7CiRkZWxldGVkSW52b2ljZXMgKz0gJHN0bXQtPnJvd0NvdW50KCk7Cgokc3RtdCA9ICRwZG8tPnByZXBhcmUoIkRFTEVURSBGUk9NIGxvZ3NfYXBpIFdIRVJFIHRpbWUgPCA6b2xkZXJUaGFuIik7CiRzdG10LT5leGVjdXRlKFsnOm9sZGVyVGhhbicgPT4gZGF0ZSgnWS9tL2QgSDppOnMnLCB0aW1lKCkgLSA3ICogODY0MDApXSk7CiRkZWxldGVkTG9ncyA9ICRzdG10LT5yb3dDb3VudCgpOwoKaWYgKCgkZGVsZXRlZEludm9pY2VzID4gMCB8fCAkZGVsZXRlZExvZ3MgPiAwKSAmJiAhaXNUZWxlZ3JhbUNoYXRJZEVtcHR5KCRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddID8/ICcnKSkgewogICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJywgWwogICAgICAgICdjaGF0X2lkJyA9PiAkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSwKICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+IHNlbGVjdCgidG9waWNpZCIsICJpZHJlcG9ydCIsICJyZXBvcnQiLCAib3RoZXJyZXBvcnQiLCAic2VsZWN0IilbJ2lkcmVwb3J0J10sCiAgICAgICAgJ3RleHQnID0+IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnQnXVsnYXV0b0NsZWFudXAnXSwgJGRlbGV0ZWRJbnZvaWNlcywgJGRlbGV0ZWRMb2dzKSwKICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiLAogICAgXSk7Cn0K
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$setting = select("setting", "*");
+$textbotlang = languagechange();
+
+$stmt = $pdo->prepare("DELETE FROM invoice WHERE Status IN ('unpaid', 'Unsuccessful') AND CAST(time_sell AS UNSIGNED) < :olderThan AND NOT EXISTS (SELECT 1 FROM Payment_report pr WHERE pr.id_order = invoice.id_payment AND pr.payment_Status IN ('Unpaid', 'waiting'))");
+$stmt->execute([':olderThan' => time() - 86400]);
+$deletedInvoices = $stmt->rowCount();
+
+$stmt = $pdo->prepare("DELETE FROM service_other WHERE status = 'unpaid' AND time < :olderThan AND NOT EXISTS (SELECT 1 FROM Payment_report pr WHERE pr.id_order = service_other.id_payment AND pr.payment_Status IN ('Unpaid', 'waiting'))");
+$stmt->execute([':olderThan' => date('Y/m/d H:i:s', time() - 86400)]);
+$deletedInvoices += $stmt->rowCount();
+
+$stmt = $pdo->prepare("DELETE FROM logs_api WHERE time < :olderThan");
+$stmt->execute([':olderThan' => date('Y/m/d H:i:s', time() - 7 * 86400)]);
+$deletedLogs = $stmt->rowCount();
+
+if (($deletedInvoices > 0 || $deletedLogs > 0) && !isTelegramChatIdEmpty($setting['Channel_Report'] ?? '')) {
+    telegram('sendmessage', [
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => select("topicid", "idreport", "report", "otherreport", "select")['idreport'],
+        'text' => sprintf($textbotlang['Admin']['report']['autoCleanup'], $deletedInvoices, $deletedLogs),
+        'parse_mode' => "HTML",
+    ]);
+}

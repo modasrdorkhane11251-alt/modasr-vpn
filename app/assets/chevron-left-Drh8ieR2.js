@@ -1,1 +1,6 @@
-aW1wb3J0e2MgYXMgZX1mcm9tIi4vaW5kZXgtQy0yYTBEdXIuanMiOy8qKgogKiBAbGljZW5zZSBsdWNpZGUtcmVhY3QgdjAuNTExLjAgLSBJU0MKICoKICogVGhpcyBzb3VyY2UgY29kZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgSVNDIGxpY2Vuc2UuCiAqIFNlZSB0aGUgTElDRU5TRSBmaWxlIGluIHRoZSByb290IGRpcmVjdG9yeSBvZiB0aGlzIHNvdXJjZSB0cmVlLgogKi9jb25zdCBvPVtbInBhdGgiLHtkOiJtMTUgMTgtNi02IDYtNiIsa2V5OiIxd25mZzMifV1dLHQ9ZSgiY2hldnJvbi1sZWZ0IixvKTtleHBvcnR7dCBhcyBDfTsK
+import{c as e}from"./index-C-2a0Dur.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const o=[["path",{d:"m15 18-6-6 6-6",key:"1wnfg3"}]],t=e("chevron-left",o);export{t as C};

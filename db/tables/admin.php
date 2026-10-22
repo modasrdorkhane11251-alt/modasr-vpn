@@ -1,1 +1,23 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZF9hZG1pbiB2YXJjaGFyKDUwMCkgUFJJTUFSWSBLRVkgTk9UIE5VTEwsCiAgICAgICAgdXNlcm5hbWUgdmFyY2hhcigxMDAwKSBOT1QgTlVMTCwKICAgICAgICBwYXNzd29yZCB2YXJjaGFyKDEwMDApIE5PVCBOVUxMLAogICAgICAgIHJ1bGUgdmFyY2hhcig1MDApIE5PVCBOVUxMCiAgICAgICAgU1FMLAogICAgJ3NlZWRPbkNyZWF0ZScgPT4gWwogICAgICAgIFsKICAgICAgICAgICAgJ2lkX2FkbWluJyA9PiAkc2NoZW1hLT5jb250ZXh0KCdhZG1pbm51bWJlcicpLAogICAgICAgICAgICAncnVsZScgPT4gJ2FkbWluaXN0cmF0b3InLAogICAgICAgICAgICAndXNlcm5hbWUnID0+ICdhZG1pbicsCiAgICAgICAgICAgICdwYXNzd29yZCcgPT4gcGFzc3dvcmRfaGFzaChiaW4yaGV4KHJhbmRvbV9ieXRlcygxNikpLCBQQVNTV09SRF9CQ1JZUFQpLAogICAgICAgIF0sCiAgICBdLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ3VzZXJuYW1lJywgbnVsbCwgJ1ZBUkNIQVIoMjAwKSddLAogICAgICAgIFsncGFzc3dvcmQnLCBudWxsLCAnVkFSQ0hBUigyMDApJ10sCiAgICAgICAgWydydWxlJywgJ2FkbWluaXN0cmF0b3InLCAnVkFSQ0hBUigyMDApJ10sCiAgICBdLApdOwo=
+<?php
+
+return [
+    'create' => <<<SQL
+        id_admin varchar(500) PRIMARY KEY NOT NULL,
+        username varchar(1000) NOT NULL,
+        password varchar(1000) NOT NULL,
+        rule varchar(500) NOT NULL
+        SQL,
+    'seedOnCreate' => [
+        [
+            'id_admin' => $schema->context('adminnumber'),
+            'rule' => 'administrator',
+            'username' => 'admin',
+            'password' => password_hash(bin2hex(random_bytes(16)), PASSWORD_BCRYPT),
+        ],
+    ],
+    'columns' => [
+        ['username', null, 'VARCHAR(200)'],
+        ['password', null, 'VARCHAR(200)'],
+        ['rule', 'administrator', 'VARCHAR(200)'],
+    ],
+];

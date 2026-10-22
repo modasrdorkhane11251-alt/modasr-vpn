@@ -1,1 +1,59 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9hdXRoKCk7CmNzcmZfY2hlY2tfZ2V0KCk7CgokYWN0aW9uID0gJF9HRVRbJ2FjdGlvbiddID8/ICcnOwokaWQgICAgID0gKGludCkoJF9HRVRbJ2lkJ10gPz8gMCk7CgokYWxsb3dlZF9iYWNrID0gWyd1c2Vycy5waHAnLCAndXNlci5waHAnXTsKJHJhd0JhY2sgPSAkX0dFVFsnYmFjayddID8/ICcnOwokYmFjayA9ICd1c2Vycy5waHAnOyAKZm9yZWFjaCAoJGFsbG93ZWRfYmFjayBhcyAkYWxsb3dlZCkgewogICAgaWYgKHN0cnBvcygkcmF3QmFjaywgJGFsbG93ZWQpID09PSAwKSB7CiAgICAgICAgCiAgICAgICAgJGJhc2UgPSBleHBsb2RlKCc/JywgJHJhd0JhY2spWzBdOwogICAgICAgICRiYWNrID0gJGJhc2UgLiAoJGlkID8gIj9pZD0kaWQiIDogJycpOwogICAgICAgIGJyZWFrOwogICAgfQp9CgppZiAoJHJhd0JhY2sgPT09ICd1c2Vycy5waHAnKSAkYmFjayA9ICd1c2Vycy5waHAnOwoKaWYgKCEkaWQpIHsKICAgIGZsYXNoKCdlcnJvcicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlckFjdGlvbkludmFsaWRVc2VySWQnXSk7CiAgICBoZWFkZXIoJ0xvY2F0aW9uOiB1c2Vycy5waHAnKTsgZXhpdDsKfQoKJHVzZXIgPSBkYl9mZXRjaCgkcGRvLCAiU0VMRUNUIGlkLCBVc2VyX1N0YXR1cyBGUk9NIHVzZXIgV0hFUkUgaWQgPSA/IiwgWyRpZF0pOwppZiAoISR1c2VyKSB7CiAgICBmbGFzaCgnZXJyb3InLCAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJBY3Rpb25Vc2VyTm90Rm91bmQnXSk7CiAgICBoZWFkZXIoJ0xvY2F0aW9uOiB1c2Vycy5waHAnKTsgZXhpdDsKfQoKc3dpdGNoICgkYWN0aW9uKSB7CiAgICBjYXNlICdibG9jayc6CiAgICAgICAgaWYgKCR1c2VyWydVc2VyX1N0YXR1cyddID09PSAnYmxvY2snKSB7CiAgICAgICAgICAgIGZsYXNoKCd3YXJuaW5nJywgJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2VyQWN0aW9uVXNlckFscmVhZHlCbG9ja2VkJ10pOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGRiX3F1ZXJ5KCRwZG8sICJVUERBVEUgdXNlciBTRVQgVXNlcl9TdGF0dXMgPSAnYmxvY2snIFdIRVJFIGlkID0gPyIsIFskaWRdKTsKICAgICAgICAgICAgZmxhc2goJ3N1Y2Nlc3MnLCBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlckFjdGlvblVzZXJCbG9ja2VkU3VjY2VzcyddLCAkaWQpKTsKICAgICAgICAgICAgZXJyb3JfbG9nKCJBZG1pbiB7JF9TRVNTSU9OWydhZG1pbl91c2VyJ119IGJsb2NrZWQgdXNlciAkaWQiKTsKICAgICAgICB9CiAgICAgICAgYnJlYWs7CgogICAgY2FzZSAndW5ibG9jayc6CiAgICAgICAgaWYgKCR1c2VyWydVc2VyX1N0YXR1cyddICE9PSAnYmxvY2snKSB7CiAgICAgICAgICAgIGZsYXNoKCd3YXJuaW5nJywgJHRleHRib3RsYW5nWydwYW5lbCddWyd1c2VyQWN0aW9uVXNlcklzQWN0aXZlJ10pOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGRiX3F1ZXJ5KCRwZG8sICJVUERBVEUgdXNlciBTRVQgVXNlcl9TdGF0dXMgPSAnYWN0aXZlJyBXSEVSRSBpZCA9ID8iLCBbJGlkXSk7CiAgICAgICAgICAgIGZsYXNoKCdzdWNjZXNzJywgc3ByaW50ZigkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3VzZXJBY3Rpb25Vc2VyVW5ibG9ja2VkU3VjY2VzcyddLCAkaWQpKTsKICAgICAgICAgICAgZXJyb3JfbG9nKCJBZG1pbiB7JF9TRVNTSU9OWydhZG1pbl91c2VyJ119IHVuYmxvY2tlZCB1c2VyICRpZCIpOwogICAgICAgIH0KICAgICAgICBicmVhazsKCiAgICBkZWZhdWx0OgogICAgICAgIGZsYXNoKCdlcnJvcicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsndXNlckFjdGlvbkludmFsaWRPcGVyYXRpb24nXSk7Cn0KCmhlYWRlcigiTG9jYXRpb246ICRiYWNrIik7IGV4aXQ7Cg==
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_auth();
+csrf_check_get();
+
+$action = $_GET['action'] ?? '';
+$id     = (int)($_GET['id'] ?? 0);
+
+$allowed_back = ['users.php', 'user.php'];
+$rawBack = $_GET['back'] ?? '';
+$back = 'users.php'; 
+foreach ($allowed_back as $allowed) {
+    if (strpos($rawBack, $allowed) === 0) {
+        
+        $base = explode('?', $rawBack)[0];
+        $back = $base . ($id ? "?id=$id" : '');
+        break;
+    }
+}
+
+if ($rawBack === 'users.php') $back = 'users.php';
+
+if (!$id) {
+    flash('error', $textbotlang['panel']['userActionInvalidUserId']);
+    header('Location: users.php'); exit;
+}
+
+$user = db_fetch($pdo, "SELECT id, User_Status FROM user WHERE id = ?", [$id]);
+if (!$user) {
+    flash('error', $textbotlang['panel']['userActionUserNotFound']);
+    header('Location: users.php'); exit;
+}
+
+switch ($action) {
+    case 'block':
+        if ($user['User_Status'] === 'block') {
+            flash('warning', $textbotlang['panel']['userActionUserAlreadyBlocked']);
+        } else {
+            db_query($pdo, "UPDATE user SET User_Status = 'block' WHERE id = ?", [$id]);
+            flash('success', sprintf($textbotlang['panel']['userActionUserBlockedSuccess'], $id));
+            error_log("Admin {$_SESSION['admin_user']} blocked user $id");
+        }
+        break;
+
+    case 'unblock':
+        if ($user['User_Status'] !== 'block') {
+            flash('warning', $textbotlang['panel']['userActionUserIsActive']);
+        } else {
+            db_query($pdo, "UPDATE user SET User_Status = 'active' WHERE id = ?", [$id]);
+            flash('success', sprintf($textbotlang['panel']['userActionUserUnblockedSuccess'], $id));
+            error_log("Admin {$_SESSION['admin_user']} unblocked user $id");
+        }
+        break;
+
+    default:
+        flash('error', $textbotlang['panel']['userActionInvalidOperation']);
+}
+
+header("Location: $back"); exit;

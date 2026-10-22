@@ -1,1 +1,146 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsIioiLG51bGwsbnVsbCwic2VsZWN0Iik7CgovL19fX19fX19fX19fX19fX19bIHRpbWUgMTIgcmVwb3J0XV9fX19fX19fX19fX19fX18KJG1pZG5pZ2h0X3RpbWUgPSBkYXRlKCJIOmkiKTsKJHJlcG9ydG5pZ2h0ID0gc2VsZWN0KCJ0b3BpY2lkIiwiaWRyZXBvcnQiLCJyZXBvcnQiLCJyZXBvcnRuaWdodCIsInNlbGVjdCIpWydpZHJlcG9ydCddOwovLyBpZih0cnVlKXsKaWYgKCRtaWRuaWdodF90aW1lID09ICIyMzo0NSIpIHsKJGRhdGVmaXJzdCA9IGRhdGUoIlktbS1kIikgLiAiIDAwOjAwOjAwIjsKJGRhdGVlbmQgPSBkYXRlKCJZLW0tZCIpIC4gIiAyMzo1OTo1OSI7CgovLyBIZWxwZXIgZnVuY3Rpb24gdG8gZXhlY3V0ZSBhIHByZXBhcmVkIHN0YXRlbWVudApmdW5jdGlvbiBleGVjdXRlUXVlcnkoJHBkbywgJHNxbCwgJHBhcmFtcykgewogICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCRzcWwpOwogICAgZm9yZWFjaCAoJHBhcmFtcyBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJGtleSwgJHZhbHVlKTsKICAgIH0KICAgICRzdG10LT5leGVjdXRlKCk7CiAgICByZXR1cm4gJHN0bXQ7Cn0KCi8vIEZldGNoIGNvdW50IGFuZCBzdW0gZm9yIGludm9pY2VzCiRzcWxJbnZvaWNlcyA9ICJTRUxFQ1QgQ09VTlQoKikgQVMgY291bnQsIFNVTShwcmljZV9wcm9kdWN0KSBBUyB0b3RhbF9wcmljZSwgU1VNKFZvbHVtZSkgQVMgdG90YWxfdm9sdW1lIAogICAgICAgICAgICAgICAgRlJPTSBpbnZvaWNlIAogICAgICAgICAgICAgICAgV0hFUkUgKEZST01fVU5JWFRJTUUodGltZV9zZWxsKSBCRVRXRUVOIDpzdGFydERhdGUgQU5EIDplbmREYXRlKSAKICAgICAgICAgICAgICAgIEFORCAoc3RhdHVzIElOICgnYWN0aXZlJywgJ2VuZF9vZl90aW1lJywgJ3NlbmRlZHdhcm4nLCAnc2VuZF9vbl9ob2xkJykpIAogICAgICAgICAgICAgICAgQU5EIG5hbWVfcHJvZHVjdCAhPSA6dGVzdE5hbWUiOwokcGFyYW1zID0gWyc6c3RhcnREYXRlJyA9PiAkZGF0ZWZpcnN0LCAnOmVuZERhdGUnID0+ICRkYXRlZW5kLCAnOnRlc3ROYW1lJyA9PiAkdGV4dGJvdGxhbmdbJ2NvbW1vbiddWydsYWJlbHMnXVsndGVzdFNlcnZpY2VOYW1lJ11dOwokc3RtdCA9IGV4ZWN1dGVRdWVyeSgkcGRvLCAkc3FsSW52b2ljZXMsICRwYXJhbXMpOwokcmVzdWx0ID0gJHN0bXQtPmZldGNoKFBETzo6RkVUQ0hfQVNTT0MpOwokZGF5TGlzdFNlbGwgPSAkcmVzdWx0Wydjb3VudCddID8/IDA7CiRzdW1pbnZvaWNlZGF5ID0gJHJlc3VsdFsndG90YWxfcHJpY2UnXSA/PyAwOwokc3Vtdm9sdW1lID0gJHJlc3VsdFsndG90YWxfdm9sdW1lJ10gPz8gMDsKCi8vIEZldGNoIHRlc3Qgc2VydmljZSBjb3VudAokc3FsVGVzdFNlcnZpY2UgPSAiU0VMRUNUIENPVU5UKCopIEFTIGNvdW50IAogICAgICAgICAgICAgICAgICBGUk9NIGludm9pY2UgCiAgICAgICAgICAgICAgICAgIFdIRVJFIChGUk9NX1VOSVhUSU1FKHRpbWVfc2VsbCkgQkVUV0VFTiA6c3RhcnREYXRlIEFORCA6ZW5kRGF0ZSkgCiAgICAgICAgICAgICAgICAgIEFORCAoc3RhdHVzIElOICgnYWN0aXZlJywgJ2VuZF9vZl90aW1lJywgJ3NlbmRlZHdhcm4nKSkgCiAgICAgICAgICAgICAgICAgIEFORCBuYW1lX3Byb2R1Y3QgPSA6dGVzdE5hbWUiOwokc3RtdCA9IGV4ZWN1dGVRdWVyeSgkcGRvLCAkc3FsVGVzdFNlcnZpY2UsICRwYXJhbXMpOwokZGF5TGlzdFNlbGx0ZXN0ID0gJHN0bXQtPmZldGNoQ29sdW1uKCkgPz8gMDsKCi8vIEZldGNoIG5ldyB1c2VycyBjb3VudAokc3FsTmV3VXNlcnMgPSAiU0VMRUNUIENPVU5UKCopIEFTIGNvdW50IAogICAgICAgICAgICAgICAgIEZST00gdXNlciAKICAgICAgICAgICAgICAgICBXSEVSRSAoRlJPTV9VTklYVElNRShyZWdpc3RlcikgQkVUV0VFTiA6c3RhcnREYXRlIEFORCA6ZW5kRGF0ZSkiOwokc3RtdCA9IGV4ZWN1dGVRdWVyeSgkcGRvLCAkc3FsTmV3VXNlcnMsIFsnOnN0YXJ0RGF0ZScgPT4gJGRhdGVmaXJzdCwgJzplbmREYXRlJyA9PiAkZGF0ZWVuZF0pOwokdXNlcm5ldyA9ICRzdG10LT5mZXRjaENvbHVtbigpID8/IDA7CgovLyBGZXRjaCBleHRlbnNpb24gZGF0YQokZGF0ZWZpcnN0ZXh0ZW5kID0gZGF0ZSgiWS9tL2QiKSAuICIgMDA6MDA6MDAiOwokZGF0ZWVuZGV4dGVuZCA9IGRhdGUoIlkvbS9kIikgLiAiIDIzOjU5OjU5IjsKCiRzcWxFeHRlbnNpb25zID0gIlNFTEVDVCBDT1VOVCgqKSBBUyBjb3VudCwgU1VNKHByaWNlKSBBUyB0b3RhbF9wcmljZSAKICAgICAgICAgICAgICAgICAgRlJPTSBzZXJ2aWNlX290aGVyIAogICAgICAgICAgICAgICAgICBXSEVSRSAodGltZSBCRVRXRUVOIDpzdGFydERhdGUgQU5EIDplbmREYXRlKSAKICAgICAgICAgICAgICAgICAgQU5EIHR5cGUgPSAnZXh0ZW5kX3VzZXInCiAgICAgICAgICAgICAgICAgIEFORCBzdGF0dXMgTk9UIElOICgndW5wYWlkJywgJ2ZhaWxlZCcpIjsKJHBhcmFtcyA9IFsnOnN0YXJ0RGF0ZScgPT4gJGRhdGVmaXJzdGV4dGVuZCwgJzplbmREYXRlJyA9PiAkZGF0ZWVuZGV4dGVuZF07CiRzdG10ID0gZXhlY3V0ZVF1ZXJ5KCRwZG8sICRzcWxFeHRlbnNpb25zLCAkcGFyYW1zKTsKJHJlc3VsdCA9ICRzdG10LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKJGNvdW50ZXh0ZW5kZGF5ID0gJHJlc3VsdFsnY291bnQnXSA/PyAwOwokc3VtY291bnRleHRlbmQgPSBudW1iZXJfZm9ybWF0KCRyZXN1bHRbJ3RvdGFsX3ByaWNlJ10gPz8gMCk7CgovLyBGZXRjaCB0b3AgYWdlbnRzCiRzcWxUb3BBZ2VudHMgPSAiCiAgICBTRUxFQ1QgdS5pZCwgdS51c2VybmFtZSwgCiAgICAgICAgICAgKFNFTEVDVCBTVU0oaS5wcmljZV9wcm9kdWN0KSAKICAgICAgICAgICAgRlJPTSBpbnZvaWNlIGkgCiAgICAgICAgICAgIFdIRVJFIGkuaWRfdXNlciA9IHUuaWQgCiAgICAgICAgICAgIEFORCAoaS50aW1lX3NlbGwgQkVUV0VFTiA6c3RhcnREYXRlMSBBTkQgOmVuZERhdGUxKSAKICAgICAgICAgICAgQU5EIGkuc3RhdHVzIElOICgnYWN0aXZlJywgJ2VuZF9vZl90aW1lJywgJ3NlbmRlZHdhcm4nLCAnc2VuZF9vbl9ob2xkJykpIEFTIHRvdGFsX3NwZW50IAogICAgRlJPTSB1c2VyIHUgCiAgICBXSEVSRSB1LmFnZW50IElOICgnbicsICduMicpIAogICAgQU5EIEVYSVNUUyAoU0VMRUNUIDEgCiAgICAgICAgICAgICAgICBGUk9NIGludm9pY2UgaSAKICAgICAgICAgICAgICAgIFdIRVJFIGkuaWRfdXNlciA9IHUuaWQgCiAgICAgICAgICAgICAgICBBTkQgKGkudGltZV9zZWxsIEJFVFdFRU4gOnN0YXJ0RGF0ZTIgQU5EIDplbmREYXRlMikgCiAgICAgICAgICAgICAgICBBTkQgaS5zdGF0dXMgSU4gKCdhY3RpdmUnLCAnZW5kX29mX3RpbWUnLCAnc2VuZGVkd2FybicsICdzZW5kX29uX2hvbGQnKSkgCiAgICBPUkRFUiBCWSB0b3RhbF9zcGVudCBERVNDIAogICAgTElNSVQgMyI7CgokcGFyYW1zID0gWwogICAgJzpzdGFydERhdGUxJyA9PiBzdHJ0b3RpbWUoJGRhdGVmaXJzdGV4dGVuZCksCiAgICAnOmVuZERhdGUxJyA9PiBzdHJ0b3RpbWUoJGRhdGVlbmRleHRlbmQpLAogICAgJzpzdGFydERhdGUyJyA9PiBzdHJ0b3RpbWUoJGRhdGVmaXJzdGV4dGVuZCksCiAgICAnOmVuZERhdGUyJyA9PiBzdHJ0b3RpbWUoJGRhdGVlbmRleHRlbmQpCl07Cgokc3RtdCA9IGV4ZWN1dGVRdWVyeSgkcGRvLCAkc3FsVG9wQWdlbnRzLCAkcGFyYW1zKTsKJGxpc3RhZ2VudHVzZXIgPSAkc3RtdC0+ZmV0Y2hBbGwoUERPOjpGRVRDSF9BU1NPQyk7CiR0ZXh0YWdlbnQgPSAkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydCddWydkYWlseVRvcEFnZW50c1RpdGxlJ107CmZvcmVhY2ggKCRsaXN0YWdlbnR1c2VyIGFzICRhZ2VudCkgewogICAgJHRleHRhZ2VudCAuPSBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1snQWRtaW4nXVsncmVwb3J0J11bJ2RhaWx5VG9wQWdlbnRSb3cnXSwgJGFnZW50WydpZCddLCAkYWdlbnRbJ3VzZXJuYW1lJ10sICRhZ2VudFsndG90YWxfc3BlbnQnXSk7Cn0KCi8vIEZldGNoIHBhbmVsIHJlcG9ydHMKJHBhbmVscyA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgbnVsbCwgbnVsbCwgImZldGNoQWxsIik7CiR0ZXh0cGFuZWwgPSAkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydCddWydkYWlseVBhbmVsc1RpdGxlJ107CmZvcmVhY2ggKCRwYW5lbHMgYXMgJHBhbmVsKSB7CiAgICAkc3FsUGFuZWwgPSAiU0VMRUNUIENPVU5UKCopIEFTIG9yZGVycywgU1VNKHByaWNlX3Byb2R1Y3QpIEFTIHRvdGFsX3ByaWNlLCBTVU0oVm9sdW1lKSBBUyB0b3RhbF92b2x1bWUgCiAgICAgICAgICAgICAgICAgRlJPTSBpbnZvaWNlIAogICAgICAgICAgICAgICAgIFdIRVJFIChGUk9NX1VOSVhUSU1FKHRpbWVfc2VsbCkgQkVUV0VFTiA6c3RhcnREYXRlIEFORCA6ZW5kRGF0ZSkgCiAgICAgICAgICAgICAgICAgQU5EIChzdGF0dXMgSU4gKCdhY3RpdmUnLCAnZW5kX29mX3RpbWUnLCAnc2VuZGVkd2FybicsICdzZW5kX29uX2hvbGQnKSkgCiAgICAgICAgICAgICAgICAgQU5EIFNlcnZpY2VfbG9jYXRpb24gPSA6bG9jYXRpb24gCiAgICAgICAgICAgICAgICAgQU5EIG5hbWVfcHJvZHVjdCAhPSA6dGVzdE5hbWUiOwogICAgJHBhcmFtcyA9IFsnOnN0YXJ0RGF0ZScgPT4gJGRhdGVmaXJzdCwgJzplbmREYXRlJyA9PiAkZGF0ZWVuZCwgJzpsb2NhdGlvbicgPT4gJHBhbmVsWyduYW1lX3BhbmVsJ10sICc6dGVzdE5hbWUnID0+ICR0ZXh0Ym90bGFuZ1snY29tbW9uJ11bJ2xhYmVscyddWyd0ZXN0U2VydmljZU5hbWUnXV07CiAgICAkc3RtdCA9IGV4ZWN1dGVRdWVyeSgkcGRvLCAkc3FsUGFuZWwsICRwYXJhbXMpOwogICAgJHJlc3VsdCA9ICRzdG10LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKCiAgICAkb3JkZXJzID0gJHJlc3VsdFsnb3JkZXJzJ10gPz8gMDsKICAgICR0b3RhbF9wcmljZSA9ICRyZXN1bHRbJ3RvdGFsX3ByaWNlJ10gPz8gMDsKICAgICR0b3RhbF92b2x1bWUgPSAkcmVzdWx0Wyd0b3RhbF92b2x1bWUnXSA/PyAwOwoKICAgICR0ZXh0cGFuZWwgLj0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydCddWydkYWlseVBhbmVsUm93J10sICRwYW5lbFsnbmFtZV9wYW5lbCddLCAkb3JkZXJzLCAkdG90YWxfcHJpY2UsICR0b3RhbF92b2x1bWUpOwp9CgovLyBEYWlseSByZXBvcnQgdGV4dAokdGV4dHJlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnQnXVsnZGFpbHlCb3QnXSwgJGNvdW50ZXh0ZW5kZGF5LCAkc3VtY291bnRleHRlbmQsICRkYXlMaXN0U2VsbCwgJHN1bWludm9pY2VkYXksICRkYXlMaXN0U2VsbHRlc3QsICRzdW12b2x1bWUsICR1c2VybmV3KTsKCi8vIFNlbmQgcmVwb3J0cyB0byBUZWxlZ3JhbQppZiAoIWVtcHR5KCRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddKSkgewogICAgJHJlcG9ydF9kYXRhID0gWwogICAgICAgIFsndGV4dCcgPT4gJHRleHRhZ2VudF0sCiAgICAgICAgWyd0ZXh0JyA9PiAkdGV4dHJlcG9ydF0sCiAgICAgICAgWyd0ZXh0JyA9PiAkdGV4dHBhbmVsXQogICAgXTsKCiAgICBmb3JlYWNoICgkcmVwb3J0X2RhdGEgYXMgJHJlcG9ydCkgewogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICRyZXBvcnRuaWdodCwKICAgICAgICAgICAgJ3RleHQnID0+ICRyZXBvcnRbJ3RleHQnXSwKICAgICAgICAgICAgJ3BhcnNlX21vZGUnID0+ICJIVE1MIgogICAgICAgIF0pOwogICAgfQp9Cn0=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+$setting = select("setting","*",null,null,"select");
+
+//________________[ time 12 report]________________
+$midnight_time = date("H:i");
+$reportnight = select("topicid","idreport","report","reportnight","select")['idreport'];
+// if(true){
+if ($midnight_time == "23:45") {
+$datefirst = date("Y-m-d") . " 00:00:00";
+$dateend = date("Y-m-d") . " 23:59:59";
+
+// Helper function to execute a prepared statement
+function executeQuery($pdo, $sql, $params) {
+    $stmt = $pdo->prepare($sql);
+    foreach ($params as $key => $value) {
+        $stmt->bindValue($key, $value);
+    }
+    $stmt->execute();
+    return $stmt;
+}
+
+// Fetch count and sum for invoices
+$sqlInvoices = "SELECT COUNT(*) AS count, SUM(price_product) AS total_price, SUM(Volume) AS total_volume 
+                FROM invoice 
+                WHERE (FROM_UNIXTIME(time_sell) BETWEEN :startDate AND :endDate) 
+                AND (status IN ('active', 'end_of_time', 'sendedwarn', 'send_on_hold')) 
+                AND name_product != :testName";
+$params = [':startDate' => $datefirst, ':endDate' => $dateend, ':testName' => $textbotlang['common']['labels']['testServiceName']];
+$stmt = executeQuery($pdo, $sqlInvoices, $params);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+$dayListSell = $result['count'] ?? 0;
+$suminvoiceday = $result['total_price'] ?? 0;
+$sumvolume = $result['total_volume'] ?? 0;
+
+// Fetch test service count
+$sqlTestService = "SELECT COUNT(*) AS count 
+                  FROM invoice 
+                  WHERE (FROM_UNIXTIME(time_sell) BETWEEN :startDate AND :endDate) 
+                  AND (status IN ('active', 'end_of_time', 'sendedwarn')) 
+                  AND name_product = :testName";
+$stmt = executeQuery($pdo, $sqlTestService, $params);
+$dayListSelltest = $stmt->fetchColumn() ?? 0;
+
+// Fetch new users count
+$sqlNewUsers = "SELECT COUNT(*) AS count 
+                 FROM user 
+                 WHERE (FROM_UNIXTIME(register) BETWEEN :startDate AND :endDate)";
+$stmt = executeQuery($pdo, $sqlNewUsers, [':startDate' => $datefirst, ':endDate' => $dateend]);
+$usernew = $stmt->fetchColumn() ?? 0;
+
+// Fetch extension data
+$datefirstextend = date("Y/m/d") . " 00:00:00";
+$dateendextend = date("Y/m/d") . " 23:59:59";
+
+$sqlExtensions = "SELECT COUNT(*) AS count, SUM(price) AS total_price 
+                  FROM service_other 
+                  WHERE (time BETWEEN :startDate AND :endDate) 
+                  AND type = 'extend_user'
+                  AND status NOT IN ('unpaid', 'failed')";
+$params = [':startDate' => $datefirstextend, ':endDate' => $dateendextend];
+$stmt = executeQuery($pdo, $sqlExtensions, $params);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+$countextendday = $result['count'] ?? 0;
+$sumcountextend = number_format($result['total_price'] ?? 0);
+
+// Fetch top agents
+$sqlTopAgents = "
+    SELECT u.id, u.username, 
+           (SELECT SUM(i.price_product) 
+            FROM invoice i 
+            WHERE i.id_user = u.id 
+            AND (i.time_sell BETWEEN :startDate1 AND :endDate1) 
+            AND i.status IN ('active', 'end_of_time', 'sendedwarn', 'send_on_hold')) AS total_spent 
+    FROM user u 
+    WHERE u.agent IN ('n', 'n2') 
+    AND EXISTS (SELECT 1 
+                FROM invoice i 
+                WHERE i.id_user = u.id 
+                AND (i.time_sell BETWEEN :startDate2 AND :endDate2) 
+                AND i.status IN ('active', 'end_of_time', 'sendedwarn', 'send_on_hold')) 
+    ORDER BY total_spent DESC 
+    LIMIT 3";
+
+$params = [
+    ':startDate1' => strtotime($datefirstextend),
+    ':endDate1' => strtotime($dateendextend),
+    ':startDate2' => strtotime($datefirstextend),
+    ':endDate2' => strtotime($dateendextend)
+];
+
+$stmt = executeQuery($pdo, $sqlTopAgents, $params);
+$listagentuser = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$textagent = $textbotlang['Admin']['report']['dailyTopAgentsTitle'];
+foreach ($listagentuser as $agent) {
+    $textagent .= sprintf($textbotlang['Admin']['report']['dailyTopAgentRow'], $agent['id'], $agent['username'], $agent['total_spent']);
+}
+
+// Fetch panel reports
+$panels = select("marzban_panel", "*", null, null, "fetchAll");
+$textpanel = $textbotlang['Admin']['report']['dailyPanelsTitle'];
+foreach ($panels as $panel) {
+    $sqlPanel = "SELECT COUNT(*) AS orders, SUM(price_product) AS total_price, SUM(Volume) AS total_volume 
+                 FROM invoice 
+                 WHERE (FROM_UNIXTIME(time_sell) BETWEEN :startDate AND :endDate) 
+                 AND (status IN ('active', 'end_of_time', 'sendedwarn', 'send_on_hold')) 
+                 AND Service_location = :location 
+                 AND name_product != :testName";
+    $params = [':startDate' => $datefirst, ':endDate' => $dateend, ':location' => $panel['name_panel'], ':testName' => $textbotlang['common']['labels']['testServiceName']];
+    $stmt = executeQuery($pdo, $sqlPanel, $params);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $orders = $result['orders'] ?? 0;
+    $total_price = $result['total_price'] ?? 0;
+    $total_volume = $result['total_volume'] ?? 0;
+
+    $textpanel .= sprintf($textbotlang['Admin']['report']['dailyPanelRow'], $panel['name_panel'], $orders, $total_price, $total_volume);
+}
+
+// Daily report text
+$textreport = sprintf($textbotlang['Admin']['report']['dailyBot'], $countextendday, $sumcountextend, $dayListSell, $suminvoiceday, $dayListSelltest, $sumvolume, $usernew);
+
+// Send reports to Telegram
+if (!empty($setting['Channel_Report'])) {
+    $report_data = [
+        ['text' => $textagent],
+        ['text' => $textreport],
+        ['text' => $textpanel]
+    ];
+
+    foreach ($report_data as $report) {
+        telegram('sendmessage', [
+            'chat_id' => $setting['Channel_Report'],
+            'message_thread_id' => $reportnight,
+            'text' => $report['text'],
+            'parse_mode' => "HTML"
+        ]);
+    }
+}
+}

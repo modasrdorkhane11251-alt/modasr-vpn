@@ -1,1 +1,19 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgaWRfdXNlciB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgYm90X3Rva2VuIHZhcmNoYXIoMjAwKSBOT1QgTlVMTCwKICAgICAgICBhZG1pbl9pZHMgVEVYVCBOT1QgTlVMTCwKICAgICAgICB1c2VybmFtZSB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgc2V0dGluZyBURVhUIE5VTEwsCiAgICAgICAgaGlkZV9wYW5lbCBKU09OIE5PVCBOVUxMLAogICAgICAgIHdlYmhvb2tfc2VjcmV0IHZhcmNoYXIoMjAwKSBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgICAgIHRpbWUgdmFyY2hhcigyMDApIE5PVCBOVUxMCiAgICAgICAgU1FMLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ2hpZGVfcGFuZWwnLCAne30nLCAnSlNPTiddLAogICAgICAgIFsnd2ViaG9va19zZWNyZXQnLCBudWxsLCAiVkFSQ0hBUigyMDApIE5PVCBOVUxMIERFRkFVTFQgJyciXSwKICAgIF0sCl07Cg==
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        id_user varchar(200) NOT NULL,
+        bot_token varchar(200) NOT NULL,
+        admin_ids TEXT NOT NULL,
+        username varchar(200) NOT NULL,
+        setting TEXT NULL,
+        hide_panel JSON NOT NULL,
+        webhook_secret varchar(200) NOT NULL DEFAULT '',
+        time varchar(200) NOT NULL
+        SQL,
+    'columns' => [
+        ['hide_panel', '{}', 'JSON'],
+        ['webhook_secret', null, "VARCHAR(200) NOT NULL DEFAULT ''"],
+    ],
+];

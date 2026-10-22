@@ -1,1 +1,22 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT50YWJsZUV4aXN0cygnbWFyemJhbl9wYW5lbCcpKSB7CiAgICAgICAgcmV0dXJuOwogICAgfQogICAgJG1pc3NpbmcgPSAkcGRvCiAgICAgICAgLT5xdWVyeSgiU0VMRUNUIGlkIEZST00gbWFyemJhbl9wYW5lbCBXSEVSRSBjb2RlX3BhbmVsIElTIE5VTEwgT1IgY29kZV9wYW5lbCA9ICcnIikKICAgICAgICAtPmZldGNoQWxsKFBETzo6RkVUQ0hfQ09MVU1OKTsKICAgIGlmICghJG1pc3NpbmcpIHsKICAgICAgICByZXR1cm47CiAgICB9CiAgICAkaGlnaGVzdCA9ICRwZG8KICAgICAgICAtPnF1ZXJ5KCJTRUxFQ1QgTUFYKENBU1QoU1VCU1RSSU5HKGNvZGVfcGFuZWwsIDMpIEFTIFVOU0lHTkVEKSkgRlJPTSBtYXJ6YmFuX3BhbmVsIFdIRVJFIGNvZGVfcGFuZWwgTElLRSAnN2UlJyIpCiAgICAgICAgLT5mZXRjaENvbHVtbigpOwogICAgJG5leHQgPSAkaGlnaGVzdCA/IChpbnQpICRoaWdoZXN0ICsgMSA6IDE1OwogICAgJHVwZGF0ZSA9ICRwZG8tPnByZXBhcmUoJ1VQREFURSBtYXJ6YmFuX3BhbmVsIFNFVCBjb2RlX3BhbmVsID0gPyBXSEVSRSBpZCA9ID8nKTsKICAgIGZvcmVhY2ggKCRtaXNzaW5nIGFzICRpZCkgewogICAgICAgICR1cGRhdGUtPmV4ZWN1dGUoWyc3ZScgLiAkbmV4dCwgJGlkXSk7CiAgICAgICAgJG5leHQrKzsKICAgIH0KfTsK
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->tableExists('marzban_panel')) {
+        return;
+    }
+    $missing = $pdo
+        ->query("SELECT id FROM marzban_panel WHERE code_panel IS NULL OR code_panel = ''")
+        ->fetchAll(PDO::FETCH_COLUMN);
+    if (!$missing) {
+        return;
+    }
+    $highest = $pdo
+        ->query("SELECT MAX(CAST(SUBSTRING(code_panel, 3) AS UNSIGNED)) FROM marzban_panel WHERE code_panel LIKE '7e%'")
+        ->fetchColumn();
+    $next = $highest ? (int) $highest + 1 : 15;
+    $update = $pdo->prepare('UPDATE marzban_panel SET code_panel = ? WHERE id = ?');
+    foreach ($missing as $id) {
+        $update->execute(['7e' . $next, $id]);
+        $next++;
+    }
+};

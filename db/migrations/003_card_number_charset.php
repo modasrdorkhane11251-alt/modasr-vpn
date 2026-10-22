@@ -1,1 +1,15 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT50YWJsZUV4aXN0cygnY2FyZF9udW1iZXInKSkgewogICAgICAgIHJldHVybjsKICAgIH0KICAgICRjb2x1bW4gPSAkcGRvLT5xdWVyeSgiU0hPVyBGVUxMIENPTFVNTlMgRlJPTSBjYXJkX251bWJlciBMSUtFICduYW1lY2FyZCciKS0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQyk7CiAgICAkY29sbGF0aW9uID0gJGNvbHVtblsnQ29sbGF0aW9uJ10gPz8gJyc7CiAgICBpZiAoJGNvbGxhdGlvbiAhPT0gJycgJiYgc3RyaXBvcygkY29sbGF0aW9uLCAndXRmOG1iNCcpICE9PSBmYWxzZSkgewogICAgICAgIHJldHVybjsKICAgIH0KICAgICRwZG8tPmV4ZWMoJ0FMVEVSIFRBQkxFIGNhcmRfbnVtYmVyIENPTlZFUlQgVE8gQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpJyk7CiAgICAkcGRvLT5leGVjKCdBTFRFUiBUQUJMRSBjYXJkX251bWJlciBNT0RJRlkgY2FyZG51bWJlciB2YXJjaGFyKDUwMCkgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5PVCBOVUxMJyk7CiAgICAkcGRvLT5leGVjKCdBTFRFUiBUQUJMRSBjYXJkX251bWJlciBNT0RJRlkgbmFtZWNhcmQgdmFyY2hhcigxMDAwKSBDSEFSQUNURVIgU0VUIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2kgTk9UIE5VTEwnKTsKfTsK
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->tableExists('card_number')) {
+        return;
+    }
+    $column = $pdo->query("SHOW FULL COLUMNS FROM card_number LIKE 'namecard'")->fetch(PDO::FETCH_ASSOC);
+    $collation = $column['Collation'] ?? '';
+    if ($collation !== '' && stripos($collation, 'utf8mb4') !== false) {
+        return;
+    }
+    $pdo->exec('ALTER TABLE card_number CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci');
+    $pdo->exec('ALTER TABLE card_number MODIFY cardnumber varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL');
+    $pdo->exec('ALTER TABLE card_number MODIFY namecard varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL');
+};

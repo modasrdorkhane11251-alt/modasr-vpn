@@ -1,1 +1,289 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2JvdGFwaS5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwpjbGFzcyBTZXJ2aWNlTW9uaXRvcgp7CiAgICBwcml2YXRlICRQYW5lbDsKICAgIHByaXZhdGUgJHBkbzsKICAgIHByaXZhdGUgJHNldHRpbmc7CiAgICBwcml2YXRlICRyZXBvcnRDcm9uOwogICAgcHJpdmF0ZSAkdGV4dF9QdXJjaGFzZWRfc2VydmljZXM7CiAgICBwcml2YXRlICRzdGF0dXNfY3JvbjsKICAgIGNvbnN0IFNFQ09ORFNfUEVSX0RBWSA9IDg2NDAwOwogICAgcHJpdmF0ZSAkdGV4dEJvdExhbmc7CgogICAgcHVibGljIGZ1bmN0aW9uIF9fY29uc3RydWN0KCkKICAgIHsKICAgICAgICBnbG9iYWwgJHBkbzsKICAgICAgICAkdGhpcy0+cGRvID0gJHBkbzsKICAgICAgICAkdGhpcy0+UGFuZWwgPSBuZXcgTWFuYWdlUGFuZWwoKTsKICAgICAgICAkdGhpcy0+cmVwb3J0Q3JvbiA9IHNlbGVjdCgidG9waWNpZCIsICJpZHJlcG9ydCIsICJyZXBvcnQiLCAicmVwb3J0Y3JvbiIsICJzZWxlY3QiKVsnaWRyZXBvcnQnXTsKICAgICAgICAkdGhpcy0+c2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiAgICAgICAgJHRoaXMtPnN0YXR1c19jcm9uID0ganNvbl9kZWNvZGUoJHRoaXMtPnNldHRpbmdbJ2Nyb25fc3RhdHVzJ10sIHRydWUpOwogICAgICAgICR0aGlzLT50ZXh0Qm90TGFuZyA9IGxhbmd1YWdlY2hhbmdlKGRpcm5hbWUoX19ESVJfXykpOwogICAgICAgICR0aGlzLT50ZXh0X1B1cmNoYXNlZF9zZXJ2aWNlcyA9ICR0aGlzLT50ZXh0Qm90TGFuZ1sndGV4dGJvdCddWydwdXJjaGFzZWRTZXJ2aWNlcyddID8/ICcnOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBSdW5Ob3RpZmFjdGlvbnMoKQogICAgewogICAgICAgICRpbnZvaWNlcyA9ICR0aGlzLT5nZXRBY3RpdmVJbnZvaWNlcygpOwogICAgICAgIGlmICgkaW52b2ljZXMgPT0gZmFsc2UpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICAkc3RtdENyb24gPSAkdGhpcy0+cGRvLT5wcmVwYXJlKCJVUERBVEUgaW52b2ljZSBTRVQgdGltZV9jcm9uID0gPyBXSEVSRSBpZF9pbnZvaWNlID0gPyIpOwogICAgICAgIGZvcmVhY2ggKCRpbnZvaWNlcyBhcyAkaW52b2ljZSkgewogICAgICAgICAgICBpZiAoJGludm9pY2VbJ3RpbWVfY3JvbiddICE9IG51bGwgJiYgKHRpbWUoKSAtICRpbnZvaWNlWyd0aW1lX2Nyb24nXSkgPCAxNjAwKQogICAgICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgICAgICRzdG10Q3Jvbi0+ZXhlY3V0ZShbdGltZSgpLCAkaW52b2ljZVsnaWRfaW52b2ljZSddXSk7CiAgICAgICAgICAgIGNsZWFyU2VsZWN0Q2FjaGUoJ2ludm9pY2UnKTsKICAgICAgICAgICAgJGNoZWNrX3NlbmQgPSBqc29uX2RlY29kZSgkaW52b2ljZVsnbm90aWZjdGlvbnMnXSwgdHJ1ZSk7CiAgICAgICAgICAgICRkYXRhID0gJHRoaXMtPnByb2Nlc3NJbnZvaWNlKCRpbnZvaWNlKTsKICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkZGF0YSkpCiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgJHJlc3VsdCA9IGZhbHNlOwogICAgICAgICAgICBpZiAoISRjaGVja19zZW5kWyd2b2x1bWUnXSkgewogICAgICAgICAgICAgICAgaWYgKCR0aGlzLT5zdGF0dXNfY3Jvblsndm9sdW1lJ10pCiAgICAgICAgICAgICAgICAgICAgJHJlc3VsdCA9ICR0aGlzLT5jaGVja1ZvbHVtZVRocmVzaG9sZCgkZGF0YVsnaW52b2ljZSddLCAkZGF0YVsndXNlciddLCAkZGF0YVsndXNlckRhdGEnXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmICgkcmVzdWx0KQogICAgICAgICAgICAgICAgJGRhdGFbJ2ludm9pY2UnXSA9IHNlbGVjdCgiaW52b2ljZSIsICIqIiwgImlkX2ludm9pY2UiLCAkaW52b2ljZVsnaWRfaW52b2ljZSddKTsKICAgICAgICAgICAgaWYgKCEkY2hlY2tfc2VuZFsndGltZSddKSB7CiAgICAgICAgICAgICAgICBpZiAoJHRoaXMtPnN0YXR1c19jcm9uWydkYXknXSkKICAgICAgICAgICAgICAgICAgICAkdGhpcy0+Y2hlY2tUaW1lRXhwaXJhdGlvbigkZGF0YVsnaW52b2ljZSddLCAkZGF0YVsndXNlciddLCAkZGF0YVsndXNlckRhdGEnXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmICgkdGhpcy0+c3RhdHVzX2Nyb25bJ3JlbW92ZSddKQogICAgICAgICAgICAgICAgJHRoaXMtPnNob3VsZFJlbW92ZVNlcnZpY2UoJGRhdGFbJ2ludm9pY2UnXSwgJGRhdGFbJ3VzZXInXSwgJGRhdGFbJ3VzZXJEYXRhJ10sICRpbnZvaWNlWyd1c2VybmFtZSddKTsKICAgICAgICAgICAgaWYgKCR0aGlzLT5zdGF0dXNfY3JvblsncmVtb3ZlX3ZvbHVtZSddKQogICAgICAgICAgICAgICAgJHRoaXMtPnNob3VsZFJlbW92ZVNlcnZpY2XZgHZvbHVtZSgkZGF0YVsnaW52b2ljZSddLCAkZGF0YVsndXNlciddLCAkZGF0YVsndXNlckRhdGEnXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgICAgICAgICBpZiAoJGRhdGFbJ3BhbmVsJ11bJ2luYm91bmRzdGF0dXMnXSA9PSAib25pbmJvdW5kZGlzYWJsZSIgJiYgJGRhdGFbJ3BhbmVsJ11bJ3R5cGUnXSA9PSAibWFyemJhbiIpCiAgICAgICAgICAgICAgICAkdGhpcy0+YWN0aXZlX2luYm91bmRfZXhwaXJlKCRkYXRhWydpbnZvaWNlJ10sICRkYXRhWyd1c2VyRGF0YSddLCAkZGF0YVsncGFuZWwnXSk7CiAgICAgICAgfQogICAgfQoKCiAgICBwcml2YXRlIGZ1bmN0aW9uIGdldEFjdGl2ZUludm9pY2VzKCkKICAgIHsKICAgICAgICAkdGltZV9ob3VycyA9IHRpbWUoKSAtIDM2MDA7CiAgICAgICAgJFFVRVJZID0gIlNFTEVDVCAqIEZST00gaW52b2ljZSBXSEVSRSAoU3RhdHVzID0gJ2FjdGl2ZScgT1IgU3RhdHVzID0gJ2VuZF9vZl90aW1lJyBPUiBTdGF0dXMgPSAnZW5kX29mX3ZvbHVtZScgT1IgU3RhdHVzID0gJ3NlbmRlZHdhcm4nIE9SIFN0YXR1cyA9ICdzZW5kX29uX2hvbGQnKSBBTkQgbmFtZV9wcm9kdWN0ICE9IDp0ZXN0TmFtZSBBTkQgKHRpbWVfY3JvbiA8PSA6dGltZUhvdXJzIE9SIHRpbWVfY3JvbiBJUyBOVUxMKSBPUkRFUiBCWSB0aW1lX2Nyb24gIExJTUlUIDMwIjsKICAgICAgICAkc3RtdCA9ICR0aGlzLT5wZG8tPnByZXBhcmUoJFFVRVJZKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJzp0ZXN0TmFtZScgPT4gJHRoaXMtPnRleHRCb3RMYW5nWydjb21tb24nXVsnbGFiZWxzJ11bJ3Rlc3RTZXJ2aWNlTmFtZSddLCAnOnRpbWVIb3VycycgPT4gJHRpbWVfaG91cnNdKTsKICAgICAgICByZXR1cm4gJHN0bXQtPmZldGNoQWxsKFBETzo6RkVUQ0hfQVNTT0MpOwogICAgfQoKICAgIHByaXZhdGUgZnVuY3Rpb24gcHJvY2Vzc0ludm9pY2UoJGludm9pY2UpCiAgICB7CiAgICAgICAgJHVzZXJuYW1lID0gJGludm9pY2VbJ3VzZXJuYW1lJ107CgogICAgICAgIC8vIEdldCBwYW5lbCBpbmZvcm1hdGlvbgogICAgICAgICRwYW5lbEluZm8gPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgInNlbGVjdCIpOwogICAgICAgIGlmICghJHBhbmVsSW5mbykKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwoKICAgICAgICBpZiAoJHBhbmVsSW5mb1snc3RhdHVzJ10gPT0gImRpc2FibGVkIikKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgIC8vIEdldCB1c2VyIGluZm9ybWF0aW9uCiAgICAgICAgJHVzZXIgPSBzZWxlY3QoInVzZXIiLCAiKiIsICJpZCIsICRpbnZvaWNlWydpZF91c2VyJ10sICJzZWxlY3QiKTsKICAgICAgICBpZiAoJHVzZXIgPT0gZmFsc2UpCiAgICAgICAgICAgIHJldHVybiBmYWxzZTsKCiAgICAgICAgLy8gR2V0IHVzZXJuYW1lIGRhdGEgZnJvbSBwYW5lbAogICAgICAgICR1c2VyRGF0YSA9ICR0aGlzLT5QYW5lbC0+RGF0YVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJHVzZXJuYW1lKTsKICAgICAgICBpZiAoISR1c2VyRGF0YSB8fCAkdXNlckRhdGFbJ3N0YXR1cyddID09ICJVbnN1Y2Nlc3NmdWwiKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgcmV0dXJuIFsKICAgICAgICAgICAgJ2ludm9pY2UnID0+ICRpbnZvaWNlLAogICAgICAgICAgICAncGFuZWwnID0+ICRwYW5lbEluZm8sCiAgICAgICAgICAgICd1c2VyJyA9PiAkdXNlciwKICAgICAgICAgICAgJ3VzZXJEYXRhJyA9PiAkdXNlckRhdGEKICAgICAgICBdOwogICAgfQoKICAgIHByaXZhdGUgZnVuY3Rpb24gY2hlY2tWb2x1bWVUaHJlc2hvbGQoJGludm9pY2UsICR1c2VyLCAkdXNlckRhdGEsICR1c2VybmFtZSkKICAgIHsKICAgICAgICAkcmVtYWluaW5nVm9sdW1lID0gJHVzZXJEYXRhWydkYXRhX2xpbWl0J10gLSAkdXNlckRhdGFbJ3VzZWRfdHJhZmZpYyddOwogICAgICAgICR2b2x1bWVXYXJuaW5nVGhyZXNob2xkID0gJHRoaXMtPnNldHRpbmdbJ3ZvbHVtZXdhcm4nXSAqIHBvdygxMDI0LCAzKTsKICAgICAgICAkaXNWb2x1bWVXYXJuaW5nID0gJHJlbWFpbmluZ1ZvbHVtZSA8PSAkdm9sdW1lV2FybmluZ1RocmVzaG9sZCAmJiAkcmVtYWluaW5nVm9sdW1lID4gMCAmJiBpbl9hcnJheSgkdXNlckRhdGFbJ3N0YXR1cyddLCBbJ2FjdGl2ZScsICdVbmtub3duJ10pOwoKICAgICAgICBpZiAoJGlzVm9sdW1lV2FybmluZykgewogICAgICAgICAgICAkZm9ybWF0dGVkVm9sdW1lID0gZm9ybWF0Qnl0ZXMoJHJlbWFpbmluZ1ZvbHVtZSk7CiAgICAgICAgICAgICRtZXNzYWdlID0gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsnZ3JlZXRpbmcnXSAuCiAgICAgICAgICAgICAgICBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3ZvbHVtZVJlbWFpbmluZyddLCAkdXNlcm5hbWUsICRmb3JtYXR0ZWRWb2x1bWUpIC4KICAgICAgICAgICAgICAgIHNwcmludGYoJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsndm9sdW1lQWN0aW9uSGludCddLCAkdGhpcy0+dGV4dF9QdXJjaGFzZWRfc2VydmljZXMpOwogICAgICAgICAgICAkcmVwb3J0TWVzc2FnZSA9ICR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3ZvbHVtZVRpdGxlJ10gLgogICAgICAgICAgICAgICAgc3ByaW50ZigkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWydzZXJ2aWNlVXNlcm5hbWUnXSwgJHVzZXJuYW1lKSAuCiAgICAgICAgICAgICAgICBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3NlcnZpY2VTdGF0dXMnXSwgJHVzZXJEYXRhWydzdGF0dXMnXSkgLgogICAgICAgICAgICAgICAgc3ByaW50ZigkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWydyZW1haW5pbmdWb2x1bWUnXSwgJGZvcm1hdHRlZFZvbHVtZSk7CiAgICAgICAgICAgICR0aGlzLT5zZW5kX25vdGlmYWN0aW9ucygkaW52b2ljZSwgJHVzZXIsICRtZXNzYWdlLCB0cnVlLCAkaW52b2ljZVsnYm90dHlwZSddKTsKICAgICAgICAgICAgJHRoaXMtPnNlbmRSZXBvcnROb3RpZmljYXRpb24oJHJlcG9ydE1lc3NhZ2UpOwogICAgICAgICAgICAkdGhpcy0+dXBkYXRlSW52b2ljZVN0YXR1cygidm9sdW1lIiwgJGludm9pY2UpOwogICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICB9CiAgICB9CiAgICBwcml2YXRlIGZ1bmN0aW9uIHNob3VsZFJlbW92ZVNlcnZpY2UoJGludm9pY2UsICR1c2VyLCAkdXNlckRhdGEsICR1c2VybmFtZSkKICAgIHsKICAgICAgICBpZiAoIWluX2FycmF5KCR1c2VyRGF0YVsnc3RhdHVzJ10sIFsnbGltaXRlZCcsICdleHBpcmVkJ10pKQogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgJHRpbWVTZXJ2aWNlID0gJHVzZXJEYXRhWydleHBpcmUnXSAtIHRpbWUoKTsKICAgICAgICAkZGF5c1JlbWFpbmluZyA9IGludHZhbCgkdGltZVNlcnZpY2UgLyA4NjQwMCk7CiAgICAgICAgJHJlbW92YWxUaHJlc2hvbGQgPSBpbnR2YWwoIi0iIC4gJHRoaXMtPnNldHRpbmdbJ3JlbW92ZWRheWMnXSk7CiAgICAgICAgJHJlc3VsdCA9ICRkYXlzUmVtYWluaW5nIDw9ICRyZW1vdmFsVGhyZXNob2xkOwogICAgICAgICRzdGF0dXNUZXh0ID0gWwogICAgICAgICAgICAnYWN0aXZlJyA9PiAkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ3N0YXR1cyddWydhY3RpdmUnXSwKICAgICAgICAgICAgJ2xpbWl0ZWQnID0+ICR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnc3RhdHVzJ11bJ2xpbWl0ZWQnXSwKICAgICAgICAgICAgJ2Rpc2FibGVkJyA9PiAkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ3N0YXR1cyddWydkaXNhYmxlZCddLAogICAgICAgICAgICAnZXhwaXJlZCcgPT4gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydzdGF0dXMnXVsnZXhwaXJlZCddLAogICAgICAgICAgICAnb25faG9sZCcgPT4gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydzdGF0dXMnXVsnb25faG9sZCddLAogICAgICAgICAgICAnVW5rbm93bicgPT4gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydzdGF0dXMnXVsndW5rbm93biddCiAgICAgICAgXVskdXNlckRhdGFbJ3N0YXR1cyddXTsKICAgICAgICAkcmVtYWluaW5nVm9sdW1lID0gZm9ybWF0Qnl0ZXMoJHVzZXJEYXRhWydkYXRhX2xpbWl0J10gLSAkdXNlckRhdGFbJ3VzZWRfdHJhZmZpYyddKTsKICAgICAgICBpZiAoJHJlc3VsdCkgewogICAgICAgICAgICB1cGRhdGUoImludm9pY2UiLCAic3RhdHVzIiwgInJlbW92ZVRpbWUiLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUpOwogICAgICAgICAgICAkdGhpcy0+UGFuZWwtPlJlbW92ZVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJHVzZXJuYW1lKTsKICAgICAgICAgICAgJG1lc3NhZ2UgPSBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3NlcnZpY2VEZWxldGVkJ10sICRpbnZvaWNlWyd1c2VybmFtZSddKTsKICAgICAgICAgICAgJHJlcG9ydE1lc3NhZ2UgPSBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ2RlbGV0ZUluZm8nXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10sICRzdGF0dXNUZXh0LCAkZGF5c1JlbWFpbmluZywgJHJlbWFpbmluZ1ZvbHVtZSk7CiAgICAgICAgICAgICR0aGlzLT5zZW5kX25vdGlmYWN0aW9ucygkaW52b2ljZSwgJHVzZXIsICRtZXNzYWdlLCBmYWxzZSwgJGludm9pY2VbJ2JvdHR5cGUnXSk7CiAgICAgICAgICAgICR0aGlzLT5zZW5kUmVwb3J0Tm90aWZpY2F0aW9uKCRyZXBvcnRNZXNzYWdlKTsKICAgICAgICB9CiAgICB9CiAgICBwcml2YXRlIGZ1bmN0aW9uIHNob3VsZFJlbW92ZVNlcnZpY2XZgHZvbHVtZSgkaW52b2ljZSwgJHVzZXIsICR1c2VyRGF0YSwgJHVzZXJuYW1lKQogICAgewogICAgICAgIGlmICghaW5fYXJyYXkoJHVzZXJEYXRhWydzdGF0dXMnXSwgWydsaW1pdGVkJywgJ2V4cGlyZWQnXSkpCiAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAkcGFuZWwgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiKiIsICJuYW1lX3BhbmVsIiwgJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgInNlbGVjdCIpOwogICAgICAgIGlmICgkcGFuZWxbJ3R5cGUnXSAhPSAibWFyemJhbiIpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICBpZiAoJHVzZXJEYXRhWydkYXRhX2xpbWl0X3Jlc2V0J10gIT0gIm5vX3Jlc2V0IikKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIGlmICgkdXNlckRhdGFbJ3N0YXR1cyddID09ICJVbnN1Y2Nlc3NmdWwiKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgaWYgKGluX2FycmF5KCR1c2VyRGF0YVsnc3RhdHVzJ10sIFsnVW5rbm93bicsICdhY3RpdmUnLCAnb25faG9sZCcsICdkaXNhYmxlZCcsICdleHBpcmVkJ10pKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgaWYgKGVtcHR5KCR1c2VyRGF0YVsnb25saW5lX2F0J10pIG9yICR1c2VyRGF0YVsnb25saW5lX2F0J10gPT0gbnVsbCkgewogICAgICAgICAgICAkdGltZWxhc3Rjb25lY3QgPSAwOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICR0aW1lID0gc3RydG90aW1lKCR1c2VyRGF0YVsnb25saW5lX2F0J10pOwogICAgICAgICAgICAkdGltZWxhc3Rjb25lY3QgPSAodGltZSgpIC0gJHRpbWUpIC8gODY0MDA7CiAgICAgICAgfQogICAgICAgIGlmICgkdGltZWxhc3Rjb25lY3QgPT0gMCkKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgICR0aW1lU2VydmljZSA9ICR1c2VyRGF0YVsnZXhwaXJlJ10gLSB0aW1lKCk7CiAgICAgICAgJGRheXNSZW1haW5pbmcgPSBpbnR2YWwoJHRpbWVTZXJ2aWNlIC8gODY0MDApOwogICAgICAgICRyZW1vdmFsVGhyZXNob2xkID0gaW50dmFsKCR0aGlzLT5zZXR0aW5nWydjcm9udm9sdW1lcmUnXSk7CiAgICAgICAgJHJlc3VsdCA9ICR0aW1lbGFzdGNvbmVjdCA+PSAkcmVtb3ZhbFRocmVzaG9sZDsKICAgICAgICAkc3RhdHVzVGV4dCA9IFsKICAgICAgICAgICAgJ2FjdGl2ZScgPT4gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydzdGF0dXMnXVsnYWN0aXZlJ10sCiAgICAgICAgICAgICdsaW1pdGVkJyA9PiAkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ3N0YXR1cyddWydsaW1pdGVkJ10sCiAgICAgICAgICAgICdkaXNhYmxlZCcgPT4gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydzdGF0dXMnXVsnZGlzYWJsZWQnXSwKICAgICAgICAgICAgJ2V4cGlyZWQnID0+ICR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnc3RhdHVzJ11bJ2V4cGlyZWQnXSwKICAgICAgICAgICAgJ29uX2hvbGQnID0+ICR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnc3RhdHVzJ11bJ29uX2hvbGQnXSwKICAgICAgICAgICAgJ1Vua25vd24nID0+ICR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnc3RhdHVzJ11bJ3Vua25vd24nXQogICAgICAgIF1bJHVzZXJEYXRhWydzdGF0dXMnXV07CiAgICAgICAgJHJlbWFpbmluZ1ZvbHVtZSA9IGZvcm1hdEJ5dGVzKCR1c2VyRGF0YVsnZGF0YV9saW1pdCddIC0gJHVzZXJEYXRhWyd1c2VkX3RyYWZmaWMnXSk7CiAgICAgICAgaWYgKCRyZXN1bHQpIHsKICAgICAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwgInN0YXR1cyIsICJyZW1vdmV2b2x1bWUiLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUpOwogICAgICAgICAgICAkdGhpcy0+UGFuZWwtPlJlbW92ZVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJHVzZXJuYW1lKTsKICAgICAgICAgICAgJG1lc3NhZ2UgPSBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3NlcnZpY2VEZWxldGVkMiddLCAkdXNlcm5hbWUpOwogICAgICAgICAgICAkcmVwb3J0TWVzc2FnZSA9IHNwcmludGYoJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsndm9sdW1lRGVsZXRlSW5mbyddLCAkdXNlcm5hbWUsICRzdGF0dXNUZXh0LCAkZGF5c1JlbWFpbmluZywgJHJlbWFpbmluZ1ZvbHVtZSwgJHVzZXJEYXRhWydvbmxpbmVfYXQnXSk7CiAgICAgICAgICAgICR0aGlzLT5zZW5kX25vdGlmYWN0aW9ucygkaW52b2ljZSwgJHVzZXIsICRtZXNzYWdlLCBmYWxzZSwgJGludm9pY2VbJ2JvdHR5cGUnXSk7CiAgICAgICAgICAgICR0aGlzLT5zZW5kUmVwb3J0Tm90aWZpY2F0aW9uKCRyZXBvcnRNZXNzYWdlKTsKICAgICAgICB9CiAgICB9CiAgICBwcml2YXRlIGZ1bmN0aW9uIGFjdGl2ZV9pbmJvdW5kX2V4cGlyZSgkaW52b2ljZSwgJHVzZXJEYXRhLCAkcGFuZWxfaW5mbykKICAgIHsKICAgICAgICBpZiAoJGludm9pY2VbJ3V1aWQnXSAhPSBudWxsIHx8ICR1c2VyRGF0YVsnZGF0YV9saW1pdF9yZXNldCddICE9ICJub19yZXNldCIgfHwgIWluX2FycmF5KCR1c2VyRGF0YVsnc3RhdHVzJ10sIFsnZXhwaXJlZCcsICdsaW1pdGVkJ10pKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgJGluYm91bmQgPSBleHBsb2RlKCIqIiwgJHBhbmVsX2luZm9bJ2luYm91bmRfZGVhY3RpdmUnXSk7CiAgICAgICAgJHByb3hpZXMgPSBbXTsKICAgICAgICAkcHJveGllc1skaW5ib3VuZFswXV0gPSBuZXcgc3RkQ2xhc3MoKTsKICAgICAgICA7CiAgICAgICAgJGluYm91bmRzWyRpbmJvdW5kWzBdXVtdID0gJGluYm91bmRbMV07CiAgICAgICAgJGNvbmZpZ3MgPSBhcnJheSgKICAgICAgICAgICAgInByb3hpZXMiID0+ICRwcm94aWVzLAogICAgICAgICAgICAiaW5ib3VuZHMiID0+ICRpbmJvdW5kcwogICAgICAgICk7CiAgICAgICAgJG1vZGlmeSA9ICR0aGlzLT5QYW5lbC0+TW9kaWZ5dXNlcigkaW52b2ljZVsndXNlcm5hbWUnXSwgJHBhbmVsX2luZm9bJ25hbWVfcGFuZWwnXSwgJGNvbmZpZ3MpOwogICAgICAgIGlmICghZW1wdHkoJG1vZGlmeVsnc3RhdHVzJ10pKQogICAgICAgICAgICB1cGRhdGUoImludm9pY2UiLCAidXVpZCIsIGpzb25fZW5jb2RlKCR1c2VyRGF0YVsndXVpZCddKSwgImlkX2ludm9pY2UiLCAkaW52b2ljZVsnaWRfaW52b2ljZSddKTsKICAgIH0KICAgIHByaXZhdGUgZnVuY3Rpb24gY2hlY2tUaW1lRXhwaXJhdGlvbigkaW52b2ljZSwgJHVzZXIsICR1c2VyRGF0YSwgJHVzZXJuYW1lKQogICAgewogICAgICAgICR2YWxpZFN0YXR1c2VzID0gWydleHBpcmVkJywgJ29uX2hvbGQnLCAnbGltaXRlZCddOwogICAgICAgIGlmIChpbl9hcnJheSgkdXNlckRhdGFbJ3N0YXR1cyddLCAkdmFsaWRTdGF0dXNlcykpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICAkdGltZVJlbWFpbmluZyA9ICR1c2VyRGF0YVsnZXhwaXJlJ10gLSB0aW1lKCk7CiAgICAgICAgJGRheXNSZW1haW5pbmcgPSBpbnR2YWwoJHRpbWVSZW1haW5pbmcgLyBzZWxmOjpTRUNPTkRTX1BFUl9EQVkpOwogICAgICAgICR3YXJuaW5nVGhyZXNob2xkID0gaW50dmFsKCR0aGlzLT5zZXR0aW5nWydkYXl3YXJuJ10pICogc2VsZjo6U0VDT05EU19QRVJfREFZOwoKICAgICAgICAkaXNUaW1lV2FybmluZyA9ICR0aW1lUmVtYWluaW5nIDw9ICR3YXJuaW5nVGhyZXNob2xkICYmICR0aW1lUmVtYWluaW5nID4gMDsKCiAgICAgICAgaWYgKCRpc1RpbWVXYXJuaW5nKSB7CiAgICAgICAgICAgICRtZXNzYWdlID0gJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsnZ3JlZXRpbmcyJ10gLgogICAgICAgICAgICAgICAgc3ByaW50ZigkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWyd0aW1lUmVtYWluaW5nJ10sICR1c2VybmFtZSwgJGRheXNSZW1haW5pbmcpIC4KICAgICAgICAgICAgICAgIHNwcmludGYoJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsndGltZUFjdGlvbkhpbnQnXSwgJHRoaXMtPnRleHRfUHVyY2hhc2VkX3NlcnZpY2VzKSAuCiAgICAgICAgICAgICAgICAkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWyd0aGFua3MnXTsKICAgICAgICAgICAgJHJlcG9ydE1lc3NhZ2UgPSAkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWyd0aW1lVGl0bGUnXSAuCiAgICAgICAgICAgICAgICBzcHJpbnRmKCR0aGlzLT50ZXh0Qm90TGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ3NlcnZpY2VVc2VybmFtZTInXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pIC4KICAgICAgICAgICAgICAgIHNwcmludGYoJHRoaXMtPnRleHRCb3RMYW5nWyd1c2VycyddWydub3RpZnknXVsnc2VydmljZVN0YXR1czInXSwgJHVzZXJEYXRhWydzdGF0dXMnXSkgLgogICAgICAgICAgICAgICAgc3ByaW50ZigkdGhpcy0+dGV4dEJvdExhbmdbJ3VzZXJzJ11bJ25vdGlmeSddWydyZW1haW5pbmdEYXlzJ10sICRkYXlzUmVtYWluaW5nKTsKICAgICAgICAgICAgJHRoaXMtPnNlbmRfbm90aWZhY3Rpb25zKCRpbnZvaWNlLCAkdXNlciwgJG1lc3NhZ2UsIHRydWUsICRpbnZvaWNlWydib3R0eXBlJ10pOwogICAgICAgICAgICAkdGhpcy0+c2VuZFJlcG9ydE5vdGlmaWNhdGlvbigkcmVwb3J0TWVzc2FnZSk7CiAgICAgICAgICAgICR0aGlzLT51cGRhdGVJbnZvaWNlU3RhdHVzKCJ0aW1lIiwgJGludm9pY2UpOwogICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiBzZW5kX25vdGlmYWN0aW9ucygkaW52b2ljZSwgJHN0YXR1c19jcm9uX3VzZXIsICRtZXNzYWdlLCAka2V5Ym9hcmRfYWN0aXZlLCAkYm90X3Rva2VuKQogICAgewogICAgICAgIGlmIChpc19hcnJheSgkc3RhdHVzX2Nyb25fdXNlcikpIHsKICAgICAgICAgICAgJHN0YXR1c19jcm9uX3VzZXIgPSAkc3RhdHVzX2Nyb25fdXNlclsnc3RhdHVzX2Nyb24nXSA/PyAxOwogICAgICAgIH0KICAgICAgICBpZiAoaW50dmFsKCRzdGF0dXNfY3Jvbl91c2VyKSA9PSAwKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgJGtleWJvYXJkID0gJHRoaXMtPmNyZWF0ZUV4dGVuZFNlcnZpY2VLZXlib2FyZCgkaW52b2ljZVsnaWRfaW52b2ljZSddKTsKICAgICAgICAka2V5Ym9hcmQgPSAka2V5Ym9hcmRfYWN0aXZlID8gJGtleWJvYXJkIDogbnVsbDsKICAgICAgICBzZW5kbWVzc2FnZSgkaW52b2ljZVsnaWRfdXNlciddLCAkbWVzc2FnZSwgJGtleWJvYXJkLCAnSFRNTCcsICRib3RfdG9rZW4pOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBjcmVhdGVFeHRlbmRTZXJ2aWNlS2V5Ym9hcmQoJGludm9pY2VJZCkKICAgIHsKICAgICAgICByZXR1cm4ganNvbl9lbmNvZGUoWwogICAgICAgICAgICAnaW5saW5lX2tleWJvYXJkJyA9PiBbCiAgICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAgICAgWyd0ZXh0JyA9PiAkdGhpcy0+dGV4dEJvdExhbmdbJ2tleWJvYXJkJ11bJ3JlbmV3U2VydmljZSddLCAnY2FsbGJhY2tfZGF0YScgPT4gJ2V4dGVuZF8nIC4gJGludm9pY2VJZF0sCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICBdCiAgICAgICAgXSk7CiAgICB9CgogICAgcHJpdmF0ZSBmdW5jdGlvbiBzZW5kUmVwb3J0Tm90aWZpY2F0aW9uKCRyZXBvcnRNZXNzYWdlKQogICAgewogICAgICAgIGlmIChlbXB0eSgkdGhpcy0+c2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSkpCiAgICAgICAgICAgIHJldHVybjsKCgogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICR0aGlzLT5zZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICR0aGlzLT5yZXBvcnRDcm9uLAogICAgICAgICAgICAndGV4dCcgPT4gJHJlcG9ydE1lc3NhZ2UsCiAgICAgICAgICAgICdwYXJzZV9tb2RlJyA9PiAiSFRNTCIKICAgICAgICBdKTsKICAgIH0KCiAgICBwcml2YXRlIGZ1bmN0aW9uIHVwZGF0ZUludm9pY2VTdGF0dXMoJHR5cGUsICRpbnZvaWNlKQogICAgewogICAgICAgICRkYXRhID0ganNvbl9kZWNvZGUoJGludm9pY2VbJ25vdGlmY3Rpb25zJ10sIHRydWUpOwogICAgICAgICRkYXRhWyR0eXBlXSA9IHRydWU7CiAgICAgICAgJGRhdGEgPSBqc29uX2VuY29kZSgkZGF0YSk7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwgIm5vdGlmY3Rpb25zIiwgJGRhdGEsICJpZF9pbnZvaWNlIiwgJGludm9pY2VbJ2lkX2ludm9pY2UnXSk7CiAgICB9Cn0KCi8vIEV4ZWN1dGUgdGhlIHZvbHVtZSBtb25pdG9yaW5nCiR2b2x1bWVNb25pdG9yID0gbmV3IFNlcnZpY2VNb25pdG9yKCk7CiR2b2x1bWVNb25pdG9yLT5SdW5Ob3RpZmFjdGlvbnMoKTs=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+class ServiceMonitor
+{
+    private $Panel;
+    private $pdo;
+    private $setting;
+    private $reportCron;
+    private $text_Purchased_services;
+    private $status_cron;
+    const SECONDS_PER_DAY = 86400;
+    private $textBotLang;
+
+    public function __construct()
+    {
+        global $pdo;
+        $this->pdo = $pdo;
+        $this->Panel = new ManagePanel();
+        $this->reportCron = select("topicid", "idreport", "report", "reportcron", "select")['idreport'];
+        $this->setting = select("setting", "*");
+        $this->status_cron = json_decode($this->setting['cron_status'], true);
+        $this->textBotLang = languagechange(dirname(__DIR__));
+        $this->text_Purchased_services = $this->textBotLang['textbot']['purchasedServices'] ?? '';
+    }
+
+    public function RunNotifactions()
+    {
+        $invoices = $this->getActiveInvoices();
+        if ($invoices == false)
+            return;
+        $stmtCron = $this->pdo->prepare("UPDATE invoice SET time_cron = ? WHERE id_invoice = ?");
+        foreach ($invoices as $invoice) {
+            if ($invoice['time_cron'] != null && (time() - $invoice['time_cron']) < 1600)
+                continue;
+            $stmtCron->execute([time(), $invoice['id_invoice']]);
+            clearSelectCache('invoice');
+            $check_send = json_decode($invoice['notifctions'], true);
+            $data = $this->processInvoice($invoice);
+            if (!is_array($data))
+                continue;
+            $result = false;
+            if (!$check_send['volume']) {
+                if ($this->status_cron['volume'])
+                    $result = $this->checkVolumeThreshold($data['invoice'], $data['user'], $data['userData'], $invoice['username']);
+            }
+            if ($result)
+                $data['invoice'] = select("invoice", "*", "id_invoice", $invoice['id_invoice']);
+            if (!$check_send['time']) {
+                if ($this->status_cron['day'])
+                    $this->checkTimeExpiration($data['invoice'], $data['user'], $data['userData'], $invoice['username']);
+            }
+            if ($this->status_cron['remove'])
+                $this->shouldRemoveService($data['invoice'], $data['user'], $data['userData'], $invoice['username']);
+            if ($this->status_cron['remove_volume'])
+                $this->shouldRemoveServiceـvolume($data['invoice'], $data['user'], $data['userData'], $invoice['username']);
+            if ($data['panel']['inboundstatus'] == "oninbounddisable" && $data['panel']['type'] == "marzban")
+                $this->active_inbound_expire($data['invoice'], $data['userData'], $data['panel']);
+        }
+    }
+
+
+    private function getActiveInvoices()
+    {
+        $time_hours = time() - 3600;
+        $QUERY = "SELECT * FROM invoice WHERE (Status = 'active' OR Status = 'end_of_time' OR Status = 'end_of_volume' OR Status = 'sendedwarn' OR Status = 'send_on_hold') AND name_product != :testName AND (time_cron <= :timeHours OR time_cron IS NULL) ORDER BY time_cron  LIMIT 30";
+        $stmt = $this->pdo->prepare($QUERY);
+        $stmt->execute([':testName' => $this->textBotLang['common']['labels']['testServiceName'], ':timeHours' => $time_hours]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    private function processInvoice($invoice)
+    {
+        $username = $invoice['username'];
+
+        // Get panel information
+        $panelInfo = select("marzban_panel", "*", "name_panel", $invoice['Service_location'], "select");
+        if (!$panelInfo)
+            return false;
+
+        if ($panelInfo['status'] == "disabled")
+            return false;
+        // Get user information
+        $user = select("user", "*", "id", $invoice['id_user'], "select");
+        if ($user == false)
+            return false;
+
+        // Get username data from panel
+        $userData = $this->Panel->DataUser($invoice['Service_location'], $username);
+        if (!$userData || $userData['status'] == "Unsuccessful")
+            return;
+        return [
+            'invoice' => $invoice,
+            'panel' => $panelInfo,
+            'user' => $user,
+            'userData' => $userData
+        ];
+    }
+
+    private function checkVolumeThreshold($invoice, $user, $userData, $username)
+    {
+        $remainingVolume = $userData['data_limit'] - $userData['used_traffic'];
+        $volumeWarningThreshold = $this->setting['volumewarn'] * pow(1024, 3);
+        $isVolumeWarning = $remainingVolume <= $volumeWarningThreshold && $remainingVolume > 0 && in_array($userData['status'], ['active', 'Unknown']);
+
+        if ($isVolumeWarning) {
+            $formattedVolume = formatBytes($remainingVolume);
+            $message = $this->textBotLang['users']['notify']['greeting'] .
+                sprintf($this->textBotLang['users']['notify']['volumeRemaining'], $username, $formattedVolume) .
+                sprintf($this->textBotLang['users']['notify']['volumeActionHint'], $this->text_Purchased_services);
+            $reportMessage = $this->textBotLang['users']['notify']['volumeTitle'] .
+                sprintf($this->textBotLang['users']['notify']['serviceUsername'], $username) .
+                sprintf($this->textBotLang['users']['notify']['serviceStatus'], $userData['status']) .
+                sprintf($this->textBotLang['users']['notify']['remainingVolume'], $formattedVolume);
+            $this->send_notifactions($invoice, $user, $message, true, $invoice['bottype']);
+            $this->sendReportNotification($reportMessage);
+            $this->updateInvoiceStatus("volume", $invoice);
+            return true;
+        }
+    }
+    private function shouldRemoveService($invoice, $user, $userData, $username)
+    {
+        if (!in_array($userData['status'], ['limited', 'expired']))
+            return false;
+        $timeService = $userData['expire'] - time();
+        $daysRemaining = intval($timeService / 86400);
+        $removalThreshold = intval("-" . $this->setting['removedayc']);
+        $result = $daysRemaining <= $removalThreshold;
+        $statusText = [
+            'active' => $this->textBotLang['users']['status']['active'],
+            'limited' => $this->textBotLang['users']['status']['limited'],
+            'disabled' => $this->textBotLang['users']['status']['disabled'],
+            'expired' => $this->textBotLang['users']['status']['expired'],
+            'on_hold' => $this->textBotLang['users']['status']['on_hold'],
+            'Unknown' => $this->textBotLang['users']['status']['unknown']
+        ][$userData['status']];
+        $remainingVolume = formatBytes($userData['data_limit'] - $userData['used_traffic']);
+        if ($result) {
+            update("invoice", "status", "removeTime", "username", $username);
+            $this->Panel->RemoveUser($invoice['Service_location'], $username);
+            $message = sprintf($this->textBotLang['users']['notify']['serviceDeleted'], $invoice['username']);
+            $reportMessage = sprintf($this->textBotLang['users']['notify']['deleteInfo'], $invoice['username'], $statusText, $daysRemaining, $remainingVolume);
+            $this->send_notifactions($invoice, $user, $message, false, $invoice['bottype']);
+            $this->sendReportNotification($reportMessage);
+        }
+    }
+    private function shouldRemoveServiceـvolume($invoice, $user, $userData, $username)
+    {
+        if (!in_array($userData['status'], ['limited', 'expired']))
+            return false;
+        $panel = select("marzban_panel", "*", "name_panel", $invoice['Service_location'], "select");
+        if ($panel['type'] != "marzban")
+            return;
+        if ($userData['data_limit_reset'] != "no_reset")
+            return;
+        if ($userData['status'] == "Unsuccessful")
+            return;
+        if (in_array($userData['status'], ['Unknown', 'active', 'on_hold', 'disabled', 'expired']))
+            return;
+        if (empty($userData['online_at']) or $userData['online_at'] == null) {
+            $timelastconect = 0;
+        } else {
+            $time = strtotime($userData['online_at']);
+            $timelastconect = (time() - $time) / 86400;
+        }
+        if ($timelastconect == 0)
+            return;
+        $timeService = $userData['expire'] - time();
+        $daysRemaining = intval($timeService / 86400);
+        $removalThreshold = intval($this->setting['cronvolumere']);
+        $result = $timelastconect >= $removalThreshold;
+        $statusText = [
+            'active' => $this->textBotLang['users']['status']['active'],
+            'limited' => $this->textBotLang['users']['status']['limited'],
+            'disabled' => $this->textBotLang['users']['status']['disabled'],
+            'expired' => $this->textBotLang['users']['status']['expired'],
+            'on_hold' => $this->textBotLang['users']['status']['on_hold'],
+            'Unknown' => $this->textBotLang['users']['status']['unknown']
+        ][$userData['status']];
+        $remainingVolume = formatBytes($userData['data_limit'] - $userData['used_traffic']);
+        if ($result) {
+            update("invoice", "status", "removevolume", "username", $username);
+            $this->Panel->RemoveUser($invoice['Service_location'], $username);
+            $message = sprintf($this->textBotLang['users']['notify']['serviceDeleted2'], $username);
+            $reportMessage = sprintf($this->textBotLang['users']['notify']['volumeDeleteInfo'], $username, $statusText, $daysRemaining, $remainingVolume, $userData['online_at']);
+            $this->send_notifactions($invoice, $user, $message, false, $invoice['bottype']);
+            $this->sendReportNotification($reportMessage);
+        }
+    }
+    private function active_inbound_expire($invoice, $userData, $panel_info)
+    {
+        if ($invoice['uuid'] != null || $userData['data_limit_reset'] != "no_reset" || !in_array($userData['status'], ['expired', 'limited']))
+            return;
+        $inbound = explode("*", $panel_info['inbound_deactive']);
+        $proxies = [];
+        $proxies[$inbound[0]] = new stdClass();
+        ;
+        $inbounds[$inbound[0]][] = $inbound[1];
+        $configs = array(
+            "proxies" => $proxies,
+            "inbounds" => $inbounds
+        );
+        $modify = $this->Panel->Modifyuser($invoice['username'], $panel_info['name_panel'], $configs);
+        if (!empty($modify['status']))
+            update("invoice", "uuid", json_encode($userData['uuid']), "id_invoice", $invoice['id_invoice']);
+    }
+    private function checkTimeExpiration($invoice, $user, $userData, $username)
+    {
+        $validStatuses = ['expired', 'on_hold', 'limited'];
+        if (in_array($userData['status'], $validStatuses))
+            return;
+        $timeRemaining = $userData['expire'] - time();
+        $daysRemaining = intval($timeRemaining / self::SECONDS_PER_DAY);
+        $warningThreshold = intval($this->setting['daywarn']) * self::SECONDS_PER_DAY;
+
+        $isTimeWarning = $timeRemaining <= $warningThreshold && $timeRemaining > 0;
+
+        if ($isTimeWarning) {
+            $message = $this->textBotLang['users']['notify']['greeting2'] .
+                sprintf($this->textBotLang['users']['notify']['timeRemaining'], $username, $daysRemaining) .
+                sprintf($this->textBotLang['users']['notify']['timeActionHint'], $this->text_Purchased_services) .
+                $this->textBotLang['users']['notify']['thanks'];
+            $reportMessage = $this->textBotLang['users']['notify']['timeTitle'] .
+                sprintf($this->textBotLang['users']['notify']['serviceUsername2'], $invoice['username']) .
+                sprintf($this->textBotLang['users']['notify']['serviceStatus2'], $userData['status']) .
+                sprintf($this->textBotLang['users']['notify']['remainingDays'], $daysRemaining);
+            $this->send_notifactions($invoice, $user, $message, true, $invoice['bottype']);
+            $this->sendReportNotification($reportMessage);
+            $this->updateInvoiceStatus("time", $invoice);
+            return true;
+        }
+    }
+
+    private function send_notifactions($invoice, $status_cron_user, $message, $keyboard_active, $bot_token)
+    {
+        if (is_array($status_cron_user)) {
+            $status_cron_user = $status_cron_user['status_cron'] ?? 1;
+        }
+        if (intval($status_cron_user) == 0)
+            return;
+        $keyboard = $this->createExtendServiceKeyboard($invoice['id_invoice']);
+        $keyboard = $keyboard_active ? $keyboard : null;
+        sendmessage($invoice['id_user'], $message, $keyboard, 'HTML', $bot_token);
+    }
+
+    public function createExtendServiceKeyboard($invoiceId)
+    {
+        return json_encode([
+            'inline_keyboard' => [
+                [
+                    ['text' => $this->textBotLang['keyboard']['renewService'], 'callback_data' => 'extend_' . $invoiceId],
+                ],
+            ]
+        ]);
+    }
+
+    private function sendReportNotification($reportMessage)
+    {
+        if (empty($this->setting['Channel_Report']))
+            return;
+
+
+        telegram('sendmessage', [
+            'chat_id' => $this->setting['Channel_Report'],
+            'message_thread_id' => $this->reportCron,
+            'text' => $reportMessage,
+            'parse_mode' => "HTML"
+        ]);
+    }
+
+    private function updateInvoiceStatus($type, $invoice)
+    {
+        $data = json_decode($invoice['notifctions'], true);
+        $data[$type] = true;
+        $data = json_encode($data);
+        update("invoice", "notifctions", $data, "id_invoice", $invoice['id_invoice']);
+    }
+}
+
+// Execute the volume monitoring
+$volumeMonitor = new ServiceMonitor();
+$volumeMonitor->RunNotifactions();

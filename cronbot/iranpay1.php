@@ -1,1 +1,50 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2pkZi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vZnVuY3Rpb24ucGhwJzsKcmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CiRzZXR0aW5nID0gc2VsZWN0KCJzZXR0aW5nIiwgIioiLCBudWxsLCBudWxsLCAic2VsZWN0Iik7CiRwYXltZW50cmVwb3J0cyA9IHNlbGVjdCgidG9waWNpZCIsICJpZHJlcG9ydCIsICJyZXBvcnQiLCAicGF5bWVudHJlcG9ydCIsICJzZWxlY3QiKVsnaWRyZXBvcnQnXTsKJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKJGxpc3Rfc2VydmljZSA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAqIEZST00gUGF5bWVudF9yZXBvcnQgV0hFUkUgcGF5bWVudF9TdGF0dXMgPSAnVW5wYWlkJyBBTkQgUGF5bWVudF9NZXRob2QgPSAnQ3VycmVuY3kgUmlhbCAzJyBPUkRFUiBCWSBSQU5EKCkgTElNSVQgMTAiKTsKJGxpc3Rfc2VydmljZS0+ZXhlY3V0ZSgpOwp3aGlsZSAoJFBheW1lbnRfcmVwb3J0ID0gKCRsaXN0X3NlcnZpY2UpLT5mZXRjaChQRE86OkZFVENIX0FTU09DKSkgewogICAgJFN0YXR1c1BheW1lbnQgPSB2ZXJpZnBheSgkUGF5bWVudF9yZXBvcnRbJ2RlY19ub3RfY29uZmlybWVkJ10pOwogICAgaWYgKCFpc19zdHJpbmcoJFN0YXR1c1BheW1lbnQpKQogICAgICAgIGNvbnRpbnVlOwogICAgJFN0YXR1c1BheW1lbnQgPSBqc29uX2RlY29kZSgkU3RhdHVzUGF5bWVudCwgdHJ1ZSk7CiAgICBpZiAoIWlzX2FycmF5KCRTdGF0dXNQYXltZW50KSkKICAgICAgICBjb250aW51ZTsKICAgIGlmICghJFN0YXR1c1BheW1lbnRbJ3N1Y2Nlc3MnXSkKICAgICAgICBjb250aW51ZTsKICAgIGlmICgkU3RhdHVzUGF5bWVudFsnZGF0YSddWydzdGF0dXMnXSAhPSAiYXBwcm92ZWQiKQogICAgICAgIGNvbnRpbnVlOwogICAgaWYgKCFjbGFpbVBheW1lbnRQYWlkKCRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSkpCiAgICAgICAgY29udGludWU7CiAgICB1cGRhdGUoIlBheW1lbnRfcmVwb3J0IiwgImRlY19ub3RfY29uZmlybWVkIiwganNvbl9lbmNvZGUoJFN0YXR1c1BheW1lbnRbJ2RhdGEnXSksICJpZF9vcmRlciIsICRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSk7CiAgICBEaXJlY3RQYXltZW50KCRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSk7CiAgICAkcHJpY2VjYXNoYmFjayA9IHNlbGVjdCgiUGF5U2V0dGluZyIsICJWYWx1ZVBheSIsICJOYW1lUGF5IiwgImNoYXNoYmFja2lyYW5wYXkxIiwgInNlbGVjdCIpWydWYWx1ZVBheSddOwogICAgJEJhbGFuY2VfaWQgPSBzZWxlY3QoInVzZXIiLCAiKiIsICJpZCIsICRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddLCAic2VsZWN0Iik7CiAgICBpZiAoJHByaWNlY2FzaGJhY2sgIT0gIjAiKSB7CiAgICAgICAgJHJlc3VsdCA9ICgkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10gKiAkcHJpY2VjYXNoYmFjaykgLyAxMDA7CiAgICAgICAgJEJhbGFuY2VfY29uZnJpbSA9IGludHZhbCgkQmFsYW5jZV9pZFsnQmFsYW5jZSddKSArICRyZXN1bHQ7CiAgICAgICAgdXBkYXRlKCJ1c2VyIiwgIkJhbGFuY2UiLCAkQmFsYW5jZV9jb25mcmltLCAiaWQiLCAkQmFsYW5jZV9pZFsnaWQnXSk7CiAgICAgICAgJHRleHRfcmVwb3J0ID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ3VzZXJzJ11bJ0JhbGFuY2UnXVsnZ2lmdERlcG9zaXRJcmFucGF5J10sICRyZXN1bHQpOwogICAgICAgIHNlbmRtZXNzYWdlKCRCYWxhbmNlX2lkWydpZCddLCAkdGV4dF9yZXBvcnQsIG51bGwsICdIVE1MJyk7CiAgICB9CiAgICAkdGV4dF9yZXBvcnRwYXltZW50ID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydGdyb3VwJ11bJ25ld1BheW1lbnRJcmFucGF5J10sICRCYWxhbmNlX2lkWyd1c2VybmFtZSddLCAkQmFsYW5jZV9pZFsnaWQnXSwgJFBheW1lbnRfcmVwb3J0WydwcmljZSddKTsKICAgIGlmIChzdHJsZW4oJHNldHRpbmdbJ0NoYW5uZWxfUmVwb3J0J10pID4gMCkgewogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICRwYXltZW50cmVwb3J0cywKICAgICAgICAgICAgJ3RleHQnID0+ICR0ZXh0X3JlcG9ydHBheW1lbnQsCiAgICAgICAgICAgICdwYXJzZV9tb2RlJyA9PiAiSFRNTCIKICAgICAgICBdKTsKICAgIH0KICAgIHVwZGF0ZSgiUGF5bWVudF9yZXBvcnQiLCAiZGVjX25vdF9jb25maXJtZWQiLCBqc29uX2VuY29kZSgkU3RhdHVzUGF5bWVudCksICJpZF9vcmRlciIsICRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSk7Cn0=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../jdf.php';
+require_once __DIR__ . '/../function.php';
+require __DIR__ . '/../vendor/autoload.php';
+$ManagePanel = new ManagePanel();
+$setting = select("setting", "*", null, null, "select");
+$paymentreports = select("topicid", "idreport", "report", "paymentreport", "select")['idreport'];
+$textbotlang = languagechange();
+$list_service = $pdo->prepare("SELECT * FROM Payment_report WHERE payment_Status = 'Unpaid' AND Payment_Method = 'Currency Rial 3' ORDER BY RAND() LIMIT 10");
+$list_service->execute();
+while ($Payment_report = ($list_service)->fetch(PDO::FETCH_ASSOC)) {
+    $StatusPayment = verifpay($Payment_report['dec_not_confirmed']);
+    if (!is_string($StatusPayment))
+        continue;
+    $StatusPayment = json_decode($StatusPayment, true);
+    if (!is_array($StatusPayment))
+        continue;
+    if (!$StatusPayment['success'])
+        continue;
+    if ($StatusPayment['data']['status'] != "approved")
+        continue;
+    if (!claimPaymentPaid($Payment_report['id_order']))
+        continue;
+    update("Payment_report", "dec_not_confirmed", json_encode($StatusPayment['data']), "id_order", $Payment_report['id_order']);
+    DirectPayment($Payment_report['id_order']);
+    $pricecashback = select("PaySetting", "ValuePay", "NamePay", "chashbackiranpay1", "select")['ValuePay'];
+    $Balance_id = select("user", "*", "id", $Payment_report['id_user'], "select");
+    if ($pricecashback != "0") {
+        $result = ($Payment_report['price'] * $pricecashback) / 100;
+        $Balance_confrim = intval($Balance_id['Balance']) + $result;
+        update("user", "Balance", $Balance_confrim, "id", $Balance_id['id']);
+        $text_report = sprintf($textbotlang['users']['Balance']['giftDepositIranpay'], $result);
+        sendmessage($Balance_id['id'], $text_report, null, 'HTML');
+    }
+    $text_reportpayment = sprintf($textbotlang['Admin']['reportgroup']['newPaymentIranpay'], $Balance_id['username'], $Balance_id['id'], $Payment_report['price']);
+    if (strlen($setting['Channel_Report']) > 0) {
+        telegram('sendmessage', [
+            'chat_id' => $setting['Channel_Report'],
+            'message_thread_id' => $paymentreports,
+            'text' => $text_reportpayment,
+            'parse_mode' => "HTML"
+        ]);
+    }
+    update("Payment_report", "dec_not_confirmed", json_encode($StatusPayment), "id_order", $Payment_report['id_order']);
+}

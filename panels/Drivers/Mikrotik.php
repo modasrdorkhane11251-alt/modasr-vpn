@@ -1,1 +1,95 @@
-PD9waHAKCmNsYXNzIE1pa3JvdGlrUGFuZWxEcml2ZXIgZXh0ZW5kcyBCYXNlUGFuZWxEcml2ZXIKewogICAgcHVibGljIGZ1bmN0aW9uIGNyZWF0ZShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkR2V0X0RhdGFfUGFuZWwgPSAkdmFyc1snR2V0X0RhdGFfUGFuZWwnXTsKICAgICAgICAkR2V0X0RhdGFfUHJvZHVjdCA9ICR2YXJzWydHZXRfRGF0YV9Qcm9kdWN0J107CiAgICAgICAgJGNvZGVfcHJvZHVjdCA9ICR2YXJzWydjb2RlX3Byb2R1Y3QnXTsKICAgICAgICAkdXNlcm5hbWVDID0gJHZhcnNbJ3VzZXJuYW1lQyddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJHBhc3N3b3JkID0gYmluMmhleChyYW5kb21fYnl0ZXMoNikpOwogICAgICAgICRuYW1lX2dyb3VwID0gJEdldF9EYXRhX1BhbmVsWydwcm94aWVzJ107CiAgICAgICAgaWYgKCRHZXRfRGF0YV9Qcm9kdWN0WydpbmJvdW5kcyddICE9IG51bGwpIHsKICAgICAgICAgICAgJG5hbWVfZ3JvdXAgPSAkR2V0X0RhdGFfUHJvZHVjdFsnaW5ib3VuZHMnXTsKICAgICAgICB9IGVsc2VpZiAoJGNvZGVfcHJvZHVjdCA9PSAidXNlcnRlc3QiKSB7CiAgICAgICAgICAgICRuYW1lX2dyb3VwID0gInVzZXJ0ZXN0IjsKICAgICAgICB9CiAgICAgICAgJGRhdGFfT3V0cHV0ID0gYWRkVXNlcl9taWtyb3RpaygkR2V0X0RhdGFfUGFuZWxbJ25hbWVfcGFuZWwnXSwgJHVzZXJuYW1lQywgJHBhc3N3b3JkLCAkbmFtZV9ncm91cCk7CiAgICAgICAgaWYgKGlzc2V0KCRkYXRhX091dHB1dFsnZXJyb3InXSkpIHsKICAgICAgICAgICAgJE91dHB1dFsnc3RhdHVzJ10gPSAnVW5zdWNjZXNzZnVsJzsKICAgICAgICAgICAgJE91dHB1dFsnbXNnJ10gPSAkZGF0YV9PdXRwdXRbJ21zZyddOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRPdXRwdXRbJ3N0YXR1cyddID0gJ3N1Y2Nlc3NmdWwnOwogICAgICAgICAgICAkT3V0cHV0Wyd1c2VybmFtZSddID0gJHVzZXJuYW1lQzsKICAgICAgICAgICAgJE91dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gJHBhc3N3b3JkOwogICAgICAgICAgICAkT3V0cHV0Wydjb25maWdzJ10gPSBbXTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICRPdXRwdXQ7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIHJlYWQoYXJyYXkgJHZhcnMpCiAgICB7CiAgICAgICAgJEdldF9EYXRhX1BhbmVsID0gJHZhcnNbJ0dldF9EYXRhX1BhbmVsJ107CiAgICAgICAgJHVzZXJuYW1lID0gJHZhcnNbJ3VzZXJuYW1lJ107CiAgICAgICAgJE91dHB1dCA9ICR2YXJzWydPdXRwdXQnXTsKICAgICAgICAkVXNlcm5hbWVSZXNwb25zZSA9IEdldFVzZXJtaWtyb3RpaygkR2V0X0RhdGFfUGFuZWxbJ25hbWVfcGFuZWwnXSwgJHVzZXJuYW1lKTsKICAgICAgICAkVXNlcm5hbWVEYXRhID0gJFVzZXJuYW1lUmVzcG9uc2VbMF0gPz8gbnVsbDsKICAgICAgICBpZiAoIWlzX2FycmF5KCRVc2VybmFtZURhdGEpKSB7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lUmVzcG9uc2VbJ21lc3NhZ2UnXSA/PyAndXNlciBub3QgZm91bmQgb24gcGFuZWwnCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgJGludm9jaWUgPSBzZWxlY3QoImludm9pY2UiLCAiKiIsICJ1c2VybmFtZSIsICR1c2VybmFtZSwgInNlbGVjdCIpOwogICAgICAgICAgICAkdHJhZmZpY19nZXQgPSBHZXRVc2VybWlrcm90aWtfdm9sdW1lKCRHZXRfRGF0YV9QYW5lbFsnbmFtZV9wYW5lbCddLCAkVXNlcm5hbWVEYXRhWycuaWQnXSk7CiAgICAgICAgICAgICR1c2VkX3RyYWZmaWMgPSAkdHJhZmZpY19nZXRbJ3RvdGFsLXVwbG9hZCddICsgJHRyYWZmaWNfZ2V0Wyd0b3RhbC1kb3dubG9hZCddOwogICAgICAgICAgICAkZGF0YV9saW1pdCA9ICRpbnZvY2llWydWb2x1bWUnXSAqIHBvdygxMDI0LCAzKTsKICAgICAgICAgICAgJGV4cGlyZSA9ICRpbnZvY2llWyd0aW1lX3NlbGwnXSArICgkaW52b2NpZVsnU2VydmljZV90aW1lJ10gKiA4NjQwMCk7CiAgICAgICAgICAgICRVc2VybmFtZURhdGFbJ2VuYWJsZSddID0gImFjdGl2ZSI7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICRVc2VybmFtZURhdGFbJ2VuYWJsZSddLAogICAgICAgICAgICAgICAgJ3VzZXJuYW1lJyA9PiAkaW52b2NpZVsndXNlcm5hbWUnXSwKICAgICAgICAgICAgICAgICdkYXRhX2xpbWl0JyA9PiAkZGF0YV9saW1pdCwKICAgICAgICAgICAgICAgICdleHBpcmUnID0+ICRleHBpcmUsCiAgICAgICAgICAgICAgICAnb25saW5lX2F0JyA9PiBudWxsLAogICAgICAgICAgICAgICAgJ3VzZWRfdHJhZmZpYycgPT4gJHVzZWRfdHJhZmZpYywKICAgICAgICAgICAgICAgICdsaW5rcycgPT4gW10sCiAgICAgICAgICAgICAgICAnc3Vic2NyaXB0aW9uX3VybCcgPT4gJFVzZXJuYW1lRGF0YVsncGFzc3dvcmQnXSwKICAgICAgICAgICAgICAgICdzdWJfdXBkYXRlZF9hdCcgPT4gbnVsbCwKICAgICAgICAgICAgICAgICdzdWJfbGFzdF91c2VyX2FnZW50JyA9PiBudWxsLAogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVtb3ZlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJFVzZXJuYW1lUmVzcG9uc2UgPSBHZXRVc2VybWlrcm90aWsoJEdldF9EYXRhX1BhbmVsWyduYW1lX3BhbmVsJ10sICR1c2VybmFtZSk7CiAgICAgICAgJFVzZXJuYW1lRGF0YSA9ICRVc2VybmFtZVJlc3BvbnNlWzBdID8/IG51bGw7CiAgICAgICAgaWYgKCFpc19hcnJheSgkVXNlcm5hbWVEYXRhKSkgewogICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnVW5zdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdtc2cnID0+ICRVc2VybmFtZVJlc3BvbnNlWydtZXNzYWdlJ10gPz8gJ3VzZXIgbm90IGZvdW5kIG9uIHBhbmVsJwogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRyZW1vdmVSZXNwb25zZSA9IGRlbGV0ZVVzZXJfbWlrcm90aWsoJEdldF9EYXRhX1BhbmVsWyduYW1lX3BhbmVsJ10sICRVc2VybmFtZURhdGFbJy5pZCddKTsKICAgICAgICAgICAgaWYgKGlzc2V0KCRyZW1vdmVSZXNwb25zZVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnVW5zdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICAgICAnbXNnJyA9PiAkcmVtb3ZlUmVzcG9uc2VbJ21lc3NhZ2UnXSA/PyAkcmVtb3ZlUmVzcG9uc2VbJ2Vycm9yJ10KICAgICAgICAgICAgICAgICk7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ3N1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgICAgICd1c2VybmFtZScgPT4gJHVzZXJuYW1lLAogICAgICAgICAgICAgICAgKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KfQo=
+<?php
+
+class MikrotikPanelDriver extends BasePanelDriver
+{
+    public function create(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $Get_Data_Product = $vars['Get_Data_Product'];
+        $code_product = $vars['code_product'];
+        $usernameC = $vars['usernameC'];
+        $Output = $vars['Output'];
+        $password = bin2hex(random_bytes(6));
+        $name_group = $Get_Data_Panel['proxies'];
+        if ($Get_Data_Product['inbounds'] != null) {
+            $name_group = $Get_Data_Product['inbounds'];
+        } elseif ($code_product == "usertest") {
+            $name_group = "usertest";
+        }
+        $data_Output = addUser_mikrotik($Get_Data_Panel['name_panel'], $usernameC, $password, $name_group);
+        if (isset($data_Output['error'])) {
+            $Output['status'] = 'Unsuccessful';
+            $Output['msg'] = $data_Output['msg'];
+        } else {
+            $Output['status'] = 'successful';
+            $Output['username'] = $usernameC;
+            $Output['subscription_url'] = $password;
+            $Output['configs'] = [];
+        }
+        return $Output;
+    }
+
+    public function read(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $UsernameResponse = GetUsermikrotik($Get_Data_Panel['name_panel'], $username);
+        $UsernameData = $UsernameResponse[0] ?? null;
+        if (!is_array($UsernameData)) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameResponse['message'] ?? 'user not found on panel'
+            );
+        } else {
+            $invocie = select("invoice", "*", "username", $username, "select");
+            $traffic_get = GetUsermikrotik_volume($Get_Data_Panel['name_panel'], $UsernameData['.id']);
+            $used_traffic = $traffic_get['total-upload'] + $traffic_get['total-download'];
+            $data_limit = $invocie['Volume'] * pow(1024, 3);
+            $expire = $invocie['time_sell'] + ($invocie['Service_time'] * 86400);
+            $UsernameData['enable'] = "active";
+            $Output = array(
+                'status' => $UsernameData['enable'],
+                'username' => $invocie['username'],
+                'data_limit' => $data_limit,
+                'expire' => $expire,
+                'online_at' => null,
+                'used_traffic' => $used_traffic,
+                'links' => [],
+                'subscription_url' => $UsernameData['password'],
+                'sub_updated_at' => null,
+                'sub_last_user_agent' => null,
+            );
+        }
+        return $Output;
+    }
+
+    public function remove(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $UsernameResponse = GetUsermikrotik($Get_Data_Panel['name_panel'], $username);
+        $UsernameData = $UsernameResponse[0] ?? null;
+        if (!is_array($UsernameData)) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameResponse['message'] ?? 'user not found on panel'
+            );
+        } else {
+            $removeResponse = deleteUser_mikrotik($Get_Data_Panel['name_panel'], $UsernameData['.id']);
+            if (isset($removeResponse['error'])) {
+                $Output = array(
+                    'status' => 'Unsuccessful',
+                    'msg' => $removeResponse['message'] ?? $removeResponse['error']
+                );
+            } else {
+                $Output = array(
+                    'status' => 'successful',
+                    'username' => $username,
+                );
+            }
+        }
+        return $Output;
+    }
+}

@@ -1,1 +1,359 @@
-PD9waHAgCgoKZnVuY3Rpb24gamRhdGUoJGZvcm1hdCwgJHRpbWVzdGFtcCA9ICcnLCAkbm9uZSA9ICcnLCAkdGltZV96b25lID0gJ0FzaWEvVGVocmFuJywgJHRyX251bSA9ICdmYScpIHsKCiAgJFRfc2VjID0gMDsKICBpZiAoJHRpbWVfem9uZSAhPSAnbG9jYWwnKSBkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCgkdGltZV96b25lID09PSAnJykgPyAnQXNpYS9UZWhyYW4nIDogJHRpbWVfem9uZSk7CiAgJHRzID0gJFRfc2VjICsgKCgkdGltZXN0YW1wID09PSAnJykgPyB0aW1lKCkgOiB0cl9udW0oJHRpbWVzdGFtcCkpOwogICRkYXRlID0gZXhwbG9kZSgnXycsIGRhdGUoJ0hfaV9qX25fT19QX3Nfd19ZJywgJHRzKSk7CiAgbGlzdCgkal95LCAkal9tLCAkal9kKSA9IGdyZWdvcmlhbl90b19qYWxhbGkoJGRhdGVbOF0sICRkYXRlWzNdLCAkZGF0ZVsyXSk7CiAgJGRveSA9ICgkal9tIDwgNykgPyAoKCRqX20gLSAxKSAqIDMxKSArICRqX2QgLSAxIDogKCgkal9tIC0gNykgKiAzMCkgKyAkal9kICsgMTg1OwogICRrYWIgPSAoKCgoJGpfeSArIDEyKSAlIDMzKSAlIDQpID09IDEpID8gMSA6IDA7CiAgJHNsID0gc3RybGVuKCRmb3JtYXQpOwogICRvdXQgPSAnJzsKICBmb3IgKCRpID0gMDsgJGkgPCAkc2w7ICRpKyspIHsKICAgICRzdWIgPSBzdWJzdHIoJGZvcm1hdCwgJGksIDEpOwogICAgaWYgKCRzdWIgPT0gJ1xcJykgewogICAgICAkb3V0IC49IHN1YnN0cigkZm9ybWF0LCArKyRpLCAxKTsKICAgICAgY29udGludWU7CiAgICB9CiAgICBzd2l0Y2ggKCRzdWIpIHsKCiAgICAgIGNhc2UgJ0UnOgogICAgICBjYXNlICdSJzoKICAgICAgY2FzZSAneCc6CiAgICAgIGNhc2UgJ1gnOgogICAgICAgICRvdXQgLj0gJ2h0dHA6Ly9qZGYuc2NyLmlyJzsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ0InOgogICAgICBjYXNlICdlJzoKICAgICAgY2FzZSAnZyc6CiAgICAgIGNhc2UgJ0cnOgogICAgICBjYXNlICdoJzoKICAgICAgY2FzZSAnSSc6CiAgICAgIGNhc2UgJ1QnOgogICAgICBjYXNlICd1JzoKICAgICAgY2FzZSAnWic6CiAgICAgICAgJG91dCAuPSBkYXRlKCRzdWIsICR0cyk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdhJzoKICAgICAgICAkb3V0IC49ICgkZGF0ZVswXSA8IDEyKSA/ICfZgi7YuCcgOiAn2Kgu2LgnOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnQSc6CiAgICAgICAgJG91dCAuPSAoJGRhdGVbMF0gPCAxMikgPyAn2YLYqNmEINin2LIg2LjZh9ixJyA6ICfYqNi52K8g2KfYsiDYuNmH2LEnOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnYic6CiAgICAgICAgJG91dCAuPSAoaW50KSAoJGpfbSAvIDMuMSkgKyAxOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnYyc6CiAgICAgICAgJG91dCAuPSAkal95IC4gJy8nIC4gJGpfbSAuICcvJyAuICRqX2QgLiAnINiMJyAuICRkYXRlWzBdIC4gJzonIC4gJGRhdGVbMV0gLiAnOicgLiAkZGF0ZVs2XSAuICcgJyAuICRkYXRlWzVdOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnQyc6CiAgICAgICAgJG91dCAuPSAoaW50KSAoKCRqX3kgKyA5OSkgLyAxMDApOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnZCc6CiAgICAgICAgJG91dCAuPSAoJGpfZCA8IDEwKSA/ICcwJyAuICRqX2QgOiAkal9kOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnRCc6CiAgICAgICAgJG91dCAuPSBqZGF0ZV93b3JkcyhhcnJheSgna2gnID0+ICRkYXRlWzddKSwgJyAnKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ2YnOgogICAgICAgICRvdXQgLj0gamRhdGVfd29yZHMoYXJyYXkoJ2ZmJyA9PiAkal9tKSwgJyAnKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ0YnOgogICAgICAgICRvdXQgLj0gamRhdGVfd29yZHMoYXJyYXkoJ21tJyA9PiAkal9tKSwgJyAnKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ0gnOgogICAgICAgICRvdXQgLj0gJGRhdGVbMF07CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdpJzoKICAgICAgICAkb3V0IC49ICRkYXRlWzFdOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnaic6CiAgICAgICAgJG91dCAuPSAkal9kOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnSic6CiAgICAgICAgJG91dCAuPSBqZGF0ZV93b3JkcyhhcnJheSgncnInID0+ICRqX2QpLCAnICcpOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnayc7CiAgICAgICAgJG91dCAuPSB0cl9udW0oMTAwIC0gKGludCkgKCRkb3kgLyAoJGthYiArIDM2NS4yNCkgKiAxMDAwKSAvIDEwLCAkdHJfbnVtKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ0snOgogICAgICAgICRvdXQgLj0gdHJfbnVtKChpbnQpICgkZG95IC8gKCRrYWIgKyAzNjUuMjQpICogMTAwMCkgLyAxMCwgJHRyX251bSk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdsJzoKICAgICAgICAkb3V0IC49IGpkYXRlX3dvcmRzKGFycmF5KCdyaCcgPT4gJGRhdGVbN10pLCAnICcpOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnTCc6CiAgICAgICAgJG91dCAuPSAka2FiOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnbSc6CiAgICAgICAgJG91dCAuPSAoJGpfbSA+IDkpID8gJGpfbSA6ICcwJyAuICRqX207CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdNJzoKICAgICAgICAkb3V0IC49IGpkYXRlX3dvcmRzKGFycmF5KCdrbScgPT4gJGpfbSksICcgJyk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICduJzoKICAgICAgICAkb3V0IC49ICRqX207CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdOJzoKICAgICAgICAkb3V0IC49ICRkYXRlWzddICsgMTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ28nOgogICAgICAgICRqZHcgPSAoJGRhdGVbN10gPT0gNikgPyAwIDogJGRhdGVbN10gKyAxOwogICAgICAgICRkbnkgPSAzNjQgKyAka2FiIC0gJGRveTsKICAgICAgICAkb3V0IC49ICgkamR3ID4gKCRkb3kgKyAzKSBhbmQgJGRveSA8IDMpID8gJGpfeSAtIDEgOiAoKCgzIC0gJGRueSkgPiAkamR3IGFuZCAkZG55IDwgMykgPyAkal95ICsgMSA6ICRqX3kpOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnTyc6CiAgICAgICAgJG91dCAuPSAkZGF0ZVs0XTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ3AnOgogICAgICAgICRvdXQgLj0gamRhdGVfd29yZHMoYXJyYXkoJ21iJyA9PiAkal9tKSwgJyAnKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ1AnOgogICAgICAgICRvdXQgLj0gJGRhdGVbNV07CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdxJzoKICAgICAgICAkb3V0IC49IGpkYXRlX3dvcmRzKGFycmF5KCdzaCcgPT4gJGpfeSksICcgJyk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdRJzoKICAgICAgICAkb3V0IC49ICRrYWIgKyAzNjQgLSAkZG95OwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAncic6CiAgICAgICAgJGtleSA9IGpkYXRlX3dvcmRzKGFycmF5KCdyaCcgPT4gJGRhdGVbN10sICdtbScgPT4gJGpfbSkpOwogICAgICAgICRvdXQgLj0gJGRhdGVbMF0gLiAnOicgLiAkZGF0ZVsxXSAuICc6JyAuICRkYXRlWzZdIC4gJyAnIC4gJGRhdGVbNF0gLiAnICcgLiAka2V5WydyaCddIC4gJ9iMICcgLiAkal9kIC4gJyAnIC4gJGtleVsnbW0nXSAuICcgJyAuICRqX3k7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdzJzoKICAgICAgICAkb3V0IC49ICRkYXRlWzZdOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAnUyc6CiAgICAgICAgJG91dCAuPSAn2KfZhSc7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICd0JzoKICAgICAgICAkb3V0IC49ICgkal9tICE9IDEyKSA/ICgzMSAtIChpbnQpICgkal9tIC8gNi41KSkgOiAoJGthYiArIDI5KTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ1UnOgogICAgICAgICRvdXQgLj0gJHRzOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAndic6CiAgICAgICAgJG91dCAuPSBqZGF0ZV93b3JkcyhhcnJheSgnc3MnID0+ICgkal95ICUgMTAwKSksICcgJyk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdWJzoKICAgICAgICAkb3V0IC49IGpkYXRlX3dvcmRzKGFycmF5KCdzcycgPT4gJGpfeSksICcgJyk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICd3JzoKICAgICAgICAkb3V0IC49ICgkZGF0ZVs3XSA9PSA2KSA/IDAgOiAkZGF0ZVs3XSArIDE7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdXJzoKICAgICAgICAkYXZzID0gKCgkZGF0ZVs3XSA9PSA2KSA/IDAgOiAkZGF0ZVs3XSArIDEpIC0gKCRkb3kgJSA3KTsKICAgICAgICBpZiAoJGF2cyA8IDApICRhdnMgKz0gNzsKICAgICAgICAkbnVtID0gKGludCkgKCgkZG95ICsgJGF2cykgLyA3KTsKICAgICAgICBpZiAoJGF2cyA8IDQpIHsKICAgICAgICAgICRudW0rKzsKICAgICAgICB9IGVsc2VpZiAoJG51bSA8IDEpIHsKICAgICAgICAgICRudW0gPSAoJGF2cyA9PSA0IG9yICRhdnMgPT0gKCgoKCgkal95ICUgMzMpICUgNCkgLSAyKSA9PSAoKGludCkgKCgkal95ICUgMzMpICogMC4wNSkpKSA/IDUgOiA0KSkgPyA1MyA6IDUyOwogICAgICAgIH0KICAgICAgICAkYWtzID0gJGF2cyArICRrYWI7CiAgICAgICAgaWYgKCRha3MgPT0gNykgJGFrcyA9IDA7CiAgICAgICAgJG91dCAuPSAoKCRrYWIgKyAzNjMgLSAkZG95KSA8ICRha3MgYW5kICRha3MgPCAzKSA/ICcwMScgOiAoKCRudW0gPCAxMCkgPyAnMCcgLiAkbnVtIDogJG51bSk7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICd5JzoKICAgICAgICAkb3V0IC49IHN1YnN0cigkal95LCAyLCAyKTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ1knOgogICAgICAgICRvdXQgLj0gJGpfeTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ3onOgogICAgICAgICRvdXQgLj0gJGRveTsKICAgICAgICBicmVhazsKCiAgICAgIGRlZmF1bHQ6CiAgICAgICAgJG91dCAuPSAkc3ViOwogICAgfQogIH0KICByZXR1cm4gKCR0cl9udW0gIT0gJ2VuJykgPyB0cl9udW0oJG91dCwgJ2ZhJywgJy4nKSA6ICRvdXQ7Cn0KCi8qCUYJKi8KZnVuY3Rpb24gdHJfbnVtKCRzdHIsICRtb2QgPSAnZW4nLCAkbWYgPSAn2asnKSB7CiAgJG51bV9hID0gYXJyYXkoJzAnLCAnMScsICcyJywgJzMnLCAnNCcsICc1JywgJzYnLCAnNycsICc4JywgJzknLCAnLicpOwogICRrZXlfYSA9IGFycmF5KCfbsCcsICfbsScsICfbsicsICfbsycsICfbtCcsICfbtScsICfbticsICfbtycsICfbuCcsICfbuScsICRtZik7CiAgcmV0dXJuICgkbW9kID09ICdmYScpID8gc3RyX3JlcGxhY2UoJG51bV9hLCAka2V5X2EsICRzdHIpIDogc3RyX3JlcGxhY2UoJGtleV9hLCAkbnVtX2EsICRzdHIpOwp9CgovKglGCSovCmZ1bmN0aW9uIGpkYXRlX3dvcmRzKCRhcnJheSwgJG1vZCA9ICcnKSB7CiAgZm9yZWFjaCAoJGFycmF5IGFzICR0eXBlID0+ICRudW0pIHsKICAgICRudW0gPSAoaW50KSB0cl9udW0oJG51bSk7CiAgICBzd2l0Y2ggKCR0eXBlKSB7CgogICAgICBjYXNlICdzcyc6CiAgICAgICAgJHNsID0gc3RybGVuKCRudW0pOwogICAgICAgICR4eTMgPSBzdWJzdHIoJG51bSwgMiAtICRzbCwgMSk7CiAgICAgICAgJGgzID0gJGgzNCA9ICRoNCA9ICcnOwogICAgICAgIGlmICgkeHkzID09IDEpIHsKICAgICAgICAgICRwMzQgPSAnJzsKICAgICAgICAgICRrMzQgPSBhcnJheSgn2K/ZhycsICfbjNin2LLYr9mHJywgJ9iv2YjYp9iy2K/ZhycsICfYs9uM2LLYr9mHJywgJ9qG2YfYp9ix2K/ZhycsICfZvtin2YbYstiv2YcnLCAn2LTYp9mG2LLYr9mHJywgJ9mH2YHYr9mHJywgJ9mH2KzYr9mHJywgJ9mG2YjYstiv2YcnKTsKICAgICAgICAgICRoMzQgPSAkazM0W3N1YnN0cigkbnVtLCAyIC0gJHNsLCAyKSAtIDEwXTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgJHh5NCA9IHN1YnN0cigkbnVtLCAzIC0gJHNsLCAxKTsKICAgICAgICAgICRwMzQgPSAoJHh5MyA9PSAwIG9yICR4eTQgPT0gMCkgPyAnJyA6ICcg2YggJzsKICAgICAgICAgICRrMyA9IGFycmF5KCcnLCAnJywgJ9io24zYs9iqJywgJ9iz24wnLCAn2obZh9mEJywgJ9m+2YbYrNin2YcnLCAn2LTYtdiqJywgJ9mH2YHYqtin2K8nLCAn2YfYtNiq2KfYrycsICfZhtmI2K8nKTsKICAgICAgICAgICRoMyA9ICRrM1skeHkzXTsKICAgICAgICAgICRrNCA9IGFycmF5KCcnLCAn24zaqScsICfYr9mIJywgJ9iz2YcnLCAn2obZh9in2LEnLCAn2b7ZhtisJywgJ9i02LQnLCAn2YfZgdiqJywgJ9mH2LTYqicsICfZhtmHJyk7CiAgICAgICAgICAkaDQgPSAkazRbJHh5NF07CiAgICAgICAgfQogICAgICAgICRhcnJheVskdHlwZV0gPSAoKCRudW0gPiA5OSkgPyBzdHJfcmVwbGFjZSgKICAgICAgICAgIGFycmF5KCcxMicsICcxMycsICcxNCcsICcxOScsICcyMCcpLAogICAgICAgICAgYXJyYXkoJ9mH2LLYp9ixINmIINiv2YjbjNiz2KonLCAn2YfYstin2LEg2Ygg2LPbjNi12K8nLCAn2YfYstin2LEg2Ygg2obZh9in2LHYtdivJywgJ9mH2LLYp9ixINmIINmG2YfYtdivJywgJ9iv2YjZh9iy2KfYsScpLAogICAgICAgICAgc3Vic3RyKCRudW0sIDAsIDIpCiAgICAgICAgKSAuICgoc3Vic3RyKCRudW0sIDIsIDIpID09ICcwMCcpID8gJycgOiAnINmIICcpIDogJycpIC4gJGgzIC4gJHAzNCAuICRoMzQgLiAkaDQ7CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdtbSc6CiAgICAgICAgJGtleSA9IGFycmF5KCfZgdix2YjYsdiv24zZhicsICfYp9ix2K/bjNio2YfYtNiqJywgJ9iu2LHYr9in2K8nLCAn2KrbjNixJywgJ9mF2LHYr9in2K8nLCAn2LTZh9ix24zZiNixJywgJ9mF2YfYsScsICfYotio2KfZhicsICfYotiw2LEnLCAn2K/bjCcsICfYqNmH2YXZhicsICfYp9iz2YHZhtivJyk7CiAgICAgICAgJGFycmF5WyR0eXBlXSA9ICRrZXlbJG51bSAtIDFdOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAncnInOgogICAgICAgICRrZXkgPSBhcnJheSgKICAgICAgICAgICfbjNqpJywgJ9iv2YgnLCAn2LPZhycsICfahtmH2KfYsScsICfZvtmG2KwnLCAn2LTYtCcsICfZh9mB2KonLCAn2YfYtNiqJywgJ9mG2YcnLCAn2K/ZhycsICfbjNin2LLYr9mHJywgJ9iv2YjYp9iy2K/ZhycsICfYs9uM2LLYr9mHJywgJ9qG2YfYp9ix2K/ZhycsICfZvtin2YbYstiv2YcnLCAn2LTYp9mG2LLYr9mHJywgJ9mH2YHYr9mHJywgJ9mH2KzYr9mHJywgJ9mG2YjYstiv2YcnLCAn2KjbjNiz2KonLCAn2KjbjNiz2Kog2Ygg24zaqScsICfYqNuM2LPYqiDZiCDYr9mIJywgJ9io24zYs9iqINmIINiz2YcnLCAn2KjbjNiz2Kog2Ygg2obZh9in2LEnLCAn2KjbjNiz2Kog2Ygg2b7ZhtisJywgJ9io24zYs9iqINmIINi02LQnLCAn2KjbjNiz2Kog2Ygg2YfZgdiqJywgJ9io24zYs9iqINmIINmH2LTYqicsICfYqNuM2LPYqiDZiCDZhtmHJywgJ9iz24wnLCAn2LPbjCDZiCDbjNqpJwogICAgICAgICk7CiAgICAgICAgJGFycmF5WyR0eXBlXSA9ICRrZXlbJG51bSAtIDFdOwogICAgICAgIGJyZWFrOwoKICAgICAgY2FzZSAncmgnOgogICAgICAgICRrZXkgPSBhcnJheSgn24zaqdi02YbYqNmHJywgJ9iv2YjYtNmG2KjZhycsICfYs9mHINi02YbYqNmHJywgJ9qG2YfYp9ix2LTZhtio2YcnLCAn2b7Zhtis2LTZhtio2YcnLCAn2KzZhdi52YcnLCAn2LTZhtio2YcnKTsKICAgICAgICAkYXJyYXlbJHR5cGVdID0gJGtleVskbnVtXTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ3NoJzoKICAgICAgICAka2V5ID0gYXJyYXkoJ9mF2KfYsScsICfYp9iz2KgnLCAn2q/ZiNiz2YHZhtivJywgJ9mF24zZhdmI2YYnLCAn2YXYsdi6JywgJ9iz2q8nLCAn2K7ZiNqpJywgJ9mF2YjYtCcsICfar9in2YgnLCAn2b7ZhNmG2q8nLCAn2K7Ysdqv2YjYtCcsICfZhtmH2YbarycpOwogICAgICAgICRhcnJheVskdHlwZV0gPSAka2V5WyRudW0gJSAxMl07CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdtYic6CiAgICAgICAgJGtleSA9IGFycmF5KCfYrdmF2YQnLCAn2KvZiNixJywgJ9is2YjYstinJywgJ9iz2LHYt9in2YYnLCAn2KfYs9ivJywgJ9iz2YbYqNmE2YcnLCAn2YXbjNiy2KfZhicsICfYudmC2LHYqCcsICfZgtmI2LMnLCAn2KzYr9uMJywgJ9iv2YTZiCcsICfYrdmI2KonKTsKICAgICAgICAkYXJyYXlbJHR5cGVdID0gJGtleVskbnVtIC0gMV07CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdmZic6CiAgICAgICAgJGtleSA9IGFycmF5KCfYqNmH2KfYsScsICfYqtin2KjYs9iq2KfZhicsICfZvtin24zbjNiyJywgJ9iy2YXYs9iq2KfZhicpOwogICAgICAgICRhcnJheVskdHlwZV0gPSAka2V5WyhpbnQpICgkbnVtIC8gMy4xKV07CiAgICAgICAgYnJlYWs7CgogICAgICBjYXNlICdrbSc6CiAgICAgICAgJGtleSA9IGFycmF5KCfZgdixJywgJ9in2LEnLCAn2K7YsScsICfYqtuM4oCNJywgJ9mF2LEnLCAn2LTZh+KAjScsICfZhdmH4oCNJywgJ9ii2KjigI0nLCAn2KLYsCcsICfYr9uMJywgJ9io2YfigI0nLCAn2KfYs+KAjScpOwogICAgICAgICRhcnJheVskdHlwZV0gPSAka2V5WyRudW0gLSAxXTsKICAgICAgICBicmVhazsKCiAgICAgIGNhc2UgJ2toJzoKICAgICAgICAka2V5ID0gYXJyYXkoJ9uMJywgJ9ivJywgJ9izJywgJ9qGJywgJ9m+JywgJ9isJywgJ9i0Jyk7CiAgICAgICAgJGFycmF5WyR0eXBlXSA9ICRrZXlbJG51bV07CiAgICAgICAgYnJlYWs7CgogICAgICBkZWZhdWx0OgogICAgICAgICRhcnJheVskdHlwZV0gPSAkbnVtOwogICAgfQogIH0KICByZXR1cm4gKCRtb2QgPT09ICcnKSA/ICRhcnJheSA6IGltcGxvZGUoJG1vZCwgJGFycmF5KTsKfQoKCi8qKiAgR3JlZ29yaWFuICYgSmFsYWxpIChIaWpyaV9TaGFtc2ksU29sYXIpIERhdGUgQ29udmVydGVyIEZ1bmN0aW9ucwpBdXRob3I6IEpERi5TQ1IuSVIgPT4+IERvd25sb2FkIEZ1bGwgVmVyc2lvbiA6ICBodHRwOi8vamRmLnNjci5pci9qZGYKTGljZW5zZTogR05VL0xHUEwgXyBPcGVuIFNvdXJjZSAmIEZyZWUgOjogVmVyc2lvbjogMi44MCA6IFsyMDIwPTEzOTldCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQozNTU3NDY9MzYxNTkwLTU4NDQgJiAzNjE1OTA9KDMwKjMzKjM2NSkrKDMwKjgpICYgNTg0ND0oMTYqMzY1KSsoMTYvNCkKMzU1NjY2PTM1NTc0Ni03OS0xICYgMzU1NjY4PTM1NTc0Ni03OSsxICYgIDE1OTU9NjA1Kzk5MCAmICA2MDU9NjIxLTE2Cjk5MD0zMCozMyAmIDEyMDUzPSgzNjUqMzMpKygzMi80KSAmIDM2NTI0PSgzNjUqMTAwKSsoMTAwLzQpLSgxMDAvMTAwKQoxNDYxPSgzNjUqNCkrKDQvNCkgJiAxNDYwOTc9KDM2NSo0MDApKyg0MDAvNCktKDQwMC8xMDApKyg0MDAvNDAwKSAgKi8KCi8qCUYJKi8KZnVuY3Rpb24gZ3JlZ29yaWFuX3RvX2phbGFsaSgkZ3ksICRnbSwgJGdkLCAkbW9kID0gJycpIHsKICAgbGlzdCgkZ3ksICRnbSwgJGdkKSA9IGV4cGxvZGUoJ18nLCB0cl9udW0oJGd5IC4gJ18nIC4gJGdtIC4gJ18nIC4gJGdkKSk7LyogPD0gRXh0cmEgOtin2YrZhiDYs9i32LEg2Iwg2KzYstihINiq2KfYqNi5INin2LXZhNmKINmG2YrYs9iqICovCiAgJGdfZF9tID0gYXJyYXkoMCwgMzEsIDU5LCA5MCwgMTIwLCAxNTEsIDE4MSwgMjEyLCAyNDMsIDI3MywgMzA0LCAzMzQpOwogICRneTIgPSAoJGdtID4gMikgPyAoJGd5ICsgMSkgOiAkZ3k7CiAgJGRheXMgPSAzNTU2NjYgKyAoMzY1ICogJGd5KSArICgoaW50KSAoKCRneTIgKyAzKSAvIDQpKSAtICgoaW50KSAoKCRneTIgKyA5OSkgLyAxMDApKSArICgoaW50KSAoKCRneTIgKyAzOTkpIC8gNDAwKSkgKyAkZ2QgKyAkZ19kX21bJGdtIC0gMV07CiAgJGp5ID0gLTE1OTUgKyAoMzMgKiAoKGludCkgKCRkYXlzIC8gMTIwNTMpKSk7CiAgJGRheXMgJT0gMTIwNTM7CiAgJGp5ICs9IDQgKiAoKGludCkgKCRkYXlzIC8gMTQ2MSkpOwogICRkYXlzICU9IDE0NjE7CiAgaWYgKCRkYXlzID4gMzY1KSB7CiAgICAkankgKz0gKGludCkgKCgkZGF5cyAtIDEpIC8gMzY1KTsKICAgICRkYXlzID0gKCRkYXlzIC0gMSkgJSAzNjU7CiAgfQogIGlmICgkZGF5cyA8IDE4NikgewogICAgJGptID0gMSArIChpbnQpICgkZGF5cyAvIDMxKTsKICAgICRqZCA9IDEgKyAoJGRheXMgJSAzMSk7CiAgfSBlbHNlIHsKICAgICRqbSA9IDcgKyAoaW50KSAoKCRkYXlzIC0gMTg2KSAvIDMwKTsKICAgICRqZCA9IDEgKyAoKCRkYXlzIC0gMTg2KSAlIDMwKTsKICB9CiAgcmV0dXJuICgkbW9kID09ICcnKSA/IGFycmF5KCRqeSwgJGptLCAkamQpIDogJGp5IC4gJG1vZCAuICRqbSAuICRtb2QgLiAkamQ7Cn0KCi8qCUYJKi8KZnVuY3Rpb24gamFsYWxpX3RvX2dyZWdvcmlhbigkanksICRqbSwgJGpkLCAkbW9kID0gJycpIHsKICAgbGlzdCgkanksICRqbSwgJGpkKSA9IGV4cGxvZGUoJ18nLCB0cl9udW0oJGp5IC4gJ18nIC4gJGptIC4gJ18nIC4gJGpkKSk7LyogPD0gRXh0cmEgOtin2YrZhiDYs9i32LEg2Iwg2KzYstihINiq2KfYqNi5INin2LXZhNmKINmG2YrYs9iqICovCiAgJGp5ICs9IDE1OTU7CiAgJGRheXMgPSAtMzU1NjY4ICsgKDM2NSAqICRqeSkgKyAoKChpbnQpICgkankgLyAzMykpICogOCkgKyAoKGludCkgKCgoJGp5ICUgMzMpICsgMykgLyA0KSkgKyAkamQgKyAoKCRqbSA8IDcpID8gKCRqbSAtIDEpICogMzEgOiAoKCRqbSAtIDcpICogMzApICsgMTg2KTsKICAkZ3kgPSA0MDAgKiAoKGludCkgKCRkYXlzIC8gMTQ2MDk3KSk7CiAgJGRheXMgJT0gMTQ2MDk3OwogIGlmICgkZGF5cyA+IDM2NTI0KSB7CiAgICAkZ3kgKz0gMTAwICogKChpbnQpICgtLSRkYXlzIC8gMzY1MjQpKTsKICAgICRkYXlzICU9IDM2NTI0OwogICAgaWYgKCRkYXlzID49IDM2NSkgJGRheXMrKzsKICB9CiAgJGd5ICs9IDQgKiAoKGludCkgKCRkYXlzIC8gMTQ2MSkpOwogICRkYXlzICU9IDE0NjE7CiAgaWYgKCRkYXlzID4gMzY1KSB7CiAgICAkZ3kgKz0gKGludCkgKCgkZGF5cyAtIDEpIC8gMzY1KTsKICAgICRkYXlzID0gKCRkYXlzIC0gMSkgJSAzNjU7CiAgfQogICRnZCA9ICRkYXlzICsgMTsKICAkc2FsX2EgPSBhcnJheSgwLCAzMSwgKCgkZ3kgJSA0ID09IDAgYW5kICRneSAlIDEwMCAhPSAwKSBvciAoJGd5ICUgNDAwID09IDApKSA/IDI5IDogMjgsIDMxLCAzMCwgMzEsIDMwLCAzMSwgMzEsIDMwLCAzMSwgMzAsIDMxKTsKICBmb3IgKCRnbSA9IDA7ICRnbSA8IDEzIGFuZCAkZ2QgPiAkc2FsX2FbJGdtXTsgJGdtKyspICRnZCAtPSAkc2FsX2FbJGdtXTsKICByZXR1cm4gKCRtb2QgPT0gJycpID8gYXJyYXkoJGd5LCAkZ20sICRnZCkgOiAkZ3kgLiAkbW9kIC4gJGdtIC4gJG1vZCAuICRnZDsKfQo=
+<?php 
+
+
+function jdate($format, $timestamp = '', $none = '', $time_zone = 'Asia/Tehran', $tr_num = 'fa') {
+
+  $T_sec = 0;
+  if ($time_zone != 'local') date_default_timezone_set(($time_zone === '') ? 'Asia/Tehran' : $time_zone);
+  $ts = $T_sec + (($timestamp === '') ? time() : tr_num($timestamp));
+  $date = explode('_', date('H_i_j_n_O_P_s_w_Y', $ts));
+  list($j_y, $j_m, $j_d) = gregorian_to_jalali($date[8], $date[3], $date[2]);
+  $doy = ($j_m < 7) ? (($j_m - 1) * 31) + $j_d - 1 : (($j_m - 7) * 30) + $j_d + 185;
+  $kab = (((($j_y + 12) % 33) % 4) == 1) ? 1 : 0;
+  $sl = strlen($format);
+  $out = '';
+  for ($i = 0; $i < $sl; $i++) {
+    $sub = substr($format, $i, 1);
+    if ($sub == '\\') {
+      $out .= substr($format, ++$i, 1);
+      continue;
+    }
+    switch ($sub) {
+
+      case 'E':
+      case 'R':
+      case 'x':
+      case 'X':
+        $out .= 'http://jdf.scr.ir';
+        break;
+
+      case 'B':
+      case 'e':
+      case 'g':
+      case 'G':
+      case 'h':
+      case 'I':
+      case 'T':
+      case 'u':
+      case 'Z':
+        $out .= date($sub, $ts);
+        break;
+
+      case 'a':
+        $out .= ($date[0] < 12) ? 'ق.ظ' : 'ب.ظ';
+        break;
+
+      case 'A':
+        $out .= ($date[0] < 12) ? 'قبل از ظهر' : 'بعد از ظهر';
+        break;
+
+      case 'b':
+        $out .= (int) ($j_m / 3.1) + 1;
+        break;
+
+      case 'c':
+        $out .= $j_y . '/' . $j_m . '/' . $j_d . ' ،' . $date[0] . ':' . $date[1] . ':' . $date[6] . ' ' . $date[5];
+        break;
+
+      case 'C':
+        $out .= (int) (($j_y + 99) / 100);
+        break;
+
+      case 'd':
+        $out .= ($j_d < 10) ? '0' . $j_d : $j_d;
+        break;
+
+      case 'D':
+        $out .= jdate_words(array('kh' => $date[7]), ' ');
+        break;
+
+      case 'f':
+        $out .= jdate_words(array('ff' => $j_m), ' ');
+        break;
+
+      case 'F':
+        $out .= jdate_words(array('mm' => $j_m), ' ');
+        break;
+
+      case 'H':
+        $out .= $date[0];
+        break;
+
+      case 'i':
+        $out .= $date[1];
+        break;
+
+      case 'j':
+        $out .= $j_d;
+        break;
+
+      case 'J':
+        $out .= jdate_words(array('rr' => $j_d), ' ');
+        break;
+
+      case 'k';
+        $out .= tr_num(100 - (int) ($doy / ($kab + 365.24) * 1000) / 10, $tr_num);
+        break;
+
+      case 'K':
+        $out .= tr_num((int) ($doy / ($kab + 365.24) * 1000) / 10, $tr_num);
+        break;
+
+      case 'l':
+        $out .= jdate_words(array('rh' => $date[7]), ' ');
+        break;
+
+      case 'L':
+        $out .= $kab;
+        break;
+
+      case 'm':
+        $out .= ($j_m > 9) ? $j_m : '0' . $j_m;
+        break;
+
+      case 'M':
+        $out .= jdate_words(array('km' => $j_m), ' ');
+        break;
+
+      case 'n':
+        $out .= $j_m;
+        break;
+
+      case 'N':
+        $out .= $date[7] + 1;
+        break;
+
+      case 'o':
+        $jdw = ($date[7] == 6) ? 0 : $date[7] + 1;
+        $dny = 364 + $kab - $doy;
+        $out .= ($jdw > ($doy + 3) and $doy < 3) ? $j_y - 1 : (((3 - $dny) > $jdw and $dny < 3) ? $j_y + 1 : $j_y);
+        break;
+
+      case 'O':
+        $out .= $date[4];
+        break;
+
+      case 'p':
+        $out .= jdate_words(array('mb' => $j_m), ' ');
+        break;
+
+      case 'P':
+        $out .= $date[5];
+        break;
+
+      case 'q':
+        $out .= jdate_words(array('sh' => $j_y), ' ');
+        break;
+
+      case 'Q':
+        $out .= $kab + 364 - $doy;
+        break;
+
+      case 'r':
+        $key = jdate_words(array('rh' => $date[7], 'mm' => $j_m));
+        $out .= $date[0] . ':' . $date[1] . ':' . $date[6] . ' ' . $date[4] . ' ' . $key['rh'] . '، ' . $j_d . ' ' . $key['mm'] . ' ' . $j_y;
+        break;
+
+      case 's':
+        $out .= $date[6];
+        break;
+
+      case 'S':
+        $out .= 'ام';
+        break;
+
+      case 't':
+        $out .= ($j_m != 12) ? (31 - (int) ($j_m / 6.5)) : ($kab + 29);
+        break;
+
+      case 'U':
+        $out .= $ts;
+        break;
+
+      case 'v':
+        $out .= jdate_words(array('ss' => ($j_y % 100)), ' ');
+        break;
+
+      case 'V':
+        $out .= jdate_words(array('ss' => $j_y), ' ');
+        break;
+
+      case 'w':
+        $out .= ($date[7] == 6) ? 0 : $date[7] + 1;
+        break;
+
+      case 'W':
+        $avs = (($date[7] == 6) ? 0 : $date[7] + 1) - ($doy % 7);
+        if ($avs < 0) $avs += 7;
+        $num = (int) (($doy + $avs) / 7);
+        if ($avs < 4) {
+          $num++;
+        } elseif ($num < 1) {
+          $num = ($avs == 4 or $avs == ((((($j_y % 33) % 4) - 2) == ((int) (($j_y % 33) * 0.05))) ? 5 : 4)) ? 53 : 52;
+        }
+        $aks = $avs + $kab;
+        if ($aks == 7) $aks = 0;
+        $out .= (($kab + 363 - $doy) < $aks and $aks < 3) ? '01' : (($num < 10) ? '0' . $num : $num);
+        break;
+
+      case 'y':
+        $out .= substr($j_y, 2, 2);
+        break;
+
+      case 'Y':
+        $out .= $j_y;
+        break;
+
+      case 'z':
+        $out .= $doy;
+        break;
+
+      default:
+        $out .= $sub;
+    }
+  }
+  return ($tr_num != 'en') ? tr_num($out, 'fa', '.') : $out;
+}
+
+/*	F	*/
+function tr_num($str, $mod = 'en', $mf = '٫') {
+  $num_a = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.');
+  $key_a = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', $mf);
+  return ($mod == 'fa') ? str_replace($num_a, $key_a, $str) : str_replace($key_a, $num_a, $str);
+}
+
+/*	F	*/
+function jdate_words($array, $mod = '') {
+  foreach ($array as $type => $num) {
+    $num = (int) tr_num($num);
+    switch ($type) {
+
+      case 'ss':
+        $sl = strlen($num);
+        $xy3 = substr($num, 2 - $sl, 1);
+        $h3 = $h34 = $h4 = '';
+        if ($xy3 == 1) {
+          $p34 = '';
+          $k34 = array('ده', 'یازده', 'دوازده', 'سیزده', 'چهارده', 'پانزده', 'شانزده', 'هفده', 'هجده', 'نوزده');
+          $h34 = $k34[substr($num, 2 - $sl, 2) - 10];
+        } else {
+          $xy4 = substr($num, 3 - $sl, 1);
+          $p34 = ($xy3 == 0 or $xy4 == 0) ? '' : ' و ';
+          $k3 = array('', '', 'بیست', 'سی', 'چهل', 'پنجاه', 'شصت', 'هفتاد', 'هشتاد', 'نود');
+          $h3 = $k3[$xy3];
+          $k4 = array('', 'یک', 'دو', 'سه', 'چهار', 'پنج', 'شش', 'هفت', 'هشت', 'نه');
+          $h4 = $k4[$xy4];
+        }
+        $array[$type] = (($num > 99) ? str_replace(
+          array('12', '13', '14', '19', '20'),
+          array('هزار و دویست', 'هزار و سیصد', 'هزار و چهارصد', 'هزار و نهصد', 'دوهزار'),
+          substr($num, 0, 2)
+        ) . ((substr($num, 2, 2) == '00') ? '' : ' و ') : '') . $h3 . $p34 . $h34 . $h4;
+        break;
+
+      case 'mm':
+        $key = array('فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند');
+        $array[$type] = $key[$num - 1];
+        break;
+
+      case 'rr':
+        $key = array(
+          'یک', 'دو', 'سه', 'چهار', 'پنج', 'شش', 'هفت', 'هشت', 'نه', 'ده', 'یازده', 'دوازده', 'سیزده', 'چهارده', 'پانزده', 'شانزده', 'هفده', 'هجده', 'نوزده', 'بیست', 'بیست و یک', 'بیست و دو', 'بیست و سه', 'بیست و چهار', 'بیست و پنج', 'بیست و شش', 'بیست و هفت', 'بیست و هشت', 'بیست و نه', 'سی', 'سی و یک'
+        );
+        $array[$type] = $key[$num - 1];
+        break;
+
+      case 'rh':
+        $key = array('یکشنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه');
+        $array[$type] = $key[$num];
+        break;
+
+      case 'sh':
+        $key = array('مار', 'اسب', 'گوسفند', 'میمون', 'مرغ', 'سگ', 'خوک', 'موش', 'گاو', 'پلنگ', 'خرگوش', 'نهنگ');
+        $array[$type] = $key[$num % 12];
+        break;
+
+      case 'mb':
+        $key = array('حمل', 'ثور', 'جوزا', 'سرطان', 'اسد', 'سنبله', 'میزان', 'عقرب', 'قوس', 'جدی', 'دلو', 'حوت');
+        $array[$type] = $key[$num - 1];
+        break;
+
+      case 'ff':
+        $key = array('بهار', 'تابستان', 'پاییز', 'زمستان');
+        $array[$type] = $key[(int) ($num / 3.1)];
+        break;
+
+      case 'km':
+        $key = array('فر', 'ار', 'خر', 'تی‍', 'مر', 'شه‍', 'مه‍', 'آب‍', 'آذ', 'دی', 'به‍', 'اس‍');
+        $array[$type] = $key[$num - 1];
+        break;
+
+      case 'kh':
+        $key = array('ی', 'د', 'س', 'چ', 'پ', 'ج', 'ش');
+        $array[$type] = $key[$num];
+        break;
+
+      default:
+        $array[$type] = $num;
+    }
+  }
+  return ($mod === '') ? $array : implode($mod, $array);
+}
+
+
+/**  Gregorian & Jalali (Hijri_Shamsi,Solar) Date Converter Functions
+Author: JDF.SCR.IR =>> Download Full Version :  http://jdf.scr.ir/jdf
+License: GNU/LGPL _ Open Source & Free :: Version: 2.80 : [2020=1399]
+---------------------------------------------------------------------
+355746=361590-5844 & 361590=(30*33*365)+(30*8) & 5844=(16*365)+(16/4)
+355666=355746-79-1 & 355668=355746-79+1 &  1595=605+990 &  605=621-16
+990=30*33 & 12053=(365*33)+(32/4) & 36524=(365*100)+(100/4)-(100/100)
+1461=(365*4)+(4/4) & 146097=(365*400)+(400/4)-(400/100)+(400/400)  */
+
+/*	F	*/
+function gregorian_to_jalali($gy, $gm, $gd, $mod = '') {
+   list($gy, $gm, $gd) = explode('_', tr_num($gy . '_' . $gm . '_' . $gd));/* <= Extra :اين سطر ، جزء تابع اصلي نيست */
+  $g_d_m = array(0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
+  $gy2 = ($gm > 2) ? ($gy + 1) : $gy;
+  $days = 355666 + (365 * $gy) + ((int) (($gy2 + 3) / 4)) - ((int) (($gy2 + 99) / 100)) + ((int) (($gy2 + 399) / 400)) + $gd + $g_d_m[$gm - 1];
+  $jy = -1595 + (33 * ((int) ($days / 12053)));
+  $days %= 12053;
+  $jy += 4 * ((int) ($days / 1461));
+  $days %= 1461;
+  if ($days > 365) {
+    $jy += (int) (($days - 1) / 365);
+    $days = ($days - 1) % 365;
+  }
+  if ($days < 186) {
+    $jm = 1 + (int) ($days / 31);
+    $jd = 1 + ($days % 31);
+  } else {
+    $jm = 7 + (int) (($days - 186) / 30);
+    $jd = 1 + (($days - 186) % 30);
+  }
+  return ($mod == '') ? array($jy, $jm, $jd) : $jy . $mod . $jm . $mod . $jd;
+}
+
+/*	F	*/
+function jalali_to_gregorian($jy, $jm, $jd, $mod = '') {
+   list($jy, $jm, $jd) = explode('_', tr_num($jy . '_' . $jm . '_' . $jd));/* <= Extra :اين سطر ، جزء تابع اصلي نيست */
+  $jy += 1595;
+  $days = -355668 + (365 * $jy) + (((int) ($jy / 33)) * 8) + ((int) ((($jy % 33) + 3) / 4)) + $jd + (($jm < 7) ? ($jm - 1) * 31 : (($jm - 7) * 30) + 186);
+  $gy = 400 * ((int) ($days / 146097));
+  $days %= 146097;
+  if ($days > 36524) {
+    $gy += 100 * ((int) (--$days / 36524));
+    $days %= 36524;
+    if ($days >= 365) $days++;
+  }
+  $gy += 4 * ((int) ($days / 1461));
+  $days %= 1461;
+  if ($days > 365) {
+    $gy += (int) (($days - 1) / 365);
+    $days = ($days - 1) % 365;
+  }
+  $gd = $days + 1;
+  $sal_a = array(0, 31, (($gy % 4 == 0 and $gy % 100 != 0) or ($gy % 400 == 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+  for ($gm = 0; $gm < 13 and $gd > $sal_a[$gm]; $gm++) $gd -= $sal_a[$gm];
+  return ($mod == '') ? array($gy, $gm, $gd) : $gy . $mod . $gm . $mod . $gd;
+}

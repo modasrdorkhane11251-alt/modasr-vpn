@@ -1,1 +1,257 @@
-PD9waHAKCmNsYXNzIE1pcnphQWdlbnRQYW5lbERyaXZlciBleHRlbmRzIEJhc2VQYW5lbERyaXZlcgp7CiAgICBwdWJsaWMgZnVuY3Rpb24gY3JlYXRlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICRkYXRhX2xpbWl0ID0gJHZhcnNbJ2RhdGFfbGltaXQnXTsKICAgICAgICAkZXhwaXJlID0gJHZhcnNbJ2V4cGlyZSddOwogICAgICAgICR1c2VybmFtZUMgPSAkdmFyc1sndXNlcm5hbWVDJ107CiAgICAgICAgJE91dHB1dCA9ICR2YXJzWydPdXRwdXQnXTsKICAgICAgICAkaW52b2ljZSA9ICR2YXJzWydpbnZvaWNlJ107CiAgICAgICAgJGRvbWFpbmhvc3RzID0gJHZhcnNbJ2RvbWFpbmhvc3RzJ107CiAgICAgICAgLy9jcmVhdGUgdXNlcgogICAgICAgICRDb25uZWN0VG9QYW5lbCA9IGNyZWF0ZV91c2VyX21pcnphKCRHZXRfRGF0YV9QYW5lbCwgJGRhdGFfbGltaXQgLyBwb3coMTAyNCwgMyksICRleHBpcmUgPT0gMCA/IDAgOiAoJGV4cGlyZSAtIHRpbWUoKSkgLyA4NjQwMCwgJHVzZXJuYW1lQyk7CiAgICAgICAgaWYgKCFlbXB0eSgkQ29ubmVjdFRvUGFuZWxbJ3N0YXR1cyddKSAmJiAkQ29ubmVjdFRvUGFuZWxbJ3N0YXR1cyddICE9IDIwMCkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnVW5zdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdtc2cnID0+ICRDb25uZWN0VG9QYW5lbFsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgaWYgKCFlbXB0eSgkQ29ubmVjdFRvUGFuZWxbJ2Vycm9yJ10pKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJENvbm5lY3RUb1BhbmVsWydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgICRkYXRhX091dHB1dCA9IGpzb25fZGVjb2RlKCRDb25uZWN0VG9QYW5lbFsnYm9keSddLCB0cnVlKTsKICAgICAgICBpZiAoISRkYXRhX091dHB1dFsnc3RhdHVzJ10pIHsKICAgICAgICAgICAgJE91dHB1dFsnc3RhdHVzJ10gPSAnVW5zdWNjZXNzZnVsJzsKICAgICAgICAgICAgaWYgKCRkYXRhX091dHB1dFsnbXNnJ10pIHsKICAgICAgICAgICAgICAgICRPdXRwdXRbJ21zZyddID0gJGRhdGFfT3V0cHV0Wydtc2cnXTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICRPdXRwdXRbJ21zZyddID0gJyc7CiAgICAgICAgICAgIH0KICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkZGF0YV9PdXRwdXQgPSAkZGF0YV9PdXRwdXRbJ29iaiddOwogICAgICAgICAgICBpZiAoJGludm9pY2UgIT0gZmFsc2UpIHsKICAgICAgICAgICAgICAgICRkYXRhX091dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gImh0dHBzOi8vJGRvbWFpbmhvc3RzL3N1Yi8iIC4gJGludm9pY2VbJ2lkX2ludm9pY2UnXTsKICAgICAgICAgICAgfQogICAgICAgICAgICAkT3V0cHV0WydzdGF0dXMnXSA9ICdzdWNjZXNzZnVsJzsKICAgICAgICAgICAgJE91dHB1dFsndXNlcm5hbWUnXSA9ICRkYXRhX091dHB1dFsndXNlcm5hbWUnXTsKICAgICAgICAgICAgJE91dHB1dFsnc3Vic2NyaXB0aW9uX3VybCddID0gJGRhdGFfT3V0cHV0WydzdWJzY3JpcHRpb25fdXJsJ107CiAgICAgICAgICAgICRPdXRwdXRbJ2NvbmZpZ3MnXSA9ICRkYXRhX091dHB1dFsnbGlua3MnXTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICRPdXRwdXQ7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIHJlYWQoYXJyYXkgJHZhcnMpCiAgICB7CiAgICAgICAgJEdldF9EYXRhX1BhbmVsID0gJHZhcnNbJ0dldF9EYXRhX1BhbmVsJ107CiAgICAgICAgJHVzZXJuYW1lID0gJHZhcnNbJ3VzZXJuYW1lJ107CiAgICAgICAgJE91dHB1dCA9ICR2YXJzWydPdXRwdXQnXTsKICAgICAgICAkaW52b2ljZSA9ICR2YXJzWydpbnZvaWNlJ107CiAgICAgICAgJGRvbWFpbmhvc3RzID0gJHZhcnNbJ2RvbWFpbmhvc3RzJ107CiAgICAgICAgJFVzZXJuYW1lRGF0YSA9IGdldF91c2VyX2RhdGFfbWlyemEoJEdldF9EYXRhX1BhbmVsLCAkdXNlcm5hbWUpOwogICAgICAgIGlmICghZW1wdHkoJFVzZXJuYW1lRGF0YVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkVXNlcm5hbWVEYXRhWydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlaWYgKCFlbXB0eSgkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSkgJiYgJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10gIT0gMjAwKSB7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkVXNlcm5hbWVEYXRhID0ganNvbl9kZWNvZGUoJFVzZXJuYW1lRGF0YVsnYm9keSddLCB0cnVlKTsKICAgICAgICAgICAgaWYgKCEkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSkgewogICAgICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgICAgICdtc2cnID0+ICRVc2VybmFtZURhdGFbJ21zZyddCiAgICAgICAgICAgICAgICApOwogICAgICAgICAgICB9CiAgICAgICAgICAgICRVc2VybmFtZURhdGEgPSAkVXNlcm5hbWVEYXRhWydvYmonXVsndXNlciddOwogICAgICAgICAgICBpZiAoJGludm9pY2UgIT0gZmFsc2UpIHsKICAgICAgICAgICAgICAgICRVc2VybmFtZURhdGFbJ3N1YnNjcmlwdGlvbl91cmwnXSA9ICJodHRwczovLyRkb21haW5ob3N0cy9zdWIvIiAuICRpbnZvaWNlWydpZF9pbnZvaWNlJ107CiAgICAgICAgICAgIH0KICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJFVzZXJuYW1lRGF0YVsnc3RhdHVzJ10sCiAgICAgICAgICAgICAgICAndXNlcm5hbWUnID0+ICRVc2VybmFtZURhdGFbJ3VzZXJuYW1lJ10sCiAgICAgICAgICAgICAgICAnZGF0YV9saW1pdCcgPT4gJFVzZXJuYW1lRGF0YVsnZGF0YV9saW1pdCddLAogICAgICAgICAgICAgICAgJ2V4cGlyZScgPT4gJFVzZXJuYW1lRGF0YVsnZXhwaXJlJ10gPyAkVXNlcm5hbWVEYXRhWydleHBpcmUnXSA6IDAsCiAgICAgICAgICAgICAgICAnb25saW5lX2F0JyA9PiAkVXNlcm5hbWVEYXRhWydvbmxpbmVfYXQnXSwKICAgICAgICAgICAgICAgICd1c2VkX3RyYWZmaWMnID0+ICRVc2VybmFtZURhdGFbJ3VzZWRfdHJhZmZpYyddLAogICAgICAgICAgICAgICAgJ2xpbmtzJyA9PiAkVXNlcm5hbWVEYXRhWydsaW5rcyddLAogICAgICAgICAgICAgICAgJ3N1YnNjcmlwdGlvbl91cmwnID0+ICRVc2VybmFtZURhdGFbJ3N1YnNjcmlwdGlvbl91cmwnXSwKICAgICAgICAgICAgICAgICdzdWJfdXBkYXRlZF9hdCcgPT4gJFVzZXJuYW1lRGF0YVsnc3ViX3VwZGF0ZWRfYXQnXSwKICAgICAgICAgICAgICAgICdzdWJfbGFzdF91c2VyX2FnZW50JyA9PiAkVXNlcm5hbWVEYXRhWydzdWJfbGFzdF91c2VyX2FnZW50J10sCiAgICAgICAgICAgICAgICAndXVpZCcgPT4gJFVzZXJuYW1lRGF0YVsndXVpZCddLAogICAgICAgICAgICAgICAgJ2RhdGFfbGltaXRfcmVzZXQnID0+ICRVc2VybmFtZURhdGFbJ2RhdGFfbGltaXRfcmVzZXQnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmV2b2tlU3ViKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJG5hbWVfcGFuZWwgPSAkdmFyc1snbmFtZV9wYW5lbCddOwogICAgICAgICRyZXZva2Vfc3ViID0gcmV2b2tlX3NlcnZpY2VfbWlyemEoJEdldF9EYXRhX1BhbmVsLCAkdXNlcm5hbWUpOwogICAgICAgIGlmICghZW1wdHkoJHJldm9rZV9zdWJbJ2Vycm9yJ10pKSB7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdVbnN1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJHJldm9rZV9zdWJbJ2Vycm9yJ10KICAgICAgICAgICAgKTsKICAgICAgICB9IGVsc2VpZiAoIWVtcHR5KCRyZXZva2Vfc3ViWydzdGF0dXMnXSkgJiYgJHJldm9rZV9zdWJbJ3N0YXR1cyddICE9IDIwMCkgewogICAgICAgICAgICAkT3V0cHV0ID0gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiAnVW5zdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdtc2cnID0+ICRyZXZva2Vfc3ViWydzdGF0dXMnXQogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICREYXRhX1VzZXIgPSAkdGhpcy0+RGF0YVVzZXIoJG5hbWVfcGFuZWwsICR1c2VybmFtZSk7CiAgICAgICAgICAgICRPdXRwdXQgPSBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+ICdzdWNjZXNzZnVsJywKICAgICAgICAgICAgICAgICdjb25maWdzJyA9PiAkRGF0YV9Vc2VyWydsaW5rcyddLAogICAgICAgICAgICAgICAgJ3N1YnNjcmlwdGlvbl91cmwnID0+ICREYXRhX1VzZXJbJ3N1YnNjcmlwdGlvbl91cmwnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJE91dHB1dDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVtb3ZlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRHZXRfRGF0YV9QYW5lbCA9ICR2YXJzWydHZXRfRGF0YV9QYW5lbCddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRPdXRwdXQgPSAkdmFyc1snT3V0cHV0J107CiAgICAgICAgJFVzZXJuYW1lRGF0YSA9IHJlbW92ZV9zZXJ2aWNlX21pcnphKCRHZXRfRGF0YV9QYW5lbCwgJHVzZXJuYW1lKTsKICAgICAgICBpZiAoaXNzZXQoJFVzZXJuYW1lRGF0YVsnZXJyb3InXSkpIHsKICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkVXNlcm5hbWVEYXRhWydtc2cnXQogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZWlmICgkVXNlcm5hbWVEYXRhWydzdGF0dXMnXSAhPSAyMDApIHsKICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkVXNlcm5hbWVEYXRhWydzdGF0dXMnXQogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRVc2VybmFtZURhdGEgPSBqc29uX2RlY29kZSgkVXNlcm5hbWVEYXRhWydib2R5J10sIHRydWUpOwogICAgICAgICAgICBpZiAoISRVc2VybmFtZURhdGFbJ3N0YXR1cyddKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ1Vuc3VjY2Vzc2Z1bCcsCiAgICAgICAgICAgICAgICAgICAgJ21zZycgPT4gJFVzZXJuYW1lRGF0YVsnbXNnJ10KICAgICAgICAgICAgICAgICk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgJE91dHB1dCA9IGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gJ3N1Y2Nlc3NmdWwnLAogICAgICAgICAgICAgICAgJ3VzZXJuYW1lJyA9PiAkdXNlcm5hbWUsCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkT3V0cHV0OwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiByZXNldFVzYWdlKGFycmF5ICR2YXJzKQogICAgewogICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgJ3N0YXR1cycgPT4gdHJ1ZSwKICAgICAgICAgICAgJ21zZycgPT4gJ3N1Y2Nlc3NmdWwnCiAgICAgICAgKTsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gZXh0ZW5kU2VydmljZShhcnJheSAkdmFycykKICAgIHsKICAgICAgICAkcGFuZWwgPSAkdmFyc1sncGFuZWwnXTsKICAgICAgICAkbmV3X2xpbWl0ID0gJHZhcnNbJ25ld19saW1pdCddOwogICAgICAgICR0aW1lX2RheSA9ICR2YXJzWyd0aW1lX2RheSddOwogICAgICAgICR1c2VybmFtZSA9ICR2YXJzWyd1c2VybmFtZSddOwogICAgICAgICRleHRlbmQgPSBleHRlbmRfc2VydmljZV9taXJ6YSgkcGFuZWwsICRuZXdfbGltaXQsICR0aW1lX2RheSwgJHVzZXJuYW1lKTsKICAgICAgICBpZiAoIWluX2FycmF5KCRleHRlbmRbJ3N0YXR1cyddLCBbMjAwLCA0MDBdKSkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICRleHRlbmRbJ21zZyddCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlaWYgKCRleHRlbmRbJ2Vycm9yJ10pIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkZXh0ZW5kWydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgICRleHRlbmQgPSBqc29uX2RlY29kZSgkZXh0ZW5kWydib2R5J10sIHRydWUpOwogICAgICAgIGlmICghJGV4dGVuZFsnc3RhdHVzJ10pIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkZXh0ZW5kWydtc2cnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICdzdGF0dXMnID0+IHRydWUsCiAgICAgICAgICAgICdtc2cnID0+ICdzdWNjZXNzZnVsJwogICAgICAgICk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGV4dHJhVm9sdW1lKGFycmF5ICR2YXJzKQogICAgewogICAgICAgICRwYW5lbCA9ICR2YXJzWydwYW5lbCddOwogICAgICAgICRsaW1pdF92b2x1bWVfbmV3ID0gJHZhcnNbJ2xpbWl0X3ZvbHVtZV9uZXcnXTsKICAgICAgICAkdXNlcm5hbWVfYWNjb3VudCA9ICR2YXJzWyd1c2VybmFtZV9hY2NvdW50J107CiAgICAgICAgJHZvbHVtZV9hZGQgPSBhZGRfdm9sdW1lX3NlcnZpY2VfbWlyemEoJHBhbmVsLCAkbGltaXRfdm9sdW1lX25ldywgJHVzZXJuYW1lX2FjY291bnQpOwogICAgICAgIGlmICghaW5fYXJyYXkoJHZvbHVtZV9hZGRbJ3N0YXR1cyddLCBbMjAwLCA0MDBdKSkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICR2b2x1bWVfYWRkWydtc2cnXQogICAgICAgICAgICApOwogICAgICAgIH0gZWxzZWlmICgkdm9sdW1lX2FkZFsnZXJyb3InXSkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICR2b2x1bWVfYWRkWydlcnJvciddCiAgICAgICAgICAgICk7CiAgICAgICAgfQogICAgICAgICR2b2x1bWVfYWRkID0ganNvbl9kZWNvZGUoJHZvbHVtZV9hZGRbJ2JvZHknXSwgdHJ1ZSk7CiAgICAgICAgaWYgKCEkdm9sdW1lX2FkZFsnc3RhdHVzJ10pIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkdm9sdW1lX2FkZFsnbXNnJ10KICAgICAgICAgICAgKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAnc3RhdHVzJyA9PiB0cnVlLAogICAgICAgICAgICAnbXNnJyA9PiAnc3VjY2Vzc2Z1bCcKICAgICAgICApOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBleHRyYVRpbWUoYXJyYXkgJHZhcnMpCiAgICB7CiAgICAgICAgJG5ld19saW1pdCA9ICR2YXJzWyduZXdfbGltaXQnXTsKICAgICAgICAkbGltaXRfdGltZV9uZXcgPSAkdmFyc1snbGltaXRfdGltZV9uZXcnXTsKICAgICAgICAkcGFuZWwgPSAkdmFyc1sncGFuZWwnXTsKICAgICAgICAkdXNlcm5hbWVfYWNjb3VudCA9ICR2YXJzWyd1c2VybmFtZV9hY2NvdW50J107CiAgICAgICAgJG5ld19saW1pdCA9ICRsaW1pdF90aW1lX25ldzsKICAgICAgICAkdGltZV9hZGQgPSBhZGRfdGltZV9zZXJ2aWNlX21pcnphKCRwYW5lbCwgJG5ld19saW1pdCwgJHVzZXJuYW1lX2FjY291bnQpOwogICAgICAgIGlmICghaW5fYXJyYXkoJHRpbWVfYWRkWydzdGF0dXMnXSwgWzIwMCwgNDAwXSkpIHsKICAgICAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAgICAgJ3N0YXR1cycgPT4gZmFsc2UsCiAgICAgICAgICAgICAgICAnbXNnJyA9PiAkdGltZV9hZGRbJ21zZyddCiAgICAgICAgICAgICk7CiAgICAgICAgfSBlbHNlaWYgKCR0aW1lX2FkZFsnZXJyb3InXSkgewogICAgICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAgICAgICAgICdtc2cnID0+ICR0aW1lX2FkZFsnZXJyb3InXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICAkdGltZV9hZGQgPSBqc29uX2RlY29kZSgkdGltZV9hZGRbJ2JvZHknXSwgdHJ1ZSk7CiAgICAgICAgaWYgKCEkdGltZV9hZGRbJ3N0YXR1cyddKSB7CiAgICAgICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgICAgICdzdGF0dXMnID0+IGZhbHNlLAogICAgICAgICAgICAgICAgJ21zZycgPT4gJHRpbWVfYWRkWydtc2cnXQogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICdzdGF0dXMnID0+IHRydWUsCiAgICAgICAgICAgICdtc2cnID0+ICdzdWNjZXNzZnVsJwogICAgICAgICk7CiAgICB9Cn0K
+<?php
+
+class MirzaAgentPanelDriver extends BasePanelDriver
+{
+    public function create(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $data_limit = $vars['data_limit'];
+        $expire = $vars['expire'];
+        $usernameC = $vars['usernameC'];
+        $Output = $vars['Output'];
+        $invoice = $vars['invoice'];
+        $domainhosts = $vars['domainhosts'];
+        //create user
+        $ConnectToPanel = create_user_mirza($Get_Data_Panel, $data_limit / pow(1024, 3), $expire == 0 ? 0 : ($expire - time()) / 86400, $usernameC);
+        if (!empty($ConnectToPanel['status']) && $ConnectToPanel['status'] != 200) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $ConnectToPanel['status']
+            );
+        }
+        if (!empty($ConnectToPanel['error'])) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $ConnectToPanel['error']
+            );
+        }
+        $data_Output = json_decode($ConnectToPanel['body'], true);
+        if (!$data_Output['status']) {
+            $Output['status'] = 'Unsuccessful';
+            if ($data_Output['msg']) {
+                $Output['msg'] = $data_Output['msg'];
+            } else {
+                $Output['msg'] = '';
+            }
+        } else {
+            $data_Output = $data_Output['obj'];
+            if ($invoice != false) {
+                $data_Output['subscription_url'] = "https://$domainhosts/sub/" . $invoice['id_invoice'];
+            }
+            $Output['status'] = 'successful';
+            $Output['username'] = $data_Output['username'];
+            $Output['subscription_url'] = $data_Output['subscription_url'];
+            $Output['configs'] = $data_Output['links'];
+        }
+        return $Output;
+    }
+
+    public function read(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $invoice = $vars['invoice'];
+        $domainhosts = $vars['domainhosts'];
+        $UsernameData = get_user_data_mirza($Get_Data_Panel, $username);
+        if (!empty($UsernameData['error'])) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['error']
+            );
+        } elseif (!empty($UsernameData['status']) && $UsernameData['status'] != 200) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['status']
+            );
+        } else {
+            $UsernameData = json_decode($UsernameData['body'], true);
+            if (!$UsernameData['status']) {
+                return array(
+                    'status' => 'Unsuccessful',
+                    'msg' => $UsernameData['msg']
+                );
+            }
+            $UsernameData = $UsernameData['obj']['user'];
+            if ($invoice != false) {
+                $UsernameData['subscription_url'] = "https://$domainhosts/sub/" . $invoice['id_invoice'];
+            }
+            $Output = array(
+                'status' => $UsernameData['status'],
+                'username' => $UsernameData['username'],
+                'data_limit' => $UsernameData['data_limit'],
+                'expire' => $UsernameData['expire'] ? $UsernameData['expire'] : 0,
+                'online_at' => $UsernameData['online_at'],
+                'used_traffic' => $UsernameData['used_traffic'],
+                'links' => $UsernameData['links'],
+                'subscription_url' => $UsernameData['subscription_url'],
+                'sub_updated_at' => $UsernameData['sub_updated_at'],
+                'sub_last_user_agent' => $UsernameData['sub_last_user_agent'],
+                'uuid' => $UsernameData['uuid'],
+                'data_limit_reset' => $UsernameData['data_limit_reset']
+            );
+        }
+        return $Output;
+    }
+
+    public function revokeSub(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $name_panel = $vars['name_panel'];
+        $revoke_sub = revoke_service_mirza($Get_Data_Panel, $username);
+        if (!empty($revoke_sub['error'])) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $revoke_sub['error']
+            );
+        } elseif (!empty($revoke_sub['status']) && $revoke_sub['status'] != 200) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $revoke_sub['status']
+            );
+        } else {
+            $Data_User = $this->DataUser($name_panel, $username);
+            $Output = array(
+                'status' => 'successful',
+                'configs' => $Data_User['links'],
+                'subscription_url' => $Data_User['subscription_url']
+            );
+        }
+        return $Output;
+    }
+
+    public function remove(array $vars)
+    {
+        $Get_Data_Panel = $vars['Get_Data_Panel'];
+        $username = $vars['username'];
+        $Output = $vars['Output'];
+        $UsernameData = remove_service_mirza($Get_Data_Panel, $username);
+        if (isset($UsernameData['error'])) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['msg']
+            );
+        } elseif ($UsernameData['status'] != 200) {
+            $Output = array(
+                'status' => 'Unsuccessful',
+                'msg' => $UsernameData['status']
+            );
+        } else {
+            $UsernameData = json_decode($UsernameData['body'], true);
+            if (!$UsernameData['status']) {
+                return array(
+                    'status' => 'Unsuccessful',
+                    'msg' => $UsernameData['msg']
+                );
+            }
+            $Output = array(
+                'status' => 'successful',
+                'username' => $username,
+            );
+        }
+        return $Output;
+    }
+
+    public function resetUsage(array $vars)
+    {
+        return array(
+            'status' => true,
+            'msg' => 'successful'
+        );
+    }
+
+    public function extendService(array $vars)
+    {
+        $panel = $vars['panel'];
+        $new_limit = $vars['new_limit'];
+        $time_day = $vars['time_day'];
+        $username = $vars['username'];
+        $extend = extend_service_mirza($panel, $new_limit, $time_day, $username);
+        if (!in_array($extend['status'], [200, 400])) {
+            return array(
+                'status' => false,
+                'msg' => $extend['msg']
+            );
+        } elseif ($extend['error']) {
+            return array(
+                'status' => false,
+                'msg' => $extend['error']
+            );
+        }
+        $extend = json_decode($extend['body'], true);
+        if (!$extend['status']) {
+            return array(
+                'status' => false,
+                'msg' => $extend['msg']
+            );
+        }
+        return array(
+            'status' => true,
+            'msg' => 'successful'
+        );
+    }
+
+    public function extraVolume(array $vars)
+    {
+        $panel = $vars['panel'];
+        $limit_volume_new = $vars['limit_volume_new'];
+        $username_account = $vars['username_account'];
+        $volume_add = add_volume_service_mirza($panel, $limit_volume_new, $username_account);
+        if (!in_array($volume_add['status'], [200, 400])) {
+            return array(
+                'status' => false,
+                'msg' => $volume_add['msg']
+            );
+        } elseif ($volume_add['error']) {
+            return array(
+                'status' => false,
+                'msg' => $volume_add['error']
+            );
+        }
+        $volume_add = json_decode($volume_add['body'], true);
+        if (!$volume_add['status']) {
+            return array(
+                'status' => false,
+                'msg' => $volume_add['msg']
+            );
+        }
+        return array(
+            'status' => true,
+            'msg' => 'successful'
+        );
+    }
+
+    public function extraTime(array $vars)
+    {
+        $new_limit = $vars['new_limit'];
+        $limit_time_new = $vars['limit_time_new'];
+        $panel = $vars['panel'];
+        $username_account = $vars['username_account'];
+        $new_limit = $limit_time_new;
+        $time_add = add_time_service_mirza($panel, $new_limit, $username_account);
+        if (!in_array($time_add['status'], [200, 400])) {
+            return array(
+                'status' => false,
+                'msg' => $time_add['msg']
+            );
+        } elseif ($time_add['error']) {
+            return array(
+                'status' => false,
+                'msg' => $time_add['error']
+            );
+        }
+        $time_add = json_decode($time_add['body'], true);
+        if (!$time_add['status']) {
+            return array(
+                'status' => false,
+                'msg' => $time_add['msg']
+            );
+        }
+        return array(
+            'status' => true,
+            'msg' => 'successful'
+        );
+    }
+}

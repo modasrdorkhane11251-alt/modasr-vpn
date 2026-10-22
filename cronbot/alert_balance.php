@@ -1,1 +1,20 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CmlmICgkc2V0dGluZ1snYWxlcnRfYmFsYW5jZSddICE9ICIxIiB8fCAkc2V0dGluZ1snQm90X1N0YXR1cyddID09ICJib3RzdGF0dXNvZmYiKSB7CiAgICByZXR1cm47Cn0KJHRocmVzaG9sZCA9IGludHZhbCgkc2V0dGluZ1snYmFsYW5jZV92YWx1ZV9hbGVydCddKTsKJHBkby0+cHJlcGFyZSgiVVBEQVRFIHVzZXIgU0VUIGxvd19iYWxhbmNlX2FsZXJ0X3NlbnQgPSAwIFdIRVJFIGxvd19iYWxhbmNlX2FsZXJ0X3NlbnQgPSAxIEFORCBCYWxhbmNlID4gOnRocmVzaG9sZCIpLT5leGVjdXRlKFsnOnRocmVzaG9sZCcgPT4gJHRocmVzaG9sZF0pOwokc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBpZCwgQmFsYW5jZSBGUk9NIHVzZXIgV0hFUkUgQmFsYW5jZSA+IDAgQU5EIEJhbGFuY2UgPD0gOnRocmVzaG9sZCBBTkQgKGxvd19iYWxhbmNlX2FsZXJ0X3NlbnQgPSAwIE9SIGxvd19iYWxhbmNlX2FsZXJ0X3NlbnQgSVMgTlVMTCkgQU5EIFVzZXJfU3RhdHVzICE9ICdibG9jaycgTElNSVQgMjAiKTsKJHN0bXQtPmV4ZWN1dGUoWyc6dGhyZXNob2xkJyA9PiAkdGhyZXNob2xkXSk7CmZvcmVhY2ggKCRzdG10LT5mZXRjaEFsbChQRE86OkZFVENIX0FTU09DKSBhcyAkbG93QmFsYW5jZVVzZXIpIHsKICAgIHVwZGF0ZSgidXNlciIsICJsb3dfYmFsYW5jZV9hbGVydF9zZW50IiwgIjEiLCAiaWQiLCAkbG93QmFsYW5jZVVzZXJbJ2lkJ10pOwogICAgc2VuZG1lc3NhZ2UoJGxvd0JhbGFuY2VVc2VyWydpZCddLCBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sndXNlcnMnXVsnc3RhdHVzJ11bJ2xvd0JhbGFuY2VBbGVydCddLCBudW1iZXJfZm9ybWF0KCRsb3dCYWxhbmNlVXNlclsnQmFsYW5jZSddKSksIG51bGwsICdIVE1MJyk7Cn0K
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../function.php';
+$setting = select("setting", "*");
+$textbotlang = languagechange();
+if ($setting['alert_balance'] != "1" || $setting['Bot_Status'] == "botstatusoff") {
+    return;
+}
+$threshold = intval($setting['balance_value_alert']);
+$pdo->prepare("UPDATE user SET low_balance_alert_sent = 0 WHERE low_balance_alert_sent = 1 AND Balance > :threshold")->execute([':threshold' => $threshold]);
+$stmt = $pdo->prepare("SELECT id, Balance FROM user WHERE Balance > 0 AND Balance <= :threshold AND (low_balance_alert_sent = 0 OR low_balance_alert_sent IS NULL) AND User_Status != 'block' LIMIT 20");
+$stmt->execute([':threshold' => $threshold]);
+foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $lowBalanceUser) {
+    update("user", "low_balance_alert_sent", "1", "id", $lowBalanceUser['id']);
+    sendmessage($lowBalanceUser['id'], sprintf($textbotlang['users']['status']['lowBalanceAlert'], number_format($lowBalanceUser['Balance'])), null, 'HTML');
+}

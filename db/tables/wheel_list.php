@@ -1,1 +1,12 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgaWRfdXNlciB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgdGltZSB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgZmlyc3RfbmFtZSB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgd2hlZWxfY29kZSB2YXJjaGFyKDIwMCkgTk9UIE5VTEwsCiAgICAgICAgcHJpY2UgdmFyY2hhcigyMDApIE5PVCBOVUxMCiAgICAgICAgU1FMLApdOwo=
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        id_user varchar(200) NOT NULL,
+        time varchar(200) NOT NULL,
+        first_name varchar(200) NOT NULL,
+        wheel_code varchar(200) NOT NULL,
+        price varchar(200) NOT NULL
+        SQL,
+];

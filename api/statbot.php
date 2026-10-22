@@ -1,1 +1,35 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CmhlYWRlcignQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PVVURi04Jyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CmluaV9zZXQoJ2RlZmF1bHRfY2hhcnNldCcsICdVVEYtOCcpOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgokaGVhZGVycyA9IGdldGFsbGhlYWRlcnMoKTsKcmVxdWlyZUFwaVRva2VuKCRoZWFkZXJzKTsKbG9nQXBpUmVxdWVzdCgkaGVhZGVycywgW10sICdzdGF0Ym90Jyk7Cgp0cnkgewogICAgJGNvdW50X3VzZXIgPSBzZWxlY3QoInVzZXIiLCAiKiIsIG51bGwsIG51bGwsICJjb3VudCIpOwogICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgQ09VTlQoKikgRlJPTSB1c2VyIFdIRVJFIGFnZW50ICE9ICdmJyIpOwogICAgJHN0bXQtPmV4ZWN1dGUoKTsKICAgICRjb3VudF9hZ2VudCA9IChpbnQpICRzdG10LT5mZXRjaENvbHVtbigpOwogICAgJGNvdW50X2ludm9pY2UgPSBzZWxlY3QoImludm9pY2UiLCAiKiIsIG51bGwsIG51bGwsICJjb3VudCIpOwoKICAgIGVjaG8ganNvbl9lbmNvZGUoWwogICAgICAgICdjb3VudF91c2VyJyA9PiAkY291bnRfdXNlciwKICAgICAgICAnY291bnRfaW52b2ljZScgPT4gJGNvdW50X2ludm9pY2UsCiAgICAgICAgJ2NvdW50X2FnZW50JyA9PiAkY291bnRfYWdlbnQKICAgIF0pOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKICAgIGVycm9yX2xvZygiRGF0YWJhc2UgZXJyb3IgaW4gc3RhdGJvdDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgaHR0cF9yZXNwb25zZV9jb2RlKDUwMCk7CiAgICBlY2hvIGpzb25fZW5jb2RlKFsKICAgICAgICAnc3RhdHVzJyA9PiBmYWxzZSwKICAgICAgICAnbXNnJyA9PiAiRGF0YWJhc2UgZXJyb3Igb2NjdXJyZWQiCiAgICBdKTsKfQo=
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+$headers = getallheaders();
+requireApiToken($headers);
+logApiRequest($headers, [], 'statbot');
+
+try {
+    $count_user = select("user", "*", null, null, "count");
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM user WHERE agent != 'f'");
+    $stmt->execute();
+    $count_agent = (int) $stmt->fetchColumn();
+    $count_invoice = select("invoice", "*", null, null, "count");
+
+    echo json_encode([
+        'count_user' => $count_user,
+        'count_invoice' => $count_invoice,
+        'count_agent' => $count_agent
+    ]);
+} catch (Exception $e) {
+    error_log("Database error in statbot: " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode([
+        'status' => false,
+        'msg' => "Database error occurred"
+    ]);
+}

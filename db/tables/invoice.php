@@ -1,1 +1,40 @@
-PD9waHAKCiRub3RpZmljYXRpb25zID0ganNvbl9lbmNvZGUoWyd2b2x1bWUnID0+IGZhbHNlLCAndGltZScgPT4gZmFsc2VdKTsKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZF9pbnZvaWNlIHZhcmNoYXIoMjAwKSBQUklNQVJZIEtFWSwKICAgICAgICBpZF91c2VyIHZhcmNoYXIoMjAwKSBOVUxMLAogICAgICAgIHVzZXJuYW1lIHZhcmNoYXIoMzAwKSBOVUxMLAogICAgICAgIFNlcnZpY2VfbG9jYXRpb24gdmFyY2hhcigzMDApIE5VTEwsCiAgICAgICAgdGltZV9zZWxsIFZBUkNIQVIoMjAwKSBOVUxMLAogICAgICAgIG5hbWVfcHJvZHVjdCB2YXJjaGFyKDIwMCkgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5VTEwsCiAgICAgICAgcHJpY2VfcHJvZHVjdCB2YXJjaGFyKDIwMCkgTlVMTCwKICAgICAgICBWb2x1bWUgdmFyY2hhcigyMDApIE5VTEwsCiAgICAgICAgU2VydmljZV90aW1lIHZhcmNoYXIoMjAwKSBOVUxMLAogICAgICAgIHV1aWQgVEVYVCBOVUxMLAogICAgICAgIG5vdGUgdmFyY2hhcig1MDApIE5VTEwsCiAgICAgICAgdXNlcl9pbmZvIFRFWFQgTlVMTCwKICAgICAgICBib3R0eXBlIHZhcmNoYXIoMjAwKSBOVUxMLAogICAgICAgIHJlZnJhbCB2YXJjaGFyKDEwMCkgTlVMTCwKICAgICAgICB0aW1lX2Nyb24gdmFyY2hhcigxMDApIE5VTEwsCiAgICAgICAgbm90aWZjdGlvbnMgVEVYVCBOT1QgTlVMTCwKICAgICAgICBTdGF0dXMgdmFyY2hhcigyMDApIE5VTEwsCiAgICAgICAgaWRfcGF5bWVudCB2YXJjaGFyKDIwKSBDSEFSQUNURVIgU0VUIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2kgTlVMTCwKICAgICAgICBwYXlhYmxlX2Ftb3VudCB2YXJjaGFyKDIwKSBOVUxMCiAgICAgICAgU1FMLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ3RpbWVfc2VsbCcsIG51bGwsICdWQVJDSEFSKDIwMCknXSwKICAgICAgICBbJ3V1aWQnLCBudWxsLCAnVEVYVCddLAogICAgICAgIFsnbm90ZScsIG51bGwsICdWQVJDSEFSKDcwMCknXSwKICAgICAgICBbJ3VzZXJfaW5mbycsIG51bGwsICdURVhUJ10sCiAgICAgICAgWydib3R0eXBlJywgbnVsbCwgJ1ZBUkNIQVIoMjAwKSddLAogICAgICAgIFsncmVmcmFsJywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsndGltZV9jcm9uJywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsnbm90aWZjdGlvbnMnLCAkbm90aWZpY2F0aW9ucywgJ1RFWFQgTk9UIE5VTEwnXSwKICAgICAgICBbJ1N0YXR1cycsIG51bGwsICdWQVJDSEFSKDEwMCknXSwKICAgICAgICBbJ2lkX3BheW1lbnQnLCBudWxsLCAnVkFSQ0hBUigyMCkgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5VTEwnXSwKICAgICAgICBbJ3BheWFibGVfYW1vdW50JywgbnVsbCwgJ1ZBUkNIQVIoMjApIE5VTEwnXSwKICAgIF0sCl07Cg==
+<?php
+
+$notifications = json_encode(['volume' => false, 'time' => false]);
+
+return [
+    'create' => <<<SQL
+        id_invoice varchar(200) PRIMARY KEY,
+        id_user varchar(200) NULL,
+        username varchar(300) NULL,
+        Service_location varchar(300) NULL,
+        time_sell VARCHAR(200) NULL,
+        name_product varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        price_product varchar(200) NULL,
+        Volume varchar(200) NULL,
+        Service_time varchar(200) NULL,
+        uuid TEXT NULL,
+        note varchar(500) NULL,
+        user_info TEXT NULL,
+        bottype varchar(200) NULL,
+        refral varchar(100) NULL,
+        time_cron varchar(100) NULL,
+        notifctions TEXT NOT NULL,
+        Status varchar(200) NULL,
+        id_payment varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        payable_amount varchar(20) NULL
+        SQL,
+    'columns' => [
+        ['time_sell', null, 'VARCHAR(200)'],
+        ['uuid', null, 'TEXT'],
+        ['note', null, 'VARCHAR(700)'],
+        ['user_info', null, 'TEXT'],
+        ['bottype', null, 'VARCHAR(200)'],
+        ['refral', null, 'VARCHAR(100)'],
+        ['time_cron', null, 'VARCHAR(100)'],
+        ['notifctions', $notifications, 'TEXT NOT NULL'],
+        ['Status', null, 'VARCHAR(100)'],
+        ['id_payment', null, 'VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL'],
+        ['payable_amount', null, 'VARCHAR(20) NULL'],
+    ],
+];

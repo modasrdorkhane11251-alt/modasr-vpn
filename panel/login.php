@@ -1,1 +1,122 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpzZXNzaW9uX3N0YXJ0KCk7CgppZiAoIWVtcHR5KCRfU0VTU0lPTlsnYWRtaW5fdXNlciddKSkgewogIGhlYWRlcignTG9jYXRpb246IGluZGV4LnBocCcpOwogIGV4aXQ7Cn0KCiRlcnJvciA9ICcnOwppZiAoJF9TRVJWRVJbJ1JFUVVFU1RfTUVUSE9EJ10gPT09ICdQT1NUJykgewogICR1c2VybmFtZSA9IHRyaW0oJF9QT1NUWyd1c2VybmFtZSddID8/ICcnKTsKICAkcGFzc3dvcmQgPSAkX1BPU1RbJ3Bhc3N3b3JkJ10gPz8gJyc7CiAgJGlwID0gJF9TRVJWRVJbJ1JFTU9URV9BRERSJ10gPz8gJzAuMC4wLjAnOwoKICBpZiAoIWNzcmZfY2hlY2tfdmFsdWUoJF9QT1NUWydfY3NyZiddID8/ICcnKSkgewogICAgJGVycm9yID0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpbldyb25nQ3JlZGVudGlhbHMnXTsKICB9IGVsc2VpZiAoJHVzZXJuYW1lID09PSAnJyB8fCAkcGFzc3dvcmQgPT09ICcnKSB7CiAgICAkZXJyb3IgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xvZ2luRW50ZXJDcmVkZW50aWFscyddOwogIH0gZWxzZWlmICghY2hlY2tfbG9naW5fcmF0ZSgkaXApKSB7CgogICAgJGVycm9yID0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpblRvb01hbnlBdHRlbXB0cyddOwogICAgZXJyb3JfbG9nKCJMb2dpbiByYXRlIGxpbWl0IGhpdCBmb3IgSVA6ICRpcCB1c2VybmFtZTogJHVzZXJuYW1lIik7CiAgfSBlbHNlIHsKCiAgICAkYWRtaW4gPSBzZWxlY3QoImFkbWluIiwgIioiLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUsICJzZWxlY3QiKTsKCiAgICAkZHVtbXlIYXNoID0gJyQyeSQxMCRkdW1teS5oYXNoLmZvci50aW1pbmcuYXR0YWNrLnByZXZlbnRpb24ueHh4eHh4eHh4eHh4eHh4eCc7CiAgICAkc3RvcmVkSGFzaCA9ICRhZG1pbiA/IChzdHJpbmcpICRhZG1pblsncGFzc3dvcmQnXSA6ICRkdW1teUhhc2g7CgogICAgJGlzQ29ycmVjdCA9IGZhbHNlOwogICAgJHN0b3JlZElzSGFzaCA9IHN0cl9zdGFydHNfd2l0aCgkc3RvcmVkSGFzaCwgJyQyJykgfHwgc3RyX3N0YXJ0c193aXRoKCRzdG9yZWRIYXNoLCAnJGFyZ29uMicpOwogICAgaWYgKCRzdG9yZWRJc0hhc2gpIHsKICAgICAgJGlzQ29ycmVjdCA9IHBhc3N3b3JkX3ZlcmlmeSgkcGFzc3dvcmQsICRzdG9yZWRIYXNoKTsKICAgIH0gZWxzZWlmICgkYWRtaW4pIHsKICAgICAgJGlzQ29ycmVjdCA9IGhhc2hfZXF1YWxzKCRzdG9yZWRIYXNoLCAkcGFzc3dvcmQpOwogICAgfQoKICAgIGlmICgkaXNDb3JyZWN0ICYmICRhZG1pbiAmJiAkYWRtaW5bJ3J1bGUnXSA9PT0gJ2FkbWluaXN0cmF0b3InKSB7CgogICAgICBpZiAoIXN0cl9zdGFydHNfd2l0aCgkYWRtaW5bJ3Bhc3N3b3JkJ10sICckMicpKSB7CiAgICAgICAgJGhhc2ggPSBwYXNzd29yZF9oYXNoKCRwYXNzd29yZCwgUEFTU1dPUkRfQkNSWVBULCBbJ2Nvc3QnID0+IDEyXSk7CiAgICAgICAgdXBkYXRlKCJhZG1pbiIsICJwYXNzd29yZCIsICRoYXNoLCAidXNlcm5hbWUiLCAkdXNlcm5hbWUpOwogICAgICB9CiAgICAgIGNsZWFyX2xvZ2luX3JhdGUoJGlwKTsKICAgICAgc2Vzc2lvbl9yZWdlbmVyYXRlX2lkKHRydWUpOwogICAgICAkX1NFU1NJT05bJ2FkbWluX3VzZXInXSA9ICRhZG1pblsndXNlcm5hbWUnXTsKICAgICAgJF9TRVNTSU9OWydsb2dpbl90aW1lJ10gPSB0aW1lKCk7CiAgICAgICRfU0VTU0lPTlsnc2hvd19kb25hdGUnXSA9IHRydWU7CiAgICAgIGZsYXNoKCdzdWNjZXNzJywgJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpbldlbGNvbWVCYWNrJ10gLiAkYWRtaW5bJ3VzZXJuYW1lJ10pOwogICAgICBoZWFkZXIoJ0xvY2F0aW9uOiBpbmRleC5waHAnKTsKICAgICAgZXhpdDsKICAgIH0gZWxzZSB7CiAgICAgICRlcnJvciA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5Xcm9uZ0NyZWRlbnRpYWxzJ107CiAgICAgIGVycm9yX2xvZygiRmFpbGVkIGxvZ2luIGZvciB1c2VybmFtZTogJHVzZXJuYW1lIGZyb20gSVA6ICRpcCIpOwogICAgfQogIH0KfQo/Pgo8IURPQ1RZUEUgaHRtbD4KPGh0bWwgbGFuZz0iZmEiIGRpcj0icnRsIj4KCjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLGluaXRpYWwtc2NhbGU9MSxtYXhpbXVtLXNjYWxlPTEiPgogIDxtZXRhIG5hbWU9InRoZW1lLWNvbG9yIiBjb250ZW50PSIjMEYxNzJBIiBpZD0ibXRjIj4KICA8dGl0bGU+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5QYW5lbFRpdGxlJ10gPz48L3RpdGxlPgogIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iY3NzL3N0eWxlLmNzcyI+CiAgPHNjcmlwdD4oZnVuY3Rpb24gKCkgeyB2YXIgdCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdwYW5lbC10aGVtZScpIHx8ICduYXZ5JzsgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNldEF0dHJpYnV0ZSgnZGF0YS10aGVtZScsIHQpOyB2YXIgYyA9IHsgbmF2eTogJyMwRjE3MkEnLCBwdXJwbGU6ICcjMTgwRDJFJywgZW1lcmFsZDogJyMwQTFGMUMnLCBzdW5zZXQ6ICcjMUEwRDBEJywgc2xhdGU6ICcjMDgwODA4JywgbGlnaHQ6ICcjRjFGNUY5JywgbGluZW46ICcjRkFGN0YyJywgbWludDogJyNGMEZERjQnLCBsYXZlbmRlcjogJyNGQUY1RkYnIH07IHZhciBtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ210YycpOyBpZiAobSAmJiBjW3RdKSBtLmNvbnRlbnQgPSBjW3RdOyB9KSgpOzwvc2NyaXB0Pgo8L2hlYWQ+Cgo8Ym9keT4KICA8ZGl2IGNsYXNzPSJhdXRoIj4KICAgIDxhc2lkZSBjbGFzcz0iYXV0aC1hc2lkZSI+CiAgICAgIDxkaXYgY2xhc3M9ImF1dGgtbWFyayI+CiAgICAgICAgPGRpdiBjbGFzcz0iZG90Ij5NPC9kaXY+CiAgICAgICAgPHNwYW4+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5IZWFkaW5nJ10gPz48L3NwYW4+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJhdXRoLXF1b3RlIj4KICAgICAgICA8aDI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5TdWJ0aXRsZSddID8+IDxhIHN0eWxlPSJjb2xvcjojYThkYWZkICFpbXBvcnRhbnQgICIKICAgICAgICAgICAgaHJlZj0iIyI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5Vc2VybmFtZUxhYmVsJ10gPz48L2E+CiAgICAgICAgICA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpblVzZXJuYW1lUGxhY2Vob2xkZXInXSA/PjwvaDI+CiAgICAgICAgPGNpdGU+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5QYXNzd29yZExhYmVsJ10gPz48L2NpdGU+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJhdXRoLWZvb3QiPsKpIDw/PSBkYXRlKCdZJykgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbG9naW5QYXNzd29yZFBsYWNlaG9sZGVyJ10gPz48L2Rpdj4KICAgIDwvYXNpZGU+CiAgICA8bWFpbiBjbGFzcz0iYXV0aC1tYWluIj4KICAgICAgPGRpdiBjbGFzcz0iYXV0aC1ib3giIHN0eWxlPSJhbmltYXRpb246ZmFkZVVwIC41cyBlYXNlLW91dCI+CiAgICAgICAgPGgxPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xvZ2luQnV0dG9uJ10gPz48L2gxPgogICAgICAgIDxwIGNsYXNzPSJsZWRlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpblJlbWVtYmVyTWUnXSA/PjwvcD4KICAgICAgICA8P3BocCBpZiAoJGVycm9yKTogPz4KICAgICAgICAgIDxkaXYgY2xhc3M9Im5vdGljZSBub3RpY2Utbm8iIHN0eWxlPSJtYXJnaW4tYm90dG9tOjIwcHgiPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRlcnJvcikgPz48L2Rpdj4KICAgICAgICA8P3BocCBlbmRpZjsgPz4KICAgICAgICA8Zm9ybSBjbGFzcz0iYXV0aC1mb3JtIiBtZXRob2Q9IlBPU1QiIGF1dG9jb21wbGV0ZT0ib24iPgogICAgICAgICAgPD9waHAgPz4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9Il9jc3JmIiB2YWx1ZT0iPD89IGNzcmZfdG9rZW4oKSA/PiI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgIDxsYWJlbCBmb3I9InVzZXJuYW1lIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpbkZvb3RlciddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJ1c2VybmFtZSIgbmFtZT0idXNlcm5hbWUiIGNsYXNzPSJpbnB1dCIgcGxhY2Vob2xkZXI9ImFkbWluIgogICAgICAgICAgICAgIHZhbHVlPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkX1BPU1RbJ3VzZXJuYW1lJ10gPz8gJycpID8+IiBhdXRvY29tcGxldGU9InVzZXJuYW1lIiByZXF1aXJlZCBhdXRvZm9jdXMKICAgICAgICAgICAgICBtYXhsZW5ndGg9IjEwMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsIGZvcj0icGFzc3dvcmQiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xvZ2luRXJyb3JUaXRsZSddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9InBhc3N3b3JkIiBpZD0icGFzc3dvcmQiIG5hbWU9InBhc3N3b3JkIiBjbGFzcz0iaW5wdXQiIHBsYWNlaG9sZGVyPSLigKLigKLigKLigKLigKLigKLigKLigKIiCiAgICAgICAgICAgICAgYXV0b2NvbXBsZXRlPSJjdXJyZW50LXBhc3N3b3JkIiByZXF1aXJlZCBtYXhsZW5ndGg9IjIwMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5IiBpZD0ibG9naW5CdG4iPgogICAgICAgICAgICA8c3BhbiBpZD0ibG9naW5UZXh0Ij48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsb2dpblNob3dQYXNzd29yZCddID8+PC9zcGFuPgogICAgICAgICAgICA8c3BhbiBpZD0ibG9naW5TcGluIgogICAgICAgICAgICAgIHN0eWxlPSJkaXNwbGF5Om5vbmU7d2lkdGg6MTZweDtoZWlnaHQ6MTZweDtib3JkZXI6MnB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsLjQpO2JvcmRlci10b3AtY29sb3I6I2ZmZjtib3JkZXItcmFkaXVzOjUwJTthbmltYXRpb246c3BpbiAuNnMgbGluZWFyIGluZmluaXRlIj48L3NwYW4+CiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8L2Zvcm0+CiAgICAgICAgPGRpdiBjbGFzcz0iYXV0aC1ib3R0b20iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xvZ2luSGlkZVBhc3N3b3JkJ10gPz48L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L21haW4+CiAgPC9kaXY+CiAgPHNjcmlwdCBzcmM9ImpzL2xvZ2luLmpzIj48L3NjcmlwdD4KPC9ib2R5PgoKPC9odG1sPg==
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+session_start();
+
+if (!empty($_SESSION['admin_user'])) {
+  header('Location: index.php');
+  exit;
+}
+
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $username = trim($_POST['username'] ?? '');
+  $password = $_POST['password'] ?? '';
+  $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+
+  if (!csrf_check_value($_POST['_csrf'] ?? '')) {
+    $error = $textbotlang['panel']['loginWrongCredentials'];
+  } elseif ($username === '' || $password === '') {
+    $error = $textbotlang['panel']['loginEnterCredentials'];
+  } elseif (!check_login_rate($ip)) {
+
+    $error = $textbotlang['panel']['loginTooManyAttempts'];
+    error_log("Login rate limit hit for IP: $ip username: $username");
+  } else {
+
+    $admin = select("admin", "*", "username", $username, "select");
+
+    $dummyHash = '$2y$10$dummy.hash.for.timing.attack.prevention.xxxxxxxxxxxxxxxx';
+    $storedHash = $admin ? (string) $admin['password'] : $dummyHash;
+
+    $isCorrect = false;
+    $storedIsHash = str_starts_with($storedHash, '$2') || str_starts_with($storedHash, '$argon2');
+    if ($storedIsHash) {
+      $isCorrect = password_verify($password, $storedHash);
+    } elseif ($admin) {
+      $isCorrect = hash_equals($storedHash, $password);
+    }
+
+    if ($isCorrect && $admin && $admin['rule'] === 'administrator') {
+
+      if (!str_starts_with($admin['password'], '$2')) {
+        $hash = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
+        update("admin", "password", $hash, "username", $username);
+      }
+      clear_login_rate($ip);
+      session_regenerate_id(true);
+      $_SESSION['admin_user'] = $admin['username'];
+      $_SESSION['login_time'] = time();
+      $_SESSION['show_donate'] = true;
+      flash('success', $textbotlang['panel']['loginWelcomeBack'] . $admin['username']);
+      header('Location: index.php');
+      exit;
+    } else {
+      $error = $textbotlang['panel']['loginWrongCredentials'];
+      error_log("Failed login for username: $username from IP: $ip");
+    }
+  }
+}
+?>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="theme-color" content="#0F172A" id="mtc">
+  <title><?= $textbotlang['panel']['loginPanelTitle'] ?></title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function () { var t = localStorage.getItem('panel-theme') || 'navy'; document.documentElement.setAttribute('data-theme', t); var c = { navy: '#0F172A', purple: '#180D2E', emerald: '#0A1F1C', sunset: '#1A0D0D', slate: '#080808', light: '#F1F5F9', linen: '#FAF7F2', mint: '#F0FDF4', lavender: '#FAF5FF' }; var m = document.getElementById('mtc'); if (m && c[t]) m.content = c[t]; })();</script>
+</head>
+
+<body>
+  <div class="auth">
+    <aside class="auth-aside">
+      <div class="auth-mark">
+        <div class="dot">M</div>
+        <span><?= $textbotlang['panel']['loginHeading'] ?></span>
+      </div>
+      <div class="auth-quote">
+        <h2><?= $textbotlang['panel']['loginSubtitle'] ?> <a style="color:#a8dafd !important  "
+            href="#"><?= $textbotlang['panel']['loginUsernameLabel'] ?></a>
+          <?= $textbotlang['panel']['loginUsernamePlaceholder'] ?></h2>
+        <cite><?= $textbotlang['panel']['loginPasswordLabel'] ?></cite>
+      </div>
+      <div class="auth-foot">© <?= date('Y') ?> <?= $textbotlang['panel']['loginPasswordPlaceholder'] ?></div>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-box" style="animation:fadeUp .5s ease-out">
+        <h1><?= $textbotlang['panel']['loginButton'] ?></h1>
+        <p class="lede"><?= $textbotlang['panel']['loginRememberMe'] ?></p>
+        <?php if ($error): ?>
+          <div class="notice notice-no" style="margin-bottom:20px"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
+        <form class="auth-form" method="POST" autocomplete="on">
+          <?php ?>
+          <input type="hidden" name="_csrf" value="<?= csrf_token() ?>">
+          <div class="field">
+            <label for="username"><?= $textbotlang['panel']['loginFooter'] ?></label>
+            <input type="text" id="username" name="username" class="input" placeholder="admin"
+              value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" autocomplete="username" required autofocus
+              maxlength="100">
+          </div>
+          <div class="field">
+            <label for="password"><?= $textbotlang['panel']['loginErrorTitle'] ?></label>
+            <input type="password" id="password" name="password" class="input" placeholder="••••••••"
+              autocomplete="current-password" required maxlength="200">
+          </div>
+          <button type="submit" class="btn btn-primary" id="loginBtn">
+            <span id="loginText"><?= $textbotlang['panel']['loginShowPassword'] ?></span>
+            <span id="loginSpin"
+              style="display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite"></span>
+          </button>
+        </form>
+        <div class="auth-bottom"><?= $textbotlang['panel']['loginHidePassword'] ?></div>
+      </div>
+    </main>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

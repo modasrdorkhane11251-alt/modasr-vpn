@@ -1,1 +1,27 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBkZXNjcmlwdGlvbiBURVhUIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOVUxMLAogICAgICAgIHN0YXR1c19jb21taXNzaW9uIHZhcmNoYXIoMjAwKSBDSEFSQUNURVIgU0VUIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X3VuaWNvZGVfY2kgTlVMTCwKICAgICAgICBEaXNjb3VudCB2YXJjaGFyKDIwMCkgQ0hBUkFDVEVSIFNFVCB1dGY4bWI0IENPTExBVEUgdXRmOG1iNF91bmljb2RlX2NpIE5VTEwsCiAgICAgICAgcHJpY2VfRGlzY291bnQgdmFyY2hhcigyMDApIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOVUxMLAogICAgICAgIHBvcnNhbnRfb25lX2J1eSB2YXJjaGFyKDEwMCksCiAgICAgICAgaWRfbWVkaWEgdmFyY2hhcigzMDApIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOVUxMCiAgICAgICAgU1FMLAogICAgJ3NlZWRPbkNyZWF0ZScgPT4gWwogICAgICAgIFsKICAgICAgICAgICAgJ2Rlc2NyaXB0aW9uJyA9PiAnbm9uZScsCiAgICAgICAgICAgICdpZF9tZWRpYScgPT4gJ25vbmUnLAogICAgICAgICAgICAnc3RhdHVzX2NvbW1pc3Npb24nID0+ICdvbmNvbW1pc3Npb24nLAogICAgICAgICAgICAnRGlzY291bnQnID0+ICdvbkRpc2NvdW50YWZmaWxpYXRlcycsCiAgICAgICAgICAgICdwb3JzYW50X29uZV9idXknID0+ICdvZmZfYnV5X3BvcnNhbnQnLAogICAgICAgIF0sCiAgICBdLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ3N0YXR1c19jb21taXNzaW9uJywgJ29uY29tbWlzc2lvbicsICdWQVJDSEFSKDEwMCknXSwKICAgICAgICBbJ0Rpc2NvdW50JywgJ29uRGlzY291bnRhZmZpbGlhdGVzJywgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsncHJpY2VfRGlzY291bnQnLCBudWxsLCAnVkFSQ0hBUigxMDApJ10sCiAgICAgICAgWydwb3JzYW50X29uZV9idXknLCAnb2ZmX2J1eV9wb3JzYW50JywgJ1ZBUkNIQVIoMTAwKSddLAogICAgXSwKXTsK
+<?php
+
+return [
+    'create' => <<<SQL
+        description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        status_commission varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        Discount varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        price_Discount varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        porsant_one_buy varchar(100),
+        id_media varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL
+        SQL,
+    'seedOnCreate' => [
+        [
+            'description' => 'none',
+            'id_media' => 'none',
+            'status_commission' => 'oncommission',
+            'Discount' => 'onDiscountaffiliates',
+            'porsant_one_buy' => 'off_buy_porsant',
+        ],
+    ],
+    'columns' => [
+        ['status_commission', 'oncommission', 'VARCHAR(100)'],
+        ['Discount', 'onDiscountaffiliates', 'VARCHAR(100)'],
+        ['price_Discount', null, 'VARCHAR(100)'],
+        ['porsant_one_buy', 'off_buy_porsant', 'VARCHAR(100)'],
+    ],
+];

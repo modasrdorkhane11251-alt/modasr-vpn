@@ -1,1 +1,203 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2ljb25zLnBocCc7CiRwYWdlTGVkZSA9ICRwYWdlTGVkZSA/PyAnJzsKJGFjdGl2ZU5hdiA9ICRhY3RpdmVOYXYgPz8gJyc7CiRzaG93UGFnZUhlYWQgPSAkc2hvd1BhZ2VIZWFkID8/IHRydWU7CiRjdXJyZW50VXNlciA9ICRfU0VTU0lPTlsnYWRtaW5fdXNlciddID8/ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0RGVmYXVsdEFkbWluTmFtZSddOwokaW5pdGlhbHMgPSBtYl9zdHJ0b3VwcGVyKG1iX3N1YnN0cigkY3VycmVudFVzZXIsIDAsIDEsICdVVEYtOCcpLCAnVVRGLTgnKTsKPz4KPCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImZhIiBkaXI9InJ0bCI+Cgo8aGVhZD4KICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEsbWF4aW11bS1zY2FsZT0xLHVzZXItc2NhbGFibGU9bm8iPgogIDxtZXRhIG5hbWU9InRoZW1lLWNvbG9yIiBjb250ZW50PSIjMEYxNzJBIiBpZD0ibXRjIj4KICA8bWV0YSBuYW1lPSJtb2JpbGUtd2ViLWFwcC1jYXBhYmxlIiBjb250ZW50PSJ5ZXMiPgogIDxtZXRhIG5hbWU9ImFwcGxlLW1vYmlsZS13ZWItYXBwLWNhcGFibGUiIGNvbnRlbnQ9InllcyI+CiAgPG1ldGEgbmFtZT0iYXBwbGUtbW9iaWxlLXdlYi1hcHAtc3RhdHVzLWJhci1zdHlsZSIgY29udGVudD0iYmxhY2stdHJhbnNsdWNlbnQiPgogIDx0aXRsZT48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRCcmFuZE5hbWUnXSA/PjwvdGl0bGU+CiAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJjc3Mvc3R5bGUuY3NzIj4KICA8c2NyaXB0PgogICAgKGZ1bmN0aW9uICgpIHsKICAgICAgdmFyIHQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgncGFuZWwtdGhlbWUnKSB8fCAnbmF2eSc7CiAgICAgIHZhciBiZyA9IHsKICAgICAgICBuYXZ5OiAnIzBGMTcyQScsIHB1cnBsZTogJyMxODBEMkUnLCBlbWVyYWxkOiAnIzBBMUYxQycsCiAgICAgICAgc3Vuc2V0OiAnIzFBMEQwRCcsIHNsYXRlOiAnIzA4MDgwOCcsIGxpZ2h0OiAnI0YxRjVGOScsCiAgICAgICAgbGluZW46ICcjRkFGN0YyJywgbWludDogJyNGMEZERjQnLCBsYXZlbmRlcjogJyNGQUY1RkYnCiAgICAgIH07CgogICAgICB2YXIgcm9vdCA9IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudDsKICAgICAgcm9vdC5zdHlsZS5iYWNrZ3JvdW5kQ29sb3IgPSBiZ1t0XSB8fCAnIzBGMTcyQSc7CiAgICAgIHJvb3Quc2V0QXR0cmlidXRlKCdkYXRhLXRoZW1lJywgdCk7CgogICAgICByb290LnN0eWxlLmNvbG9yU2NoZW1lID0gKHQgPT09ICdsaWdodCcgfHwgdCA9PT0gJ2xpbmVuJyB8fCB0ID09PSAnbWludCcgfHwgdCA9PT0gJ2xhdmVuZGVyJykgPyAnbGlnaHQnIDogJ2RhcmsnOwogICAgICB2YXIgbXRjID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ210YycpOwogICAgICBpZiAobXRjICYmIGJnW3RdKSBtdGMuY29udGVudCA9IGJnW3RdOwogICAgICBpZiAobG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3BhbmVsLXNiLWNvbGxhcHNlZCcpID09PSAnMScgJiYgd2luZG93LmlubmVyV2lkdGggPiA3NjgpCiAgICAgICAgcm9vdC5jbGFzc0xpc3QuYWRkKCdzYi1wcmUtY29sbGFwc2VkJyk7CiAgICB9KCkpOwogIDwvc2NyaXB0PgogIDxzY3JpcHQ+CiAgICB3aW5kb3cuUEFORUxfSTE4TiA9IDw/PSBqc29uX2VuY29kZSgKICAgICAgYXJyYXlfZmlsdGVyKAogICAgICAgICR0ZXh0Ym90bGFuZ1sncGFuZWwnXSA/PyBbXSwKICAgICAgICBmbigkaykgPT4gcHJlZ19tYXRjaCgnL15qc1tBLVpdLycsICRrKSA9PT0gMSwKICAgICAgICBBUlJBWV9GSUxURVJfVVNFX0tFWQogICAgICApLAogICAgICBKU09OX1VORVNDQVBFRF9VTklDT0RFIHwgSlNPTl9VTkVTQ0FQRURfU0xBU0hFUwogICAgKSA/PjsKICAgIHdpbmRvdy50ID0gZnVuY3Rpb24gKGtleSwgdmFycykgewogICAgICB2YXIgcyA9ICh3aW5kb3cuUEFORUxfSTE4TiAmJiB3aW5kb3cuUEFORUxfSTE4TltrZXldKSB8fCBrZXk7CiAgICAgIGlmICh2YXJzKSB7CiAgICAgICAgZm9yICh2YXIgayBpbiB2YXJzKSB7CiAgICAgICAgICBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKHZhcnMsIGspKSB7CiAgICAgICAgICAgIHMgPSBzLnJlcGxhY2UoJ3snICsgayArICd9JywgdmFyc1trXSk7CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICAgIHJldHVybiBzOwogICAgfTsKICA8L3NjcmlwdD4KPC9oZWFkPgoKPGJvZHk+CgogIDxkaXYgaWQ9ImxvYWQtYmFyIj48L2Rpdj4KICA8ZGl2IGlkPSJ0b2FzdC1hcmVhIj48L2Rpdj4KCiAgPGRpdiBjbGFzcz0iY29uZmlybS12ZWlsIiBpZD0iY29uZmlybS12ZWlsIj4KICAgIDxkaXYgY2xhc3M9ImNvbmZpcm0tYm94Ij4KICAgICAgPGRpdiBjbGFzcz0iY29uZmlybS1pY29uIj48Pz0gaWNvbignYmxvY2snLCAyNikgPz48L2Rpdj4KICAgICAgPGg0IGlkPSJjb25maXJtLXRpdGxlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXROYXZEYXNoYm9hcmQnXSA/PjwvaDQ+CiAgICAgIDxwIGlkPSJjb25maXJtLW1zZyI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0TmF2VXNlcnMnXSA/PjwvcD4KICAgICAgPGRpdiBjbGFzcz0iY29uZmlybS1idG5zIj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLW5vIiBpZD0iY29uZmlybS1vayI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0TmF2T3JkZXJzJ10gPz48L2J1dHRvbj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLWdob3N0IgogICAgICAgICAgb25jbGljaz0iY2xvc2VDb25maXJtKCkiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE5hdlNlcnZpY2VzJ10gPz48L2J1dHRvbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0iYXBwIj4KICAgIDxkaXYgY2xhc3M9InNpZGViYXItYmFja2Ryb3AiIGlkPSJiYWNrZHJvcCIgb25jbGljaz0iY2xvc2VTaWRlYmFyKCkiPjwvZGl2PgoKICAgIDxhc2lkZSBjbGFzcz0ic2lkZWJhciIgaWQ9InNpZGViYXIiPgogICAgICA8ZGl2IGNsYXNzPSJzaWRlYmFyLWJyYW5kIj4KICAgICAgICA8ZGl2IGNsYXNzPSJicmFuZC1tYXJrIj5NPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0iYnJhbmQtbmFtZSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0TmF2UHJvZHVjdHMnXSA/PjxzcGFuPgogICAgICAgICAgICA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXROYXZQYXltZW50cyddID8+PC9zcGFuPjwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPG5hdiBjbGFzcz0ic2lkZWJhci1uYXYiPgogICAgICAgIDxkaXYgY2xhc3M9Im5hdi1zZWN0aW9uIj4KICAgICAgICAgIDxkaXYgY2xhc3M9Im5hdi1oZWFkaW5nIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXROYXZLZXlib2FyZCddID8+PC9kaXY+CiAgICAgICAgICA8YSBocmVmPSJpbmRleC5waHAiIGNsYXNzPSJuYXYtaXRlbSA8Pz0gJGFjdGl2ZU5hdiA9PT0gJ2Rhc2hib2FyZCcgPyAnYWN0aXZlJyA6ICcnID8+IgogICAgICAgICAgICB0aXRsZT0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0UGFnZVRpdGxlRGFzaGJvYXJkJ10gPz4iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2LWljb24iPjw/PSBpY29uKCdkYXNoYm9hcmQnKSA/Pjwvc3Bhbj48c3BhbgogICAgICAgICAgICAgIGNsYXNzPSJuYXYtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE5hdlNldHRpbmdzJ10gPz48L3NwYW4+CiAgICAgICAgICA8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ibmF2LXNlY3Rpb24iPgogICAgICAgICAgPGRpdiBjbGFzcz0ibmF2LWhlYWRpbmciPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE5hdkxvZ291dCddID8+PC9kaXY+CiAgICAgICAgICA8YSBocmVmPSJ1c2Vycy5waHAiIGNsYXNzPSJuYXYtaXRlbSA8Pz0gJGFjdGl2ZU5hdiA9PT0gJ3VzZXJzJyA/ICdhY3RpdmUnIDogJycgPz4iCiAgICAgICAgICAgIHRpdGxlPSI8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRQYWdlVGl0bGVVc2VycyddID8+Ij4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hdi1pY29uIj48Pz0gaWNvbigndXNlcnMnKSA/Pjwvc3Bhbj48c3BhbgogICAgICAgICAgICAgIGNsYXNzPSJuYXYtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE1lbnVTZWN0aW9uTWFpbiddID8+PC9zcGFuPgogICAgICAgICAgPC9hPgogICAgICAgICAgPGEgaHJlZj0iaW52b2ljZS5waHAiIGNsYXNzPSJuYXYtaXRlbSA8Pz0gJGFjdGl2ZU5hdiA9PT0gJ2ludm9pY2UnID8gJ2FjdGl2ZScgOiAnJyA/PiIKICAgICAgICAgICAgdGl0bGU9Ijw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFBhZ2VUaXRsZUludm9pY2UnXSA/PiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXYtaWNvbiI+PD89IGljb24oJ2ludm9pY2UnKSA/Pjwvc3Bhbj48c3BhbgogICAgICAgICAgICAgIGNsYXNzPSJuYXYtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE1lbnVTZWN0aW9uTWFuYWdlbWVudCddID8+PC9zcGFuPgogICAgICAgICAgPC9hPgogICAgICAgICAgPGEgaHJlZj0ic2VydmljZS5waHAiIGNsYXNzPSJuYXYtaXRlbSA8Pz0gJGFjdGl2ZU5hdiA9PT0gJ3NlcnZpY2UnID8gJ2FjdGl2ZScgOiAnJyA/PiIKICAgICAgICAgICAgdGl0bGU9Ijw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFBhZ2VUaXRsZVNlcnZpY2UnXSA/PiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXYtaWNvbiI+PD89IGljb24oJ3NlcnZlcicpID8+PC9zcGFuPjxzcGFuCiAgICAgICAgICAgICAgY2xhc3M9Im5hdi1sYWJlbCI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0TWVudVNlY3Rpb25GaW5hbmNpYWwnXSA/Pjwvc3Bhbj4KICAgICAgICAgIDwvYT4KICAgICAgICAgIDxhIGhyZWY9InByb2R1Y3QucGhwIiBjbGFzcz0ibmF2LWl0ZW0gPD89ICRhY3RpdmVOYXYgPT09ICdwcm9kdWN0JyA/ICdhY3RpdmUnIDogJycgPz4iCiAgICAgICAgICAgIHRpdGxlPSI8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRQYWdlVGl0bGVQcm9kdWN0J10gPz4iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2LWljb24iPjw/PSBpY29uKCdwYWNrYWdlJykgPz48L3NwYW4+PHNwYW4KICAgICAgICAgICAgICBjbGFzcz0ibmF2LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRNZW51U2VjdGlvblN5c3RlbSddID8+PC9zcGFuPgogICAgICAgICAgPC9hPgogICAgICAgICAgPGEgaHJlZj0iY2F0ZWdvcnkucGhwIiBjbGFzcz0ibmF2LWl0ZW0gPD89ICRhY3RpdmVOYXYgPT09ICdjYXRlZ29yeScgPyAnYWN0aXZlJyA6ICcnID8+IgogICAgICAgICAgICB0aXRsZT0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnY2F0ZWdvcnlQYWdlVGl0bGUnXSA/PiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXYtaWNvbiI+PD89IGljb24oJ2ZvbGRlcicpID8+PC9zcGFuPjxzcGFuCiAgICAgICAgICAgICAgY2xhc3M9Im5hdi1sYWJlbCI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnY2F0ZWdvcnlQYWdlVGl0bGUnXSA/Pjwvc3Bhbj4KICAgICAgICAgIDwvYT4KICAgICAgICAgIDxhIGhyZWY9InBheW1lbnQucGhwIiBjbGFzcz0ibmF2LWl0ZW0gPD89ICRhY3RpdmVOYXYgPT09ICdwYXltZW50JyA/ICdhY3RpdmUnIDogJycgPz4iCiAgICAgICAgICAgIHRpdGxlPSI8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRQYWdlVGl0bGVQYXltZW50J10gPz4iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2LWljb24iPjw/PSBpY29uKCdjYXJkJykgPz48L3NwYW4+PHNwYW4KICAgICAgICAgICAgICBjbGFzcz0ibmF2LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRTZWFyY2hCb3hQbGFjZWhvbGRlciddID8+PC9zcGFuPgogICAgICAgICAgPC9hPgogICAgICAgICAgPGEgaHJlZj0ia2V5Ym9hcmQucGhwIiBjbGFzcz0ibmF2LWl0ZW0gPD89ICRhY3RpdmVOYXYgPT09ICdrZXlib2FyZCcgPyAnYWN0aXZlJyA6ICcnID8+IgogICAgICAgICAgICB0aXRsZT0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0UGFnZVRpdGxlS2V5Ym9hcmQnXSA/PiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXYtaWNvbiI+CiAgICAgICAgICAgICAgPD89IGljb24oJ3NldHRpbmdzJykgPz4KICAgICAgICAgICAgPC9zcGFuPjxzcGFuIGNsYXNzPSJuYXYtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFRoZW1lVG9nZ2xlTGFiZWwnXSA/Pjwvc3Bhbj4KICAgICAgICAgIDwvYT4KICAgICAgICAgIDxhIGhyZWY9ImJvdHRleHQucGhwIiBjbGFzcz0ibmF2LWl0ZW0gPD89ICRhY3RpdmVOYXYgPT09ICdib3R0ZXh0JyA/ICdhY3RpdmUnIDogJycgPz4iCiAgICAgICAgICAgIHRpdGxlPSI8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0UGFnZVRpdGxlJ10gPz4iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2LWljb24iPjw/PSBpY29uKCdlZGl0JykgPz48L3NwYW4+PHNwYW4KICAgICAgICAgICAgICBjbGFzcz0ibmF2LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydib3R0ZXh0UGFnZVRpdGxlJ10gPz48L3NwYW4+CiAgICAgICAgICA8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ibmF2LXNlY3Rpb24iPgogICAgICAgICAgPGRpdiBjbGFzcz0ibmF2LWhlYWRpbmciPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFNpZGViYXJUb2dnbGVMYWJlbCddID8+PC9kaXY+CiAgICAgICAgICA8YSBocmVmPSJzZXR0aW5ncy5waHAiIGNsYXNzPSJuYXYtaXRlbSA8Pz0gJGFjdGl2ZU5hdiA9PT0gJ3NldHRpbmdzJyA/ICdhY3RpdmUnIDogJycgPz4iCiAgICAgICAgICAgIHRpdGxlPSI8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRQYWdlVGl0bGVTZXR0aW5ncyddID8+Ij4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hdi1pY29uIj48Pz0gaWNvbignc2V0dGluZ3MnKSA/Pjwvc3Bhbj48c3BhbgogICAgICAgICAgICAgIGNsYXNzPSJuYXYtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFByb2ZpbGVNZW51TGFiZWwnXSA/Pjwvc3Bhbj4KICAgICAgICAgIDwvYT4KICAgICAgICAgIDxhIGhyZWY9ImxvZ291dC5waHAiIGNsYXNzPSJuYXYtaXRlbSIgdGl0bGU9Ijw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dFBhZ2VUaXRsZUxvZ291dCddID8+Ij4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hdi1pY29uIj48Pz0gaWNvbignbG9nb3V0JykgPz48L3NwYW4+PHNwYW4KICAgICAgICAgICAgICBjbGFzcz0ibmF2LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXROb3RpZmljYXRpb25zTGFiZWwnXSA/Pjwvc3Bhbj4KICAgICAgICAgIDwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9uYXY+CiAgICAgIDxkaXYgY2xhc3M9InNpZGViYXItZm9vdCI+CiAgICAgICAgPGRpdiBjbGFzcz0idXNlci1waWxsIj4KICAgICAgICAgIDxkaXYgY2xhc3M9InVzZXItbW9ubyI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJGluaXRpYWxzKSA/PjwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0idXNlci1pbmZvIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idW5hbWUiPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRjdXJyZW50VXNlcikgPz48L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idXJvbGUiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dE1vYmlsZU1lbnVMYWJlbCddID8+PC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2FzaWRlPgoKICAgIDxkaXYgY2xhc3M9Im1haW4iPgogICAgICA8aGVhZGVyIGNsYXNzPSJ0b3BiYXIiPgogICAgICAgIDxkaXYgY2xhc3M9InRvcGJhci1sZWZ0Ij4KICAgICAgICAgIDxidXR0b24gY2xhc3M9Imljb24tYnRuIG1lbnUtdG9nZ2xlIiBvbmNsaWNrPSJvcGVuU2lkZWJhcigpIj48Pz0gaWNvbignbWVudScsIDE4KSA/PjwvYnV0dG9uPgogICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iaWNvbi1idG4gc2ItdG9nZ2xlIiBvbmNsaWNrPSJ0b2dnbGVTaWRlYmFyKCkiPjw/PSBpY29uKCdtZW51JywgMTcpID8+PC9idXR0b24+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0b3BiYXItdGl0bGUiPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRwYWdlVGl0bGUpID8+PC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNydW1iIj48c3Bhbj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRQYWdlVGl0bGVTdWZmaXgnXSA/Pjwvc3Bhbj48c3BhbgogICAgICAgICAgICAgICAgc3R5bGU9Im9wYWNpdHk6LjQ7bWFyZ2luOjAgM3B4Ij4vPC9zcGFuPjxzcGFuPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRwYWdlVGl0bGUpID8+PC9zcGFuPjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idG9wYmFyLXRvb2xzIj4KICAgICAgICAgIDxhIGhyZWY9InNldHRpbmdzLnBocCIgY2xhc3M9Imljb24tYnRuIgogICAgICAgICAgICB0aXRsZT0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0UGFnZVRpdGxlU2V0dGluZ3MnXSA/PiI+PD89IGljb24oJ3NldHRpbmdzJywgMTYpID8+PC9hPgogICAgICAgICAgPGEgaHJlZj0ibG9nb3V0LnBocCIgY2xhc3M9Imljb24tYnRuIgogICAgICAgICAgICB0aXRsZT0iPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnbGF5b3V0UGFnZVRpdGxlTG9nb3V0J10gPz4iPjw/PSBpY29uKCdsb2dvdXQnLCAxNikgPz48L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvaGVhZGVyPgogICAgICA8bWFpbiBjbGFzcz0iY29udGVudCI+CiAgICAgICAgPD9waHAKICAgICAgICAkcyA9IGdldF9mbGFzaCgnc3VjY2VzcycpOwogICAgICAgICRlID0gZ2V0X2ZsYXNoKCdlcnJvcicpOwogICAgICAgICR3ID0gZ2V0X2ZsYXNoKCd3YXJuaW5nJyk7CiAgICAgICAgaWYgKCRzKTogPz4KICAgICAgICAgIDxkaXYgY2xhc3M9Im5vdGljZSBub3RpY2Utb2siPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRzKSA/PjwvZGl2Pjw/cGhwIGVuZGlmOwogICAgICAgIGlmICgkZSk6ID8+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJub3RpY2Ugbm90aWNlLW5vIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkZSkgPz48L2Rpdj48P3BocCBlbmRpZjsKICAgICAgICBpZiAoJHcpOiA/PgogICAgICAgICAgPGRpdiBjbGFzcz0ibm90aWNlIG5vdGljZS13YXJuIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkdykgPz48L2Rpdj48P3BocCBlbmRpZjsKICAgICAgICBpZiAoJHNob3dQYWdlSGVhZCk6ID8+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJwYWdlLWhlYWQgZmFkZS11cCI+CiAgICAgICAgICAgIDxoMT48Pz0gaHRtbHNwZWNpYWxjaGFycygkcGFnZVRpdGxlKSA/PjwvaDE+CiAgICAgICAgICAgIDw/cGhwIGlmICgkcGFnZUxlZGUpOiA/PgogICAgICAgICAgICAgIDxwPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRwYWdlTGVkZSkgPz48L3A+PD9waHAgZW5kaWY7ID8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8P3BocCBlbmRpZjsgPz4=
+<?php
+require_once __DIR__ . '/icons.php';
+$pageLede = $pageLede ?? '';
+$activeNav = $activeNav ?? '';
+$showPageHead = $showPageHead ?? true;
+$currentUser = $_SESSION['admin_user'] ?? $textbotlang['panel']['layoutDefaultAdminName'];
+$initials = mb_strtoupper(mb_substr($currentUser, 0, 1, 'UTF-8'), 'UTF-8');
+?>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#0F172A" id="mtc">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title><?= $textbotlang['panel']['layoutBrandName'] ?></title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('panel-theme') || 'navy';
+      var bg = {
+        navy: '#0F172A', purple: '#180D2E', emerald: '#0A1F1C',
+        sunset: '#1A0D0D', slate: '#080808', light: '#F1F5F9',
+        linen: '#FAF7F2', mint: '#F0FDF4', lavender: '#FAF5FF'
+      };
+
+      var root = document.documentElement;
+      root.style.backgroundColor = bg[t] || '#0F172A';
+      root.setAttribute('data-theme', t);
+
+      root.style.colorScheme = (t === 'light' || t === 'linen' || t === 'mint' || t === 'lavender') ? 'light' : 'dark';
+      var mtc = document.getElementById('mtc');
+      if (mtc && bg[t]) mtc.content = bg[t];
+      if (localStorage.getItem('panel-sb-collapsed') === '1' && window.innerWidth > 768)
+        root.classList.add('sb-pre-collapsed');
+    }());
+  </script>
+  <script>
+    window.PANEL_I18N = <?= json_encode(
+      array_filter(
+        $textbotlang['panel'] ?? [],
+        fn($k) => preg_match('/^js[A-Z]/', $k) === 1,
+        ARRAY_FILTER_USE_KEY
+      ),
+      JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+    ) ?>;
+    window.t = function (key, vars) {
+      var s = (window.PANEL_I18N && window.PANEL_I18N[key]) || key;
+      if (vars) {
+        for (var k in vars) {
+          if (Object.prototype.hasOwnProperty.call(vars, k)) {
+            s = s.replace('{' + k + '}', vars[k]);
+          }
+        }
+      }
+      return s;
+    };
+  </script>
+</head>
+
+<body>
+
+  <div id="load-bar"></div>
+  <div id="toast-area"></div>
+
+  <div class="confirm-veil" id="confirm-veil">
+    <div class="confirm-box">
+      <div class="confirm-icon"><?= icon('block', 26) ?></div>
+      <h4 id="confirm-title"><?= $textbotlang['panel']['layoutNavDashboard'] ?></h4>
+      <p id="confirm-msg"><?= $textbotlang['panel']['layoutNavUsers'] ?></p>
+      <div class="confirm-btns">
+        <button class="btn btn-no" id="confirm-ok"><?= $textbotlang['panel']['layoutNavOrders'] ?></button>
+        <button class="btn btn-ghost"
+          onclick="closeConfirm()"><?= $textbotlang['panel']['layoutNavServices'] ?></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app">
+    <div class="sidebar-backdrop" id="backdrop" onclick="closeSidebar()"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark">M</div>
+        <div class="brand-name"><?= $textbotlang['panel']['layoutNavProducts'] ?><span>
+            <?= $textbotlang['panel']['layoutNavPayments'] ?></span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-heading"><?= $textbotlang['panel']['layoutNavKeyboard'] ?></div>
+          <a href="index.php" class="nav-item <?= $activeNav === 'dashboard' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleDashboard'] ?>">
+            <span class="nav-icon"><?= icon('dashboard') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutNavSettings'] ?></span>
+          </a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-heading"><?= $textbotlang['panel']['layoutNavLogout'] ?></div>
+          <a href="users.php" class="nav-item <?= $activeNav === 'users' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleUsers'] ?>">
+            <span class="nav-icon"><?= icon('users') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutMenuSectionMain'] ?></span>
+          </a>
+          <a href="invoice.php" class="nav-item <?= $activeNav === 'invoice' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleInvoice'] ?>">
+            <span class="nav-icon"><?= icon('invoice') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutMenuSectionManagement'] ?></span>
+          </a>
+          <a href="service.php" class="nav-item <?= $activeNav === 'service' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleService'] ?>">
+            <span class="nav-icon"><?= icon('server') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutMenuSectionFinancial'] ?></span>
+          </a>
+          <a href="product.php" class="nav-item <?= $activeNav === 'product' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleProduct'] ?>">
+            <span class="nav-icon"><?= icon('package') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutMenuSectionSystem'] ?></span>
+          </a>
+          <a href="category.php" class="nav-item <?= $activeNav === 'category' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['categoryPageTitle'] ?>">
+            <span class="nav-icon"><?= icon('folder') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['categoryPageTitle'] ?></span>
+          </a>
+          <a href="payment.php" class="nav-item <?= $activeNav === 'payment' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitlePayment'] ?>">
+            <span class="nav-icon"><?= icon('card') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutSearchBoxPlaceholder'] ?></span>
+          </a>
+          <a href="keyboard.php" class="nav-item <?= $activeNav === 'keyboard' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleKeyboard'] ?>">
+            <span class="nav-icon">
+              <?= icon('settings') ?>
+            </span><span class="nav-label"><?= $textbotlang['panel']['layoutThemeToggleLabel'] ?></span>
+          </a>
+          <a href="bottext.php" class="nav-item <?= $activeNav === 'bottext' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['bottextPageTitle'] ?>">
+            <span class="nav-icon"><?= icon('edit') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['bottextPageTitle'] ?></span>
+          </a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-heading"><?= $textbotlang['panel']['layoutSidebarToggleLabel'] ?></div>
+          <a href="settings.php" class="nav-item <?= $activeNav === 'settings' ? 'active' : '' ?>"
+            title="<?= $textbotlang['panel']['layoutPageTitleSettings'] ?>">
+            <span class="nav-icon"><?= icon('settings') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutProfileMenuLabel'] ?></span>
+          </a>
+          <a href="logout.php" class="nav-item" title="<?= $textbotlang['panel']['layoutPageTitleLogout'] ?>">
+            <span class="nav-icon"><?= icon('logout') ?></span><span
+              class="nav-label"><?= $textbotlang['panel']['layoutNotificationsLabel'] ?></span>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="user-pill">
+          <div class="user-mono"><?= htmlspecialchars($initials) ?></div>
+          <div class="user-info">
+            <div class="uname"><?= htmlspecialchars($currentUser) ?></div>
+            <div class="urole"><?= $textbotlang['panel']['layoutMobileMenuLabel'] ?></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn menu-toggle" onclick="openSidebar()"><?= icon('menu', 18) ?></button>
+          <button class="icon-btn sb-toggle" onclick="toggleSidebar()"><?= icon('menu', 17) ?></button>
+          <div>
+            <div class="topbar-title"><?= htmlspecialchars($pageTitle) ?></div>
+            <div class="crumb"><span><?= $textbotlang['panel']['layoutPageTitleSuffix'] ?></span><span
+                style="opacity:.4;margin:0 3px">/</span><span><?= htmlspecialchars($pageTitle) ?></span></div>
+          </div>
+        </div>
+        <div class="topbar-tools">
+          <a href="settings.php" class="icon-btn"
+            title="<?= $textbotlang['panel']['layoutPageTitleSettings'] ?>"><?= icon('settings', 16) ?></a>
+          <a href="logout.php" class="icon-btn"
+            title="<?= $textbotlang['panel']['layoutPageTitleLogout'] ?>"><?= icon('logout', 16) ?></a>
+        </div>
+      </header>
+      <main class="content">
+        <?php
+        $s = get_flash('success');
+        $e = get_flash('error');
+        $w = get_flash('warning');
+        if ($s): ?>
+          <div class="notice notice-ok"><?= htmlspecialchars($s) ?></div><?php endif;
+        if ($e): ?>
+          <div class="notice notice-no"><?= htmlspecialchars($e) ?></div><?php endif;
+        if ($w): ?>
+          <div class="notice notice-warn"><?= htmlspecialchars($w) ?></div><?php endif;
+        if ($showPageHead): ?>
+          <div class="page-head fade-up">
+            <h1><?= htmlspecialchars($pageTitle) ?></h1>
+            <?php if ($pageLede): ?>
+              <p><?= htmlspecialchars($pageLede) ?></p><?php endif; ?>
+          </div>
+        <?php endif; ?>

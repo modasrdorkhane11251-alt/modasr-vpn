@@ -1,1 +1,60 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgJHJ1biA9IHN0YXRpYyBmdW5jdGlvbiAoc3RyaW5nICRzY29wZSwgc3RyaW5nICRzcWwpIHVzZSAoJHBkbyk6IHZvaWQgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgICRwZG8tPmV4ZWMoJHNxbCk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlICRlKSB7CiAgICAgICAgICAgIGVycm9yX2xvZygiW2RiOm1pZ3JhdGlvbjppZF9wYXltZW50X2xpbms6JHNjb3BlXSAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgfQogICAgfTsKICAgICRjb2x1bW5JbmZvID0gc3RhdGljIGZ1bmN0aW9uIChzdHJpbmcgJHRhYmxlLCBzdHJpbmcgJGNvbHVtbikgdXNlICgkcGRvKSB7CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgQ0hBUkFDVEVSX1NFVF9OQU1FLCBDT0xMQVRJT05fTkFNRSwgQ0hBUkFDVEVSX01BWElNVU1fTEVOR1RIIEZST00gaW5mb3JtYXRpb25fc2NoZW1hLkNPTFVNTlMgV0hFUkUgVEFCTEVfU0NIRU1BID0gREFUQUJBU0UoKSBBTkQgVEFCTEVfTkFNRSA9ID8gQU5EIENPTFVNTl9OQU1FID0gPyIpOwogICAgICAgICRzdG10LT5leGVjdXRlKFskdGFibGUsICRjb2x1bW5dKTsKICAgICAgICByZXR1cm4gJHN0bXQtPmZldGNoKFBETzo6RkVUQ0hfQVNTT0MpOwogICAgfTsKICAgICRpbmRleEV4aXN0cyA9IHN0YXRpYyBmdW5jdGlvbiAoc3RyaW5nICR0YWJsZSwgc3RyaW5nICRuYW1lKSB1c2UgKCRwZG8pOiBib29sIHsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAxIEZST00gaW5mb3JtYXRpb25fc2NoZW1hLlNUQVRJU1RJQ1MgV0hFUkUgVEFCTEVfU0NIRU1BID0gREFUQUJBU0UoKSBBTkQgVEFCTEVfTkFNRSA9ID8gQU5EIElOREVYX05BTUUgPSA/IExJTUlUIDEiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJHRhYmxlLCAkbmFtZV0pOwogICAgICAgIHJldHVybiAoYm9vbCkgJHN0bXQtPmZldGNoQ29sdW1uKCk7CiAgICB9OwogICAgJGZvcmVpZ25LZXlFeGlzdHMgPSBzdGF0aWMgZnVuY3Rpb24gKHN0cmluZyAkdGFibGUsIHN0cmluZyAkbmFtZSkgdXNlICgkcGRvKTogYm9vbCB7CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgMSBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5UQUJMRV9DT05TVFJBSU5UUyBXSEVSRSBDT05TVFJBSU5UX1NDSEVNQSA9IERBVEFCQVNFKCkgQU5EIFRBQkxFX05BTUUgPSA/IEFORCBDT05TVFJBSU5UX05BTUUgPSA/IEFORCBDT05TVFJBSU5UX1RZUEUgPSAnRk9SRUlHTiBLRVknIExJTUlUIDEiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJHRhYmxlLCAkbmFtZV0pOwogICAgICAgIHJldHVybiAoYm9vbCkgJHN0bXQtPmZldGNoQ29sdW1uKCk7CiAgICB9OwoKICAgICRpZE9yZGVyID0gJGNvbHVtbkluZm8oJ1BheW1lbnRfcmVwb3J0JywgJ2lkX29yZGVyJyk7CiAgICBpZiAoISRpZE9yZGVyKSB7CiAgICAgICAgcmV0dXJuOwogICAgfQogICAgaWYgKChpbnQpICRpZE9yZGVyWydDSEFSQUNURVJfTUFYSU1VTV9MRU5HVEgnXSA+IDgwKSB7CiAgICAgICAgJGxvbmdlc3QgPSAoaW50KSAkcGRvLT5xdWVyeSgiU0VMRUNUIENPQUxFU0NFKE1BWChDSEFSX0xFTkdUSChpZF9vcmRlcikpLCAwKSBGUk9NIFBheW1lbnRfcmVwb3J0IiktPmZldGNoQ29sdW1uKCk7CiAgICAgICAgaWYgKCRsb25nZXN0ID4gODApIHsKICAgICAgICAgICAgZXJyb3JfbG9nKCJbZGI6bWlncmF0aW9uOmlkX3BheW1lbnRfbGlua10gUGF5bWVudF9yZXBvcnQuaWRfb3JkZXIgaGFzIHZhbHVlcyBsb25nZXIgdGhhbiA4MCBjaGFyYWN0ZXJzOyBmb3JlaWduIGtleXMgc2tpcHBlZCIpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIGlmICgkaW5kZXhFeGlzdHMoJ1BheW1lbnRfcmVwb3J0JywgJ2lkeF9wYXlyZXBvcnRfaWRfb3JkZXInKSkgewogICAgICAgICAgICAkcnVuKCdkcm9wX3ByZWZpeF9pbmRleCcsICJBTFRFUiBUQUJMRSBgUGF5bWVudF9yZXBvcnRgIERST1AgSU5ERVggYGlkeF9wYXlyZXBvcnRfaWRfb3JkZXJgIik7CiAgICAgICAgfQogICAgICAgICRydW4oJ3Nocmlua19pZF9vcmRlcicsICJBTFRFUiBUQUJMRSBgUGF5bWVudF9yZXBvcnRgIE1PRElGWSBgaWRfb3JkZXJgIFZBUkNIQVIoODApIENIQVJBQ1RFUiBTRVQgeyRpZE9yZGVyWydDSEFSQUNURVJfU0VUX05BTUUnXX0gQ09MTEFURSB7JGlkT3JkZXJbJ0NPTExBVElPTl9OQU1FJ119IE5VTEwiKTsKICAgIH0KICAgIGlmICghJGluZGV4RXhpc3RzKCdQYXltZW50X3JlcG9ydCcsICdpZHhfcGF5cmVwb3J0X2lkX29yZGVyJykpIHsKICAgICAgICAkcnVuKCdpZF9vcmRlcl9pbmRleCcsICJBTFRFUiBUQUJMRSBgUGF5bWVudF9yZXBvcnRgIEFERCBJTkRFWCBgaWR4X3BheXJlcG9ydF9pZF9vcmRlcmAgKGBpZF9vcmRlcmApIik7CiAgICB9CgogICAgZm9yZWFjaCAoWydpbnZvaWNlJyA9PiBbJ2lkeF9pbnZvaWNlX2lkX3BheW1lbnQnLCAnZmtfaW52b2ljZV9wYXltZW50X3JlcG9ydCddLCAnc2VydmljZV9vdGhlcicgPT4gWydpZHhfc2VydmljZW90aGVyX2lkX3BheW1lbnQnLCAnZmtfc2VydmljZV9vdGhlcl9wYXltZW50X3JlcG9ydCddXSBhcyAkdGFibGUgPT4gWyRpbmRleE5hbWUsICRmb3JlaWduS2V5TmFtZV0pIHsKICAgICAgICAkaWRQYXltZW50ID0gJGNvbHVtbkluZm8oJHRhYmxlLCAnaWRfcGF5bWVudCcpOwogICAgICAgIGlmICghJGlkUGF5bWVudCB8fCAkZm9yZWlnbktleUV4aXN0cygkdGFibGUsICRmb3JlaWduS2V5TmFtZSkpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgIGlmICgkaWRQYXltZW50WydDT0xMQVRJT05fTkFNRSddICE9PSAkaWRPcmRlclsnQ09MTEFUSU9OX05BTUUnXSkgewogICAgICAgICAgICAkcnVuKCIkdGFibGU6Y29sbGF0aW9uIiwgIkFMVEVSIFRBQkxFIGAkdGFibGVgIE1PRElGWSBgaWRfcGF5bWVudGAgVkFSQ0hBUigyMCkgQ0hBUkFDVEVSIFNFVCB7JGlkT3JkZXJbJ0NIQVJBQ1RFUl9TRVRfTkFNRSddfSBDT0xMQVRFIHskaWRPcmRlclsnQ09MTEFUSU9OX05BTUUnXX0gTlVMTCIpOwogICAgICAgIH0KICAgICAgICBpZiAoISRpbmRleEV4aXN0cygkdGFibGUsICRpbmRleE5hbWUpKSB7CiAgICAgICAgICAgICRydW4oIiR0YWJsZTppbmRleCIsICJBTFRFUiBUQUJMRSBgJHRhYmxlYCBBREQgSU5ERVggYCRpbmRleE5hbWVgIChgaWRfcGF5bWVudGApIik7CiAgICAgICAgfQogICAgICAgICRydW4oIiR0YWJsZTpvcnBoYW5zIiwgIlVQREFURSBgJHRhYmxlYCB0IFNFVCB0LmlkX3BheW1lbnQgPSBOVUxMIFdIRVJFIHQuaWRfcGF5bWVudCBJUyBOT1QgTlVMTCBBTkQgTk9UIEVYSVNUUyAoU0VMRUNUIDEgRlJPTSBQYXltZW50X3JlcG9ydCBwciBXSEVSRSBwci5pZF9vcmRlciA9IHQuaWRfcGF5bWVudCkiKTsKICAgICAgICAkcnVuKCIkdGFibGU6Zm9yZWlnbl9rZXkiLCAiQUxURVIgVEFCTEUgYCR0YWJsZWAgQUREIENPTlNUUkFJTlQgYCRmb3JlaWduS2V5TmFtZWAgRk9SRUlHTiBLRVkgKGBpZF9wYXltZW50YCkgUkVGRVJFTkNFUyBgUGF5bWVudF9yZXBvcnRgIChgaWRfb3JkZXJgKSBPTiBERUxFVEUgU0VUIE5VTEwgT04gVVBEQVRFIENBU0NBREUiKTsKICAgIH0KfTsK
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    $run = static function (string $scope, string $sql) use ($pdo): void {
+        try {
+            $pdo->exec($sql);
+        } catch (Throwable $e) {
+            error_log("[db:migration:id_payment_link:$scope] " . $e->getMessage());
+        }
+    };
+    $columnInfo = static function (string $table, string $column) use ($pdo) {
+        $stmt = $pdo->prepare("SELECT CHARACTER_SET_NAME, COLLATION_NAME, CHARACTER_MAXIMUM_LENGTH FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND COLUMN_NAME = ?");
+        $stmt->execute([$table, $column]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    };
+    $indexExists = static function (string $table, string $name) use ($pdo): bool {
+        $stmt = $pdo->prepare("SELECT 1 FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND INDEX_NAME = ? LIMIT 1");
+        $stmt->execute([$table, $name]);
+        return (bool) $stmt->fetchColumn();
+    };
+    $foreignKeyExists = static function (string $table, string $name) use ($pdo): bool {
+        $stmt = $pdo->prepare("SELECT 1 FROM information_schema.TABLE_CONSTRAINTS WHERE CONSTRAINT_SCHEMA = DATABASE() AND TABLE_NAME = ? AND CONSTRAINT_NAME = ? AND CONSTRAINT_TYPE = 'FOREIGN KEY' LIMIT 1");
+        $stmt->execute([$table, $name]);
+        return (bool) $stmt->fetchColumn();
+    };
+
+    $idOrder = $columnInfo('Payment_report', 'id_order');
+    if (!$idOrder) {
+        return;
+    }
+    if ((int) $idOrder['CHARACTER_MAXIMUM_LENGTH'] > 80) {
+        $longest = (int) $pdo->query("SELECT COALESCE(MAX(CHAR_LENGTH(id_order)), 0) FROM Payment_report")->fetchColumn();
+        if ($longest > 80) {
+            error_log("[db:migration:id_payment_link] Payment_report.id_order has values longer than 80 characters; foreign keys skipped");
+            return;
+        }
+        if ($indexExists('Payment_report', 'idx_payreport_id_order')) {
+            $run('drop_prefix_index', "ALTER TABLE `Payment_report` DROP INDEX `idx_payreport_id_order`");
+        }
+        $run('shrink_id_order', "ALTER TABLE `Payment_report` MODIFY `id_order` VARCHAR(80) CHARACTER SET {$idOrder['CHARACTER_SET_NAME']} COLLATE {$idOrder['COLLATION_NAME']} NULL");
+    }
+    if (!$indexExists('Payment_report', 'idx_payreport_id_order')) {
+        $run('id_order_index', "ALTER TABLE `Payment_report` ADD INDEX `idx_payreport_id_order` (`id_order`)");
+    }
+
+    foreach (['invoice' => ['idx_invoice_id_payment', 'fk_invoice_payment_report'], 'service_other' => ['idx_serviceother_id_payment', 'fk_service_other_payment_report']] as $table => [$indexName, $foreignKeyName]) {
+        $idPayment = $columnInfo($table, 'id_payment');
+        if (!$idPayment || $foreignKeyExists($table, $foreignKeyName)) {
+            continue;
+        }
+        if ($idPayment['COLLATION_NAME'] !== $idOrder['COLLATION_NAME']) {
+            $run("$table:collation", "ALTER TABLE `$table` MODIFY `id_payment` VARCHAR(20) CHARACTER SET {$idOrder['CHARACTER_SET_NAME']} COLLATE {$idOrder['COLLATION_NAME']} NULL");
+        }
+        if (!$indexExists($table, $indexName)) {
+            $run("$table:index", "ALTER TABLE `$table` ADD INDEX `$indexName` (`id_payment`)");
+        }
+        $run("$table:orphans", "UPDATE `$table` t SET t.id_payment = NULL WHERE t.id_payment IS NOT NULL AND NOT EXISTS (SELECT 1 FROM Payment_report pr WHERE pr.id_order = t.id_payment)");
+        $run("$table:foreign_key", "ALTER TABLE `$table` ADD CONSTRAINT `$foreignKeyName` FOREIGN KEY (`id_payment`) REFERENCES `Payment_report` (`id_order`) ON DELETE SET NULL ON UPDATE CASCADE");
+    }
+};

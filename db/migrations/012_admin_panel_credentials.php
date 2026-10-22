@@ -1,1 +1,18 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT50YWJsZUV4aXN0cygnYWRtaW4nKSkgewogICAgICAgIHJldHVybjsKICAgIH0KICAgICRhZG1pbnMgPSAkcGRvLT5xdWVyeSgiU0VMRUNUIGlkX2FkbWluLCB1c2VybmFtZSwgcGFzc3dvcmQgRlJPTSBhZG1pbiIpLT5mZXRjaEFsbChQRE86OkZFVENIX0FTU09DKTsKICAgICRzdGF0ZW1lbnQgPSAkcGRvLT5wcmVwYXJlKCJVUERBVEUgYWRtaW4gU0VUIHVzZXJuYW1lID0gPywgcGFzc3dvcmQgPSA/IFdIRVJFIGlkX2FkbWluID0gPyIpOwogICAgZm9yZWFjaCAoJGFkbWlucyBhcyAkYWRtaW4pIHsKICAgICAgICAkcGFzc3dvcmQgPSAoc3RyaW5nKSAkYWRtaW5bJ3Bhc3N3b3JkJ107CiAgICAgICAgJGlzSGFzaGVkID0gc3RyX3N0YXJ0c193aXRoKCRwYXNzd29yZCwgJyQyJykgfHwgc3RyX3N0YXJ0c193aXRoKCRwYXNzd29yZCwgJyRhcmdvbjInKTsKICAgICAgICBpZiAoJGFkbWluWyd1c2VybmFtZSddID09PSAncm9vdCcpIHsKICAgICAgICAgICAgJHN0YXRlbWVudC0+ZXhlY3V0ZShbJGFkbWluWydpZF9hZG1pbiddLCBwYXNzd29yZF9oYXNoKGJpbjJoZXgocmFuZG9tX2J5dGVzKDE2KSksIFBBU1NXT1JEX0JDUllQVCksICRhZG1pblsnaWRfYWRtaW4nXV0pOwogICAgICAgIH0gZWxzZWlmICghJGlzSGFzaGVkKSB7CiAgICAgICAgICAgICRzdGF0ZW1lbnQtPmV4ZWN1dGUoWyRhZG1pblsndXNlcm5hbWUnXSwgcGFzc3dvcmRfaGFzaCgkcGFzc3dvcmQsIFBBU1NXT1JEX0JDUllQVCksICRhZG1pblsnaWRfYWRtaW4nXV0pOwogICAgICAgIH0KICAgIH0KfTsK
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->tableExists('admin')) {
+        return;
+    }
+    $admins = $pdo->query("SELECT id_admin, username, password FROM admin")->fetchAll(PDO::FETCH_ASSOC);
+    $statement = $pdo->prepare("UPDATE admin SET username = ?, password = ? WHERE id_admin = ?");
+    foreach ($admins as $admin) {
+        $password = (string) $admin['password'];
+        $isHashed = str_starts_with($password, '$2') || str_starts_with($password, '$argon2');
+        if ($admin['username'] === 'root') {
+            $statement->execute([$admin['id_admin'], password_hash(bin2hex(random_bytes(16)), PASSWORD_BCRYPT), $admin['id_admin']]);
+        } elseif (!$isHashed) {
+            $statement->execute([$admin['username'], password_hash($password, PASSWORD_BCRYPT), $admin['id_admin']]);
+        }
+    }
+};

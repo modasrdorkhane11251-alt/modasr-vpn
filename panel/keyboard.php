@@ -1,1 +1,111 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKc2V0Y29va2llKCdYU1JGLVRPS0VOJywgY3NyZl90b2tlbigpLCBbCiAgICAncGF0aCcgPT4gJy8nLAogICAgJ3NlY3VyZScgPT4gIWVtcHR5KCRfU0VSVkVSWydIVFRQUyddKSAmJiAkX1NFUlZFUlsnSFRUUFMnXSAhPT0gJ29mZicsCiAgICAnc2FtZXNpdGUnID0+ICdTdHJpY3QnLApdKTsKCiRrZXlib2FyZCA9IGpzb25fZGVjb2RlKGZpbGVfZ2V0X2NvbnRlbnRzKCJwaHA6Ly9pbnB1dCIpLCB0cnVlKTsKJG1ldGhvZCA9ICRfU0VSVkVSWydSRVFVRVNUX01FVEhPRCddOwppZiAoJG1ldGhvZCA9PSAiUE9TVCIgJiYgIWNzcmZfY2hlY2tfdmFsdWUoJF9TRVJWRVJbJ0hUVFBfWF9YU1JGX1RPS0VOJ10gPz8gJycpKSB7CiAgICBodHRwX3Jlc3BvbnNlX2NvZGUoNDAzKTsKICAgIGhlYWRlcignQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PXV0Zi04Jyk7CiAgICBlY2hvIGpzb25fZW5jb2RlKFsnb2snID0+IGZhbHNlXSk7CiAgICBleGl0Owp9CmlmICgkbWV0aG9kID09ICJQT1NUIiAmJiBpc19hcnJheSgka2V5Ym9hcmQpKSB7CiAgICAkdmFsaWRLZXlib2FyZCA9IGNvdW50KCRrZXlib2FyZCkgPiAwOwogICAgZm9yZWFjaCAoJGtleWJvYXJkIGFzICRyb3cpIHsKICAgICAgICBpZiAoIWlzX2FycmF5KCRyb3cpIHx8IGNvdW50KCRyb3cpID09PSAwKSB7CiAgICAgICAgICAgICR2YWxpZEtleWJvYXJkID0gZmFsc2U7CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIH0KICAgICAgICBmb3JlYWNoICgkcm93IGFzICRidXR0b24pIHsKICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkYnV0dG9uKSB8fCAhaXNzZXQoJGJ1dHRvblsndGV4dCddKSB8fCAhaXNfc3RyaW5nKCRidXR0b25bJ3RleHQnXSkgfHwgdHJpbSgkYnV0dG9uWyd0ZXh0J10pID09PSAnJykgewogICAgICAgICAgICAgICAgJHZhbGlkS2V5Ym9hcmQgPSBmYWxzZTsKICAgICAgICAgICAgICAgIGJyZWFrIDI7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICBoZWFkZXIoJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOCcpOwogICAgaWYgKCEkdmFsaWRLZXlib2FyZCkgewogICAgICAgIGh0dHBfcmVzcG9uc2VfY29kZSg0MjIpOwogICAgICAgIGVjaG8ganNvbl9lbmNvZGUoWydvaycgPT4gZmFsc2VdKTsKICAgICAgICBleGl0OwogICAgfQogICAgJGtleWJvYXJkbWFpbiA9IFsna2V5Ym9hcmQnID0+ICRrZXlib2FyZF07CiAgICB1cGRhdGUoInNldHRpbmciLCAia2V5Ym9hcmRtYWluIiwganNvbl9lbmNvZGUoJGtleWJvYXJkbWFpbiksIG51bGwsIG51bGwpOwogICAgZWNobyBqc29uX2VuY29kZShbJ29rJyA9PiB0cnVlXSk7CiAgICBleGl0Owp9IGVsc2UgewogICAgJGtleWJvYXJkbWFpbiA9ICd7ImtleWJvYXJkIjpbW3sidGV4dCI6InRleHRfc2VsbCJ9LHsidGV4dCI6InRleHRfZXh0ZW5kIn1dLFt7InRleHQiOiJ0ZXh0X3VzZXJ0ZXN0In0seyJ0ZXh0IjoidGV4dF93aGVlbF9sdWNrIn1dLFt7InRleHQiOiJ0ZXh0X1B1cmNoYXNlZF9zZXJ2aWNlcyJ9LHsidGV4dCI6ImFjY291bnR3YWxsZXQifV0sW3sidGV4dCI6InRleHRfYWZmaWxpYXRlcyJ9LHsidGV4dCI6InRleHRfVGFyaWZmX2xpc3QifV0sW3sidGV4dCI6InRleHRfc3VwcG9ydCJ9LHsidGV4dCI6InRleHRfaGVscCJ9XSxbeyJ0ZXh0IjoidGV4dF9hZ2VudHBhbmVsIn0seyJ0ZXh0IjoidGV4dF9yZXF1ZXN0YWdlbnQifV1dfSc7CiAgICAkYWN0aW9uID0gZmlsdGVyX2lucHV0KElOUFVUX0dFVCwgJ2FjdGlvbicpOwogICAgaWYgKCRhY3Rpb24gPT09ICJyZWFzZXQiKSB7CiAgICAgICAgY3NyZl9jaGVja19nZXQoKTsKICAgICAgICB1cGRhdGUoInNldHRpbmciLCAia2V5Ym9hcmRtYWluIiwgJGtleWJvYXJkbWFpbiwgbnVsbCwgbnVsbCk7CiAgICAgICAgaGVhZGVyKCdMb2NhdGlvbjoga2V5Ym9hcmQucGhwJyk7CiAgICAgICAgZXhpdDsKICAgIH0KfQo/PgoKPCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9IkZBIj4KCjxoZWFkPgogICAgPG1ldGEgY2hhcnNldD0iVVRGLTgiIC8+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCIgLz4KICAgIDx0aXRsZT48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydrZXlib2FyZE1hbmFnZVRpdGxlJ10gPz48L3RpdGxlPgoKICAgIDxzY3JpcHQgdHlwZT0ibW9kdWxlIiBjcm9zc29yaWdpbiBzcmM9ImpzL3NvcnRfa2V5Ym9hcmQuanMiPjwvc2NyaXB0PgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbiBocmVmPSJjc3Mvc29ydF9rZXlib2FyZC5jc3MiPgogICAgPHN0eWxlPgogICAgICAgIEBpbXBvcnQgdXJsKGh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9VmF6aXJtYXRuOndnaHRAMzAwOzQwMDs1MDA7NjAwOzcwMDs4MDAmZmFtaWx5PUpldEJyYWlucytNb25vOndnaHRANDAwOzUwMCZkaXNwbGF5PXN3YXApOwoKICAgICAgICAqIHsKICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdWYXppcm1hdG4nICFpbXBvcnRhbnQ7CiAgICAgICAgfQoKICAgICAgICBidXR0b24gewogICAgICAgICAgICBmb250LWZhbWlseTogeWVrYW47CiAgICAgICAgfQoKICAgICAgICAuYnRuYmFjayB7CiAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDsKICAgICAgICAgICAgdG9wOiAxMHB4OwogICAgICAgICAgICBsZWZ0OiAxMHB4OwogICAgICAgICAgICBwYWRkaW5nOiA3cHg7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMzZDNkM2Q7CiAgICAgICAgICAgIGNvbG9yOiAjZmZmOwogICAgICAgICAgICBib3JkZXItcmFkaXVzOiA2cHg7CiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiB5ZWthbjsKICAgICAgICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICAgICAgICBmb250LXdlaWdodDogYm9sZDsKICAgICAgICB9CgogICAgICAgIC5idG5kZWZ1bHQgewogICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7CiAgICAgICAgICAgIHRvcDogMTBweDsKICAgICAgICAgICAgbGVmdDogMTUwcHg7CiAgICAgICAgICAgIHBhZGRpbmc6IDdweDsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsKICAgICAgICAgICAgYm9yZGVyOiAycHggc29saWQgIzNkM2QzZDsKICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDZweDsKICAgICAgICAgICAgZm9udC1mYW1pbHk6IHlla2FuOwogICAgICAgICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgICAgIH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KCjxib2R5PgogICAgPGEgY2xhc3M9ImJ0bmJhY2siIGhyZWY9ImluZGV4LnBocCI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsna2V5Ym9hcmRTb3J0SGludCddID8+PC9hPgogICAgPGEgY2xhc3M9ImJ0bmRlZnVsdCIgaHJlZj0ia2V5Ym9hcmQucGhwP2FjdGlvbj1yZWFzZXQmX2NzcmY9PD89IHVybGVuY29kZShjc3JmX3Rva2VuKCkpID8+Ij48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydrZXlib2FyZFNhdmVCdG4nXSA/PjwvYT4KICAgIDxkaXYgaWQ9InJvb3QiPjwvZGl2Pgo8L2JvZHk+Cgo8L2h0bWw+
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+setcookie('XSRF-TOKEN', csrf_token(), [
+    'path' => '/',
+    'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+    'samesite' => 'Strict',
+]);
+
+$keyboard = json_decode(file_get_contents("php://input"), true);
+$method = $_SERVER['REQUEST_METHOD'];
+if ($method == "POST" && !csrf_check_value($_SERVER['HTTP_X_XSRF_TOKEN'] ?? '')) {
+    http_response_code(403);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['ok' => false]);
+    exit;
+}
+if ($method == "POST" && is_array($keyboard)) {
+    $validKeyboard = count($keyboard) > 0;
+    foreach ($keyboard as $row) {
+        if (!is_array($row) || count($row) === 0) {
+            $validKeyboard = false;
+            break;
+        }
+        foreach ($row as $button) {
+            if (!is_array($button) || !isset($button['text']) || !is_string($button['text']) || trim($button['text']) === '') {
+                $validKeyboard = false;
+                break 2;
+            }
+        }
+    }
+    header('Content-Type: application/json; charset=utf-8');
+    if (!$validKeyboard) {
+        http_response_code(422);
+        echo json_encode(['ok' => false]);
+        exit;
+    }
+    $keyboardmain = ['keyboard' => $keyboard];
+    update("setting", "keyboardmain", json_encode($keyboardmain), null, null);
+    echo json_encode(['ok' => true]);
+    exit;
+} else {
+    $keyboardmain = '{"keyboard":[[{"text":"text_sell"},{"text":"text_extend"}],[{"text":"text_usertest"},{"text":"text_wheel_luck"}],[{"text":"text_Purchased_services"},{"text":"accountwallet"}],[{"text":"text_affiliates"},{"text":"text_Tariff_list"}],[{"text":"text_support"},{"text":"text_help"}],[{"text":"text_agentpanel"},{"text":"text_requestagent"}]]}';
+    $action = filter_input(INPUT_GET, 'action');
+    if ($action === "reaset") {
+        csrf_check_get();
+        update("setting", "keyboardmain", $keyboardmain, null, null);
+        header('Location: keyboard.php');
+        exit;
+    }
+}
+?>
+
+<!doctype html>
+<html lang="FA">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><?= $textbotlang['panel']['keyboardManageTitle'] ?></title>
+
+    <script type="module" crossorigin src="js/sort_keyboard.js"></script>
+    <link rel="stylesheet" crossorigin href="css/sort_keyboard.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap);
+
+        * {
+            font-family: 'Vazirmatn' !important;
+        }
+
+        button {
+            font-family: yekan;
+        }
+
+        .btnback {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 7px;
+            background-color: #3d3d3d;
+            color: #fff;
+            border-radius: 6px;
+            font-family: yekan;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .btndefult {
+            position: fixed;
+            top: 10px;
+            left: 150px;
+            padding: 7px;
+            background-color: #fff;
+            border: 2px solid #3d3d3d;
+            color: #3d3d3d;
+            border-radius: 6px;
+            font-family: yekan;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btnback" href="index.php"><?= $textbotlang['panel']['keyboardSortHint'] ?></a>
+    <a class="btndefult" href="keyboard.php?action=reaset&_csrf=<?= urlencode(csrf_token()) ?>"><?= $textbotlang['panel']['keyboardSaveBtn'] ?></a>
+    <div id="root"></div>
+</body>
+
+</html>

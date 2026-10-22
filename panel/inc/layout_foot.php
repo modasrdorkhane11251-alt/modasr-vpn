@@ -1,1 +1,35 @@
-PD9waHAgPz4KICA8L21haW4+CjwvZGl2PgoKPG5hdiBjbGFzcz0iYm90dG9tLW5hdiI+CiAgPGRpdiBjbGFzcz0iYm90dG9tLW5hdi1yb3ciPgogICAgPGEgaHJlZj0iaW5kZXgucGhwIiAgIGNsYXNzPSJibmF2LWl0ZW0gPD89ICgkYWN0aXZlTmF2Pz8nJyk9PT0nZGFzaGJvYXJkJz8nYWN0aXZlJzonJz8+Ij48Pz0gaWNvbignZGFzaGJvYXJkJywyMikgPz48c3Bhbj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRGb290ZXJDb3B5cmlnaHQnXSA/Pjwvc3Bhbj48L2E+CiAgICA8YSBocmVmPSJ1c2Vycy5waHAiICAgY2xhc3M9ImJuYXYtaXRlbSA8Pz0gKCRhY3RpdmVOYXY/PycnKT09PSd1c2Vycyc/J2FjdGl2ZSc6Jyc/PiI+PD89IGljb24oJ3VzZXJzJywyMikgPz48c3Bhbj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRGb290ZXJWZXJzaW9uJ10gPz48L3NwYW4+PC9hPgogICAgPGEgaHJlZj0iaW52b2ljZS5waHAiIGNsYXNzPSJibmF2LWl0ZW0gPD89ICgkYWN0aXZlTmF2Pz8nJyk9PT0naW52b2ljZSc/J2FjdGl2ZSc6Jyc/PiI+PD89IGljb24oJ2ludm9pY2UnLDIyKSA/PjxzcGFuPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dEZvb3RlclBvd2VyZWRCeSddID8+PC9zcGFuPjwvYT4KICAgIDxhIGhyZWY9InBheW1lbnQucGhwIiBjbGFzcz0iYm5hdi1pdGVtIDw/PSAoJGFjdGl2ZU5hdj8/JycpPT09J3BheW1lbnQnPydhY3RpdmUnOicnPz4iPjw/PSBpY29uKCdjYXJkJywyMikgPz48c3Bhbj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydsYXlvdXRGb290ZXJMaW5rU3VwcG9ydCddID8+PC9zcGFuPjwvYT4KICAgIDxhIGhyZWY9InNldHRpbmdzLnBocCJjbGFzcz0iYm5hdi1pdGVtIDw/PSAoJGFjdGl2ZU5hdj8/JycpPT09J3NldHRpbmdzJz8nYWN0aXZlJzonJz8+Ij48Pz0gaWNvbignc2V0dGluZ3MnLDIyKSA/PjxzcGFuPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2xheW91dEZvb3RlckxpbmtEb2NzJ10gPz48L3NwYW4+PC9hPgogIDwvZGl2Pgo8L25hdj4KPC9kaXY+Cgo8c2NyaXB0IHNyYz0ianMvYXBwLmpzIj48L3NjcmlwdD4KPD9waHAgaWYgKCFlbXB0eSgkX1NFU1NJT05bJ3Nob3dfZG9uYXRlJ10pKToKICB1bnNldCgkX1NFU1NJT05bJ3Nob3dfZG9uYXRlJ10pOyA/Pgo8ZGl2IGNsYXNzPSJtb2RhbC12ZWlsIiBpZD0iZG9uYXRlTW9kYWwiPgogIDxkaXYgY2xhc3M9Im1vZGFsIiBzdHlsZT0id2lkdGg6bWluKDQyMHB4LDEwMCUpIj4KICAgIDxkaXYgY2xhc3M9Im1vZGFsLWhlYWQiPgogICAgICA8aDM+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZG9uYXRlUG9wdXBUaXRsZSddID8+PC9oMz4KICAgICAgPGJ1dHRvbiBjbGFzcz0ibW9kYWwteCIgb25jbGljaz0iY2xvc2VNb2RhbCgnZG9uYXRlTW9kYWwnKSI+PD89IGljb24oJ2Nsb3NlJywgMTQpID8+PC9idXR0b24+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9Im1vZGFsLWJvZHkiIHN0eWxlPSJsaW5lLWhlaWdodDoxLjk7Zm9udC1zaXplOi44NnJlbTtjb2xvcjp2YXIoLS1tdXRlKSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZG9uYXRlUG9wdXBUZXh0J10gPz48L2Rpdj4KICAgIDxkaXYgY2xhc3M9Im1vZGFsLWZvb3QiPgogICAgICA8YSBjbGFzcz0iYnRuLWdsYXNzIiBocmVmPSJodHRwczovL25vd3BheW1lbnRzLmlvL2RvbmF0aW9uL21haGRpIiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciIgb25jbGljaz0iY2xvc2VNb2RhbCgnZG9uYXRlTW9kYWwnKSI+PD89IGljb24oJ2hlYXJ0JywgMTQpID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3NldHRpbmdzRG9uYXRlTGluayddID8+PC9hPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9ImJ0biBidG4tZ2hvc3QiIG9uY2xpY2s9ImNsb3NlTW9kYWwoJ2RvbmF0ZU1vZGFsJykiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2RvbmF0ZVBvcHVwTGF0ZXInXSA/PjwvYnV0dG9uPgogICAgPC9kaXY+CiAgPC9kaXY+CjwvZGl2Pgo8c2NyaXB0Pm9wZW5Nb2RhbCgnZG9uYXRlTW9kYWwnKTs8L3NjcmlwdD4KPD9waHAgZW5kaWY7ID8+CjwvYm9keT4KPC9odG1sPgo=
+<?php ?>
+  </main>
+</div>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-row">
+    <a href="index.php"   class="bnav-item <?= ($activeNav??'')==='dashboard'?'active':''?>"><?= icon('dashboard',22) ?><span><?= $textbotlang['panel']['layoutFooterCopyright'] ?></span></a>
+    <a href="users.php"   class="bnav-item <?= ($activeNav??'')==='users'?'active':''?>"><?= icon('users',22) ?><span><?= $textbotlang['panel']['layoutFooterVersion'] ?></span></a>
+    <a href="invoice.php" class="bnav-item <?= ($activeNav??'')==='invoice'?'active':''?>"><?= icon('invoice',22) ?><span><?= $textbotlang['panel']['layoutFooterPoweredBy'] ?></span></a>
+    <a href="payment.php" class="bnav-item <?= ($activeNav??'')==='payment'?'active':''?>"><?= icon('card',22) ?><span><?= $textbotlang['panel']['layoutFooterLinkSupport'] ?></span></a>
+    <a href="settings.php"class="bnav-item <?= ($activeNav??'')==='settings'?'active':''?>"><?= icon('settings',22) ?><span><?= $textbotlang['panel']['layoutFooterLinkDocs'] ?></span></a>
+  </div>
+</nav>
+</div>
+
+<script src="js/app.js"></script>
+<?php if (!empty($_SESSION['show_donate'])):
+  unset($_SESSION['show_donate']); ?>
+<div class="modal-veil" id="donateModal">
+  <div class="modal" style="width:min(420px,100%)">
+    <div class="modal-head">
+      <h3><?= $textbotlang['panel']['donatePopupTitle'] ?></h3>
+      <button class="modal-x" onclick="closeModal('donateModal')"><?= icon('close', 14) ?></button>
+    </div>
+    <div class="modal-body" style="line-height:1.9;font-size:.86rem;color:var(--mute)"><?= $textbotlang['panel']['donatePopupText'] ?></div>
+    <div class="modal-foot">
+      <a class="btn-glass" href="https://nowpayments.io/donation/mahdi" target="_blank" rel="noopener" onclick="closeModal('donateModal')"><?= icon('heart', 14) ?> <?= $textbotlang['panel']['settingsDonateLink'] ?></a>
+      <button type="button" class="btn btn-ghost" onclick="closeModal('donateModal')"><?= $textbotlang['panel']['donatePopupLater'] ?></button>
+    </div>
+  </div>
+</div>
+<script>openModal('donateModal');</script>
+<?php endif; ?>
+</body>
+</html>

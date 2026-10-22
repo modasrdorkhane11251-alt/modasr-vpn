@@ -1,1 +1,33 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2JvdGFwaS5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vcGFuZWxzLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwokTWFuYWdlUGFuZWwgPSBuZXcgTWFuYWdlUGFuZWwoKTsKJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAqIEZST00gaW52b2ljZSBXSEVSRSBzdGF0dXMgIT0gJ2Rpc2FibGVkJyBBTkQgbmFtZV9wcm9kdWN0ID0gOm1wMSBPUkRFUiBCWSBSQU5EKCkgTElNSVQgMTUiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJzptcDEnID0+ICR0ZXh0Ym90bGFuZ1snY29tbW9uJ11bJ2xhYmVscyddWyd0ZXN0U2VydmljZU5hbWUnXV0pOwogICAgICAgIHdoaWxlICgkcmVzdWx0ID0gJHN0bXQtPmZldGNoKFBETzo6RkVUQ0hfQVNTT0MpKSB7CiAgICAgICAgJHJlc3VsdHQgID0gdHJpbSgkcmVzdWx0Wyd1c2VybmFtZSddKTsKICAgICAgICAkbWFyemJhbl9saXN0X2dldCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsIioiLCJuYW1lX3BhbmVsIiwkcmVzdWx0WydTZXJ2aWNlX2xvY2F0aW9uJ10sInNlbGVjdCIpOwogICAgICAgIGlmKCRtYXJ6YmFuX2xpc3RfZ2V0ID09IGZhbHNlKWNvbnRpbnVlOwogICAgICAgICR1c2VyID0gc2VsZWN0KCJ1c2VyIiwiKiIsImlkIiwkcmVzdWx0WydpZF91c2VyJ10sInNlbGVjdCIpOwogICAgICAgICRnZXRfdXNlcm5hbWVfQ2hlY2sgPSAkTWFuYWdlUGFuZWwtPkRhdGFVc2VyKCRyZXN1bHRbJ1NlcnZpY2VfbG9jYXRpb24nXSwkcmVzdWx0Wyd1c2VybmFtZSddKTsKICAgIGlmICghaW5fYXJyYXkoJGdldF91c2VybmFtZV9DaGVja1snc3RhdHVzJ10sWydhY3RpdmUnLCdvbl9ob2xkJywiVW5zdWNjZXNzZnVsIiwiZGlzYWJsZWQiXSkpIHsKICAgICAgICAgICAgJE1hbmFnZVBhbmVsLT5SZW1vdmVVc2VyKCRyZXN1bHRbJ1NlcnZpY2VfbG9jYXRpb24nXSwkcmVzdWx0dCk7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwic3RhdHVzIiwiZGlzYWJsZWQiLCJ1c2VybmFtZSIsJHJlc3VsdHQpOwogICAgICAgIGlmKGludHZhbCgkdXNlclsnc3RhdHVzX2Nyb24nXSkgIT0gMCl7CiAgICAgICAgICRSZXNwb25zZSA9IGpzb25fZW5jb2RlKFsKICAgICAgICAnaW5saW5lX2tleWJvYXJkJyA9PiBbCiAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIFsndGV4dCcgPT4gJHRleHRib3RsYW5nWydrZXlib2FyZCddWydidXlTZXJ2aWNlJ10sICdjYWxsYmFja19kYXRhJyA9PiAnYnV5J10sCiAgICAgICAgICAgIF0sCiAgICAgICAgXQogICAgXSk7CiAgICAgICAgJHRleHRleHBpcmUgPSBzdHJfcmVwbGFjZSgne3VzZXJuYW1lfScsICRyZXN1bHR0LCAkdGV4dGJvdGxhbmdbJ3RleHRib3QnXVsndGVzdEV4cGlyZWQnXSk7CiAgICAgICAgc2VuZG1lc3NhZ2UoJHJlc3VsdFsnaWRfdXNlciddLCAkdGV4dGV4cGlyZSwgJFJlc3BvbnNlLCAnSFRNTCcpOwogICAgICAgIH0KICAgIH0KfQ==
+<?php
+chdir(__DIR__);
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$ManagePanel = new ManagePanel();
+$textbotlang = languagechange();
+        $stmt = $pdo->prepare("SELECT * FROM invoice WHERE status != 'disabled' AND name_product = :mp1 ORDER BY RAND() LIMIT 15");
+        $stmt->execute([':mp1' => $textbotlang['common']['labels']['testServiceName']]);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $resultt  = trim($result['username']);
+        $marzban_list_get = select("marzban_panel","*","name_panel",$result['Service_location'],"select");
+        if($marzban_list_get == false)continue;
+        $user = select("user","*","id",$result['id_user'],"select");
+        $get_username_Check = $ManagePanel->DataUser($result['Service_location'],$result['username']);
+    if (!in_array($get_username_Check['status'],['active','on_hold',"Unsuccessful","disabled"])) {
+            $ManagePanel->RemoveUser($result['Service_location'],$resultt);
+        update("invoice","status","disabled","username",$resultt);
+        if(intval($user['status_cron']) != 0){
+         $Response = json_encode([
+        'inline_keyboard' => [
+            [
+                ['text' => $textbotlang['keyboard']['buyService'], 'callback_data' => 'buy'],
+            ],
+        ]
+    ]);
+        $textexpire = str_replace('{username}', $resultt, $textbotlang['textbot']['testExpired']);
+        sendmessage($result['id_user'], $textexpire, $Response, 'HTML');
+        }
+    }
+}

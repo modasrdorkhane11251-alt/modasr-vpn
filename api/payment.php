@@ -1,1 +1,83 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKaGVhZGVyKCdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKaW5pX3NldCgnZGVmYXVsdF9jaGFyc2V0JywgJ1VURi04Jyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7Cgokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CgpsaXN0KCRoZWFkZXJzLCAkZGF0YSwgJGFjdGlvbikgPSBhcGlSZXF1ZXN0Q29udGV4dCgpOwokbWV0aG9kID0gJF9TRVJWRVJbJ1JFUVVFU1RfTUVUSE9EJ107CgpmdW5jdGlvbiBwYXlfcGF5bWVudHMoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgJHBhZ2luZyA9IHBhZ2luYXRpb25QYXJhbXMoJGRhdGEpOwogICAgJGxpbWl0ID0gJHBhZ2luZ1snbGltaXQnXTsKICAgICRwYWdlID0gJHBhZ2luZ1sncGFnZSddOwogICAgJG9mZnNldCA9ICRwYWdpbmdbJ29mZnNldCddOwogICAgJHEgPSAkcGFnaW5nWydxJ107CgogICAgdHJ5IHsKICAgICAgICAkc2VhcmNoID0gIiUkcSUiOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIENPVU5UKCopIGFzIHRvdGFsIEZST00gUGF5bWVudF9yZXBvcnQgV0hFUkUgaWRfdXNlciBMSUtFIDppZF91c2VyIE9SIGlkX29yZGVyIExJS0UgOmlkX29yZGVyIik7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoWyc6aWRfdXNlcicgPT4gJHNlYXJjaCwgJzppZF9vcmRlcicgPT4gJHNlYXJjaF0pOwogICAgICAgICR0b3RhbF9yZWNvcmQgPSAoaW50KSAkc3RtdC0+ZmV0Y2hDb2x1bW4oKTsKICAgICAgICAkdG90YWxQYWdlcyA9IChpbnQpIGNlaWwoJHRvdGFsX3JlY29yZCAvICRsaW1pdCk7CgogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIGlkX29yZGVyIGFzIGlkLGlkX3VzZXIsdGltZSxwcmljZSxwYXltZW50X3N0YXR1cyxQYXltZW50X01ldGhvZCBGUk9NIFBheW1lbnRfcmVwb3J0IFdIRVJFIGlkX3VzZXIgTElLRSBDT05DQVQoJyUnLCA6aWRfdXNlciwgJyUnKSBPUiBpZF9vcmRlciBMSUtFIENPTkNBVCgnJScsIDppZF9vcmRlciwgJyUnKSBPUkRFUiBCWSB0aW1lIERFU0MgTElNSVQgOmxpbWl0IE9GRlNFVCA6b2Zmc2V0Iik7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOmlkX3VzZXInLCAkcSwgUERPOjpQQVJBTV9TVFIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzppZF9vcmRlcicsICRxLCBQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOmxpbWl0JywgJGxpbWl0LCBQRE86OlBBUkFNX0lOVCk7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOm9mZnNldCcsICRvZmZzZXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZSgpOwogICAgICAgICRwYXltZW50ID0gJHN0bXQtPmZldGNoQWxsKFBETzo6RkVUQ0hfQVNTT0MpOwoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAncGF5bWVudHMnID0+ICRwYXltZW50LAogICAgICAgICAgICAncGFnaW5hdGlvbicgPT4gWwogICAgICAgICAgICAgICAgJ3RvdGFsX3JlY29yZCcgPT4gJHRvdGFsX3JlY29yZCwKICAgICAgICAgICAgICAgICd0b3RhbF9wYWdlcycgPT4gJHRvdGFsUGFnZXMsCiAgICAgICAgICAgICAgICAnY3VycmVudF9wYWdlJyA9PiAkcGFnZSwKICAgICAgICAgICAgICAgICdwZXJfcGFnZScgPT4gJGxpbWl0CiAgICAgICAgICAgIF0KICAgICAgICBdKTsKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRGF0YWJhc2UgZXJyb3IgaW4gcGF5bWVudHM6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGF0YWJhc2UgZXJyb3Igb2NjdXJyZWQiLCBbXSwgNTAwKTsKICAgIH0KfQoKZnVuY3Rpb24gcGF5X3BheW1lbnQoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgaWYgKCFpc3NldCgkZGF0YVsnaWRfb3JkZXInXSkgfHwgZW1wdHkoJGRhdGFbJ2lkX29yZGVyJ10pKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImlkX29yZGVyIGVtcHR5IiwgW10pOwogICAgfQoKICAgICRwYXltZW50ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImlkX29yZGVyIiwgJGRhdGFbJ2lkX29yZGVyJ10sICJzZWxlY3QiKTsKICAgIGlmICghJHBheW1lbnQpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAicGF5bWVudCBub3QgZm91bmQiLCBbXSwgMjAwKTsKICAgIH0KICAgIHNlbmRKc29uUmVzcG9uc2UodHJ1ZSwgIlN1Y2Nlc3NmdWwiLCAkcGF5bWVudCwgMjAwKTsKfQoKbWF0Y2ggKCRhY3Rpb24pIHsKICAgICdwYXltZW50cycgPT4gcGF5X3BheW1lbnRzKCRkYXRhLCAkbWV0aG9kKSwKICAgICdwYXltZW50JyA9PiBwYXlfcGF5bWVudCgkZGF0YSwgJG1ldGhvZCksCiAgICBkZWZhdWx0ID0+IHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBY3Rpb24gSW52YWxpZCIpLAp9OwoKCj8+
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+header('Content-Type: application/json');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+$ManagePanel = new ManagePanel();
+
+$setting = select("setting", "*");
+
+list($headers, $data, $action) = apiRequestContext();
+$method = $_SERVER['REQUEST_METHOD'];
+
+function pay_payments(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM Payment_report WHERE id_user LIKE :id_user OR id_order LIKE :id_order");
+        $stmt->execute([':id_user' => $search, ':id_order' => $search]);
+        $total_record = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($total_record / $limit);
+
+        $stmt = $pdo->prepare("SELECT id_order as id,id_user,time,price,payment_status,Payment_Method FROM Payment_report WHERE id_user LIKE CONCAT('%', :id_user, '%') OR id_order LIKE CONCAT('%', :id_order, '%') ORDER BY time DESC LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':id_user', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':id_order', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $payment = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        sendJsonResponse(true, "Successful", [
+            'payments' => $payment,
+            'pagination' => [
+                'total_record' => $total_record,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in payments: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function pay_payment(array $data, string $method): void
+{
+    validateMethod('GET', $method);
+
+    if (!isset($data['id_order']) || empty($data['id_order'])) {
+        sendJsonResponse(false, "id_order empty", []);
+    }
+
+    $payment = select("Payment_report", "*", "id_order", $data['id_order'], "select");
+    if (!$payment) {
+        sendJsonResponse(false, "payment not found", [], 200);
+    }
+    sendJsonResponse(true, "Successful", $payment, 200);
+}
+
+match ($action) {
+    'payments' => pay_payments($data, $method),
+    'payment' => pay_payment($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};
+
+
+?>

@@ -1,1 +1,22 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT50YWJsZUV4aXN0cygnZGVwYXJ0bWFuJykpIHsKICAgICAgICByZXR1cm47CiAgICB9CiAgICAkcmVtb3ZlZCA9ICRwZG8tPmV4ZWMoCiAgICAgICAgJ0RFTEVURSBkdXBfcm93IEZST00gZGVwYXJ0bWFuIGR1cF9yb3cKICAgICAgICAgSk9JTiAoCiAgICAgICAgICAgICBTRUxFQ1QgTUlOKGlkKSBBUyBrZWVwX2lkLCBpZHN1cHBvcnQsIG5hbWVfZGVwYXJ0bWFuCiAgICAgICAgICAgICBGUk9NIGRlcGFydG1hbgogICAgICAgICAgICAgR1JPVVAgQlkgaWRzdXBwb3J0LCBuYW1lX2RlcGFydG1hbgogICAgICAgICAgICAgSEFWSU5HIENPVU5UKCopID4gMQogICAgICAgICApIGtlZXBfcm93CiAgICAgICAgIE9OIGR1cF9yb3cuaWRzdXBwb3J0ID0ga2VlcF9yb3cuaWRzdXBwb3J0CiAgICAgICAgIEFORCBkdXBfcm93Lm5hbWVfZGVwYXJ0bWFuID0ga2VlcF9yb3cubmFtZV9kZXBhcnRtYW4KICAgICAgICAgQU5EIGR1cF9yb3cuaWQgPiBrZWVwX3Jvdy5rZWVwX2lkJwogICAgKTsKICAgIGlmICgkcmVtb3ZlZCkgewogICAgICAgIGVycm9yX2xvZygiW2RiOm1pZ3JhdGlvbjpkZXBhcnRtYW5fZGVkdXBlXSByZW1vdmVkICRyZW1vdmVkIGR1cGxpY2F0ZSBkZXBhcnRtYW4gcm93cyIpOwogICAgfQp9Owo=
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->tableExists('departman')) {
+        return;
+    }
+    $removed = $pdo->exec(
+        'DELETE dup_row FROM departman dup_row
+         JOIN (
+             SELECT MIN(id) AS keep_id, idsupport, name_departman
+             FROM departman
+             GROUP BY idsupport, name_departman
+             HAVING COUNT(*) > 1
+         ) keep_row
+         ON dup_row.idsupport = keep_row.idsupport
+         AND dup_row.name_departman = keep_row.name_departman
+         AND dup_row.id > keep_row.keep_id'
+    );
+    if ($removed) {
+        error_log("[db:migration:departman_dedupe] removed $removed duplicate departman rows");
+    }
+};

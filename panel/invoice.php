@@ -1,1 +1,136 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCiRzZWFyY2ggPSB0cmltKCRfR0VUWydxJ10gPz8gJycpOwoKJHN0YXR1cyA9ICRfR0VUWydzdGF0dXMnXSA/PyAnJzsKJHBhZ2UgPSBtYXgoMSwgKGludCkgKCRfR0VUWydwYWdlJ10gPz8gMSkpOwokcGVyUGFnZSA9IDMwOwokb2Zmc2V0ID0gKCRwYWdlIC0gMSkgKiAkcGVyUGFnZTsKCiR3aGVyZSA9IFtdOwokcGFyYW1zID0gW107CmlmICgkc2VhcmNoICE9PSAnJykgewogICR3aGVyZVtdID0gIihpZF91c2VyIExJS0UgPyBPUiBDT0FMRVNDRShuYW1lX3Byb2R1Y3QsJycpIExJS0UgPyBPUiBDT0FMRVNDRSh1c2VybmFtZSwnJykgTElLRSA/KSI7CiAgJHBhcmFtcyA9IFsiJSRzZWFyY2glIiwgIiUkc2VhcmNoJSIsICIlJHNlYXJjaCUiXTsKfQppZiAoJHN0YXR1cyAhPT0gJycpIHsKCiAgJHdoZXJlW10gPSAiU3RhdHVzID0gPyI7CiAgJHBhcmFtc1tdID0gJHN0YXR1czsKfQokd2hlcmVTUUwgPSAkd2hlcmUgPyAnV0hFUkUgJyAuIGltcGxvZGUoJyBBTkQgJywgJHdoZXJlKSA6ICcnOwoKdHJ5IHsKICAkdG90YWwgPSBkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gaW52b2ljZSAkd2hlcmVTUUwiLCAkcGFyYW1zKTsKICAkaW52b2ljZXMgPSBkYl9mZXRjaEFsbCgkcGRvLCAiU0VMRUNUICogRlJPTSBpbnZvaWNlICR3aGVyZVNRTCBPUkRFUiBCWSB0aW1lX3NlbGwgREVTQyBMSU1JVCAkcGVyUGFnZSBPRkZTRVQgJG9mZnNldCIsICRwYXJhbXMpOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKICAkdG90YWwgPSAwOwogICRpbnZvaWNlcyA9IFtdOwogIGZsYXNoKCdlcnJvcicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZURiRXJyb3InXSAuICRlLT5nZXRNZXNzYWdlKCkpOwp9CiR0b3RhbFBhZ2VzID0gbWF4KDEsIChpbnQpIGNlaWwoJHRvdGFsIC8gJHBlclBhZ2UpKTsKCiRzdGF0dXNNYXAgPSBbCiAgJ2FjdGl2ZScgPT4gWyd0YWctb2snLCAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2ludm9pY2VTdGF0dXNBY3RpdmUnXV0sCiAgJ2VuZF9vZl90aW1lJyA9PiBbJ3RhZy13YXJuJywgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlTm90aWZUaW1lRXhwaXJlJ11dLAogICdlbmRfb2Zfdm9sdW1lJyA9PiBbJ3RhZy1ubycsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZU5vdGlmVm9sdW1lRXhwaXJlJ11dLAogICdzZW5kZWR3YXJuJyA9PiBbJ3RhZy13YXJuJywgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlTm90aWZBbGxTZW50J11dLAogICdzZW5kX29uX2hvbGQnID0+IFsndGFnLXBsYWluJywgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlTm90aWZOb3RDb25uZWN0ZWRTZW50J11dLAogICd1bnBhaWQnID0+IFsndGFnLXBsYWluJywgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlU3RhdHVzVW5wYWlkJ11dLAogICdVbnN1Y2Nlc3NmdWwnID0+IFsndGFnLXBsYWluJywgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlRGF0YUZldGNoRXJyb3InXV0sCl07CgokcGFnZVRpdGxlID0gJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlT3JkZXJzVGl0bGUnXTsKJHBhZ2VMZWRlID0gJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlT3JkZXJzU3VidGl0bGUnXTsKJGFjdGl2ZU5hdiA9ICdpbnZvaWNlJzsKaW5jbHVkZSBfX0RJUl9fIC4gJy9pbmMvbGF5b3V0X2hlYWQucGhwJzsKPz4KCjxkaXYgY2xhc3M9ImNhcmQgZmFkZS11cCI+CiAgPGRpdiBjbGFzcz0idG9vbGJhciI+CiAgICA8ZGl2IGNsYXNzPSJ0b29sYmFyLXRpdGxlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlT3JkZXJzSGVhZGluZyddID8+IDxzbWFsbD4oPD89IG51bWJlcl9mb3JtYXQoJHRvdGFsKSA/Pik8L3NtYWxsPjwvZGl2PgogICAgPGZvcm0gbWV0aG9kPSJHRVQiIGlkPSJpbnZvaWNlRm9ybSIgY2xhc3M9InRvb2xiYXItZW5kIj4KICAgICAgPHNlbGVjdCBuYW1lPSJzdGF0dXMiIGNsYXNzPSJzZWxlY3QiIHN0eWxlPSJ3aWR0aDphdXRvIgogICAgICAgIG9uY2hhbmdlPSJkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnaW52b2ljZUZvcm0nKS5zdWJtaXQoKSI+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlQWxsU3RhdHVzZXMnXSA/Pjwvb3B0aW9uPgogICAgICAgIDw/cGhwIGZvcmVhY2ggKCRzdGF0dXNNYXAgYXMgJGsgPT4gWyRfLCAkbGJsXSk6ID8+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSI8Pz0gJGsgPz4iIDw/PSAkc3RhdHVzID09PSAkayA/ICdzZWxlY3RlZCcgOiAnJyA/Pj48Pz0gJGxibCA/Pjwvb3B0aW9uPgogICAgICAgIDw/cGhwIGVuZGZvcmVhY2g7ID8+CiAgICAgIDwvc2VsZWN0PgogICAgICA8ZGl2IGNsYXNzPSJzZWFyY2gtYm94IiBzdHlsZT0ibWluLXdpZHRoOjI0MHB4Ij4KICAgICAgICA8Pz0gaWNvbignc2VhcmNoJywgMTQpID8+CiAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIG5hbWU9InEiIHBsYWNlaG9sZGVyPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2ludm9pY2VTZWFyY2hPcmRlclBsYWNlaG9sZGVyJ10pID8+IiB2YWx1ZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHNlYXJjaCkgPz4iCiAgICAgICAgICBhdXRvY29tcGxldGU9Im9mZiI+CiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJzZWFyY2gtY2xlYXIiPuKclTwvYnV0dG9uPgogICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0ic2VhcmNoLWJ0biI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZVNlYXJjaEJ0biddID8+PC9idXR0b24+CiAgICAgIDwvZGl2PgogICAgICA8P3BocCBpZiAoJHNlYXJjaCB8fCAkc3RhdHVzKTogPz4KICAgICAgICA8YSBocmVmPSJpbnZvaWNlLnBocCIgY2xhc3M9ImJ0bi1saW5rIiBzdHlsZT0iZm9udC1zaXplOi43OHJlbSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNsZWFyQnRuJ10gPz48L2E+CiAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgPC9mb3JtPgogIDwvZGl2PgoKICA8ZGl2IGNsYXNzPSJ0Ymwtd3JhcCI+CiAgICA8dGFibGUgY2xhc3M9InRibC1tZCI+CiAgICAgIDx0aGVhZD4KICAgICAgICA8dHI+CiAgICAgICAgICA8dGg+IzwvdGg+CiAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFVzZXInXSA/PjwvdGg+CiAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFByb2R1Y3QnXSA/PjwvdGg+CiAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFByaWNlJ10gPz48L3RoPgogICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2ludm9pY2VDb2xTdGF0dXMnXSA/PjwvdGg+CiAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbERhdGUnXSA/PjwvdGg+CiAgICAgICAgPC90cj4KICAgICAgPC90aGVhZD4KICAgICAgPHRib2R5PgogICAgICAgIDw/cGhwIGlmIChlbXB0eSgkaW52b2ljZXMpKTogPz4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRkIGNvbHNwYW49IjYiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImVtcHR5Ij4KICAgICAgICAgICAgICAgIDxzdmcgY2xhc3M9ImlsbCIgdmlld0JveD0iMCAwIDE2MCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjMwIiB5PSIxNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgcng9IjgiIGZpbGw9InZhcigtLXNmMykiIC8+CiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjQ1IiB5PSIzNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJ2YXIoLS1iZHMpIiAvPgogICAgICAgICAgICAgICAgICA8cmVjdCB4PSI0NSIgeT0iNTIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0idmFyKC0tYmQpIiAvPgogICAgICAgICAgICAgICAgICA8cmVjdCB4PSI0NSIgeT0iNjYiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0idmFyKC0tYmQpIiAvPgogICAgICAgICAgICAgICAgICA8cmVjdCB4PSI0NSIgeT0iODAiIHdpZHRoPSIzNSIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0idmFyKC0tYmQpIiAvPgogICAgICAgICAgICAgICAgPC9zdmc+CiAgICAgICAgICAgICAgICA8cD48Pz0gJHNlYXJjaCA/ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZU5vT3JkZXJGb3VuZCddIDogJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlTm9PcmRlcllldCddID8+PC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICA8P3BocCBlbHNlOgogICAgICAgICAgJGkgPSAkb2Zmc2V0ICsgMTsKICAgICAgICAgIGZvcmVhY2ggKCRpbnZvaWNlcyBhcyAkaW52KToKICAgICAgICAgICAgJHN0ID0gJGludlsnU3RhdHVzJ10gPz8gJyc7CiAgICAgICAgICAgIFskY2xzLCAkbGJsXSA9ICRzdGF0dXNNYXBbJHN0XSA/PyBbJ3RhZy1wbGFpbicsICRzdCA/OiAn4oCUJ107CiAgICAgICAgICAgID8+CiAgICAgICAgICAgIDx0cj4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNmIj48Pz0gJGkrKyA/PjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJGludlsnaWRfdXNlciddID8/ICfigJQnKSA/PjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjcyI+PD89IGh0bWxzcGVjaWFsY2hhcnModHJ1bmMoJGludlsnbmFtZV9wcm9kdWN0J10gPz8gJ+KAlCcsIDI4KSkgPz48L3RkPgogICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY24gY3MiPjw/PSBudW1iZXJfZm9ybWF0KChpbnQpICgkaW52WydwcmljZV9wcm9kdWN0J10gPz8gMCkpID8+IDxzcGFuIGNsYXNzPSJjZiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFRyYWNraW5nQ29kZSddID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjZiI+PD89IHNhZmVfZGF0ZSgkaW52Wyd0aW1lX3NlbGwnXSA/PyBudWxsLCAnWS9tL2QnKSA/PjwvdGQ+CiAgICAgICAgICAgICAgPHRkPjxzcGFuIGNsYXNzPSJ0YWcgPD89ICRjbHMgPz4iPjw/PSAkbGJsID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyBlbmRpZjsgPz4KICAgICAgPC90Ym9keT4KICAgIDwvdGFibGU+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9InRibC1mb290Ij4KICAgIDxzcGFuPjw/PSBudW1iZXJfZm9ybWF0KCR0b3RhbCkgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFNlcnZpY2UnXSA/PiA8Pz0gJHBhZ2UgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnaW52b2ljZUNvbFBhbmVsJ10gPz4gPD89ICR0b3RhbFBhZ2VzID8+PC9zcGFuPgogICAgPGRpdiBjbGFzcz0icGFnZXIiPgogICAgICA8P3BocCAkcXMgPSBmbigkcCkgPT4gJz9xPScgLiB1cmxlbmNvZGUoJHNlYXJjaCkgLiAnJnN0YXR1cz0nIC4gdXJsZW5jb2RlKCRzdGF0dXMpIC4gJyZwYWdlPScgLiAkcDsgPz4KICAgICAgPGEgY2xhc3M9Ijw/PSAkcGFnZSA8PSAxID8gJ2RpcycgOiAnJyA/PiIgaHJlZj0iPD89ICRxcyhtYXgoMSwgJHBhZ2UgLSAxKSkgPz4iPuKAuTwvYT4KICAgICAgPD9waHAgZm9yICgkcCA9IG1heCgxLCAkcGFnZSAtIDIpOyAkcCA8PSBtaW4oJHRvdGFsUGFnZXMsICRwYWdlICsgMik7ICRwKyspOiA/PgogICAgICAgIDxhIGNsYXNzPSI8Pz0gJHAgPT09ICRwYWdlID8gJ2N1cicgOiAnJyA/PiIgaHJlZj0iPD89ICRxcygkcCkgPz4iPjw/PSAkcCA/PjwvYT4KICAgICAgPD9waHAgZW5kZm9yOyA/PgogICAgICA8YSBjbGFzcz0iPD89ICRwYWdlID49ICR0b3RhbFBhZ2VzID8gJ2RpcycgOiAnJyA/PiIgaHJlZj0iPD89ICRxcyhtaW4oJHRvdGFsUGFnZXMsICRwYWdlICsgMSkpID8+Ij7igLo8L2E+CiAgICA8L2Rpdj4KICA8L2Rpdj4KPC9kaXY+Cgo8P3BocCBpbmNsdWRlIF9fRElSX18gLiAnL2luYy9sYXlvdXRfZm9vdC5waHAnOyA/Pg==
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+$search = trim($_GET['q'] ?? '');
+
+$status = $_GET['status'] ?? '';
+$page = max(1, (int) ($_GET['page'] ?? 1));
+$perPage = 30;
+$offset = ($page - 1) * $perPage;
+
+$where = [];
+$params = [];
+if ($search !== '') {
+  $where[] = "(id_user LIKE ? OR COALESCE(name_product,'') LIKE ? OR COALESCE(username,'') LIKE ?)";
+  $params = ["%$search%", "%$search%", "%$search%"];
+}
+if ($status !== '') {
+
+  $where[] = "Status = ?";
+  $params[] = $status;
+}
+$whereSQL = $where ? 'WHERE ' . implode(' AND ', $where) : '';
+
+try {
+  $total = db_count($pdo, "SELECT COUNT(*) FROM invoice $whereSQL", $params);
+  $invoices = db_fetchAll($pdo, "SELECT * FROM invoice $whereSQL ORDER BY time_sell DESC LIMIT $perPage OFFSET $offset", $params);
+} catch (Exception $e) {
+  $total = 0;
+  $invoices = [];
+  flash('error', $textbotlang['panel']['invoiceDbError'] . $e->getMessage());
+}
+$totalPages = max(1, (int) ceil($total / $perPage));
+
+$statusMap = [
+  'active' => ['tag-ok', $textbotlang['panel']['invoiceStatusActive']],
+  'end_of_time' => ['tag-warn', $textbotlang['panel']['invoiceNotifTimeExpire']],
+  'end_of_volume' => ['tag-no', $textbotlang['panel']['invoiceNotifVolumeExpire']],
+  'sendedwarn' => ['tag-warn', $textbotlang['panel']['invoiceNotifAllSent']],
+  'send_on_hold' => ['tag-plain', $textbotlang['panel']['invoiceNotifNotConnectedSent']],
+  'unpaid' => ['tag-plain', $textbotlang['panel']['invoiceStatusUnpaid']],
+  'Unsuccessful' => ['tag-plain', $textbotlang['panel']['invoiceDataFetchError']],
+];
+
+$pageTitle = $textbotlang['panel']['invoiceOrdersTitle'];
+$pageLede = $textbotlang['panel']['invoiceOrdersSubtitle'];
+$activeNav = 'invoice';
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div class="card fade-up">
+  <div class="toolbar">
+    <div class="toolbar-title"><?= $textbotlang['panel']['invoiceOrdersHeading'] ?> <small>(<?= number_format($total) ?>)</small></div>
+    <form method="GET" id="invoiceForm" class="toolbar-end">
+      <select name="status" class="select" style="width:auto"
+        onchange="document.getElementById('invoiceForm').submit()">
+        <option value=""><?= $textbotlang['panel']['invoiceAllStatuses'] ?></option>
+        <?php foreach ($statusMap as $k => [$_, $lbl]): ?>
+          <option value="<?= $k ?>" <?= $status === $k ? 'selected' : '' ?>><?= $lbl ?></option>
+        <?php endforeach; ?>
+      </select>
+      <div class="search-box" style="min-width:240px">
+        <?= icon('search', 14) ?>
+        <input type="text" name="q" placeholder="<?= htmlspecialchars($textbotlang['panel']['invoiceSearchOrderPlaceholder']) ?>" value="<?= htmlspecialchars($search) ?>"
+          autocomplete="off">
+        <button type="button" class="search-clear">✕</button>
+        <button type="submit" class="search-btn"><?= $textbotlang['panel']['invoiceSearchBtn'] ?></button>
+      </div>
+      <?php if ($search || $status): ?>
+        <a href="invoice.php" class="btn-link" style="font-size:.78rem"><?= $textbotlang['panel']['invoiceClearBtn'] ?></a>
+      <?php endif; ?>
+    </form>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="tbl-md">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><?= $textbotlang['panel']['invoiceColUser'] ?></th>
+          <th><?= $textbotlang['panel']['invoiceColProduct'] ?></th>
+          <th><?= $textbotlang['panel']['invoiceColPrice'] ?></th>
+          <th><?= $textbotlang['panel']['invoiceColStatus'] ?></th>
+          <th><?= $textbotlang['panel']['invoiceColDate'] ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php if (empty($invoices)): ?>
+          <tr>
+            <td colspan="6">
+              <div class="empty">
+                <svg class="ill" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="15" width="100" height="90" rx="8" fill="var(--sf3)" />
+                  <rect x="45" y="35" width="70" height="8" rx="4" fill="var(--bds)" />
+                  <rect x="45" y="52" width="50" height="6" rx="3" fill="var(--bd)" />
+                  <rect x="45" y="66" width="60" height="6" rx="3" fill="var(--bd)" />
+                  <rect x="45" y="80" width="35" height="6" rx="3" fill="var(--bd)" />
+                </svg>
+                <p><?= $search ? $textbotlang['panel']['invoiceNoOrderFound'] : $textbotlang['panel']['invoiceNoOrderYet'] ?></p>
+              </div>
+            </td>
+          </tr>
+        <?php else:
+          $i = $offset + 1;
+          foreach ($invoices as $inv):
+            $st = $inv['Status'] ?? '';
+            [$cls, $lbl] = $statusMap[$st] ?? ['tag-plain', $st ?: '—'];
+            ?>
+            <tr>
+              <td class="cf"><?= $i++ ?></td>
+              <td class="cm"><?= htmlspecialchars($inv['id_user'] ?? '—') ?></td>
+              <td class="cs"><?= htmlspecialchars(trunc($inv['name_product'] ?? '—', 28)) ?></td>
+              <td class="cn cs"><?= number_format((int) ($inv['price_product'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['invoiceColTrackingCode'] ?></span></td>
+              <td class="cf"><?= safe_date($inv['time_sell'] ?? null, 'Y/m/d') ?></td>
+              <td><span class="tag <?= $cls ?>"><?= $lbl ?></span></td>
+            </tr>
+          <?php endforeach; endif; ?>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-foot">
+    <span><?= number_format($total) ?> <?= $textbotlang['panel']['invoiceColService'] ?> <?= $page ?> <?= $textbotlang['panel']['invoiceColPanel'] ?> <?= $totalPages ?></span>
+    <div class="pager">
+      <?php $qs = fn($p) => '?q=' . urlencode($search) . '&status=' . urlencode($status) . '&page=' . $p; ?>
+      <a class="<?= $page <= 1 ? 'dis' : '' ?>" href="<?= $qs(max(1, $page - 1)) ?>">‹</a>
+      <?php for ($p = max(1, $page - 2); $p <= min($totalPages, $page + 2); $p++): ?>
+        <a class="<?= $p === $page ? 'cur' : '' ?>" href="<?= $qs($p) ?>"><?= $p ?></a>
+      <?php endfor; ?>
+      <a class="<?= $page >= $totalPages ? 'dis' : '' ?>" href="<?= $qs(min($totalPages, $page + 1)) ?>">›</a>
+    </div>
+  </div>
+</div>
+
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

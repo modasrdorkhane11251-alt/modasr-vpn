@@ -1,1 +1,34 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgaWYgKCEkc2NoZW1hLT5oYXNDb2x1bW4oJ3NldHRpbmcnLCAnc3RhdHVzYWdlbnRyZXF1ZXN0JykpIHsKICAgICAgICByZXR1cm47CiAgICB9CiAgICAkcm93ID0gJHBkby0+cXVlcnkoIlNFTEVDVCBrZXlib2FyZG1haW4sIHN0YXR1c2FnZW50cmVxdWVzdCBGUk9NIGBzZXR0aW5nYCBMSU1JVCAxIiktPmZldGNoKFBETzo6RkVUQ0hfQVNTT0MpOwogICAgaWYgKCRyb3cpIHsKICAgICAgICAkbGF5b3V0ID0ganNvbl9kZWNvZGUoJHJvd1sna2V5Ym9hcmRtYWluJ10gPz8gJycsIHRydWUpOwogICAgICAgIGlmIChpc19hcnJheSgkbGF5b3V0KSAmJiBpc3NldCgkbGF5b3V0WydrZXlib2FyZCddKSAmJiBpc19hcnJheSgkbGF5b3V0WydrZXlib2FyZCddKSkgewogICAgICAgICAgICAkcGxhY2VkID0gW107CiAgICAgICAgICAgIGZvcmVhY2ggKCRsYXlvdXRbJ2tleWJvYXJkJ10gYXMgJGtiUm93KSB7CiAgICAgICAgICAgICAgICBmb3JlYWNoICgoYXJyYXkpICRrYlJvdyBhcyAkYnV0dG9uKSB7CiAgICAgICAgICAgICAgICAgICAgaWYgKGlzX2FycmF5KCRidXR0b24pICYmIGlzc2V0KCRidXR0b25bJ3RleHQnXSkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgJHBsYWNlZFtdID0gJGJ1dHRvblsndGV4dCddOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAkbmV3Um93ID0gW107CiAgICAgICAgICAgIGlmICghaW5fYXJyYXkoJ3RleHRfYWdlbnRwYW5lbCcsICRwbGFjZWQsIHRydWUpKSB7CiAgICAgICAgICAgICAgICAkbmV3Um93W10gPSBbJ3RleHQnID0+ICd0ZXh0X2FnZW50cGFuZWwnXTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoJHJvd1snc3RhdHVzYWdlbnRyZXF1ZXN0J10gIT09ICdvZmZyZXF1ZXN0YWdlbnQnICYmICFpbl9hcnJheSgndGV4dF9yZXF1ZXN0YWdlbnQnLCAkcGxhY2VkLCB0cnVlKSkgewogICAgICAgICAgICAgICAgJG5ld1Jvd1tdID0gWyd0ZXh0JyA9PiAndGV4dF9yZXF1ZXN0YWdlbnQnXTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoJG5ld1JvdykgewogICAgICAgICAgICAgICAgJGxheW91dFsna2V5Ym9hcmQnXVtdID0gJG5ld1JvdzsKICAgICAgICAgICAgICAgICRzdGF0ZW1lbnQgPSAkcGRvLT5wcmVwYXJlKCJVUERBVEUgYHNldHRpbmdgIFNFVCBrZXlib2FyZG1haW4gPSA/Iik7CiAgICAgICAgICAgICAgICAkc3RhdGVtZW50LT5leGVjdXRlKFtqc29uX2VuY29kZSgkbGF5b3V0LCBKU09OX1VORVNDQVBFRF9VTklDT0RFKV0pOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgJHNjaGVtYS0+ZHJvcENvbHVtbignc2V0dGluZycsICdzdGF0dXNhZ2VudHJlcXVlc3QnKTsKfTsK
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    if (!$schema->hasColumn('setting', 'statusagentrequest')) {
+        return;
+    }
+    $row = $pdo->query("SELECT keyboardmain, statusagentrequest FROM `setting` LIMIT 1")->fetch(PDO::FETCH_ASSOC);
+    if ($row) {
+        $layout = json_decode($row['keyboardmain'] ?? '', true);
+        if (is_array($layout) && isset($layout['keyboard']) && is_array($layout['keyboard'])) {
+            $placed = [];
+            foreach ($layout['keyboard'] as $kbRow) {
+                foreach ((array) $kbRow as $button) {
+                    if (is_array($button) && isset($button['text'])) {
+                        $placed[] = $button['text'];
+                    }
+                }
+            }
+            $newRow = [];
+            if (!in_array('text_agentpanel', $placed, true)) {
+                $newRow[] = ['text' => 'text_agentpanel'];
+            }
+            if ($row['statusagentrequest'] !== 'offrequestagent' && !in_array('text_requestagent', $placed, true)) {
+                $newRow[] = ['text' => 'text_requestagent'];
+            }
+            if ($newRow) {
+                $layout['keyboard'][] = $newRow;
+                $statement = $pdo->prepare("UPDATE `setting` SET keyboardmain = ?");
+                $statement->execute([json_encode($layout, JSON_UNESCAPED_UNICODE)]);
+            }
+        }
+    }
+    $schema->dropColumn('setting', 'statusagentrequest');
+};

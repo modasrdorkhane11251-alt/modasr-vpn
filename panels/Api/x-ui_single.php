@@ -1,1 +1,149 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vLi4vcmVxdWVzdC5waHAnOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgpmdW5jdGlvbiBnZXRfY2xpbmV0cygkdXNlcm5hbWUsICRwYW5lbCkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAiL3BhbmVsL2FwaS9jbGllbnRzL2dldC8kdXNlcm5hbWUiOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJywKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+Z2V0KCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIGFkZENsaWVudCgkcGFuZWwsICR1c2VybmFtZWFjLCAkRXhwaXJlLCAkc3ViSWQsICRUb3RhbCwgJGluYm91bmRpZCwgJG5hbWVfcHJvZHVjdCwgJG5vdGUgPSAiIikKewogICAgaWYgKCRuYW1lX3Byb2R1Y3QgPT0gInVzZXJ0ZXN0IikgewogICAgICAgIGlmICgkcGFuZWxbJ29uX2hvbGRfdGVzdCddID09ICIxIikgewogICAgICAgICAgICBpZiAoJEV4cGlyZSA9PSAwKSB7CiAgICAgICAgICAgICAgICAkdGltZXNlcnZpY2UgPSAwOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgJHRpbWVsYXN0ID0gJEV4cGlyZSAtIHRpbWUoKTsKICAgICAgICAgICAgICAgICR0aW1lc2VydmljZSA9IC1pbnR2YWwoKCR0aW1lbGFzdCAvIDg2NDAwKSAqIDg2NDAwMDAwKTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICR0aW1lc2VydmljZSA9ICRFeHBpcmUgKiAxMDAwOwogICAgICAgIH0KICAgIH0gZWxzZSB7CiAgICAgICAgaWYgKCRwYW5lbFsnY29uZWN0b24nXSA9PSAib25jb25lY3RvbiIpIHsKICAgICAgICAgICAgaWYgKCRFeHBpcmUgPT0gMCkgewogICAgICAgICAgICAgICAgJHRpbWVzZXJ2aWNlID0gMDsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICR0aW1lbGFzdCA9ICRFeHBpcmUgLSB0aW1lKCk7CiAgICAgICAgICAgICAgICAkdGltZXNlcnZpY2UgPSAtaW50dmFsKCgkdGltZWxhc3QgLyA4NjQwMCkgKiA4NjQwMDAwMCk7CiAgICAgICAgICAgIH0KICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAkdGltZXNlcnZpY2UgPSAkRXhwaXJlICogMTAwMDsKICAgICAgICB9CiAgICB9CiAgICAkZGF0YSA9IFsKICAgICAgICAiZW1haWwiID0+ICR1c2VybmFtZWFjLAogICAgICAgICJ0b3RhbEdCIiA9PiAkVG90YWwsCiAgICAgICAgImV4cGlyeVRpbWUiID0+ICR0aW1lc2VydmljZSwKICAgICAgICAidGdJZCIgPT4gMCwKICAgICAgICAiY29tbWVudCIgPT4gJG5vdGUsCiAgICAgICAgImVuYWJsZSIgPT4gdHJ1ZSwKICAgICAgICAic3ViSWQiID0+ICRzdWJJZAogICAgXTsKICAgICRjb25maWcgPSBhcnJheSgKICAgICAgICAiaW5ib3VuZElkcyIgPT4ganNvbl9kZWNvZGUoJGluYm91bmRpZCwgdHJ1ZSksCiAgICAgICAgJ2NsaWVudCcgPT4gJGRhdGEKICAgICk7CiAgICAkY29uZmlncGFuZWwgPSBqc29uX2VuY29kZSgkY29uZmlnLCB0cnVlKTsKICAgICR1cmwgPSAkcGFuZWxbJ3VybF9wYW5lbCddIC4gJy9wYW5lbC9hcGkvY2xpZW50cy9hZGQnOwogICAgJGhlYWRlcnMgPSBhcnJheSgKICAgICAgICAnQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJywKICAgICk7CiAgICAkcmVxID0gbmV3IEN1cmxSZXF1ZXN0KCR1cmwpOwogICAgJHJlcS0+c2V0SGVhZGVycygkaGVhZGVycyk7CiAgICAkcmVxLT5zZXRCZWFyZXJUb2tlbigkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ10pOwogICAgJHJlc3BvbnNlID0gJHJlcS0+cG9zdCgkY29uZmlncGFuZWwpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiB1cGRhdGVDbGllbnQoJHBhbmVsLCAkdXVpZCwgYXJyYXkgJGNvbmZpZykKewoKICAgICRjb25maWdwYW5lbCA9IGpzb25fZW5jb2RlKCRjb25maWcsIHRydWUpOwogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAnL3BhbmVsL2FwaS9jbGllbnRzL3VwZGF0ZS8nIC4gJHV1aWQ7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KCRjb25maWdwYW5lbCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIFJlc2V0VXNlckRhdGFVc2FnZXhfdWlzaW4oJHVzZXJuYW1lcGFuZWwsICRwYW5lbCkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAiL3BhbmVsL2FwaS9jbGllbnRzL3Jlc2V0VHJhZmZpYy8iIC4gJHVzZXJuYW1lcGFuZWw7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KGFycmF5KCkpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiByZW1vdmVDbGllbnQoJHBhbmVsLCAkdXNlcm5hbWUpCnsKICAgICR1cmwgPSAkcGFuZWxbJ3VybF9wYW5lbCddIC4gIi9wYW5lbC9hcGkvY2xpZW50cy9kZWwvIiAuICR1c2VybmFtZTsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJHBhbmVsWydwYXNzd29yZF9wYW5lbCddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPnBvc3QoYXJyYXkoKSk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIHN0YXR1c19zZXJ2ZXJfeHVpKCRwYW5lbCkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAiL3BhbmVsL2FwaS9zZXJ2ZXIvc3RhdHVzIjsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJHBhbmVsWydwYXNzd29yZF9wYW5lbCddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBhdHRhY2hfc2VydmljZSgkcGFuZWwsICR1c2VybmFtZSwgJGNvbmZpZ3BhbmVsKQp7CiAgICAkdXJsID0gJHBhbmVsWyd1cmxfcGFuZWwnXSAuICIvcGFuZWwvYXBpL2NsaWVudHMvJHVzZXJuYW1lL2F0dGFjaCI7CiAgICAkaGVhZGVycyA9IGFycmF5KAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgKTsKICAgICRyZXEgPSBuZXcgQ3VybFJlcXVlc3QoJHVybCk7CiAgICAkcmVxLT5zZXRIZWFkZXJzKCRoZWFkZXJzKTsKICAgICRyZXEtPnNldEJlYXJlclRva2VuKCRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSk7CiAgICAkcmVzcG9uc2UgPSAkcmVxLT5wb3N0KCRjb25maWdwYW5lbCk7CiAgICByZXR1cm4gJHJlc3BvbnNlOwp9CgpmdW5jdGlvbiB1c2VkX2RhdGFfM3h1aSgkcGFuZWwsICR1c2VybmFtZSkKewogICAgJHVybCA9ICRwYW5lbFsndXJsX3BhbmVsJ10gLiAiL3BhbmVsL2FwaS9jbGllbnRzL3RyYWZmaWMvJHVzZXJuYW1lIjsKICAgICRoZWFkZXJzID0gYXJyYXkoCiAgICAgICAgJ0FjY2VwdDogYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicsCiAgICApOwogICAgJHJlcSA9IG5ldyBDdXJsUmVxdWVzdCgkdXJsKTsKICAgICRyZXEtPnNldEhlYWRlcnMoJGhlYWRlcnMpOwogICAgJHJlcS0+c2V0QmVhcmVyVG9rZW4oJHBhbmVsWydwYXNzd29yZF9wYW5lbCddKTsKICAgICRyZXNwb25zZSA9ICRyZXEtPmdldCgpOwogICAgcmV0dXJuICRyZXNwb25zZTsKfQ==
+<?php
+require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../request.php';
+ini_set('error_log', 'error_log');
+
+function get_clinets($username, $panel)
+{
+    $url = $panel['url_panel'] . "/panel/api/clients/get/$username";
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->get();
+    return $response;
+}
+function addClient($panel, $usernameac, $Expire, $subId, $Total, $inboundid, $name_product, $note = "")
+{
+    if ($name_product == "usertest") {
+        if ($panel['on_hold_test'] == "1") {
+            if ($Expire == 0) {
+                $timeservice = 0;
+            } else {
+                $timelast = $Expire - time();
+                $timeservice = -intval(($timelast / 86400) * 86400000);
+            }
+        } else {
+            $timeservice = $Expire * 1000;
+        }
+    } else {
+        if ($panel['conecton'] == "onconecton") {
+            if ($Expire == 0) {
+                $timeservice = 0;
+            } else {
+                $timelast = $Expire - time();
+                $timeservice = -intval(($timelast / 86400) * 86400000);
+            }
+        } else {
+            $timeservice = $Expire * 1000;
+        }
+    }
+    $data = [
+        "email" => $usernameac,
+        "totalGB" => $Total,
+        "expiryTime" => $timeservice,
+        "tgId" => 0,
+        "comment" => $note,
+        "enable" => true,
+        "subId" => $subId
+    ];
+    $config = array(
+        "inboundIds" => json_decode($inboundid, true),
+        'client' => $data
+    );
+    $configpanel = json_encode($config, true);
+    $url = $panel['url_panel'] . '/panel/api/clients/add';
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post($configpanel);
+    return $response;
+}
+function updateClient($panel, $uuid, array $config)
+{
+
+    $configpanel = json_encode($config, true);
+    $url = $panel['url_panel'] . '/panel/api/clients/update/' . $uuid;
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post($configpanel);
+    return $response;
+}
+function ResetUserDataUsagex_uisin($usernamepanel, $panel)
+{
+    $url = $panel['url_panel'] . "/panel/api/clients/resetTraffic/" . $usernamepanel;
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post(array());
+    return $response;
+}
+function removeClient($panel, $username)
+{
+    $url = $panel['url_panel'] . "/panel/api/clients/del/" . $username;
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post(array());
+    return $response;
+}
+function status_server_xui($panel)
+{
+    $url = $panel['url_panel'] . "/panel/api/server/status";
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->get();
+    return $response;
+}
+function attach_service($panel, $username, $configpanel)
+{
+    $url = $panel['url_panel'] . "/panel/api/clients/$username/attach";
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->post($configpanel);
+    return $response;
+}
+
+function used_data_3xui($panel, $username)
+{
+    $url = $panel['url_panel'] . "/panel/api/clients/traffic/$username";
+    $headers = array(
+        'Accept: application/json',
+        'Content-Type: application/json',
+    );
+    $req = new CurlRequest($url);
+    $req->setHeaders($headers);
+    $req->setBearerToken($panel['password_panel']);
+    $response = $req->get();
+    return $response;
+}

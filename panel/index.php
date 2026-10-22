@@ -1,1 +1,288 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCiR0b3RhbFVzZXJzID0gMDsKJG5ld1RvZGF5ID0gMDsKJHRvdGFsUmV2ZW51ZSA9IDA7CiRhY3RpdmVOb3cgPSAwOwokcGVuZGluZ1BheSA9IDA7CiR0eFRvZGF5ID0gMDsKCnRyeSB7CiAgICAkdG90YWxVc2VycyA9IGRiX2NvdW50KCRwZG8sICJTRUxFQ1QgQ09VTlQoKikgRlJPTSB1c2VyIik7CiAgICAkbmV3VG9kYXkgPSBkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gdXNlciBXSEVSRSBDQVNUKHJlZ2lzdGVyIEFTIFVOU0lHTkVEKSA+PSA/IiwgW3N0cnRvdGltZSgndG9kYXknKV0pOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKfQoKdHJ5IHsKICAgICR0b3RhbFJldmVudWUgPSAoaW50KSBkYl9xdWVyeSgkcGRvLCAiU0VMRUNUIENPQUxFU0NFKFNVTShwcmljZV9wcm9kdWN0KSwwKSBGUk9NIGludm9pY2UgV0hFUkUgU3RhdHVzIElOICgnYWN0aXZlJywnZW5kX29mX3RpbWUnLCdlbmRfb2Zfdm9sdW1lJywnc2VuZGVkd2FybicsJ3NlbmRfb25faG9sZCcpIiktPmZldGNoQ29sdW1uKCk7CiAgICAkYWN0aXZlTm93ID0gZGJfY291bnQoJHBkbywgIlNFTEVDVCBDT1VOVCgqKSBGUk9NIGludm9pY2UgV0hFUkUgU3RhdHVzPSdhY3RpdmUnIik7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewp9Cgp0cnkgewogICAgJHBlbmRpbmdQYXkgPSBkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gUGF5bWVudF9yZXBvcnQgV0hFUkUgcGF5bWVudF9TdGF0dXM9J3dhaXRpbmcnIik7CiAgICAkdHhUb2RheSA9IGRiX2NvdW50KCRwZG8sICJTRUxFQ1QgQ09VTlQoKikgRlJPTSBQYXltZW50X3JlcG9ydCBXSEVSRSB0aW1lIExJS0UgPyIsIFtkYXRlKCdZL20vZCcpIC4gJyUnXSk7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewp9CgokY2hhcnRSYW5nZXMgPSBbCiAgICAndG9kYXknID0+IFtzdHJ0b3RpbWUoJ3RvZGF5JyksIDI0LCAnaG91cicsICdZLW0tZCBIJywgJ0g6MDAnXSwKICAgICd3ZWVrJyA9PiBbc3RydG90aW1lKCd0b2RheSAtNiBkYXlzJyksIDcsICdkYXknLCAnWS1tLWQnLCAnbS1kJ10sCiAgICAnbW9udGgnID0+IFtzdHJ0b3RpbWUoJ3RvZGF5IC0yOSBkYXlzJyksIDMwLCAnZGF5JywgJ1ktbS1kJywgJ20tZCddLAogICAgJ3F1YXJ0ZXInID0+IFtzdHJ0b3RpbWUoJ3RvZGF5IC04OSBkYXlzJyksIDkwLCAnZGF5JywgJ1ktbS1kJywgJ20tZCddLAogICAgJ3llYXInID0+IFtzdHJ0b3RpbWUoZGF0ZSgnWS1tLTAxJykgLiAnIC0xMSBtb250aHMnKSwgMTIsICdtb250aCcsICdZLW0nLCAnWS1tJ10sCl07CiRjaGFydFJhbmdlID0gaXNzZXQoJGNoYXJ0UmFuZ2VzWyRfR0VUWydyYW5nZSddID8/ICcnXSkgPyAkX0dFVFsncmFuZ2UnXSA6ICdtb250aCc7ClskY2hhcnRTdGFydCwgJGNoYXJ0Q291bnQsICRjaGFydFN0ZXAsICRjaGFydEtleSwgJGNoYXJ0TGFiZWxdID0gJGNoYXJ0UmFuZ2VzWyRjaGFydFJhbmdlXTsKJGNoYXJ0QnVja2V0cyA9IFtdOwokY2hhcnRMYWJlbHMgPSBbXTsKZm9yICgkc2xvdCA9IDA7ICRzbG90IDwgJGNoYXJ0Q291bnQ7ICRzbG90KyspIHsKICAgICRzbG90VGltZSA9IHN0cnRvdGltZSgiKyRzbG90ICRjaGFydFN0ZXAiLCAkY2hhcnRTdGFydCk7CiAgICAkY2hhcnRCdWNrZXRzW2RhdGUoJGNoYXJ0S2V5LCAkc2xvdFRpbWUpXSA9IDA7CiAgICAkY2hhcnRMYWJlbHNbZGF0ZSgkY2hhcnRLZXksICRzbG90VGltZSldID0gZGF0ZSgkY2hhcnRMYWJlbCwgJHNsb3RUaW1lKTsKfQokc2FsZXNBbW91bnQgPSAkc2FsZXNDb3VudCA9ICRwYXltZW50QW1vdW50ID0gJG5ld1VzZXJzID0gJGNoYXJ0QnVja2V0czsKdHJ5IHsKICAgICRyb3dzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCB0aW1lX3NlbGwsIHByaWNlX3Byb2R1Y3QgRlJPTSBpbnZvaWNlIFdIRVJFIENBU1QodGltZV9zZWxsIEFTIFVOU0lHTkVEKSA+PSA/IEFORCBTdGF0dXMgSU4gKCdhY3RpdmUnLCdlbmRfb2ZfdGltZScsJ2VuZF9vZl92b2x1bWUnLCdzZW5kZWR3YXJuJywnc2VuZF9vbl9ob2xkJykgQU5EIG5hbWVfcHJvZHVjdCAhPSA/IiwgWyRjaGFydFN0YXJ0LCAkdGV4dGJvdGxhbmdbJ2NvbW1vbiddWydsYWJlbHMnXVsndGVzdFNlcnZpY2VOYW1lJ11dKTsKICAgIGZvcmVhY2ggKCRyb3dzIGFzICRyb3cpIHsKICAgICAgICAkc2xvdCA9IGRhdGUoJGNoYXJ0S2V5LCAoaW50KSAkcm93Wyd0aW1lX3NlbGwnXSk7CiAgICAgICAgaWYgKGlzc2V0KCRzYWxlc0NvdW50WyRzbG90XSkpIHsKICAgICAgICAgICAgJHNhbGVzQ291bnRbJHNsb3RdKys7CiAgICAgICAgICAgICRzYWxlc0Ftb3VudFskc2xvdF0gKz0gKGludCkgJHJvd1sncHJpY2VfcHJvZHVjdCddOwogICAgICAgIH0KICAgIH0KICAgICRyb3dzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCB0aW1lLCBwcmljZSBGUk9NIFBheW1lbnRfcmVwb3J0IFdIRVJFIHBheW1lbnRfU3RhdHVzID0gJ3BhaWQnIEFORCB0aW1lID49ID8iLCBbZGF0ZSgnWS9tL2QgSDppOnMnLCAkY2hhcnRTdGFydCldKTsKICAgIGZvcmVhY2ggKCRyb3dzIGFzICRyb3cpIHsKICAgICAgICAkcGFpZEF0ID0gc3RydG90aW1lKChzdHJpbmcpICRyb3dbJ3RpbWUnXSk7CiAgICAgICAgJHNsb3QgPSAkcGFpZEF0ID8gZGF0ZSgkY2hhcnRLZXksICRwYWlkQXQpIDogbnVsbDsKICAgICAgICBpZiAoaXNzZXQoJHBheW1lbnRBbW91bnRbJHNsb3RdKSkgewogICAgICAgICAgICAkcGF5bWVudEFtb3VudFskc2xvdF0gKz0gKGludCkgJHJvd1sncHJpY2UnXTsKICAgICAgICB9CiAgICB9CiAgICAkcm93cyA9IGRiX2ZldGNoQWxsKCRwZG8sICJTRUxFQ1QgcmVnaXN0ZXIgRlJPTSB1c2VyIFdIRVJFIENBU1QocmVnaXN0ZXIgQVMgVU5TSUdORUQpID49ID8iLCBbJGNoYXJ0U3RhcnRdKTsKICAgIGZvcmVhY2ggKCRyb3dzIGFzICRyb3cpIHsKICAgICAgICAkc2xvdCA9IGRhdGUoJGNoYXJ0S2V5LCAoaW50KSAkcm93WydyZWdpc3RlciddKTsKICAgICAgICBpZiAoaXNzZXQoJG5ld1VzZXJzWyRzbG90XSkpIHsKICAgICAgICAgICAgJG5ld1VzZXJzWyRzbG90XSsrOwogICAgICAgIH0KICAgIH0KfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7Cn0KJGRhaWx5Q2hhcnRzID0gWwogICAgWyd0aXRsZScgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRTYWxlc0Ftb3VudCddLCAndW5pdCcgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRVbml0VG9tYW4nXSwgJ3NlcmllcycgPT4gJHNhbGVzQW1vdW50XSwKICAgIFsndGl0bGUnID0+ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaENoYXJ0U2FsZXNDb3VudCddLCAndW5pdCcgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRVbml0T3JkZXInXSwgJ3NlcmllcycgPT4gJHNhbGVzQ291bnRdLAogICAgWyd0aXRsZScgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRQYXltZW50cyddLCAndW5pdCcgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRVbml0VG9tYW4nXSwgJ3NlcmllcycgPT4gJHBheW1lbnRBbW91bnRdLAogICAgWyd0aXRsZScgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnROZXdVc2VycyddLCAndW5pdCcgPT4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ2hhcnRVbml0VXNlciddLCAnc2VyaWVzJyA9PiAkbmV3VXNlcnNdLApdOwpmb3JlYWNoICgkZGFpbHlDaGFydHMgYXMgJGluZGV4ID0+ICRjaGFydCkgewogICAgJGRhaWx5Q2hhcnRzWyRpbmRleF1bJ3BvaW50cyddID0gYXJyYXlfbWFwKGZuKCRzbG90LCAkdmFsdWUpID0+IFsnZCcgPT4gJGNoYXJ0TGFiZWxzWyRzbG90XSwgJ3YnID0+ICR2YWx1ZV0sIGFycmF5X2tleXMoJGNoYXJ0WydzZXJpZXMnXSksICRjaGFydFsnc2VyaWVzJ10pOwogICAgJGRhaWx5Q2hhcnRzWyRpbmRleF1bJ3RvdGFsJ10gPSBudW1iZXJfZm9ybWF0KGFycmF5X3N1bSgkY2hhcnRbJ3NlcmllcyddKSk7Cn0KaWYgKGlzc2V0KCRfR0VUWydhamF4J10pKSB7CiAgICBoZWFkZXIoJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOCcpOwogICAgZWNobyBqc29uX2VuY29kZShhcnJheV9tYXAoZm4oJGNoYXJ0KSA9PiBbJ3BvaW50cycgPT4gJGNoYXJ0Wydwb2ludHMnXSwgJ3RvdGFsJyA9PiAkY2hhcnRbJ3RvdGFsJ11dLCAkZGFpbHlDaGFydHMpKTsKICAgIGV4aXQ7Cn0KCiRyZWNlbnRJbnZvaWNlcyA9IFtdOwokcmVjZW50VXNlcnMgPSBbXTsKdHJ5IHsKICAgICRyZWNlbnRJbnZvaWNlcyA9IGRiX2ZldGNoQWxsKCRwZG8sICJTRUxFQ1QgKiBGUk9NIGludm9pY2UgT1JERVIgQlkgdGltZV9zZWxsIERFU0MgTElNSVQgOCIpOwp9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKfQp0cnkgewogICAgJHJlY2VudFVzZXJzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCAqIEZST00gdXNlciBPUkRFUiBCWSByZWdpc3RlciBERVNDIExJTUlUIDgiKTsKfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7Cn0KCiRwYWdlVGl0bGUgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hib2FyZFRpdGxlJ107CiRhY3RpdmVOYXYgPSAnZGFzaGJvYXJkJzsKJHNob3dQYWdlSGVhZCA9IGZhbHNlOwppbmNsdWRlIF9fRElSX18gLiAnL2luYy9sYXlvdXRfaGVhZC5waHAnOwo/PgoKPGRpdiBjbGFzcz0ic3RhdHMgZmFkZS11cCI+CiAgICA8ZGl2IGNsYXNzPSJzdGF0Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoVG90YWxVc2VycyddID8+PC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ic3RhdC1udW0iPjw/PSBudW1iZXJfZm9ybWF0KCR0b3RhbFVzZXJzKSA/PjwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InN0YXQtbWV0YSI+PD89ICRuZXdUb2RheSA+IDAgPyAnPHNwYW4gY2xhc3M9InVwIj4rJyAuICRuZXdUb2RheSAuICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFRvZGF5U3BhbiddIDogJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoTm9DaGFuZ2UnXSA/PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJzdGF0IG9rIj4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0LWxhYmVsIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoVG90YWxSZXZlbnVlJ10gPz48L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0LW51bSI+CiAgICAgICAgICAgIDw/PSAkdG90YWxSZXZlbnVlID49IDFfMDAwXzAwMAogICAgICAgICAgICAgICAgPyBudW1iZXJfZm9ybWF0KCR0b3RhbFJldmVudWUgLyAxXzAwMF8wMDAsIDEpIC4gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoVW5pdE1pbGxpb25Ub21hbiddCiAgICAgICAgICAgICAgICA6IG51bWJlcl9mb3JtYXQoJHRvdGFsUmV2ZW51ZSkgLiAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hVbml0VG9tYW4nXSA/PgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InN0YXQtbWV0YSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFRvdGFsU2FsZXMnXSA/PjwvZGl2PgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJzdGF0IHdhcm4iPgogICAgICAgIDxkaXYgY2xhc3M9InN0YXQtbGFiZWwiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hBY3RpdmVTZXJ2aWNlJ10gPz48L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0LW51bSI+PD89IG51bWJlcl9mb3JtYXQoJGFjdGl2ZU5vdykgPz48L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0ic3RhdCA8Pz0gJHBlbmRpbmdQYXkgPiAwID8gJ25vJyA6ICcnID8+Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0LWxhYmVsIj48Pz0gJHBlbmRpbmdQYXkgPiAwID8gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoUGVuZGluZ1BheW1lbnQnXSA6ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFRvZGF5VHJhbnNhY3Rpb24nXSA/PjwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InN0YXQtbnVtIiBzdHlsZT0iPD89ICRwZW5kaW5nUGF5ID4gMCA/ICdjb2xvcjp2YXIoLS1ubyknIDogJycgPz4iPgogICAgICAgICAgICA8Pz0gbnVtYmVyX2Zvcm1hdCgkcGVuZGluZ1BheSA+IDAgPyAkcGVuZGluZ1BheSA6ICR0eFRvZGF5KSA/PgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InN0YXQtbWV0YSI+CiAgICAgICAgICAgIDw/PSAkcGVuZGluZ1BheSA+IDAgPyAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hSZXZpZXdMaW5rJ10gOiAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hTdGF0dXNSZWdpc3RlcmVkJ10gPz4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2Pgo8L2Rpdj4KCjxkaXYgY2xhc3M9InJhbmdlLXRhYnMgZmFkZS11cCIgaWQ9ImNoYXJ0cyI+CiAgICA8P3BocCBmb3JlYWNoIChbJ3RvZGF5JyA9PiAnZGFzaFJhbmdlVG9kYXknLCAnd2VlaycgPT4gJ2Rhc2hSYW5nZVdlZWsnLCAnbW9udGgnID0+ICdkYXNoUmFuZ2VNb250aCcsICdxdWFydGVyJyA9PiAnZGFzaFJhbmdlUXVhcnRlcicsICd5ZWFyJyA9PiAnZGFzaFJhbmdlWWVhciddIGFzICRyYW5nZUtleSA9PiAkcmFuZ2VUZXh0KTogPz4KICAgICAgICA8YSBocmVmPSI/cmFuZ2U9PD89ICRyYW5nZUtleSA/PiNjaGFydHMiIGNsYXNzPSI8Pz0gJGNoYXJ0UmFuZ2UgPT09ICRyYW5nZUtleSA/ICdhY3RpdmUnIDogJycgPz4iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJHJhbmdlVGV4dF0gPz48L2E+CiAgICA8P3BocCBlbmRmb3JlYWNoOyA/Pgo8L2Rpdj4KCjxkaXYgY2xhc3M9InR3by1jb2wgY2hhcnQtZ3JpZCBmYWRlLXVwIj4KICAgIDw/cGhwIGZvcmVhY2ggKCRkYWlseUNoYXJ0cyBhcyAkY2hhcnQpOiA/PgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLWhlYWQiPgogICAgICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLXRpdGxlIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkY2hhcnRbJ3RpdGxlJ10pID8+PC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZC1zdWJ0aXRsZSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaENoYXJ0VG90YWwnXSA/PiA8c3BhbiBjbGFzcz0iY2hhcnQtdG90YWwiPjw/PSAkY2hhcnRbJ3RvdGFsJ10gPz48L3NwYW4+IDw/PSBodG1sc3BlY2lhbGNoYXJzKCRjaGFydFsndW5pdCddKSA/PjwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJkYXktY2hhcnQiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJGNoYXJ0Wyd0aXRsZSddKSA/PiIKICAgICAgICAgICAgICAgIGRhdGEtdW5pdD0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJGNoYXJ0Wyd1bml0J10pID8+IgogICAgICAgICAgICAgICAgZGF0YS1zZXJpZXM9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKGpzb25fZW5jb2RlKCRjaGFydFsncG9pbnRzJ10pLCBFTlRfUVVPVEVTKSA/PiI+PC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8P3BocCBlbmRmb3JlYWNoOyA/Pgo8L2Rpdj4KCjxkaXYgY2xhc3M9InR3by1jb2wiPgogICAgPGRpdiBjbGFzcz0iY2FyZCBmYWRlLXVwIGQxIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLWhlYWQiPgogICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFJlY2VudE9yZGVycyddID8+PC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLXN1YnRpdGxlIj48Pz0gY291bnQoJHJlY2VudEludm9pY2VzKSA/PiA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoUmVjZW50SXRlbSddID8+PC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8YSBocmVmPSJpbnZvaWNlLnBocCIgY2xhc3M9ImJ0bi1saW5rIiBzdHlsZT0iZm9udC1zaXplOi43OHJlbSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFZpZXdBbGwnXSA/PjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJ0Ymwtd3JhcCI+CiAgICAgICAgICAgIDx0YWJsZSBjbGFzcz0idGJsLXNtIj4KICAgICAgICAgICAgICAgIDx0aGVhZD4KICAgICAgICAgICAgICAgICAgICA8dHI+CiAgICAgICAgICAgICAgICAgICAgICAgIDx0aD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ29sVXNlciddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hDb2xQcm9kdWN0J10gPz48L3RoPgogICAgICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaENvbEFtb3VudCddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hDb2xTdGF0dXMnXSA/PjwvdGg+CiAgICAgICAgICAgICAgICAgICAgPC90cj4KICAgICAgICAgICAgICAgIDwvdGhlYWQ+CiAgICAgICAgICAgICAgICA8dGJvZHk+CiAgICAgICAgICAgICAgICAgICAgPD9waHAgaWYgKGVtcHR5KCRyZWNlbnRJbnZvaWNlcykpOiA/PgogICAgICAgICAgICAgICAgICAgICAgICA8dHI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY29sc3Bhbj0iNCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZW1wdHkiIHN0eWxlPSJwYWRkaW5nOjI0cHgiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoTm9PcmRlcnNZZXQnXSA/PjwvcD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICAgICAgPD9waHAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgJHN0YXR1c01hcCA9IFsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICdhY3RpdmUnICAgICAgICAgPT4gWyd0YWctb2snLCAgICAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hTdGF0dXNBY3RpdmUnXV0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAnZW5kX29mX3RpbWUnICAgID0+IFsndGFnLXdhcm4nLCAgJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoU3RhdHVzRXhwaXJlZCddXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICdlbmRfb2Zfdm9sdW1lJyAgPT4gWyd0YWctbm8nLCAgICAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hTdGF0dXNWb2x1bWVGaW5pc2hlZCddXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICdzZW5kZWR3YXJuJyAgICAgPT4gWyd0YWctd2FybicsICAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hTdGF0dXNXYXJuaW5nJ11dLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgJ3NlbmRfb25faG9sZCcgICA9PiBbJ3RhZy1wbGFpbicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFN0YXR1c1dhaXRpbmcnXV0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAndW5wYWlkJyAgICAgICAgID0+IFsndGFnLXdhcm4nLCAgJHRleHRib3RsYW5nWydwYW5lbCddWydpbnZvaWNlU3RhdHVzVW5wYWlkJ11dLAogICAgICAgICAgICAgICAgICAgICAgICBdOwogICAgICAgICAgICAgICAgICAgICAgICBmb3JlYWNoICgkcmVjZW50SW52b2ljZXMgYXMgJGludik6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBbJHRhZ0NsYXNzLCAkbGFiZWxdID0gJHN0YXR1c01hcFskaW52WydTdGF0dXMnXSA/PyAnJ10gPz8gWyd0YWctcGxhaW4nLCAkaW52WydTdGF0dXMnXSA/PyAn4oCUJ107CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY20gY2YiPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRpbnZbJ2lkX3VzZXInXSA/PyAn4oCUJykgPz48L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY3MiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJtYXgtd2lkdGg6MTUwcHg7d2hpdGUtc3BhY2U6bm93cmFwO292ZXJmbG93OmhpZGRlbjt0ZXh0LW92ZXJmbG93OmVsbGlwc2lzIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD89IGh0bWxzcGVjaWFsY2hhcnModHJ1bmMoJGludlsnbmFtZV9wcm9kdWN0J10gPz8gJ+KAlCcsIDIwKSkgPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY24iIHN0eWxlPSJ3aGl0ZS1zcGFjZTpub3dyYXAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Pz0gbnVtYmVyX2Zvcm1hdCgoaW50KSAoJGludlsncHJpY2VfcHJvZHVjdCddID8/IDApKSA/PiA8c3BhbiBjbGFzcz0iY2YiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hUb21hblNob3J0J10gPz48L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+PHNwYW4gY2xhc3M9InRhZyA8Pz0gJHRhZ0NsYXNzID8+Ij48Pz0gJGxhYmVsID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyBlbmRpZjsgPz4KICAgICAgICAgICAgICAgIDwvdGJvZHk+CiAgICAgICAgICAgIDwvdGFibGU+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJjYXJkIGZhZGUtdXAgZDIiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtaGVhZCI+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLXRpdGxlIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoUmVjZW50VXNlcnMnXSA/PjwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZC1zdWJ0aXRsZSI+PD89IGNvdW50KCRyZWNlbnRVc2VycykgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFJlY2VudEl0ZW0yJ10gPz48L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxhIGhyZWY9InVzZXJzLnBocCIgY2xhc3M9ImJ0bi1saW5rIiBzdHlsZT0iZm9udC1zaXplOi43OHJlbSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFZpZXdBbGwyJ10gPz48L2E+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idGJsLXdyYXAiPgogICAgICAgICAgICA8dGFibGUgY2xhc3M9InRibC1zbSI+CiAgICAgICAgICAgICAgICA8dGhlYWQ+CiAgICAgICAgICAgICAgICAgICAgPHRyPgogICAgICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaENvbElkJ10gPz48L3RoPgogICAgICAgICAgICAgICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaENvbE5hbWUnXSA/PjwvdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDx0aD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydkYXNoQ29sQmFsYW5jZSddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hDb2xHcm91cCddID8+PC90aD4KICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgPC90aGVhZD4KICAgICAgICAgICAgICAgIDx0Ym9keT4KICAgICAgICAgICAgICAgICAgICA8P3BocCBpZiAoZW1wdHkoJHJlY2VudFVzZXJzKSk6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjb2xzcGFuPSI0Ij4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJlbXB0eSIgc3R5bGU9InBhZGRpbmc6MjRweCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ2Rhc2hOb1VzZXJzWWV0J10gPz48L3A+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgIDw/cGhwIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgIGZvcmVhY2ggKCRyZWNlbnRVc2VycyBhcyAkdSk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkYWdlbnQgPSAkdVsnYWdlbnQnXSA/PyAnZic7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkaXNCbG9ja2VkID0gKCR1WydVc2VyX1N0YXR1cyddID8/ICcnKSA9PT0gJ2Jsb2NrJzsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICRuYW1lID0gJHVbJ25hbWVjdXN0b20nXSA/PyAnJzsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmICgkbmFtZSA9PT0gJ25vbmUnKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICRuYW1lID0gJyc7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkdW5hbWUgPSAkdVsndXNlcm5hbWUnXSA/PyAnJzsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmICgkdW5hbWUgPT09ICdub25lJykKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAkdW5hbWUgPSAnJzsKICAgICAgICAgICAgICAgICAgICAgICAgICAgID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSBjZiI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJHVbJ2lkJ10pID8+PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGlmICgkbmFtZSk6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iY3MiPjw/PSBodG1sc3BlY2lhbGNoYXJzKHRydW5jKCRuYW1lLCAxNCkpID8+PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbHNlaWYgKCR1bmFtZSk6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iY20iIHN0eWxlPSJjb2xvcjp2YXIoLS1hYykiPkA8Pz0gaHRtbHNwZWNpYWxjaGFycyh0cnVuYygkdW5hbWUsIDEyKSkgPz48L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGVsc2U6ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iY2YiPuKAlDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD9waHAgZW5kaWY7ID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNuIiBzdHlsZT0id2hpdGUtc3BhY2U6bm93cmFwIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD89IG51bWJlcl9mb3JtYXQoKGludCkgKCR1WydCYWxhbmNlJ10gPz8gMCkpID8+IDxzcGFuIGNsYXNzPSJjZiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaFRvbWFuU2hvcnQyJ10gPz48L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGlmICgkaXNCbG9ja2VkKTogPz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0YWcgdGFnLW5vIiBzdHlsZT0iZm9udC1zaXplOi42NXJlbSI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsnZGFzaExhYmVsQmxvY2tlZCddID8+PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbHNlOiA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRhZyA8Pz0gdXNlcl9yb2xlX3RhZygkYWdlbnQpID8+IiBzdHlsZT0iZm9udC1zaXplOi42NXJlbSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD89IHVzZXJfcm9sZV9sYWJlbCgkYWdlbnQpID8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/cGhwIGVuZGlmOyA/PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyBlbmRpZjsgPz4KICAgICAgICAgICAgICAgIDwvdGJvZHk+CiAgICAgICAgICAgIDwvdGFibGU+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KPC9kaXY+Cgo8c2NyaXB0IHNyYz0ianMvZGFzaGJvYXJkLmpzIj48L3NjcmlwdD4KCjw/cGhwIGluY2x1ZGUgX19ESVJfXyAuICcvaW5jL2xheW91dF9mb290LnBocCc7ID8+
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+$totalUsers = 0;
+$newToday = 0;
+$totalRevenue = 0;
+$activeNow = 0;
+$pendingPay = 0;
+$txToday = 0;
+
+try {
+    $totalUsers = db_count($pdo, "SELECT COUNT(*) FROM user");
+    $newToday = db_count($pdo, "SELECT COUNT(*) FROM user WHERE CAST(register AS UNSIGNED) >= ?", [strtotime('today')]);
+} catch (Exception $e) {
+}
+
+try {
+    $totalRevenue = (int) db_query($pdo, "SELECT COALESCE(SUM(price_product),0) FROM invoice WHERE Status IN ('active','end_of_time','end_of_volume','sendedwarn','send_on_hold')")->fetchColumn();
+    $activeNow = db_count($pdo, "SELECT COUNT(*) FROM invoice WHERE Status='active'");
+} catch (Exception $e) {
+}
+
+try {
+    $pendingPay = db_count($pdo, "SELECT COUNT(*) FROM Payment_report WHERE payment_Status='waiting'");
+    $txToday = db_count($pdo, "SELECT COUNT(*) FROM Payment_report WHERE time LIKE ?", [date('Y/m/d') . '%']);
+} catch (Exception $e) {
+}
+
+$chartRanges = [
+    'today' => [strtotime('today'), 24, 'hour', 'Y-m-d H', 'H:00'],
+    'week' => [strtotime('today -6 days'), 7, 'day', 'Y-m-d', 'm-d'],
+    'month' => [strtotime('today -29 days'), 30, 'day', 'Y-m-d', 'm-d'],
+    'quarter' => [strtotime('today -89 days'), 90, 'day', 'Y-m-d', 'm-d'],
+    'year' => [strtotime(date('Y-m-01') . ' -11 months'), 12, 'month', 'Y-m', 'Y-m'],
+];
+$chartRange = isset($chartRanges[$_GET['range'] ?? '']) ? $_GET['range'] : 'month';
+[$chartStart, $chartCount, $chartStep, $chartKey, $chartLabel] = $chartRanges[$chartRange];
+$chartBuckets = [];
+$chartLabels = [];
+for ($slot = 0; $slot < $chartCount; $slot++) {
+    $slotTime = strtotime("+$slot $chartStep", $chartStart);
+    $chartBuckets[date($chartKey, $slotTime)] = 0;
+    $chartLabels[date($chartKey, $slotTime)] = date($chartLabel, $slotTime);
+}
+$salesAmount = $salesCount = $paymentAmount = $newUsers = $chartBuckets;
+try {
+    $rows = db_fetchAll($pdo, "SELECT time_sell, price_product FROM invoice WHERE CAST(time_sell AS UNSIGNED) >= ? AND Status IN ('active','end_of_time','end_of_volume','sendedwarn','send_on_hold') AND name_product != ?", [$chartStart, $textbotlang['common']['labels']['testServiceName']]);
+    foreach ($rows as $row) {
+        $slot = date($chartKey, (int) $row['time_sell']);
+        if (isset($salesCount[$slot])) {
+            $salesCount[$slot]++;
+            $salesAmount[$slot] += (int) $row['price_product'];
+        }
+    }
+    $rows = db_fetchAll($pdo, "SELECT time, price FROM Payment_report WHERE payment_Status = 'paid' AND time >= ?", [date('Y/m/d H:i:s', $chartStart)]);
+    foreach ($rows as $row) {
+        $paidAt = strtotime((string) $row['time']);
+        $slot = $paidAt ? date($chartKey, $paidAt) : null;
+        if (isset($paymentAmount[$slot])) {
+            $paymentAmount[$slot] += (int) $row['price'];
+        }
+    }
+    $rows = db_fetchAll($pdo, "SELECT register FROM user WHERE CAST(register AS UNSIGNED) >= ?", [$chartStart]);
+    foreach ($rows as $row) {
+        $slot = date($chartKey, (int) $row['register']);
+        if (isset($newUsers[$slot])) {
+            $newUsers[$slot]++;
+        }
+    }
+} catch (Exception $e) {
+}
+$dailyCharts = [
+    ['title' => $textbotlang['panel']['dashChartSalesAmount'], 'unit' => $textbotlang['panel']['dashChartUnitToman'], 'series' => $salesAmount],
+    ['title' => $textbotlang['panel']['dashChartSalesCount'], 'unit' => $textbotlang['panel']['dashChartUnitOrder'], 'series' => $salesCount],
+    ['title' => $textbotlang['panel']['dashChartPayments'], 'unit' => $textbotlang['panel']['dashChartUnitToman'], 'series' => $paymentAmount],
+    ['title' => $textbotlang['panel']['dashChartNewUsers'], 'unit' => $textbotlang['panel']['dashChartUnitUser'], 'series' => $newUsers],
+];
+foreach ($dailyCharts as $index => $chart) {
+    $dailyCharts[$index]['points'] = array_map(fn($slot, $value) => ['d' => $chartLabels[$slot], 'v' => $value], array_keys($chart['series']), $chart['series']);
+    $dailyCharts[$index]['total'] = number_format(array_sum($chart['series']));
+}
+if (isset($_GET['ajax'])) {
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(array_map(fn($chart) => ['points' => $chart['points'], 'total' => $chart['total']], $dailyCharts));
+    exit;
+}
+
+$recentInvoices = [];
+$recentUsers = [];
+try {
+    $recentInvoices = db_fetchAll($pdo, "SELECT * FROM invoice ORDER BY time_sell DESC LIMIT 8");
+} catch (Exception $e) {
+}
+try {
+    $recentUsers = db_fetchAll($pdo, "SELECT * FROM user ORDER BY register DESC LIMIT 8");
+} catch (Exception $e) {
+}
+
+$pageTitle = $textbotlang['panel']['dashboardTitle'];
+$activeNav = 'dashboard';
+$showPageHead = false;
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div class="stats fade-up">
+    <div class="stat">
+        <div class="stat-label"><?= $textbotlang['panel']['dashTotalUsers'] ?></div>
+        <div class="stat-num"><?= number_format($totalUsers) ?></div>
+        <div class="stat-meta"><?= $newToday > 0 ? '<span class="up">+' . $newToday . $textbotlang['panel']['dashTodaySpan'] : $textbotlang['panel']['dashNoChange'] ?>
+        </div>
+    </div>
+    <div class="stat ok">
+        <div class="stat-label"><?= $textbotlang['panel']['dashTotalRevenue'] ?></div>
+        <div class="stat-num">
+            <?= $totalRevenue >= 1_000_000
+                ? number_format($totalRevenue / 1_000_000, 1) . $textbotlang['panel']['dashUnitMillionToman']
+                : number_format($totalRevenue) . $textbotlang['panel']['dashUnitToman'] ?>
+        </div>
+        <div class="stat-meta"><?= $textbotlang['panel']['dashTotalSales'] ?></div>
+    </div>
+    <div class="stat warn">
+        <div class="stat-label"><?= $textbotlang['panel']['dashActiveService'] ?></div>
+        <div class="stat-num"><?= number_format($activeNow) ?></div>
+    </div>
+    <div class="stat <?= $pendingPay > 0 ? 'no' : '' ?>">
+        <div class="stat-label"><?= $pendingPay > 0 ? $textbotlang['panel']['dashPendingPayment'] : $textbotlang['panel']['dashTodayTransaction'] ?></div>
+        <div class="stat-num" style="<?= $pendingPay > 0 ? 'color:var(--no)' : '' ?>">
+            <?= number_format($pendingPay > 0 ? $pendingPay : $txToday) ?>
+        </div>
+        <div class="stat-meta">
+            <?= $pendingPay > 0 ? $textbotlang['panel']['dashReviewLink'] : $textbotlang['panel']['dashStatusRegistered'] ?>
+        </div>
+    </div>
+</div>
+
+<div class="range-tabs fade-up" id="charts">
+    <?php foreach (['today' => 'dashRangeToday', 'week' => 'dashRangeWeek', 'month' => 'dashRangeMonth', 'quarter' => 'dashRangeQuarter', 'year' => 'dashRangeYear'] as $rangeKey => $rangeText): ?>
+        <a href="?range=<?= $rangeKey ?>#charts" class="<?= $chartRange === $rangeKey ? 'active' : '' ?>"><?= $textbotlang['panel'][$rangeText] ?></a>
+    <?php endforeach; ?>
+</div>
+
+<div class="two-col chart-grid fade-up">
+    <?php foreach ($dailyCharts as $chart): ?>
+        <div class="card">
+            <div class="card-head">
+                <div>
+                    <div class="card-title"><?= htmlspecialchars($chart['title']) ?></div>
+                    <div class="card-subtitle"><?= $textbotlang['panel']['dashChartTotal'] ?> <span class="chart-total"><?= $chart['total'] ?></span> <?= htmlspecialchars($chart['unit']) ?></div>
+                </div>
+            </div>
+            <div class="day-chart" role="img" aria-label="<?= htmlspecialchars($chart['title']) ?>"
+                data-unit="<?= htmlspecialchars($chart['unit']) ?>"
+                data-series="<?= htmlspecialchars(json_encode($chart['points']), ENT_QUOTES) ?>"></div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<div class="two-col">
+    <div class="card fade-up d1">
+        <div class="card-head">
+            <div>
+                <div class="card-title"><?= $textbotlang['panel']['dashRecentOrders'] ?></div>
+                <div class="card-subtitle"><?= count($recentInvoices) ?> <?= $textbotlang['panel']['dashRecentItem'] ?></div>
+            </div>
+            <a href="invoice.php" class="btn-link" style="font-size:.78rem"><?= $textbotlang['panel']['dashViewAll'] ?></a>
+        </div>
+        <div class="tbl-wrap">
+            <table class="tbl-sm">
+                <thead>
+                    <tr>
+                        <th><?= $textbotlang['panel']['dashColUser'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColProduct'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColAmount'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColStatus'] ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($recentInvoices)): ?>
+                        <tr>
+                            <td colspan="4">
+                                <div class="empty" style="padding:24px">
+                                    <p><?= $textbotlang['panel']['dashNoOrdersYet'] ?></p>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php else:
+                        $statusMap = [
+                            'active'         => ['tag-ok',    $textbotlang['panel']['dashStatusActive']],
+                            'end_of_time'    => ['tag-warn',  $textbotlang['panel']['dashStatusExpired']],
+                            'end_of_volume'  => ['tag-no',    $textbotlang['panel']['dashStatusVolumeFinished']],
+                            'sendedwarn'     => ['tag-warn',  $textbotlang['panel']['dashStatusWarning']],
+                            'send_on_hold'   => ['tag-plain', $textbotlang['panel']['dashStatusWaiting']],
+                            'unpaid'         => ['tag-warn',  $textbotlang['panel']['invoiceStatusUnpaid']],
+                        ];
+                        foreach ($recentInvoices as $inv):
+                            [$tagClass, $label] = $statusMap[$inv['Status'] ?? ''] ?? ['tag-plain', $inv['Status'] ?? '—'];
+                            ?>
+                            <tr>
+                                <td class="cm cf"><?= htmlspecialchars($inv['id_user'] ?? '—') ?></td>
+                                <td class="cs"
+                                    style="max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+                                    <?= htmlspecialchars(trunc($inv['name_product'] ?? '—', 20)) ?>
+                                </td>
+                                <td class="cn" style="white-space:nowrap">
+                                    <?= number_format((int) ($inv['price_product'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['dashTomanShort'] ?></span>
+                                </td>
+                                <td><span class="tag <?= $tagClass ?>"><?= $label ?></span></td>
+                            </tr>
+                        <?php endforeach; endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card fade-up d2">
+        <div class="card-head">
+            <div>
+                <div class="card-title"><?= $textbotlang['panel']['dashRecentUsers'] ?></div>
+                <div class="card-subtitle"><?= count($recentUsers) ?> <?= $textbotlang['panel']['dashRecentItem2'] ?></div>
+            </div>
+            <a href="users.php" class="btn-link" style="font-size:.78rem"><?= $textbotlang['panel']['dashViewAll2'] ?></a>
+        </div>
+        <div class="tbl-wrap">
+            <table class="tbl-sm">
+                <thead>
+                    <tr>
+                        <th><?= $textbotlang['panel']['dashColId'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColName'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColBalance'] ?></th>
+                        <th><?= $textbotlang['panel']['dashColGroup'] ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($recentUsers)): ?>
+                        <tr>
+                            <td colspan="4">
+                                <div class="empty" style="padding:24px">
+                                    <p><?= $textbotlang['panel']['dashNoUsersYet'] ?></p>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php else:
+                        foreach ($recentUsers as $u):
+                            $agent = $u['agent'] ?? 'f';
+                            $isBlocked = ($u['User_Status'] ?? '') === 'block';
+                            $name = $u['namecustom'] ?? '';
+                            if ($name === 'none')
+                                $name = '';
+                            $uname = $u['username'] ?? '';
+                            if ($uname === 'none')
+                                $uname = '';
+                            ?>
+                            <tr>
+                                <td class="cm cf"><?= htmlspecialchars($u['id']) ?></td>
+                                <td>
+                                    <?php if ($name): ?>
+                                        <span class="cs"><?= htmlspecialchars(trunc($name, 14)) ?></span>
+                                    <?php elseif ($uname): ?>
+                                        <span class="cm" style="color:var(--ac)">@<?= htmlspecialchars(trunc($uname, 12)) ?></span>
+                                    <?php else: ?>
+                                        <span class="cf">—</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="cn" style="white-space:nowrap">
+                                    <?= number_format((int) ($u['Balance'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['dashTomanShort2'] ?></span>
+                                </td>
+                                <td>
+                                    <?php if ($isBlocked): ?>
+                                        <span class="tag tag-no" style="font-size:.65rem"><?= $textbotlang['panel']['dashLabelBlocked'] ?></span>
+                                    <?php else: ?>
+                                        <span class="tag <?= user_role_tag($agent) ?>" style="font-size:.65rem">
+                                            <?= user_role_label($agent) ?>
+                                        </span>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

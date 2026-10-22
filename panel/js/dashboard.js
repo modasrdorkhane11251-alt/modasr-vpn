@@ -1,1 +1,149 @@
-KGZ1bmN0aW9uICgpIHsKICAgIHZhciBzdmdOcyA9ICdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc7CiAgICB2YXIgY2hhcnRJbmRleCA9IDA7CgogICAgdmFyIG1ha2UgPSBmdW5jdGlvbiAobmFtZSwgYXR0cnMsIHBhcmVudCkgewogICAgICAgIHZhciBub2RlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKHN2Z05zLCBuYW1lKTsKICAgICAgICBPYmplY3Qua2V5cyhhdHRycykuZm9yRWFjaChmdW5jdGlvbiAoa2V5KSB7CiAgICAgICAgICAgIG5vZGUuc2V0QXR0cmlidXRlKGtleSwgYXR0cnNba2V5XSk7CiAgICAgICAgfSk7CiAgICAgICAgcGFyZW50LmFwcGVuZENoaWxkKG5vZGUpOwogICAgICAgIHJldHVybiBub2RlOwogICAgfTsKCiAgICB2YXIgY29tcGFjdCA9IGZ1bmN0aW9uICh2YWx1ZSkgewogICAgICAgIHZhciBhYnMgPSBNYXRoLmFicyh2YWx1ZSk7CiAgICAgICAgaWYgKGFicyA+PSAxZTkpIHJldHVybiArKHZhbHVlIC8gMWU5KS50b0ZpeGVkKDEpICsgJ0InOwogICAgICAgIGlmIChhYnMgPj0gMWU2KSByZXR1cm4gKyh2YWx1ZSAvIDFlNikudG9GaXhlZCgxKSArICdNJzsKICAgICAgICBpZiAoYWJzID49IDFlMykgcmV0dXJuICsodmFsdWUgLyAxZTMpLnRvRml4ZWQoMSkgKyAnSyc7CiAgICAgICAgcmV0dXJuIFN0cmluZyh2YWx1ZSk7CiAgICB9OwoKICAgIHZhciBuaWNlTWF4ID0gZnVuY3Rpb24gKG1heCkgewogICAgICAgIGlmIChtYXggPD0gMCkgcmV0dXJuIDQ7CiAgICAgICAgdmFyIG1hZ25pdHVkZSA9IE1hdGgucG93KDEwLCBNYXRoLmZsb29yKE1hdGgubG9nMTAobWF4IC8gNCkpKTsKICAgICAgICB2YXIgc3RlcHMgPSBbMSwgMS41LCAyLCAyLjUsIDMsIDQsIDUsIDYsIDgsIDEwXTsKICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IHN0ZXBzLmxlbmd0aDsgaSsrKSB7CiAgICAgICAgICAgIGlmIChtYWduaXR1ZGUgKiBzdGVwc1tpXSAqIDQgPj0gbWF4KSByZXR1cm4gbWFnbml0dWRlICogc3RlcHNbaV0gKiA0OwogICAgICAgIH0KICAgICAgICByZXR1cm4gbWFnbml0dWRlICogNDA7CiAgICB9OwoKICAgIHZhciBkcmF3ID0gZnVuY3Rpb24gKGJveCkgewogICAgICAgIHZhciBwb2ludHMgPSBKU09OLnBhcnNlKGJveC5kYXRhc2V0LnNlcmllcyB8fCAnW10nKTsKICAgICAgICB2YXIgdW5pdCA9IGJveC5kYXRhc2V0LnVuaXQgfHwgJyc7CiAgICAgICAgdmFyIGdyYWRpZW50SWQgPSBib3guZGF0YXNldC5ncmFkaWVudElkIHx8IChib3guZGF0YXNldC5ncmFkaWVudElkID0gJ2RheUNoYXJ0RmlsbCcgKyBjaGFydEluZGV4KyspOwogICAgICAgIGJveC50ZXh0Q29udGVudCA9ICcnOwogICAgICAgIGlmICghcG9pbnRzLmxlbmd0aCkgcmV0dXJuOwoKICAgICAgICB2YXIgd2lkdGggPSBib3guY2xpZW50V2lkdGggLSAxMjsKICAgICAgICB2YXIgaGVpZ2h0ID0gYm94LmNsaWVudEhlaWdodCAtIDEyOwogICAgICAgIHZhciBwYWQgPSB7IGxlZnQ6IDQwLCByaWdodDogMTAsIHRvcDogOCwgYm90dG9tOiAyMiB9OwogICAgICAgIHZhciBwbG90V2lkdGggPSB3aWR0aCAtIHBhZC5sZWZ0IC0gcGFkLnJpZ2h0OwogICAgICAgIHZhciBwbG90SGVpZ2h0ID0gaGVpZ2h0IC0gcGFkLnRvcCAtIHBhZC5ib3R0b207CiAgICAgICAgdmFyIHRvcCA9IG5pY2VNYXgoTWF0aC5tYXguYXBwbHkobnVsbCwgcG9pbnRzLm1hcChmdW5jdGlvbiAocCkgeyByZXR1cm4gcC52OyB9KSkpOwogICAgICAgIHZhciB4ID0gZnVuY3Rpb24gKGkpIHsgcmV0dXJuIHBhZC5sZWZ0ICsgKHBvaW50cy5sZW5ndGggPT09IDEgPyBwbG90V2lkdGggLyAyIDogaSAqIHBsb3RXaWR0aCAvIChwb2ludHMubGVuZ3RoIC0gMSkpOyB9OwogICAgICAgIHZhciB5ID0gZnVuY3Rpb24gKHYpIHsgcmV0dXJuIHBhZC50b3AgKyBwbG90SGVpZ2h0IC0gdiAvIHRvcCAqIHBsb3RIZWlnaHQ7IH07CgogICAgICAgIHZhciBzdmcgPSBtYWtlKCdzdmcnLCB7IHZpZXdCb3g6ICcwIDAgJyArIHdpZHRoICsgJyAnICsgaGVpZ2h0LCAnYXJpYS1oaWRkZW4nOiAndHJ1ZScgfSwgYm94KTsKICAgICAgICB2YXIgZ3JhZGllbnQgPSBtYWtlKCdsaW5lYXJHcmFkaWVudCcsIHsgaWQ6IGdyYWRpZW50SWQsIHgxOiAnMCcsIHkxOiAnMCcsIHgyOiAnMCcsIHkyOiAnMScgfSwgbWFrZSgnZGVmcycsIHt9LCBzdmcpKTsKICAgICAgICBtYWtlKCdzdG9wJywgeyBvZmZzZXQ6ICcwJScsIHN0eWxlOiAnc3RvcC1jb2xvcjp2YXIoLS1hYyk7c3RvcC1vcGFjaXR5Oi4zMicgfSwgZ3JhZGllbnQpOwogICAgICAgIG1ha2UoJ3N0b3AnLCB7IG9mZnNldDogJzEwMCUnLCBzdHlsZTogJ3N0b3AtY29sb3I6dmFyKC0tYWMpO3N0b3Atb3BhY2l0eTowJyB9LCBncmFkaWVudCk7CgogICAgICAgIGZvciAodmFyIHQgPSAwOyB0IDw9IDQ7IHQrKykgewogICAgICAgICAgICB2YXIgdGlja1ZhbHVlID0gdG9wIC8gNCAqIHQ7CiAgICAgICAgICAgIG1ha2UoJ2xpbmUnLCB7IGNsYXNzOiAnZ3JpZC1saW5lJywgeDE6IHBhZC5sZWZ0LCB4Mjogd2lkdGggLSBwYWQucmlnaHQsIHkxOiB5KHRpY2tWYWx1ZSksIHkyOiB5KHRpY2tWYWx1ZSkgfSwgc3ZnKTsKICAgICAgICAgICAgbWFrZSgndGV4dCcsIHsgY2xhc3M6ICdheGlzLXRleHQnLCB4OiBwYWQubGVmdCAtIDYsIHk6IHkodGlja1ZhbHVlKSArIDMsICd0ZXh0LWFuY2hvcic6ICdlbmQnIH0sIHN2ZykudGV4dENvbnRlbnQgPSBjb21wYWN0KHRpY2tWYWx1ZSk7CiAgICAgICAgfQogICAgICAgIFswLCAxLCAyLCAzLCA0XS5tYXAoZnVuY3Rpb24gKHBhcnQpIHsgcmV0dXJuIE1hdGgucm91bmQocGFydCAqIChwb2ludHMubGVuZ3RoIC0gMSkgLyA0KTsgfSkuZmlsdGVyKGZ1bmN0aW9uIChpLCBwb3MsIGxpc3QpIHsgcmV0dXJuIGxpc3QuaW5kZXhPZihpKSA9PT0gcG9zOyB9KS5mb3JFYWNoKGZ1bmN0aW9uIChpKSB7CiAgICAgICAgICAgIHZhciBhbmNob3IgPSBpID09PSAwID8gJ3N0YXJ0JyA6IChpID09PSBwb2ludHMubGVuZ3RoIC0gMSA/ICdlbmQnIDogJ21pZGRsZScpOwogICAgICAgICAgICBtYWtlKCd0ZXh0JywgeyBjbGFzczogJ2F4aXMtdGV4dCcsIHg6IHgoaSksIHk6IGhlaWdodCAtIDYsICd0ZXh0LWFuY2hvcic6IGFuY2hvciB9LCBzdmcpLnRleHRDb250ZW50ID0gcG9pbnRzW2ldLmQ7CiAgICAgICAgfSk7CgogICAgICAgIHZhciBsaW5lID0gcG9pbnRzLm1hcChmdW5jdGlvbiAocCwgaSkgeyByZXR1cm4gKGkgPyAnTCcgOiAnTScpICsgeChpKS50b0ZpeGVkKDEpICsgJyAnICsgeShwLnYpLnRvRml4ZWQoMSk7IH0pLmpvaW4oJyAnKTsKICAgICAgICBtYWtlKCdwYXRoJywgeyBkOiBsaW5lICsgJyBMJyArIHgocG9pbnRzLmxlbmd0aCAtIDEpLnRvRml4ZWQoMSkgKyAnICcgKyB5KDApICsgJyBMJyArIHgoMCkgKyAnICcgKyB5KDApICsgJyBaJywgZmlsbDogJ3VybCgjJyArIGdyYWRpZW50SWQgKyAnKScgfSwgc3ZnKTsKICAgICAgICBtYWtlKCdwYXRoJywgeyBjbGFzczogJ3Nlcmllcy1saW5lJywgZDogbGluZSB9LCBzdmcpOwogICAgICAgIHZhciBsYXN0ID0gcG9pbnRzLmxlbmd0aCAtIDE7CiAgICAgICAgbWFrZSgnY2lyY2xlJywgeyBjbGFzczogJ3Nlcmllcy1kb3QnLCBjeDogeChsYXN0KSwgY3k6IHkocG9pbnRzW2xhc3RdLnYpLCByOiA0IH0sIHN2Zyk7CgogICAgICAgIHZhciBjcm9zcyA9IG1ha2UoJ2xpbmUnLCB7IGNsYXNzOiAnY3Jvc3MtbGluZScsIHkxOiBwYWQudG9wLCB5MjogcGFkLnRvcCArIHBsb3RIZWlnaHQsIHN0eWxlOiAnZGlzcGxheTpub25lJyB9LCBzdmcpOwogICAgICAgIHZhciBtYXJrZXIgPSBtYWtlKCdjaXJjbGUnLCB7IGNsYXNzOiAnc2VyaWVzLWRvdCcsIHI6IDUsIHN0eWxlOiAnZGlzcGxheTpub25lJyB9LCBzdmcpOwogICAgICAgIHZhciBoaXQgPSBtYWtlKCdyZWN0JywgeyB4OiBwYWQubGVmdCwgeTogMCwgd2lkdGg6IHBsb3RXaWR0aCwgaGVpZ2h0OiBoZWlnaHQsIGZpbGw6ICd0cmFuc3BhcmVudCcgfSwgc3ZnKTsKCiAgICAgICAgdmFyIHRpcCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwogICAgICAgIHRpcC5jbGFzc05hbWUgPSAnY2hhcnQtdGlwJzsKICAgICAgICB2YXIgdGlwVmFsdWUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdiJyk7CiAgICAgICAgdmFyIHRpcERhdGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzcGFuJyk7CiAgICAgICAgdGlwLmFwcGVuZENoaWxkKHRpcFZhbHVlKTsKICAgICAgICB0aXAuYXBwZW5kQ2hpbGQodGlwRGF0ZSk7CiAgICAgICAgYm94LmFwcGVuZENoaWxkKHRpcCk7CgogICAgICAgIHZhciBzaG93ID0gZnVuY3Rpb24gKGV2ZW50KSB7CiAgICAgICAgICAgIHZhciByZWN0ID0gc3ZnLmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpOwogICAgICAgICAgICB2YXIgcG9pbnRlclggPSAoZXZlbnQuY2xpZW50WCAtIHJlY3QubGVmdCkgKiB3aWR0aCAvIHJlY3Qud2lkdGg7CiAgICAgICAgICAgIHZhciBpID0gTWF0aC5tYXgoMCwgTWF0aC5taW4obGFzdCwgTWF0aC5yb3VuZCgocG9pbnRlclggLSBwYWQubGVmdCkgLyBwbG90V2lkdGggKiBsYXN0KSkpOwogICAgICAgICAgICBjcm9zcy5zZXRBdHRyaWJ1dGUoJ3gxJywgeChpKSk7CiAgICAgICAgICAgIGNyb3NzLnNldEF0dHJpYnV0ZSgneDInLCB4KGkpKTsKICAgICAgICAgICAgY3Jvc3Muc3R5bGUuZGlzcGxheSA9ICcnOwogICAgICAgICAgICBtYXJrZXIuc2V0QXR0cmlidXRlKCdjeCcsIHgoaSkpOwogICAgICAgICAgICBtYXJrZXIuc2V0QXR0cmlidXRlKCdjeScsIHkocG9pbnRzW2ldLnYpKTsKICAgICAgICAgICAgbWFya2VyLnN0eWxlLmRpc3BsYXkgPSAnJzsKICAgICAgICAgICAgdGlwVmFsdWUudGV4dENvbnRlbnQgPSBOdW1iZXIocG9pbnRzW2ldLnYpLnRvTG9jYWxlU3RyaW5nKCdlbi1VUycpICsgJyAnICsgdW5pdDsKICAgICAgICAgICAgdGlwRGF0ZS50ZXh0Q29udGVudCA9IHBvaW50c1tpXS5kOwogICAgICAgICAgICB0aXAuc3R5bGUuZGlzcGxheSA9ICdibG9jayc7CiAgICAgICAgICAgIHZhciBjcm9zc0xlZnQgPSB4KGkpICogcmVjdC53aWR0aCAvIHdpZHRoICsgNjsKICAgICAgICAgICAgdmFyIGxlZnQgPSBpID4gbGFzdCAvIDIgPyBjcm9zc0xlZnQgLSB0aXAub2Zmc2V0V2lkdGggLSAxMiA6IGNyb3NzTGVmdCArIDEyOwogICAgICAgICAgICB0aXAuc3R5bGUubGVmdCA9IE1hdGgubWF4KDQsIE1hdGgubWluKGxlZnQsIGJveC5jbGllbnRXaWR0aCAtIHRpcC5vZmZzZXRXaWR0aCAtIDQpKSArICdweCc7CiAgICAgICAgfTsKICAgICAgICB2YXIgaGlkZSA9IGZ1bmN0aW9uICgpIHsKICAgICAgICAgICAgY3Jvc3Muc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICAgICAgICAgICAgbWFya2VyLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgICAgICAgICAgIHRpcC5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOwogICAgICAgIH07CiAgICAgICAgaGl0LmFkZEV2ZW50TGlzdGVuZXIoJ3BvaW50ZXJtb3ZlJywgc2hvdyk7CiAgICAgICAgaGl0LmFkZEV2ZW50TGlzdGVuZXIoJ3BvaW50ZXJkb3duJywgc2hvdyk7CiAgICAgICAgaGl0LmFkZEV2ZW50TGlzdGVuZXIoJ3BvaW50ZXJsZWF2ZScsIGhpZGUpOwogICAgfTsKCiAgICB2YXIgYm94ZXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcuZGF5LWNoYXJ0Jyk7CiAgICB2YXIgdG90YWxzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLmNoYXJ0LXRvdGFsJyk7CiAgICB2YXIgZ3JpZCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5jaGFydC1ncmlkJyk7CiAgICBib3hlcy5mb3JFYWNoKGRyYXcpOwoKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5yYW5nZS10YWJzIGEnKS5mb3JFYWNoKGZ1bmN0aW9uIChsaW5rKSB7CiAgICAgICAgbGluay5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGZ1bmN0aW9uIChldmVudCkgewogICAgICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpOwogICAgICAgICAgICBpZiAobGluay5jbGFzc0xpc3QuY29udGFpbnMoJ2FjdGl2ZScpIHx8IGdyaWQuY2xhc3NMaXN0LmNvbnRhaW5zKCdsb2FkaW5nJykpIHJldHVybjsKICAgICAgICAgICAgdmFyIHVybCA9IG5ldyBVUkwobGluay5ocmVmKTsKICAgICAgICAgICAgdXJsLmhhc2ggPSAnJzsKICAgICAgICAgICAgdXJsLnNlYXJjaFBhcmFtcy5zZXQoJ2FqYXgnLCAnMScpOwogICAgICAgICAgICBncmlkLmNsYXNzTGlzdC5hZGQoJ2xvYWRpbmcnKTsKICAgICAgICAgICAgZmV0Y2godXJsLCB7IGNyZWRlbnRpYWxzOiAnc2FtZS1vcmlnaW4nIH0pCiAgICAgICAgICAgICAgICAudGhlbihmdW5jdGlvbiAocmVzcG9uc2UpIHsgcmV0dXJuIHJlc3BvbnNlLmpzb24oKTsgfSkKICAgICAgICAgICAgICAgIC50aGVuKGZ1bmN0aW9uIChjaGFydHMpIHsKICAgICAgICAgICAgICAgICAgICBjaGFydHMuZm9yRWFjaChmdW5jdGlvbiAoY2hhcnQsIGkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgYm94ZXNbaV0uZGF0YXNldC5zZXJpZXMgPSBKU09OLnN0cmluZ2lmeShjaGFydC5wb2ludHMpOwogICAgICAgICAgICAgICAgICAgICAgICB0b3RhbHNbaV0udGV4dENvbnRlbnQgPSBjaGFydC50b3RhbDsKICAgICAgICAgICAgICAgICAgICAgICAgZHJhdyhib3hlc1tpXSk7CiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLnJhbmdlLXRhYnMgYS5hY3RpdmUnKS5mb3JFYWNoKGZ1bmN0aW9uIChhY3RpdmUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWN0aXZlLmNsYXNzTGlzdC5yZW1vdmUoJ2FjdGl2ZScpOwogICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgICAgIGxpbmsuY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7CiAgICAgICAgICAgICAgICAgICAgdXJsLnNlYXJjaFBhcmFtcy5kZWxldGUoJ2FqYXgnKTsKICAgICAgICAgICAgICAgICAgICBoaXN0b3J5LnJlcGxhY2VTdGF0ZShudWxsLCAnJywgdXJsLnBhdGhuYW1lICsgdXJsLnNlYXJjaCk7CiAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICAgICAgLmNhdGNoKGZ1bmN0aW9uICgpIHsKICAgICAgICAgICAgICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9IGxpbmsuaHJlZjsKICAgICAgICAgICAgICAgIH0pCiAgICAgICAgICAgICAgICAuZmluYWxseShmdW5jdGlvbiAoKSB7CiAgICAgICAgICAgICAgICAgICAgZ3JpZC5jbGFzc0xpc3QucmVtb3ZlKCdsb2FkaW5nJyk7CiAgICAgICAgICAgICAgICB9KTsKICAgICAgICB9KTsKICAgIH0pOwogICAgdmFyIHJlc2l6ZVRpbWVyOwogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Jlc2l6ZScsIGZ1bmN0aW9uICgpIHsKICAgICAgICBjbGVhclRpbWVvdXQocmVzaXplVGltZXIpOwogICAgICAgIHJlc2l6ZVRpbWVyID0gc2V0VGltZW91dChmdW5jdGlvbiAoKSB7IGJveGVzLmZvckVhY2goZHJhdyk7IH0sIDE1MCk7CiAgICB9KTsKfSkoKTsK
+(function () {
+    var svgNs = 'http://www.w3.org/2000/svg';
+    var chartIndex = 0;
+
+    var make = function (name, attrs, parent) {
+        var node = document.createElementNS(svgNs, name);
+        Object.keys(attrs).forEach(function (key) {
+            node.setAttribute(key, attrs[key]);
+        });
+        parent.appendChild(node);
+        return node;
+    };
+
+    var compact = function (value) {
+        var abs = Math.abs(value);
+        if (abs >= 1e9) return +(value / 1e9).toFixed(1) + 'B';
+        if (abs >= 1e6) return +(value / 1e6).toFixed(1) + 'M';
+        if (abs >= 1e3) return +(value / 1e3).toFixed(1) + 'K';
+        return String(value);
+    };
+
+    var niceMax = function (max) {
+        if (max <= 0) return 4;
+        var magnitude = Math.pow(10, Math.floor(Math.log10(max / 4)));
+        var steps = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10];
+        for (var i = 0; i < steps.length; i++) {
+            if (magnitude * steps[i] * 4 >= max) return magnitude * steps[i] * 4;
+        }
+        return magnitude * 40;
+    };
+
+    var draw = function (box) {
+        var points = JSON.parse(box.dataset.series || '[]');
+        var unit = box.dataset.unit || '';
+        var gradientId = box.dataset.gradientId || (box.dataset.gradientId = 'dayChartFill' + chartIndex++);
+        box.textContent = '';
+        if (!points.length) return;
+
+        var width = box.clientWidth - 12;
+        var height = box.clientHeight - 12;
+        var pad = { left: 40, right: 10, top: 8, bottom: 22 };
+        var plotWidth = width - pad.left - pad.right;
+        var plotHeight = height - pad.top - pad.bottom;
+        var top = niceMax(Math.max.apply(null, points.map(function (p) { return p.v; })));
+        var x = function (i) { return pad.left + (points.length === 1 ? plotWidth / 2 : i * plotWidth / (points.length - 1)); };
+        var y = function (v) { return pad.top + plotHeight - v / top * plotHeight; };
+
+        var svg = make('svg', { viewBox: '0 0 ' + width + ' ' + height, 'aria-hidden': 'true' }, box);
+        var gradient = make('linearGradient', { id: gradientId, x1: '0', y1: '0', x2: '0', y2: '1' }, make('defs', {}, svg));
+        make('stop', { offset: '0%', style: 'stop-color:var(--ac);stop-opacity:.32' }, gradient);
+        make('stop', { offset: '100%', style: 'stop-color:var(--ac);stop-opacity:0' }, gradient);
+
+        for (var t = 0; t <= 4; t++) {
+            var tickValue = top / 4 * t;
+            make('line', { class: 'grid-line', x1: pad.left, x2: width - pad.right, y1: y(tickValue), y2: y(tickValue) }, svg);
+            make('text', { class: 'axis-text', x: pad.left - 6, y: y(tickValue) + 3, 'text-anchor': 'end' }, svg).textContent = compact(tickValue);
+        }
+        [0, 1, 2, 3, 4].map(function (part) { return Math.round(part * (points.length - 1) / 4); }).filter(function (i, pos, list) { return list.indexOf(i) === pos; }).forEach(function (i) {
+            var anchor = i === 0 ? 'start' : (i === points.length - 1 ? 'end' : 'middle');
+            make('text', { class: 'axis-text', x: x(i), y: height - 6, 'text-anchor': anchor }, svg).textContent = points[i].d;
+        });
+
+        var line = points.map(function (p, i) { return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(p.v).toFixed(1); }).join(' ');
+        make('path', { d: line + ' L' + x(points.length - 1).toFixed(1) + ' ' + y(0) + ' L' + x(0) + ' ' + y(0) + ' Z', fill: 'url(#' + gradientId + ')' }, svg);
+        make('path', { class: 'series-line', d: line }, svg);
+        var last = points.length - 1;
+        make('circle', { class: 'series-dot', cx: x(last), cy: y(points[last].v), r: 4 }, svg);
+
+        var cross = make('line', { class: 'cross-line', y1: pad.top, y2: pad.top + plotHeight, style: 'display:none' }, svg);
+        var marker = make('circle', { class: 'series-dot', r: 5, style: 'display:none' }, svg);
+        var hit = make('rect', { x: pad.left, y: 0, width: plotWidth, height: height, fill: 'transparent' }, svg);
+
+        var tip = document.createElement('div');
+        tip.className = 'chart-tip';
+        var tipValue = document.createElement('b');
+        var tipDate = document.createElement('span');
+        tip.appendChild(tipValue);
+        tip.appendChild(tipDate);
+        box.appendChild(tip);
+
+        var show = function (event) {
+            var rect = svg.getBoundingClientRect();
+            var pointerX = (event.clientX - rect.left) * width / rect.width;
+            var i = Math.max(0, Math.min(last, Math.round((pointerX - pad.left) / plotWidth * last)));
+            cross.setAttribute('x1', x(i));
+            cross.setAttribute('x2', x(i));
+            cross.style.display = '';
+            marker.setAttribute('cx', x(i));
+            marker.setAttribute('cy', y(points[i].v));
+            marker.style.display = '';
+            tipValue.textContent = Number(points[i].v).toLocaleString('en-US') + ' ' + unit;
+            tipDate.textContent = points[i].d;
+            tip.style.display = 'block';
+            var crossLeft = x(i) * rect.width / width + 6;
+            var left = i > last / 2 ? crossLeft - tip.offsetWidth - 12 : crossLeft + 12;
+            tip.style.left = Math.max(4, Math.min(left, box.clientWidth - tip.offsetWidth - 4)) + 'px';
+        };
+        var hide = function () {
+            cross.style.display = 'none';
+            marker.style.display = 'none';
+            tip.style.display = 'none';
+        };
+        hit.addEventListener('pointermove', show);
+        hit.addEventListener('pointerdown', show);
+        hit.addEventListener('pointerleave', hide);
+    };
+
+    var boxes = document.querySelectorAll('.day-chart');
+    var totals = document.querySelectorAll('.chart-total');
+    var grid = document.querySelector('.chart-grid');
+    boxes.forEach(draw);
+
+    document.querySelectorAll('.range-tabs a').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (link.classList.contains('active') || grid.classList.contains('loading')) return;
+            var url = new URL(link.href);
+            url.hash = '';
+            url.searchParams.set('ajax', '1');
+            grid.classList.add('loading');
+            fetch(url, { credentials: 'same-origin' })
+                .then(function (response) { return response.json(); })
+                .then(function (charts) {
+                    charts.forEach(function (chart, i) {
+                        boxes[i].dataset.series = JSON.stringify(chart.points);
+                        totals[i].textContent = chart.total;
+                        draw(boxes[i]);
+                    });
+                    document.querySelectorAll('.range-tabs a.active').forEach(function (active) {
+                        active.classList.remove('active');
+                    });
+                    link.classList.add('active');
+                    url.searchParams.delete('ajax');
+                    history.replaceState(null, '', url.pathname + url.search);
+                })
+                .catch(function () {
+                    window.location.href = link.href;
+                })
+                .finally(function () {
+                    grid.classList.remove('loading');
+                });
+        });
+    });
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () { boxes.forEach(draw); }, 150);
+    });
+})();

@@ -1,1 +1,19 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vY29uZmlnLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9ib3RhcGkucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL1NjaGVtYS5waHAnOwoKZ2xvYmFsICRwZG8sICRhZG1pbm51bWJlcjsKCiRzY2hlbWEgPSBuZXcgU2NoZW1hKCRwZG8sIFsKICAgICdhZG1pbm51bWJlcicgPT4gJGFkbWlubnVtYmVyLAogICAgJ3RleHRib3RsYW5nJyA9PiBzdGF0aWMgZm4oKSA9PiBsYW5ndWFnZWNoYW5nZSgpLApdKTsKCiRzY2hlbWEtPmFwcGx5VGFibGVzKF9fRElSX18gLiAnL3RhYmxlcycsIHJlcXVpcmUgX19ESVJfXyAuICcvdGFibGVzLnBocCcpOwokc2NoZW1hLT5ydW5NaWdyYXRpb25zKF9fRElSX18gLiAnL21pZ3JhdGlvbnMnKTsKJHNjaGVtYS0+YXBwbHlJbmRleGVzKHJlcXVpcmUgX19ESVJfXyAuICcvaW5kZXhlcy5waHAnKTsKCnJldHVybiAkc2NoZW1hOwo=
+<?php
+
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/Schema.php';
+
+global $pdo, $adminnumber;
+
+$schema = new Schema($pdo, [
+    'adminnumber' => $adminnumber,
+    'textbotlang' => static fn() => languagechange(),
+]);
+
+$schema->applyTables(__DIR__ . '/tables', require __DIR__ . '/tables.php');
+$schema->runMigrations(__DIR__ . '/migrations');
+$schema->applyIndexes(require __DIR__ . '/indexes.php');
+
+return $schema;

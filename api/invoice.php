@@ -1,1 +1,332 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKaGVhZGVyKCdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKaW5pX3NldCgnZGVmYXVsdF9jaGFyc2V0JywgJ1VURi04Jyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CgokZXJyb3JyZXBvcnQgPSB0b3BpY0lkKCdlcnJvcnJlcG9ydCcpOwokc2V0dGluZyA9IHNlbGVjdCgic2V0dGluZyIsICIqIik7CgpsaXN0KCRoZWFkZXJzLCAkZGF0YSwgJGFjdGlvbikgPSBhcGlSZXF1ZXN0Q29udGV4dCgpOwokbWV0aG9kID0gJF9TRVJWRVJbJ1JFUVVFU1RfTUVUSE9EJ107CgpmdW5jdGlvbiBpbnZfaW52b2ljZXMoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgJHBhZ2luZyA9IHBhZ2luYXRpb25QYXJhbXMoJGRhdGEpOwogICAgJGxpbWl0ID0gJHBhZ2luZ1snbGltaXQnXTsKICAgICRwYWdlID0gJHBhZ2luZ1sncGFnZSddOwogICAgJG9mZnNldCA9ICRwYWdpbmdbJ29mZnNldCddOwogICAgJHEgPSAkcGFnaW5nWydxJ107CgogICAgdHJ5IHsKICAgICAgICAkc2VhcmNoID0gIiUkcSUiOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIENPVU5UKCopIGFzIHRvdGFsIEZST00gaW52b2ljZSBXSEVSRSAoaWRfdXNlciBMSUtFIDppZF91c2VyIE9SIHVzZXJuYW1lIExJS0UgOnVzZXJuYW1lIE9SIG5vdGUgTElLRSA6bm90ZSkiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJzppZF91c2VyJyA9PiAkc2VhcmNoLCAnOnVzZXJuYW1lJyA9PiAkc2VhcmNoLCAnOm5vdGUnID0+ICRzZWFyY2hdKTsKICAgICAgICAkdG90YWxfcmVjb3JkID0gKGludCkgJHN0bXQtPmZldGNoQ29sdW1uKCk7CiAgICAgICAgJHRvdGFsUGFnZXMgPSAoaW50KSBjZWlsKCR0b3RhbF9yZWNvcmQgLyAkbGltaXQpOwoKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBpZF9pbnZvaWNlIGFzIGlkLCBpZF91c2VyLCB1c2VybmFtZSwgU2VydmljZV9sb2NhdGlvbixuYW1lX3Byb2R1Y3QsU3RhdHVzIEZST00gaW52b2ljZSBXSEVSRSAoIGlkX3VzZXIgIExJS0UgQ09OQ0FUKCclJywgOmlkX3VzZXIsICclJykgT1IgdXNlcm5hbWUgIExJS0UgQ09OQ0FUKCclJywgOnVzZXJuYW1lLCAnJScpIE9SIG5vdGUgIExJS0UgQ09OQ0FUKCclJywgOm5vdGUsICclJykpIE9SREVSIEJZIHRpbWVfc2VsbCBERVNDIExJTUlUIDpsaW1pdCBPRkZTRVQgOm9mZnNldCIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzppZF91c2VyJywgJHEsIFBETzo6UEFSQU1fU1RSKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6dXNlcm5hbWUnLCAkcSwgUERPOjpQQVJBTV9TVFIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzpub3RlJywgJHEsIFBETzo6UEFSQU1fU1RSKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6bGltaXQnLCAkbGltaXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6b2Zmc2V0JywgJG9mZnNldCwgUERPOjpQQVJBTV9JTlQpOwogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgJGludm9pY2VzID0gJHN0bXQtPmZldGNoQWxsKFBETzo6RkVUQ0hfQVNTT0MpOwoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnaW52b2ljZXMnID0+ICRpbnZvaWNlcywKICAgICAgICAgICAgJ3BhZ2luYXRpb24nID0+IFsKICAgICAgICAgICAgICAgICd0b3RhbF9yZWNvcmQnID0+ICR0b3RhbF9yZWNvcmQsCiAgICAgICAgICAgICAgICAndG90YWxfcGFnZXMnID0+ICR0b3RhbFBhZ2VzLAogICAgICAgICAgICAgICAgJ2N1cnJlbnRfcGFnZScgPT4gJHBhZ2UsCiAgICAgICAgICAgICAgICAncGVyX3BhZ2UnID0+ICRsaW1pdAogICAgICAgICAgICBdCiAgICAgICAgXSk7CiAgICB9IGNhdGNoIChFeGNlcHRpb24gJGUpIHsKICAgICAgICBlcnJvcl9sb2coIkRhdGFiYXNlIGVycm9yIGluIGludm9pY2VzOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkRhdGFiYXNlIGVycm9yIG9jY3VycmVkIiwgW10sIDUwMCk7CiAgICB9Cn0KCmZ1bmN0aW9uIGludl9zZXJ2aWNlcyhhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHZhbGlkYXRlTWV0aG9kKCdHRVQnLCAkbWV0aG9kKTsKCiAgICAkcGFnaW5nID0gcGFnaW5hdGlvblBhcmFtcygkZGF0YSk7CiAgICAkbGltaXQgPSAkcGFnaW5nWydsaW1pdCddOwogICAgJHBhZ2UgPSAkcGFnaW5nWydwYWdlJ107CiAgICAkb2Zmc2V0ID0gJHBhZ2luZ1snb2Zmc2V0J107CiAgICAkcSA9ICRwYWdpbmdbJ3EnXTsKCiAgICB0cnkgewogICAgICAgICRzZWFyY2ggPSAiJSRxJSI7CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgQ09VTlQoKikgYXMgdG90YWwgRlJPTSBzZXJ2aWNlX290aGVyIFdIRVJFIChpZF91c2VyIExJS0UgOmlkX3VzZXIgT1IgdXNlcm5hbWUgTElLRSA6dXNlcm5hbWUpIEFORCAoc3RhdHVzID0gJ3BhaWQnIE9SIHN0YXR1cyBJUyBOVUxMKSIpOwogICAgICAgICRzdG10LT5leGVjdXRlKFsnOmlkX3VzZXInID0+ICRzZWFyY2gsICc6dXNlcm5hbWUnID0+ICRzZWFyY2hdKTsKICAgICAgICAkdG90YWxfcmVjb3JkID0gKGludCkgJHN0bXQtPmZldGNoQ29sdW1uKCk7CiAgICAgICAgJHRvdGFsUGFnZXMgPSAoaW50KSBjZWlsKCR0b3RhbF9yZWNvcmQgLyAkbGltaXQpOwoKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCAqIEZST00gc2VydmljZV9vdGhlciBXSEVSRSAoIGlkX3VzZXIgIExJS0UgQ09OQ0FUKCclJywgOmlkX3VzZXIsICclJykgT1IgdXNlcm5hbWUgIExJS0UgQ09OQ0FUKCclJywgOnVzZXJuYW1lLCAnJScpKSBBTkQgKHN0YXR1cyA9ICdwYWlkJyBPUiBzdGF0dXMgSVMgTlVMTCkgT1JERVIgQlkgdGltZSBERVNDIExJTUlUIDpsaW1pdCBPRkZTRVQgOm9mZnNldCIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzppZF91c2VyJywgJHEsIFBETzo6UEFSQU1fU1RSKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6dXNlcm5hbWUnLCAkcSwgUERPOjpQQVJBTV9TVFIpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzpsaW1pdCcsICRsaW1pdCwgUERPOjpQQVJBTV9JTlQpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzpvZmZzZXQnLCAkb2Zmc2V0LCBQRE86OlBBUkFNX0lOVCk7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoKTsKICAgICAgICAkaW52b2ljZXMgPSAkc3RtdC0+ZmV0Y2hBbGwoUERPOjpGRVRDSF9BU1NPQyk7CgogICAgICAgIHNlbmRKc29uUmVzcG9uc2UodHJ1ZSwgIlN1Y2Nlc3NmdWwiLCBbCiAgICAgICAgICAgICdzZXJ2aWNlcycgPT4gJGludm9pY2VzLAogICAgICAgICAgICAncGFnaW5hdGlvbicgPT4gWwogICAgICAgICAgICAgICAgJ3RvdGFsX3JlY29yZCcgPT4gJHRvdGFsX3JlY29yZCwKICAgICAgICAgICAgICAgICd0b3RhbF9wYWdlcycgPT4gJHRvdGFsUGFnZXMsCiAgICAgICAgICAgICAgICAnY3VycmVudF9wYWdlJyA9PiAkcGFnZSwKICAgICAgICAgICAgICAgICdwZXJfcGFnZScgPT4gJGxpbWl0CiAgICAgICAgICAgIF0KICAgICAgICBdKTsKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRGF0YWJhc2UgZXJyb3IgaW4gc2VydmljZXM6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGF0YWJhc2UgZXJyb3Igb2NjdXJyZWQiLCBbXSwgNTAwKTsKICAgIH0KfQoKZnVuY3Rpb24gaW52X2ludm9pY2UoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbywgJHRleHRib3RsYW5nLCAkTWFuYWdlUGFuZWw7CgogICAgdmFsaWRhdGVNZXRob2QoJ0dFVCcsICRtZXRob2QpOwogICAgaWYgKCFpc3NldCgkZGF0YVsnaWRfaW52b2ljZSddKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpZF9pbnZvaWNlIGVtcHR5IiwgW10pOwogICAgfQoKICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIGlkX2ludm9pY2UsIGlkX3VzZXIsIHVzZXJuYW1lLCBTZXJ2aWNlX2xvY2F0aW9uLCB0aW1lX3NlbGwsIG5hbWVfcHJvZHVjdCwgcHJpY2VfcHJvZHVjdCxTZXJ2aWNlX3RpbWUsU2VydmljZV90aW1lLFZvbHVtZSwgU3RhdHVzLCBub3RlLCByZWZyYWwgRlJPTSBpbnZvaWNlIFdIRVJFIGlkX2ludm9pY2UgPSA6aWRfaW52b2ljZSIpOwogICAgJHN0bXQtPmV4ZWN1dGUoWyc6aWRfaW52b2ljZScgPT4gJGRhdGFbJ2lkX2ludm9pY2UnXV0pOwogICAgJGludm9pY2UgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQyk7CgogICAgaWYgKCRpbnZvaWNlID09PSBmYWxzZSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJ1c2VyIG5vdCBmb3VuZCIsIFtdKTsKICAgIH0gZWxzZSB7CiAgICAgICAgJHVzZXJfZGF0YSA9IHNlbGVjdCgidXNlciIsICIqIiwgImlkIiwgJGludm9pY2VbJ2lkX3VzZXInXSwgInNlbGVjdCIpOwogICAgICAgIGlmICghaXNfYXJyYXkoJHVzZXJfZGF0YSkpIHsKICAgICAgICAgICAgJHVzZXJfZGF0YSA9IFsnbnVtYmVyJyA9PiBudWxsLCAnYWdlbnQnID0+IG51bGxdOwogICAgICAgIH0KICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBTVU0ocHJpY2VfcHJvZHVjdCkgYXMgdG90YWxfb3JkZXIsQ09VTlQodXNlcm5hbWUpIGFzIGNvdW50X29yZGVyIEZST00gaW52b2ljZSBXSEVSRSBuYW1lX3Byb2R1Y3QgIT0gOm5hbWVfcHJvZHVjdCBBTkQgIGlkX3VzZXIgPSA6dXNlcl9pZCBBTkQgU3RhdHVzICE9ICdVbnBhaWQnIik7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOnVzZXJfaWQnLCBpbnR2YWwoJGludm9pY2VbJ2lkX3VzZXInXSksIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6bmFtZV9wcm9kdWN0JywgJHRleHRib3RsYW5nWydjb21tb24nXVsnbGFiZWxzJ11bJ3Rlc3RTZXJ2aWNlTmFtZSddLCBQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoKTsKICAgICAgICAkb3JkZXJfZmluY2UgPSAkc3RtdC0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQyk7CiAgICAgICAgJGRhdGFfdXNlciA9ICRNYW5hZ2VQYW5lbC0+RGF0YVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgICAgICRpbnZvaWNlWydudW1iZXInXSA9ICR1c2VyX2RhdGFbJ251bWJlciddOwogICAgICAgICRpbnZvaWNlWydhZ2VudCddID0gJHVzZXJfZGF0YVsnYWdlbnQnXTsKICAgICAgICAkaW52b2ljZVsnY291bnRfb3JkZXInXSA9ICRvcmRlcl9maW5jZVsnY291bnRfb3JkZXInXTsKICAgICAgICAkaW52b2ljZVsndG90YWxfb3JkZXInXSA9ICRvcmRlcl9maW5jZVsndG90YWxfb3JkZXInXTsKICAgICAgICAkaW52b2ljZVsndXNlcl9kYXRhJ10gPSAkZGF0YV91c2VyOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UodHJ1ZSwgIlN1Y2Nlc3NmdWwiLCAkaW52b2ljZSk7CiAgICB9Cn0KCmZ1bmN0aW9uIGludl9yZW1vdmVfc2VydmljZShhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvLCAkTWFuYWdlUGFuZWw7CgogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKICAgIGlmICghaXNzZXQoJGRhdGFbJ2lkX2ludm9pY2UnXSkpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiaWRfaW52b2ljZSBlbXB0eSIsIFtdKTsKICAgIH0KICAgICRpbnZvaWNlID0gc2VsZWN0KCJpbnZvaWNlIiwgIioiLCAiaWRfaW52b2ljZSIsICRkYXRhWydpZF9pbnZvaWNlJ10sICJzZWxlY3QiKTsKICAgIGlmICgkaW52b2ljZSA9PSBmYWxzZSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJJbnZhbGlkIElEX0lOVk9JQ0UiLCBbXSk7CiAgICB9CiAgICBpZiAoIWlzc2V0KCRkYXRhWyd0eXBlJ10pIHx8ICFpbl9hcnJheSgkZGF0YVsndHlwZSddLCBbJ29uZScsICd0b3cnLCAndGhyZWUnXSwgdHJ1ZSkpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAidHlwZSBlbXB0eSIsIFtdKTsKICAgIH0KICAgIGlmICgkZGF0YVsndHlwZSddID09ICJvbmUiKSB7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwgIlN0YXR1cyIsICJyZW1vdmVieWFkbWluIiwgImlkX2ludm9pY2UiLCAkZGF0YVsiaWRfaW52b2ljZSJdKTsKICAgICAgICAkTWFuYWdlUGFuZWwtPlJlbW92ZVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgfSBlbHNlaWYgKCRkYXRhWyd0eXBlJ10gPT0gInRvdyIpIHsKICAgICAgICAkcmVmdW5kID0gcmVxdWlyZUludCgkZGF0YSwgJ2Ftb3VudCcsIDApOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiVVBEQVRFIHVzZXIgU0VUIEJhbGFuY2UgPSAgQmFsYW5jZSArIDpiYWxhbmNlIFdIRVJFIGlkID0gOm1wMiIpOwogICAgICAgICRzdG10LT5leGVjdXRlKFsnOm1wMicgPT4gJGludm9pY2VbJ2lkX3VzZXInXSwgJzpiYWxhbmNlJyA9PiAkcmVmdW5kXSk7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwgIlN0YXR1cyIsICJyZW1vdmVieWFkbWluIiwgImlkX2ludm9pY2UiLCAkZGF0YVsiaWRfaW52b2ljZSJdKTsKICAgICAgICAkTWFuYWdlUGFuZWwtPlJlbW92ZVVzZXIoJGludm9pY2VbJ1NlcnZpY2VfbG9jYXRpb24nXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10pOwogICAgfSBlbHNlaWYgKCRkYXRhWyd0eXBlJ10gPT0gInRocmVlIikgewogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiREVMRVRFICBGUk9NIGludm9pY2UgV0hFUkUgaWRfaW52b2ljZSA9IDppZF9pbnZvaWNlIik7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoWydpZF9pbnZvaWNlJyA9PiAkZGF0YVsnaWRfaW52b2ljZSddXSk7CiAgICB9CiAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgJGludm9pY2UpOwp9CgpmdW5jdGlvbiBpbnZfaW52b2ljZV9hZGQoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbywgJHNldHRpbmcsICR0ZXh0Ym90bGFuZywgJE1hbmFnZVBhbmVsLCAkZXJyb3JyZXBvcnQ7CgogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKCiAgICByZXF1aXJlRmllbGRzKCRkYXRhLCBbJ2NoYXRfaWQnLCAndXNlcm5hbWUnLCAnY29kZV9wcm9kdWN0JywgJ2xvY2F0aW9uX2NvZGUnXSk7CgogICAgJGRhdGFbJ3VzZXJuYW1lJ10gPSBzdHJ0b2xvd2VyKCRkYXRhWyd1c2VybmFtZSddKTsKICAgIGlmICgkZGF0YVsnY29kZV9wcm9kdWN0J10gPT0gImN1c3RvbXZvbHVtZSIpIHsKICAgICAgICBpZiAoIWlzc2V0KCRkYXRhWyd0aW1lX3NlcnZpY2UnXSwgJGRhdGFbJ3ZvbHVtZV9zZXJ2aWNlJ10pIHx8ICFpc19udW1lcmljKCRkYXRhWyd0aW1lX3NlcnZpY2UnXSkgfHwgIWlzX251bWVyaWMoJGRhdGFbJ3ZvbHVtZV9zZXJ2aWNlJ10pKQogICAgICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiaW52YWxpZCB2YWx1ZSBzZXJ2aWNlIHRpbWUgb3Igdm9sdW1lIiwgW10pOwogICAgICAgICRwcm9kdWN0ID0gWwogICAgICAgICAgICAnbmFtZV9wcm9kdWN0JyA9PiAkdGV4dGJvdGxhbmdbJ2NvbW1vbiddWydsYWJlbHMnXVsnY3VzdG9tU2VydmljZSddLAogICAgICAgICAgICAnY29kZV9wcm9kdWN0JyA9PiAiY3VzdG9tdm9sdW1lIiwKICAgICAgICAgICAgJ1NlcnZpY2VfdGltZScgPT4gKGludCkgJGRhdGFbJ3RpbWVfc2VydmljZSddLAogICAgICAgICAgICAncHJpY2VfcHJvZHVjdCcgPT4gMSwKICAgICAgICAgICAgJ1ZvbHVtZV9jb25zdHJhaW50JyA9PiAoaW50KSAkZGF0YVsndm9sdW1lX3NlcnZpY2UnXSwKICAgICAgICBdOwogICAgfSBlbHNlIHsKICAgICAgICAkcHJvZHVjdCA9IHNlbGVjdCgicHJvZHVjdCIsICIqIiwgImNvZGVfcHJvZHVjdCIsICRkYXRhWydjb2RlX3Byb2R1Y3QnXSwgInNlbGVjdCIpOwogICAgfQogICAgaWYgKCEkcHJvZHVjdCkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJwcm9kdWN0IG5vdCBmb3VuZCIsIFtdKTsKICAgIH0KICAgICRpbnZvaWNlQ291bnQgPSBzZWxlY3QoImludm9pY2UiLCAiKiIsICJ1c2VybmFtZSIsICRkYXRhWyd1c2VybmFtZSddLCAiY291bnQiKTsKICAgIGlmICgkaW52b2ljZUNvdW50ID4gMCkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJVc2VyIGV4aXN0cyBpbiB0aGUgZGF0YWJhc2UuIiwgW10pOwogICAgfQogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwgIioiLCAiY29kZV9wYW5lbCIsICRkYXRhWydsb2NhdGlvbl9jb2RlJ10sICJzZWxlY3QiKTsKICAgIGlmICghJHBhbmVsKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgInBhbmVsIGNvZGUgbm90IGZvdW5kIiwgW10pOwogICAgfQogICAgJERhdGFVc2VyT3V0ID0gJE1hbmFnZVBhbmVsLT5EYXRhVXNlcigkcGFuZWxbJ25hbWVfcGFuZWwnXSwgJGRhdGFbJ3VzZXJuYW1lJ10pOwogICAgaWYgKCFpc19hcnJheSgkRGF0YVVzZXJPdXQpIHx8ICgkRGF0YVVzZXJPdXRbJ3N0YXR1cyddID8/IG51bGwpID09ICJVbnN1Y2Nlc3NmdWwiKSB7CiAgICAgICAgJGRhdGV0aW1lc3RlcCA9IHN0cnRvdGltZSgiKyIgLiAkcHJvZHVjdFsnU2VydmljZV90aW1lJ10gLiAiZGF5cyIpOwogICAgICAgICRkYXRldGltZXN0ZXAgPSAkcHJvZHVjdFsnU2VydmljZV90aW1lJ10gPT0gMCA/IDAgOiBzdHJ0b3RpbWUoZGF0ZSgiWS1tLWQgSDppOnMiLCAkZGF0ZXRpbWVzdGVwKSk7CiAgICAgICAgJGRhdGFjID0gYXJyYXkoCiAgICAgICAgICAgICdleHBpcmUnID0+ICRkYXRldGltZXN0ZXAsCiAgICAgICAgICAgICdkYXRhX2xpbWl0JyA9PiAkcHJvZHVjdFsnVm9sdW1lX2NvbnN0cmFpbnQnXSAqIHBvdygxMDI0LCAzKSwKICAgICAgICAgICAgJ2Zyb21faWQnID0+ICRkYXRhWydjaGF0X2lkJ10sCiAgICAgICAgICAgICd1c2VybmFtZScgPT4gIiIsCiAgICAgICAgICAgICd0eXBlJyA9PiAnYWRkIG9yZGVyIGJ5IGFkbWluJwogICAgICAgICk7CiAgICAgICAgJERhdGFVc2VyT3V0ID0gJE1hbmFnZVBhbmVsLT5jcmVhdGVVc2VyKCRwYW5lbFsnbmFtZV9wYW5lbCddLCAkcHJvZHVjdFsnY29kZV9wcm9kdWN0J10sICRkYXRhWyd1c2VybmFtZSddLCAkZGF0YWMpOwogICAgICAgIGlmICghaXNfYXJyYXkoJERhdGFVc2VyT3V0KSB8fCAoJERhdGFVc2VyT3V0Wyd1c2VybmFtZSddID8/IG51bGwpID09IG51bGwpIHsKICAgICAgICAgICAgc2VuZG1lc3NhZ2UoJGRhdGFbJ2NoYXRfaWQnXSwgJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnRncm91cCddWydlcnJvclN1YnNjcmlwdGlvbkNyZWF0ZUFwaSddLCBudWxsLCAnSFRNTCcpOwogICAgICAgICAgICAkZXJyb3JEZXRhaWwgPSBqc29uX2VuY29kZShpc19hcnJheSgkRGF0YVVzZXJPdXQpID8gKCREYXRhVXNlck91dFsnbXNnJ10gPz8gbnVsbCkgOiBudWxsKTsKICAgICAgICAgICAgJHRleHRlcnJvcyA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnRncm91cCddWydlcnJvckNvbmZpZ0NyZWF0ZVBhbmVsJ10sICRlcnJvckRldGFpbCwgJGRhdGFbJ2NoYXRfaWQnXSwgJHBhbmVsWyduYW1lX3BhbmVsJ10pOwogICAgICAgICAgICBzZW5kUmVwb3J0KCR0ZXh0ZXJyb3MsICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLCAkZXJyb3JyZXBvcnQpOwogICAgICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiZXJyb3IgaW4gY3JlYXRlIEFjY291bnQiLCBbXSwgMjAwKTsKCiAgICAgICAgfQogICAgfSBlbHNlIHsKICAgICAgICAkRGF0YVVzZXJPdXRbJ2NvbmZpZ3MnXSA9ICREYXRhVXNlck91dFsnbGlua3MnXSA/PyBudWxsOwogICAgfQogICAgJG5vdGlmY3Rpb25zID0ganNvbl9lbmNvZGUoYXJyYXkoCiAgICAgICAgJ3ZvbHVtZScgPT4gZmFsc2UsCiAgICAgICAgJ3RpbWUnID0+IGZhbHNlLAogICAgKSk7CgogICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJJTlNFUlQgSUdOT1JFIElOVE8gaW52b2ljZSAoaWRfdXNlciwgaWRfaW52b2ljZSwgdXNlcm5hbWUsIHRpbWVfc2VsbCwgU2VydmljZV9sb2NhdGlvbiwgbmFtZV9wcm9kdWN0LCBwcmljZV9wcm9kdWN0LCBWb2x1bWUsIFNlcnZpY2VfdGltZSwgU3RhdHVzLG5vdGlmY3Rpb25zKSBWQUxVRVMgKDppZF91c2VyLCA6aWRfaW52b2ljZSwgOnVzZXJuYW1lLCA6dGltZV9zZWxsLCA6c2VydmljZV9sb2NhdGlvbiwgOm5hbWVfcHJvZHVjdCwgOnByaWNlX3Byb2R1Y3QsIDp2b2x1bWUsIDpzZXJ2aWNlX3RpbWUsIDpzdGF0dXMsIDpub3RpZmN0aW9ucykiKTsKCiAgICAkcmFuZG9tU3RyaW5nID0gYmluMmhleChyYW5kb21fYnl0ZXMoNCkpOwoKICAgICRzdG10LT5leGVjdXRlKFsKICAgICAgICAnOmlkX3VzZXInID0+ICRkYXRhWydjaGF0X2lkJ10sCiAgICAgICAgJzppZF9pbnZvaWNlJyA9PiAkcmFuZG9tU3RyaW5nLAogICAgICAgICc6dXNlcm5hbWUnID0+ICRkYXRhWyd1c2VybmFtZSddLAogICAgICAgICc6dGltZV9zZWxsJyA9PiB0aW1lKCksCiAgICAgICAgJzpzZXJ2aWNlX2xvY2F0aW9uJyA9PiAkcGFuZWxbJ25hbWVfcGFuZWwnXSwKICAgICAgICAnOm5hbWVfcHJvZHVjdCcgPT4gJHByb2R1Y3RbJ25hbWVfcHJvZHVjdCddLAogICAgICAgICc6cHJpY2VfcHJvZHVjdCcgPT4gJHByb2R1Y3RbJ3ByaWNlX3Byb2R1Y3QnXSwKICAgICAgICAnOnZvbHVtZScgPT4gJHByb2R1Y3RbJ1ZvbHVtZV9jb25zdHJhaW50J10sCiAgICAgICAgJzpzZXJ2aWNlX3RpbWUnID0+ICRwcm9kdWN0WydTZXJ2aWNlX3RpbWUnXSwKICAgICAgICAnOnN0YXR1cycgPT4gJ2FjdGl2ZScsCiAgICAgICAgJzpub3RpZmN0aW9ucycgPT4gJG5vdGlmY3Rpb25zCiAgICBdKTsKCiAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIik7Cn0KCmZ1bmN0aW9uIGludl9jaGFuZ2Vfc3RhdHVzX2NvbmZpZyhhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkTWFuYWdlUGFuZWw7CgogICAgdmFsaWRhdGVNZXRob2QoJ1BPU1QnLCAkbWV0aG9kKTsKCiAgICByZXF1aXJlRmllbGRzKCRkYXRhLCBbJ2lkX2ludm9pY2UnXSk7CgogICAgJGludm9pY2UgPSBzZWxlY3QoImludm9pY2UiLCAiKiIsICJpZF9pbnZvaWNlIiwgJGRhdGFbJ2lkX2ludm9pY2UnXSwgInNlbGVjdCIpOwogICAgaWYgKCEkaW52b2ljZSkKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiaW52b2ljZSAgbm90IGZvdW5kIiwgW10sIDIwMCk7CiAgICAkRGF0YVVzZXJPdXQgPSAkTWFuYWdlUGFuZWwtPkRhdGFVc2VyKCRpbnZvaWNlWydTZXJ2aWNlX2xvY2F0aW9uJ10sICRpbnZvaWNlWyd1c2VybmFtZSddKTsKICAgICRjdXJyZW50U3RhdHVzID0gaXNfYXJyYXkoJERhdGFVc2VyT3V0KSA/ICgkRGF0YVVzZXJPdXRbJ3N0YXR1cyddID8/IG51bGwpIDogbnVsbDsKICAgIGlmICgkY3VycmVudFN0YXR1cyA9PT0gbnVsbCB8fCAkY3VycmVudFN0YXR1cyA9PSAib25faG9sZCIgfHwgJGN1cnJlbnRTdGF0dXMgPT0gIlVuc3VjY2Vzc2Z1bCIpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiU3RhdHVzIGNvbmZpZyBub3QgYWxsb3dlZCBmb3IgY2hhbmdlIHN0YXR1cyBjb25maWciLCBbXSwgMjAwKTsKICAgIH0KICAgICRkYXRhb3V0cHV0ID0gJE1hbmFnZVBhbmVsLT5DaGFuZ2Vfc3RhdHVzKCRpbnZvaWNlWyd1c2VybmFtZSddLCAkaW52b2ljZVsnU2VydmljZV9sb2NhdGlvbiddKTsKICAgIGlmICghaXNfYXJyYXkoJGRhdGFvdXRwdXQpIHx8ICgkZGF0YW91dHB1dFsnc3RhdHVzJ10gPz8gbnVsbCkgPT0gIlVuc3VjY2Vzc2Z1bCIpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAidW5zdWNjZXNzZnVsIGNoYW5nZSBzdGF0dXMiLCBbXSwgMjAwKTsKICAgIH0KICAgIGlmICgkaW52b2ljZVsnU3RhdHVzJ10gPT0gImRpc2FibGVieWFkbWluIikgewogICAgICAgIHVwZGF0ZSgiaW52b2ljZSIsICJTdGF0dXMiLCAiYWN0aXZlIiwgImlkX2ludm9pY2UiLCAkaW52b2ljZVsnaWRfaW52b2ljZSddKTsKICAgIH0gZWxzZSB7CiAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwgIlN0YXR1cyIsICJkaXNhYmxlYnlhZG1pbiIsICJpZF9pbnZvaWNlIiwgJGludm9pY2VbJ2lkX2ludm9pY2UnXSk7CiAgICB9CiAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIik7Cn0KCmZ1bmN0aW9uIGludl9leHRlbmRfc2VydmljZV9hZG1pbihhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvLCAkc2V0dGluZywgJHRleHRib3RsYW5nLCAkTWFuYWdlUGFuZWwsICRlcnJvcnJlcG9ydDsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnUE9TVCcsICRtZXRob2QpOwoKICAgIHJlcXVpcmVGaWVsZHMoJGRhdGEsIFsnaWRfaW52b2ljZSddKTsKICAgICR2b2x1bWVfc2VydmljZSA9IHJlcXVpcmVJbnQoJGRhdGEsICd2b2x1bWVfc2VydmljZScsIDApOwogICAgJHRpbWVfc2VydmljZSA9IHJlcXVpcmVJbnQoJGRhdGEsICd0aW1lX3NlcnZpY2UnLCAwKTsKCiAgICAkaW52b2ljZSA9IHNlbGVjdCgiaW52b2ljZSIsICIqIiwgImlkX2ludm9pY2UiLCAkZGF0YVsnaWRfaW52b2ljZSddLCAic2VsZWN0Iik7CiAgICBpZiAoISRpbnZvaWNlKQogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpbnZvaWNlICBub3QgZm91bmQiLCBbXSwgMjAwKTsKICAgICRwYW5lbCA9IHNlbGVjdCgibWFyemJhbl9wYW5lbCIsICIqIiwgIm5hbWVfcGFuZWwiLCAkaW52b2ljZVsnU2VydmljZV9sb2NhdGlvbiddLCAic2VsZWN0Iik7CiAgICBpZiAoISRwYW5lbCkKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiUGFuZWwgTm90IEZvdW5kIiwgW10sIDIwMCk7CiAgICAkZXh0ZW5kID0gJE1hbmFnZVBhbmVsLT5leHRlbmQoJHBhbmVsWydNZXRob2RleHRlbmQnXSwgJHZvbHVtZV9zZXJ2aWNlLCAkdGltZV9zZXJ2aWNlLCAkaW52b2ljZVsndXNlcm5hbWUnXSwgImN1c3RvbV92b2x1bWUiLCAkcGFuZWxbJ2NvZGVfcGFuZWwnXSk7CiAgICBpZiAoIWlzX2FycmF5KCRleHRlbmQpIHx8ICgkZXh0ZW5kWydzdGF0dXMnXSA/PyBmYWxzZSkgPT0gZmFsc2UpIHsKICAgICAgICAkZXh0ZW5kRXJyb3IgPSBqc29uX2VuY29kZShpc19hcnJheSgkZXh0ZW5kKSA/ICgkZXh0ZW5kWydtc2cnXSA/PyBudWxsKSA6IG51bGwpOwogICAgICAgICR0ZXh0cmVwb3J0cyA9IHNwcmludGYoJHRleHRib3RsYW5nWydBZG1pbiddWydyZXBvcnRncm91cCddWydlcnJvclJlbmV3U2VydmljZUFwaSddLCAkcGFuZWxbJ25hbWVfcGFuZWwnXSwgJGludm9pY2VbJ3VzZXJuYW1lJ10sICRleHRlbmRFcnJvcik7CiAgICAgICAgc2VuZG1lc3NhZ2UoJGludm9pY2VbJ2lkX3VzZXInXSwgJHRleHRib3RsYW5nWyd1c2VycyddWydleHRlbmQnXVsnZ2VuZXJpY0Vycm9yQXBpJ10sIG51bGwsICdIVE1MJyk7CiAgICAgICAgc2VuZFJlcG9ydCgkdGV4dHJlcG9ydHMsICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLCAkZXJyb3JyZXBvcnQpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJFcnJvciBpbiBleHRlbmQgc2VydmljZSIsIFtbanNvbl9kZWNvZGUoJGV4dGVuZEVycm9yLCB0cnVlKV1dLCAyMDApOwogICAgfQogICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJJTlNFUlQgSUdOT1JFIElOVE8gc2VydmljZV9vdGhlciAoaWRfdXNlciwgdXNlcm5hbWUsIHZhbHVlLCB0eXBlLCB0aW1lLCBwcmljZSwgb3V0cHV0KSBWQUxVRVMgKDppZF91c2VyLCA6dXNlcm5hbWUsIDp2YWx1ZSwgOnR5cGUsIDp0aW1lLCA6cHJpY2UsIDpvdXRwdXQpIik7CiAgICAkc3RtdC0+ZXhlY3V0ZShbCiAgICAgICAgJzppZF91c2VyJyA9PiAkaW52b2ljZVsnaWRfdXNlciddLAogICAgICAgICc6dXNlcm5hbWUnID0+ICRpbnZvaWNlWyd1c2VybmFtZSddLAogICAgICAgICc6dmFsdWUnID0+ICR2b2x1bWVfc2VydmljZSAuICJfIiAuICR0aW1lX3NlcnZpY2UsCiAgICAgICAgJzp0eXBlJyA9PiAiZXh0ZW5kX3VzZXJfYnlfYWRtaW4iLAogICAgICAgICc6dGltZScgPT4gZGF0ZSgnWS9tL2QgSDppOnMnKSwKICAgICAgICAnOnByaWNlJyA9PiAwLAogICAgICAgICc6b3V0cHV0JyA9PiBqc29uX2VuY29kZSgkZXh0ZW5kKSwKICAgIF0pOwogICAgdXBkYXRlKCJpbnZvaWNlIiwgIlN0YXR1cyIsICJhY3RpdmUiLCAiaWRfaW52b2ljZSIsICRkYXRhWydpZF9pbnZvaWNlJ10pOwogICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIpOwp9CgptYXRjaCAoJGFjdGlvbikgewogICAgJ2ludm9pY2VzJyA9PiBpbnZfaW52b2ljZXMoJGRhdGEsICRtZXRob2QpLAogICAgJ3NlcnZpY2VzJyA9PiBpbnZfc2VydmljZXMoJGRhdGEsICRtZXRob2QpLAogICAgJ2ludm9pY2UnID0+IGludl9pbnZvaWNlKCRkYXRhLCAkbWV0aG9kKSwKICAgICdyZW1vdmVfc2VydmljZScgPT4gaW52X3JlbW92ZV9zZXJ2aWNlKCRkYXRhLCAkbWV0aG9kKSwKICAgICdpbnZvaWNlX2FkZCcgPT4gaW52X2ludm9pY2VfYWRkKCRkYXRhLCAkbWV0aG9kKSwKICAgICdjaGFuZ2Vfc3RhdHVzX2NvbmZpZycgPT4gaW52X2NoYW5nZV9zdGF0dXNfY29uZmlnKCRkYXRhLCAkbWV0aG9kKSwKICAgICdleHRlbmRfc2VydmljZV9hZG1pbicgPT4gaW52X2V4dGVuZF9zZXJ2aWNlX2FkbWluKCRkYXRhLCAkbWV0aG9kKSwKICAgIGRlZmF1bHQgPT4gc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFjdGlvbiBJbnZhbGlkIiksCn07CgoKPz4=
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+$textbotlang = languagechange();
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+header('Content-Type: application/json');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+$ManagePanel = new ManagePanel();
+
+$errorreport = topicId('errorreport');
+$setting = select("setting", "*");
+
+list($headers, $data, $action) = apiRequestContext();
+$method = $_SERVER['REQUEST_METHOD'];
+
+function inv_invoices(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM invoice WHERE (id_user LIKE :id_user OR username LIKE :username OR note LIKE :note)");
+        $stmt->execute([':id_user' => $search, ':username' => $search, ':note' => $search]);
+        $total_record = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($total_record / $limit);
+
+        $stmt = $pdo->prepare("SELECT id_invoice as id, id_user, username, Service_location,name_product,Status FROM invoice WHERE ( id_user  LIKE CONCAT('%', :id_user, '%') OR username  LIKE CONCAT('%', :username, '%') OR note  LIKE CONCAT('%', :note, '%')) ORDER BY time_sell DESC LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':id_user', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':username', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':note', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $invoices = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        sendJsonResponse(true, "Successful", [
+            'invoices' => $invoices,
+            'pagination' => [
+                'total_record' => $total_record,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in invoices: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function inv_services(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM service_other WHERE (id_user LIKE :id_user OR username LIKE :username) AND (status = 'paid' OR status IS NULL)");
+        $stmt->execute([':id_user' => $search, ':username' => $search]);
+        $total_record = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($total_record / $limit);
+
+        $stmt = $pdo->prepare("SELECT * FROM service_other WHERE ( id_user  LIKE CONCAT('%', :id_user, '%') OR username  LIKE CONCAT('%', :username, '%')) AND (status = 'paid' OR status IS NULL) ORDER BY time DESC LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':id_user', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':username', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $invoices = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        sendJsonResponse(true, "Successful", [
+            'services' => $invoices,
+            'pagination' => [
+                'total_record' => $total_record,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in services: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function inv_invoice(array $data, string $method): void
+{
+    global $pdo, $textbotlang, $ManagePanel;
+
+    validateMethod('GET', $method);
+    if (!isset($data['id_invoice'])) {
+        sendJsonResponse(false, "id_invoice empty", []);
+    }
+
+    $stmt = $pdo->prepare("SELECT id_invoice, id_user, username, Service_location, time_sell, name_product, price_product,Service_time,Service_time,Volume, Status, note, refral FROM invoice WHERE id_invoice = :id_invoice");
+    $stmt->execute([':id_invoice' => $data['id_invoice']]);
+    $invoice = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($invoice === false) {
+        sendJsonResponse(false, "user not found", []);
+    } else {
+        $user_data = select("user", "*", "id", $invoice['id_user'], "select");
+        if (!is_array($user_data)) {
+            $user_data = ['number' => null, 'agent' => null];
+        }
+        $stmt = $pdo->prepare("SELECT SUM(price_product) as total_order,COUNT(username) as count_order FROM invoice WHERE name_product != :name_product AND  id_user = :user_id AND Status != 'Unpaid'");
+        $stmt->bindValue(':user_id', intval($invoice['id_user']), PDO::PARAM_INT);
+        $stmt->bindValue(':name_product', $textbotlang['common']['labels']['testServiceName'], PDO::PARAM_STR);
+        $stmt->execute();
+        $order_fince = $stmt->fetch(PDO::FETCH_ASSOC);
+        $data_user = $ManagePanel->DataUser($invoice['Service_location'], $invoice['username']);
+        $invoice['number'] = $user_data['number'];
+        $invoice['agent'] = $user_data['agent'];
+        $invoice['count_order'] = $order_fince['count_order'];
+        $invoice['total_order'] = $order_fince['total_order'];
+        $invoice['user_data'] = $data_user;
+        sendJsonResponse(true, "Successful", $invoice);
+    }
+}
+
+function inv_remove_service(array $data, string $method): void
+{
+    global $pdo, $ManagePanel;
+
+    validateMethod('POST', $method);
+    if (!isset($data['id_invoice'])) {
+        sendJsonResponse(false, "id_invoice empty", []);
+    }
+    $invoice = select("invoice", "*", "id_invoice", $data['id_invoice'], "select");
+    if ($invoice == false) {
+        sendJsonResponse(false, "Invalid ID_INVOICE", []);
+    }
+    if (!isset($data['type']) || !in_array($data['type'], ['one', 'tow', 'three'], true)) {
+        sendJsonResponse(false, "type empty", []);
+    }
+    if ($data['type'] == "one") {
+        update("invoice", "Status", "removebyadmin", "id_invoice", $data["id_invoice"]);
+        $ManagePanel->RemoveUser($invoice['Service_location'], $invoice['username']);
+    } elseif ($data['type'] == "tow") {
+        $refund = requireInt($data, 'amount', 0);
+        $stmt = $pdo->prepare("UPDATE user SET Balance =  Balance + :balance WHERE id = :mp2");
+        $stmt->execute([':mp2' => $invoice['id_user'], ':balance' => $refund]);
+        update("invoice", "Status", "removebyadmin", "id_invoice", $data["id_invoice"]);
+        $ManagePanel->RemoveUser($invoice['Service_location'], $invoice['username']);
+    } elseif ($data['type'] == "three") {
+        $stmt = $pdo->prepare("DELETE  FROM invoice WHERE id_invoice = :id_invoice");
+        $stmt->execute(['id_invoice' => $data['id_invoice']]);
+    }
+    sendJsonResponse(true, "Successful", $invoice);
+}
+
+function inv_invoice_add(array $data, string $method): void
+{
+    global $pdo, $setting, $textbotlang, $ManagePanel, $errorreport;
+
+    validateMethod('POST', $method);
+
+    requireFields($data, ['chat_id', 'username', 'code_product', 'location_code']);
+
+    $data['username'] = strtolower($data['username']);
+    if ($data['code_product'] == "customvolume") {
+        if (!isset($data['time_service'], $data['volume_service']) || !is_numeric($data['time_service']) || !is_numeric($data['volume_service']))
+            sendJsonResponse(false, "invalid value service time or volume", []);
+        $product = [
+            'name_product' => $textbotlang['common']['labels']['customService'],
+            'code_product' => "customvolume",
+            'Service_time' => (int) $data['time_service'],
+            'price_product' => 1,
+            'Volume_constraint' => (int) $data['volume_service'],
+        ];
+    } else {
+        $product = select("product", "*", "code_product", $data['code_product'], "select");
+    }
+    if (!$product) {
+        sendJsonResponse(false, "product not found", []);
+    }
+    $invoiceCount = select("invoice", "*", "username", $data['username'], "count");
+    if ($invoiceCount > 0) {
+        sendJsonResponse(false, "User exists in the database.", []);
+    }
+    $panel = select("marzban_panel", "*", "code_panel", $data['location_code'], "select");
+    if (!$panel) {
+        sendJsonResponse(false, "panel code not found", []);
+    }
+    $DataUserOut = $ManagePanel->DataUser($panel['name_panel'], $data['username']);
+    if (!is_array($DataUserOut) || ($DataUserOut['status'] ?? null) == "Unsuccessful") {
+        $datetimestep = strtotime("+" . $product['Service_time'] . "days");
+        $datetimestep = $product['Service_time'] == 0 ? 0 : strtotime(date("Y-m-d H:i:s", $datetimestep));
+        $datac = array(
+            'expire' => $datetimestep,
+            'data_limit' => $product['Volume_constraint'] * pow(1024, 3),
+            'from_id' => $data['chat_id'],
+            'username' => "",
+            'type' => 'add order by admin'
+        );
+        $DataUserOut = $ManagePanel->createUser($panel['name_panel'], $product['code_product'], $data['username'], $datac);
+        if (!is_array($DataUserOut) || ($DataUserOut['username'] ?? null) == null) {
+            sendmessage($data['chat_id'], $textbotlang['Admin']['reportgroup']['errorSubscriptionCreateApi'], null, 'HTML');
+            $errorDetail = json_encode(is_array($DataUserOut) ? ($DataUserOut['msg'] ?? null) : null);
+            $texterros = sprintf($textbotlang['Admin']['reportgroup']['errorConfigCreatePanel'], $errorDetail, $data['chat_id'], $panel['name_panel']);
+            sendReport($texterros, $setting['Channel_Report'], $errorreport);
+            sendJsonResponse(false, "error in create Account", [], 200);
+
+        }
+    } else {
+        $DataUserOut['configs'] = $DataUserOut['links'] ?? null;
+    }
+    $notifctions = json_encode(array(
+        'volume' => false,
+        'time' => false,
+    ));
+
+    $stmt = $pdo->prepare("INSERT IGNORE INTO invoice (id_user, id_invoice, username, time_sell, Service_location, name_product, price_product, Volume, Service_time, Status,notifctions) VALUES (:id_user, :id_invoice, :username, :time_sell, :service_location, :name_product, :price_product, :volume, :service_time, :status, :notifctions)");
+
+    $randomString = bin2hex(random_bytes(4));
+
+    $stmt->execute([
+        ':id_user' => $data['chat_id'],
+        ':id_invoice' => $randomString,
+        ':username' => $data['username'],
+        ':time_sell' => time(),
+        ':service_location' => $panel['name_panel'],
+        ':name_product' => $product['name_product'],
+        ':price_product' => $product['price_product'],
+        ':volume' => $product['Volume_constraint'],
+        ':service_time' => $product['Service_time'],
+        ':status' => 'active',
+        ':notifctions' => $notifctions
+    ]);
+
+    sendJsonResponse(true, "Successful");
+}
+
+function inv_change_status_config(array $data, string $method): void
+{
+    global $ManagePanel;
+
+    validateMethod('POST', $method);
+
+    requireFields($data, ['id_invoice']);
+
+    $invoice = select("invoice", "*", "id_invoice", $data['id_invoice'], "select");
+    if (!$invoice)
+        sendJsonResponse(false, "invoice  not found", [], 200);
+    $DataUserOut = $ManagePanel->DataUser($invoice['Service_location'], $invoice['username']);
+    $currentStatus = is_array($DataUserOut) ? ($DataUserOut['status'] ?? null) : null;
+    if ($currentStatus === null || $currentStatus == "on_hold" || $currentStatus == "Unsuccessful") {
+        sendJsonResponse(false, "Status config not allowed for change status config", [], 200);
+    }
+    $dataoutput = $ManagePanel->Change_status($invoice['username'], $invoice['Service_location']);
+    if (!is_array($dataoutput) || ($dataoutput['status'] ?? null) == "Unsuccessful") {
+        sendJsonResponse(false, "unsuccessful change status", [], 200);
+    }
+    if ($invoice['Status'] == "disablebyadmin") {
+        update("invoice", "Status", "active", "id_invoice", $invoice['id_invoice']);
+    } else {
+        update("invoice", "Status", "disablebyadmin", "id_invoice", $invoice['id_invoice']);
+    }
+    sendJsonResponse(true, "Successful");
+}
+
+function inv_extend_service_admin(array $data, string $method): void
+{
+    global $pdo, $setting, $textbotlang, $ManagePanel, $errorreport;
+
+    validateMethod('POST', $method);
+
+    requireFields($data, ['id_invoice']);
+    $volume_service = requireInt($data, 'volume_service', 0);
+    $time_service = requireInt($data, 'time_service', 0);
+
+    $invoice = select("invoice", "*", "id_invoice", $data['id_invoice'], "select");
+    if (!$invoice)
+        sendJsonResponse(false, "invoice  not found", [], 200);
+    $panel = select("marzban_panel", "*", "name_panel", $invoice['Service_location'], "select");
+    if (!$panel)
+        sendJsonResponse(false, "Panel Not Found", [], 200);
+    $extend = $ManagePanel->extend($panel['Methodextend'], $volume_service, $time_service, $invoice['username'], "custom_volume", $panel['code_panel']);
+    if (!is_array($extend) || ($extend['status'] ?? false) == false) {
+        $extendError = json_encode(is_array($extend) ? ($extend['msg'] ?? null) : null);
+        $textreports = sprintf($textbotlang['Admin']['reportgroup']['errorRenewServiceApi'], $panel['name_panel'], $invoice['username'], $extendError);
+        sendmessage($invoice['id_user'], $textbotlang['users']['extend']['genericErrorApi'], null, 'HTML');
+        sendReport($textreports, $setting['Channel_Report'], $errorreport);
+        sendJsonResponse(false, "Error in extend service", [[json_decode($extendError, true)]], 200);
+    }
+    $stmt = $pdo->prepare("INSERT IGNORE INTO service_other (id_user, username, value, type, time, price, output) VALUES (:id_user, :username, :value, :type, :time, :price, :output)");
+    $stmt->execute([
+        ':id_user' => $invoice['id_user'],
+        ':username' => $invoice['username'],
+        ':value' => $volume_service . "_" . $time_service,
+        ':type' => "extend_user_by_admin",
+        ':time' => date('Y/m/d H:i:s'),
+        ':price' => 0,
+        ':output' => json_encode($extend),
+    ]);
+    update("invoice", "Status", "active", "id_invoice", $data['id_invoice']);
+    sendJsonResponse(true, "Successful");
+}
+
+match ($action) {
+    'invoices' => inv_invoices($data, $method),
+    'services' => inv_services($data, $method),
+    'invoice' => inv_invoice($data, $method),
+    'remove_service' => inv_remove_service($data, $method),
+    'invoice_add' => inv_invoice_add($data, $method),
+    'change_status_config' => inv_change_status_config($data, $method),
+    'extend_service_admin' => inv_extend_service_admin($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};
+
+
+?>

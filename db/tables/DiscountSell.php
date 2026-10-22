@@ -1,1 +1,27 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgY29kZURpc2NvdW50IHZhcmNoYXIoMTAwMCkgTk9UIE5VTEwsCiAgICAgICAgcHJpY2UgdmFyY2hhcigyMDApIE5PVCBOVUxMLAogICAgICAgIGxpbWl0RGlzY291bnQgdmFyY2hhcig1MDApIE5PVCBOVUxMLAogICAgICAgIGFnZW50IHZhcmNoYXIoNTAwKSBOT1QgTlVMTCwKICAgICAgICB1c2VmaXJzdCB2YXJjaGFyKDEwMCkgTk9UIE5VTEwsCiAgICAgICAgdXNldXNlciB2YXJjaGFyKDEwMCkgTk9UIE5VTEwsCiAgICAgICAgY29kZV9wcm9kdWN0IHZhcmNoYXIoMTAwKSBOT1QgTlVMTCwKICAgICAgICBjb2RlX3BhbmVsIHZhcmNoYXIoMTAwKSBOT1QgTlVMTCwKICAgICAgICB0aW1lIHZhcmNoYXIoMTAwKSBOT1QgTlVMTCwKICAgICAgICB0eXBlIHZhcmNoYXIoMTAwKSBOT1QgTlVMTCwKICAgICAgICB1c2VkRGlzY291bnQgdmFyY2hhcig1MDApIE5PVCBOVUxMCiAgICAgICAgU1FMLAogICAgJ2NvbHVtbnMnID0+IFsKICAgICAgICBbJ2FnZW50JywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsndXNlZmlyc3QnLCBudWxsLCAnVkFSQ0hBUigxMDApJ10sCiAgICAgICAgWyd1c2V1c2VyJywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsnY29kZV9wcm9kdWN0JywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgICAgIFsnY29kZV9wYW5lbCcsIG51bGwsICdWQVJDSEFSKDEwMCknXSwKICAgICAgICBbJ3RpbWUnLCBudWxsLCAnVkFSQ0hBUigxMDApJ10sCiAgICAgICAgWyd0eXBlJywgbnVsbCwgJ1ZBUkNIQVIoMTAwKSddLAogICAgXSwKXTsK
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        codeDiscount varchar(1000) NOT NULL,
+        price varchar(200) NOT NULL,
+        limitDiscount varchar(500) NOT NULL,
+        agent varchar(500) NOT NULL,
+        usefirst varchar(100) NOT NULL,
+        useuser varchar(100) NOT NULL,
+        code_product varchar(100) NOT NULL,
+        code_panel varchar(100) NOT NULL,
+        time varchar(100) NOT NULL,
+        type varchar(100) NOT NULL,
+        usedDiscount varchar(500) NOT NULL
+        SQL,
+    'columns' => [
+        ['agent', null, 'VARCHAR(100)'],
+        ['usefirst', null, 'VARCHAR(100)'],
+        ['useuser', null, 'VARCHAR(100)'],
+        ['code_product', null, 'VARCHAR(100)'],
+        ['code_panel', null, 'VARCHAR(100)'],
+        ['time', null, 'VARCHAR(100)'],
+        ['type', null, 'VARCHAR(100)'],
+    ],
+];

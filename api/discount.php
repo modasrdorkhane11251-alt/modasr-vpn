@@ -1,1 +1,310 @@
-PD9waHAKCnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy91dGlscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKCmhlYWRlcignQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PVVURi04Jyk7CmRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FzaWEvVGVocmFuJyk7CmluaV9zZXQoJ2RlZmF1bHRfY2hhcnNldCcsICdVVEYtOCcpOwppbmlfc2V0KCdlcnJvcl9sb2cnLCAnZXJyb3JfbG9nJyk7CgpsaXN0KCRoZWFkZXJzLCAkZGF0YSwgJGFjdGlvbikgPSBhcGlSZXF1ZXN0Q29udGV4dCgpOwokbWV0aG9kID0gJF9TRVJWRVJbJ1JFUVVFU1RfTUVUSE9EJ107CiRzZXR0aW5nID0gc2VsZWN0KCJzZXR0aW5nIiwgIioiKTsKCmZ1bmN0aW9uIGRpc2NfZGlzY291bnRzKGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgZ2xvYmFsICRwZG87CgogICAgdmFsaWRhdGVNZXRob2QoJ0dFVCcsICRtZXRob2QpOwoKICAgICRwYWdpbmcgPSBwYWdpbmF0aW9uUGFyYW1zKCRkYXRhKTsKICAgICRsaW1pdCA9ICRwYWdpbmdbJ2xpbWl0J107CiAgICAkcGFnZSA9ICRwYWdpbmdbJ3BhZ2UnXTsKICAgICRvZmZzZXQgPSAkcGFnaW5nWydvZmZzZXQnXTsKICAgICRxID0gJHBhZ2luZ1sncSddOwoKICAgIHRyeSB7CiAgICAgICAgJHNlYXJjaCA9ICIlJHElIjsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIlNFTEVDVCBDT1VOVCgqKSBhcyB0b3RhbCBGUk9NIERpc2NvdW50IFdIRVJFIChjb2RlIExJS0UgOmNvZGVfZGlzY291bnQpIik7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoWyc6Y29kZV9kaXNjb3VudCcgPT4gJHNlYXJjaF0pOwogICAgICAgICR0b3RhbERpc2NvdW50ID0gKGludCkgJHN0bXQtPmZldGNoQ29sdW1uKCk7CiAgICAgICAgJHRvdGFsUGFnZXMgPSAoaW50KSBjZWlsKCR0b3RhbERpc2NvdW50IC8gJGxpbWl0KTsKICAgICAgICAkcXVlcnkgPSAiU0VMRUNUICogRlJPTSBEaXNjb3VudCBXSEVSRSAoY29kZSAgTElLRSBDT05DQVQoJyUnLCA6Y29kZV9kaXNjb3VudCwgJyUnKSkgT1JERVIgQlkgaWQgTElNSVQgOmxpbWl0IE9GRlNFVCA6b2Zmc2V0IjsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoJHF1ZXJ5KTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6Y29kZV9kaXNjb3VudCcsICRxLCBQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOmxpbWl0JywgJGxpbWl0LCBQRE86OlBBUkFNX0lOVCk7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgnOm9mZnNldCcsICRvZmZzZXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZSgpOwogICAgICAgICRkaXNjb3VudCA9ICRzdG10LT5mZXRjaEFsbChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnZGlzY291bnQnID0+ICRkaXNjb3VudCwKICAgICAgICAgICAgJ3BhZ2luYXRpb24nID0+IFsKICAgICAgICAgICAgICAgICd0b3RhbF9kaXNjb3VudCcgPT4gJHRvdGFsRGlzY291bnQsCiAgICAgICAgICAgICAgICAndG90YWxfcGFnZXMnID0+ICR0b3RhbFBhZ2VzLAogICAgICAgICAgICAgICAgJ2N1cnJlbnRfcGFnZScgPT4gJHBhZ2UsCiAgICAgICAgICAgICAgICAncGVyX3BhZ2UnID0+ICRsaW1pdAogICAgICAgICAgICBdCiAgICAgICAgXSk7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBkaXNjb3VudDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJEYXRhYmFzZSBlcnJvciBvY2N1cnJlZCIsIFtdLCA1MDApOwogICAgfQp9CgpmdW5jdGlvbiBkaXNjX2Rpc2NvdW50KGFycmF5ICRkYXRhLCBzdHJpbmcgJG1ldGhvZCk6IHZvaWQKewogICAgdmFsaWRhdGVNZXRob2QoJ0dFVCcsICRtZXRob2QpOwoKICAgIGlmICghaXNzZXQoJGRhdGFbJ2lkJ10pIHx8IGVtcHR5KCRkYXRhWydpZCddKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpZCBlbXB0eSIsIFtdKTsKICAgIH0KCiAgICB0cnkgewogICAgICAgICRkaXNjb3VudCA9IHNlbGVjdCgiRGlzY291bnQiLCAiKiIsICJpZCIsICRkYXRhWydpZCddLCAic2VsZWN0Iik7CiAgICAgICAgaWYgKCEkZGlzY291bnQpIHsKICAgICAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIsIFsKICAgICAgICAgICAgICAgICdkaXNjb3VudCcgPT4gW10sCiAgICAgICAgICAgIF0pOwogICAgICAgIH0KICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnZGlzY291bnQnID0+ICRkaXNjb3VudCwKICAgICAgICBdKTsKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRGF0YWJhc2UgZXJyb3IgaW4gZGlzY291bnQ6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGF0YWJhc2UgZXJyb3Igb2NjdXJyZWQiLCBbXSwgNTAwKTsKICAgIH0KfQoKZnVuY3Rpb24gZGlzY19kaXNjb3VudF9hZGQoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnUE9TVCcsICRtZXRob2QpOwogICAgcmVxdWlyZUZpZWxkcygkZGF0YSwgWydjb2RlJ10pOwogICAgJHByaWNlID0gcmVxdWlyZUludCgkZGF0YSwgJ3ByaWNlJywgMCk7CiAgICAkbGltaXRVc2UgPSByZXF1aXJlSW50KCRkYXRhLCAnbGltaXRfdXNlJywgMCk7CgogICAgaWYgKCFwcmVnX21hdGNoKCcvXltBLVphLXpcZF0rJC8nLCAkZGF0YVsnY29kZSddKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpbnZhbGlkIGNvZGUiLCBbXSwgMjAwKTsKICAgIH0KICAgIGlmIChzZWxlY3QoIkRpc2NvdW50IiwgIioiLCAiY29kZSIsICRkYXRhWydjb2RlJ10sICJjb3VudCIpICE9IDApIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGlzY291bnQgY29kZSBleGl0cyIsIFtdLCAyMDApOwogICAgfQogICAgdHJ5IHsKICAgICAgICAkcHJvZHVjdERhdGEgPSBbCiAgICAgICAgICAgICdjb2RlJyA9PiAkZGF0YVsnY29kZSddLAogICAgICAgICAgICAncHJpY2UnID0+ICRwcmljZSwKICAgICAgICAgICAgJ2xpbWl0dXNlJyA9PiAkbGltaXRVc2UsCiAgICAgICAgICAgICdsaW1pdHVzZWQnID0+IDAKICAgICAgICBdOwoKICAgICAgICAkY29sdW1ucyA9IGltcGxvZGUoJywnLCBhcnJheV9rZXlzKCRwcm9kdWN0RGF0YSkpOwogICAgICAgICRwbGFjZWhvbGRlcnMgPSAnOicgLiBpbXBsb2RlKCcsIDonLCBhcnJheV9rZXlzKCRwcm9kdWN0RGF0YSkpOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgKICAgICAgICAgICAgIklOU0VSVCBJR05PUkUgSU5UTyBEaXNjb3VudCAoeyRjb2x1bW5zfSkgVkFMVUVTICh7JHBsYWNlaG9sZGVyc30pIgogICAgICAgICk7CgogICAgICAgIGZvcmVhY2ggKCRwcm9kdWN0RGF0YSBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCI6eyRrZXl9IiwgJHZhbHVlKTsKICAgICAgICB9CgogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIpOwoKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRXJyb3IgaW4gRGlzY291bnQgYWRkOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFuIGVycm9yIG9jY3VycmVkIHdoaWxlIGVkaXRpbmcgRGlzY291bnQiKTsKICAgIH0KfQoKZnVuY3Rpb24gZGlzY19kaXNjb3VudF9kZWxldGUoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnUE9TVCcsICRtZXRob2QpOwogICAgcmVxdWlyZUZpZWxkcygkZGF0YSwgWydpZCddKTsKICAgICRwcm9kdWN0ID0gc2VsZWN0KCJEaXNjb3VudCIsICIqIiwgImlkIiwgJGRhdGFbJ2lkJ10sICJzZWxlY3QiKTsKICAgIGlmICghJHByb2R1Y3QpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGlzY291bnQgbm90IGZvdW5kIiwgW10sIDIwMCk7CiAgICB9CiAgICB0cnkgewogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiREVMRVRFIEZST00gRGlzY291bnQgIFdIRVJFIGlkID0gOmlkIik7CiAgICAgICAgJHN0bXQtPmJpbmRWYWx1ZSgiOmlkIiwgJGRhdGFbJ2lkJ10sIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZSgpOwoKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJEaXNjb3VudCBkZWxldGUgc3VjY2Vzc2Z1bGx5IiwgW10sIDIwMCk7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJFcnJvciBpbiBEaXNjb3VudCBkZWxldGUgOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFuIGVycm9yIG9jY3VycmVkIHdoaWxlIGRlbGV0ZSBEaXNjb3VudCIpOwogICAgfQp9CgpmdW5jdGlvbiBkaXNjX2Rpc2NvdW50X3NlbGxfbGlzdHMoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgJHBhZ2luZyA9IHBhZ2luYXRpb25QYXJhbXMoJGRhdGEpOwogICAgJGxpbWl0ID0gJHBhZ2luZ1snbGltaXQnXTsKICAgICRwYWdlID0gJHBhZ2luZ1sncGFnZSddOwogICAgJG9mZnNldCA9ICRwYWdpbmdbJ29mZnNldCddOwogICAgJHEgPSAkcGFnaW5nWydxJ107CgogICAgdHJ5IHsKICAgICAgICAkc2VhcmNoID0gIiUkcSUiOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIENPVU5UKCopIGFzIHRvdGFsIEZST00gRGlzY291bnRTZWxsIFdIRVJFIChjb2RlRGlzY291bnQgTElLRSA6Y29kZV9kaXNjb3VudCkiKTsKICAgICAgICAkc3RtdC0+ZXhlY3V0ZShbJzpjb2RlX2Rpc2NvdW50JyA9PiAkc2VhcmNoXSk7CiAgICAgICAgJHRvdGFsRGlzY291bnQgPSAoaW50KSAkc3RtdC0+ZmV0Y2hDb2x1bW4oKTsKICAgICAgICAkdG90YWxQYWdlcyA9IChpbnQpIGNlaWwoJHRvdGFsRGlzY291bnQgLyAkbGltaXQpOwogICAgICAgICRxdWVyeSA9ICJTRUxFQ1QgKiBGUk9NIERpc2NvdW50U2VsbCBXSEVSRSAoY29kZURpc2NvdW50ICBMSUtFIENPTkNBVCgnJScsIDpjb2RlX2Rpc2NvdW50LCAnJScpKSBPUkRFUiBCWSBpZCBMSU1JVCA6bGltaXQgT0ZGU0VUIDpvZmZzZXQiOwogICAgICAgICRzdG10ID0gJHBkby0+cHJlcGFyZSgkcXVlcnkpOwogICAgICAgICRzdG10LT5iaW5kVmFsdWUoJzpjb2RlX2Rpc2NvdW50JywgJHEsIFBETzo6UEFSQU1fU1RSKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6bGltaXQnLCAkbGltaXQsIFBETzo6UEFSQU1fSU5UKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCc6b2Zmc2V0JywgJG9mZnNldCwgUERPOjpQQVJBTV9JTlQpOwogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgJGRpc2NvdW50ID0gJHN0bXQtPmZldGNoQWxsKFBETzo6RkVUQ0hfQVNTT0MpOwogICAgICAgICRwcm9kdWN0ID0gc2VsZWN0KCJwcm9kdWN0IiwgImNvZGVfcHJvZHVjdCBhcyBpZCxuYW1lX3Byb2R1Y3QiLCBudWxsLCBudWxsLCAiZmV0Y2hBbGwiKTsKICAgICAgICAkcGFuZWwgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCAiY29kZV9wYW5lbCxuYW1lX3BhbmVsIiwgInN0YXR1cyIsICJhY3RpdmUiLCAiZmV0Y2hBbGwiKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnZGlzY291bnQnID0+ICRkaXNjb3VudCwKICAgICAgICAgICAgJ3Byb2R1Y3QnID0+ICRwcm9kdWN0LAogICAgICAgICAgICAncGFuZWwnID0+ICRwYW5lbCwKICAgICAgICAgICAgJ3BhZ2luYXRpb24nID0+IFsKICAgICAgICAgICAgICAgICd0b3RhbF9kaXNjb3VudCcgPT4gJHRvdGFsRGlzY291bnQsCiAgICAgICAgICAgICAgICAndG90YWxfcGFnZXMnID0+ICR0b3RhbFBhZ2VzLAogICAgICAgICAgICAgICAgJ2N1cnJlbnRfcGFnZScgPT4gJHBhZ2UsCiAgICAgICAgICAgICAgICAncGVyX3BhZ2UnID0+ICRsaW1pdAogICAgICAgICAgICBdCiAgICAgICAgXSk7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJEYXRhYmFzZSBlcnJvciBpbiBkaXNjb3VudDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJEYXRhYmFzZSBlcnJvciBvY2N1cnJlZCIsIFtdLCA1MDApOwogICAgfQp9CgpmdW5jdGlvbiBkaXNjX2Rpc2NvdW50X3NlbGwoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICB2YWxpZGF0ZU1ldGhvZCgnR0VUJywgJG1ldGhvZCk7CgogICAgaWYgKCFpc3NldCgkZGF0YVsnaWQnXSkgfHwgZW1wdHkoJGRhdGFbJ2lkJ10pKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgImlkIGVtcHR5IiwgW10pOwogICAgfQoKICAgIHRyeSB7CiAgICAgICAgJGRpc2NvdW50ID0gc2VsZWN0KCJEaXNjb3VudFNlbGwiLCAiKiIsICJpZCIsICRkYXRhWydpZCddLCAic2VsZWN0Iik7CiAgICAgICAgaWYgKCEkZGlzY291bnQpIHsKICAgICAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIsIFsKICAgICAgICAgICAgICAgICdkaXNjb3VudCcgPT4gW10sCiAgICAgICAgICAgIF0pOwogICAgICAgIH0KICAgICAgICBpZiAoJGRpc2NvdW50Wydjb2RlX3Byb2R1Y3QnXSAhPSAiYWxsIikgewogICAgICAgICAgICAkcHJvZHVjdCA9IHNlbGVjdCgncHJvZHVjdCcsICIqIiwgImNvZGVfcHJvZHVjdCIsICRkaXNjb3VudFsnY29kZV9wcm9kdWN0J10sICJzZWxlY3QiKTsKICAgICAgICAgICAgJGRpc2NvdW50Wydjb2RlX3Byb2R1Y3QnXSA9ICRwcm9kdWN0WyduYW1lX3Byb2R1Y3QnXSA/PyAkZGlzY291bnRbJ2NvZGVfcHJvZHVjdCddOwogICAgICAgIH0KICAgICAgICBpZiAoJGRpc2NvdW50Wydjb2RlX3BhbmVsJ10gIT0gIi9hbGwiKSB7CiAgICAgICAgICAgICRwYW5lbCA9IHNlbGVjdCgnbWFyemJhbl9wYW5lbCcsICIqIiwgImNvZGVfcGFuZWwiLCAkZGlzY291bnRbJ2NvZGVfcGFuZWwnXSwgInNlbGVjdCIpOwogICAgICAgICAgICAkZGlzY291bnRbJ2NvZGVfcGFuZWwnXSA9ICRwYW5lbFsnbmFtZV9wYW5lbCddID8/ICRkaXNjb3VudFsnY29kZV9wYW5lbCddOwogICAgICAgIH0KICAgICAgICBzZW5kSnNvblJlc3BvbnNlKHRydWUsICJTdWNjZXNzZnVsIiwgWwogICAgICAgICAgICAnZGlzY291bnQnID0+ICRkaXNjb3VudCwKICAgICAgICBdKTsKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRGF0YWJhc2UgZXJyb3IgaW4gZGlzY291bnQ6ICIgLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGF0YWJhc2UgZXJyb3Igb2NjdXJyZWQiLCBbXSwgNTAwKTsKICAgIH0KfQoKZnVuY3Rpb24gZGlzY19kaXNjb3VudF9zZWxsX2RlbGV0ZShhcnJheSAkZGF0YSwgc3RyaW5nICRtZXRob2QpOiB2b2lkCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHZhbGlkYXRlTWV0aG9kKCdQT1NUJywgJG1ldGhvZCk7CiAgICByZXF1aXJlRmllbGRzKCRkYXRhLCBbJ2lkJ10pOwogICAgJHByb2R1Y3QgPSBzZWxlY3QoIkRpc2NvdW50U2VsbCIsICIqIiwgImlkIiwgJGRhdGFbJ2lkJ10sICJzZWxlY3QiKTsKICAgIGlmICghJHByb2R1Y3QpIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGlzY291bnRTZWxsIG5vdCBmb3VuZCIsIFtdLCAyMDApOwogICAgfQogICAgdHJ5IHsKICAgICAgICAkc3RtdCA9ICRwZG8tPnByZXBhcmUoIkRFTEVURSBGUk9NIERpc2NvdW50U2VsbCAgV0hFUkUgaWQgPSA6aWQiKTsKICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCI6aWQiLCAkZGF0YVsnaWQnXSwgUERPOjpQQVJBTV9JTlQpOwogICAgICAgICRzdG10LT5leGVjdXRlKCk7CgogICAgICAgIHNlbmRKc29uUmVzcG9uc2UodHJ1ZSwgIkRpc2NvdW50U2VsbCBkZWxldGUgc3VjY2Vzc2Z1bGx5IiwgW10sIDIwMCk7CgogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJFcnJvciBpbiBEaXNjb3VudFNlbGwgZGVsZXRlIDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBbiBlcnJvciBvY2N1cnJlZCB3aGlsZSBkZWxldGUgRGlzY291bnRTZWxsIik7CiAgICB9Cn0KCmZ1bmN0aW9uIGRpc2NfZGlzY291bnRfc2VsbF9hZGQoYXJyYXkgJGRhdGEsIHN0cmluZyAkbWV0aG9kKTogdm9pZAp7CiAgICBnbG9iYWwgJHBkbzsKCiAgICB2YWxpZGF0ZU1ldGhvZCgnUE9TVCcsICRtZXRob2QpOwogICAgcmVxdWlyZUZpZWxkcygkZGF0YSwgWydjb2RlJ10pOwogICAgJHBlcmNlbnQgPSByZXF1aXJlSW50KCRkYXRhLCAncGVyY2VudCcsIDAsIDEwMCk7CiAgICAkbGltaXRVc2UgPSByZXF1aXJlSW50KCRkYXRhLCAnbGltaXRfdXNlJywgMCk7CgogICAgaWYgKCFwcmVnX21hdGNoKCcvXltBLVphLXpcZF0rJC8nLCAkZGF0YVsnY29kZSddKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJpbnZhbGlkIGNvZGUiLCBbXSwgMjAwKTsKICAgIH0KICAgIGlmIChzZWxlY3QoIkRpc2NvdW50U2VsbCIsICIqIiwgImNvZGVEaXNjb3VudCIsICRkYXRhWydjb2RlJ10sICJjb3VudCIpICE9IDApIHsKICAgICAgICBzZW5kSnNvblJlc3BvbnNlKGZhbHNlLCAiRGlzY291bnQgY29kZSBleGl0cyIsIFtdLCAyMDApOwogICAgfQogICAgdHJ5IHsKICAgICAgICAkcHJvZHVjdERhdGEgPSBbCiAgICAgICAgICAgICdjb2RlRGlzY291bnQnID0+ICRkYXRhWydjb2RlJ10sCiAgICAgICAgICAgICdwcmljZScgPT4gJHBlcmNlbnQsCiAgICAgICAgICAgICdsaW1pdERpc2NvdW50JyA9PiAkbGltaXRVc2UsCiAgICAgICAgICAgICd1c2VkRGlzY291bnQnID0+IDAsCiAgICAgICAgICAgICdhZ2VudCcgPT4gZW1wdHkoJGRhdGFbJ2FnZW50J10pID8gImFsbHVzZXJzIiA6ICRkYXRhWydhZ2VudCddLAogICAgICAgICAgICAndXNlZmlyc3QnID0+IGVtcHR5KCRkYXRhWyd1c2VmaXJzdCddKSA/ICIwIiA6ICRkYXRhWyd1c2VmaXJzdCddLAogICAgICAgICAgICAndXNldXNlcicgPT4gZW1wdHkoJGRhdGFbJ3VzZXVzZXInXSkgPyBudWxsIDogJGRhdGFbJ3VzZXVzZXInXSwKICAgICAgICAgICAgJ2NvZGVfcHJvZHVjdCcgPT4gZW1wdHkoJGRhdGFbJ2NvZGVfcHJvZHVjdCddKSA/ICJhbGwiIDogJGRhdGFbJ2NvZGVfcHJvZHVjdCddLAogICAgICAgICAgICAnY29kZV9wYW5lbCcgPT4gZW1wdHkoJGRhdGFbJ2NvZGVfcGFuZWwnXSkgPyAiL2FsbCIgOiAkZGF0YVsnY29kZV9wYW5lbCddLAogICAgICAgICAgICAndGltZScgPT4gZW1wdHkoJGRhdGFbJ3RpbWUnXSkgPyBudWxsIDogJGRhdGFbJ3RpbWUnXSwKICAgICAgICAgICAgJ3R5cGUnID0+IGVtcHR5KCRkYXRhWyd0eXBlJ10pID8gImFsbCIgOiAkZGF0YVsndHlwZSddLAogICAgICAgIF07CgogICAgICAgICRjb2x1bW5zID0gaW1wbG9kZSgnLCcsIGFycmF5X2tleXMoJHByb2R1Y3REYXRhKSk7CiAgICAgICAgJHBsYWNlaG9sZGVycyA9ICc6JyAuIGltcGxvZGUoJywgOicsIGFycmF5X2tleXMoJHByb2R1Y3REYXRhKSk7CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKAogICAgICAgICAgICAiSU5TRVJUIElHTk9SRSBJTlRPIERpc2NvdW50U2VsbCAoeyRjb2x1bW5zfSkgVkFMVUVTICh7JHBsYWNlaG9sZGVyc30pIgogICAgICAgICk7CgogICAgICAgIGZvcmVhY2ggKCRwcm9kdWN0RGF0YSBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgICAgICAkc3RtdC0+YmluZFZhbHVlKCI6eyRrZXl9IiwgJHZhbHVlKTsKICAgICAgICB9CgogICAgICAgICRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZSh0cnVlLCAiU3VjY2Vzc2Z1bCIpOwoKICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiAkZSkgewogICAgICAgIGVycm9yX2xvZygiRXJyb3IgaW4gRGlzY291bnQgYWRkOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgIkFuIGVycm9yIG9jY3VycmVkIHdoaWxlIGVkaXRpbmcgRGlzY291bnQiKTsKICAgIH0KfQoKbWF0Y2ggKCRhY3Rpb24pIHsKICAgICdkaXNjb3VudHMnID0+IGRpc2NfZGlzY291bnRzKCRkYXRhLCAkbWV0aG9kKSwKICAgICdkaXNjb3VudCcgPT4gZGlzY19kaXNjb3VudCgkZGF0YSwgJG1ldGhvZCksCiAgICAnZGlzY291bnRfYWRkJyA9PiBkaXNjX2Rpc2NvdW50X2FkZCgkZGF0YSwgJG1ldGhvZCksCiAgICAnZGlzY291bnRfZGVsZXRlJyA9PiBkaXNjX2Rpc2NvdW50X2RlbGV0ZSgkZGF0YSwgJG1ldGhvZCksCiAgICAnZGlzY291bnRfc2VsbF9saXN0cycgPT4gZGlzY19kaXNjb3VudF9zZWxsX2xpc3RzKCRkYXRhLCAkbWV0aG9kKSwKICAgICdkaXNjb3VudF9zZWxsJyA9PiBkaXNjX2Rpc2NvdW50X3NlbGwoJGRhdGEsICRtZXRob2QpLAogICAgJ2Rpc2NvdW50X3NlbGxfZGVsZXRlJyA9PiBkaXNjX2Rpc2NvdW50X3NlbGxfZGVsZXRlKCRkYXRhLCAkbWV0aG9kKSwKICAgICdkaXNjb3VudF9zZWxsX2FkZCcgPT4gZGlzY19kaXNjb3VudF9zZWxsX2FkZCgkZGF0YSwgJG1ldGhvZCksCiAgICBkZWZhdWx0ID0+IHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJBY3Rpb24gSW52YWxpZCIpLAp9OwoKCj8+
+<?php
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/utils.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+
+header('Content-Type: application/json; charset=UTF-8');
+date_default_timezone_set('Asia/Tehran');
+ini_set('default_charset', 'UTF-8');
+ini_set('error_log', 'error_log');
+
+list($headers, $data, $action) = apiRequestContext();
+$method = $_SERVER['REQUEST_METHOD'];
+$setting = select("setting", "*");
+
+function disc_discounts(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM Discount WHERE (code LIKE :code_discount)");
+        $stmt->execute([':code_discount' => $search]);
+        $totalDiscount = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($totalDiscount / $limit);
+        $query = "SELECT * FROM Discount WHERE (code  LIKE CONCAT('%', :code_discount, '%')) ORDER BY id LIMIT :limit OFFSET :offset";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindValue(':code_discount', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $discount = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        sendJsonResponse(true, "Successful", [
+            'discount' => $discount,
+            'pagination' => [
+                'total_discount' => $totalDiscount,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+
+    } catch (Exception $e) {
+        error_log("Database error in discount: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function disc_discount(array $data, string $method): void
+{
+    validateMethod('GET', $method);
+
+    if (!isset($data['id']) || empty($data['id'])) {
+        sendJsonResponse(false, "id empty", []);
+    }
+
+    try {
+        $discount = select("Discount", "*", "id", $data['id'], "select");
+        if (!$discount) {
+            sendJsonResponse(true, "Successful", [
+                'discount' => [],
+            ]);
+        }
+        sendJsonResponse(true, "Successful", [
+            'discount' => $discount,
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in discount: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function disc_discount_add(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['code']);
+    $price = requireInt($data, 'price', 0);
+    $limitUse = requireInt($data, 'limit_use', 0);
+
+    if (!preg_match('/^[A-Za-z\d]+$/', $data['code'])) {
+        sendJsonResponse(false, "invalid code", [], 200);
+    }
+    if (select("Discount", "*", "code", $data['code'], "count") != 0) {
+        sendJsonResponse(false, "Discount code exits", [], 200);
+    }
+    try {
+        $productData = [
+            'code' => $data['code'],
+            'price' => $price,
+            'limituse' => $limitUse,
+            'limitused' => 0
+        ];
+
+        $columns = implode(',', array_keys($productData));
+        $placeholders = ':' . implode(', :', array_keys($productData));
+        $stmt = $pdo->prepare(
+            "INSERT IGNORE INTO Discount ({$columns}) VALUES ({$placeholders})"
+        );
+
+        foreach ($productData as $key => $value) {
+            $stmt->bindValue(":{$key}", $value);
+        }
+
+        $stmt->execute();
+        sendJsonResponse(true, "Successful");
+
+    } catch (Exception $e) {
+        error_log("Error in Discount add: " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while editing Discount");
+    }
+}
+
+function disc_discount_delete(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['id']);
+    $product = select("Discount", "*", "id", $data['id'], "select");
+    if (!$product) {
+        sendJsonResponse(false, "Discount not found", [], 200);
+    }
+    try {
+        $stmt = $pdo->prepare("DELETE FROM Discount  WHERE id = :id");
+        $stmt->bindValue(":id", $data['id'], PDO::PARAM_INT);
+        $stmt->execute();
+
+        sendJsonResponse(true, "Discount delete successfully", [], 200);
+
+    } catch (Exception $e) {
+        error_log("Error in Discount delete : " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while delete Discount");
+    }
+}
+
+function disc_discount_sell_lists(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('GET', $method);
+
+    $paging = paginationParams($data);
+    $limit = $paging['limit'];
+    $page = $paging['page'];
+    $offset = $paging['offset'];
+    $q = $paging['q'];
+
+    try {
+        $search = "%$q%";
+        $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM DiscountSell WHERE (codeDiscount LIKE :code_discount)");
+        $stmt->execute([':code_discount' => $search]);
+        $totalDiscount = (int) $stmt->fetchColumn();
+        $totalPages = (int) ceil($totalDiscount / $limit);
+        $query = "SELECT * FROM DiscountSell WHERE (codeDiscount  LIKE CONCAT('%', :code_discount, '%')) ORDER BY id LIMIT :limit OFFSET :offset";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindValue(':code_discount', $q, PDO::PARAM_STR);
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $discount = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $product = select("product", "code_product as id,name_product", null, null, "fetchAll");
+        $panel = select("marzban_panel", "code_panel,name_panel", "status", "active", "fetchAll");
+        sendJsonResponse(true, "Successful", [
+            'discount' => $discount,
+            'product' => $product,
+            'panel' => $panel,
+            'pagination' => [
+                'total_discount' => $totalDiscount,
+                'total_pages' => $totalPages,
+                'current_page' => $page,
+                'per_page' => $limit
+            ]
+        ]);
+
+    } catch (Exception $e) {
+        error_log("Database error in discount: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function disc_discount_sell(array $data, string $method): void
+{
+    validateMethod('GET', $method);
+
+    if (!isset($data['id']) || empty($data['id'])) {
+        sendJsonResponse(false, "id empty", []);
+    }
+
+    try {
+        $discount = select("DiscountSell", "*", "id", $data['id'], "select");
+        if (!$discount) {
+            sendJsonResponse(true, "Successful", [
+                'discount' => [],
+            ]);
+        }
+        if ($discount['code_product'] != "all") {
+            $product = select('product', "*", "code_product", $discount['code_product'], "select");
+            $discount['code_product'] = $product['name_product'] ?? $discount['code_product'];
+        }
+        if ($discount['code_panel'] != "/all") {
+            $panel = select('marzban_panel', "*", "code_panel", $discount['code_panel'], "select");
+            $discount['code_panel'] = $panel['name_panel'] ?? $discount['code_panel'];
+        }
+        sendJsonResponse(true, "Successful", [
+            'discount' => $discount,
+        ]);
+    } catch (Exception $e) {
+        error_log("Database error in discount: " . $e->getMessage());
+        sendJsonResponse(false, "Database error occurred", [], 500);
+    }
+}
+
+function disc_discount_sell_delete(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['id']);
+    $product = select("DiscountSell", "*", "id", $data['id'], "select");
+    if (!$product) {
+        sendJsonResponse(false, "DiscountSell not found", [], 200);
+    }
+    try {
+        $stmt = $pdo->prepare("DELETE FROM DiscountSell  WHERE id = :id");
+        $stmt->bindValue(":id", $data['id'], PDO::PARAM_INT);
+        $stmt->execute();
+
+        sendJsonResponse(true, "DiscountSell delete successfully", [], 200);
+
+    } catch (Exception $e) {
+        error_log("Error in DiscountSell delete : " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while delete DiscountSell");
+    }
+}
+
+function disc_discount_sell_add(array $data, string $method): void
+{
+    global $pdo;
+
+    validateMethod('POST', $method);
+    requireFields($data, ['code']);
+    $percent = requireInt($data, 'percent', 0, 100);
+    $limitUse = requireInt($data, 'limit_use', 0);
+
+    if (!preg_match('/^[A-Za-z\d]+$/', $data['code'])) {
+        sendJsonResponse(false, "invalid code", [], 200);
+    }
+    if (select("DiscountSell", "*", "codeDiscount", $data['code'], "count") != 0) {
+        sendJsonResponse(false, "Discount code exits", [], 200);
+    }
+    try {
+        $productData = [
+            'codeDiscount' => $data['code'],
+            'price' => $percent,
+            'limitDiscount' => $limitUse,
+            'usedDiscount' => 0,
+            'agent' => empty($data['agent']) ? "allusers" : $data['agent'],
+            'usefirst' => empty($data['usefirst']) ? "0" : $data['usefirst'],
+            'useuser' => empty($data['useuser']) ? null : $data['useuser'],
+            'code_product' => empty($data['code_product']) ? "all" : $data['code_product'],
+            'code_panel' => empty($data['code_panel']) ? "/all" : $data['code_panel'],
+            'time' => empty($data['time']) ? null : $data['time'],
+            'type' => empty($data['type']) ? "all" : $data['type'],
+        ];
+
+        $columns = implode(',', array_keys($productData));
+        $placeholders = ':' . implode(', :', array_keys($productData));
+        $stmt = $pdo->prepare(
+            "INSERT IGNORE INTO DiscountSell ({$columns}) VALUES ({$placeholders})"
+        );
+
+        foreach ($productData as $key => $value) {
+            $stmt->bindValue(":{$key}", $value);
+        }
+
+        $stmt->execute();
+        sendJsonResponse(true, "Successful");
+
+    } catch (Exception $e) {
+        error_log("Error in Discount add: " . $e->getMessage());
+        sendJsonResponse(false, "An error occurred while editing Discount");
+    }
+}
+
+match ($action) {
+    'discounts' => disc_discounts($data, $method),
+    'discount' => disc_discount($data, $method),
+    'discount_add' => disc_discount_add($data, $method),
+    'discount_delete' => disc_discount_delete($data, $method),
+    'discount_sell_lists' => disc_discount_sell_lists($data, $method),
+    'discount_sell' => disc_discount_sell($data, $method),
+    'discount_sell_delete' => disc_discount_sell_delete($data, $method),
+    'discount_sell_add' => disc_discount_sell_add($data, $method),
+    default => sendJsonResponse(false, "Action Invalid"),
+};
+
+
+?>

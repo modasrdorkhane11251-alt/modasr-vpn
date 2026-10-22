@@ -1,1 +1,313 @@
-PD9waHAKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9jb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL2luYy9pY29ucy5waHAnOwpyZXF1aXJlX2F1dGgoKTsKCmlmICgkX1NFUlZFUlsnUkVRVUVTVF9NRVRIT0QnXSA9PT0gJ1BPU1QnICYmICgkX1BPU1RbJ2FjdGlvbiddID8/ICcnKSA9PT0gJ2FkZCcpIHsKICBjc3JmX2NoZWNrX3Bvc3QoKTsKICAkbmFtZSA9IHRyaW0oJF9QT1NUWyduYW1lX3Byb2R1Y3QnXSA/PyAnJyk7CiAgaWYgKCRuYW1lID09PSAnJykgewogICAgZmxhc2goJ2Vycm9yJywgJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0TmFtZVJlcXVpcmVkJ10pOwogICAgaGVhZGVyKCdMb2NhdGlvbjogcHJvZHVjdC5waHAnKTsKICAgIGV4aXQ7CiAgfQogIGlmIChkYl9jb3VudCgkcGRvLCAiU0VMRUNUIENPVU5UKCopIEZST00gcHJvZHVjdCBXSEVSRSBuYW1lX3Byb2R1Y3QgPSA/IiwgWyRuYW1lXSkpIHsKICAgIGZsYXNoKCdlcnJvcicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdE5hbWVFeGlzdHMnXSk7CiAgICBoZWFkZXIoJ0xvY2F0aW9uOiBwcm9kdWN0LnBocCcpOwogICAgZXhpdDsKICB9CiAgJGNvZGUgPSBiaW4yaGV4KHJhbmRvbV9ieXRlcygyKSk7CiAgdHJ5IHsKICAgIGRiX3F1ZXJ5KAogICAgICAkcGRvLAogICAgICAiSU5TRVJUIElOVE8gcHJvZHVjdCAobmFtZV9wcm9kdWN0LGNvZGVfcHJvZHVjdCxwcmljZV9wcm9kdWN0LFZvbHVtZV9jb25zdHJhaW50LFNlcnZpY2VfdGltZSxMb2NhdGlvbixhZ2VudCxkYXRhX2xpbWl0X3Jlc2V0LG5vdGUsY2F0ZWdvcnksaGlkZV9wYW5lbCxvbmVfYnV5X3N0YXR1cykgVkFMVUVTICg/LD8sPyw/LD8sPyw/LCdub19yZXNldCcsPyw/LCd7fScsJzAnKSIsCiAgICAgIFskbmFtZSwgJGNvZGUsIChpbnQpICgkX1BPU1RbJ3ByaWNlX3Byb2R1Y3QnXSA/PyAwKSwgKGludCkgKCRfUE9TVFsndm9sdW1lX3Byb2R1Y3QnXSA/PyAwKSwgKGludCkgKCRfUE9TVFsndGltZV9wcm9kdWN0J10gPz8gMCksICRfUE9TVFsnbmFtZXBhbmVsJ10gPz8gJycsICRfUE9TVFsnYWdlbnRfcHJvZHVjdCddID8/ICcnLCAkX1BPU1RbJ25vdGVfcHJvZHVjdCddID8/ICcnLCAkX1BPU1RbJ2NhdGVnb3J5X3Byb2R1Y3QnXSA/PyAnJ10KICAgICk7CiAgICBkYl9xdWVyeSgkcGRvLCAiVVBEQVRFIHByb2R1Y3QgU0VUIGRpc3BsYXlfb3JkZXIgPSBpZCBXSEVSRSBpZCA9ID8iLCBbJHBkby0+bGFzdEluc2VydElkKCldKTsKICAgIGZsYXNoKCdzdWNjZXNzJywgJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0QWRkZWRQcmVmaXgnXSAuICRuYW1lIC4gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0QWRkZWRTdWZmaXgnXSk7CiAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICBmbGFzaCgnZXJyb3InLCAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3REYkVycm9yJ10gLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICB9CiAgaGVhZGVyKCdMb2NhdGlvbjogcHJvZHVjdC5waHAnKTsKICBleGl0Owp9CgppZiAoJF9TRVJWRVJbJ1JFUVVFU1RfTUVUSE9EJ10gPT09ICdQT1NUJyAmJiAoJF9QT1NUWydhY3Rpb24nXSA/PyAnJykgPT09ICdlZGl0JykgewogIGNzcmZfY2hlY2tfcG9zdCgpOwogICRwaWQgPSAoaW50KSAoJF9QT1NUWydlZGl0X2lkJ10gPz8gMCk7CiAgJG5hbWUgPSB0cmltKCRfUE9TVFsnbmFtZV9wcm9kdWN0J10gPz8gJycpOwogIGlmICgkcGlkICYmICRuYW1lICE9PSAnJykgewogICAgdHJ5IHsKICAgICAgJHBkby0+YmVnaW5UcmFuc2FjdGlvbigpOwogICAgICBkYl9xdWVyeSgKICAgICAgICAkcGRvLAogICAgICAgICJVUERBVEUgcHJvZHVjdCBTRVQgbmFtZV9wcm9kdWN0PT8scHJpY2VfcHJvZHVjdD0/LFZvbHVtZV9jb25zdHJhaW50PT8sU2VydmljZV90aW1lPT8sTG9jYXRpb249PyxhZ2VudD0/LG5vdGU9PyxjYXRlZ29yeT0/IFdIRVJFIGlkPT8iLAogICAgICAgIFskbmFtZSwgKGludCkgKCRfUE9TVFsncHJpY2VfcHJvZHVjdCddID8/IDApLCAoaW50KSAoJF9QT1NUWyd2b2x1bWVfcHJvZHVjdCddID8/IDApLCAoaW50KSAoJF9QT1NUWyd0aW1lX3Byb2R1Y3QnXSA/PyAwKSwgJF9QT1NUWyduYW1lcGFuZWwnXSA/PyAnJywgJF9QT1NUWydhZ2VudF9wcm9kdWN0J10gPz8gJycsICRfUE9TVFsnbm90ZV9wcm9kdWN0J10gPz8gJycsICRfUE9TVFsnY2F0ZWdvcnlfcHJvZHVjdCddID8/ICcnLCAkcGlkXQogICAgICApOwogICAgICBpZiAoaXNzZXQoJF9QT1NUWydwb3NpdGlvbiddKSkgewogICAgICAgIG1vdmVfZGlzcGxheV9vcmRlcigkcGRvLCAncHJvZHVjdCcsICRwaWQsIChpbnQpICRfUE9TVFsncG9zaXRpb24nXSk7CiAgICAgIH0KICAgICAgJHBkby0+Y29tbWl0KCk7CiAgICAgIGZsYXNoKCdzdWNjZXNzJywgJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RWRpdGVkJ10pOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgIGlmICgkcGRvLT5pblRyYW5zYWN0aW9uKCkpIHsKICAgICAgICAkcGRvLT5yb2xsQmFjaygpOwogICAgICB9CiAgICAgIGZsYXNoKCdlcnJvcicsICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEVycm9yUHJlZml4J10gLiAkZS0+Z2V0TWVzc2FnZSgpKTsKICAgIH0KICB9CiAgaGVhZGVyKCdMb2NhdGlvbjogcHJvZHVjdC5waHAnKTsKICBleGl0Owp9CgppZiAoaXNzZXQoJF9HRVRbJ2RlbGV0ZSddKSkgewogIGNzcmZfY2hlY2tfZ2V0KCk7CiAgZGJfcXVlcnkoJHBkbywgIkRFTEVURSBGUk9NIHByb2R1Y3QgV0hFUkUgaWQgPSA/IiwgWyhpbnQpICRfR0VUWydkZWxldGUnXV0pOwogIGZsYXNoKCdzdWNjZXNzJywgJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGVsZXRlZCddKTsKICBoZWFkZXIoJ0xvY2F0aW9uOiBwcm9kdWN0LnBocCcpOwogIGV4aXQ7Cn0KCiRwYW5lbHMgPSBbXTsKJGNhdGVnb3JpZXMgPSBbXTsKdHJ5IHsKICAkcGFuZWxzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCAqIEZST00gbWFyemJhbl9wYW5lbCBPUkRFUiBCWSBkaXNwbGF5X29yZGVyLCBpZCIpOwogICRjYXRlZ29yaWVzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCAqIEZST00gY2F0ZWdvcnkgT1JERVIgQlkgZGlzcGxheV9vcmRlciwgaWQiKTsKfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7Cn0KJHByb2R1Y3RzID0gZGJfZmV0Y2hBbGwoJHBkbywgIlNFTEVDVCAqIEZST00gcHJvZHVjdCBPUkRFUiBCWSBkaXNwbGF5X29yZGVyLCBpZCIpOwoKJHBhZ2VUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdHNUaXRsZSddOwokcGFnZUxlZGUgPSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RzU3VidGl0bGUnXTsKJGFjdGl2ZU5hdiA9ICdwcm9kdWN0JzsKaW5jbHVkZSBfX0RJUl9fIC4gJy9pbmMvbGF5b3V0X2hlYWQucGhwJzsKPz4KCjxkaXYgc3R5bGU9ImRpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjthbGlnbi1pdGVtczpjZW50ZXI7bWFyZ2luLWJvdHRvbToxOHB4IiBjbGFzcz0iZmFkZS11cCI+CiAgPGRpdiBzdHlsZT0iZm9udC1zaXplOi44NXJlbTtjb2xvcjp2YXIoLS1tdXRlKSI+PD89IGNvdW50KCRwcm9kdWN0cykgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdHNIZWFkaW5nJ10gPz48L2Rpdj4KICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLXByaW1hcnkiIG9uY2xpY2s9Im9wZW5Nb2RhbCgnYWRkTW9kYWwnKSI+PD89IGljb24oJ3BsdXMnLCAxNCkgPz4gPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEFkZFByb2R1Y3RCdG4nXSA/PjwvYnV0dG9uPgo8L2Rpdj4KCjxkaXYgY2xhc3M9ImNhcmQgZmFkZS11cCBkMSI+CiAgPD9waHAgaWYgKGVtcHR5KCRwcm9kdWN0cykpOiA/PgogICAgPGRpdiBjbGFzcz0iZW1wdHkiIHN0eWxlPSJwYWRkaW5nOjYwcHggMjBweCI+CiAgICAgIDxzdmcgY2xhc3M9ImlsbCIgdmlld0JveD0iMCAwIDIwMCAxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgPHJlY3QgeD0iNDAiIHk9IjMwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjEyIiBmaWxsPSJ2YXIoLS1zdXJmYWNlLTMpIiAvPgogICAgICAgIDxyZWN0IHg9IjU2IiB5PSI1MCIgd2lkdGg9Ijg4IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0idmFyKC0tYm9yZGVyLXN0cm9uZykiIC8+CiAgICAgICAgPHJlY3QgeD0iNTYiIHk9IjcyIiB3aWR0aD0iNjAiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InZhcigtLWJvcmRlcikiIC8+CiAgICAgICAgPHJlY3QgeD0iNTYiIHk9IjkwIiB3aWR0aD0iNzIiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InZhcigtLWJvcmRlcikiIC8+CiAgICAgICAgPHJlY3QgeD0iNTYiIHk9IjEwOCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJ2YXIoLS1ib3JkZXIpIiAvPgogICAgICAgIDxjaXJjbGUgY3g9IjE1NSIgY3k9IjEyNSIgcj0iMjIiIGZpbGw9InZhcigtLWFjY2VudC1zKSIgc3Ryb2tlPSJ2YXIoLS1hY2NlbnQpIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICAgICAgPHBhdGggZD0iTTE0NyAxMjVoMTZNMTU1IDExN3YxNiIgc3Ryb2tlPSJ2YXIoLS1hY2NlbnQpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPgogICAgICA8L3N2Zz4KICAgICAgPHA+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdENvbE5hbWUnXSA/PjwvcD4KICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5IiBzdHlsZT0ibWFyZ2luLXRvcDoxNHB4IiBvbmNsaWNrPSJvcGVuTW9kYWwoJ2FkZE1vZGFsJykiPjw/PSBpY29uKCdwbHVzJywgMTQpID8+CiAgICAgICAgPD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdENvbFZvbHVtZSddID8+PC9idXR0b24+CiAgICA8L2Rpdj4KICA8P3BocCBlbHNlOiA/PgogICAgPGRpdiBjbGFzcz0idG9vbGJhciI+CiAgICAgIDxkaXYgY2xhc3M9InRvb2xiYXItdGl0bGUiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xUaW1lJ10gPz4gPHNtYWxsPig8Pz0gY291bnQoJHByb2R1Y3RzKSA/Pik8L3NtYWxsPjwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJzZWFyY2gtYm94IiBzdHlsZT0ibWluLXdpZHRoOjIyMHB4Ij4KICAgICAgICA8Pz0gaWNvbignc2VhcmNoJywgMTQpID8+CiAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIHBsYWNlaG9sZGVyPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RTZWFyY2hQbGFjZWhvbGRlciddKSA/PiIgZGF0YS1maWx0ZXI9InByb2RUYmwiPgogICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0ic2VhcmNoLWNsZWFyIj7inJU8L2J1dHRvbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9InRibC13cmFwIj4KICAgICAgPHRhYmxlIGlkPSJwcm9kVGJsIiBjbGFzcz0idGJsLXhsIj4KICAgICAgICA8dGhlYWQ+CiAgICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0aD4jPC90aD4KICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xQcmljZSddID8+PC90aD4KICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xBY3Rpb25zJ10gPz48L3RoPgogICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdE5vUHJvZHVjdEZvdW5kJ10gPz48L3RoPgogICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdE5vUHJvZHVjdFlldCddID8+PC90aD4KICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RBZGRQcm9kdWN0VGl0bGUnXSA/PjwvdGg+CiAgICAgICAgICAgIDx0aD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RWRpdFByb2R1Y3RUaXRsZSddID8+PC90aD4KICAgICAgICAgICAgPHRoPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RGaWVsZFByb2R1Y3ROYW1lJ10gPz48L3RoPgogICAgICAgICAgICA8dGg+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEZpZWxkVm9sdW1lR2InXSA/PjwvdGg+CiAgICAgICAgICA8L3RyPgogICAgICAgIDwvdGhlYWQ+CiAgICAgICAgPHRib2R5PgogICAgICAgICAgPD9waHAgJGkgPSAxOwogICAgICAgICAgZm9yZWFjaCAoJHByb2R1Y3RzIGFzICRwKTogPz4KICAgICAgICAgICAgPHRyPgogICAgICAgICAgICAgIDx0ZCBjbGFzcz0iY2YiPjw/PSAkaSsrID8+PC90ZD4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNzIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkcFsnbmFtZV9wcm9kdWN0J10gPz8gJycpID8+PC90ZD4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNuIGNzIj48Pz0gbnVtYmVyX2Zvcm1hdCgoaW50KSAoJHBbJ3ByaWNlX3Byb2R1Y3QnXSA/PyAwKSkgPz4gPHNwYW4gY2xhc3M9ImNmIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RmllbGRTZXJ2aWNlRGF5cyddID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbiI+PD89IGh0bWxzcGVjaWFsY2hhcnMoJHBbJ1ZvbHVtZV9jb25zdHJhaW50J10gPz8gJ+KAlCcpID8+IDxzcGFuIGNsYXNzPSJjZiI+R0I8L3NwYW4+PC90ZD4KICAgICAgICAgICAgICA8dGQgY2xhc3M9ImNuIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkcFsnU2VydmljZV90aW1lJ10gPz8gJ+KAlCcpID8+IDxzcGFuIGNsYXNzPSJjZiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEZpZWxkUHJpY2VUb21hbiddID8+PC9zcGFuPjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjZiI+PD89IGh0bWxzcGVjaWFsY2hhcnModHJ1bmMoJHBbJ0xvY2F0aW9uJ10gPz8gJ+KAlCcsIDE2KSkgPz48L3RkPgogICAgICAgICAgICAgIDx0ZD48P3BocCBpZiAoIWVtcHR5KCRwWydjYXRlZ29yeSddKSk6ID8+PHNwYW4KICAgICAgICAgICAgICAgICAgICBjbGFzcz0idGFnIHRhZy1pbmZvIj48Pz0gaHRtbHNwZWNpYWxjaGFycygkcFsnY2F0ZWdvcnknXSkgPz48L3NwYW4+PD9waHAgZWxzZTogPz48c3BhbgogICAgICAgICAgICAgICAgICAgIGNsYXNzPSJjZiI+4oCUPC9zcGFuPjw/cGhwIGVuZGlmOyA/PjwvdGQ+CiAgICAgICAgICAgICAgPHRkIGNsYXNzPSJjbSIgc3R5bGU9ImZvbnQtc2l6ZTouNzJyZW0iPjw/PSBodG1sc3BlY2lhbGNoYXJzKCRwWydjb2RlX3Byb2R1Y3QnXSA/PyAnJykgPz48L3RkPgogICAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9ImRpc3BsYXk6ZmxleDtnYXA6NXB4Ij4KICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIGJ0bi1naG9zdCBidG4tc20gYnRuLWljb24iIHRpdGxlPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RFZGl0QnRuJ10pID8+IgogICAgICAgICAgICAgICAgICAgIG9uY2xpY2s9Im9wZW5FZGl0TW9kYWwoPD89IGh0bWxzcGVjaWFsY2hhcnMoanNvbl9lbmNvZGUoJHAgKyBbJ3Bvc2l0aW9uJyA9PiAkaSAtIDFdKSwgRU5UX1FVT1RFUykgPz4pIj4KICAgICAgICAgICAgICAgICAgICA8Pz0gaWNvbignZWRpdCcsIDEzKSA/PgogICAgICAgICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICAgICAgICAgPGEgaHJlZj0icHJvZHVjdC5waHA/ZGVsZXRlPTw/PSAoaW50KSAkcFsnaWQnXSA/PiZfY3NyZj08Pz0gY3NyZl90b2tlbigpID8+IgogICAgICAgICAgICAgICAgICAgIGNsYXNzPSJidG4gYnRuLW5vIGJ0bi1zbSBidG4taWNvbiIgdGl0bGU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERlbGV0ZUJ0biddKSA/PiIKICAgICAgICAgICAgICAgICAgICBkYXRhLWNvbmZpcm09Ijw/PSBodG1sc3BlY2lhbGNoYXJzKHNwcmludGYoJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0Q29uZmlybURlbGV0ZVByb2R1Y3QnXSwgJHBbJ25hbWVfcHJvZHVjdCddKSkgPz4iPgogICAgICAgICAgICAgICAgICAgIDw/PSBpY29uKCd0cmFzaCcsIDEzKSA/PgogICAgICAgICAgICAgICAgICA8L2E+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICA8L3RyPgogICAgICAgICAgPD9waHAgZW5kZm9yZWFjaDsgPz4KICAgICAgICA8L3Rib2R5PgogICAgICA8L3RhYmxlPgogICAgPC9kaXY+CiAgPD9waHAgZW5kaWY7ID8+CjwvZGl2PgoKPGRpdiBjbGFzcz0ibW9kYWwtdmVpbCIgaWQ9ImFkZE1vZGFsIj4KICA8ZGl2IGNsYXNzPSJtb2RhbCI+CiAgICA8ZGl2IGNsYXNzPSJtb2RhbC1oZWFkIj4KICAgICAgPGgzPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RGaWVsZFByb2R1Y3RUeXBlJ10gPz48L2gzPgogICAgICA8YnV0dG9uIGNsYXNzPSJtb2RhbC14IiBvbmNsaWNrPSJjbG9zZU1vZGFsKCdhZGRNb2RhbCcpIj48Pz0gaWNvbignY2xvc2UnLCAxNCkgPz48L2J1dHRvbj4KICAgIDwvZGl2PgogICAgPGZvcm0gbWV0aG9kPSJQT1NUIj4KICAgICAgPGRpdiBjbGFzcz0ibW9kYWwtYm9keSI+CiAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iX2NzcmYiIHZhbHVlPSI8Pz0gY3NyZl90b2tlbigpID8+Ij4KICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJhY3Rpb24iIHZhbHVlPSJhZGQiPgogICAgICAgIDxkaXYgY2xhc3M9ImZvcm0tZ3JpZCI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCBmdWxsIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RGaWVsZERlc2NyaXB0aW9uJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ibmFtZV9wcm9kdWN0IiBjbGFzcz0iaW5wdXQiIHBsYWNlaG9sZGVyPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3ROYW1lRXhhbXBsZSddKSA/PiIgcmVxdWlyZWQ+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RTYXZlQnRuJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBuYW1lPSJwcmljZV9wcm9kdWN0IiBjbGFzcz0iaW5wdXQiIHBsYWNlaG9sZGVyPSI8Pz0gaHRtbHNwZWNpYWxjaGFycygkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RaZXJvVmFsdWUnXSkgPz4iIG1pbj0iMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RWb2x1bWVHYlN1ZmZpeCddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9Im51bWJlciIgbmFtZT0idm9sdW1lX3Byb2R1Y3QiIGNsYXNzPSJpbnB1dCIgcGxhY2Vob2xkZXI9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEZpZnR5VmFsdWUnXSkgPz4iIG1pbj0iMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDYW5jZWxCdG4nXSA/PjwvbGFiZWw+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIG5hbWU9InRpbWVfcHJvZHVjdCIgY2xhc3M9ImlucHV0IiBwbGFjZWhvbGRlcj0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0VGhpcnR5VmFsdWUnXSkgPz4iIG1pbj0iMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RGaWVsZExvY2F0aW9uJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8c2VsZWN0IG5hbWU9ImNhdGVnb3J5X3Byb2R1Y3QiIGNsYXNzPSJzZWxlY3QiPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9IiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERldGFpbExvY2F0aW9uJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgICA8P3BocCBmb3JlYWNoICgkY2F0ZWdvcmllcyBhcyAkY2F0KTogPz4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCRjYXRbJ3JlbWFyayddID8/ICcnKSA/PiI+CiAgICAgICAgICAgICAgICAgIDw/PSBodG1sc3BlY2lhbGNoYXJzKCRjYXRbJ3JlbWFyayddID8/ICcnKSA/PgogICAgICAgICAgICAgICAgIDwvb3B0aW9uPgogICAgICAgICAgICAgIDw/cGhwIGVuZGZvcmVhY2g7ID8+CiAgICAgICAgICAgIDwvc2VsZWN0PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgIDxsYWJlbD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RmllbGRDYXRlZ29yeSddID8+PC9sYWJlbD4KICAgICAgICAgICAgPHNlbGVjdCBuYW1lPSJuYW1lcGFuZWwiIGNsYXNzPSJzZWxlY3QiPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9IiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdEZpZWxkTm90ZSddID8+PC9vcHRpb24+CiAgICAgICAgICAgICAgPD9waHAgZm9yZWFjaCAoJHBhbmVscyBhcyAkcGwpOiA/PgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHBsWyduYW1lX3BhbmVsJ10gPz8gJHBsWydpZCddKSA/PiI+CiAgICAgICAgICAgICAgICAgIDw/PSBodG1sc3BlY2lhbGNoYXJzKCRwbFsnbmFtZV9wYW5lbCddID8/ICRwbFsnaWQnXSkgPz4KICAgICAgICAgICAgICAgIDwvb3B0aW9uPjw/cGhwIGVuZGZvcmVhY2g7ID8+CiAgICAgICAgICAgIDwvc2VsZWN0PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgIDxsYWJlbD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0Q29sSWQnXSA/PjwvbGFiZWw+CiAgICAgICAgICAgIDxzZWxlY3QgbmFtZT0iYWdlbnRfcHJvZHVjdCIgY2xhc3M9InNlbGVjdCI+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdENvbFR5cGUnXSA/Pjwvb3B0aW9uPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Im4iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xMb2NhdGlvbiddID8+PC9vcHRpb24+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0ibjIiPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xDYXRlZ29yeSddID8+PC9vcHRpb24+CiAgICAgICAgICAgIDwvc2VsZWN0PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCBmdWxsIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RDb2xEZXNjcmlwdGlvbiddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIG5hbWU9Im5vdGVfcHJvZHVjdCIgY2xhc3M9ImlucHV0IiBwbGFjZWhvbGRlcj0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGVzY3JpcHRpb25PcHRpb25hbCddKSA/PiI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9Im1vZGFsLWZvb3QiPgogICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5Ij48Pz0gaWNvbigncGx1cycsIDEzKSA/PiA8Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0Q29sTm90ZSddID8+PC9idXR0b24+CiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJidG4gYnRuLWdob3N0IiBvbmNsaWNrPSJjbG9zZU1vZGFsKCdhZGRNb2RhbCcpIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0Q29sQ3JlYXRlZEF0J10gPz48L2J1dHRvbj4KICAgICAgPC9kaXY+CiAgICA8L2Zvcm0+CiAgPC9kaXY+CjwvZGl2PgoKPGRpdiBjbGFzcz0ibW9kYWwtdmVpbCIgaWQ9ImVkaXRNb2RhbCI+CiAgPGRpdiBjbGFzcz0ibW9kYWwiPgogICAgPGRpdiBjbGFzcz0ibW9kYWwtaGVhZCI+CiAgICAgIDxoMz48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGV0YWlsVGl0bGUnXSA/PjwvaDM+CiAgICAgIDxidXR0b24gY2xhc3M9Im1vZGFsLXgiIG9uY2xpY2s9ImNsb3NlTW9kYWwoJ2VkaXRNb2RhbCcpIj48Pz0gaWNvbignY2xvc2UnLCAxNCkgPz48L2J1dHRvbj4KICAgIDwvZGl2PgogICAgPGZvcm0gbWV0aG9kPSJQT1NUIj4KICAgICAgPGRpdiBjbGFzcz0ibW9kYWwtYm9keSI+CiAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iX2NzcmYiIHZhbHVlPSI8Pz0gY3NyZl90b2tlbigpID8+Ij4KICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJhY3Rpb24iIHZhbHVlPSJlZGl0Ij4KICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJlZGl0X2lkIiBpZD0iZWRpdF9pZCI+CiAgICAgICAgPGRpdiBjbGFzcz0iZm9ybS1ncmlkIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIGZ1bGwiPgogICAgICAgICAgICA8bGFiZWw+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERldGFpbE5hbWUnXSA/PjwvbGFiZWw+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJuYW1lX3Byb2R1Y3QiIGlkPSJlZGl0X25hbWUiIGNsYXNzPSJpbnB1dCIgcmVxdWlyZWQ+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3REZXRhaWxWb2x1bWUnXSA/PjwvbGFiZWw+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIG5hbWU9InByaWNlX3Byb2R1Y3QiIGlkPSJlZGl0X3ByaWNlIiBjbGFzcz0iaW5wdXQiIG1pbj0iMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RWb2x1bWVHYlN1ZmZpeCddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9Im51bWJlciIgbmFtZT0idm9sdW1lX3Byb2R1Y3QiIGlkPSJlZGl0X3ZvbHVtZSIgY2xhc3M9ImlucHV0IiBtaW49IjAiPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgIDxsYWJlbD48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGV0YWlsVGltZSddID8+PC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9Im51bWJlciIgbmFtZT0idGltZV9wcm9kdWN0IiBpZD0iZWRpdF90aW1lIiBjbGFzcz0iaW5wdXQiIG1pbj0iMCI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIj4KICAgICAgICAgICAgPGxhYmVsPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3RGaWVsZFBvc2l0aW9uJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBuYW1lPSJwb3NpdGlvbiIgaWQ9ImVkaXRfcG9zaXRpb24iIGNsYXNzPSJpbnB1dCIgbWluPSIxIiBtYXg9Ijw/PSBjb3VudCgkcHJvZHVjdHMpID8+IiByZXF1aXJlZD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICA8bGFiZWw+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERldGFpbFByaWNlJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8c2VsZWN0IG5hbWU9ImNhdGVnb3J5X3Byb2R1Y3QiIGlkPSJlZGl0X2NhdCIgY2xhc3M9InNlbGVjdCI+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGV0YWlsTG9jYXRpb24nXSA/Pjwvb3B0aW9uPgogICAgICAgICAgICAgIDw/cGhwIGZvcmVhY2ggKCRjYXRlZ29yaWVzIGFzICRjYXQpOiA/PgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iPD89IGh0bWxzcGVjaWFsY2hhcnMoJGNhdFsncmVtYXJrJ10gPz8gJycpID8+Ij4KICAgICAgICAgICAgICAgICAgPD89IGh0bWxzcGVjaWFsY2hhcnMoJGNhdFsncmVtYXJrJ10gPz8gJycpID8+CiAgICAgICAgICAgICAgICA8L29wdGlvbj4KICAgICAgICAgICAgICA8P3BocCBlbmRmb3JlYWNoOyA/PgogICAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICA8bGFiZWw+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERldGFpbFR5cGUnXSA/PjwvbGFiZWw+CiAgICAgICAgICAgIDxzZWxlY3QgbmFtZT0ibmFtZXBhbmVsIiBpZD0iZWRpdF9wYW5lbCIgY2xhc3M9InNlbGVjdCI+CiAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGV0YWlsTG9jYXRpb24nXSA/Pjwvb3B0aW9uPgogICAgICAgICAgICAgIDw/cGhwIGZvcmVhY2ggKCRwYW5lbHMgYXMgJHBsKTogPz4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Ijw/PSBodG1sc3BlY2lhbGNoYXJzKCRwbFsnbmFtZV9wYW5lbCddID8/ICRwbFsnaWQnXSkgPz4iPgogICAgICAgICAgICAgICAgICA8Pz0gaHRtbHNwZWNpYWxjaGFycygkcGxbJ25hbWVfcGFuZWwnXSA/PyAkcGxbJ2lkJ10pID8+CiAgICAgICAgICAgICAgICA8L29wdGlvbj48P3BocCBlbmRmb3JlYWNoOyA/PgogICAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICA8bGFiZWw+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdERldGFpbENhdGVnb3J5J10gPz48L2xhYmVsPgogICAgICAgICAgICA8c2VsZWN0IG5hbWU9ImFnZW50X3Byb2R1Y3QiIGlkPSJlZGl0X2FnZW50IiBjbGFzcz0ic2VsZWN0Ij4KICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJmIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0RGV0YWlsRGVzY3JpcHRpb24nXSA/Pjwvb3B0aW9uPgogICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Im4iPjw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3REZXRhaWxOb3RlJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJuMiI+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdENsb3NlQnRuJ10gPz48L29wdGlvbj4KICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZpZWxkIGZ1bGwiPgogICAgICAgICAgICA8bGFiZWw+PD89ICR0ZXh0Ym90bGFuZ1sncGFuZWwnXVsncHJvZHVjdFVubGltaXRlZExhYmVsJ10gPz48L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ibm90ZV9wcm9kdWN0IiBpZD0iZWRpdF9ub3RlIiBjbGFzcz0iaW5wdXQiPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJtb2RhbC1mb290Ij4KICAgICAgICA8YnV0dG9uIHR5cGU9InN1Ym1pdCIgY2xhc3M9ImJ0biBidG4tcHJpbWFyeSI+PD89IGljb24oJ2NoZWNrJywgMTMpID8+IDw/PSAkdGV4dGJvdGxhbmdbJ3BhbmVsJ11bJ3Byb2R1Y3REYXlVbml0J10gPz48L2J1dHRvbj4KICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9ImJ0biBidG4tZ2hvc3QiIG9uY2xpY2s9ImNsb3NlTW9kYWwoJ2VkaXRNb2RhbCcpIj48Pz0gJHRleHRib3RsYW5nWydwYW5lbCddWydwcm9kdWN0VG9tYW5Vbml0J10gPz48L2J1dHRvbj4KICAgICAgPC9kaXY+CiAgICA8L2Zvcm0+CiAgPC9kaXY+CjwvZGl2PgoKPHNjcmlwdCBzcmM9ImpzL3Byb2R1Y3QuanMiPjwvc2NyaXB0PgoKPD9waHAgaW5jbHVkZSBfX0RJUl9fIC4gJy9pbmMvbGF5b3V0X2Zvb3QucGhwJzsgPz4=
+<?php
+require_once __DIR__ . '/inc/config.php';
+require_once __DIR__ . '/inc/icons.php';
+require_auth();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'add') {
+  csrf_check_post();
+  $name = trim($_POST['name_product'] ?? '');
+  if ($name === '') {
+    flash('error', $textbotlang['panel']['productNameRequired']);
+    header('Location: product.php');
+    exit;
+  }
+  if (db_count($pdo, "SELECT COUNT(*) FROM product WHERE name_product = ?", [$name])) {
+    flash('error', $textbotlang['panel']['productNameExists']);
+    header('Location: product.php');
+    exit;
+  }
+  $code = bin2hex(random_bytes(2));
+  try {
+    db_query(
+      $pdo,
+      "INSERT INTO product (name_product,code_product,price_product,Volume_constraint,Service_time,Location,agent,data_limit_reset,note,category,hide_panel,one_buy_status) VALUES (?,?,?,?,?,?,?,'no_reset',?,?,'{}','0')",
+      [$name, $code, (int) ($_POST['price_product'] ?? 0), (int) ($_POST['volume_product'] ?? 0), (int) ($_POST['time_product'] ?? 0), $_POST['namepanel'] ?? '', $_POST['agent_product'] ?? '', $_POST['note_product'] ?? '', $_POST['category_product'] ?? '']
+    );
+    db_query($pdo, "UPDATE product SET display_order = id WHERE id = ?", [$pdo->lastInsertId()]);
+    flash('success', $textbotlang['panel']['productAddedPrefix'] . $name . $textbotlang['panel']['productAddedSuffix']);
+  } catch (Exception $e) {
+    flash('error', $textbotlang['panel']['productDbError'] . $e->getMessage());
+  }
+  header('Location: product.php');
+  exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'edit') {
+  csrf_check_post();
+  $pid = (int) ($_POST['edit_id'] ?? 0);
+  $name = trim($_POST['name_product'] ?? '');
+  if ($pid && $name !== '') {
+    try {
+      $pdo->beginTransaction();
+      db_query(
+        $pdo,
+        "UPDATE product SET name_product=?,price_product=?,Volume_constraint=?,Service_time=?,Location=?,agent=?,note=?,category=? WHERE id=?",
+        [$name, (int) ($_POST['price_product'] ?? 0), (int) ($_POST['volume_product'] ?? 0), (int) ($_POST['time_product'] ?? 0), $_POST['namepanel'] ?? '', $_POST['agent_product'] ?? '', $_POST['note_product'] ?? '', $_POST['category_product'] ?? '', $pid]
+      );
+      if (isset($_POST['position'])) {
+        move_display_order($pdo, 'product', $pid, (int) $_POST['position']);
+      }
+      $pdo->commit();
+      flash('success', $textbotlang['panel']['productEdited']);
+    } catch (Exception $e) {
+      if ($pdo->inTransaction()) {
+        $pdo->rollBack();
+      }
+      flash('error', $textbotlang['panel']['productErrorPrefix'] . $e->getMessage());
+    }
+  }
+  header('Location: product.php');
+  exit;
+}
+
+if (isset($_GET['delete'])) {
+  csrf_check_get();
+  db_query($pdo, "DELETE FROM product WHERE id = ?", [(int) $_GET['delete']]);
+  flash('success', $textbotlang['panel']['productDeleted']);
+  header('Location: product.php');
+  exit;
+}
+
+$panels = [];
+$categories = [];
+try {
+  $panels = db_fetchAll($pdo, "SELECT * FROM marzban_panel ORDER BY display_order, id");
+  $categories = db_fetchAll($pdo, "SELECT * FROM category ORDER BY display_order, id");
+} catch (Exception $e) {
+}
+$products = db_fetchAll($pdo, "SELECT * FROM product ORDER BY display_order, id");
+
+$pageTitle = $textbotlang['panel']['productsTitle'];
+$pageLede = $textbotlang['panel']['productsSubtitle'];
+$activeNav = 'product';
+include __DIR__ . '/inc/layout_head.php';
+?>
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px" class="fade-up">
+  <div style="font-size:.85rem;color:var(--mute)"><?= count($products) ?> <?= $textbotlang['panel']['productsHeading'] ?></div>
+  <button class="btn btn-primary" onclick="openModal('addModal')"><?= icon('plus', 14) ?> <?= $textbotlang['panel']['productAddProductBtn'] ?></button>
+</div>
+
+<div class="card fade-up d1">
+  <?php if (empty($products)): ?>
+    <div class="empty" style="padding:60px 20px">
+      <svg class="ill" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="30" width="120" height="100" rx="12" fill="var(--surface-3)" />
+        <rect x="56" y="50" width="88" height="12" rx="6" fill="var(--border-strong)" />
+        <rect x="56" y="72" width="60" height="8" rx="4" fill="var(--border)" />
+        <rect x="56" y="90" width="72" height="8" rx="4" fill="var(--border)" />
+        <rect x="56" y="108" width="44" height="8" rx="4" fill="var(--border)" />
+        <circle cx="155" cy="125" r="22" fill="var(--accent-s)" stroke="var(--accent)" stroke-width="2" />
+        <path d="M147 125h16M155 117v16" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" />
+      </svg>
+      <p><?= $textbotlang['panel']['productColName'] ?></p>
+      <button class="btn btn-primary" style="margin-top:14px" onclick="openModal('addModal')"><?= icon('plus', 14) ?>
+        <?= $textbotlang['panel']['productColVolume'] ?></button>
+    </div>
+  <?php else: ?>
+    <div class="toolbar">
+      <div class="toolbar-title"><?= $textbotlang['panel']['productColTime'] ?> <small>(<?= count($products) ?>)</small></div>
+      <div class="search-box" style="min-width:220px">
+        <?= icon('search', 14) ?>
+        <input type="text" placeholder="<?= htmlspecialchars($textbotlang['panel']['productSearchPlaceholder']) ?>" data-filter="prodTbl">
+        <button type="button" class="search-clear">✕</button>
+      </div>
+    </div>
+    <div class="tbl-wrap">
+      <table id="prodTbl" class="tbl-xl">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th><?= $textbotlang['panel']['productColPrice'] ?></th>
+            <th><?= $textbotlang['panel']['productColActions'] ?></th>
+            <th><?= $textbotlang['panel']['productNoProductFound'] ?></th>
+            <th><?= $textbotlang['panel']['productNoProductYet'] ?></th>
+            <th><?= $textbotlang['panel']['productAddProductTitle'] ?></th>
+            <th><?= $textbotlang['panel']['productEditProductTitle'] ?></th>
+            <th><?= $textbotlang['panel']['productFieldProductName'] ?></th>
+            <th><?= $textbotlang['panel']['productFieldVolumeGb'] ?></th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php $i = 1;
+          foreach ($products as $p): ?>
+            <tr>
+              <td class="cf"><?= $i++ ?></td>
+              <td class="cs"><?= htmlspecialchars($p['name_product'] ?? '') ?></td>
+              <td class="cn cs"><?= number_format((int) ($p['price_product'] ?? 0)) ?> <span class="cf"><?= $textbotlang['panel']['productFieldServiceDays'] ?></span></td>
+              <td class="cn"><?= htmlspecialchars($p['Volume_constraint'] ?? '—') ?> <span class="cf">GB</span></td>
+              <td class="cn"><?= htmlspecialchars($p['Service_time'] ?? '—') ?> <span class="cf"><?= $textbotlang['panel']['productFieldPriceToman'] ?></span></td>
+              <td class="cf"><?= htmlspecialchars(trunc($p['Location'] ?? '—', 16)) ?></td>
+              <td><?php if (!empty($p['category'])): ?><span
+                    class="tag tag-info"><?= htmlspecialchars($p['category']) ?></span><?php else: ?><span
+                    class="cf">—</span><?php endif; ?></td>
+              <td class="cm" style="font-size:.72rem"><?= htmlspecialchars($p['code_product'] ?? '') ?></td>
+              <td>
+                <div style="display:flex;gap:5px">
+                  <button class="btn btn-ghost btn-sm btn-icon" title="<?= htmlspecialchars($textbotlang['panel']['productEditBtn']) ?>"
+                    onclick="openEditModal(<?= htmlspecialchars(json_encode($p + ['position' => $i - 1]), ENT_QUOTES) ?>)">
+                    <?= icon('edit', 13) ?>
+                  </button>
+                  <a href="product.php?delete=<?= (int) $p['id'] ?>&_csrf=<?= csrf_token() ?>"
+                    class="btn btn-no btn-sm btn-icon" title="<?= htmlspecialchars($textbotlang['panel']['productDeleteBtn']) ?>"
+                    data-confirm="<?= htmlspecialchars(sprintf($textbotlang['panel']['productConfirmDeleteProduct'], $p['name_product'])) ?>">
+                    <?= icon('trash', 13) ?>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif; ?>
+</div>
+
+<div class="modal-veil" id="addModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3><?= $textbotlang['panel']['productFieldProductType'] ?></h3>
+      <button class="modal-x" onclick="closeModal('addModal')"><?= icon('close', 14) ?></button>
+    </div>
+    <form method="POST">
+      <div class="modal-body">
+        <input type="hidden" name="_csrf" value="<?= csrf_token() ?>">
+        <input type="hidden" name="action" value="add">
+        <div class="form-grid">
+          <div class="field full">
+            <label><?= $textbotlang['panel']['productFieldDescription'] ?></label>
+            <input type="text" name="name_product" class="input" placeholder="<?= htmlspecialchars($textbotlang['panel']['productNameExample']) ?>" required>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productSaveBtn'] ?></label>
+            <input type="number" name="price_product" class="input" placeholder="<?= htmlspecialchars($textbotlang['panel']['productZeroValue']) ?>" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productVolumeGbSuffix'] ?></label>
+            <input type="number" name="volume_product" class="input" placeholder="<?= htmlspecialchars($textbotlang['panel']['productFiftyValue']) ?>" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productCancelBtn'] ?></label>
+            <input type="number" name="time_product" class="input" placeholder="<?= htmlspecialchars($textbotlang['panel']['productThirtyValue']) ?>" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productFieldLocation'] ?></label>
+            <select name="category_product" class="select">
+              <option value=""><?= $textbotlang['panel']['productDetailLocation'] ?></option>
+              <?php foreach ($categories as $cat): ?>
+                <option value="<?= htmlspecialchars($cat['remark'] ?? '') ?>">
+                  <?= htmlspecialchars($cat['remark'] ?? '') ?>
+                 </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productFieldCategory'] ?></label>
+            <select name="namepanel" class="select">
+              <option value=""><?= $textbotlang['panel']['productFieldNote'] ?></option>
+              <?php foreach ($panels as $pl): ?>
+                <option value="<?= htmlspecialchars($pl['name_panel'] ?? $pl['id']) ?>">
+                  <?= htmlspecialchars($pl['name_panel'] ?? $pl['id']) ?>
+                </option><?php endforeach; ?>
+            </select>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productColId'] ?></label>
+            <select name="agent_product" class="select">
+              <option value="f"><?= $textbotlang['panel']['productColType'] ?></option>
+              <option value="n"><?= $textbotlang['panel']['productColLocation'] ?></option>
+              <option value="n2"><?= $textbotlang['panel']['productColCategory'] ?></option>
+            </select>
+          </div>
+          <div class="field full">
+            <label><?= $textbotlang['panel']['productColDescription'] ?></label>
+            <input type="text" name="note_product" class="input" placeholder="<?= htmlspecialchars($textbotlang['panel']['productDescriptionOptional']) ?>">
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="submit" class="btn btn-primary"><?= icon('plus', 13) ?> <?= $textbotlang['panel']['productColNote'] ?></button>
+        <button type="button" class="btn btn-ghost" onclick="closeModal('addModal')"><?= $textbotlang['panel']['productColCreatedAt'] ?></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal-veil" id="editModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3><?= $textbotlang['panel']['productDetailTitle'] ?></h3>
+      <button class="modal-x" onclick="closeModal('editModal')"><?= icon('close', 14) ?></button>
+    </div>
+    <form method="POST">
+      <div class="modal-body">
+        <input type="hidden" name="_csrf" value="<?= csrf_token() ?>">
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" name="edit_id" id="edit_id">
+        <div class="form-grid">
+          <div class="field full">
+            <label><?= $textbotlang['panel']['productDetailName'] ?></label>
+            <input type="text" name="name_product" id="edit_name" class="input" required>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productDetailVolume'] ?></label>
+            <input type="number" name="price_product" id="edit_price" class="input" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productVolumeGbSuffix'] ?></label>
+            <input type="number" name="volume_product" id="edit_volume" class="input" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productDetailTime'] ?></label>
+            <input type="number" name="time_product" id="edit_time" class="input" min="0">
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productFieldPosition'] ?></label>
+            <input type="number" name="position" id="edit_position" class="input" min="1" max="<?= count($products) ?>" required>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productDetailPrice'] ?></label>
+            <select name="category_product" id="edit_cat" class="select">
+              <option value=""><?= $textbotlang['panel']['productDetailLocation'] ?></option>
+              <?php foreach ($categories as $cat): ?>
+                <option value="<?= htmlspecialchars($cat['remark'] ?? '') ?>">
+                  <?= htmlspecialchars($cat['remark'] ?? '') ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productDetailType'] ?></label>
+            <select name="namepanel" id="edit_panel" class="select">
+              <option value=""><?= $textbotlang['panel']['productDetailLocation'] ?></option>
+              <?php foreach ($panels as $pl): ?>
+                <option value="<?= htmlspecialchars($pl['name_panel'] ?? $pl['id']) ?>">
+                  <?= htmlspecialchars($pl['name_panel'] ?? $pl['id']) ?>
+                </option><?php endforeach; ?>
+            </select>
+          </div>
+          <div class="field">
+            <label><?= $textbotlang['panel']['productDetailCategory'] ?></label>
+            <select name="agent_product" id="edit_agent" class="select">
+              <option value="f"><?= $textbotlang['panel']['productDetailDescription'] ?></option>
+              <option value="n"><?= $textbotlang['panel']['productDetailNote'] ?></option>
+              <option value="n2"><?= $textbotlang['panel']['productCloseBtn'] ?></option>
+            </select>
+          </div>
+          <div class="field full">
+            <label><?= $textbotlang['panel']['productUnlimitedLabel'] ?></label>
+            <input type="text" name="note_product" id="edit_note" class="input">
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="submit" class="btn btn-primary"><?= icon('check', 13) ?> <?= $textbotlang['panel']['productDayUnit'] ?></button>
+        <button type="button" class="btn btn-ghost" onclick="closeModal('editModal')"><?= $textbotlang['panel']['productTomanUnit'] ?></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/product.js"></script>
+
+<?php include __DIR__ . '/inc/layout_foot.php'; ?>

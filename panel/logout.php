@@ -1,1 +1,5 @@
-PD9waHAKc2Vzc2lvbl9zdGFydCgpOwpzZXNzaW9uX2Rlc3Ryb3koKTsKaGVhZGVyKCdMb2NhdGlvbjogbG9naW4ucGhwJyk7CmV4aXQ7Cg==
+<?php
+session_start();
+session_destroy();
+header('Location: login.php');
+exit;

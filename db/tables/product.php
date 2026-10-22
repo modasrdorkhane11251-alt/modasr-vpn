@@ -1,1 +1,37 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICBpZCBJTlQoNikgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgICAgICAgY29kZV9wcm9kdWN0IHZhcmNoYXIoMjAwKSBOVUxMLAogICAgICAgIG5hbWVfcHJvZHVjdCB2YXJjaGFyKDIwMDApIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOVUxMLAogICAgICAgIHByaWNlX3Byb2R1Y3QgdmFyY2hhcigyMDAwKSBOVUxMLAogICAgICAgIFZvbHVtZV9jb25zdHJhaW50IHZhcmNoYXIoMjAwMCkgTlVMTCwKICAgICAgICBMb2NhdGlvbiB2YXJjaGFyKDIwMCkgTlVMTCwKICAgICAgICBTZXJ2aWNlX3RpbWUgdmFyY2hhcigyMDApIE5VTEwsCiAgICAgICAgYWdlbnQgdmFyY2hhcigxMDApIE5VTEwsCiAgICAgICAgbm90ZSBURVhUIE5VTEwsCiAgICAgICAgZGF0YV9saW1pdF9yZXNldCB2YXJjaGFyKDIwMCkgTlVMTCwKICAgICAgICBvbmVfYnV5X3N0YXR1cyB2YXJjaGFyKDIwKSBOT1QgTlVMTCwKICAgICAgICBpbmJvdW5kcyBURVhUIE5VTEwsCiAgICAgICAgcHJveGllcyBURVhUIE5VTEwsCiAgICAgICAgY2F0ZWdvcnkgdmFyY2hhcig0MDApIENIQVJBQ1RFUiBTRVQgdXRmOG1iNCBDT0xMQVRFIHV0ZjhtYjRfdW5pY29kZV9jaSBOVUxMLAogICAgICAgIGhpZGVfcGFuZWwgVEVYVCBOT1QgTlVMTCwKICAgICAgICBzdGF0dXNfcHJvZHVjdCB2YXJjaGFyKDIwKSBOT1QgTlVMTCBERUZBVUxUICdhY3RpdmUnLAogICAgICAgIGRpc3BsYXlfb3JkZXIgSU5UIE5PVCBOVUxMIERFRkFVTFQgMAogICAgICAgIFNRTCwKICAgICdjb2x1bW5zJyA9PiBbCiAgICAgICAgWydjb2RlX3Byb2R1Y3QnLCBudWxsLCAndmFyY2hhcig1MCknXSwKICAgICAgICBbJ0xvY2F0aW9uJywgbnVsbCwgJ1ZBUkNIQVIoMjAwKSddLAogICAgICAgIFsnYWdlbnQnLCAnZicsICd2YXJjaGFyKDUwKSddLAogICAgICAgIFsnbm90ZScsICcnLCAnVEVYVCddLAogICAgICAgIFsnZGF0YV9saW1pdF9yZXNldCcsICdub19yZXNldCcsICd2YXJjaGFyKDEwMCknXSwKICAgICAgICBbJ29uZV9idXlfc3RhdHVzJywgJzAnLCAnVkFSQ0hBUigyMCknXSwKICAgICAgICBbJ2luYm91bmRzJywgbnVsbCwgJ1RFWFQnXSwKICAgICAgICBbJ3Byb3hpZXMnLCBudWxsLCAnVEVYVCddLAogICAgICAgIFsnY2F0ZWdvcnknLCBudWxsLCAndmFyY2hhcigyMDApJ10sCiAgICAgICAgWydoaWRlX3BhbmVsJywgJ3t9JywgJ1RFWFQnXSwKICAgICAgICBbJ3N0YXR1c19wcm9kdWN0JywgJ2FjdGl2ZScsICJWQVJDSEFSKDIwKSBOT1QgTlVMTCBERUZBVUxUICdhY3RpdmUnIl0sCiAgICAgICAgWydkaXNwbGF5X29yZGVyJywgbnVsbCwgJ0lOVCBOT1QgTlVMTCBERUZBVUxUIDAnXSwKICAgIF0sCl07Cg==
+<?php
+
+return [
+    'create' => <<<SQL
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        code_product varchar(200) NULL,
+        name_product varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        price_product varchar(2000) NULL,
+        Volume_constraint varchar(2000) NULL,
+        Location varchar(200) NULL,
+        Service_time varchar(200) NULL,
+        agent varchar(100) NULL,
+        note TEXT NULL,
+        data_limit_reset varchar(200) NULL,
+        one_buy_status varchar(20) NOT NULL,
+        inbounds TEXT NULL,
+        proxies TEXT NULL,
+        category varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+        hide_panel TEXT NOT NULL,
+        status_product varchar(20) NOT NULL DEFAULT 'active',
+        display_order INT NOT NULL DEFAULT 0
+        SQL,
+    'columns' => [
+        ['code_product', null, 'varchar(50)'],
+        ['Location', null, 'VARCHAR(200)'],
+        ['agent', 'f', 'varchar(50)'],
+        ['note', '', 'TEXT'],
+        ['data_limit_reset', 'no_reset', 'varchar(100)'],
+        ['one_buy_status', '0', 'VARCHAR(20)'],
+        ['inbounds', null, 'TEXT'],
+        ['proxies', null, 'TEXT'],
+        ['category', null, 'varchar(200)'],
+        ['hide_panel', '{}', 'TEXT'],
+        ['status_product', 'active', "VARCHAR(20) NOT NULL DEFAULT 'active'"],
+        ['display_order', null, 'INT NOT NULL DEFAULT 0'],
+    ],
+];

@@ -1,1 +1,42 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgnQXNpYS9UZWhyYW4nKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CiR0ZXh0Ym90bGFuZyA9IGxhbmd1YWdlY2hhbmdlKCk7CiRNYW5hZ2VQYW5lbCA9IG5ldyBNYW5hZ2VQYW5lbCgpOwoKJHNldHRpbmcgPSBzZWxlY3QoInNldHRpbmciLCAiKiIpOwovLyBidXkgc2VydmljZSAKJHN0bXQgPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIG1hcnpiYW5fcGFuZWwgV0hFUkUgdHlwZSA9ICdtYXJ6YmFuJyAgT1JERVIgQlkgUkFORCgpIExJTUlUIDI1Iik7CiRzdG10LT5leGVjdXRlKCk7CiAgICAgICAgd2hpbGUgKCRwYW5lbCA9ICRzdG10LT5mZXRjaChQRE86OkZFVENIX0FTU09DKSkgewogICAgICAgICR1c2VycyA9IGdldHVzZXJzKCRwYW5lbFsnbmFtZV9wYW5lbCddLCJvbl9ob2xkIilbJ3VzZXJzJ107CiAgICAgICAgZm9yZWFjaCgkdXNlcnMgYXMgJHVzZXIpewogICAgICAgICRpbnZvaWNlID0gc2VsZWN0KCJpbnZvaWNlIiwiKiIsInVzZXJuYW1lIiwkdXNlclsndXNlcm5hbWUnXSwic2VsZWN0Iik7CiAgICAgICAgaWYoJGludm9pY2UgPT0gZmFsc2UgKWNvbnRpbnVlOwogICAgICAgIGlmKCRpbnZvaWNlWydTdGF0dXMnXSA9PSAic2VuZF9vbl9ob2xkIiljb250aW51ZTsKICAgICAgICAkbGluZSAgPSAkaW52b2ljZVsndXNlcm5hbWUnXTsKICAgICAgICAkcmVzdWx0c3MgPSAkaW52b2ljZTsKICAgICAgICAkbWFyemJhbl9saXN0X2dldCA9ICRwYW5lbDsKICAgICAgICAkZ2V0X3VzZXJuYW1lX0NoZWNrID0gJHVzZXI7CiAgICAgICAgaWYoJGdldF91c2VybmFtZV9DaGVja1snc3RhdHVzJ10gIT0gIlVuc3VjY2Vzc2Z1bCIpewogICAgICAgIGlmKGluX2FycmF5KCRnZXRfdXNlcm5hbWVfQ2hlY2tbJ3N0YXR1cyddLFsnb25faG9sZCddKSl7CiAgICAgICAgICAgICR0aW1lYnV5cmVtaW4gPSAodGltZSgpIC0gJHJlc3VsdHNzWyd0aW1lX3NlbGwnXSkvODY0MDA7CiAgICAgICAgaWYgKCR0aW1lYnV5cmVtaW4gPj0gJHNldHRpbmdbJ29uX2hvbGRfZGF5J10pIHsKICAgICAgICAkc3FsID0gIlNFTEVDVCAxIEZST00gc2VydmljZV9vdGhlciBXSEVSRSB1c2VybmFtZSA9IDp1c2VybmFtZSAgQU5EIHR5cGUgPSAnY2hhbmdlX2xvY2F0aW9uJyBMSU1JVCAxIjsKICAgICAgICAkc3RtdE90aGVyID0gJHBkby0+cHJlcGFyZSgkc3FsKTsKICAgICAgICAkc3RtdE90aGVyLT5iaW5kUGFyYW0oJzp1c2VybmFtZScsICRsaW5lICxQRE86OlBBUkFNX1NUUik7CiAgICAgICAgJHN0bXRPdGhlci0+ZXhlY3V0ZSgpOwogICAgICAgIGlmKCRzdG10T3RoZXItPmZldGNoQ29sdW1uKCkgIT09IGZhbHNlKWNvbnRpbnVlOwogICAgICAgICAgICAgICAgJHRleHQgPSBzcHJpbnRmKCR0ZXh0Ym90bGFuZ1sndXNlcnMnXVsnbm90aWZ5J11bJ29uSG9sZFJlbWluZGVyJ10sICRsaW5lLCAkc2V0dGluZ1snb25faG9sZF9kYXknXSwgJHNldHRpbmdbJ2lkX3N1cHBvcnQnXSk7CiAgICAgICAgICAgIHNlbmRtZXNzYWdlKCRyZXN1bHRzc1snaWRfdXNlciddLCAkdGV4dCwgbnVsbCwgJ0hUTUwnKTsKICAgICAgICAgICAgdXBkYXRlKCJpbnZvaWNlIiwiU3RhdHVzIiwic2VuZF9vbl9ob2xkIiwgInVzZXJuYW1lIiwkbGluZSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgfQp9Cn0=
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+date_default_timezone_set('Asia/Tehran');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+$textbotlang = languagechange();
+$ManagePanel = new ManagePanel();
+
+$setting = select("setting", "*");
+// buy service 
+$stmt = $pdo->prepare("SELECT * FROM marzban_panel WHERE type = 'marzban'  ORDER BY RAND() LIMIT 25");
+$stmt->execute();
+        while ($panel = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $users = getusers($panel['name_panel'],"on_hold")['users'];
+        foreach($users as $user){
+        $invoice = select("invoice","*","username",$user['username'],"select");
+        if($invoice == false )continue;
+        if($invoice['Status'] == "send_on_hold")continue;
+        $line  = $invoice['username'];
+        $resultss = $invoice;
+        $marzban_list_get = $panel;
+        $get_username_Check = $user;
+        if($get_username_Check['status'] != "Unsuccessful"){
+        if(in_array($get_username_Check['status'],['on_hold'])){
+            $timebuyremin = (time() - $resultss['time_sell'])/86400;
+        if ($timebuyremin >= $setting['on_hold_day']) {
+        $sql = "SELECT 1 FROM service_other WHERE username = :username  AND type = 'change_location' LIMIT 1";
+        $stmtOther = $pdo->prepare($sql);
+        $stmtOther->bindParam(':username', $line ,PDO::PARAM_STR);
+        $stmtOther->execute();
+        if($stmtOther->fetchColumn() !== false)continue;
+                $text = sprintf($textbotlang['users']['notify']['onHoldReminder'], $line, $setting['on_hold_day'], $setting['id_support']);
+            sendmessage($resultss['id_user'], $text, null, 'HTML');
+            update("invoice","Status","send_on_hold", "username",$line);
+            }
+        }
+        }
+}
+}

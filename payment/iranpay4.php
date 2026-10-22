@@ -1,1 +1,144 @@
-PD9waHAKCmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMvQXBpL01hcnpiYW4ucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2tleWJvYXJkLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9qZGYucGhwJzsKcmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsKCiRNYW5hZ2VQYW5lbCA9IG5ldyBNYW5hZ2VQYW5lbCgpOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwoKJG9yZGVyX2lkID0gdHJpbSgoc3RyaW5nKSAoJF9HRVRbJ29yZGVyX2lkJ10gPz8gJF9QT1NUWydvcmRlcl9pZCddID8/ICcnKSk7CiRhdXRob3JpdHkgPSB0cmltKChzdHJpbmcpICgkX0dFVFsnYXV0aG9yaXR5J10gPz8gJF9QT1NUWydhdXRob3JpdHknXSA/PyAnJykpOwoKZnVuY3Rpb24gaXJhbnBheTRfZmluaXNoKGJvb2wgJG9rLCBzdHJpbmcgJHRpdGxlLCBzdHJpbmcgJGRldGFpbCk6IG5ldmVyCnsKICAgIGlmICghaGVhZGVyc19zZW50KCkpIHsKICAgICAgICBoZWFkZXIoJ0NvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Jyk7CiAgICB9CiAgICBlY2hvICc8IWRvY3R5cGUgaHRtbD48aHRtbCBsYW5nPSJmYSIgZGlyPSJydGwiPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4nCiAgICAgICAgLiAnPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEiPicKICAgICAgICAuICc8Ym9keSBzdHlsZT0iZm9udC1mYW1pbHk6VGFob21hLHNhbnMtc2VyaWY7dGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZzo0OHB4IDIwcHgiPicKICAgICAgICAuICc8ZGl2IHN0eWxlPSJmb250LXNpemU6NDRweCI+JyAuICgkb2sgPyAnJiMxMDAwMzsnIDogJyYjMTAwMDU7JykgLiAnPC9kaXY+JwogICAgICAgIC4gJzxoMiBzdHlsZT0iY29sb3I6JyAuICgkb2sgPyAnIzJlY2M3MScgOiAnI2U3NGMzYycpIC4gJyI+JwogICAgICAgIC4gaHRtbHNwZWNpYWxjaGFycygkdGl0bGUsIEVOVF9RVU9URVMsICdVVEYtOCcpIC4gJzwvaDI+JwogICAgICAgIC4gJzxwIHN0eWxlPSJjb2xvcjojNjY2Ij4nIC4gaHRtbHNwZWNpYWxjaGFycygkZGV0YWlsLCBFTlRfUVVPVEVTLCAnVVRGLTgnKSAuICc8L3A+JwogICAgICAgIC4gJzwvYm9keT48L2h0bWw+JzsKICAgIGV4aXQ7Cn0KCiRmYWlsZWRUaXRsZSA9ICR0ZXh0Ym90bGFuZ1sncGF5bWVudEdhdGV3YXknXVsnc3RhdHVzRmFpbGVkJ10gPz8gJ9m+2LHYr9in2K7YqiDZhtin2YXZiNmB2YInOwokc3VjY2Vzc1RpdGxlID0gJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydzdGF0dXNTdWNjZXNzJ10gPz8gJ9m+2LHYr9in2K7YqiDZhdmI2YHZgic7CgppZiAoJG9yZGVyX2lkID09PSAnJykgewogICAgaXJhbnBheTRfZmluaXNoKGZhbHNlLCAkZmFpbGVkVGl0bGUsICfYtNmG2KfYs9mHINiz2YHYp9ix2LQg2KfYsdiz2KfZhCDZhti02K8uJyk7Cn0KCiRwYXltZW50ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImlkX29yZGVyIiwgJG9yZGVyX2lkLCAic2VsZWN0Iik7CmlmICghJHBheW1lbnQpIHsKICAgIGlyYW5wYXk0X2ZpbmlzaChmYWxzZSwgJGZhaWxlZFRpdGxlLCAn2KfbjNmGINiz2YHYp9ix2LQg2b7bjNiv2Kcg2YbYtNivLicpOwp9CgppZiAoJHBheW1lbnRbJ3BheW1lbnRfU3RhdHVzJ10gPT09ICdwYWlkJykgewogICAgaXJhbnBheTRfZmluaXNoKHRydWUsICRzdWNjZXNzVGl0bGUsICfYp9uM2YYg2b7Ysdiv2KfYrtiqINmC2KjZhNin2Ysg2KrYp9uM24zYryDYtNiv2Ycg2KfYs9iqLicpOwp9CgokYXBpX2tleSA9IHRyaW0oKHN0cmluZykgZ2V0UGF5U2V0dGluZ1ZhbHVlKCdhcGlpcmFucGF5NCcsICcnKSk7CiRlbmRwb2ludCA9IGFiYW5nYXRld2F5RW5kcG9pbnQoKTsKaWYgKCRhcGlfa2V5ID09PSAnJyB8fCAkYXBpX2tleSA9PT0gJzAnIHx8ICRlbmRwb2ludCA9PT0gbnVsbCkgewogICAgaXJhbnBheTRfZmluaXNoKGZhbHNlLCAkZmFpbGVkVGl0bGUsICfYr9ix2q/Yp9mHINm+24zaqdix2KjZhtiv24wg2YbYtNiv2Ycg2KfYs9iqLicpOwp9CgokcHJpY2UgPSBpbnR2YWwoJHBheW1lbnRbJ3ByaWNlJ10pOwoKJGN1cmwgPSBjdXJsX2luaXQoKTsKY3VybF9zZXRvcHRfYXJyYXkoJGN1cmwsIFsKICAgIENVUkxPUFRfVVJMID0+ICRlbmRwb2ludCAuICcvdmVyaWZ5JywKICAgIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIgPT4gdHJ1ZSwKICAgIENVUkxPUFRfVElNRU9VVCA9PiAyNSwKICAgIENVUkxPUFRfQ1VTVE9NUkVRVUVTVCA9PiAnUE9TVCcsCiAgICBDVVJMT1BUX0hUVFBIRUFERVIgPT4gWwogICAgICAgICdDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdBdXRob3JpemF0aW9uOiBCZWFyZXIgJyAuICRhcGlfa2V5LAogICAgXSwKICAgIENVUkxPUFRfUE9TVEZJRUxEUyA9PiBqc29uX2VuY29kZShbCiAgICAgICAgJ29yZGVyX2lkJyA9PiAkb3JkZXJfaWQsCiAgICAgICAgJ2F1dGhvcml0eScgPT4gJGF1dGhvcml0eSwKICAgICAgICAnYW1vdW50JyA9PiAkcHJpY2UsCiAgICBdLCBKU09OX1VORVNDQVBFRF9VTklDT0RFKSwKXSk7CiRyZXN1bHQgPSBjdXJsX2V4ZWMoJGN1cmwpOwokaHR0cENvZGUgPSAoaW50KSBjdXJsX2dldGluZm8oJGN1cmwsIENVUkxJTkZPX0hUVFBfQ09ERSk7CmN1cmxfY2xvc2UoJGN1cmwpOwoKJHJlc3BvbnNlID0gaXNfc3RyaW5nKCRyZXN1bHQpID8ganNvbl9kZWNvZGUoJHJlc3VsdCwgdHJ1ZSkgOiBudWxsOwoKJGFuc3dlcmVkRm9yVGhpc09yZGVyID0gaXNfYXJyYXkoJHJlc3BvbnNlKQogICAgJiYgaXNzZXQoJHJlc3BvbnNlWydvcmRlcl9pZCddLCAkcmVzcG9uc2VbJ2Ftb3VudCddKQogICAgJiYgKHN0cmluZykgJHJlc3BvbnNlWydvcmRlcl9pZCddID09PSAoc3RyaW5nKSAkb3JkZXJfaWQKICAgICYmIGludHZhbCgkcmVzcG9uc2VbJ2Ftb3VudCddKSA+PSAkcHJpY2U7CgokYWNjZXB0ZWQgPSAkaHR0cENvZGUgPT09IDIwMAogICAgJiYgIWVtcHR5KCRyZXNwb25zZVsnc3VjY2VzcyddKQogICAgJiYgJGFuc3dlcmVkRm9yVGhpc09yZGVyOwoKaWYgKCEkYWNjZXB0ZWQpIHsKICAgIGlyYW5wYXk0X2ZpbmlzaChmYWxzZSwgJGZhaWxlZFRpdGxlLCAn2b7Ysdiv2KfYrtiqINiq2KfbjNuM2K8g2YbYtNivLicpOwp9CgppZiAoIWNsYWltUGF5bWVudFBhaWQoJG9yZGVyX2lkKSkgewogICAgaXJhbnBheTRfZmluaXNoKHRydWUsICRzdWNjZXNzVGl0bGUsICfYp9uM2YYg2b7Ysdiv2KfYrtiqINmC2KjZhNin2Ysg2KrYp9uM24zYryDYtNiv2Ycg2KfYs9iqLicpOwp9Cgp0cnkgewogICAgRGlyZWN0UGF5bWVudCgkb3JkZXJfaWQsICIuLi9pbWFnZXMuanBnIik7Cn0gY2F0Y2ggKFRocm93YWJsZSAkZXJyb3IpIHsKICAgIGVycm9yX2xvZygiaXJhbnBheTQ6IERpcmVjdFBheW1lbnQgZmFpbGVkIGZvciB7JG9yZGVyX2lkfTogIiAuICRlcnJvci0+Z2V0TWVzc2FnZSgpKTsKICAgIGlyYW5wYXk0X2ZpbmlzaChmYWxzZSwgJGZhaWxlZFRpdGxlLCAn2b7Ysdiv2KfYrtiqINiq2KfbjNuM2K8g2LTYryDZiNmE24wg2KrYrdmI24zZhCDYs9ix2YjbjNizINiu2LfYpyDYr9in2K8uINio2Kcg2b7YtNiq24zYqNin2YbbjCDYqtmF2KfYsyDYqNqv24zYsduM2K8uJyk7Cn0KCiRzdGF0ZW1lbnQgPSAkcGRvLT5wcmVwYXJlKAogICAgIlVQREFURSBQYXltZW50X3JlcG9ydCBTRVQgZGVjX25vdF9jb25maXJtZWQgPSA6YW5zd2VyIFdIRVJFIGlkX29yZGVyID0gOmlkX29yZGVyIgopOwokc3RhdGVtZW50LT5iaW5kVmFsdWUoJzphbnN3ZXInLCBqc29uX2VuY29kZSgkcmVzcG9uc2UsIEpTT05fVU5FU0NBUEVEX1VOSUNPREUpKTsKJHN0YXRlbWVudC0+YmluZFZhbHVlKCc6aWRfb3JkZXInLCAkb3JkZXJfaWQpOwokc3RhdGVtZW50LT5leGVjdXRlKCk7CgokYnV5ZXIgPSBzZWxlY3QoInVzZXIiLCAiKiIsICJpZCIsICRwYXltZW50WydpZF91c2VyJ10sICJzZWxlY3QiKTsKCiRjYXNoYmFjayA9IGludHZhbChnZXRQYXlTZXR0aW5nVmFsdWUoJ2NoYXNoYmFja2lyYW5wYXk0JywgJzAnKSk7CmlmICgkY2FzaGJhY2sgPiAwICYmICRidXllcikgewogICAgJHJld2FyZCA9IGludHZhbCgkcHJpY2UgKiAkY2FzaGJhY2sgLyAxMDApOwogICAgaWYgKCRyZXdhcmQgPiAwKSB7CiAgICAgICAgdXBkYXRlKCJ1c2VyIiwgIkJhbGFuY2UiLCBpbnR2YWwoJGJ1eWVyWydCYWxhbmNlJ10pICsgJHJld2FyZCwgImlkIiwgJHBheW1lbnRbJ2lkX3VzZXInXSk7CiAgICAgICAgc2VuZG1lc3NhZ2UoCiAgICAgICAgICAgICRidXllclsnaWQnXSwKICAgICAgICAgICAgc3ByaW50ZigkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ2dpZnRSZXBvcnQnXSwgbnVtYmVyX2Zvcm1hdCgkcmV3YXJkKSksCiAgICAgICAgICAgIG51bGwsCiAgICAgICAgICAgICdIVE1MJwogICAgICAgICk7CiAgICB9Cn0KCmlmICgkYnV5ZXIgJiYgc3RybGVuKChzdHJpbmcpICgkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSA/PyAnJykpID4gMCkgewogICAgJHBheW1lbnRyZXBvcnRzID0gc2VsZWN0KCJ0b3BpY2lkIiwgImlkcmVwb3J0IiwgInJlcG9ydCIsICJwYXltZW50cmVwb3J0IiwgInNlbGVjdCIpWydpZHJlcG9ydCddOwogICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJywgWwogICAgICAgICdjaGF0X2lkJyA9PiAkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSwKICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICRwYXltZW50cmVwb3J0cywKICAgICAgICAndGV4dCcgPT4gc3ByaW50ZigKICAgICAgICAgICAgJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydyZXBvcnRBYmFuR2F0ZXdheSddLAogICAgICAgICAgICAkYnV5ZXJbJ3VzZXJuYW1lJ10sCiAgICAgICAgICAgICRidXllclsnaWQnXSwKICAgICAgICAgICAgbnVtYmVyX2Zvcm1hdCgkcHJpY2UpCiAgICAgICAgKSwKICAgICAgICAncGFyc2VfbW9kZScgPT4gJ0hUTUwnLAogICAgXSk7Cn0KCmlyYW5wYXk0X2ZpbmlzaCh0cnVlLCAkc3VjY2Vzc1RpdGxlLCAn2b7Ysdiv2KfYrtiqINi02YXYpyDYqNinINmF2YjZgdmC24zYqiDYp9mG2KzYp9mFINi02K8uJyk7Cg==
+<?php
+
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels/Api/Marzban.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$ManagePanel = new ManagePanel();
+$textbotlang = languagechange();
+
+$order_id = trim((string) ($_GET['order_id'] ?? $_POST['order_id'] ?? ''));
+$authority = trim((string) ($_GET['authority'] ?? $_POST['authority'] ?? ''));
+
+function iranpay4_finish(bool $ok, string $title, string $detail): never
+{
+    if (!headers_sent()) {
+        header('Content-Type: text/html; charset=utf-8');
+    }
+    echo '<!doctype html><html lang="fa" dir="rtl"><meta charset="utf-8">'
+        . '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        . '<body style="font-family:Tahoma,sans-serif;text-align:center;padding:48px 20px">'
+        . '<div style="font-size:44px">' . ($ok ? '&#10003;' : '&#10005;') . '</div>'
+        . '<h2 style="color:' . ($ok ? '#2ecc71' : '#e74c3c') . '">'
+        . htmlspecialchars($title, ENT_QUOTES, 'UTF-8') . '</h2>'
+        . '<p style="color:#666">' . htmlspecialchars($detail, ENT_QUOTES, 'UTF-8') . '</p>'
+        . '</body></html>';
+    exit;
+}
+
+$failedTitle = $textbotlang['paymentGateway']['statusFailed'] ?? 'پرداخت ناموفق';
+$successTitle = $textbotlang['paymentGateway']['statusSuccess'] ?? 'پرداخت موفق';
+
+if ($order_id === '') {
+    iranpay4_finish(false, $failedTitle, 'شناسه سفارش ارسال نشد.');
+}
+
+$payment = select("Payment_report", "*", "id_order", $order_id, "select");
+if (!$payment) {
+    iranpay4_finish(false, $failedTitle, 'این سفارش پیدا نشد.');
+}
+
+if ($payment['payment_Status'] === 'paid') {
+    iranpay4_finish(true, $successTitle, 'این پرداخت قبلاً تایید شده است.');
+}
+
+$api_key = trim((string) getPaySettingValue('apiiranpay4', ''));
+$endpoint = abangatewayEndpoint();
+if ($api_key === '' || $api_key === '0' || $endpoint === null) {
+    iranpay4_finish(false, $failedTitle, 'درگاه پیکربندی نشده است.');
+}
+
+$price = intval($payment['price']);
+
+$curl = curl_init();
+curl_setopt_array($curl, [
+    CURLOPT_URL => $endpoint . '/verify',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 25,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_HTTPHEADER => [
+        'Content-Type: application/json',
+        'Accept: application/json',
+        'Authorization: Bearer ' . $api_key,
+    ],
+    CURLOPT_POSTFIELDS => json_encode([
+        'order_id' => $order_id,
+        'authority' => $authority,
+        'amount' => $price,
+    ], JSON_UNESCAPED_UNICODE),
+]);
+$result = curl_exec($curl);
+$httpCode = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
+curl_close($curl);
+
+$response = is_string($result) ? json_decode($result, true) : null;
+
+$answeredForThisOrder = is_array($response)
+    && isset($response['order_id'], $response['amount'])
+    && (string) $response['order_id'] === (string) $order_id
+    && intval($response['amount']) >= $price;
+
+$accepted = $httpCode === 200
+    && !empty($response['success'])
+    && $answeredForThisOrder;
+
+if (!$accepted) {
+    iranpay4_finish(false, $failedTitle, 'پرداخت تایید نشد.');
+}
+
+if (!claimPaymentPaid($order_id)) {
+    iranpay4_finish(true, $successTitle, 'این پرداخت قبلاً تایید شده است.');
+}
+
+try {
+    DirectPayment($order_id, "../images.jpg");
+} catch (Throwable $error) {
+    error_log("iranpay4: DirectPayment failed for {$order_id}: " . $error->getMessage());
+    iranpay4_finish(false, $failedTitle, 'پرداخت تایید شد ولی تحویل سرویس خطا داد. با پشتیبانی تماس بگیرید.');
+}
+
+$statement = $pdo->prepare(
+    "UPDATE Payment_report SET dec_not_confirmed = :answer WHERE id_order = :id_order"
+);
+$statement->bindValue(':answer', json_encode($response, JSON_UNESCAPED_UNICODE));
+$statement->bindValue(':id_order', $order_id);
+$statement->execute();
+
+$buyer = select("user", "*", "id", $payment['id_user'], "select");
+
+$cashback = intval(getPaySettingValue('chashbackiranpay4', '0'));
+if ($cashback > 0 && $buyer) {
+    $reward = intval($price * $cashback / 100);
+    if ($reward > 0) {
+        update("user", "Balance", intval($buyer['Balance']) + $reward, "id", $payment['id_user']);
+        sendmessage(
+            $buyer['id'],
+            sprintf($textbotlang['paymentGateway']['giftReport'], number_format($reward)),
+            null,
+            'HTML'
+        );
+    }
+}
+
+if ($buyer && strlen((string) ($setting['Channel_Report'] ?? '')) > 0) {
+    $paymentreports = select("topicid", "idreport", "report", "paymentreport", "select")['idreport'];
+    telegram('sendmessage', [
+        'chat_id' => $setting['Channel_Report'],
+        'message_thread_id' => $paymentreports,
+        'text' => sprintf(
+            $textbotlang['paymentGateway']['reportAbanGateway'],
+            $buyer['username'],
+            $buyer['id'],
+            number_format($price)
+        ),
+        'parse_mode' => 'HTML',
+    ]);
+}
+
+iranpay4_finish(true, $successTitle, 'پرداخت شما با موفقیت انجام شد.');

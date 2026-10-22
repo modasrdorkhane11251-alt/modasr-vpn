@@ -1,1 +1,37 @@
-PD9waHAKCnJldHVybiBzdGF0aWMgZnVuY3Rpb24gKFBETyAkcGRvLCBTY2hlbWEgJHNjaGVtYSk6IHZvaWQgewogICAgJHN0YXRlbWVudHMgPSBbCiAgICAgICAgJ2ludm9pY2UnID0+IFsKICAgICAgICAgICAgJ0FMVEVSIFRBQkxFIGBpbnZvaWNlYCBDSEFOR0UgYFZvbHVtZWAgYFZvbHVtZWAgVkFSQ0hBUigyMDApJywKICAgICAgICAgICAgJ0FMVEVSIFRBQkxFIGBpbnZvaWNlYCBDSEFOR0UgYHByaWNlX3Byb2R1Y3RgIGBwcmljZV9wcm9kdWN0YCBWQVJDSEFSKDIwMCknLAogICAgICAgICAgICAnQUxURVIgVEFCTEUgYGludm9pY2VgIENIQU5HRSBgbmFtZV9wcm9kdWN0YCBgbmFtZV9wcm9kdWN0YCBWQVJDSEFSKDIwMCknLAogICAgICAgICAgICAnQUxURVIgVEFCTEUgYGludm9pY2VgIENIQU5HRSBgdXNlcm5hbWVgIGB1c2VybmFtZWAgVkFSQ0hBUigyMDApJywKICAgICAgICAgICAgJ0FMVEVSIFRBQkxFIGBpbnZvaWNlYCBDSEFOR0UgYFNlcnZpY2VfbG9jYXRpb25gIGBTZXJ2aWNlX2xvY2F0aW9uYCBWQVJDSEFSKDIwMCknLAogICAgICAgICAgICAnQUxURVIgVEFCTEUgYGludm9pY2VgIENIQU5HRSBgdGltZV9zZWxsYCBgdGltZV9zZWxsYCBWQVJDSEFSKDIwMCknLAogICAgICAgIF0sCiAgICAgICAgJ21hcnpiYW5fcGFuZWwnID0+IFsKICAgICAgICAgICAgJ0FMVEVSIFRBQkxFIGBtYXJ6YmFuX3BhbmVsYCBNT0RJRlkgcGFzc3dvcmRfcGFuZWwgVEVYVCBDT0xMQVRFIHV0ZjhtYjRfYmluJywKICAgICAgICAgICAgJ0FMVEVSIFRBQkxFIGBtYXJ6YmFuX3BhbmVsYCBNT0RJRlkgbmFtZV9wYW5lbCBWQVJDSEFSKDI1NSkgQ09MTEFURSB1dGY4bWI0X2JpbicsCiAgICAgICAgXSwKICAgICAgICAncHJvZHVjdCcgPT4gWwogICAgICAgICAgICAnQUxURVIgVEFCTEUgYHByb2R1Y3RgIE1PRElGWSBuYW1lX3Byb2R1Y3QgVkFSQ0hBUigxMDAwKSBDSEFSQUNURVIgU0VUIHV0ZjhtYjQgQ09MTEFURSB1dGY4bWI0X2JpbicsCiAgICAgICAgXSwKICAgICAgICAnaGVscCcgPT4gWwogICAgICAgICAgICAnQUxURVIgVEFCTEUgYGhlbHBgIE1PRElGWSBuYW1lX29zIFZBUkNIQVIoNTAwKSBDT0xMQVRFIHV0ZjhtYjRfYmluJywKICAgICAgICBdLAogICAgXTsKCiAgICBmb3JlYWNoICgkc3RhdGVtZW50cyBhcyAkdGFibGUgPT4gJHF1ZXJpZXMpIHsKICAgICAgICBpZiAoISRzY2hlbWEtPnRhYmxlRXhpc3RzKCR0YWJsZSkpIHsKICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgfQogICAgICAgIGZvcmVhY2ggKCRxdWVyaWVzIGFzICRxdWVyeSkgewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgJHBkby0+ZXhlYygkcXVlcnkpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgJGUpIHsKICAgICAgICAgICAgICAgIGVycm9yX2xvZygiW2RiOm1pZ3JhdGlvbjpjb2x1bW5fdHlwZXM6JHRhYmxlXSAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn07Cg==
+<?php
+
+return static function (PDO $pdo, Schema $schema): void {
+    $statements = [
+        'invoice' => [
+            'ALTER TABLE `invoice` CHANGE `Volume` `Volume` VARCHAR(200)',
+            'ALTER TABLE `invoice` CHANGE `price_product` `price_product` VARCHAR(200)',
+            'ALTER TABLE `invoice` CHANGE `name_product` `name_product` VARCHAR(200)',
+            'ALTER TABLE `invoice` CHANGE `username` `username` VARCHAR(200)',
+            'ALTER TABLE `invoice` CHANGE `Service_location` `Service_location` VARCHAR(200)',
+            'ALTER TABLE `invoice` CHANGE `time_sell` `time_sell` VARCHAR(200)',
+        ],
+        'marzban_panel' => [
+            'ALTER TABLE `marzban_panel` MODIFY password_panel TEXT COLLATE utf8mb4_bin',
+            'ALTER TABLE `marzban_panel` MODIFY name_panel VARCHAR(255) COLLATE utf8mb4_bin',
+        ],
+        'product' => [
+            'ALTER TABLE `product` MODIFY name_product VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin',
+        ],
+        'help' => [
+            'ALTER TABLE `help` MODIFY name_os VARCHAR(500) COLLATE utf8mb4_bin',
+        ],
+    ];
+
+    foreach ($statements as $table => $queries) {
+        if (!$schema->tableExists($table)) {
+            continue;
+        }
+        foreach ($queries as $query) {
+            try {
+                $pdo->exec($query);
+            } catch (Throwable $e) {
+                error_log("[db:migration:column_types:$table] " . $e->getMessage());
+            }
+        }
+    }
+};

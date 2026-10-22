@@ -1,1 +1,4 @@
-PD9waHAKCmhlYWRlcignQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyBjaGFyc2V0PXV0Zi04Jyk7CmVjaG8gJ01JUlpBX1JFV1JJVEVfT0snOwo=
+<?php
+
+header('Content-Type: text/plain; charset=utf-8');
+echo 'MIRZA_REWRITE_OK';

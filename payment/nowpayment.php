@@ -1,1 +1,49 @@
-PD9waHAKaW5pX3NldCgnZXJyb3JfbG9nJywgJ2Vycm9yX2xvZycpOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vY29uZmlnLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9ib3RhcGkucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL3BhbmVscy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vZnVuY3Rpb24ucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2tleWJvYXJkLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9qZGYucGhwJzsKcmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CiRzZXR0aW5nID0gc2VsZWN0KCJzZXR0aW5nIiwgIioiKTsKJHBheW1lbnRyZXBvcnRzID0gc2VsZWN0KCJ0b3BpY2lkIiwgImlkcmVwb3J0IiwgInJlcG9ydCIsICJwYXltZW50cmVwb3J0IiwgInNlbGVjdCIpWydpZHJlcG9ydCddOwokdGV4dGJvdGxhbmcgPSBsYW5ndWFnZWNoYW5nZSgpOwokZGF0YSA9IGpzb25fZGVjb2RlKGZpbGVfZ2V0X2NvbnRlbnRzKCJwaHA6Ly9pbnB1dCIpLCB0cnVlKTsKaWYgKGlzc2V0KCRkYXRhWydwYXltZW50X3N0YXR1cyddKSAmJiAkZGF0YVsncGF5bWVudF9zdGF0dXMnXSA9PSAiZmluaXNoZWQiKSB7CiAgICAkcGF5ID0gU3RhdHVzUGF5bWVudCgkZGF0YVsncGF5bWVudF9pZCddKTsKICAgIGlmICgkcGF5WydwYXltZW50X3N0YXR1cyddICE9ICJmaW5pc2hlZCIpCiAgICAgICAgcmV0dXJuOwogICAgJFBheW1lbnRfcmVwb3J0ID0gc2VsZWN0KCJQYXltZW50X3JlcG9ydCIsICIqIiwgImlkX29yZGVyIiwgKHN0cmluZykgKCRwYXlbJ29yZGVyX2lkJ10gPz8gJycpLCAic2VsZWN0Iik7CiAgICBpZiAoJFBheW1lbnRfcmVwb3J0ICYmICRQYXltZW50X3JlcG9ydFsnUGF5bWVudF9NZXRob2QnXSA9PT0gIm5vd3BheW1lbnQiICYmIChzdHJpbmcpICRQYXltZW50X3JlcG9ydFsnZGVjX25vdF9jb25maXJtZWQnXSA9PT0gKHN0cmluZykgKCRwYXlbJ2ludm9pY2VfaWQnXSA/PyAnJykpIHsKICAgICAgICBpZiAoIWNsYWltUGF5bWVudFBhaWQoJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddKSkKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIERpcmVjdFBheW1lbnQoJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddLCAiLi4vaW1hZ2VzLmpwZyIpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSAkZGlyZWN0UGF5bWVudEVycm9yKSB7CiAgICAgICAgICAgIGVycm9yX2xvZygiRGlyZWN0UGF5bWVudCBmYWlsZWQgZm9yIG9yZGVyIHskUGF5bWVudF9yZXBvcnRbJ2lkX29yZGVyJ119OiAiIC4gJGRpcmVjdFBheW1lbnRFcnJvci0+Z2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KICAgICAgICAkcHJpY2VjYXNoYmFjayA9IHNlbGVjdCgiUGF5U2V0dGluZyIsICJWYWx1ZVBheSIsICJOYW1lUGF5IiwgImNhc2hiYWNrbm93cGF5bWVudCIsICJzZWxlY3QiKVsnVmFsdWVQYXknXTsKICAgICAgICAkQmFsYW5jZV9pZCA9IHNlbGVjdCgidXNlciIsICIqIiwgImlkIiwgJFBheW1lbnRfcmVwb3J0WydpZF91c2VyJ10sICJzZWxlY3QiKTsKICAgICAgICBpZiAoJHByaWNlY2FzaGJhY2sgIT0gIjAiKSB7CiAgICAgICAgICAgICRyZXN1bHQgPSAoJFBheW1lbnRfcmVwb3J0WydwcmljZSddICogJHByaWNlY2FzaGJhY2spIC8gMTAwOwogICAgICAgICAgICAkQmFsYW5jZV9jb25mcmltID0gaW50dmFsKCRCYWxhbmNlX2lkWydCYWxhbmNlJ10pICsgJHJlc3VsdDsKICAgICAgICAgICAgdXBkYXRlKCJ1c2VyIiwgIkJhbGFuY2UiLCAkQmFsYW5jZV9jb25mcmltLCAiaWQiLCAkQmFsYW5jZV9pZFsnaWQnXSk7CiAgICAgICAgICAgICRwcmljZWNhc2hiYWNrID0gbnVtYmVyX2Zvcm1hdCgkcHJpY2VjYXNoYmFjayk7CiAgICAgICAgICAgICR0ZXh0X3JlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWydwYXltZW50R2F0ZXdheSddWydnaWZ0UmVwb3J0J10sICRyZXN1bHQpOwogICAgICAgICAgICBzZW5kbWVzc2FnZSgkQmFsYW5jZV9pZFsnaWQnXSwgJHRleHRfcmVwb3J0LCBudWxsLCAnSFRNTCcpOwogICAgICAgIH0KICAgICAgICAkdGV4dF9yZXBvcnRwYXltZW50ID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ3BheW1lbnRHYXRld2F5J11bJ3JlcG9ydE5vd3BheW1lbnQnXSwgJEJhbGFuY2VfaWRbJ3VzZXJuYW1lJ10sICRCYWxhbmNlX2lkWydpZCddLCAkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10sICRwYXlbJ2FjdHVhbGx5X3BhaWQnXSk7CiAgICAgICAgaWYgKHN0cmxlbigkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSkgPiAwKSB7CiAgICAgICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAgICAgICAgICdjaGF0X2lkJyA9PiAkc2V0dGluZ1snQ2hhbm5lbF9SZXBvcnQnXSwKICAgICAgICAgICAgICAgICdtZXNzYWdlX3RocmVhZF9pZCcgPT4gJHBheW1lbnRyZXBvcnRzLAogICAgICAgICAgICAgICAgJ3RleHQnID0+ICR0ZXh0X3JlcG9ydHBheW1lbnQsCiAgICAgICAgICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiCiAgICAgICAgICAgIF0pOwogICAgICAgIH0KICAgIH0KfQ==
+<?php
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../keyboard.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+$ManagePanel = new ManagePanel();
+$setting = select("setting", "*");
+$paymentreports = select("topicid", "idreport", "report", "paymentreport", "select")['idreport'];
+$textbotlang = languagechange();
+$data = json_decode(file_get_contents("php://input"), true);
+if (isset($data['payment_status']) && $data['payment_status'] == "finished") {
+    $pay = StatusPayment($data['payment_id']);
+    if ($pay['payment_status'] != "finished")
+        return;
+    $Payment_report = select("Payment_report", "*", "id_order", (string) ($pay['order_id'] ?? ''), "select");
+    if ($Payment_report && $Payment_report['Payment_Method'] === "nowpayment" && (string) $Payment_report['dec_not_confirmed'] === (string) ($pay['invoice_id'] ?? '')) {
+        if (!claimPaymentPaid($Payment_report['id_order']))
+            return;
+        try {
+            DirectPayment($Payment_report['id_order'], "../images.jpg");
+        } catch (Throwable $directPaymentError) {
+            error_log("DirectPayment failed for order {$Payment_report['id_order']}: " . $directPaymentError->getMessage());
+            return;
+        }
+        $pricecashback = select("PaySetting", "ValuePay", "NamePay", "cashbacknowpayment", "select")['ValuePay'];
+        $Balance_id = select("user", "*", "id", $Payment_report['id_user'], "select");
+        if ($pricecashback != "0") {
+            $result = ($Payment_report['price'] * $pricecashback) / 100;
+            $Balance_confrim = intval($Balance_id['Balance']) + $result;
+            update("user", "Balance", $Balance_confrim, "id", $Balance_id['id']);
+            $pricecashback = number_format($pricecashback);
+            $text_report = sprintf($textbotlang['paymentGateway']['giftReport'], $result);
+            sendmessage($Balance_id['id'], $text_report, null, 'HTML');
+        }
+        $text_reportpayment = sprintf($textbotlang['paymentGateway']['reportNowpayment'], $Balance_id['username'], $Balance_id['id'], $Payment_report['price'], $pay['actually_paid']);
+        if (strlen($setting['Channel_Report']) > 0) {
+            telegram('sendmessage', [
+                'chat_id' => $setting['Channel_Report'],
+                'message_thread_id' => $paymentreports,
+                'text' => $text_reportpayment,
+                'parse_mode' => "HTML"
+            ]);
+        }
+    }
+}

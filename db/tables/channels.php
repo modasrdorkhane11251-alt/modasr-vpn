@@ -1,1 +1,13 @@
-PD9waHAKCnJldHVybiBbCiAgICAnY3JlYXRlJyA9PiA8PDxTUUwKICAgICAgICByZW1hcmsgdmFyY2hhcigyMDApIE5PVCBOVUxMLAogICAgICAgIGxpbmtqb2luIHZhcmNoYXIoMjAwKSBOT1QgTlVMTCwKICAgICAgICBsaW5rIHZhcmNoYXIoMjAwKSBOT1QgTlVMTAogICAgICAgIFNRTCwKICAgICdjb2x1bW5zJyA9PiBbCiAgICAgICAgWydyZW1hcmsnLCBudWxsLCAnVkFSQ0hBUigyMDApJ10sCiAgICAgICAgWydsaW5ram9pbicsIG51bGwsICdWQVJDSEFSKDIwMCknXSwKICAgIF0sCl07Cg==
+<?php
+
+return [
+    'create' => <<<SQL
+        remark varchar(200) NOT NULL,
+        linkjoin varchar(200) NOT NULL,
+        link varchar(200) NOT NULL
+        SQL,
+    'columns' => [
+        ['remark', null, 'VARCHAR(200)'],
+        ['linkjoin', null, 'VARCHAR(200)'],
+    ],
+];

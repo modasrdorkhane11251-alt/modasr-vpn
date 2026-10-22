@@ -1,1 +1,6 @@
-aW1wb3J0e2MgYXMgYX1mcm9tIi4vaW5kZXgtQy0yYTBEdXIuanMiOy8qKgogKiBAbGljZW5zZSBsdWNpZGUtcmVhY3QgdjAuNTExLjAgLSBJU0MKICoKICogVGhpcyBzb3VyY2UgY29kZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgSVNDIGxpY2Vuc2UuCiAqIFNlZSB0aGUgTElDRU5TRSBmaWxlIGluIHRoZSByb290IGRpcmVjdG9yeSBvZiB0aGlzIHNvdXJjZSB0cmVlLgogKi9jb25zdCBvPVtbInBhdGgiLHtkOiJNNiAyIDMgNnYxNGEyIDIgMCAwIDAgMiAyaDE0YTIgMiAwIDAgMCAyLTJWNmwtMy00WiIsa2V5OiJob3U5cDAifV0sWyJwYXRoIix7ZDoiTTMgNmgxOCIsa2V5OiJkMHdtMGoifV0sWyJwYXRoIix7ZDoiTTE2IDEwYTQgNCAwIDAgMS04IDAiLGtleToiMWx0dml3In1dXSx0PWEoInNob3BwaW5nLWJhZyIsbyk7ZXhwb3J0e3QgYXMgU307Cg==
+import{c as a}from"./index-C-2a0Dur.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const o=[["path",{d:"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z",key:"hou9p0"}],["path",{d:"M3 6h18",key:"d0wm0j"}],["path",{d:"M16 10a4 4 0 0 1-8 0",key:"1ltviw"}]],t=a("shopping-bag",o);export{t as S};

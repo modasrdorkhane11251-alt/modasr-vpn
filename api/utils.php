@@ -1,1 +1,260 @@
-PD9waHAKCmlmIChpc3NldCgkX1NFUlZFUlsnU0NSSVBUX0ZJTEVOQU1FJ10pICYmIHJlYWxwYXRoKCRfU0VSVkVSWydTQ1JJUFRfRklMRU5BTUUnXSkgPT09IHJlYWxwYXRoKF9fRklMRV9fKSkgewogICAgaHR0cF9yZXNwb25zZV9jb2RlKDQwNCk7CiAgICBleGl0Owp9CgpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vY29uZmlnLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9mdW5jdGlvbi5waHAnOwoKaWYgKCFmdW5jdGlvbl9leGlzdHMoJ2dldGFsbGhlYWRlcnMnKSkgewogICAgZnVuY3Rpb24gZ2V0YWxsaGVhZGVycygpOiBhcnJheQogICAgewogICAgICAgICRoZWFkZXJzID0gW107CiAgICAgICAgZm9yZWFjaCAoJF9TRVJWRVIgYXMgJG5hbWUgPT4gJHZhbHVlKSB7CiAgICAgICAgICAgIGlmIChzdWJzdHIoJG5hbWUsIDAsIDUpICE9PSAnSFRUUF8nKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICAkaGVhZGVyTmFtZSA9IHN0cl9yZXBsYWNlKCcgJywgJy0nLCB1Y3dvcmRzKHN0cnRvbG93ZXIoc3RyX3JlcGxhY2UoJ18nLCAnICcsIHN1YnN0cigkbmFtZSwgNSkpKSkpOwogICAgICAgICAgICAkaGVhZGVyc1skaGVhZGVyTmFtZV0gPSAkdmFsdWU7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkaGVhZGVyczsKICAgIH0KfQoKZnVuY3Rpb24gc2VuZEpzb25SZXNwb25zZSgkc3RhdHVzLCAkbWVzc2FnZSwgJGRhdGEgPSBbXSwgJGh0dHBDb2RlID0gMjAwKQp7CiAgICBodHRwX3Jlc3BvbnNlX2NvZGUoJGh0dHBDb2RlKTsKICAgIGVjaG8ganNvbl9lbmNvZGUoWwogICAgICAgICdzdGF0dXMnID0+ICRzdGF0dXMsCiAgICAgICAgJ21zZycgPT4gJG1lc3NhZ2UsCiAgICAgICAgJ29iaicgPT4gJGRhdGEKICAgIF0sIEpTT05fVU5FU0NBUEVEX1VOSUNPREUpOwogICAgZXhpdDsKfQoKZnVuY3Rpb24gc2VuZFJlcG9ydCgkdGV4dCwgJGdyb3VwaWQsICR0b3BpY19pZCwgJHJlcGx5X21hcmt1cCA9IG51bGwpCnsKICAgIGlmIChzdHJsZW4oKHN0cmluZykgJGdyb3VwaWQpID4gMCkgewogICAgICAgIHRlbGVncmFtKCdzZW5kbWVzc2FnZScsIFsKICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRncm91cGlkLAogICAgICAgICAgICAnbWVzc2FnZV90aHJlYWRfaWQnID0+ICR0b3BpY19pZCwKICAgICAgICAgICAgJ3RleHQnID0+ICR0ZXh0LAogICAgICAgICAgICAncGFyc2VfbW9kZScgPT4gIkhUTUwiLAogICAgICAgICAgICAncmVwbHlfbWFya3VwJyA9PiAkcmVwbHlfbWFya3VwCiAgICAgICAgXSk7CiAgICB9Cn0KCmZ1bmN0aW9uIGhlYWRlclZhbHVlKCRoZWFkZXJzLCAkbmFtZSkKewogICAgaWYgKCFpc19hcnJheSgkaGVhZGVycykpIHsKICAgICAgICByZXR1cm4gbnVsbDsKICAgIH0KCiAgICBmb3JlYWNoICgkaGVhZGVycyBhcyAka2V5ID0+ICR2YWx1ZSkgewogICAgICAgIGlmIChzdHJjYXNlY21wKCRrZXksICRuYW1lKSA9PT0gMCkgewogICAgICAgICAgICByZXR1cm4gaXNfYXJyYXkoJHZhbHVlKSA/IHJlc2V0KCR2YWx1ZSkgOiAkdmFsdWU7CiAgICAgICAgfQogICAgfQoKICAgIHJldHVybiBudWxsOwp9CgpmdW5jdGlvbiBhcGlUb2tlbnMoKQp7CiAgICBnbG9iYWwgJEFQSUtFWTsKCiAgICAkdG9rZW5zID0gW107CgogICAgJGhhc2hGaWxlID0gX19ESVJfXyAuICcvaGFzaC50eHQnOwogICAgaWYgKGlzX2ZpbGUoJGhhc2hGaWxlKSkgewogICAgICAgICRmaWxlVG9rZW4gPSB0cmltKChzdHJpbmcpIGZpbGVfZ2V0X2NvbnRlbnRzKCRoYXNoRmlsZSkpOwogICAgICAgIGlmICgkZmlsZVRva2VuICE9PSAnJykgewogICAgICAgICAgICAkdG9rZW5zW10gPSAkZmlsZVRva2VuOwogICAgICAgIH0KICAgIH0KCiAgICBpZiAoZW1wdHkoJHRva2VucykgJiYgaXNzZXQoJEFQSUtFWSkgJiYgJEFQSUtFWSAhPT0gJycpIHsKICAgICAgICAkdG9rZW5zW10gPSAoc3RyaW5nKSAkQVBJS0VZOwogICAgfQoKICAgIHJldHVybiAkdG9rZW5zOwp9CgpmdW5jdGlvbiB2YWxpZGF0ZVRva2VuKCRoZWFkZXJzKQp7CiAgICAkcHJvdmlkZWQgPSBoZWFkZXJWYWx1ZSgkaGVhZGVycywgJ1Rva2VuJyk7CiAgICBpZiAoJHByb3ZpZGVkID09PSBudWxsKSB7CiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgfQoKICAgICRwcm92aWRlZCA9IHRyaW0oKHN0cmluZykgJHByb3ZpZGVkKTsKICAgIGZvcmVhY2ggKGFwaVRva2VucygpIGFzICR2YWxpZFRva2VuKSB7CiAgICAgICAgaWYgKGhhc2hfZXF1YWxzKCR2YWxpZFRva2VuLCAkcHJvdmlkZWQpKSB7CiAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgIH0KICAgIH0KCiAgICByZXR1cm4gZmFsc2U7Cn0KCmZ1bmN0aW9uIHJlcXVpcmVBcGlUb2tlbigkaGVhZGVycykKewogICAgaWYgKCF2YWxpZGF0ZVRva2VuKCRoZWFkZXJzKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJ0b2tlbiBpbnZhbGlkIiwgW10sIDQwMyk7CiAgICB9Cn0KCmZ1bmN0aW9uIGhhc0FkbWluU2Vzc2lvbigpCnsKICAgIGlmIChzZXNzaW9uX3N0YXR1cygpID09PSBQSFBfU0VTU0lPTl9OT05FKSB7CiAgICAgICAgc2Vzc2lvbl9zdGFydCgpOwogICAgfQoKICAgIGlmIChlbXB0eSgkX1NFU1NJT05bJ2FkbWluX3VzZXInXSkpIHsKICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9CgogICAgdHJ5IHsKICAgICAgICAkYWRtaW4gPSBzZWxlY3QoImFkbWluIiwgIioiLCAidXNlcm5hbWUiLCAkX1NFU1NJT05bJ2FkbWluX3VzZXInXSwgInNlbGVjdCIpOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJBZG1pbiBzZXNzaW9uIGNoZWNrIGZhaWxlZDogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KCiAgICByZXR1cm4gaXNfYXJyYXkoJGFkbWluKSAmJiBpc3NldCgkYWRtaW5bJ2lkX2FkbWluJ10pICYmICRhZG1pblsncnVsZSddID09PSAnYWRtaW5pc3RyYXRvcic7Cn0KCmZ1bmN0aW9uIHJlcXVpcmVBcGlUb2tlbk9yQWRtaW5TZXNzaW9uKCRoZWFkZXJzKQp7CiAgICBpZiAodmFsaWRhdGVUb2tlbigkaGVhZGVycykgfHwgaGFzQWRtaW5TZXNzaW9uKCkpIHsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgInRva2VuIGludmFsaWQiLCBbXSwgNDAzKTsKfQoKZnVuY3Rpb24gc2FuaXRpemVSZWN1cnNpdmUoJGRhdGEpCnsKICAgIGlmIChpc19hcnJheSgkZGF0YSkpIHsKICAgICAgICByZXR1cm4gYXJyYXlfbWFwKCdzYW5pdGl6ZVJlY3Vyc2l2ZScsICRkYXRhKTsKICAgIH0KCiAgICByZXR1cm4gaXNfc3RyaW5nKCRkYXRhKSA/IGh0bWxzcGVjaWFsY2hhcnModHJpbSgkZGF0YSksIEVOVF9RVU9URVMsICdVVEYtOCcpIDogJGRhdGE7Cn0KCmZ1bmN0aW9uIHZhbGlkYXRlTWV0aG9kKCRleHBlY3RlZCwgJGFjdHVhbCkKewogICAgaWYgKHN0cnRvdXBwZXIoJGV4cGVjdGVkKSAhPT0gc3RydG91cHBlcigoc3RyaW5nKSAkYWN0dWFsKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJtZXRob2QgaW52YWxpZDsgbWV0aG9kIG11c3QgYmUgeyRleHBlY3RlZH0iLCBbXSwgNDA1KTsKICAgIH0KfQoKZnVuY3Rpb24gcmVhZEpzb25Cb2R5KCkKewogICAgJHJhdyA9IGZpbGVfZ2V0X2NvbnRlbnRzKCJwaHA6Ly9pbnB1dCIpOwogICAgJGRhdGEgPSAkcmF3ID09PSBmYWxzZSA/IG51bGwgOiBqc29uX2RlY29kZSgkcmF3LCB0cnVlKTsKCiAgICBpZiAoIWlzX2FycmF5KCRkYXRhKSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJkYXRhIGludmFsaWQiLCBbXSk7CiAgICB9CgogICAgcmV0dXJuIHNhbml0aXplUmVjdXJzaXZlKCRkYXRhKTsKfQoKZnVuY3Rpb24gbG9nQXBpUmVxdWVzdCgkaGVhZGVycywgJGRhdGEsICRhY3Rpb24pCnsKICAgIGdsb2JhbCAkcGRvOwoKICAgIHRyeSB7CiAgICAgICAgJHN0bXQgPSAkcGRvLT5wcmVwYXJlKAogICAgICAgICAgICAiSU5TRVJUIElHTk9SRSBJTlRPIGxvZ3NfYXBpIChoZWFkZXIsIGRhdGEsIHRpbWUsIGlwLCBhY3Rpb25zKSBWQUxVRVMgKD8sID8sID8sID8sID8pIgogICAgICAgICk7CiAgICAgICAgJHN0bXQtPmV4ZWN1dGUoWwogICAgICAgICAgICBqc29uX2VuY29kZShhcnJheV9kaWZmX2tleShhcnJheV9jaGFuZ2Vfa2V5X2Nhc2UoKGFycmF5KSAkaGVhZGVycyksIGFycmF5X2ZsaXAoWyd0b2tlbicsICdhdXRob3JpemF0aW9uJywgJ2Nvb2tpZSddKSkpLAogICAgICAgICAgICBqc29uX2VuY29kZSgkZGF0YSksCiAgICAgICAgICAgIGRhdGUoJ1kvbS9kIEg6aTpzJyksCiAgICAgICAgICAgICRfU0VSVkVSWydSRU1PVEVfQUREUiddID8/ICd1bmtub3duJywKICAgICAgICAgICAgJGFjdGlvbgogICAgICAgIF0pOwogICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CiAgICAgICAgZXJyb3JfbG9nKCJBUEkgbG9nZ2luZyBlcnJvcjogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgfQp9CgpmdW5jdGlvbiBhcGlSZXF1ZXN0Q29udGV4dCgpCnsKICAgICRoZWFkZXJzID0gZ2V0YWxsaGVhZGVycygpOwogICAgcmVxdWlyZUFwaVRva2VuKCRoZWFkZXJzKTsKCiAgICAkZGF0YSA9IHJlYWRKc29uQm9keSgpOwogICAgJGFjdGlvbiA9IGlzc2V0KCRkYXRhWydhY3Rpb25zJ10pICYmIGlzX3NjYWxhcigkZGF0YVsnYWN0aW9ucyddKSA/IChzdHJpbmcpICRkYXRhWydhY3Rpb25zJ10gOiAnJzsKCiAgICBsb2dBcGlSZXF1ZXN0KCRoZWFkZXJzLCAkZGF0YSwgJGFjdGlvbiA9PT0gJycgPyAndW5rbm93bicgOiAkYWN0aW9uKTsKCiAgICByZXR1cm4gWyRoZWFkZXJzLCAkZGF0YSwgJGFjdGlvbl07Cn0KCmZ1bmN0aW9uIHBhbmVsQWdlbnRWYWx1ZSgkanNvbiwgJGFnZW50LCAkZGVmYXVsdCA9IDApCnsKICAgICRkZWNvZGVkID0ganNvbl9kZWNvZGUoKHN0cmluZykgJGpzb24sIHRydWUpOwogICAgaWYgKCFpc19hcnJheSgkZGVjb2RlZCkgfHwgIWFycmF5X2tleV9leGlzdHMoJGFnZW50LCAkZGVjb2RlZCkpIHsKICAgICAgICByZXR1cm4gJGRlZmF1bHQ7CiAgICB9CgogICAgcmV0dXJuICRkZWNvZGVkWyRhZ2VudF07Cn0KCmZ1bmN0aW9uIHRvcGljSWQoJG5hbWUpCnsKICAgICRyb3cgPSBzZWxlY3QoInRvcGljaWQiLCAiaWRyZXBvcnQiLCAicmVwb3J0IiwgJG5hbWUsICJzZWxlY3QiKTsKCiAgICByZXR1cm4gaXNfYXJyYXkoJHJvdykgJiYgaXNzZXQoJHJvd1snaWRyZXBvcnQnXSkgPyAkcm93WydpZHJlcG9ydCddIDogbnVsbDsKfQoKZnVuY3Rpb24gcGFnaW5hdGlvblBhcmFtcyhhcnJheSAkZGF0YSwgJGRlZmF1bHRMaW1pdCA9IDUwLCAkbWF4TGltaXQgPSAxMDAwKQp7CiAgICAkbGltaXQgPSAkZGVmYXVsdExpbWl0OwogICAgaWYgKGlzc2V0KCRkYXRhWydsaW1pdCddKSAmJiBpc19udW1lcmljKCRkYXRhWydsaW1pdCddKSkgewogICAgICAgICRsaW1pdCA9IG1pbihtYXgoKGludCkgJGRhdGFbJ2xpbWl0J10sIDEpLCAkbWF4TGltaXQpOwogICAgfQoKICAgICRwYWdlID0gaXNzZXQoJGRhdGFbJ3BhZ2UnXSkgJiYgaXNfbnVtZXJpYygkZGF0YVsncGFnZSddKSA/IG1heCgoaW50KSAkZGF0YVsncGFnZSddLCAxKSA6IDE7CgogICAgcmV0dXJuIFsKICAgICAgICAnbGltaXQnID0+ICRsaW1pdCwKICAgICAgICAncGFnZScgPT4gJHBhZ2UsCiAgICAgICAgJ29mZnNldCcgPT4gKCRwYWdlIC0gMSkgKiAkbGltaXQsCiAgICAgICAgJ3EnID0+IGlzc2V0KCRkYXRhWydxJ10pICYmIGlzX3NjYWxhcigkZGF0YVsncSddKSA/IChzdHJpbmcpICRkYXRhWydxJ10gOiAnJywKICAgIF07Cn0KCmZ1bmN0aW9uIHJlcXVpcmVGaWVsZHMoYXJyYXkgJGRhdGEsIGFycmF5ICRmaWVsZHMpCnsKICAgICRtaXNzaW5nID0gW107CiAgICBmb3JlYWNoICgkZmllbGRzIGFzICRmaWVsZCkgewogICAgICAgIGlmICghaXNzZXQoJGRhdGFbJGZpZWxkXSkgfHwgJGRhdGFbJGZpZWxkXSA9PT0gJycgfHwgJGRhdGFbJGZpZWxkXSA9PT0gW10pIHsKICAgICAgICAgICAgJG1pc3NpbmdbXSA9ICRmaWVsZDsKICAgICAgICB9CiAgICB9CgogICAgaWYgKCRtaXNzaW5nICE9PSBbXSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJNaXNzaW5nIHJlcXVpcmVkIGZpZWxkczogIiAuIGltcGxvZGUoJywgJywgJG1pc3NpbmcpLCBbXSk7CiAgICB9Cn0KCmZ1bmN0aW9uIHJlcXVpcmVJbnQoYXJyYXkgJGRhdGEsICRmaWVsZCwgJG1pbiA9IG51bGwsICRtYXggPSBudWxsKQp7CiAgICBpZiAoIWlzc2V0KCRkYXRhWyRmaWVsZF0pIHx8ICFpc19udW1lcmljKCRkYXRhWyRmaWVsZF0pKSB7CiAgICAgICAgc2VuZEpzb25SZXNwb25zZShmYWxzZSwgInskZmllbGR9IGludmFsaWQiLCBbXSk7CiAgICB9CgogICAgJHZhbHVlID0gKGludCkgJGRhdGFbJGZpZWxkXTsKICAgIGlmICgoJG1pbiAhPT0gbnVsbCAmJiAkdmFsdWUgPCAkbWluKSB8fCAoJG1heCAhPT0gbnVsbCAmJiAkdmFsdWUgPiAkbWF4KSkgewogICAgICAgIHNlbmRKc29uUmVzcG9uc2UoZmFsc2UsICJ7JGZpZWxkfSBvdXQgb2YgcmFuZ2UiLCBbXSk7CiAgICB9CgogICAgcmV0dXJuICR2YWx1ZTsKfQo=
+<?php
+
+if (isset($_SERVER['SCRIPT_FILENAME']) && realpath($_SERVER['SCRIPT_FILENAME']) === realpath(__FILE__)) {
+    http_response_code(404);
+    exit;
+}
+
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../function.php';
+
+if (!function_exists('getallheaders')) {
+    function getallheaders(): array
+    {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) !== 'HTTP_') {
+                continue;
+            }
+            $headerName = str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))));
+            $headers[$headerName] = $value;
+        }
+        return $headers;
+    }
+}
+
+function sendJsonResponse($status, $message, $data = [], $httpCode = 200)
+{
+    http_response_code($httpCode);
+    echo json_encode([
+        'status' => $status,
+        'msg' => $message,
+        'obj' => $data
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+function sendReport($text, $groupid, $topic_id, $reply_markup = null)
+{
+    if (strlen((string) $groupid) > 0) {
+        telegram('sendmessage', [
+            'chat_id' => $groupid,
+            'message_thread_id' => $topic_id,
+            'text' => $text,
+            'parse_mode' => "HTML",
+            'reply_markup' => $reply_markup
+        ]);
+    }
+}
+
+function headerValue($headers, $name)
+{
+    if (!is_array($headers)) {
+        return null;
+    }
+
+    foreach ($headers as $key => $value) {
+        if (strcasecmp($key, $name) === 0) {
+            return is_array($value) ? reset($value) : $value;
+        }
+    }
+
+    return null;
+}
+
+function apiTokens()
+{
+    global $APIKEY;
+
+    $tokens = [];
+
+    $hashFile = __DIR__ . '/hash.txt';
+    if (is_file($hashFile)) {
+        $fileToken = trim((string) file_get_contents($hashFile));
+        if ($fileToken !== '') {
+            $tokens[] = $fileToken;
+        }
+    }
+
+    if (empty($tokens) && isset($APIKEY) && $APIKEY !== '') {
+        $tokens[] = (string) $APIKEY;
+    }
+
+    return $tokens;
+}
+
+function validateToken($headers)
+{
+    $provided = headerValue($headers, 'Token');
+    if ($provided === null) {
+        return false;
+    }
+
+    $provided = trim((string) $provided);
+    foreach (apiTokens() as $validToken) {
+        if (hash_equals($validToken, $provided)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function requireApiToken($headers)
+{
+    if (!validateToken($headers)) {
+        sendJsonResponse(false, "token invalid", [], 403);
+    }
+}
+
+function hasAdminSession()
+{
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (empty($_SESSION['admin_user'])) {
+        return false;
+    }
+
+    try {
+        $admin = select("admin", "*", "username", $_SESSION['admin_user'], "select");
+    } catch (Exception $e) {
+        error_log("Admin session check failed: " . $e->getMessage());
+        return false;
+    }
+
+    return is_array($admin) && isset($admin['id_admin']) && $admin['rule'] === 'administrator';
+}
+
+function requireApiTokenOrAdminSession($headers)
+{
+    if (validateToken($headers) || hasAdminSession()) {
+        return;
+    }
+
+    sendJsonResponse(false, "token invalid", [], 403);
+}
+
+function sanitizeRecursive($data)
+{
+    if (is_array($data)) {
+        return array_map('sanitizeRecursive', $data);
+    }
+
+    return is_string($data) ? htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8') : $data;
+}
+
+function validateMethod($expected, $actual)
+{
+    if (strtoupper($expected) !== strtoupper((string) $actual)) {
+        sendJsonResponse(false, "method invalid; method must be {$expected}", [], 405);
+    }
+}
+
+function readJsonBody()
+{
+    $raw = file_get_contents("php://input");
+    $data = $raw === false ? null : json_decode($raw, true);
+
+    if (!is_array($data)) {
+        sendJsonResponse(false, "data invalid", []);
+    }
+
+    return sanitizeRecursive($data);
+}
+
+function logApiRequest($headers, $data, $action)
+{
+    global $pdo;
+
+    try {
+        $stmt = $pdo->prepare(
+            "INSERT IGNORE INTO logs_api (header, data, time, ip, actions) VALUES (?, ?, ?, ?, ?)"
+        );
+        $stmt->execute([
+            json_encode(array_diff_key(array_change_key_case((array) $headers), array_flip(['token', 'authorization', 'cookie']))),
+            json_encode($data),
+            date('Y/m/d H:i:s'),
+            $_SERVER['REMOTE_ADDR'] ?? 'unknown',
+            $action
+        ]);
+    } catch (Exception $e) {
+        error_log("API logging error: " . $e->getMessage());
+    }
+}
+
+function apiRequestContext()
+{
+    $headers = getallheaders();
+    requireApiToken($headers);
+
+    $data = readJsonBody();
+    $action = isset($data['actions']) && is_scalar($data['actions']) ? (string) $data['actions'] : '';
+
+    logApiRequest($headers, $data, $action === '' ? 'unknown' : $action);
+
+    return [$headers, $data, $action];
+}
+
+function panelAgentValue($json, $agent, $default = 0)
+{
+    $decoded = json_decode((string) $json, true);
+    if (!is_array($decoded) || !array_key_exists($agent, $decoded)) {
+        return $default;
+    }
+
+    return $decoded[$agent];
+}
+
+function topicId($name)
+{
+    $row = select("topicid", "idreport", "report", $name, "select");
+
+    return is_array($row) && isset($row['idreport']) ? $row['idreport'] : null;
+}
+
+function paginationParams(array $data, $defaultLimit = 50, $maxLimit = 1000)
+{
+    $limit = $defaultLimit;
+    if (isset($data['limit']) && is_numeric($data['limit'])) {
+        $limit = min(max((int) $data['limit'], 1), $maxLimit);
+    }
+
+    $page = isset($data['page']) && is_numeric($data['page']) ? max((int) $data['page'], 1) : 1;
+
+    return [
+        'limit' => $limit,
+        'page' => $page,
+        'offset' => ($page - 1) * $limit,
+        'q' => isset($data['q']) && is_scalar($data['q']) ? (string) $data['q'] : '',
+    ];
+}
+
+function requireFields(array $data, array $fields)
+{
+    $missing = [];
+    foreach ($fields as $field) {
+        if (!isset($data[$field]) || $data[$field] === '' || $data[$field] === []) {
+            $missing[] = $field;
+        }
+    }
+
+    if ($missing !== []) {
+        sendJsonResponse(false, "Missing required fields: " . implode(', ', $missing), []);
+    }
+}
+
+function requireInt(array $data, $field, $min = null, $max = null)
+{
+    if (!isset($data[$field]) || !is_numeric($data[$field])) {
+        sendJsonResponse(false, "{$field} invalid", []);
+    }
+
+    $value = (int) $data[$field];
+    if (($min !== null && $value < $min) || ($max !== null && $value > $max)) {
+        sendJsonResponse(false, "{$field} out of range", []);
+    }
+
+    return $value;
+}

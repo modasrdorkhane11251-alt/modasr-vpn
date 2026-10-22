@@ -1,1 +1,541 @@
-PD9waHAKcmVxdWlyZV9vbmNlICdjb25maWcucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnL3BsYXRmb3JtL3BsYXRmb3JtLnBocCc7CmZ1bmN0aW9uIGlzVGVsZWdyYW1DaGF0SWRFbXB0eSgkY2hhdF9pZCk6IGJvb2wKewogICAgaWYgKCRjaGF0X2lkID09PSBudWxsIHx8ICRjaGF0X2lkID09PSBmYWxzZSkgewogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgaWYgKGlzX2FycmF5KCRjaGF0X2lkKSB8fCBpc19vYmplY3QoJGNoYXRfaWQpKSB7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICAkY2hhdF9pZCA9IHRyaW0oKHN0cmluZykgJGNoYXRfaWQpOwogICAgaWYgKCRjaGF0X2lkID09PSAnJykgewogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgcmV0dXJuIGlzX251bWVyaWMoJGNoYXRfaWQpICYmIChpbnQpICRjaGF0X2lkID09PSAwOwp9CmZ1bmN0aW9uIHdhbGtLZXlib2FyZEJ1dHRvbnMoJHJlcGx5TWFya3VwLCBjYWxsYWJsZSAkaGFuZGxlcikKewogICAgaWYgKCFpc19zdHJpbmcoJHJlcGx5TWFya3VwKSB8fCBzdHJpcG9zKCRyZXBseU1hcmt1cCwgJzx0Zy1lbW9qaScpID09PSBmYWxzZSkgewogICAgICAgIHJldHVybiAkcmVwbHlNYXJrdXA7CiAgICB9CiAgICAkbWFya3VwID0ganNvbl9kZWNvZGUoJHJlcGx5TWFya3VwLCB0cnVlKTsKICAgIGlmICghaXNfYXJyYXkoJG1hcmt1cCkpIHsKICAgICAgICByZXR1cm4gJHJlcGx5TWFya3VwOwogICAgfQogICAgJGNoYW5nZWQgPSBmYWxzZTsKICAgIGZvcmVhY2ggKFsna2V5Ym9hcmQnLCAnaW5saW5lX2tleWJvYXJkJ10gYXMgJG1hcmt1cEtleSkgewogICAgICAgIGlmICghaXNzZXQoJG1hcmt1cFskbWFya3VwS2V5XSkgfHwgIWlzX2FycmF5KCRtYXJrdXBbJG1hcmt1cEtleV0pKSB7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KICAgICAgICBmb3JlYWNoICgkbWFya3VwWyRtYXJrdXBLZXldIGFzICRyb3dLZXkgPT4gJHJvdykgewogICAgICAgICAgICBpZiAoIWlzX2FycmF5KCRyb3cpKSB7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBmb3JlYWNoICgkcm93IGFzICRidG5LZXkgPT4gJGJ1dHRvbikgewogICAgICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkYnV0dG9uKSB8fCAhaXNzZXQoJGJ1dHRvblsndGV4dCddKSB8fCAhaXNfc3RyaW5nKCRidXR0b25bJ3RleHQnXSkpIHsKICAgICAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICR1cGRhdGVkID0gJGhhbmRsZXIoJGJ1dHRvbik7CiAgICAgICAgICAgICAgICBpZiAoJHVwZGF0ZWQgIT09ICRidXR0b24pIHsKICAgICAgICAgICAgICAgICAgICAkbWFya3VwWyRtYXJrdXBLZXldWyRyb3dLZXldWyRidG5LZXldID0gJHVwZGF0ZWQ7CiAgICAgICAgICAgICAgICAgICAgJGNoYW5nZWQgPSB0cnVlOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgaWYgKCEkY2hhbmdlZCkgewogICAgICAgIHJldHVybiAkcmVwbHlNYXJrdXA7CiAgICB9CiAgICAkZW5jb2RlZCA9IGpzb25fZW5jb2RlKCRtYXJrdXAsIEpTT05fVU5FU0NBUEVEX1VOSUNPREUpOwogICAgcmV0dXJuICRlbmNvZGVkID09PSBmYWxzZSA/ICRyZXBseU1hcmt1cCA6ICRlbmNvZGVkOwp9CmZ1bmN0aW9uIGFwcGx5Q3VzdG9tRW1vamlUb01hcmt1cCgkcmVwbHlNYXJrdXApCnsKICAgIHJldHVybiB3YWxrS2V5Ym9hcmRCdXR0b25zKCRyZXBseU1hcmt1cCwgZnVuY3Rpb24gKCRidXR0b24pIHsKICAgICAgICAkbGFiZWwgPSBzcGxpdEN1c3RvbUVtb2ppTGFiZWwoJGJ1dHRvblsndGV4dCddKTsKICAgICAgICAkYnV0dG9uWyd0ZXh0J10gPSAkbGFiZWxbJ3RleHQnXTsKICAgICAgICBpZiAoJGxhYmVsWydpY29uJ10gIT09ICcnICYmICFpc3NldCgkYnV0dG9uWydpY29uX2N1c3RvbV9lbW9qaV9pZCddKSkgewogICAgICAgICAgICAkYnV0dG9uWydpY29uX2N1c3RvbV9lbW9qaV9pZCddID0gJGxhYmVsWydpY29uJ107CiAgICAgICAgfQogICAgICAgIHJldHVybiAkYnV0dG9uOwogICAgfSk7Cn0KZnVuY3Rpb24gc3RyaXBDdXN0b21FbW9qaUZyb21NYXJrdXAoJHJlcGx5TWFya3VwKQp7CiAgICByZXR1cm4gd2Fsa0tleWJvYXJkQnV0dG9ucygkcmVwbHlNYXJrdXAsIGZ1bmN0aW9uICgkYnV0dG9uKSB7CiAgICAgICAgJGJ1dHRvblsndGV4dCddID0gc3RyaXBDdXN0b21FbW9qaVRhZ3MoJGJ1dHRvblsndGV4dCddKTsKICAgICAgICB1bnNldCgkYnV0dG9uWydpY29uX2N1c3RvbV9lbW9qaV9pZCddKTsKICAgICAgICByZXR1cm4gJGJ1dHRvbjsKICAgIH0pOwp9CmZ1bmN0aW9uIHBheWxvYWRIYXNDdXN0b21FbW9qaShhcnJheSAkZGF0YXMpCnsKICAgIGZvcmVhY2ggKFsndGV4dCcsICdjYXB0aW9uJywgJ3JlcGx5X21hcmt1cCddIGFzICRrZXkpIHsKICAgICAgICBpZiAoaXNzZXQoJGRhdGFzWyRrZXldKSAmJiBpc19zdHJpbmcoJGRhdGFzWyRrZXldKSAmJiBzdHJpcG9zKCRkYXRhc1ska2V5XSwgJzx0Zy1lbW9qaScpICE9PSBmYWxzZSkgewogICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICB9CiAgICB9CiAgICByZXR1cm4gZmFsc2U7Cn0KZnVuY3Rpb24gYXBwbHlDdXN0b21FbW9qaVBheWxvYWQoYXJyYXkgJGRhdGFzKQp7CiAgICBpZiAoIXBheWxvYWRSZW5kZXJzSHRtbCgkZGF0YXMpKSB7CiAgICAgICAgZm9yZWFjaCAoWyd0ZXh0JywgJ2NhcHRpb24nXSBhcyAka2V5KSB7CiAgICAgICAgICAgIGlmIChpc3NldCgkZGF0YXNbJGtleV0pICYmIGlzX3N0cmluZygkZGF0YXNbJGtleV0pKSB7CiAgICAgICAgICAgICAgICAkZGF0YXNbJGtleV0gPSBzdHJpcEN1c3RvbUVtb2ppVGFncygkZGF0YXNbJGtleV0pOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgaWYgKGlzc2V0KCRkYXRhc1sncmVwbHlfbWFya3VwJ10pKSB7CiAgICAgICAgJGRhdGFzWydyZXBseV9tYXJrdXAnXSA9IGFwcGx5Q3VzdG9tRW1vamlUb01hcmt1cCgkZGF0YXNbJ3JlcGx5X21hcmt1cCddKTsKICAgIH0KICAgIHJldHVybiAkZGF0YXM7Cn0KZnVuY3Rpb24gc3RyaXBDdXN0b21FbW9qaVBheWxvYWQoYXJyYXkgJGRhdGFzKQp7CiAgICBmb3JlYWNoIChbJ3RleHQnLCAnY2FwdGlvbiddIGFzICRrZXkpIHsKICAgICAgICBpZiAoaXNzZXQoJGRhdGFzWyRrZXldKSAmJiBpc19zdHJpbmcoJGRhdGFzWyRrZXldKSkgewogICAgICAgICAgICAkZGF0YXNbJGtleV0gPSBzdHJpcEN1c3RvbUVtb2ppVGFncygkZGF0YXNbJGtleV0pOwogICAgICAgIH0KICAgIH0KICAgIGlmIChpc3NldCgkZGF0YXNbJ3JlcGx5X21hcmt1cCddKSkgewogICAgICAgICRkYXRhc1sncmVwbHlfbWFya3VwJ10gPSBzdHJpcEN1c3RvbUVtb2ppRnJvbU1hcmt1cCgkZGF0YXNbJ3JlcGx5X21hcmt1cCddKTsKICAgIH0KICAgIHJldHVybiAkZGF0YXM7Cn0KZnVuY3Rpb24gcGF5bG9hZFJlbmRlcnNIdG1sKGFycmF5ICRkYXRhcykKewogICAgJHBhcnNlTW9kZSA9ICRkYXRhc1sncGFyc2VfbW9kZSddID8/ICcnOwogICAgcmV0dXJuIGlzX3N0cmluZygkcGFyc2VNb2RlKSAmJiBzdHJ0b2xvd2VyKCRwYXJzZU1vZGUpID09PSAnaHRtbCc7Cn0KZnVuY3Rpb24gY3VzdG9tRW1vamlCbG9ja2VkKCR0b2tlbiA9IG51bGwsICRibG9jayA9IGZhbHNlKQp7CiAgICBnbG9iYWwgJEFQSUtFWTsKCiAgICBzdGF0aWMgJHN0YXRlID0gW107CiAgICAka2V5ID0gbWQ1KChzdHJpbmcpICgkdG9rZW4gPT09IG51bGwgPyAkQVBJS0VZIDogJHRva2VuKSk7CiAgICAkY2FjaGVEaXIgPSBfX0RJUl9fIC4gJy9zdG9yYWdlL2NhY2hlJzsKICAgICRjYWNoZUZpbGUgPSBudWxsOwogICAgaWYgKGlzX2RpcigkY2FjaGVEaXIpIHx8IEBta2RpcigkY2FjaGVEaXIsIDA3NzUsIHRydWUpIHx8IGlzX2RpcigkY2FjaGVEaXIpKSB7CiAgICAgICAgJGNhY2hlRmlsZSA9ICRjYWNoZURpciAuICcvY3VzdG9tX2Vtb2ppLmpzb24nOwogICAgfQogICAgaWYgKCRibG9jaykgewogICAgICAgICRzdGF0ZVska2V5XSA9IHRydWU7CiAgICAgICAgaWYgKCRjYWNoZUZpbGUgIT09IG51bGwpIHsKICAgICAgICAgICAgJHN0b3JlZCA9IGlzX2ZpbGUoJGNhY2hlRmlsZSkgPyBqc29uX2RlY29kZSgoc3RyaW5nKSBmaWxlX2dldF9jb250ZW50cygkY2FjaGVGaWxlKSwgdHJ1ZSkgOiBbXTsKICAgICAgICAgICAgaWYgKCFpc19hcnJheSgkc3RvcmVkKSkgewogICAgICAgICAgICAgICAgJHN0b3JlZCA9IFtdOwogICAgICAgICAgICB9CiAgICAgICAgICAgICRub3cgPSB0aW1lKCk7CiAgICAgICAgICAgIGZvcmVhY2ggKCRzdG9yZWQgYXMgJHN0b3JlZEtleSA9PiAkZXhwaXJlc0F0KSB7CiAgICAgICAgICAgICAgICBpZiAoIWlzX251bWVyaWMoJGV4cGlyZXNBdCkgfHwgJGV4cGlyZXNBdCA8PSAkbm93KSB7CiAgICAgICAgICAgICAgICAgICAgdW5zZXQoJHN0b3JlZFskc3RvcmVkS2V5XSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgJHN0b3JlZFska2V5XSA9ICRub3cgKyAyMTYwMDsKICAgICAgICAgICAgJGVuY29kZWQgPSBqc29uX2VuY29kZSgkc3RvcmVkKTsKICAgICAgICAgICAgaWYgKCRlbmNvZGVkICE9PSBmYWxzZSkgewogICAgICAgICAgICAgICAgQGZpbGVfcHV0X2NvbnRlbnRzKCRjYWNoZUZpbGUsICRlbmNvZGVkLCBMT0NLX0VYKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIGlmIChhcnJheV9rZXlfZXhpc3RzKCRrZXksICRzdGF0ZSkpIHsKICAgICAgICByZXR1cm4gJHN0YXRlWyRrZXldOwogICAgfQogICAgJHN0YXRlWyRrZXldID0gZmFsc2U7CiAgICBpZiAoJGNhY2hlRmlsZSAhPT0gbnVsbCAmJiBpc19maWxlKCRjYWNoZUZpbGUpKSB7CiAgICAgICAgJHN0b3JlZCA9IGpzb25fZGVjb2RlKChzdHJpbmcpIGZpbGVfZ2V0X2NvbnRlbnRzKCRjYWNoZUZpbGUpLCB0cnVlKTsKICAgICAgICBpZiAoaXNfYXJyYXkoJHN0b3JlZCkgJiYgaXNzZXQoJHN0b3JlZFska2V5XSkgJiYgaXNfbnVtZXJpYygkc3RvcmVkWyRrZXldKSAmJiAkc3RvcmVkWyRrZXldID4gdGltZSgpKSB7CiAgICAgICAgICAgICRzdGF0ZVska2V5XSA9IHRydWU7CiAgICAgICAgfQogICAgfQogICAgcmV0dXJuICRzdGF0ZVska2V5XTsKfQpmdW5jdGlvbiB0ZWxlZ3JhbSgkbWV0aG9kLCAkZGF0YXMgPSBbXSwgJHRva2VuID0gbnVsbCwgJGFsbG93RW1vamlGYWxsYmFjayA9IHRydWUpCnsKICAgIGdsb2JhbCAkQVBJS0VZOwoKICAgICR0b2tlbiA9ICR0b2tlbiA9PT0gbnVsbCA/ICRBUElLRVkgOiAkdG9rZW47CgogICAgLy8gUm91dGUgdGhyb3VnaCB0aGUgYWN0aXZlIG1lc3NlbmdlciBwbGF0Zm9ybSAodGVsZWdyYW0gLyBiYWxlIC8gcnViaWthKS4KICAgIGlmIChtb2Rhc3JfcGxhdGZvcm0oKSAhPT0gJ3RlbGVncmFtJykgewogICAgICAgIFskaGFuZGxlZCwgJHBsYXRmb3JtUmVzdWx0XSA9IG1vZGFzcl9wbGF0Zm9ybV9yZXF1ZXN0KCRtZXRob2QsICRkYXRhcywgJHRva2VuKTsKICAgICAgICBpZiAoJGhhbmRsZWQpIHsKICAgICAgICAgICAgcmV0dXJuICRwbGF0Zm9ybVJlc3VsdDsKICAgICAgICB9CiAgICB9CgogICAgJHVybCA9ICJodHRwczovL2FwaS50ZWxlZ3JhbS5vcmcvYm90IiAuICR0b2tlbiAuICIvIiAuICRtZXRob2Q7CgogICAgZm9yZWFjaCAoWydjaGF0X2lkJywgJ2Zyb21fY2hhdF9pZCddIGFzICRjaGF0SWRLZXkpIHsKICAgICAgICBpZiAoYXJyYXlfa2V5X2V4aXN0cygkY2hhdElkS2V5LCAkZGF0YXMpICYmIGlzVGVsZWdyYW1DaGF0SWRFbXB0eSgkZGF0YXNbJGNoYXRJZEtleV0pKSB7CiAgICAgICAgICAgIHJldHVybiBbCiAgICAgICAgICAgICAgICAnb2snID0+IGZhbHNlLAogICAgICAgICAgICAgICAgJ2Vycm9yX2NvZGUnID0+IDQwMCwKICAgICAgICAgICAgICAgICdkZXNjcmlwdGlvbicgPT4gJ0JhZCBSZXF1ZXN0OiBjaGF0X2lkIGlzIGVtcHR5JwogICAgICAgICAgICBdOwogICAgICAgIH0KICAgIH0KCiAgICBpZiAoaXNzZXQoJGRhdGFzWydtZXNzYWdlX3RocmVhZF9pZCddKSAmJiBpbnR2YWwoJGRhdGFzWydtZXNzYWdlX3RocmVhZF9pZCddKSA8PSAwKSB7CiAgICAgICAgdW5zZXQoJGRhdGFzWydtZXNzYWdlX3RocmVhZF9pZCddKTsKICAgIH0KCiAgICAkcHJlbWl1bUVtb2ppUGF5bG9hZCA9IG51bGw7CiAgICBpZiAoZnVuY3Rpb25fZXhpc3RzKCdzcGxpdEN1c3RvbUVtb2ppTGFiZWwnKSAmJiBwYXlsb2FkSGFzQ3VzdG9tRW1vamkoJGRhdGFzKSkgewogICAgICAgICRwcmVtaXVtRW1vamlQYXlsb2FkID0gJGRhdGFzOwogICAgICAgICRkYXRhcyA9IGN1c3RvbUVtb2ppQmxvY2tlZCgkdG9rZW4pCiAgICAgICAgICAgID8gc3RyaXBDdXN0b21FbW9qaVBheWxvYWQoJGRhdGFzKQogICAgICAgICAgICA6IGFwcGx5Q3VzdG9tRW1vamlQYXlsb2FkKCRkYXRhcyk7CiAgICB9CgogICAgJGNoID0gY3VybF9pbml0KCR1cmwpOwogICAgaWYgKCRjaCA9PT0gZmFsc2UpIHsKICAgICAgICBlcnJvcl9sb2coJ1VuYWJsZSB0byBpbml0aWFsaXNlIGNVUkwgZm9yIFRlbGVncmFtIHJlcXVlc3QuJyk7CiAgICAgICAgcmV0dXJuIFsKICAgICAgICAgICAgJ29rJyA9PiBmYWxzZSwKICAgICAgICAgICAgJ2Rlc2NyaXB0aW9uJyA9PiAnVW5hYmxlIHRvIGluaXRpYWxpc2UgY1VSTCBmb3IgVGVsZWdyYW0gcmVxdWVzdC4nCiAgICAgICAgXTsKICAgIH0KCiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIsIHRydWUpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1RJTUVPVVQsIDEwKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9DT05ORUNUVElNRU9VVCwgNSk7CiAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfUE9TVEZJRUxEUywgJGRhdGFzKTsKCiAgICAkcmF3UmVzcG9uc2UgPSBjdXJsX2V4ZWMoJGNoKTsKICAgIGlmICgkcmF3UmVzcG9uc2UgPT09IGZhbHNlKSB7CiAgICAgICAgJGN1cmxFcnJvciA9IGN1cmxfZXJyb3IoJGNoKTsKCiAgICAgICAgaWYgKCRjdXJsRXJyb3IgIT09ICcnKSB7CiAgICAgICAgICAgIGVycm9yX2xvZygnVGVsZWdyYW0gcmVxdWVzdCBmYWlsZWQ6ICcgLiAkY3VybEVycm9yKTsKICAgICAgICB9CgogICAgICAgIHJldHVybiBbCiAgICAgICAgICAgICdvaycgPT4gZmFsc2UsCiAgICAgICAgICAgICdkZXNjcmlwdGlvbicgPT4gJGN1cmxFcnJvciAhPT0gJycgPyAkY3VybEVycm9yIDogJ1RlbGVncmFtIHJlcXVlc3QgZmFpbGVkLicKICAgICAgICBdOwogICAgfQoKICAgICRodHRwQ29kZSA9IGN1cmxfZ2V0aW5mbygkY2gsIENVUkxJTkZPX0hUVFBfQ09ERSk7CgogICAgJGRlY29kZWRSZXNwb25zZSA9IGpzb25fZGVjb2RlKCRyYXdSZXNwb25zZSwgdHJ1ZSk7CiAgICBpZiAoIWlzX2FycmF5KCRkZWNvZGVkUmVzcG9uc2UpKSB7CiAgICAgICAgJGxvZ1NuaXBwZXQgPSBzdWJzdHIoJHJhd1Jlc3BvbnNlLCAwLCAyMDApOwogICAgICAgIGVycm9yX2xvZyhzcHJpbnRmKCdJbnZhbGlkIHJlc3BvbnNlIGZyb20gVGVsZWdyYW0gQVBJIChIVFRQICVkKTogJXMnLCAkaHR0cENvZGUsICRsb2dTbmlwcGV0KSk7CgogICAgICAgIHJldHVybiBbCiAgICAgICAgICAgICdvaycgPT4gZmFsc2UsCiAgICAgICAgICAgICdlcnJvcl9jb2RlJyA9PiAkaHR0cENvZGUsCiAgICAgICAgICAgICdkZXNjcmlwdGlvbicgPT4gJ0ludmFsaWQgcmVzcG9uc2UgcmVjZWl2ZWQgZnJvbSBUZWxlZ3JhbS4nCiAgICAgICAgXTsKICAgIH0KCiAgICBpZiAoaXNzZXQoJGRlY29kZWRSZXNwb25zZVsnb2snXSkgJiYgISRkZWNvZGVkUmVzcG9uc2VbJ29rJ10pIHsKICAgICAgICAkZXJyb3JDb2RlID0gJGRlY29kZWRSZXNwb25zZVsnZXJyb3JfY29kZSddID8/IDA7CiAgICAgICAgJGRlc2NyaXB0aW9uID0gJGRlY29kZWRSZXNwb25zZVsnZGVzY3JpcHRpb24nXSA/PyAnJzsKICAgICAgICAkc2lsZW50ID0gJGVycm9yQ29kZSA9PT0gNDAzCiAgICAgICAgICAgIHx8ICgkZXJyb3JDb2RlID09PSA0MDAgJiYgKAogICAgICAgICAgICAgICAgc3RyX2NvbnRhaW5zKCRkZXNjcmlwdGlvbiwgJ21lc3NhZ2UgaXMgbm90IG1vZGlmaWVkJykKICAgICAgICAgICAgICAgIHx8IHN0cl9jb250YWlucygkZGVzY3JpcHRpb24sICJtZXNzYWdlIGNhbid0IGJlIGRlbGV0ZWQiKQogICAgICAgICAgICAgICAgfHwgc3RyX2NvbnRhaW5zKCRkZXNjcmlwdGlvbiwgJ21lc3NhZ2UgdG8gZGVsZXRlIG5vdCBmb3VuZCcpCiAgICAgICAgICAgICAgICB8fCBzdHJfY29udGFpbnMoJGRlc2NyaXB0aW9uLCAnY2hhdCBub3QgZm91bmQnKQogICAgICAgICAgICApKTsKICAgICAgICBpZiAoJGFsbG93RW1vamlGYWxsYmFjayAmJiAkZXJyb3JDb2RlID09PSA0MDAgJiYgISRzaWxlbnQgJiYgaXNfYXJyYXkoJHByZW1pdW1FbW9qaVBheWxvYWQpKSB7CiAgICAgICAgICAgICRyZXRyeSA9IHRlbGVncmFtKCRtZXRob2QsIHN0cmlwQ3VzdG9tRW1vamlQYXlsb2FkKCRwcmVtaXVtRW1vamlQYXlsb2FkKSwgJHRva2VuLCBmYWxzZSk7CiAgICAgICAgICAgICRlbW9qaVJlamVjdGVkID0gc3RyaXBvcygkZGVzY3JpcHRpb24sICdlbW9qaScpICE9PSBmYWxzZQogICAgICAgICAgICAgICAgfHwgc3RyaXBvcygkZGVzY3JpcHRpb24sICdlbnRpdCcpICE9PSBmYWxzZTsKICAgICAgICAgICAgaWYgKCRlbW9qaVJlamVjdGVkICYmICghaXNzZXQoJHJldHJ5WydvayddKSB8fCAkcmV0cnlbJ29rJ10pKSB7CiAgICAgICAgICAgICAgICBjdXN0b21FbW9qaUJsb2NrZWQoJHRva2VuLCB0cnVlKTsKICAgICAgICAgICAgfQogICAgICAgICAgICByZXR1cm4gJHJldHJ5OwogICAgICAgIH0KICAgICAgICBpZiAoISRzaWxlbnQpIHsKICAgICAgICAgICAgZXJyb3JfbG9nKGpzb25fZW5jb2RlKCRkZWNvZGVkUmVzcG9uc2UpKTsKICAgICAgICB9CiAgICB9CgogICAgcmV0dXJuICRkZWNvZGVkUmVzcG9uc2U7Cn0KZnVuY3Rpb24gc3BsaXRUZWxlZ3JhbVRleHQoJHRleHQsICRsaW1pdCA9IDQwOTYpCnsKICAgICR1dGYxNkxlbmd0aCA9IGZuKCR2YWx1ZSkgPT4gc3RybGVuKG1iX2NvbnZlcnRfZW5jb2RpbmcoJHZhbHVlLCAnVVRGLTE2TEUnLCAnVVRGLTgnKSkgLyAyOwogICAgJHRleHQgPSAoc3RyaW5nKSAkdGV4dDsKICAgIGlmICgkdXRmMTZMZW5ndGgoJHRleHQpIDw9ICRsaW1pdCkgewogICAgICAgIHJldHVybiBbJHRleHRdOwogICAgfQogICAgJGNodW5rcyA9IFtdOwogICAgJGN1cnJlbnQgPSAnJzsKICAgIGZvcmVhY2ggKGV4cGxvZGUoIlxuIiwgJHRleHQpIGFzICRsaW5lKSB7CiAgICAgICAgd2hpbGUgKCR1dGYxNkxlbmd0aCgkbGluZSkgPiAkbGltaXQpIHsKICAgICAgICAgICAgaWYgKCRjdXJyZW50ICE9PSAnJykgewogICAgICAgICAgICAgICAgJGNodW5rc1tdID0gJGN1cnJlbnQ7CiAgICAgICAgICAgICAgICAkY3VycmVudCA9ICcnOwogICAgICAgICAgICB9CiAgICAgICAgICAgICRwYXJ0ID0gbWJfc3Vic3RyKCRsaW5lLCAwLCAkbGltaXQpOwogICAgICAgICAgICB3aGlsZSAoJHV0ZjE2TGVuZ3RoKCRwYXJ0KSA+ICRsaW1pdCkgewogICAgICAgICAgICAgICAgJHBhcnQgPSBtYl9zdWJzdHIoJHBhcnQsIDAsIC0xKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAkY2h1bmtzW10gPSAkcGFydDsKICAgICAgICAgICAgJGxpbmUgPSBtYl9zdWJzdHIoJGxpbmUsIG1iX3N0cmxlbigkcGFydCkpOwogICAgICAgIH0KICAgICAgICAkY2FuZGlkYXRlID0gJGN1cnJlbnQgPT09ICcnID8gJGxpbmUgOiAkY3VycmVudCAuICJcbiIgLiAkbGluZTsKICAgICAgICBpZiAoJHV0ZjE2TGVuZ3RoKCRjYW5kaWRhdGUpID4gJGxpbWl0KSB7CiAgICAgICAgICAgICRjaHVua3NbXSA9ICRjdXJyZW50OwogICAgICAgICAgICAkY3VycmVudCA9ICRsaW5lOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICRjdXJyZW50ID0gJGNhbmRpZGF0ZTsKICAgICAgICB9CiAgICB9CiAgICBpZiAoJGN1cnJlbnQgIT09ICcnKSB7CiAgICAgICAgJGNodW5rc1tdID0gJGN1cnJlbnQ7CiAgICB9CiAgICByZXR1cm4gJGNodW5rczsKfQpmdW5jdGlvbiBzZW5kbWVzc2FnZSgkY2hhdF9pZCwkdGV4dCwka2V5Ym9hcmQsJHBhcnNlX21vZGUsJGJvdF90b2tlbiA9IG51bGwpewogICAgaWYgKGlzVGVsZWdyYW1DaGF0SWRFbXB0eSgkY2hhdF9pZCkpIHsKICAgICAgICByZXR1cm4gWydvaycgPT4gZmFsc2VdOwogICAgfQogICAgJGNodW5rcyA9IHNwbGl0VGVsZWdyYW1UZXh0KCR0ZXh0KTsKICAgICRyZXN1bHQgPSBbJ29rJyA9PiBmYWxzZV07CiAgICBmb3JlYWNoICgkY2h1bmtzIGFzICRpbmRleCA9PiAkY2h1bmspIHsKICAgICAgICAkcmVzdWx0ID0gdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJywgWwogICAgICAgICAgICAnY2hhdF9pZCcgPT4gJGNoYXRfaWQsCiAgICAgICAgICAgICd0ZXh0JyA9PiAkY2h1bmssCiAgICAgICAgICAgICdyZXBseV9tYXJrdXAnID0+ICRpbmRleCA9PSBjb3VudCgkY2h1bmtzKSAtIDEgPyAka2V5Ym9hcmQgOiBudWxsLAogICAgICAgICAgICAncGFyc2VfbW9kZScgPT4gJHBhcnNlX21vZGUsCiAgICAgICAgXSwgJGJvdF90b2tlbik7CiAgICB9CiAgICByZXR1cm4gJHJlc3VsdDsKfQpmdW5jdGlvbiBzZW5kRG9jdW1lbnQoJGNoYXRfaWQsICRkb2N1bWVudFBhdGgsICRjYXB0aW9uKSB7CiAgICAgICAgcmV0dXJuIHRlbGVncmFtKCdzZW5kRG9jdW1lbnQnLFsKICAgICAgICAnY2hhdF9pZCcgPT4gJGNoYXRfaWQsCiAgICAgICAgJ2RvY3VtZW50JyA9PiBuZXcgQ1VSTEZpbGUoJGRvY3VtZW50UGF0aCksCiAgICAgICAgJ2NhcHRpb24nID0+ICRjYXB0aW9uLAogICAgICAgIF0pOwp9CgpmdW5jdGlvbiBmb3J3YXJkTWVzc2FnZSgkY2hhdF9pZCwkbWVzc2FnZV9pZCwkY2hhdF9pZF91c2VyKXsKICAgIHJldHVybiB0ZWxlZ3JhbSgnZm9yd2FyZE1lc3NhZ2UnLFsKICAgICAgICAnZnJvbV9jaGF0X2lkJz0+ICRjaGF0X2lkLAogICAgICAgICdtZXNzYWdlX2lkJz0+ICRtZXNzYWdlX2lkLAogICAgICAgICdjaGF0X2lkJz0+ICRjaGF0X2lkX3VzZXIsCiAgICBdKTsKfQpmdW5jdGlvbiBzZW5kcGhvdG8oJGNoYXRfaWQsJHBob3RvaWQsJGNhcHRpb24pewogICAgdGVsZWdyYW0oJ3NlbmRwaG90bycsWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAncGhvdG8nPT4gJHBob3RvaWQsCiAgICAgICAgJ2NhcHRpb24nPT4gJGNhcHRpb24sCiAgICBdKTsKfQpmdW5jdGlvbiBzZW5kdmlkZW8oJGNoYXRfaWQsJHZpZGVvaWQsJGNhcHRpb24pewogICAgdGVsZWdyYW0oJ3NlbmR2aWRlbycsWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAndmlkZW8nPT4gJHZpZGVvaWQsCiAgICAgICAgJ2NhcHRpb24nPT4gJGNhcHRpb24sCiAgICBdKTsKfQpmdW5jdGlvbiBFZGl0bWVzc2FnZXRleHQoJGNoYXRfaWQsICRtZXNzYWdlX2lkLCAkdGV4dCwgJGtleWJvYXJkLCRwYXJzZV9tb2RlID0gJ0hUTUwnKXsKICAgIHJldHVybiB0ZWxlZ3JhbSgnZWRpdG1lc3NhZ2V0ZXh0JywgWwogICAgICAgICdjaGF0X2lkJyA9PiAkY2hhdF9pZCwKICAgICAgICAnbWVzc2FnZV9pZCcgPT4gJG1lc3NhZ2VfaWQsCiAgICAgICAgJ3RleHQnID0+ICR0ZXh0LAogICAgICAgICdyZXBseV9tYXJrdXAnID0+ICRrZXlib2FyZCwKICAgICAgICAncGFyc2VfbW9kZScgPT4gJHBhcnNlX21vZGUsCgogICAgXSk7Cn0KIGZ1bmN0aW9uIGRlbGV0ZW1lc3NhZ2UoJGNoYXRfaWQsICRtZXNzYWdlX2lkKXsKICB0ZWxlZ3JhbSgnZGVsZXRlbWVzc2FnZScsIFsKJ2NoYXRfaWQnID0+ICRjaGF0X2lkLCAKJ21lc3NhZ2VfaWQnID0+ICRtZXNzYWdlX2lkLApdKTsKIH0KZnVuY3Rpb24gZ2V0RmlsZWRkaXJlKCRwaG90b2lkKXsKICByZXR1cm4gdGVsZWdyYW0oJ2dldEZpbGUnLCBbCidmaWxlX2lkJyA9PiAkcGhvdG9pZCwgCl0pOwogfQpmdW5jdGlvbiBwaW5tZXNzYWdlKCRmcm9tX2lkLCRtZXNzYWdlX2lkKXsKICByZXR1cm4gdGVsZWdyYW0oJ3BpbkNoYXRNZXNzYWdlJywgWwonY2hhdF9pZCcgPT4gJGZyb21faWQsIAonbWVzc2FnZV9pZCcgPT4gJG1lc3NhZ2VfaWQsIApdKTsKIH0KIGZ1bmN0aW9uIHVucGlubWVzc2FnZSgkZnJvbV9pZCl7CiAgcmV0dXJuIHRlbGVncmFtKCd1bnBpbkFsbENoYXRNZXNzYWdlcycsIFsKJ2NoYXRfaWQnID0+ICRmcm9tX2lkLCAKXSk7CiB9CiAgZnVuY3Rpb24gYW5zd2VySW5saW5lUXVlcnkoJGlubGluZV9xdWVyeV9pZCwkcmVzdWx0cyl7CiAgcmV0dXJuIHRlbGVncmFtKCdhbnN3ZXJJbmxpbmVRdWVyeScsIFsKICAgICAgImlubGluZV9xdWVyeV9pZCIgPT4gJGlubGluZV9xdWVyeV9pZCwKICAgICAgICAicmVzdWx0cyIgPT4ganNvbl9lbmNvZGUoJHJlc3VsdHMpCl0pOwogfQpmdW5jdGlvbiBjb252ZXJ0UGVyc2lhbk51bWJlcnNUb0VuZ2xpc2goJHN0cmluZykgewogICAgJHBlcnNpYW5fbnVtYmVycyA9IFsn27AnLCAn27EnLCAn27InLCAn27MnLCAn27QnLCAn27UnLCAn27YnLCAn27cnLCAn27gnLCAn27knXTsKICAgICRlbmdsaXNoX251bWJlcnMgPSBbJzAnLCAnMScsICcyJywgJzMnLCAnNCcsICc1JywgJzYnLCAnNycsICc4JywgJzknXTsKCiAgICByZXR1cm4gc3RyX3JlcGxhY2UoJHBlcnNpYW5fbnVtYmVycywgJGVuZ2xpc2hfbnVtYmVycywgJHN0cmluZyk7Cn0KCmZ1bmN0aW9uIGlzRHVwbGljYXRlVXBkYXRlKCR1cGRhdGVJZCkKewogICAgaWYgKCFpc19udW1lcmljKCR1cGRhdGVJZCkgfHwgJHVwZGF0ZUlkIDw9IDApIHsKICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9CgogICAgJGNhY2hlRGlyID0gX19ESVJfXyAuICcvc3RvcmFnZS9jYWNoZSc7CiAgICBpZiAoIWlzX2RpcigkY2FjaGVEaXIpICYmICFta2RpcigkY2FjaGVEaXIsIDA3NzUsIHRydWUpICYmICFpc19kaXIoJGNhY2hlRGlyKSkgewogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KCiAgICAkY2FjaGVGaWxlID0gJGNhY2hlRGlyIC4gJy9yZWNlbnRfdXBkYXRlcy5qc29uJzsKICAgICRoYW5kbGUgPSBmb3BlbigkY2FjaGVGaWxlLCAnYysnKTsKICAgIGlmICgkaGFuZGxlID09PSBmYWxzZSkgewogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KCiAgICB0cnkgewogICAgICAgIGlmICghZmxvY2soJGhhbmRsZSwgTE9DS19FWCkpIHsKICAgICAgICAgICAgZmNsb3NlKCRoYW5kbGUpOwogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQoKICAgICAgICByZXdpbmQoJGhhbmRsZSk7CiAgICAgICAgJGNvbnRlbnRzID0gc3RyZWFtX2dldF9jb250ZW50cygkaGFuZGxlKTsKICAgICAgICAkcmVjZW50VXBkYXRlcyA9ICRjb250ZW50cyA/IGpzb25fZGVjb2RlKCRjb250ZW50cywgdHJ1ZSkgOiBbXTsKICAgICAgICBpZiAoIWlzX2FycmF5KCRyZWNlbnRVcGRhdGVzKSkgewogICAgICAgICAgICAkcmVjZW50VXBkYXRlcyA9IFtdOwogICAgICAgIH0KCiAgICAgICAgJG5vdyA9IHRpbWUoKTsKICAgICAgICAkdGltZVRvTGl2ZSA9IDEyMDsgLy8gc2Vjb25kcwoKICAgICAgICAvLyBEcm9wIGV4cGlyZWQgZW50cmllcwogICAgICAgIGZvcmVhY2ggKCRyZWNlbnRVcGRhdGVzIGFzICRpZCA9PiAkdGltZXN0YW1wKSB7CiAgICAgICAgICAgIGlmICghaXNfbnVtZXJpYygkdGltZXN0YW1wKSB8fCAoJG5vdyAtIChpbnQpJHRpbWVzdGFtcCkgPiAkdGltZVRvTGl2ZSkgewogICAgICAgICAgICAgICAgdW5zZXQoJHJlY2VudFVwZGF0ZXNbJGlkXSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGlmIChhcnJheV9rZXlfZXhpc3RzKCR1cGRhdGVJZCwgJHJlY2VudFVwZGF0ZXMpKSB7CiAgICAgICAgICAgIGZsb2NrKCRoYW5kbGUsIExPQ0tfVU4pOwogICAgICAgICAgICBmY2xvc2UoJGhhbmRsZSk7CiAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgIH0KCiAgICAgICAgJHJlY2VudFVwZGF0ZXNbJHVwZGF0ZUlkXSA9ICRub3c7CgogICAgICAgIC8vIGtlZXAgc2l6ZSByZWFzb25hYmxlCiAgICAgICAgaWYgKGNvdW50KCRyZWNlbnRVcGRhdGVzKSA+IDIwMCkgewogICAgICAgICAgICBhc29ydCgkcmVjZW50VXBkYXRlcyk7CiAgICAgICAgICAgICRyZWNlbnRVcGRhdGVzID0gYXJyYXlfc2xpY2UoJHJlY2VudFVwZGF0ZXMsIC0yMDAsIG51bGwsIHRydWUpOwogICAgICAgIH0KCiAgICAgICAgJGVuY29kZWQgPSBqc29uX2VuY29kZSgkcmVjZW50VXBkYXRlcyk7CiAgICAgICAgaWYgKCRlbmNvZGVkICE9PSBmYWxzZSkgewogICAgICAgICAgICByZXdpbmQoJGhhbmRsZSk7CiAgICAgICAgICAgIGZ0cnVuY2F0ZSgkaGFuZGxlLCAwKTsKICAgICAgICAgICAgZndyaXRlKCRoYW5kbGUsICRlbmNvZGVkKTsKICAgICAgICB9CgogICAgICAgIGZsb2NrKCRoYW5kbGUsIExPQ0tfVU4pOwogICAgICAgIGZjbG9zZSgkaGFuZGxlKTsKICAgIH0gY2F0Y2ggKFRocm93YWJsZSAkZSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGZsb2NrKCRoYW5kbGUsIExPQ0tfVU4pOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSAkaWdub3JlZCkgewogICAgICAgIH0KICAgICAgICBmY2xvc2UoJGhhbmRsZSk7CiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgfQoKICAgIHJldHVybiBmYWxzZTsKfQovLyAjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jCiR1cGRhdGUgPSBqc29uX2RlY29kZShmaWxlX2dldF9jb250ZW50cygicGhwOi8vaW5wdXQiKSwgdHJ1ZSk7CiR1cGRhdGUgPSBtb2Rhc3Jfbm9ybWFsaXplX2luY29taW5nX3VwZGF0ZSgkdXBkYXRlKTsKJHVwZGF0ZV9pZCA9ICR1cGRhdGVbJ3VwZGF0ZV9pZCddID8/IDA7CmlmIChpc0R1cGxpY2F0ZVVwZGF0ZSgkdXBkYXRlX2lkKSkgewogICAgaHR0cF9yZXNwb25zZV9jb2RlKDIwMCk7CiAgICBleGl0Owp9CiRmcm9tX2lkID0gJHVwZGF0ZVsnbWVzc2FnZSddWydmcm9tJ11bJ2lkJ10gPz8gJHVwZGF0ZVsnY2FsbGJhY2tfcXVlcnknXVsnZnJvbSddWydpZCddID8/ICR1cGRhdGVbImlubGluZV9xdWVyeSJdWydmcm9tJ11bJ2lkJ10gPz8gMDsKJGlzX2JvdCA9ICR1cGRhdGVbJ21lc3NhZ2UnXVsnZnJvbSddWydpc19ib3QnXSA/PyBmYWxzZTsKJGNoYXRfbWVtYmVyID0gJHVwZGF0ZVsnY2hhdF9tZW1iZXInXSA/PyBudWxsOwokQ2hhdF90eXBlID0gJHVwZGF0ZVsibWVzc2FnZSJdWyJjaGF0Il1bInR5cGUiXSA/PyAkdXBkYXRlWydjYWxsYmFja19xdWVyeSddWydtZXNzYWdlJ11bJ2NoYXQnXVsndHlwZSddID8/ICcnOwokdGV4dCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsidGV4dCJdICA/PyAnJzsKJGVudGl0aWVzID0gJHVwZGF0ZVsnbWVzc2FnZSddWydlbnRpdGllcyddID8/IG51bGw7CmlmICgkdGV4dCAhPT0gJycgJiYgaXNfYXJyYXkoJGVudGl0aWVzKSkgewogICAgJGN1c3RvbUVtb2ppcyA9IFtdOwogICAgZm9yZWFjaCAoJGVudGl0aWVzIGFzICRlbnRpdHkpIHsKICAgICAgICBpZiAoKCRlbnRpdHlbJ3R5cGUnXSA/PyBudWxsKSA9PT0gJ2N1c3RvbV9lbW9qaScgJiYgaXNzZXQoJGVudGl0eVsnY3VzdG9tX2Vtb2ppX2lkJ10pKSB7CiAgICAgICAgICAgICRjdXN0b21FbW9qaXNbXSA9ICRlbnRpdHk7CiAgICAgICAgfQogICAgfQoKICAgIGlmICgkY3VzdG9tRW1vamlzKSB7CiAgICAgICAgdXNvcnQoJGN1c3RvbUVtb2ppcywgZm4oJGEsICRiKSA9PiAkYVsnb2Zmc2V0J10gPD0+ICRiWydvZmZzZXQnXSk7CgogICAgICAgICR1dGYxNiA9IG1iX2NvbnZlcnRfZW5jb2RpbmcoJHRleHQsICdVVEYtMTZMRScsICdVVEYtOCcpOwogICAgICAgICR1dGYxNkxlbmd0aCA9IHN0cmxlbigkdXRmMTYpOwogICAgICAgICR0YWdPcGVuID0gbWJfY29udmVydF9lbmNvZGluZygnPHRnLWVtb2ppIGVtb2ppLWlkPSInLCAnVVRGLTE2TEUnLCAnVVRGLTgnKTsKICAgICAgICAkdGFnT3BlbkVuZCA9IG1iX2NvbnZlcnRfZW5jb2RpbmcoJyI+JywgJ1VURi0xNkxFJywgJ1VURi04Jyk7CiAgICAgICAgJHRhZ0Nsb3NlID0gbWJfY29udmVydF9lbmNvZGluZygnPC90Zy1lbW9qaT4nLCAnVVRGLTE2TEUnLCAnVVRGLTgnKTsKCiAgICAgICAgJHJlc3VsdCA9ICcnOwogICAgICAgICRjdXJzb3IgPSAwOwogICAgICAgIGZvcmVhY2ggKCRjdXN0b21FbW9qaXMgYXMgJGVudGl0eSkgewogICAgICAgICAgICAkc3RhcnQgPSAoKGludCkgJGVudGl0eVsnb2Zmc2V0J10pICogMjsKICAgICAgICAgICAgJGxlbmd0aCA9ICgoaW50KSAkZW50aXR5WydsZW5ndGgnXSkgKiAyOwogICAgICAgICAgICBpZiAoJHN0YXJ0IDwgJGN1cnNvciB8fCAkbGVuZ3RoIDw9IDAgfHwgJHN0YXJ0ICsgJGxlbmd0aCA+ICR1dGYxNkxlbmd0aCkgewogICAgICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgICRlbW9qaUlkID0gbWJfY29udmVydF9lbmNvZGluZygKICAgICAgICAgICAgICAgIGh0bWxzcGVjaWFsY2hhcnMoKHN0cmluZykgJGVudGl0eVsnY3VzdG9tX2Vtb2ppX2lkJ10sIEVOVF9RVU9URVMsICdVVEYtOCcpLAogICAgICAgICAgICAgICAgJ1VURi0xNkxFJywKICAgICAgICAgICAgICAgICdVVEYtOCcKICAgICAgICAgICAgKTsKCiAgICAgICAgICAgICRyZXN1bHQgLj0gc3Vic3RyKCR1dGYxNiwgJGN1cnNvciwgJHN0YXJ0IC0gJGN1cnNvcikKICAgICAgICAgICAgICAgIC4gJHRhZ09wZW4gLiAkZW1vamlJZCAuICR0YWdPcGVuRW5kCiAgICAgICAgICAgICAgICAuIHN1YnN0cigkdXRmMTYsICRzdGFydCwgJGxlbmd0aCkKICAgICAgICAgICAgICAgIC4gJHRhZ0Nsb3NlOwogICAgICAgICAgICAkY3Vyc29yID0gJHN0YXJ0ICsgJGxlbmd0aDsKICAgICAgICB9CgogICAgICAgIGlmICgkY3Vyc29yID4gMCkgewogICAgICAgICAgICAkdGV4dCA9IG1iX2NvbnZlcnRfZW5jb2RpbmcoJHJlc3VsdCAuIHN1YnN0cigkdXRmMTYsICRjdXJzb3IpLCAnVVRGLTgnLCAnVVRGLTE2TEUnKTsKICAgICAgICB9CiAgICB9Cn0KaWYoaXNzZXQoJHVwZGF0ZVsncHJlX2NoZWNrb3V0X3F1ZXJ5J10pKXsKICAgICRDaGF0X3R5cGUgPSAicHJpdmF0ZSI7CiAgICAkZnJvbV9pZCA9ICR1cGRhdGVbJ3ByZV9jaGVja291dF9xdWVyeSddWydmcm9tJ11bJ2lkJ107Cn0KJHRleHQgPWNvbnZlcnRQZXJzaWFuTnVtYmVyc1RvRW5nbGlzaCgkdGV4dCk7CiR0ZXh0X2lubGluZSA9ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bIm1lc3NhZ2UiXVsndGV4dCddID8/ICcnOwokbWVzc2FnZV9pZCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsibWVzc2FnZV9pZCJdID8/ICR1cGRhdGVbImNhbGxiYWNrX3F1ZXJ5Il1bIm1lc3NhZ2UiXVsibWVzc2FnZV9pZCJdID8/IDA7CiRwaG90byA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsicGhvdG8iXSA/PyAwOwokZG9jdW1lbnQgPSAkdXBkYXRlWyJtZXNzYWdlIl1bImRvY3VtZW50Il0gPz8gMDsKJGZpbGVpZCA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsiZG9jdW1lbnQiXVsiZmlsZV9pZCJdID8/IDA7CiRwaG90b2lkID0gJHBob3RvID8gZW5kKCRwaG90bylbImZpbGVfaWQiXSA6ICcnOwokY2FwdGlvbiA9ICR1cGRhdGVbIm1lc3NhZ2UiXVsiY2FwdGlvbiJdID8/ICcnOwokdmlkZW8gPSAkdXBkYXRlWyJtZXNzYWdlIl1bInZpZGVvIl0gPz8gMDsKJHZpZGVvaWQgPSAkdmlkZW8gPyAkdmlkZW9bImZpbGVfaWQiXSA6IDA7CiRkYXRhaW4gPSAkdXBkYXRlWyJjYWxsYmFja19xdWVyeSJdWyJkYXRhIl0gPz8gJyc7CiRmaXJzdF9uYW1lID0gJHVwZGF0ZVsnbWVzc2FnZSddWydmcm9tJ11bJ2ZpcnN0X25hbWUnXSAgPz8gJHVwZGF0ZVsiY2FsbGJhY2tfcXVlcnkiXVsiZnJvbSJdWyJmaXJzdF9uYW1lIl0gPz8gJHVwZGF0ZVsiaW5saW5lX3F1ZXJ5Il1bJ2Zyb20nXVsnZmlyc3RfbmFtZSddID8/ICcnOwokdXNlcm5hbWUgPSAkdXBkYXRlWydtZXNzYWdlJ11bJ2Zyb20nXVsndXNlcm5hbWUnXSA/PyAkdXBkYXRlWydjYWxsYmFja19xdWVyeSddWydmcm9tJ11bJ3VzZXJuYW1lJ10gPz8gJHVwZGF0ZVsiY2FsbGJhY2tfcXVlcnkiXVsiZnJvbSJdWyJ1c2VybmFtZSJdID8/ICdOT1RfVVNFUk5BTUUnOwokdXNlcl9waG9uZSA9JHVwZGF0ZVsibWVzc2FnZSJdWyJjb250YWN0Il1bInBob25lX251bWJlciJdID8/IDA7CiRjb250YWN0X2lkID0gJHVwZGF0ZVsibWVzc2FnZSJdWyJjb250YWN0Il1bInVzZXJfaWQiXSA/PyAwOwokY2FsbGJhY2tfcXVlcnlfaWQgPSAkdXBkYXRlWyJjYWxsYmFja19xdWVyeSJdWyJpZCJdID8/IDA7CiRpbmxpbmVfcXVlcnlfaWQgPSAkdXBkYXRlWyJpbmxpbmVfcXVlcnkiXVsiaWQiXSA/PyAwOwokcXVlcnkgPSAkdXBkYXRlWyJpbmxpbmVfcXVlcnkiXVsicXVlcnkiXSA/PyAwOw==
+<?php
+require_once 'config.php';
+require_once __DIR__ . '/platform/platform.php';
+function isTelegramChatIdEmpty($chat_id): bool
+{
+    if ($chat_id === null || $chat_id === false) {
+        return true;
+    }
+    if (is_array($chat_id) || is_object($chat_id)) {
+        return true;
+    }
+    $chat_id = trim((string) $chat_id);
+    if ($chat_id === '') {
+        return true;
+    }
+    return is_numeric($chat_id) && (int) $chat_id === 0;
+}
+function walkKeyboardButtons($replyMarkup, callable $handler)
+{
+    if (!is_string($replyMarkup) || stripos($replyMarkup, '<tg-emoji') === false) {
+        return $replyMarkup;
+    }
+    $markup = json_decode($replyMarkup, true);
+    if (!is_array($markup)) {
+        return $replyMarkup;
+    }
+    $changed = false;
+    foreach (['keyboard', 'inline_keyboard'] as $markupKey) {
+        if (!isset($markup[$markupKey]) || !is_array($markup[$markupKey])) {
+            continue;
+        }
+        foreach ($markup[$markupKey] as $rowKey => $row) {
+            if (!is_array($row)) {
+                continue;
+            }
+            foreach ($row as $btnKey => $button) {
+                if (!is_array($button) || !isset($button['text']) || !is_string($button['text'])) {
+                    continue;
+                }
+                $updated = $handler($button);
+                if ($updated !== $button) {
+                    $markup[$markupKey][$rowKey][$btnKey] = $updated;
+                    $changed = true;
+                }
+            }
+        }
+    }
+    if (!$changed) {
+        return $replyMarkup;
+    }
+    $encoded = json_encode($markup, JSON_UNESCAPED_UNICODE);
+    return $encoded === false ? $replyMarkup : $encoded;
+}
+function applyCustomEmojiToMarkup($replyMarkup)
+{
+    return walkKeyboardButtons($replyMarkup, function ($button) {
+        $label = splitCustomEmojiLabel($button['text']);
+        $button['text'] = $label['text'];
+        if ($label['icon'] !== '' && !isset($button['icon_custom_emoji_id'])) {
+            $button['icon_custom_emoji_id'] = $label['icon'];
+        }
+        return $button;
+    });
+}
+function stripCustomEmojiFromMarkup($replyMarkup)
+{
+    return walkKeyboardButtons($replyMarkup, function ($button) {
+        $button['text'] = stripCustomEmojiTags($button['text']);
+        unset($button['icon_custom_emoji_id']);
+        return $button;
+    });
+}
+function payloadHasCustomEmoji(array $datas)
+{
+    foreach (['text', 'caption', 'reply_markup'] as $key) {
+        if (isset($datas[$key]) && is_string($datas[$key]) && stripos($datas[$key], '<tg-emoji') !== false) {
+            return true;
+        }
+    }
+    return false;
+}
+function applyCustomEmojiPayload(array $datas)
+{
+    if (!payloadRendersHtml($datas)) {
+        foreach (['text', 'caption'] as $key) {
+            if (isset($datas[$key]) && is_string($datas[$key])) {
+                $datas[$key] = stripCustomEmojiTags($datas[$key]);
+            }
+        }
+    }
+    if (isset($datas['reply_markup'])) {
+        $datas['reply_markup'] = applyCustomEmojiToMarkup($datas['reply_markup']);
+    }
+    return $datas;
+}
+function stripCustomEmojiPayload(array $datas)
+{
+    foreach (['text', 'caption'] as $key) {
+        if (isset($datas[$key]) && is_string($datas[$key])) {
+            $datas[$key] = stripCustomEmojiTags($datas[$key]);
+        }
+    }
+    if (isset($datas['reply_markup'])) {
+        $datas['reply_markup'] = stripCustomEmojiFromMarkup($datas['reply_markup']);
+    }
+    return $datas;
+}
+function payloadRendersHtml(array $datas)
+{
+    $parseMode = $datas['parse_mode'] ?? '';
+    return is_string($parseMode) && strtolower($parseMode) === 'html';
+}
+function customEmojiBlocked($token = null, $block = false)
+{
+    global $APIKEY;
+
+    static $state = [];
+    $key = md5((string) ($token === null ? $APIKEY : $token));
+    $cacheDir = __DIR__ . '/storage/cache';
+    $cacheFile = null;
+    if (is_dir($cacheDir) || @mkdir($cacheDir, 0775, true) || is_dir($cacheDir)) {
+        $cacheFile = $cacheDir . '/custom_emoji.json';
+    }
+    if ($block) {
+        $state[$key] = true;
+        if ($cacheFile !== null) {
+            $stored = is_file($cacheFile) ? json_decode((string) file_get_contents($cacheFile), true) : [];
+            if (!is_array($stored)) {
+                $stored = [];
+            }
+            $now = time();
+            foreach ($stored as $storedKey => $expiresAt) {
+                if (!is_numeric($expiresAt) || $expiresAt <= $now) {
+                    unset($stored[$storedKey]);
+                }
+            }
+            $stored[$key] = $now + 21600;
+            $encoded = json_encode($stored);
+            if ($encoded !== false) {
+                @file_put_contents($cacheFile, $encoded, LOCK_EX);
+            }
+        }
+        return true;
+    }
+    if (array_key_exists($key, $state)) {
+        return $state[$key];
+    }
+    $state[$key] = false;
+    if ($cacheFile !== null && is_file($cacheFile)) {
+        $stored = json_decode((string) file_get_contents($cacheFile), true);
+        if (is_array($stored) && isset($stored[$key]) && is_numeric($stored[$key]) && $stored[$key] > time()) {
+            $state[$key] = true;
+        }
+    }
+    return $state[$key];
+}
+function telegram($method, $datas = [], $token = null, $allowEmojiFallback = true)
+{
+    global $APIKEY;
+
+    $token = $token === null ? $APIKEY : $token;
+
+    // Route through the active messenger platform (telegram / bale / rubika).
+    if (modasr_platform() !== 'telegram') {
+        [$handled, $platformResult] = modasr_platform_request($method, $datas, $token);
+        if ($handled) {
+            return $platformResult;
+        }
+    }
+
+    $url = "https://api.telegram.org/bot" . $token . "/" . $method;
+
+    foreach (['chat_id', 'from_chat_id'] as $chatIdKey) {
+        if (array_key_exists($chatIdKey, $datas) && isTelegramChatIdEmpty($datas[$chatIdKey])) {
+            return [
+                'ok' => false,
+                'error_code' => 400,
+                'description' => 'Bad Request: chat_id is empty'
+            ];
+        }
+    }
+
+    if (isset($datas['message_thread_id']) && intval($datas['message_thread_id']) <= 0) {
+        unset($datas['message_thread_id']);
+    }
+
+    $premiumEmojiPayload = null;
+    if (function_exists('splitCustomEmojiLabel') && payloadHasCustomEmoji($datas)) {
+        $premiumEmojiPayload = $datas;
+        $datas = customEmojiBlocked($token)
+            ? stripCustomEmojiPayload($datas)
+            : applyCustomEmojiPayload($datas);
+    }
+
+    $ch = curl_init($url);
+    if ($ch === false) {
+        error_log('Unable to initialise cURL for Telegram request.');
+        return [
+            'ok' => false,
+            'description' => 'Unable to initialise cURL for Telegram request.'
+        ];
+    }
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
+
+    $rawResponse = curl_exec($ch);
+    if ($rawResponse === false) {
+        $curlError = curl_error($ch);
+
+        if ($curlError !== '') {
+            error_log('Telegram request failed: ' . $curlError);
+        }
+
+        return [
+            'ok' => false,
+            'description' => $curlError !== '' ? $curlError : 'Telegram request failed.'
+        ];
+    }
+
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    $decodedResponse = json_decode($rawResponse, true);
+    if (!is_array($decodedResponse)) {
+        $logSnippet = substr($rawResponse, 0, 200);
+        error_log(sprintf('Invalid response from Telegram API (HTTP %d): %s', $httpCode, $logSnippet));
+
+        return [
+            'ok' => false,
+            'error_code' => $httpCode,
+            'description' => 'Invalid response received from Telegram.'
+        ];
+    }
+
+    if (isset($decodedResponse['ok']) && !$decodedResponse['ok']) {
+        $errorCode = $decodedResponse['error_code'] ?? 0;
+        $description = $decodedResponse['description'] ?? '';
+        $silent = $errorCode === 403
+            || ($errorCode === 400 && (
+                str_contains($description, 'message is not modified')
+                || str_contains($description, "message can't be deleted")
+                || str_contains($description, 'message to delete not found')
+                || str_contains($description, 'chat not found')
+            ));
+        if ($allowEmojiFallback && $errorCode === 400 && !$silent && is_array($premiumEmojiPayload)) {
+            $retry = telegram($method, stripCustomEmojiPayload($premiumEmojiPayload), $token, false);
+            $emojiRejected = stripos($description, 'emoji') !== false
+                || stripos($description, 'entit') !== false;
+            if ($emojiRejected && (!isset($retry['ok']) || $retry['ok'])) {
+                customEmojiBlocked($token, true);
+            }
+            return $retry;
+        }
+        if (!$silent) {
+            error_log(json_encode($decodedResponse));
+        }
+    }
+
+    return $decodedResponse;
+}
+function splitTelegramText($text, $limit = 4096)
+{
+    $utf16Length = fn($value) => strlen(mb_convert_encoding($value, 'UTF-16LE', 'UTF-8')) / 2;
+    $text = (string) $text;
+    if ($utf16Length($text) <= $limit) {
+        return [$text];
+    }
+    $chunks = [];
+    $current = '';
+    foreach (explode("\n", $text) as $line) {
+        while ($utf16Length($line) > $limit) {
+            if ($current !== '') {
+                $chunks[] = $current;
+                $current = '';
+            }
+            $part = mb_substr($line, 0, $limit);
+            while ($utf16Length($part) > $limit) {
+                $part = mb_substr($part, 0, -1);
+            }
+            $chunks[] = $part;
+            $line = mb_substr($line, mb_strlen($part));
+        }
+        $candidate = $current === '' ? $line : $current . "\n" . $line;
+        if ($utf16Length($candidate) > $limit) {
+            $chunks[] = $current;
+            $current = $line;
+        } else {
+            $current = $candidate;
+        }
+    }
+    if ($current !== '') {
+        $chunks[] = $current;
+    }
+    return $chunks;
+}
+function sendmessage($chat_id,$text,$keyboard,$parse_mode,$bot_token = null){
+    if (isTelegramChatIdEmpty($chat_id)) {
+        return ['ok' => false];
+    }
+    $chunks = splitTelegramText($text);
+    $result = ['ok' => false];
+    foreach ($chunks as $index => $chunk) {
+        $result = telegram('sendmessage', [
+            'chat_id' => $chat_id,
+            'text' => $chunk,
+            'reply_markup' => $index == count($chunks) - 1 ? $keyboard : null,
+            'parse_mode' => $parse_mode,
+        ], $bot_token);
+    }
+    return $result;
+}
+function sendDocument($chat_id, $documentPath, $caption) {
+        return telegram('sendDocument',[
+        'chat_id' => $chat_id,
+        'document' => new CURLFile($documentPath),
+        'caption' => $caption,
+        ]);
+}
+
+function forwardMessage($chat_id,$message_id,$chat_id_user){
+    return telegram('forwardMessage',[
+        'from_chat_id'=> $chat_id,
+        'message_id'=> $message_id,
+        'chat_id'=> $chat_id_user,
+    ]);
+}
+function sendphoto($chat_id,$photoid,$caption){
+    telegram('sendphoto',[
+        'chat_id' => $chat_id,
+        'photo'=> $photoid,
+        'caption'=> $caption,
+    ]);
+}
+function sendvideo($chat_id,$videoid,$caption){
+    telegram('sendvideo',[
+        'chat_id' => $chat_id,
+        'video'=> $videoid,
+        'caption'=> $caption,
+    ]);
+}
+function Editmessagetext($chat_id, $message_id, $text, $keyboard,$parse_mode = 'HTML'){
+    return telegram('editmessagetext', [
+        'chat_id' => $chat_id,
+        'message_id' => $message_id,
+        'text' => $text,
+        'reply_markup' => $keyboard,
+        'parse_mode' => $parse_mode,
+
+    ]);
+}
+ function deletemessage($chat_id, $message_id){
+  telegram('deletemessage', [
+'chat_id' => $chat_id, 
+'message_id' => $message_id,
+]);
+ }
+function getFileddire($photoid){
+  return telegram('getFile', [
+'file_id' => $photoid, 
+]);
+ }
+function pinmessage($from_id,$message_id){
+  return telegram('pinChatMessage', [
+'chat_id' => $from_id, 
+'message_id' => $message_id, 
+]);
+ }
+ function unpinmessage($from_id){
+  return telegram('unpinAllChatMessages', [
+'chat_id' => $from_id, 
+]);
+ }
+  function answerInlineQuery($inline_query_id,$results){
+  return telegram('answerInlineQuery', [
+      "inline_query_id" => $inline_query_id,
+        "results" => json_encode($results)
+]);
+ }
+function convertPersianNumbersToEnglish($string) {
+    $persian_numbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    $english_numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    return str_replace($persian_numbers, $english_numbers, $string);
+}
+
+function isDuplicateUpdate($updateId)
+{
+    if (!is_numeric($updateId) || $updateId <= 0) {
+        return false;
+    }
+
+    $cacheDir = __DIR__ . '/storage/cache';
+    if (!is_dir($cacheDir) && !mkdir($cacheDir, 0775, true) && !is_dir($cacheDir)) {
+        return false;
+    }
+
+    $cacheFile = $cacheDir . '/recent_updates.json';
+    $handle = fopen($cacheFile, 'c+');
+    if ($handle === false) {
+        return false;
+    }
+
+    try {
+        if (!flock($handle, LOCK_EX)) {
+            fclose($handle);
+            return false;
+        }
+
+        rewind($handle);
+        $contents = stream_get_contents($handle);
+        $recentUpdates = $contents ? json_decode($contents, true) : [];
+        if (!is_array($recentUpdates)) {
+            $recentUpdates = [];
+        }
+
+        $now = time();
+        $timeToLive = 120; // seconds
+
+        // Drop expired entries
+        foreach ($recentUpdates as $id => $timestamp) {
+            if (!is_numeric($timestamp) || ($now - (int)$timestamp) > $timeToLive) {
+                unset($recentUpdates[$id]);
+            }
+        }
+
+        if (array_key_exists($updateId, $recentUpdates)) {
+            flock($handle, LOCK_UN);
+            fclose($handle);
+            return true;
+        }
+
+        $recentUpdates[$updateId] = $now;
+
+        // keep size reasonable
+        if (count($recentUpdates) > 200) {
+            asort($recentUpdates);
+            $recentUpdates = array_slice($recentUpdates, -200, null, true);
+        }
+
+        $encoded = json_encode($recentUpdates);
+        if ($encoded !== false) {
+            rewind($handle);
+            ftruncate($handle, 0);
+            fwrite($handle, $encoded);
+        }
+
+        flock($handle, LOCK_UN);
+        fclose($handle);
+    } catch (Throwable $e) {
+        try {
+            flock($handle, LOCK_UN);
+        } catch (Throwable $ignored) {
+        }
+        fclose($handle);
+        return false;
+    }
+
+    return false;
+}
+// #-----------------------------#
+$update = json_decode(file_get_contents("php://input"), true);
+$update = modasr_normalize_incoming_update($update);
+$update_id = $update['update_id'] ?? 0;
+if (isDuplicateUpdate($update_id)) {
+    http_response_code(200);
+    exit;
+}
+$from_id = $update['message']['from']['id'] ?? $update['callback_query']['from']['id'] ?? $update["inline_query"]['from']['id'] ?? 0;
+$is_bot = $update['message']['from']['is_bot'] ?? false;
+$chat_member = $update['chat_member'] ?? null;
+$Chat_type = $update["message"]["chat"]["type"] ?? $update['callback_query']['message']['chat']['type'] ?? '';
+$text = $update["message"]["text"]  ?? '';
+$entities = $update['message']['entities'] ?? null;
+if ($text !== '' && is_array($entities)) {
+    $customEmojis = [];
+    foreach ($entities as $entity) {
+        if (($entity['type'] ?? null) === 'custom_emoji' && isset($entity['custom_emoji_id'])) {
+            $customEmojis[] = $entity;
+        }
+    }
+
+    if ($customEmojis) {
+        usort($customEmojis, fn($a, $b) => $a['offset'] <=> $b['offset']);
+
+        $utf16 = mb_convert_encoding($text, 'UTF-16LE', 'UTF-8');
+        $utf16Length = strlen($utf16);
+        $tagOpen = mb_convert_encoding('<tg-emoji emoji-id="', 'UTF-16LE', 'UTF-8');
+        $tagOpenEnd = mb_convert_encoding('">', 'UTF-16LE', 'UTF-8');
+        $tagClose = mb_convert_encoding('</tg-emoji>', 'UTF-16LE', 'UTF-8');
+
+        $result = '';
+        $cursor = 0;
+        foreach ($customEmojis as $entity) {
+            $start = ((int) $entity['offset']) * 2;
+            $length = ((int) $entity['length']) * 2;
+            if ($start < $cursor || $length <= 0 || $start + $length > $utf16Length) {
+                continue;
+            }
+
+            $emojiId = mb_convert_encoding(
+                htmlspecialchars((string) $entity['custom_emoji_id'], ENT_QUOTES, 'UTF-8'),
+                'UTF-16LE',
+                'UTF-8'
+            );
+
+            $result .= substr($utf16, $cursor, $start - $cursor)
+                . $tagOpen . $emojiId . $tagOpenEnd
+                . substr($utf16, $start, $length)
+                . $tagClose;
+            $cursor = $start + $length;
+        }
+
+        if ($cursor > 0) {
+            $text = mb_convert_encoding($result . substr($utf16, $cursor), 'UTF-8', 'UTF-16LE');
+        }
+    }
+}
+if(isset($update['pre_checkout_query'])){
+    $Chat_type = "private";
+    $from_id = $update['pre_checkout_query']['from']['id'];
+}
+$text =convertPersianNumbersToEnglish($text);
+$text_inline = $update["callback_query"]["message"]['text'] ?? '';
+$message_id = $update["message"]["message_id"] ?? $update["callback_query"]["message"]["message_id"] ?? 0;
+$photo = $update["message"]["photo"] ?? 0;
+$document = $update["message"]["document"] ?? 0;
+$fileid = $update["message"]["document"]["file_id"] ?? 0;
+$photoid = $photo ? end($photo)["file_id"] : '';
+$caption = $update["message"]["caption"] ?? '';
+$video = $update["message"]["video"] ?? 0;
+$videoid = $video ? $video["file_id"] : 0;
+$datain = $update["callback_query"]["data"] ?? '';
+$first_name = $update['message']['from']['first_name']  ?? $update["callback_query"]["from"]["first_name"] ?? $update["inline_query"]['from']['first_name'] ?? '';
+$username = $update['message']['from']['username'] ?? $update['callback_query']['from']['username'] ?? $update["callback_query"]["from"]["username"] ?? 'NOT_USERNAME';
+$user_phone =$update["message"]["contact"]["phone_number"] ?? 0;
+$contact_id = $update["message"]["contact"]["user_id"] ?? 0;
+$callback_query_id = $update["callback_query"]["id"] ?? 0;
+$inline_query_id = $update["inline_query"]["id"] ?? 0;
+$query = $update["inline_query"]["query"] ?? 0;

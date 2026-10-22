@@ -1,1 +1,76 @@
-PD9waHAKY2hkaXIoX19ESVJfXyk7CmluaV9zZXQoJ2Vycm9yX2xvZycsICdlcnJvcl9sb2cnKTsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2NvbmZpZy5waHAnOwpyZXF1aXJlX29uY2UgX19ESVJfXyAuICcvLi4vYm90YXBpLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9wYW5lbHMucGhwJzsKcmVxdWlyZV9vbmNlIF9fRElSX18gLiAnLy4uL2Z1bmN0aW9uLnBocCc7CnJlcXVpcmVfb25jZSBfX0RJUl9fIC4gJy8uLi9qZGYucGhwJzsKcmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsKJE1hbmFnZVBhbmVsID0gbmV3IE1hbmFnZVBhbmVsKCk7CiRzZXR0aW5nID0gc2VsZWN0KCJzZXR0aW5nIiwgIioiKTsKJHBheW1lbnRyZXBvcnRzID0gc2VsZWN0KCJ0b3BpY2lkIiwgImlkcmVwb3J0IiwgInJlcG9ydCIsICJwYXltZW50cmVwb3J0IiwgInNlbGVjdCIpWydpZHJlcG9ydCddOwoKZnVuY3Rpb24gc3RhdHVzcGxpc2lvKCR0eF9pZCkKewogICAgJGFwaV9rZXkgPSBnZXRQYXlTZXR0aW5nVmFsdWUoJ2FwaW5vd3BheW1lbnQnKTsKICAgICR1cmwgPSAnaHR0cHM6Ly9hcGkucGxpc2lvLm5ldC9hcGkvdjEvb3BlcmF0aW9ucyc7CiAgICAkdXJsIC49ICc/YXBpX2tleT0nIC4gdXJsZW5jb2RlKCRhcGlfa2V5KTsKICAgICR1cmwgLj0gJyZzZWFyY2g9JyAuIHVybGVuY29kZSgkdHhfaWQpOwogICAgJGNoID0gY3VybF9pbml0KCR1cmwpOwogICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSLCB0cnVlKTsKICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9USU1FT1VULCAyMCk7CiAgICAkcmVzcG9uc2UgPSBjdXJsX2V4ZWMoJGNoKTsKICAgIGlmICgkcmVzcG9uc2UgPT09IGZhbHNlKSB7CiAgICAgICAgcmV0dXJuIG51bGw7CiAgICB9CiAgICByZXR1cm4ganNvbl9kZWNvZGUoJHJlc3BvbnNlLCB0cnVlKTsKfQokbGlzdF9zZXJ2aWNlID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUICogRlJPTSBQYXltZW50X3JlcG9ydCBXSEVSRSBwYXltZW50X1N0YXR1cyA9ICdVbnBhaWQnIEFORCBQYXltZW50X01ldGhvZCA9ICdwbGlzaW8nIik7CiRsaXN0X3NlcnZpY2UtPmV4ZWN1dGUoKTsKJHRleHRib3RsYW5nID0gbGFuZ3VhZ2VjaGFuZ2UoKTsKJHN0YXR1c0NoZWNrID0gJHBkby0+cHJlcGFyZSgiU0VMRUNUIHBheW1lbnRfU3RhdHVzIEZST00gUGF5bWVudF9yZXBvcnQgV0hFUkUgaWRfb3JkZXIgPSA/IExJTUlUIDEiKTsKd2hpbGUgKCRQYXltZW50X3JlcG9ydCA9ICgkbGlzdF9zZXJ2aWNlKS0+ZmV0Y2goUERPOjpGRVRDSF9BU1NPQykpIHsKICAgICRzdGF0dXNDaGVjay0+ZXhlY3V0ZShbJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddXSk7CiAgICBpZiAoJHN0YXR1c0NoZWNrLT5mZXRjaENvbHVtbigpICE9ICJVbnBhaWQiKQogICAgICAgIGNvbnRpbnVlOwogICAgaWYgKCFpc3NldCgkUGF5bWVudF9yZXBvcnRbJ2RlY19ub3RfY29uZmlybWVkJ10pIG9yICRQYXltZW50X3JlcG9ydFsnZGVjX25vdF9jb25maXJtZWQnXSA9PSBudWxsKQogICAgICAgIGNvbnRpbnVlOwogICAgJFN0YXR1c1BheW1lbnQgPSBzdGF0dXNwbGlzaW8oJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddKTsKICAgIGlmICghaXNfYXJyYXkoJFN0YXR1c1BheW1lbnQpIHx8ICFpc3NldCgkU3RhdHVzUGF5bWVudFsnZGF0YSddWydvcGVyYXRpb25zJ10pIHx8ICFpc19hcnJheSgkU3RhdHVzUGF5bWVudFsnZGF0YSddWydvcGVyYXRpb25zJ10pKQogICAgICAgIGNvbnRpbnVlOwogICAgJG9wZXJhdGlvbiA9ICRTdGF0dXNQYXltZW50WydkYXRhJ11bJ29wZXJhdGlvbnMnXVswXSA/PyBbXTsKICAgICRvcGVyYXRpb25TdGF0dXMgPSAkb3BlcmF0aW9uWydzdGF0dXMnXSA/PyBudWxsOwogICAgaWYgKGluX2FycmF5KCRvcGVyYXRpb25TdGF0dXMsIFsiY2FuY2VsbGVkIiwgImV4cGlyZWQiXSwgdHJ1ZSkpIHsKICAgICAgICAkdGV4dGV4cGlyZSA9IHNwcmludGYoJHRleHRib3RsYW5nWyd1c2VycyddWydCYWxhbmNlJ11bJ3BsaXNpb0V4cGlyZWQnXSwgJFBheW1lbnRfcmVwb3J0WydpZF9vcmRlciddLCAkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10pOwogICAgICAgIHNlbmRtZXNzYWdlKCRQYXltZW50X3JlcG9ydFsnaWRfdXNlciddLCAkdGV4dGV4cGlyZSwgbnVsbCwgJ2h0bWwnKTsKICAgICAgICB1cGRhdGUoIlBheW1lbnRfcmVwb3J0IiwgInBheW1lbnRfU3RhdHVzIiwgImV4cGlyZSIsICJpZF9vcmRlciIsICRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSk7CiAgICB9CiAgICBpZiAoJG9wZXJhdGlvblN0YXR1cyA9PSAiY29tcGxldGVkIikgewogICAgICAgIGlmICghY2xhaW1QYXltZW50UGFpZCgkUGF5bWVudF9yZXBvcnRbJ2lkX29yZGVyJ10pKQogICAgICAgICAgICBjb250aW51ZTsKICAgICAgICBEaXJlY3RQYXltZW50KCRQYXltZW50X3JlcG9ydFsnaWRfb3JkZXInXSwgIi4uL2ltYWdlcy5qcGciKTsKICAgICAgICAkcHJpY2VjYXNoYmFjayA9IHNlbGVjdCgiUGF5U2V0dGluZyIsICJWYWx1ZVBheSIsICJOYW1lUGF5IiwgImNoYXNoYmFja3BsaXNpbyIsICJzZWxlY3QiKVsnVmFsdWVQYXknXTsKICAgICAgICAkX19xMTggPSAkcGRvLT5wcmVwYXJlKCJTRUxFQ1QgKiBGUk9NIHVzZXIgV0hFUkUgaWQgPSA/IExJTUlUIDEiKTsKICAgICAgICAkX19xMTgtPmJpbmRWYWx1ZSgxLCAkUGF5bWVudF9yZXBvcnRbJ2lkX3VzZXInXSwgUERPOjpQQVJBTV9TVFIpOwogICAgICAgICRfX3ExOC0+ZXhlY3V0ZSgpOwogICAgICAgICRCYWxhbmNlX2lkID0gJF9fcTE4LT5mZXRjaChQRE86OkZFVENIX0FTU09DKTsKICAgICAgICBpZiAoJHByaWNlY2FzaGJhY2sgIT0gIjAiKSB7CiAgICAgICAgICAgICRyZXN1bHQgPSAoJFBheW1lbnRfcmVwb3J0WydwcmljZSddICogJHByaWNlY2FzaGJhY2spIC8gMTAwOwogICAgICAgICAgICAkQmFsYW5jZV9jb25mcmltID0gaW50dmFsKCRCYWxhbmNlX2lkWydCYWxhbmNlJ10pICsgJHJlc3VsdDsKICAgICAgICAgICAgdXBkYXRlKCJ1c2VyIiwgIkJhbGFuY2UiLCAkQmFsYW5jZV9jb25mcmltLCAiaWQiLCAkQmFsYW5jZV9pZFsnaWQnXSk7CiAgICAgICAgICAgICRwcmljZWNhc2hiYWNrID0gbnVtYmVyX2Zvcm1hdCgkcHJpY2VjYXNoYmFjayk7CiAgICAgICAgICAgICR0ZXh0X3JlcG9ydCA9IHNwcmludGYoJHRleHRib3RsYW5nWyd1c2VycyddWydCYWxhbmNlJ11bJ2dpZnREZXBvc2l0UGxpc2lvJ10sICRyZXN1bHQpOwogICAgICAgICAgICBzZW5kbWVzc2FnZSgkQmFsYW5jZV9pZFsnaWQnXSwgJHRleHRfcmVwb3J0LCBudWxsLCAnSFRNTCcpOwogICAgICAgIH0KICAgICAgICAkdGV4dF9yZXBvcnRwYXltZW50ID0gc3ByaW50ZigkdGV4dGJvdGxhbmdbJ0FkbWluJ11bJ3JlcG9ydGdyb3VwJ11bJ25ld1BheW1lbnRQbGlzaW8nXSwgJEJhbGFuY2VfaWRbJ3VzZXJuYW1lJ10sICRCYWxhbmNlX2lkWydpZCddLCAkUGF5bWVudF9yZXBvcnRbJ3ByaWNlJ10sICRvcGVyYXRpb25bJ3R4X3VybCddWzBdID8/ICcnLCAkb3BlcmF0aW9uWydpbnZvaWNlX3VybCddID8/ICcnLCAkb3BlcmF0aW9uWydpbnZvaWNlX3RvdGFsX3N1bSddID8/ICcnKTsKICAgICAgICBpZiAoc3RybGVuKCRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddKSA+IDApIHsKICAgICAgICAgICAgdGVsZWdyYW0oJ3NlbmRtZXNzYWdlJywgWwogICAgICAgICAgICAgICAgJ2NoYXRfaWQnID0+ICRzZXR0aW5nWydDaGFubmVsX1JlcG9ydCddLAogICAgICAgICAgICAgICAgJ21lc3NhZ2VfdGhyZWFkX2lkJyA9PiAkcGF5bWVudHJlcG9ydHMsCiAgICAgICAgICAgICAgICAndGV4dCcgPT4gJHRleHRfcmVwb3J0cGF5bWVudCwKICAgICAgICAgICAgICAgICdwYXJzZV9tb2RlJyA9PiAiSFRNTCIKICAgICAgICAgICAgXSk7CiAgICAgICAgfQogICAgfQp9
+<?php
+chdir(__DIR__);
+ini_set('error_log', 'error_log');
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../botapi.php';
+require_once __DIR__ . '/../panels.php';
+require_once __DIR__ . '/../function.php';
+require_once __DIR__ . '/../jdf.php';
+require __DIR__ . '/../vendor/autoload.php';
+$ManagePanel = new ManagePanel();
+$setting = select("setting", "*");
+$paymentreports = select("topicid", "idreport", "report", "paymentreport", "select")['idreport'];
+
+function statusplisio($tx_id)
+{
+    $api_key = getPaySettingValue('apinowpayment');
+    $url = 'https://api.plisio.net/api/v1/operations';
+    $url .= '?api_key=' . urlencode($api_key);
+    $url .= '&search=' . urlencode($tx_id);
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+    $response = curl_exec($ch);
+    if ($response === false) {
+        return null;
+    }
+    return json_decode($response, true);
+}
+$list_service = $pdo->prepare("SELECT * FROM Payment_report WHERE payment_Status = 'Unpaid' AND Payment_Method = 'plisio'");
+$list_service->execute();
+$textbotlang = languagechange();
+$statusCheck = $pdo->prepare("SELECT payment_Status FROM Payment_report WHERE id_order = ? LIMIT 1");
+while ($Payment_report = ($list_service)->fetch(PDO::FETCH_ASSOC)) {
+    $statusCheck->execute([$Payment_report['id_order']]);
+    if ($statusCheck->fetchColumn() != "Unpaid")
+        continue;
+    if (!isset($Payment_report['dec_not_confirmed']) or $Payment_report['dec_not_confirmed'] == null)
+        continue;
+    $StatusPayment = statusplisio($Payment_report['id_order']);
+    if (!is_array($StatusPayment) || !isset($StatusPayment['data']['operations']) || !is_array($StatusPayment['data']['operations']))
+        continue;
+    $operation = $StatusPayment['data']['operations'][0] ?? [];
+    $operationStatus = $operation['status'] ?? null;
+    if (in_array($operationStatus, ["cancelled", "expired"], true)) {
+        $textexpire = sprintf($textbotlang['users']['Balance']['plisioExpired'], $Payment_report['id_order'], $Payment_report['price']);
+        sendmessage($Payment_report['id_user'], $textexpire, null, 'html');
+        update("Payment_report", "payment_Status", "expire", "id_order", $Payment_report['id_order']);
+    }
+    if ($operationStatus == "completed") {
+        if (!claimPaymentPaid($Payment_report['id_order']))
+            continue;
+        DirectPayment($Payment_report['id_order'], "../images.jpg");
+        $pricecashback = select("PaySetting", "ValuePay", "NamePay", "chashbackplisio", "select")['ValuePay'];
+        $__q18 = $pdo->prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
+        $__q18->bindValue(1, $Payment_report['id_user'], PDO::PARAM_STR);
+        $__q18->execute();
+        $Balance_id = $__q18->fetch(PDO::FETCH_ASSOC);
+        if ($pricecashback != "0") {
+            $result = ($Payment_report['price'] * $pricecashback) / 100;
+            $Balance_confrim = intval($Balance_id['Balance']) + $result;
+            update("user", "Balance", $Balance_confrim, "id", $Balance_id['id']);
+            $pricecashback = number_format($pricecashback);
+            $text_report = sprintf($textbotlang['users']['Balance']['giftDepositPlisio'], $result);
+            sendmessage($Balance_id['id'], $text_report, null, 'HTML');
+        }
+        $text_reportpayment = sprintf($textbotlang['Admin']['reportgroup']['newPaymentPlisio'], $Balance_id['username'], $Balance_id['id'], $Payment_report['price'], $operation['tx_url'][0] ?? '', $operation['invoice_url'] ?? '', $operation['invoice_total_sum'] ?? '');
+        if (strlen($setting['Channel_Report']) > 0) {
+            telegram('sendmessage', [
+                'chat_id' => $setting['Channel_Report'],
+                'message_thread_id' => $paymentreports,
+                'text' => $text_reportpayment,
+                'parse_mode' => "HTML"
+            ]);
+        }
+    }
+}

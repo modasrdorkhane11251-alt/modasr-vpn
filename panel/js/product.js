@@ -1,1 +1,20 @@
-d2luZG93Lm9wZW5FZGl0TW9kYWwgPSBmdW5jdGlvbiAocCkgewogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2VkaXRfaWQnKS52YWx1ZSA9IHAuaWQgfHwgJyc7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZWRpdF9uYW1lJykudmFsdWUgPSBwLm5hbWVfcHJvZHVjdCB8fCAnJzsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlZGl0X3ByaWNlJykudmFsdWUgPSBwLnByaWNlX3Byb2R1Y3QgfHwgJyc7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZWRpdF92b2x1bWUnKS52YWx1ZSA9IHAuVm9sdW1lX2NvbnN0cmFpbnQgfHwgJyc7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZWRpdF90aW1lJykudmFsdWUgPSBwLlNlcnZpY2VfdGltZSB8fCAnJzsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlZGl0X2NhdCcpLnZhbHVlID0gcC5jYXRlZ29yeSB8fCAnJzsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlZGl0X2FnZW50JykudmFsdWUgPSBwLmFnZW50IHx8ICcnOwogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2VkaXRfbm90ZScpLnZhbHVlID0gcC5ub3RlIHx8ICcnOwogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2VkaXRfcG9zaXRpb24nKS52YWx1ZSA9IHAucG9zaXRpb24gfHwgJyc7CgogICAgdmFyIHNlbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlZGl0X3BhbmVsJyk7CiAgICBpZiAoc2VsKSB7CiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBzZWwub3B0aW9ucy5sZW5ndGg7IGkrKykgewogICAgICAgICAgICBzZWwub3B0aW9uc1tpXS5zZWxlY3RlZCA9IHNlbC5vcHRpb25zW2ldLnZhbHVlID09PSAocC5Mb2NhdGlvbiB8fCAnJyk7CiAgICAgICAgfQogICAgfQoKICAgIG9wZW5Nb2RhbCgnZWRpdE1vZGFsJyk7Cn07Cg==
+window.openEditModal = function (p) {
+    document.getElementById('edit_id').value = p.id || '';
+    document.getElementById('edit_name').value = p.name_product || '';
+    document.getElementById('edit_price').value = p.price_product || '';
+    document.getElementById('edit_volume').value = p.Volume_constraint || '';
+    document.getElementById('edit_time').value = p.Service_time || '';
+    document.getElementById('edit_cat').value = p.category || '';
+    document.getElementById('edit_agent').value = p.agent || '';
+    document.getElementById('edit_note').value = p.note || '';
+    document.getElementById('edit_position').value = p.position || '';
+
+    var sel = document.getElementById('edit_panel');
+    if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+            sel.options[i].selected = sel.options[i].value === (p.Location || '');
+        }
+    }
+
+    openModal('editModal');
+};

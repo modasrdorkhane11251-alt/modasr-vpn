@@ -1,1 +1,167 @@
-PD9waHAKCgpmdW5jdGlvbiBsb2dpbl9taWtyb3RpaygkdXJsLCR1c2VybmFtZSwkcGFzc3dvcmQpewogICAgJGN1cmwgPSBjdXJsX2luaXQoKTsKICAgIGN1cmxfc2V0b3B0X2FycmF5KCRjdXJsLCBhcnJheSgKICAgICAgQ1VSTE9QVF9VUkwgPT4gJHVybC4nL3Jlc3Qvc3lzdGVtL3Jlc291cmNlJywKICAgICAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogICAgICBDVVJMT1BUX1VTRVJQV0QgPT4gJHVzZXJuYW1lIC4gIjoiIC4gJHBhc3N3b3JkLAogICAgICBDVVJMT1BUX0VOQ09ESU5HID0+ICcnLAogICAgICBDVVJMT1BUX01BWFJFRElSUyA9PiAxMCwKICAgICAgQ1VSTE9QVF9USU1FT1VUX01TID0+ICgkR0xPQkFMU1sncmVxdWVzdF9leGVjX3RpbWVvdXQnXSA/PyBudWxsKSA/OiA1MDAwLAogICAgICBDVVJMT1BUX0ZPTExPV0xPQ0FUSU9OID0+IHRydWUsCiAgICAgIENVUkxPUFRfSFRUUF9WRVJTSU9OID0+IENVUkxfSFRUUF9WRVJTSU9OXzFfMSwKICAgICAgQ1VSTE9QVF9DVVNUT01SRVFVRVNUID0+ICdHRVQnLAopKTsKCiRyZXNwb25zZSA9IGN1cmxfZXhlYygkY3VybCk7CmlmKCRyZXNwb25zZSA9PT0gZmFsc2UpcmV0dXJuIGFycmF5KCJlcnJvciIgPT4gNDA0KTsKJHJlc3BvbnNlID0ganNvbl9kZWNvZGUoJHJlc3BvbnNlLHRydWUpOwpjdXJsX2Nsb3NlKCRjdXJsKTsKcmV0dXJuICRyZXNwb25zZTsKCn0KCmZ1bmN0aW9uIGFkZFVzZXJfbWlrcm90aWsoJG5hbWVfcGFuZWwsJHVzZXJuYW1lLCRwYXNzd29yZCwkZ3JvdXApewogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwiKiIsIm5hbWVfcGFuZWwiLCRuYW1lX3BhbmVsLCJzZWxlY3QiKTsKICAgICRjdXJsID0gY3VybF9pbml0KCk7CiAgICAkZGF0YSA9IGFycmF5KAogICAgICAgICduYW1lJyA9PiAkdXNlcm5hbWUsCiAgICAgICAgJ3Bhc3N3b3JkJyA9PiAkcGFzc3dvcmQKICAgICk7CiAgICBjdXJsX3NldG9wdF9hcnJheSgkY3VybCwgYXJyYXkoCiAgICAgIENVUkxPUFRfVVJMID0+ICRwYW5lbFsndXJsX3BhbmVsJ10uJy9yZXN0L3VzZXItbWFuYWdlci91c2VyL2FkZCcsCiAgICAgIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIgPT4gdHJ1ZSwKICAgICAgQ1VSTE9QVF9VU0VSUFdEID0+ICRwYW5lbFsndXNlcm5hbWVfcGFuZWwnXSAuICI6IiAuICRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSwKICAgICAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogICAgICBDVVJMT1BUX0VOQ09ESU5HID0+ICcnLAogICAgICBDVVJMT1BUX01BWFJFRElSUyA9PiAxMCwKICAgICAgQ1VSTE9QVF9USU1FT1VUID0+IDAsCiAgICAgIENVUkxPUFRfRk9MTE9XTE9DQVRJT04gPT4gdHJ1ZSwKICAgICAgQ1VSTE9QVF9IVFRQX1ZFUlNJT04gPT4gQ1VSTF9IVFRQX1ZFUlNJT05fMV8xLAogICAgICBDVVJMT1BUX0NVU1RPTVJFUVVFU1QgPT4gJ1BPU1QnLAogICAgICBDVVJMT1BUX0hUVFBIRUFERVIgPT4gYXJyYXkoCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicKICAgICksCiAgICAgIENVUkxPUFRfUE9TVEZJRUxEUyA9PiBqc29uX2VuY29kZSgkZGF0YSx0cnVlKQopKTsKCiRyZXNwb25zZSA9IGN1cmxfZXhlYygkY3VybCk7CmlmKCRyZXNwb25zZSA9PT0gZmFsc2UpcmV0dXJuIGFycmF5KCJlcnJvciIgPT4gNDA0KTsKc2V0X3Byb2ZpbGVfbWlrcm90aWsoJG5hbWVfcGFuZWwsJHVzZXJuYW1lLCRncm91cCk7CiRyZXNwb25zZSA9IGpzb25fZGVjb2RlKCRyZXNwb25zZSx0cnVlKTsKY3VybF9jbG9zZSgkY3VybCk7CnJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gc2V0X3Byb2ZpbGVfbWlrcm90aWsoJG5hbWVfcGFuZWwsJHVzZXJuYW1lLCRwcm9mX25hbWUpewogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwiKiIsIm5hbWVfcGFuZWwiLCRuYW1lX3BhbmVsLCJzZWxlY3QiKTsKICAgICRjdXJsID0gY3VybF9pbml0KCk7CiAgICAkZGF0YSA9IGFycmF5KAogICAgICAgICd1c2VyJyA9PiAkdXNlcm5hbWUsCiAgICAgICAgJ3Byb2ZpbGUnID0+ICRwcm9mX25hbWUKICAgICk7CiAgICBjdXJsX3NldG9wdF9hcnJheSgkY3VybCwgYXJyYXkoCiAgICAgIENVUkxPUFRfVVJMID0+ICRwYW5lbFsndXJsX3BhbmVsJ10uJy9yZXN0L3VzZXItbWFuYWdlci91c2VyLXByb2ZpbGUvYWRkJywKICAgICAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogICAgICBDVVJMT1BUX1VTRVJQV0QgPT4gJHBhbmVsWyd1c2VybmFtZV9wYW5lbCddIC4gIjoiIC4gJHBhbmVsWydwYXNzd29yZF9wYW5lbCddLAogICAgICBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSID0+IHRydWUsCiAgICAgIENVUkxPUFRfRU5DT0RJTkcgPT4gJycsCiAgICAgIENVUkxPUFRfTUFYUkVESVJTID0+IDEwLAogICAgICBDVVJMT1BUX1RJTUVPVVQgPT4gMCwKICAgICAgQ1VSTE9QVF9GT0xMT1dMT0NBVElPTiA9PiB0cnVlLAogICAgICBDVVJMT1BUX0hUVFBfVkVSU0lPTiA9PiBDVVJMX0hUVFBfVkVSU0lPTl8xXzEsCiAgICAgIENVUkxPUFRfQ1VTVE9NUkVRVUVTVCA9PiAnUE9TVCcsCiAgICAgIENVUkxPUFRfSFRUUEhFQURFUiA9PiBhcnJheSgKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJwogICAgKSwKICAgICAgQ1VSTE9QVF9QT1NURklFTERTID0+IGpzb25fZW5jb2RlKCRkYXRhLHRydWUpCikpOwoKJHJlc3BvbnNlID0gY3VybF9leGVjKCRjdXJsKTsKaWYoJHJlc3BvbnNlID09PSBmYWxzZSlyZXR1cm4gYXJyYXkoImVycm9yIiA9PiA0MDQpOwokcmVzcG9uc2UgPSBqc29uX2RlY29kZSgkcmVzcG9uc2UsdHJ1ZSk7CmN1cmxfY2xvc2UoJGN1cmwpOwpyZXR1cm4gJHJlc3BvbnNlOwp9CmZ1bmN0aW9uIEdldFVzZXJtaWtyb3RpaygkbmFtZV9wYW5lbCwkdXNlcm5hbWUpewogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwiKiIsIm5hbWVfcGFuZWwiLCRuYW1lX3BhbmVsLCJzZWxlY3QiKTsKICAgICRjdXJsID0gY3VybF9pbml0KCk7CiAgICBjdXJsX3NldG9wdF9hcnJheSgkY3VybCwgYXJyYXkoCiAgICAgIENVUkxPUFRfVVJMID0+ICRwYW5lbFsndXJsX3BhbmVsJ10uJy9yZXN0L3VzZXItbWFuYWdlci91c2VyP25hbWU9Jy4kdXNlcm5hbWUsCiAgICAgIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIgPT4gdHJ1ZSwKICAgICAgQ1VSTE9QVF9VU0VSUFdEID0+ICRwYW5lbFsndXNlcm5hbWVfcGFuZWwnXSAuICI6IiAuICRwYW5lbFsncGFzc3dvcmRfcGFuZWwnXSwKICAgICAgQ1VSTE9QVF9FTkNPRElORyA9PiAnJywKICAgICAgQ1VSTE9QVF9NQVhSRURJUlMgPT4gMTAsCiAgICAgIENVUkxPUFRfVElNRU9VVCA9PiAwLAogICAgICBDVVJMT1BUX0ZPTExPV0xPQ0FUSU9OID0+IHRydWUsCiAgICAgIENVUkxPUFRfSFRUUF9WRVJTSU9OID0+IENVUkxfSFRUUF9WRVJTSU9OXzFfMSwKICAgICAgQ1VSTE9QVF9DVVNUT01SRVFVRVNUID0+ICdHRVQnLAogICAgICBDVVJMT1BUX0hUVFBIRUFERVIgPT4gYXJyYXkoCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicKICAgICkKKSk7CgokcmVzcG9uc2UgPSBjdXJsX2V4ZWMoJGN1cmwpOwppZigkcmVzcG9uc2UgPT09IGZhbHNlKXJldHVybiBhcnJheSgiZXJyb3IiID0+IDQwNCk7CiRyZXNwb25zZSA9IGpzb25fZGVjb2RlKCRyZXNwb25zZSx0cnVlKTsKY3VybF9jbG9zZSgkY3VybCk7CnJldHVybiAkcmVzcG9uc2U7Cn0KZnVuY3Rpb24gR2V0VXNlcm1pa3JvdGlrX3ZvbHVtZSgkbmFtZV9wYW5lbCwkaWQpewogICAgJHBhbmVsID0gc2VsZWN0KCJtYXJ6YmFuX3BhbmVsIiwiKiIsIm5hbWVfcGFuZWwiLCRuYW1lX3BhbmVsLCJzZWxlY3QiKTsKICAgICRjdXJsID0gY3VybF9pbml0KCk7CiAgICAkZGF0YSA9IGFycmF5KAogICAgICAgICdvbmNlJyA9PiB0cnVlLAogICAgICAgICcuaWQnID0+ICRpZAogICAgICAgICk7CiAgICBjdXJsX3NldG9wdF9hcnJheSgkY3VybCwgYXJyYXkoCiAgICAgIENVUkxPUFRfVVJMID0+ICRwYW5lbFsndXJsX3BhbmVsJ10uJy9yZXN0L3VzZXItbWFuYWdlci91c2VyL21vbml0b3InLAogICAgICBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSID0+IHRydWUsCiAgICAgIENVUkxPUFRfVVNFUlBXRCA9PiAkcGFuZWxbJ3VzZXJuYW1lX3BhbmVsJ10gLiAiOiIgLiAkcGFuZWxbJ3Bhc3N3b3JkX3BhbmVsJ10sCiAgICAgIENVUkxPUFRfRU5DT0RJTkcgPT4gJycsCiAgICAgIENVUkxPUFRfTUFYUkVESVJTID0+IDEwLAogICAgICBDVVJMT1BUX1RJTUVPVVQgPT4gMCwKICAgICAgQ1VSTE9QVF9GT0xMT1dMT0NBVElPTiA9PiB0cnVlLAogICAgICBDVVJMT1BUX0hUVFBfVkVSU0lPTiA9PiBDVVJMX0hUVFBfVkVSU0lPTl8xXzEsCiAgICAgIENVUkxPUFRfQ1VTVE9NUkVRVUVTVCA9PiAnUE9TVCcsIAogICAgICBDVVJMT1BUX1BPU1RGSUVMRFMgPT4ganNvbl9lbmNvZGUoJGRhdGEsdHJ1ZSksCiAgICAgIENVUkxPUFRfSFRUUEhFQURFUiA9PiBhcnJheSgKICAgICAgICAnQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uJwogICAgKQopKTsKCiRyZXNwb25zZSA9IGN1cmxfZXhlYygkY3VybCk7CmlmKCRyZXNwb25zZSA9PT0gZmFsc2UpcmV0dXJuIGFycmF5KCJlcnJvciIgPT4gNDA0KTsKJHJlc3BvbnNlID0ganNvbl9kZWNvZGUoJHJlc3BvbnNlLHRydWUpWzBdOwpjdXJsX2Nsb3NlKCRjdXJsKTsKcmV0dXJuICRyZXNwb25zZTsKfQpmdW5jdGlvbiBkZWxldGVVc2VyX21pa3JvdGlrKCRuYW1lX3BhbmVsLCR1c2VybmFtZSl7CiAgICAkcGFuZWwgPSBzZWxlY3QoIm1hcnpiYW5fcGFuZWwiLCIqIiwibmFtZV9wYW5lbCIsJG5hbWVfcGFuZWwsInNlbGVjdCIpOwogICAgJGN1cmwgPSBjdXJsX2luaXQoKTsKICAgICRkYXRhID0gYXJyYXkoCiAgICAgICAgJy5pZCcgPT4gJHVzZXJuYW1lCiAgICAgICAgKTsKICAgIGN1cmxfc2V0b3B0X2FycmF5KCRjdXJsLCBhcnJheSgKICAgICAgQ1VSTE9QVF9VUkwgPT4gJHBhbmVsWyd1cmxfcGFuZWwnXS4nL3Jlc3QvdXNlci1tYW5hZ2VyL3VzZXIvcmVtb3ZlJywKICAgICAgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiA9PiB0cnVlLAogICAgICBDVVJMT1BUX1VTRVJQV0QgPT4gJHBhbmVsWyd1c2VybmFtZV9wYW5lbCddIC4gIjoiIC4gJHBhbmVsWydwYXNzd29yZF9wYW5lbCddLAogICAgICBDVVJMT1BUX0VOQ09ESU5HID0+ICcnLAogICAgICBDVVJMT1BUX01BWFJFRElSUyA9PiAxMCwKICAgICAgQ1VSTE9QVF9USU1FT1VUID0+IDAsCiAgICAgIENVUkxPUFRfRk9MTE9XTE9DQVRJT04gPT4gdHJ1ZSwKICAgICAgQ1VSTE9QVF9IVFRQX1ZFUlNJT04gPT4gQ1VSTF9IVFRQX1ZFUlNJT05fMV8xLAogICAgICBDVVJMT1BUX0NVU1RPTVJFUVVFU1QgPT4gJ1BPU1QnLCAKICAgICAgQ1VSTE9QVF9QT1NURklFTERTID0+IGpzb25fZW5jb2RlKCRkYXRhLHRydWUpLAogICAgICBDVVJMT1BUX0hUVFBIRUFERVIgPT4gYXJyYXkoCiAgICAgICAgJ0NvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbicKICAgICkKKSk7CgokcmVzcG9uc2UgPSBjdXJsX2V4ZWMoJGN1cmwpOwppZigkcmVzcG9uc2UgPT09IGZhbHNlKXJldHVybiBhcnJheSgiZXJyb3IiID0+IDQwNCk7CiRyZXNwb25zZSA9IGpzb25fZGVjb2RlKCRyZXNwb25zZSx0cnVlKTsKY3VybF9jbG9zZSgkY3VybCk7CnJldHVybiAkcmVzcG9uc2U7Cn0K
+<?php
+
+
+function login_mikrotik($url,$username,$password){
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $url.'/rest/system/resource',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $username . ":" . $password,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT_MS => ($GLOBALS['request_exec_timeout'] ?? null) ?: 5000,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+$response = json_decode($response,true);
+curl_close($curl);
+return $response;
+
+}
+
+function addUser_mikrotik($name_panel,$username,$password,$group){
+    $panel = select("marzban_panel","*","name_panel",$name_panel,"select");
+    $curl = curl_init();
+    $data = array(
+        'name' => $username,
+        'password' => $password
+    );
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $panel['url_panel'].'/rest/user-manager/user/add',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $panel['username_panel'] . ":" . $panel['password_panel'],
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+    ),
+      CURLOPT_POSTFIELDS => json_encode($data,true)
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+set_profile_mikrotik($name_panel,$username,$group);
+$response = json_decode($response,true);
+curl_close($curl);
+return $response;
+}
+function set_profile_mikrotik($name_panel,$username,$prof_name){
+    $panel = select("marzban_panel","*","name_panel",$name_panel,"select");
+    $curl = curl_init();
+    $data = array(
+        'user' => $username,
+        'profile' => $prof_name
+    );
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $panel['url_panel'].'/rest/user-manager/user-profile/add',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $panel['username_panel'] . ":" . $panel['password_panel'],
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+    ),
+      CURLOPT_POSTFIELDS => json_encode($data,true)
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+$response = json_decode($response,true);
+curl_close($curl);
+return $response;
+}
+function GetUsermikrotik($name_panel,$username){
+    $panel = select("marzban_panel","*","name_panel",$name_panel,"select");
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $panel['url_panel'].'/rest/user-manager/user?name='.$username,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $panel['username_panel'] . ":" . $panel['password_panel'],
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'GET',
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+    )
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+$response = json_decode($response,true);
+curl_close($curl);
+return $response;
+}
+function GetUsermikrotik_volume($name_panel,$id){
+    $panel = select("marzban_panel","*","name_panel",$name_panel,"select");
+    $curl = curl_init();
+    $data = array(
+        'once' => true,
+        '.id' => $id
+        );
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $panel['url_panel'].'/rest/user-manager/user/monitor',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $panel['username_panel'] . ":" . $panel['password_panel'],
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST', 
+      CURLOPT_POSTFIELDS => json_encode($data,true),
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+    )
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+$response = json_decode($response,true)[0];
+curl_close($curl);
+return $response;
+}
+function deleteUser_mikrotik($name_panel,$username){
+    $panel = select("marzban_panel","*","name_panel",$name_panel,"select");
+    $curl = curl_init();
+    $data = array(
+        '.id' => $username
+        );
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $panel['url_panel'].'/rest/user-manager/user/remove',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_USERPWD => $panel['username_panel'] . ":" . $panel['password_panel'],
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST', 
+      CURLOPT_POSTFIELDS => json_encode($data,true),
+      CURLOPT_HTTPHEADER => array(
+        'Content-Type: application/json'
+    )
+));
+
+$response = curl_exec($curl);
+if($response === false)return array("error" => 404);
+$response = json_decode($response,true);
+curl_close($curl);
+return $response;
+}
