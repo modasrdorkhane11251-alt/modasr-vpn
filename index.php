@@ -19,7 +19,9 @@ if (!checktelegramip())
     die("Unauthorized access");
 #-----------end telegram_ip_ranges------------#
 $webhookSecret = ensureWebhookSecret();
-if (!$webhookSecret['created'] && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret']))
+// Webhook secret only applies to Telegram; Bale/Rubika webhooks cannot carry
+// our secret query param, and Bale is additionally identified by its own token.
+if (modasr_platform() === 'telegram' && !$webhookSecret['created'] && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret']))
     die("Unauthorized access");
 if ($is_bot)
     return;
