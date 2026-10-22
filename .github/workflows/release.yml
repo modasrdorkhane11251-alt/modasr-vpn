@@ -1,0 +1,62 @@
+name: Release hosting bundle
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to build the hosting bundle for
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve tag
+        id: tag
+        run: echo "name=${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.tag.outputs.name }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl, mbstring, zip, gd, dom, simplexml, xmlwriter, xmlreader, fileinfo, iconv, bcmath
+          tools: composer
+
+      - name: Install dependencies
+        run: composer install --no-dev --no-interaction --no-progress --optimize-autoloader --classmap-authoritative
+
+      - name: Verify autoloader
+        run: test -f vendor/autoload.php
+
+      - name: Build bundle
+        id: bundle
+        env:
+          TAG: ${{ steps.tag.outputs.name }}
+        run: |
+          FILE="mirzabot-host-${TAG}.zip"
+          zip -r -q "../${FILE}" . -x '.git/*' '.github/*' 'graphify-out/*' '.gitignore' 'install.sh'
+          mv "../${FILE}" .
+          echo "file=${FILE}" >> "$GITHUB_OUTPUT"
+          unzip -l "${FILE}" | tail -1
+
+      - name: Attach bundle to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.tag.outputs.name }}
+          FILE: ${{ steps.bundle.outputs.file }}
+        run: |
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "$TAG" --generate-notes
+          fi
+          gh release upload "$TAG" "$FILE" --clobber
