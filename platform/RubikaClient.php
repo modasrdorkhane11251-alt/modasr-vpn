@@ -71,15 +71,24 @@ class RubikaClient
                 // editMessageText ignores an inline_keypad field.
                 $keypad = $payload['inline_keypad'] ?? null;
                 unset($payload['inline_keypad'], $payload['chat_keypad'], $payload['chat_keypad_type']);
-                $r = $this->request('editMessageText', $payload);
-                if (!empty($r['ok']) && $keypad !== null) {
-                    $this->request('editMessageKeypad', [
-                        'chat_id'       => $payload['chat_id'],
-                        'message_id'    => $payload['message_id'],
-                        'inline_keypad' => $keypad,
+                if ($keypad !== null) {
+                    // Fire text and keypad edits in PARALLEL so the buttons
+                    // flip at the same instant the text changes.
+                    $results = $this->requestParallel([
+                        'editMessageText'   => $payload,
+                        'editMessageKeypad' => [
+                            'chat_id'       => $payload['chat_id'],
+                            'message_id'    => $payload['message_id'],
+                            'inline_keypad' => $keypad,
+                        ],
                     ]);
+                    $decoded = $results['editMessageText'] ?? ['status' => 'ERROR'];
+                    return (($decoded['status'] ?? '') === 'OK')
+                        ? ['ok' => true, 'result' => $decoded['data'] ?? true]
+                        : ['ok' => false, 'error_code' => 400,
+                           'description' => 'Rubika error: ' . ($decoded['status'] ?? 'unknown')];
                 }
-                return $r;
+                return $this->request('editMessageText', $payload);
             case 'deleteMessage':
                 return $this->request('deleteMessage', [
                     'chat_id'    => $datas['chat_id'] ?? '',
@@ -453,6 +462,52 @@ class RubikaClient
             ];
         }
         return ['ok' => true, 'result' => $decoded['data'] ?? true];
+    }
+
+    /**
+     * Execute several API calls concurrently (curl_multi) so their effects
+     * land together. Returns [method => decodedResponse].
+     */
+    protected function requestParallel(array $requests): array
+    {
+        $mh = curl_multi_init();
+        $handles = [];
+        foreach ($requests as $method => $payload) {
+            $ch = curl_init($this->base . $method);
+            if ($ch === false) {
+                continue;
+            }
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_TIMEOUT        => 15,
+                CURLOPT_CONNECTTIMEOUT => 5,
+                CURLOPT_POST           => true,
+                CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+                CURLOPT_TCP_KEEPALIVE  => 1,
+                CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
+            ]);
+            curl_multi_add_handle($mh, $ch);
+            $handles[$method] = $ch;
+        }
+        $running = null;
+        do {
+            curl_multi_exec($mh, $running);
+            if ($running > 0) {
+                curl_multi_select($mh, 0.2);
+            }
+        } while ($running > 0);
+        $results = [];
+        foreach ($handles as $method => $ch) {
+            $raw = curl_multi_getcontent($ch);
+            $decoded = json_decode((string) $raw, true);
+            $results[$method] = is_array($decoded)
+                ? $decoded
+                : ['status' => 'ERROR', 'client_meta' => ['raw' => substr((string) $raw, 0, 200)]];
+            curl_multi_remove_handle($mh, $ch);
+            curl_close($ch);
+        }
+        curl_multi_close($mh);
+        return $results;
     }
 
     protected function rawRequest(string $method, array $payload): array
