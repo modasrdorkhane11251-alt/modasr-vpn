@@ -28,6 +28,28 @@ class RubikaClient
 
     public function call(string $method, array $datas): array
     {
+        // Rubika replies must target the *conversation* id (b0…), while the
+        // bot core usually passes the *user* id (u0…). Translate when known.
+        if (isset($datas['chat_id'])) {
+            $datas['chat_id'] = self::resolveChatId((string) $datas['chat_id']);
+        }
+        // The bot core calls methods loosely-cased (sendmessage, getMe, ...).
+        static $methodMap = [
+            'sendmessage' => 'sendMessage', 'sendphoto' => 'sendPhoto',
+            'sendvideo' => 'sendVideo', 'senddocument' => 'sendDocument',
+            'sendaudio' => 'sendAudio', 'editmessagetext' => 'editMessageText',
+            'deletemessage' => 'deleteMessage', 'forwardmessage' => 'forwardMessage',
+            'getme' => 'getMe', 'getfile' => 'getFile', 'setwebhook' => 'setWebhook',
+            'answercallbackquery' => 'answerCallbackQuery', 'sendchataction' => 'sendChatAction',
+            'pinchatmessage' => 'pinChatMessage', 'unpinchatmessage' => 'unpinChatMessage',
+            'editmessagereplymarkup' => 'editMessageReplyMarkup',
+            'deletemycommands' => 'deleteMyCommands', 'setmycommands' => 'setMyCommands',
+            'answerinlinequery' => 'answerInlineQuery',
+            'answerprecheckoutquery' => 'answerPreCheckoutQuery',
+            'sendinvoice' => 'sendInvoice', 'getchatmember' => 'getChatMember',
+            'senddice' => 'sendDice', 'copymessage' => 'copyMessage',
+        ];
+        $method = $methodMap[strtolower($method)] ?? $method;
         switch ($method) {
             case 'sendMessage':
                 return $this->sendMessage($datas);
@@ -65,6 +87,11 @@ class RubikaClient
                 // Webhooks are registered from the Rubika bot settings panel,
                 // not through the API — report success so install flows pass.
                 return ['ok' => true, 'result' => true, 'description' => 'Configure the webhook in the Rubika bot panel.'];
+            case 'getChatMember':
+                // Rubika cannot verify membership in Telegram channels; treat
+                // the user as a member so a Telegram channel lock never blocks
+                // Rubika users.
+                return ['ok' => true, 'result' => ['status' => 'member', 'user' => ['id' => $datas['user_id'] ?? 0]]];
             case 'answerCallbackQuery':
             case 'sendChatAction':
             case 'pinChatMessage':
@@ -254,6 +281,44 @@ class RubikaClient
     }
 
     /* ------------------------------------------------------------------ */
+    /*  user-guid → chat-guid mapping (Rubika replies need the chat id)    */
+    /* ------------------------------------------------------------------ */
+
+    protected static function mapFile(): string
+    {
+        $dir = dirname(__DIR__) . '/storage/cache';
+        if (!is_dir($dir)) {
+            @mkdir($dir, 0775, true);
+        }
+        return $dir . '/rubika_chat_map.json';
+    }
+
+    public static function rememberChat(string $userGuid, string $chatGuid): void
+    {
+        if ($userGuid === '' || $chatGuid === '' || $userGuid === $chatGuid) {
+            return;
+        }
+        $file = self::mapFile();
+        $map  = is_file($file) ? (json_decode((string) file_get_contents($file), true) ?: []) : [];
+        if (($map[$userGuid] ?? '') === $chatGuid) {
+            return;
+        }
+        $map[$userGuid] = $chatGuid;
+        @file_put_contents($file, json_encode($map));
+    }
+
+    public static function resolveChatId(string $chatId): string
+    {
+        // Conversation ids on Rubika start with b0/g0/c0; user ids with u0.
+        if ($chatId === '' || stripos($chatId, 'u0') !== 0) {
+            return $chatId;
+        }
+        $file = self::mapFile();
+        $map  = is_file($file) ? (json_decode((string) file_get_contents($file), true) ?: []) : [];
+        return $map[$chatId] ?? $chatId;
+    }
+
+    /* ------------------------------------------------------------------ */
     /*  Incoming update normalisation (Rubika → Telegram shape)            */
     /* ------------------------------------------------------------------ */
 
@@ -261,6 +326,15 @@ class RubikaClient
     {
         $inner = $update['update'] ?? $update;
         $type  = $inner['type'] ?? ($update['type'] ?? '');
+
+        // Remember user→chat mapping whenever both ids are present.
+        $mapSender = $inner['sender_id']
+            ?? ($inner['new_message']['sender_id'] ?? ($inner['inline_message']['sender_id'] ?? null));
+        $mapChat = $inner['chat_id']
+            ?? ($inner['new_message']['chat_id'] ?? ($inner['inline_message']['chat_id'] ?? null));
+        if (is_string($mapSender) && is_string($mapChat)) {
+            self::rememberChat($mapSender, $mapChat);
+        }
 
         $chatTypeMap = ['User' => 'private', 'Bot' => 'private', 'Group' => 'group', 'Channel' => 'channel'];
 
