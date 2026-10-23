@@ -386,12 +386,15 @@ class RubikaClient
                 // photo/document/video shape the bot core understands —
                 // without this, a receipt photo looks like an empty message
                 // and the payment flow rejects it.
-                $fileInline = $msg['file_inline'] ?? null;
+                $fileInline = $msg['file_inline'] ?? ($msg['file'] ?? null);
                 if (is_array($fileInline) && !empty($fileInline['file_id'])) {
                     $mime = strtolower((string) ($fileInline['mime_type'] ?? ''));
                     $msgType = strtolower((string) ($msg['message_type'] ?? ''));
-                    $isImage = $msgType === 'image' || str_starts_with($mime, 'image/');
-                    $isVideo = $msgType === 'video' || str_starts_with($mime, 'video/');
+                    $ext = strtolower(pathinfo((string) ($fileInline['file_name'] ?? ''), PATHINFO_EXTENSION));
+                    $isImage = $msgType === 'image' || str_starts_with($mime, 'image/')
+                        || in_array($ext, ['jpg', 'jpeg', 'png', 'webp', 'gif', 'bmp'], true);
+                    $isVideo = $msgType === 'video' || str_starts_with($mime, 'video/')
+                        || in_array($ext, ['mp4', 'mov', 'mkv', 'webm'], true);
                     if ($isImage) {
                         $message['photo']   = [['file_id' => $fileInline['file_id'], 'file_size' => $fileInline['size'] ?? 0]];
                         $message['caption'] = $msg['text'] ?? '';
