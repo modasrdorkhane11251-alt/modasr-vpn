@@ -2309,7 +2309,12 @@ EOF
                     "curl -s -F \"url=https://${YOUR_DOMAIN}/index.php\" \"https://tapi.bale.ai/bot${YOUR_BOT_TOKEN}/setWebhook\"" \
                     || { show_step_error; install_pause "Setting Bale webhook"; } ;;
             rubika)
-                echo -e "  ${C_DIM}●${CR} ${C_DIM}Rubika webhook: register https://${YOUR_DOMAIN}/index.php in the Rubika bot panel (Bot Settings → Webhook).${CR}" ;;
+                run_step "Setting Rubika webhook (ReceiveUpdate)" \
+                    "curl -s -X POST -H 'Content-Type: application/json' -d '{\"type\":\"ReceiveUpdate\",\"url\":\"https://${YOUR_DOMAIN}/index.php\"}' \"https://botapi.rubika.ir/v3/${YOUR_BOT_TOKEN}/updateBotEndpoints\" | grep -q '\"OK\"'" \
+                    || { show_step_error; install_pause "Setting Rubika webhook"; }
+                run_step "Setting Rubika webhook (ReceiveInlineMessage)" \
+                    "curl -s -X POST -H 'Content-Type: application/json' -d '{\"type\":\"ReceiveInlineMessage\",\"url\":\"https://${YOUR_DOMAIN}/index.php\"}' \"https://botapi.rubika.ir/v3/${YOUR_BOT_TOKEN}/updateBotEndpoints\" | grep -q '\"OK\"'" \
+                    || { show_step_error; install_pause "Setting Rubika webhook"; } ;;
             *)
                 run_step "Setting Telegram webhook" \
                     "curl -s -F \"url=https://${YOUR_DOMAIN}/index.php\" \"https://api.telegram.org/bot${YOUR_BOT_TOKEN}/setWebhook\"" \
