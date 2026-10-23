@@ -59,17 +59,27 @@ class RubikaClient
             case 'sendAudio':
                 return $this->sendFileMessage($method, $datas);
             case 'editMessageText':
+                $text = $this->cleanText($datas['text'] ?? '');
                 $payload = [
                     'chat_id'    => $datas['chat_id'] ?? '',
                     'message_id' => $datas['message_id'] ?? 0,
-                    'text'       => $this->cleanText($datas['text'] ?? ''),
+                    'text'       => $text,
                 ];
-                // Carry the new inline keypad too, otherwise the old menu
-                // would stay attached to the edited message.
-                $text = $payload['text'];
                 $this->applyReplyMarkup($payload, $datas['reply_markup'] ?? null, $text);
                 $payload['text'] = $text;
-                return $this->request('editMessageText', $payload);
+                // Rubika updates text and keypad through two separate methods;
+                // editMessageText ignores an inline_keypad field.
+                $keypad = $payload['inline_keypad'] ?? null;
+                unset($payload['inline_keypad'], $payload['chat_keypad'], $payload['chat_keypad_type']);
+                $r = $this->request('editMessageText', $payload);
+                if (!empty($r['ok']) && $keypad !== null) {
+                    $this->request('editMessageKeypad', [
+                        'chat_id'       => $payload['chat_id'],
+                        'message_id'    => $payload['message_id'],
+                        'inline_keypad' => $keypad,
+                    ]);
+                }
+                return $r;
             case 'deleteMessage':
                 return $this->request('deleteMessage', [
                     'chat_id'    => $datas['chat_id'] ?? '',
@@ -98,11 +108,23 @@ class RubikaClient
                 // the user as a member so a Telegram channel lock never blocks
                 // Rubika users.
                 return ['ok' => true, 'result' => ['status' => 'member', 'user' => ['id' => $datas['user_id'] ?? 0]]];
+            case 'editMessageReplyMarkup':
+                // Telegram edits only the keyboard here → Rubika editMessageKeypad.
+                $tmp = ['chat_id' => $datas['chat_id'] ?? ''];
+                $text = '';
+                $this->applyReplyMarkup($tmp, $datas['reply_markup'] ?? null, $text);
+                if (isset($tmp['inline_keypad'])) {
+                    return $this->request('editMessageKeypad', [
+                        'chat_id'       => $datas['chat_id'] ?? '',
+                        'message_id'    => $datas['message_id'] ?? 0,
+                        'inline_keypad' => $tmp['inline_keypad'],
+                    ]);
+                }
+                return ['ok' => true, 'result' => true];
             case 'answerCallbackQuery':
             case 'sendChatAction':
             case 'pinChatMessage':
             case 'unpinChatMessage':
-            case 'editMessageReplyMarkup':
             case 'deleteMyCommands':
             case 'setMyCommands':
                 // No Rubika equivalent — harmless no-op.
