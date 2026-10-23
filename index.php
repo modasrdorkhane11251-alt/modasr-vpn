@@ -415,6 +415,16 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     update("user", "Processing_value_tow", "0", "id", $from_id);
     update("user", "Processing_value_four", "0", "id", $from_id);
     return;
+} elseif ($text == $textbotlang['keyboard']['donate'] || $datain == "donate") {
+    $donateKeyboard = json_encode([
+        'inline_keyboard' => [
+            [
+                ['text' => $textbotlang['keyboard']['donate'], 'url' => 'https://nowpayments.io/donation/Modasrbot'],
+            ],
+        ]
+    ]);
+    sendmessage($from_id, $textbotlang['keyboard']['donateText'], $donateKeyboard, 'html');
+    return;
 } elseif ($user['step'] == 'get_number') {
     if (empty($user_phone)) {
         sendmessage($from_id, $textbotlang['users']['number']['false'], $request_contact, 'html');

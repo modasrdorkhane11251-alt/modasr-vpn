@@ -3780,6 +3780,8 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'backToCardSettings' => '▶️ Back to card settings menu',
                 'backToMain' => 'Back to main menu',
                 'backToMainMenu' => '🔙 Back to main menu',
+                'donate' => '💝 Support us',
+                'donateText' => "💝 <b>Support MODASRbot</b>\n\nIf you enjoy our service, you can support us with crypto 🙏\n\n🔗 Donation link:\nhttps://nowpayments.io/donation/Modasrbot",
                 'backToMainMenu2' => '🏠 Back to main menu',
                 'backToNode' => '🔙 Back to node ',
                 'backToNodeList' => '🔙 Back to node list',

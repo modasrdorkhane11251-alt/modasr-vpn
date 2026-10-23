@@ -3780,6 +3780,8 @@ ID пользователя : %s
                 'backToCardSettings' => '▶️ Назад в меню настроек карты',
                 'backToMain' => 'Назад в главное меню',
                 'backToMainMenu' => '🔙 Назад в главное меню',
+                'donate' => '💝 Поддержать нас',
+                'donateText' => "💝 <b>Поддержите MODASRbot</b>\n\nЕсли вам нравится наш сервис, вы можете поддержать нас криптовалютой 🙏\n\n🔗 Ссылка для доната:\nhttps://nowpayments.io/donation/Modasrbot",
                 'backToMainMenu2' => '🏠 Вернуться в главное меню',
                 'backToNode' => '🔙 Назад к ноде ',
                 'backToNodeList' => '🔙 Назад к списку нод',

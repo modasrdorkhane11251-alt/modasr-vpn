@@ -119,6 +119,7 @@ if ($setting['inlinebtnmain'] == "oninline" && !empty($keyboardRows)) {
     $keyboard = ['inline_keyboard' => []];
     $keyboardcustom = $trace_keyboard;
     $keyboardcustom = applyKeyboardLabels($keyboardcustom, $replacements);
+    $keyboardcustom[] = [['text' => $textbotlang['keyboard']['donate'], 'url' => 'https://nowpayments.io/donation/Modasrbot']];
     $keyboardcustom[] = $temp_addtional_key;
     $keyboard['inline_keyboard'] = $keyboardcustom;
     $keyboard = json_encode($keyboard);
@@ -129,6 +130,7 @@ if ($setting['inlinebtnmain'] == "oninline" && !empty($keyboardRows)) {
     $keyboard = ['keyboard' => [], 'resize_keyboard' => true];
     $keyboardcustom = $keyboardRows;
     $keyboardcustom = applyKeyboardLabels($keyboardcustom, $replacements);
+    $keyboardcustom[] = [['text' => $textbotlang['keyboard']['donate']]];
     $keyboardcustom[] = $temp_addtional_key;
     $keyboard['keyboard'] = $keyboardcustom;
     $keyboard = json_encode($keyboard);
