@@ -286,6 +286,14 @@ self_update_script "$@"
 # ── Repo / paths ─────────────────────────────────────────────
 BOT_DIR_DEFAULT="/var/www/html/modasrprobotconfig"
 CONFIG_FILE_DEFAULT="$BOT_DIR_DEFAULT/config.php"
+# ── Legacy install detection (pre-rebrand directory name) ──
+# Servers installed before the MODASR rebrand keep the old directory;
+# point all install/update/remove flows at it instead of blocking.
+BOT_DIR_LEGACY="/var/www/html/mirzaprobotconfig"
+if [ ! -d "$BOT_DIR_DEFAULT" ] && [ -d "$BOT_DIR_LEGACY" ]; then
+    BOT_DIR_DEFAULT="$BOT_DIR_LEGACY"
+    CONFIG_FILE_DEFAULT="$BOT_DIR_DEFAULT/config.php"
+fi
 # ── Your GitHub repo (user/repo) — after uploading Modasr to GitHub,
 #    change this once; install + update will then pull from YOUR repo.
 GIT_REPO="${MODASR_GIT_REPO:-modasrdorkhane11251-alt/modasr-vpn}"
@@ -1722,7 +1730,7 @@ preflight() {
 }
 
 function install_bot() {
-    BOT_DIR="/var/www/html/modasrprobotconfig"
+    BOT_DIR="$BOT_DIR_DEFAULT"
     PHP_VER="$(state_get PHP_VER)"
     [ -z "$PHP_VER" ] && PHP_VER="8.2"
 
@@ -2378,7 +2386,7 @@ EOF
 function update_bot() {
     clear
     banner
-    BOT_DIR="/var/www/html/modasrprobotconfig"
+    BOT_DIR="$BOT_DIR_DEFAULT"
     if [ ! -d "$BOT_DIR" ]; then
         _sec "Update"
         printf "    ${C_BAD}●${CR} ${C_BAD}MODASR is not installed. Install it first.${CR}\n"
@@ -2587,7 +2595,7 @@ function remove_bot() {
     echo -e "\e[33mStarting MODASR Bot removal process...\033[0m"
     LOG_FILE="/var/log/remove_bot.log"
     echo "Log file: $LOG_FILE" > "$LOG_FILE"
-    BOT_DIR="/var/www/html/modasrprobotconfig"
+    BOT_DIR="$BOT_DIR_DEFAULT"
     if [ ! -d "$BOT_DIR" ]; then
         echo -e "\e[31m[ERROR]\033[0m MODASR Bot is not installed (/var/www/html/modasrprobotconfig not found)." | tee -a "$LOG_FILE"
         echo -e "\e[33mNothing to remove. Exiting...\033[0m" | tee -a "$LOG_FILE"
