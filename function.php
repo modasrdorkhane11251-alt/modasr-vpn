@@ -1724,7 +1724,10 @@ function checktelegramip()
         return true;
     }
 
-    $clientIp = $_SERVER['REMOTE_ADDR'] ?? '';
+    // Behind Cloudflare, REMOTE_ADDR is a Cloudflare edge IP and the real
+    // caller comes in CF-Connecting-IP. The webhook secret still guards the
+    // endpoint, so preferring the header here is safe.
+    $clientIp = $_SERVER['HTTP_CF_CONNECTING_IP'] ?? ($_SERVER['REMOTE_ADDR'] ?? '');
     if (!is_string($clientIp) || $clientIp === '') {
         return false;
     }
