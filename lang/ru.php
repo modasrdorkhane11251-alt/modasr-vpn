@@ -2407,7 +2407,7 @@ f,n.n2',
 
 <blockquote>🔹 | Если вы заметили продажу или взимание платы, пожалуйста, отследите и верните свои деньги.</blockquote>
 
-<blockquote>🐞 | Чтобы сообщить о проблеме, напишите в <a href="https://t.me/modasrbot?direct">директ канала MODASR</a>.</blockquote>',
+<blockquote>🐞 | Чтобы сообщить о проблеме, напишите в <a href="https://t.me/modasrpanel?direct">директ канала MODASR</a>.</blockquote>',
                         'gatewayRow' => '
 📌 Название шлюза: <code>%s</code>
  - Количество успешных платежей: <code>%s</code>
