@@ -2632,7 +2632,7 @@ function createPayVariza($price, $order_id)
         CURLOPT_POSTFIELDS => json_encode([
             'amount' => (int) $price,
             'return_url' => 'https://' . $domainhosts . '/payment/variza.php?order=' . $order_id,
-            'title' => 'Mirza order ' . $order_id,
+            'title' => 'MODASR order ' . $order_id,
             'expires_in' => '1h',
         ], JSON_UNESCAPED_UNICODE),
     ]);
@@ -2811,6 +2811,6 @@ function mirzaEnsureInstallerRemoved()
     }
 
     if (!mirzaRemoveInstallerPath($installerDirectory)) {
-        mirzaStopForInstaller('Mirza install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
+        mirzaStopForInstaller('MODASR install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
     }
 }
