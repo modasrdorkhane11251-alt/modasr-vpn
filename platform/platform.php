@@ -1,6 +1,6 @@
 <?php
 /**
- * Modasr multi-platform layer.
+ * MODASR multi-platform layer.
  *
  * Allows the bot core to run on three messengers:
  *   - telegram : native Bot API (default behaviour, unchanged)
