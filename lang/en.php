@@ -2407,7 +2407,7 @@ Current amount: %s',
 
 <blockquote>🔹 | If you see any sale or charging of money, please track and reclaim your money.</blockquote>
 
-<blockquote>🐞 | To report a problem, message the <a href="https://t.me/modasrbot?direct">MODASR channel direct</a>.</blockquote>',
+<blockquote>🐞 | To report a problem, message the <a href="https://t.me/modasrpanel?direct">MODASR channel direct</a>.</blockquote>',
                         'gatewayRow' => '
 📌 Gateway name: <code>%s</code>
  - Number of successful payments: <code>%s</code>
