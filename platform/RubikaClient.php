@@ -59,31 +59,20 @@ class RubikaClient
             case 'sendAudio':
                 return $this->sendFileMessage($method, $datas);
             case 'editMessageText':
-                $text = $this->cleanText($datas['text'] ?? '');
-                $payload = [
+                // The Rubika mobile app caches inline keypads aggressively:
+                // editMessageKeypad succeeds server-side but the client keeps
+                // showing the OLD buttons until the chat is re-opened. The
+                // only reliable way to change a menu on Rubika is to delete
+                // the old message and send a fresh one.
+                $this->request('deleteMessage', [
                     'chat_id'    => $datas['chat_id'] ?? '',
                     'message_id' => $datas['message_id'] ?? 0,
-                    'text'       => $text,
-                ];
-                $this->applyReplyMarkup($payload, $datas['reply_markup'] ?? null, $text);
-                $payload['text'] = $text;
-                // Rubika updates text and keypad through two separate methods;
-                // editMessageText ignores an inline_keypad field.
-                $keypad = $payload['inline_keypad'] ?? null;
-                unset($payload['inline_keypad'], $payload['chat_keypad'], $payload['chat_keypad_type']);
-                if ($keypad !== null) {
-                    // Update the keypad FIRST, then the text. Rubika pushes the
-                    // keypad change silently, so when the text flips the new
-                    // buttons are already in place — the user never sees a
-                    // mismatched text/keypad combination, and a parallel race
-                    // (keypad overwritten by the text edit) cannot happen.
-                    $this->request('editMessageKeypad', [
-                        'chat_id'       => $payload['chat_id'],
-                        'message_id'    => $payload['message_id'],
-                        'inline_keypad' => $keypad,
-                    ]);
-                }
-                return $this->request('editMessageText', $payload);
+                ]);
+                return $this->sendMessage([
+                    'chat_id'      => $datas['chat_id'] ?? '',
+                    'text'         => $datas['text'] ?? '',
+                    'reply_markup' => $datas['reply_markup'] ?? null,
+                ]);
             case 'deleteMessage':
                 return $this->request('deleteMessage', [
                     'chat_id'    => $datas['chat_id'] ?? '',
