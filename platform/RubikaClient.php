@@ -368,22 +368,47 @@ class RubikaClient
         switch ($type) {
             case 'NewMessage':
                 $msg = $inner['new_message'] ?? [];
+                $message = [
+                    'message_id' => $msg['message_id'] ?? 0,
+                    'from'       => [
+                        'id'         => $msg['sender_id'] ?? ($inner['chat_id'] ?? 0),
+                        'is_bot'     => false,
+                        'first_name' => $inner['sender_name'] ?? '',
+                        'username'   => $inner['username'] ?? null,
+                    ],
+                    'chat'       => [
+                        'id'   => $inner['chat_id'] ?? ($msg['chat_id'] ?? 0),
+                        'type' => $chatTypeMap[$inner['chat_type'] ?? 'User'] ?? 'private',
+                    ],
+                    'text'       => $msg['text'] ?? '',
+                ];
+                // Map Rubika attachments (file_inline) onto the Telegram
+                // photo/document/video shape the bot core understands —
+                // without this, a receipt photo looks like an empty message
+                // and the payment flow rejects it.
+                $fileInline = $msg['file_inline'] ?? null;
+                if (is_array($fileInline) && !empty($fileInline['file_id'])) {
+                    $mime = strtolower((string) ($fileInline['mime_type'] ?? ''));
+                    $msgType = strtolower((string) ($msg['message_type'] ?? ''));
+                    $isImage = $msgType === 'image' || str_starts_with($mime, 'image/');
+                    $isVideo = $msgType === 'video' || str_starts_with($mime, 'video/');
+                    if ($isImage) {
+                        $message['photo']   = [['file_id' => $fileInline['file_id'], 'file_size' => $fileInline['size'] ?? 0]];
+                        $message['caption'] = $msg['text'] ?? '';
+                        unset($message['text']);
+                    } elseif ($isVideo) {
+                        $message['video']   = ['file_id' => $fileInline['file_id'], 'file_name' => $fileInline['file_name'] ?? ''];
+                        $message['caption'] = $msg['text'] ?? '';
+                        unset($message['text']);
+                    } else {
+                        $message['document'] = ['file_id' => $fileInline['file_id'], 'file_name' => $fileInline['file_name'] ?? ''];
+                        $message['caption']  = $msg['text'] ?? '';
+                        unset($message['text']);
+                    }
+                }
                 return [
                     'update_id' => crc32(json_encode($inner)),
-                    'message'   => [
-                        'message_id' => $msg['message_id'] ?? 0,
-                        'from'       => [
-                            'id'         => $msg['sender_id'] ?? ($inner['chat_id'] ?? 0),
-                            'is_bot'     => false,
-                            'first_name' => $inner['sender_name'] ?? '',
-                            'username'   => $inner['username'] ?? null,
-                        ],
-                        'chat'       => [
-                            'id'   => $inner['chat_id'] ?? ($msg['chat_id'] ?? 0),
-                            'type' => $chatTypeMap[$inner['chat_type'] ?? 'User'] ?? 'private',
-                        ],
-                        'text'       => $msg['text'] ?? '',
-                    ],
+                    'message'   => $message,
                 ];
 
             case 'InlineMessage': // tap on an inline keypad button
