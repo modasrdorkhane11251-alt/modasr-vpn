@@ -917,8 +917,8 @@ version_section() {
     else
         _kv "Latest" "$(_dot warn) ${C_DIM}unknown (offline)${CR}"
     fi
-    _kv "Channel" "${C_DIM}t.me/MODASRbot${CR}"
-    _kv "Group" "${C_DIM}t.me/MODASRbot${CR}"
+    _kv "Channel" "${C_DIM}t.me/modasrpanel${CR}"
+    _kv "Group" "${C_DIM}t.me/modasrpanelgroup${CR}"
 }
 
 bot_section() {
