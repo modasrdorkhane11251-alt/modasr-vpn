@@ -712,8 +712,32 @@ function channel(array $id_channel)
 {
     global $from_id;
     $channel_link = array();
+    // Each platform only enforces its own channels: a Telegram user is
+    // checked against Telegram channels, a Bale user against Bale channels,
+    // a Rubika user against Rubika channels.
+    $userPlatform = function_exists('modasr_platform') ? modasr_platform() : 'telegram';
     foreach ($id_channel as $channel) {
+        $channelPlatform = 'telegram';
+        if (is_array($channel)) {
+            $channelPlatform = strtolower(trim((string) ($channel['platform'] ?? 'telegram')));
+            $channel = (string) ($channel['link'] ?? '');
+        }
+        if ($channelPlatform === '') {
+            $channelPlatform = 'telegram';
+        }
+        if ($channelPlatform !== $userPlatform) {
+            continue;
+        }
         if (isTelegramChatIdEmpty($channel)) {
+            continue;
+        }
+        if ($userPlatform === 'rubika') {
+            // The Rubika Bot API has no membership endpoint (getChat /
+            // getChatMember are rejected), so verification is impossible —
+            // the gate is soft: always show it until the user taps the
+            // confirm button (handled in index.php, which then marks the
+            // user as joined).
+            $channel_link[] = $channel;
             continue;
         }
         $response = telegram('getChatMember', [

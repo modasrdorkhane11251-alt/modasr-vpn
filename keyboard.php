@@ -756,7 +756,8 @@ $list_channels = [];
     $stmt = $pdo->prepare("SELECT * FROM channels");
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $list_channels[] = [$row['link']];
+        $platformTag = ['telegram' => '📱', 'bale' => '🟡', 'rubika' => '🟢'][$row['platform'] ?? 'telegram'] ?? '📱';
+        $list_channels[] = [$platformTag . ' ' . $row['link'], $row['link']];
     }
     $list_channels_join = [
         'keyboard' => [],

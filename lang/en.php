@@ -1738,6 +1738,7 @@ Notes for this feature:
                         'askJoinLink' => '📌 Send the membership link',
                         'invalidJoinLink' => 'The membership address is not correct',
                         'joinChannelSaved' => '✅ The mandatory join channel was successfully registered.',
+                        'askPlatform' => '📱 Which platform does this channel belong to? Users of each platform are only asked to join that platform\'s channels.',
                         'joinExempt' => '📌 From now on, the user can use the bot without joining the channel',
                 ],
                 'config' => [

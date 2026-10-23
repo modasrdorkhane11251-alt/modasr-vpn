@@ -1738,6 +1738,7 @@ n2',
                         'askJoinLink' => '📌 请发送加入链接',
                         'invalidJoinLink' => '加入地址不正确',
                         'joinChannelSaved' => '✅ 强制加入频道已成功登记。',
+                        'askPlatform' => '📱 该频道属于哪个平台？各平台用户只需加入对应平台的频道。',
                         'joinExempt' => '📌 从现在起，用户无需加入频道即可在机器人中活动',
                 ],
                 'config' => [

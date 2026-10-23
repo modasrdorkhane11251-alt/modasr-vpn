@@ -205,6 +205,24 @@ if ($datain == "paygwback") {
         sendmessage($from_id, $textbotlang['Admin']['channel']['invalidJoinLink'], $backadmin, 'HTML');
         return;
     }
+    savedata("save", "linkjoin", $text);
+    $platformKeyboard = json_encode([
+        'inline_keyboard' => [
+            [
+                ['text' => '📱 تلگرام', 'callback_data' => 'chplatform_telegram'],
+            ],
+            [
+                ['text' => '🟡 بله', 'callback_data' => 'chplatform_bale'],
+            ],
+            [
+                ['text' => '🟢 روبیکا', 'callback_data' => 'chplatform_rubika'],
+            ],
+        ]
+    ]);
+    sendmessage($from_id, $textbotlang['Admin']['channel']['askPlatform'], $platformKeyboard, 'HTML');
+    step('home', $from_id);
+} elseif (preg_match('/^chplatform_(telegram|bale|rubika)$/', $datain, $dataget) && $adminrulecheck['rule'] == "administrator") {
+    $channelPlatform = $dataget[1];
     $userdata = json_decode($user['Processing_value'], true);
     if (!is_array($userdata)) {
         $userdata = [];
@@ -212,12 +230,19 @@ if ($datain == "paygwback") {
 
     $remark = isset($userdata['remark']) ? (string) $userdata['remark'] : '';
     $link = isset($userdata['link']) ? (string) $userdata['link'] : '';
+    $linkjoin = isset($userdata['linkjoin']) ? (string) $userdata['linkjoin'] : '';
+    if ($link === '' || $linkjoin === '') {
+        sendmessage($from_id, $textbotlang['Admin']['channel']['changeChannel'], $backadmin, 'HTML');
+        step('addchannel', $from_id);
+        return;
+    }
 
-    $insertChannel = function ($remarkValue) use ($pdo, $link, $text) {
-        $stmt = $pdo->prepare("INSERT INTO channels (link, remark, linkjoin) VALUES (:link, :remark, :linkjoin)");
+    $insertChannel = function ($remarkValue) use ($pdo, $link, $linkjoin, $channelPlatform) {
+        $stmt = $pdo->prepare("INSERT INTO channels (link, remark, linkjoin, platform) VALUES (:link, :remark, :linkjoin, :platform)");
         $stmt->bindValue(':remark', $remarkValue, PDO::PARAM_STR);
         $stmt->bindValue(':link', $link, PDO::PARAM_STR);
-        $stmt->bindValue(':linkjoin', $text, PDO::PARAM_STR);
+        $stmt->bindValue(':linkjoin', $linkjoin, PDO::PARAM_STR);
+        $stmt->bindValue(':platform', $channelPlatform, PDO::PARAM_STR);
         $stmt->execute();
     };
 
@@ -243,6 +268,7 @@ if ($datain == "paygwback") {
             throw $e;
         }
     }
+    deletemessage($from_id, $message_id);
     sendmessage($from_id, $textbotlang['Admin']['channel']['joinChannelSaved'], $channelkeyboard, 'HTML');
     step('home', $from_id);
 } elseif ($text == $textbotlang['Admin']['channel']['removeChannelBtn'] && $adminrulecheck['rule'] == "administrator") {
@@ -251,8 +277,11 @@ if ($datain == "paygwback") {
 } elseif ($user['step'] == "removechannel") {
     sendmessage($from_id, $textbotlang['Admin']['channel']['removedChannel'], $channelkeyboard, 'HTML');
     step('home', $from_id);
+    // The remove buttons are prefixed with a platform emoji (📱/🟡/🟢) —
+    // strip it so the raw link matches the stored value.
+    $channelLinkToRemove = trim((string) preg_replace('/^[\x{1F300}-\x{1FAFF}\x{2600}-\x{27BF}\x{FE0F}\s]+/u', '', $text));
     $stmt = $pdo->prepare("DELETE FROM channels WHERE link = :link");
-    $stmt->bindParam(':link', $text, PDO::PARAM_STR);
+    $stmt->bindParam(':link', $channelLinkToRemove, PDO::PARAM_STR);
     $stmt->execute();
 } elseif ($datain == "addnewadmin" && $adminrulecheck['rule'] == "administrator") {
     sendmessage($from_id, $textbotlang['Admin']['manageadmin']['getId'], $backadmin, 'HTML');

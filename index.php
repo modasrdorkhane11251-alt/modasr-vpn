@@ -143,7 +143,10 @@ $admin_ids = select("admin", "id_admin", null, null, "FETCH_COLUMN");
 if (!is_array($admin_ids)) {
     $admin_ids = [];
 }
-$channels_id = select("channels", "link", null, null, "FETCH_COLUMN");
+$channels_id = select("channels", "*", null, null, "fetchAll");
+if (!is_array($channels_id)) {
+    $channels_id = [];
+}
 $topic_id = select("topicid", "*", null, null, "fetchAll");
 $statusnote = false;
 foreach ($topic_id as $topic) {
@@ -297,6 +300,13 @@ if ($user['joinchannel'] != "active") {
     if (count($channels_id) != 0) {
         $channels = channel($channels_id);
         if ($datain == "confirmchannel") {
+            // Rubika cannot verify channel membership through its API, so
+            // the gate is soft: tapping the confirm button is accepted and
+            // remembered for the user.
+            if (function_exists('modasr_platform') && modasr_platform() === 'rubika' && count($channels) != 0) {
+                update("user", "joinchannel", "active", "id", $from_id);
+                $channels = [];
+            }
             if (count($channels) == 0) {
                 deletemessage($from_id, $message_id);
                 sendmessage($from_id, $textbotlang['users']['text_start'], $keyboard, 'html');
