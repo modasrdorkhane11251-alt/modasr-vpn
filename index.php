@@ -54,8 +54,14 @@ if (is_array($keyboard_check) && preg_match('/[\x{600}-\x{6FF}\x{FB50}-\x{FDFF}]
     update("setting", "keyboardmain", $keyboardmain, null, null);
 }
 
-if (intval($from_id) == 0)
+// Telegram user IDs are numeric; Bale IDs are numeric too, while Rubika
+// IDs are non-numeric GUIDs. Reject only empty/missing sender ids.
+if (modasr_platform() === 'telegram') {
+    if (intval($from_id) == 0)
+        return;
+} elseif (empty($from_id)) {
     return;
+}
 $userLock = $pdo->prepare("SELECT GET_LOCK(?, 0)");
 $userLock->execute(["mirza_user_" . $from_id]);
 if ((int) $userLock->fetchColumn() !== 1) {
@@ -93,8 +99,10 @@ if ($from_id != 0) {
         $valueverify = 0;
     }
     $randomString = bin2hex(random_bytes(6));
-    $stmt = $pdo->prepare("INSERT IGNORE INTO user (id , step,limit_usertest,User_Status,number,Balance,pagenumber,username,agent,message_count,last_message_time,affiliates,affiliatescount,cardpayment,number_username,namecustom,register,verify,codeInvitation,pricediscount,maxbuyagent,joinchannel,score,status_cron) VALUES (:from_id, 'none',:limit_usertest_all,'Active','none','0','1',:username,'f','0','0','0','0',:showcard,'100','none',:date,:verifycode,:codeInvitation,'0','0','0','0','1')");
+    modasr_ensure_user_platform_column();
+    $stmt = $pdo->prepare("INSERT IGNORE INTO user (id , platform, step,limit_usertest,User_Status,number,Balance,pagenumber,username,agent,message_count,last_message_time,affiliates,affiliatescount,cardpayment,number_username,namecustom,register,verify,codeInvitation,pricediscount,maxbuyagent,joinchannel,score,status_cron) VALUES (:from_id, :platform, 'none',:limit_usertest_all,'Active','none','0','1',:username,'f','0','0','0','0',:showcard,'100','none',:date,:verifycode,:codeInvitation,'0','0','0','0','1')");
     $stmt->bindParam(':from_id', $from_id);
+    $stmt->bindValue(':platform', modasr_platform());
     $stmt->bindParam(':limit_usertest_all', $setting['limit_usertest_all']);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':showcard', $setting['showcard']);
