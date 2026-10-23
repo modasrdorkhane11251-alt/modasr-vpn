@@ -498,7 +498,7 @@ function mirza_install_required_files(): array
         'panels/Api/hiddify.php' => 'پنل هیدیفای',
         'panels/Api/x-ui_single.php' => 'پنل X-UI',
         'panels/Api/mikrotik.php' => 'پنل میکروتیک',
-        'panels/Api/mirza_agent.php' => 'ایجنت میرزا',
+        'panels/Api/mirza_agent.php' => 'ایجنت مدثر',
         'panels/Api/Rebeca.php' => 'پنل ربکا',
         'panels/Api/nexora.php' => 'پنل Nexora',
         'panels/Api/wgmate.php' => 'پنل WG-Mate',
