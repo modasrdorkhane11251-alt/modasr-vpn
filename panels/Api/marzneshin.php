@@ -34,7 +34,6 @@ function token_panelm($code_panel){
         $token['error'] = curl_error($curl_token);
         return $token;
     }
-    curl_close($curl_token);
 
     $body = json_decode( $token, true);
     if(isset($body['access_token'])){

@@ -56,7 +56,6 @@ if ($StatusPayment == 100) {
         ),
     ));
     $response = curl_exec($curl);
-    curl_close($curl);
     $response = json_decode($response, true);
     if (!empty($response['status']) && $response['status'] == 100) {
         $payment_status = $textbotlang['paymentGateway']['statusSuccess'];

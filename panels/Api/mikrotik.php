@@ -18,7 +18,6 @@ function login_mikrotik($url,$username,$password){
 $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 $response = json_decode($response,true);
-curl_close($curl);
 return $response;
 
 }
@@ -51,7 +50,6 @@ $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 set_profile_mikrotik($name_panel,$username,$group);
 $response = json_decode($response,true);
-curl_close($curl);
 return $response;
 }
 function set_profile_mikrotik($name_panel,$username,$prof_name){
@@ -81,7 +79,6 @@ function set_profile_mikrotik($name_panel,$username,$prof_name){
 $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 $response = json_decode($response,true);
-curl_close($curl);
 return $response;
 }
 function GetUsermikrotik($name_panel,$username){
@@ -105,7 +102,6 @@ function GetUsermikrotik($name_panel,$username){
 $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 $response = json_decode($response,true);
-curl_close($curl);
 return $response;
 }
 function GetUsermikrotik_volume($name_panel,$id){
@@ -134,7 +130,6 @@ function GetUsermikrotik_volume($name_panel,$id){
 $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 $response = json_decode($response,true)[0];
-curl_close($curl);
 return $response;
 }
 function deleteUser_mikrotik($name_panel,$username){
@@ -162,6 +157,5 @@ function deleteUser_mikrotik($name_panel,$username){
 $response = curl_exec($curl);
 if($response === false)return array("error" => 404);
 $response = json_decode($response,true);
-curl_close($curl);
 return $response;
 }

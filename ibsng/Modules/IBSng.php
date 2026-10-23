@@ -105,7 +105,6 @@ class IBSng
     {
         if ($this->handler) {
             @unlink($this->getCookie());
-            @curl_close($this->handler);
         }
     }
 
@@ -748,10 +747,8 @@ class IBSng
         $output = curl_exec($this->handler);
         if (curl_errno($this->handler) != 0) {
             $curlError = curl_error($this->handler);
-            curl_close($this->handler);
             throw new \Exception('Curl Error: ' . $curlError . $url);
         }
-        curl_close($this->handler);
         return $output;
     }
 

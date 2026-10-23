@@ -48,7 +48,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Content-Length: ' . strlen($data))
 );
 $result = curl_exec($ch);
-curl_close($ch);
 $result = json_decode($result);
 if (is_object($result) && $result->code == "1") {
     $payment_status = $textbotlang['paymentGateway']['statusSuccess'];

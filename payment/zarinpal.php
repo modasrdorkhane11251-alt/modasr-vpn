@@ -56,7 +56,6 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode([
   "description" => $Payment_reports['id_user']
         ]));
 $response = curl_exec($curl);
-curl_close($curl);
 $response = json_decode($response,true);
 $payment_status = $textbotlang['paymentGateway']['zarinpalErrors'][$response['errors']['code'] ?? ''] ?? '';
  if(($response['data']['message'] ?? '') == "Verified" || ($response['data']['message'] ?? '') == "Paid"){

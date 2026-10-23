@@ -94,12 +94,13 @@ function mirza_install_php_check(): array
 {
     $items = [];
 
-    $items[] = version_compare(PHP_VERSION, '8.2.0', '>=')
-        ? mirza_install_item('ok', 'نسخه PHP', PHP_VERSION, 'حداقل نسخه موردنیاز 8.2.0 است.')
-        : mirza_install_item('fail', 'نسخه PHP', PHP_VERSION, 'نسخه PHP باید 8.2.0 یا بالاتر باشد. از بخش Select PHP Version در کنترل پنل هاست نسخه را تغییر دهید.');
+    $minimumVersion = '8.5.12';
+    $items[] = version_compare(PHP_VERSION, $minimumVersion, '>=')
+        ? mirza_install_item('ok', 'نسخه PHP', PHP_VERSION, 'حداقل نسخه موردنیاز ' . $minimumVersion . ' است.')
+        : mirza_install_item('fail', 'نسخه PHP', PHP_VERSION, 'نسخه PHP باید ' . $minimumVersion . ' یا بالاتر باشد. از بخش Select PHP Version (یا MultiPHP Manager) در کنترل پنل هاست نسخه 8.5 را انتخاب کنید؛ اگر هاست این نسخه را ندارد از پشتیبانی هاست ارتقای PHP را بخواهید.');
 
     if (version_compare(PHP_VERSION, '9.0.0', '>=')) {
-        $items[] = mirza_install_item('warn', 'سازگاری نسخه', PHP_VERSION, 'این نسخه هنوز روی ربات تست نشده است؛ نسخه 8.2 تا 8.4 پیشنهاد می‌شود.');
+        $items[] = mirza_install_item('warn', 'سازگاری نسخه', PHP_VERSION, 'این نسخه هنوز روی ربات تست نشده است؛ نسخه 8.5 پیشنهاد می‌شود.');
     }
 
     $items[] = mirza_install_item('ok', 'SAPI اجرایی', PHP_SAPI);
@@ -762,11 +763,11 @@ function mirza_install_write_config(array $values): array
         . "    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,\n"
         . "    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,\n"
         . "    PDO::ATTR_EMULATE_PREPARES => false,\n"
-        . "    PDO::MYSQL_ATTR_INIT_COMMAND => \"SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci\",\n"
         . "];\n"
         . "\$dsn = \"mysql:host=\$dbhost;dbname=\$dbname;charset=utf8mb4\";\n"
         . "try {\n"
         . "    \$pdo = new PDO(\$dsn, \$usernamedb, \$passworddb, \$options);\n"
+        . "    \$pdo->exec(\"SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci\");\n"
         . "} catch (\\PDOException \$e) {\n"
         . "    error_log(\"Database connection failed: \" . \$e->getMessage());\n"
         . "    die(\"error: database connection failed\");\n"

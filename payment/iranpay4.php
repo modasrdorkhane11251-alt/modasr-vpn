@@ -75,7 +75,6 @@ curl_setopt_array($curl, [
 ]);
 $result = curl_exec($curl);
 $httpCode = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
-curl_close($curl);
 
 $response = is_string($result) ? json_decode($result, true) : null;
 

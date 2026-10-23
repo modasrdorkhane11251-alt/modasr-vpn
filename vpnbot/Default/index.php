@@ -28,6 +28,13 @@ $dataBase = select("botsaz", "*", "bot_token", $ApiToken, "select");
 $agentWebhookSecret = ensureAgentWebhookSecret($dataBase);
 if (!$agentWebhookSecret['created'] && $agentWebhookSecret['secret'] !== '' && !webhookSecretMatches($agentWebhookSecret['secret']))
     die("Unauthorized access");
+if (version_compare(PHP_VERSION, MIN_PHP_VERSION, '<')) {
+    if ($callback_query_id)
+        telegram('answerCallbackQuery', ['callback_query_id' => $callback_query_id]);
+    if (intval($from_id) != 0 && $Chat_type == "private")
+        sendmessage($from_id, $textbotlang['phpVersion']['user'], null, 'html');
+    return;
+}
 if (intval($from_id) != 0) {
     $userLock = $pdo->prepare("SELECT GET_LOCK(?, 0)");
     $userLock->execute(["mirza_user_" . $from_id]);
