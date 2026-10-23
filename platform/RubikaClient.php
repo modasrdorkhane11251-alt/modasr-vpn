@@ -1,7 +1,7 @@
 <?php
 /**
  * RubikaClient — adapter between the Telegram Bot API surface used by the
- * Modasr bot core and the Rubika messenger Bot API (botapi.rubika.ir/v3).
+ * MODASR bot core and the Rubika messenger Bot API (botapi.rubika.ir/v3).
  *
  * Rubika's schema differs from Telegram's (inline_keypad vs inline_keyboard,
  * status/data vs ok/result, different update types), so this class translates
