@@ -1806,7 +1806,7 @@ trojan://xyz',
                         'on' => 'Включено',
                         'intro' => '📌 В списке ниже вы можете управлять шлюзами.
 
-⚠️ Команда Modasr не даёт никаких гарантий по шлюзам, всё использование и ответственность лежат на вас',
+⚠️ Команда MODASR не даёт никаких гарантий по шлюзам, всё использование и ответственность лежат на вас',
                         'askPlisioApi' => '⚙️ Пожалуйста, отправьте ваш API Key для Plisio.
 
 🔑 Чтобы получить API ключ, посетите следующий сайт:
@@ -2401,13 +2401,13 @@ f,n.n2',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
-<blockquote>🔹 | Этот бот полностью бесплатный и разработан командой Modasr</blockquote>
+<blockquote>🔹 | Этот бот полностью бесплатный и разработан командой MODASR</blockquote>
 
 <blockquote>🔹 | Любая продажа или взимание платы за этого бота считается нарушением.</blockquote>
 
 <blockquote>🔹 | Если вы заметили продажу или взимание платы, пожалуйста, отследите и верните свои деньги.</blockquote>
 
-<blockquote>🐞 | Чтобы сообщить о проблеме, напишите в <a href="https://t.me/modasrbot?direct">директ канала Modasr</a>.</blockquote>',
+<blockquote>🐞 | Чтобы сообщить о проблеме, напишите в <a href="https://t.me/modasrbot?direct">директ канала MODASR</a>.</blockquote>',
                         'gatewayRow' => '
 📌 Название шлюза: <code>%s</code>
  - Количество успешных платежей: <code>%s</code>
@@ -4179,7 +4179,7 @@ ID пользователя : %s
                 'zarinPalMerchant' => 'Продавец ZarinPal',
                 'zeroBalance' => '0️⃣ Обнулить баланс',
                 'panelSetting' => '🎛 Настройка панели',
-                'mirzaAgentPanel' => 'Агент Modasr',
+                'mirzaAgentPanel' => 'Агент MODASR',
                 'setGroupName' => '🎛 Настройка имени группы',
                 'subLinkDomain' => '🔗 Домен ссылки подписки',
                 'panelTypeSanaei' => 'Sanaei один порт',
@@ -4327,10 +4327,10 @@ ID пользователя : %s
                 'jsSidebarCollapsed' => 'Свёрнутое меню включено',
                 'jsSidebarExpanded' => 'Открытое меню включено',
                 'jsThemeActivated' => 'Тема «{name}» включена',
-                'keyboardManageTitle' => 'Панель администратора Modasr Bot',
+                'keyboardManageTitle' => 'Панель администратора MODASR Bot',
                 'keyboardSaveBtn' => 'Вернуться в режим по умолчанию',
                 'keyboardSortHint' => 'Вернуться в панель пользователя',
-                'layoutBrandName' => 'Панель администратора Modasr Bot',
+                'layoutBrandName' => 'Панель администратора MODASR Bot',
                 'layoutDefaultAdminName' => 'Администратор',
                 'layoutFooterCopyright' => 'Панель управления',
                 'layoutFooterLinkDocs' => 'Настройки',
@@ -4347,7 +4347,7 @@ ID пользователя : %s
                 'layoutNavLogout' => 'Управление',
                 'layoutNavOrders' => 'Да, продолжить',
                 'layoutNavPayments' => '· Панель',
-                'layoutNavProducts' => 'Modasr',
+                'layoutNavProducts' => 'MODASR',
                 'layoutNavServices' => 'Отмена',
                 'layoutNavSettings' => 'Панель управления',
                 'layoutNavUsers' => 'Вы уверены? Эта операция необратима.',
@@ -4360,7 +4360,7 @@ ID пользователя : %s
                 'layoutPageTitleProduct' => 'Продукты',
                 'layoutPageTitleService' => 'Сервисы',
                 'layoutPageTitleSettings' => 'Настройки',
-                'layoutPageTitleSuffix' => 'Modasr',
+                'layoutPageTitleSuffix' => 'MODASR',
                 'layoutPageTitleUsers' => 'Пользователи',
                 'layoutProfileMenuLabel' => 'Настройки',
                 'layoutSearchBoxPlaceholder' => 'Транзакции',
@@ -4370,11 +4370,11 @@ ID пользователя : %s
                 'loginEnterCredentials' => 'Введите имя пользователя и пароль.',
                 'loginErrorTitle' => 'Пароль',
                 'loginFooter' => 'Имя пользователя',
-                'loginHeading' => 'Панель администратора Modasr',
+                'loginHeading' => 'Панель администратора MODASR',
                 'loginHidePassword' => 'Доступ к этой панели разрешён только авторизованным администраторам.',
-                'loginPanelTitle' => 'Вход — Панель администратора Modasr',
-                'loginPasswordLabel' => 'Панель администратора Modasr',
-                'loginPasswordPlaceholder' => '· Версия 1.0 Modasr',
+                'loginPanelTitle' => 'Вход — Панель администратора MODASR',
+                'loginPasswordLabel' => 'Панель администратора MODASR',
+                'loginPasswordPlaceholder' => '· Версия 1.0 MODASR',
                 'loginRememberMe' => 'Чтобы управлять ботом, введите данные вашего аккаунта.',
                 'loginShowPassword' => 'Вход в панель',
                 'loginSubtitle' => 'Для поддержки, пожалуйста ',
@@ -4544,10 +4544,10 @@ ID пользователя : %s
                 'settingsPasswordStrengthLabel' => 'Изменить пароль',
                 'settingsPhpMemory' => 'Память PHP',
                 'settingsReportIssue' => 'Сообщить о проблеме',
-                'settingsReportIssueLink' => 'Директ канала Modasr',
+                'settingsReportIssueLink' => 'Директ канала MODASR',
                 'settingsDonate' => 'Поддержка',
                 'settingsDonateLink' => 'Пожертвовать',
-                'donatePopupTitle' => '💖 Поддержите Modasr',
+                'donatePopupTitle' => '💖 Поддержите MODASR',
                 'donatePopupText' => 'Этот бот и панель разрабатываются бесплатно. Если они вам полезны, небольшое пожертвование поможет продолжать разработку и поддержку.',
                 'donatePopupLater' => 'Позже',
                 'settingsSaveBtn' => 'Текущий пароль',
