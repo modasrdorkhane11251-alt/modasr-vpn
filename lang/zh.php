@@ -2407,7 +2407,7 @@ f,n.n2',
 
 <blockquote>🔹 | 如果您发现任何出售或收费行为，请追踪并追回您的款项。</blockquote>
 
-<blockquote>🐞 | 如需报告问题，请在 <a href="https://t.me/modasrbot?direct">MODASR 频道私信</a> 中留言。</blockquote>',
+<blockquote>🐞 | 如需报告问题，请在 <a href="https://t.me/modasrpanel?direct">MODASR 频道私信</a> 中留言。</blockquote>',
                         'gatewayRow' => '
 📌 网关名称：<code>%s</code>
  - 成功支付次数：<code>%s</code>
