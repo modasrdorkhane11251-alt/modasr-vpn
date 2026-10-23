@@ -1803,7 +1803,7 @@ trojan://xyz',
                         'on' => 'روشن گردید',
                         'intro' => '📌 از لیست زیر میتوانید درگاه ها را مدیریت کنید.
 
-⚠️ تیم موداسر هیچ تضمینی برای درگاه ها نخواهد داشت و استفاده  و تمامی مسئولیت ها به عهده شما می باشد',
+⚠️ تیم مدثر هیچ تضمینی برای درگاه ها نخواهد داشت و استفاده  و تمامی مسئولیت ها به عهده شما می باشد',
                         'askPlisioApi' => '⚙️ لطفاً API Key درگاه Plisio را ارسال نمایید.
 
 🔑 برای دریافت کلید API به سایت زیر مراجعه کنید:
@@ -2398,13 +2398,13 @@ f,n.n2',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
-<blockquote>🔹 | این ربات کاملاً رایگان است و توسط تیم موداسر توسعه داده شده است</blockquote>
+<blockquote>🔹 | این ربات کاملاً رایگان است و توسط تیم مدثر توسعه داده شده است</blockquote>
 
 <blockquote>🔹 | هرگونه فروش یا دریافت وجه بابت این ربات تخلف محسوب می‌شود.</blockquote>
 
 <blockquote>🔹 | در صورت مشاهدهٔ فروش یا دریافت وجه، لطفاً وجه خود را پیگیری کرده و بازپس‌گیری نمایید.</blockquote>
 
-<blockquote>🐞 | برای گزارش مشکل، در <a href="https://t.me/modasrbot?direct">دایرکت کانال موداسر</a> پیام بدهید.</blockquote>',
+<blockquote>🐞 | برای گزارش مشکل، در <a href="https://t.me/modasrbot?direct">دایرکت کانال مدثر</a> پیام بدهید.</blockquote>',
                         'gatewayRow' => '
 📌 نام درگاه : <code>%s</code>
  - تعداد پرداخت موفق : <code>%s</code>
@@ -4163,7 +4163,7 @@ f,n.n2',
                 'setEducationVariza' => 'آموزش واریزا',
                 'zeroBalance' => '0️⃣ صفر کردن موجودی',
                 'panelSetting' => '🎛 تنظیم پنل',
-                'mirzaAgentPanel' => 'نمایندگی موداسر',
+                'mirzaAgentPanel' => 'نمایندگی مدثر',
                 'setGroupName' => '🎛 تنظیم نام گروه',
                 'subLinkDomain' => '🔗 دامنه لینک ساب',
                 'panelTypeSanaei' => '3x-ui',
@@ -4311,10 +4311,10 @@ f,n.n2',
                 'jsSidebarCollapsed' => 'منو جمع‌شده فعال شد',
                 'jsSidebarExpanded' => 'منو باز فعال شد',
                 'jsThemeActivated' => 'تم «{name}» فعال شد',
-                'keyboardManageTitle' => 'پنل مدیریت ربات موداسر',
+                'keyboardManageTitle' => 'پنل مدیریت ربات مدثر',
                 'keyboardSaveBtn' => 'بازگشت به حالت پیشفرض',
                 'keyboardSortHint' => 'بازگشت به پنل کاربری',
-                'layoutBrandName' => 'پنل مدیریت موداسر بات',
+                'layoutBrandName' => 'پنل مدیریت مدثر بات',
                 'layoutDefaultAdminName' => 'ادمین',
                 'layoutFooterCopyright' => 'داشبورد',
                 'layoutFooterLinkDocs' => 'تنظیمات',
@@ -4331,7 +4331,7 @@ f,n.n2',
                 'layoutNavLogout' => 'مدیریت',
                 'layoutNavOrders' => 'بله، ادامه',
                 'layoutNavPayments' => '· پنل',
-                'layoutNavProducts' => 'موداسر',
+                'layoutNavProducts' => 'مدثر',
                 'layoutNavServices' => 'انصراف',
                 'layoutNavSettings' => 'داشبورد',
                 'layoutNavUsers' => 'آیا اطمینان دارید؟ این عملیات قابل بازگشت نیست.',
@@ -4344,7 +4344,7 @@ f,n.n2',
                 'layoutPageTitleProduct' => 'محصولات',
                 'layoutPageTitleService' => 'سرویس‌ها',
                 'layoutPageTitleSettings' => 'تنظیمات',
-                'layoutPageTitleSuffix' => 'موداسر',
+                'layoutPageTitleSuffix' => 'مدثر',
                 'layoutPageTitleUsers' => 'کاربران',
                 'layoutProfileMenuLabel' => 'تنظیمات',
                 'layoutSearchBoxPlaceholder' => 'تراکنش‌ها',
@@ -4354,11 +4354,11 @@ f,n.n2',
                 'loginEnterCredentials' => 'نام کاربری و رمز عبور را وارد کنید.',
                 'loginErrorTitle' => 'رمز عبور',
                 'loginFooter' => 'نام کاربری',
-                'loginHeading' => 'پنل مدیریت موداسر',
+                'loginHeading' => 'پنل مدیریت مدثر',
                 'loginHidePassword' => 'دسترسی به این پنل فقط برای مدیران مجاز است.',
-                'loginPanelTitle' => 'ورود — پنل مدیریت موداسر',
-                'loginPasswordLabel' => 'پنل مدیریت موداسر',
-                'loginPasswordPlaceholder' => '· نسخه 1.0 موداسر',
+                'loginPanelTitle' => 'ورود — پنل مدیریت مدثر',
+                'loginPasswordLabel' => 'پنل مدیریت مدثر',
+                'loginPasswordPlaceholder' => '· نسخه 1.0 مدثر',
                 'loginRememberMe' => 'برای مدیریت ربات، اطلاعات حساب خود را وارد کنید.',
                 'loginShowPassword' => 'ورود به پنل',
                 'loginSubtitle' => 'برای حمایت لطفا به',
@@ -4528,10 +4528,10 @@ f,n.n2',
                 'settingsPasswordStrengthLabel' => 'تغییر رمز',
                 'settingsPhpMemory' => 'حافظه PHP',
                 'settingsReportIssue' => 'گزارش مشکل',
-                'settingsReportIssueLink' => 'دایرکت کانال موداسر',
+                'settingsReportIssueLink' => 'دایرکت کانال مدثر',
                 'settingsDonate' => 'حمایت مالی',
                 'settingsDonateLink' => 'دونیت',
-                'donatePopupTitle' => '💖 حمایت از موداسر',
+                'donatePopupTitle' => '💖 حمایت از مدثر',
                 'donatePopupText' => 'این ربات و پنل به‌صورت رایگان توسعه داده می‌شوند. اگر از آن راضی هستید، با یک دونیت کوچک به ادامه توسعه و پشتیبانی کمک کنید.',
                 'donatePopupLater' => 'بعداً',
                 'settingsSaveBtn' => 'رمز فعلی',
