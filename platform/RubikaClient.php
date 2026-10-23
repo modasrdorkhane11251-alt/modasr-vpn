@@ -59,11 +59,17 @@ class RubikaClient
             case 'sendAudio':
                 return $this->sendFileMessage($method, $datas);
             case 'editMessageText':
-                return $this->request('editMessageText', [
+                $payload = [
                     'chat_id'    => $datas['chat_id'] ?? '',
                     'message_id' => $datas['message_id'] ?? 0,
                     'text'       => $this->cleanText($datas['text'] ?? ''),
-                ]);
+                ];
+                // Carry the new inline keypad too, otherwise the old menu
+                // would stay attached to the edited message.
+                $text = $payload['text'];
+                $this->applyReplyMarkup($payload, $datas['reply_markup'] ?? null, $text);
+                $payload['text'] = $text;
+                return $this->request('editMessageText', $payload);
             case 'deleteMessage':
                 return $this->request('deleteMessage', [
                     'chat_id'    => $datas['chat_id'] ?? '',
@@ -326,6 +332,12 @@ class RubikaClient
     {
         $inner = $update['update'] ?? $update;
         $type  = $inner['type'] ?? ($update['type'] ?? '');
+        // The ReceiveInlineMessage webhook body is {"inline_message": {...}}
+        // with no "type" field — detect it explicitly.
+        if ($type === '' && isset($update['inline_message']) && is_array($update['inline_message'])) {
+            $inner = $update;
+            $type  = 'InlineMessage';
+        }
 
         // Remember user→chat mapping whenever both ids are present.
         $mapSender = $inner['sender_id']
