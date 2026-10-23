@@ -457,24 +457,36 @@ class RubikaClient
 
     protected function rawRequest(string $method, array $payload): array
     {
-        $ch = curl_init($this->base . $method);
-        if ($ch === false) {
-            return ['status' => 'ERROR', 'client_meta' => ['curl' => 'init failed']];
+        // Reuse one cURL handle per token so consecutive calls in the same
+        // request (editMessageText + editMessageKeypad) skip the TCP/TLS
+        // handshake — this noticeably cuts the tap-to-update latency.
+        static $handles = [];
+        $key = $this->token;
+        if (isset($handles[$key]) && is_resource($handles[$key]) || (isset($handles[$key]) && $handles[$key] instanceof \CurlHandle)) {
+            $ch = $handles[$key];
+            curl_setopt($ch, CURLOPT_URL, $this->base . $method);
+        } else {
+            $ch = curl_init($this->base . $method);
+            if ($ch === false) {
+                return ['status' => 'ERROR', 'client_meta' => ['curl' => 'init failed']];
+            }
+            $handles[$key] = $ch;
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json', 'Connection: keep-alive']);
+            curl_setopt($ch, CURLOPT_TCP_KEEPALIVE, 1);
         }
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload, JSON_UNESCAPED_UNICODE));
 
         $raw = curl_exec($ch);
         if ($raw === false) {
             $err = curl_error($ch);
+            unset($handles[$key]);
             curl_close($ch);
             return ['status' => 'ERROR', 'client_meta' => ['curl' => $err]];
         }
-        curl_close($ch);
 
         $decoded = json_decode($raw, true);
         return is_array($decoded) ? $decoded : ['status' => 'ERROR', 'client_meta' => ['raw' => substr($raw, 0, 200)]];
