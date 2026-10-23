@@ -339,6 +339,40 @@ class RubikaClient
         return $map[$chatId] ?? $chatId;
     }
 
+    /**
+     * Ask the Rubika API for the CDN download URL of a file_id.
+     * Returns '' when unavailable.
+     */
+    protected static function resolveDownloadUrl(string $fileId): string
+    {
+        if ($fileId === '' || !function_exists('modasr_token_for')) {
+            return '';
+        }
+        $token = modasr_token_for('rubika');
+        if (!$token) {
+            return '';
+        }
+        $ch = curl_init('https://botapi.rubika.ir/v3/' . $token . '/getFile');
+        if ($ch === false) {
+            return '';
+        }
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 10,
+            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_POST           => true,
+            CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+            CURLOPT_POSTFIELDS     => json_encode(['file_id' => $fileId]),
+        ]);
+        $raw = curl_exec($ch);
+        curl_close($ch);
+        $decoded = json_decode((string) $raw, true);
+        if (($decoded['status'] ?? '') === 'OK') {
+            return (string) ($decoded['data']['download_url'] ?? '');
+        }
+        return '';
+    }
+
     /* ------------------------------------------------------------------ */
     /*  Incoming update normalisation (Rubika → Telegram shape)            */
     /* ------------------------------------------------------------------ */
@@ -396,7 +430,12 @@ class RubikaClient
                     $isVideo = $msgType === 'video' || str_starts_with($mime, 'video/')
                         || in_array($ext, ['mp4', 'mov', 'mkv', 'webm'], true);
                     if ($isImage) {
-                        $message['photo']   = [['file_id' => $fileInline['file_id'], 'file_size' => $fileInline['size'] ?? 0]];
+                        // Resolve a real download URL so cross-platform
+                        // forwards (e.g. receipt photo → Telegram admin)
+                        // work — Telegram can fetch a URL but not a Rubika
+                        // file_id.
+                        $photoId = self::resolveDownloadUrl($fileInline['file_id']) ?: $fileInline['file_id'];
+                        $message['photo']   = [['file_id' => $photoId, 'file_size' => $fileInline['size'] ?? 0]];
                         $message['caption'] = $msg['text'] ?? '';
                         unset($message['text']);
                     } elseif ($isVideo) {
