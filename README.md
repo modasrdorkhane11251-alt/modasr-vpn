@@ -4,12 +4,26 @@
 
 **فروش خودکار سرویس VPN — از پرداخت تا کانفیگ، همزمان روی تلگرام، بله و روبیکا**
 
-<a href="https://t.me/MODASRbot">
-  <img src="https://img.shields.io/badge/Telegram-@MODASRbot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot"/>
+<a href="https://t.me/modasrpanel">
+  <img src="https://img.shields.io/badge/Telegram-@modasrpanel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel"/>
+</a>
+<a href="https://rubika.ir/joing/BBIHBDHFD0NAYIDLGBSQYPOZBROKCTBQ">
+  <img src="https://img.shields.io/badge/Rubika-@modasrpanel-FF6B35?style=for-the-badge" alt="Rubika Channel"/>
+</a>
+<a href="https://ble.ir/modasrpanel">
+  <img src="https://img.shields.io/badge/Bale-@modasrpanel-1F8A70?style=for-the-badge" alt="Bale Channel"/>
 </a>
 <a href="https://github.com/modasrdorkhane11251-alt/modasr-vpn">
   <img src="https://img.shields.io/badge/GitHub-modasr--vpn-181717?style=for-the-badge&logo=github" alt="GitHub"/>
 </a>
+
+## کانال‌ها و گروه‌های پشتیبانی
+
+| پلتفرم | کانال | گروه |
+|---|---|---|
+| تلگرام | [@modasrpanel](https://t.me/modasrpanel) | [@modasrpanelgroup](https://t.me/modasrpanelgroup) |
+| بله | [@modasrpanel](https://ble.ir/modasrpanel) | [@modasrpanelgroup](https://ble.ir/modasrpanelgroup) |
+| روبیکا | [@modasrpanel](https://rubika.ir/joing/BBIHBDHFD0NAYIDLGBSQYPOZBROKCTBQ) | — |
 
 </div>
 
