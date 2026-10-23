@@ -1806,7 +1806,7 @@ Current value: %s Toman',
                         'on' => 'Turned on',
                         'intro' => '📌 From the list below you can manage the gateways.
 
-⚠️ The Modasr team gives no guarantee for the gateways, and all use and responsibility is on you',
+⚠️ The MODASR team gives no guarantee for the gateways, and all use and responsibility is on you',
                         'askPlisioApi' => '⚙️ Please send your Plisio API Key.
 
 🔑 To get your API key, visit the following site:
@@ -2401,13 +2401,13 @@ Current amount: %s',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
-<blockquote>🔹 | This bot is completely free and is developed by the Modasr team</blockquote>
+<blockquote>🔹 | This bot is completely free and is developed by the MODASR team</blockquote>
 
 <blockquote>🔹 | Any sale or charging of money for this bot is considered a violation.</blockquote>
 
 <blockquote>🔹 | If you see any sale or charging of money, please track and reclaim your money.</blockquote>
 
-<blockquote>🐞 | To report a problem, message the <a href="https://t.me/modasrbot?direct">Modasr channel direct</a>.</blockquote>',
+<blockquote>🐞 | To report a problem, message the <a href="https://t.me/modasrbot?direct">MODASR channel direct</a>.</blockquote>',
                         'gatewayRow' => '
 📌 Gateway name: <code>%s</code>
  - Number of successful payments: <code>%s</code>
@@ -4179,7 +4179,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'setEducationVariza' => 'Variza tutorial',
                 'zeroBalance' => '0️⃣ Reset balance to zero',
                 'panelSetting' => '🎛 Panel Settings',
-                'mirzaAgentPanel' => 'Modasr Agent',
+                'mirzaAgentPanel' => 'MODASR Agent',
                 'setGroupName' => '🎛 Set group name',
                 'subLinkDomain' => '🔗 Subscription link domain',
                 'panelTypeSanaei' => 'Sanaei single port',
@@ -4327,10 +4327,10 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'jsSidebarCollapsed' => 'Collapsed menu enabled',
                 'jsSidebarExpanded' => 'Open menu enabled',
                 'jsThemeActivated' => 'Theme «{name}» enabled',
-                'keyboardManageTitle' => 'Modasr Bot Admin Panel',
+                'keyboardManageTitle' => 'MODASR Bot Admin Panel',
                 'keyboardSaveBtn' => 'Back to default mode',
                 'keyboardSortHint' => 'Back to user panel',
-                'layoutBrandName' => 'Modasr Bot Admin Panel',
+                'layoutBrandName' => 'MODASR Bot Admin Panel',
                 'layoutDefaultAdminName' => 'Admin',
                 'layoutFooterCopyright' => 'Dashboard',
                 'layoutFooterLinkDocs' => 'Settings',
@@ -4347,7 +4347,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'layoutNavLogout' => 'Management',
                 'layoutNavOrders' => 'Yes, continue',
                 'layoutNavPayments' => '· Panel',
-                'layoutNavProducts' => 'Modasr',
+                'layoutNavProducts' => 'MODASR',
                 'layoutNavServices' => 'Cancel',
                 'layoutNavSettings' => 'Dashboard',
                 'layoutNavUsers' => 'Are you sure? This operation is irreversible.',
@@ -4360,7 +4360,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'layoutPageTitleProduct' => 'Products',
                 'layoutPageTitleService' => 'Services',
                 'layoutPageTitleSettings' => 'Settings',
-                'layoutPageTitleSuffix' => 'Modasr',
+                'layoutPageTitleSuffix' => 'MODASR',
                 'layoutPageTitleUsers' => 'Users',
                 'layoutProfileMenuLabel' => 'Settings',
                 'layoutSearchBoxPlaceholder' => 'Transactions',
@@ -4370,11 +4370,11 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'loginEnterCredentials' => 'Enter your username and password.',
                 'loginErrorTitle' => 'Password',
                 'loginFooter' => 'Username',
-                'loginHeading' => 'Modasr Admin Panel',
+                'loginHeading' => 'MODASR Admin Panel',
                 'loginHidePassword' => 'Access to this panel is only allowed for authorized administrators.',
-                'loginPanelTitle' => 'Login — Modasr Admin Panel',
-                'loginPasswordLabel' => 'Modasr Admin Panel',
-                'loginPasswordPlaceholder' => '· Version 1.0 Modasr',
+                'loginPanelTitle' => 'Login — MODASR Admin Panel',
+                'loginPasswordLabel' => 'MODASR Admin Panel',
+                'loginPasswordPlaceholder' => '· Version 1.0 MODASR',
                 'loginRememberMe' => 'To manage the bot, enter your account information.',
                 'loginShowPassword' => 'Login to panel',
                 'loginSubtitle' => 'To support, please ',
@@ -4544,10 +4544,10 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'settingsPasswordStrengthLabel' => 'Change password',
                 'settingsPhpMemory' => 'PHP memory',
                 'settingsReportIssue' => 'Report a problem',
-                'settingsReportIssueLink' => 'Modasr channel direct',
+                'settingsReportIssueLink' => 'MODASR channel direct',
                 'settingsDonate' => 'Support',
                 'settingsDonateLink' => 'Donate',
-                'donatePopupTitle' => '💖 Support Modasr',
+                'donatePopupTitle' => '💖 Support MODASR',
                 'donatePopupText' => 'This bot and panel are developed for free. If you find them useful, a small donation helps keep development and support going.',
                 'donatePopupLater' => 'Later',
                 'settingsSaveBtn' => 'Current password',
