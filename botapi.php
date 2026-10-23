@@ -158,11 +158,33 @@ function telegram($method, $datas = [], $token = null, $allowEmojiFallback = tru
 {
     global $APIKEY;
 
+    $tokenExplicit = $token !== null;
     $token = $token === null ? $APIKEY : $token;
 
-    // Route through the active messenger platform (telegram / bale / rubika).
-    if (modasr_platform() !== 'telegram') {
-        [$handled, $platformResult] = modasr_platform_request($method, $datas, $token);
+    // Report-group traffic (forum topics / report channel) goes to Telegram,
+    // because Telegram forum topics only exist on Telegram.
+    if (function_exists('modasr_reports_route') && modasr_reports_route($method, $datas)) {
+        $datas = modasr_tag_report_with_platform($datas);
+        return modasr_telegram_api(modasr_reports_token(), $method, $datas);
+    }
+
+    // Decide which platform this call belongs to. With multi-platform setups
+    // the recipient's chat_id tells us (Rubika GUIDs, or the user's stored
+    // platform); single-platform installs just use the configured one.
+    $targetPlatform = modasr_platform();
+    if (isset($datas['chat_id']) && !isTelegramChatIdEmpty($datas['chat_id'])) {
+        $targetPlatform = modasr_platform_for_chat($datas['chat_id']);
+    }
+    if (!$tokenExplicit) {
+        $platformToken = modasr_token_for($targetPlatform);
+        if ($platformToken !== '') {
+            $token = $platformToken;
+        }
+    }
+
+    // Route through the target messenger platform (telegram / bale / rubika).
+    if ($targetPlatform !== 'telegram') {
+        [$handled, $platformResult] = modasr_platform_request($method, $datas, $token, $targetPlatform);
         if ($handled) {
             return $platformResult;
         }
