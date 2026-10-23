@@ -37,7 +37,7 @@ if (version_compare(PHP_VERSION, MIN_PHP_VERSION, '<')) {
 }
 if (intval($from_id) != 0) {
     $userLock = $pdo->prepare("SELECT GET_LOCK(?, 0)");
-    $userLock->execute(["mirza_user_" . $from_id]);
+    $userLock->execute(["modasr_user_" . $from_id]);
     if ((int) $userLock->fetchColumn() !== 1) {
         if ($callback_query_id) {
             telegram('answerCallbackQuery', ['callback_query_id' => $callback_query_id]);

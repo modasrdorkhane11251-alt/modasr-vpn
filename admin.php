@@ -756,7 +756,7 @@ if ($datain == "paygwback") {
 } elseif ($text == $textbotlang['Admin']['btnKeyboard']['addPanel'] && $adminrulecheck['rule'] == "administrator") {
     sendmessage($from_id, $textbotlang['Admin']['managepanel']['Inbound']['getPanelType'], $keyboardtypepanel, 'HTML');
 } elseif (preg_match('/^typepanel#(.+)$/', $datain, $dataget) && $adminrulecheck['rule'] == "administrator") {
-    if (!in_array($dataget[1], ["marzban", "marzneshin", "pasarguard", "mirza_agent", "x-ui_single", "Manualsale", "hiddify", "WGDashboard", "ibsng", "mikrotik", "rebecca", "nexora", "wg_mate"], true)) {
+    if (!in_array($dataget[1], ["marzban", "marzneshin", "pasarguard", "modasr_agent", "x-ui_single", "Manualsale", "hiddify", "WGDashboard", "ibsng", "mikrotik", "rebecca", "nexora", "wg_mate"], true)) {
         return;
     }
     deletemessage($from_id, $message_id);
@@ -799,7 +799,7 @@ if ($datain == "paygwback") {
         savedata("save", "username", "null");
         savedata("save", "password", "null");
         finishAddPanel();
-    } elseif (in_array($paneltype, ["WGDashboard", "x-ui_single", "mirza_agent", "rebecca", "nexora", "wg_mate"], true)) {
+    } elseif (in_array($paneltype, ["WGDashboard", "x-ui_single", "modasr_agent", "rebecca", "nexora", "wg_mate"], true)) {
         savedata("save", "username", "null");
         sendmessage($from_id, $textbotlang['Admin']['agentbot']['askToken'], $backadmin, 'HTML');
         step('add_password_panel', $from_id);
@@ -1499,7 +1499,12 @@ elseif ($datain == "systemsms") {
     sendmessage($from_id, sprintf($textbotlang['Admin']['Channel']['askReportGroupId'], $setting['Channel_Report']), $selectGroupKeyboard, 'HTML');
     step('addchannelid', $from_id);
 } elseif ($user['step'] == "addchannelid") {
+    // Telegram can share the group via chat_shared; on Bale/Rubika the admin
+    // can simply type the numeric group id (e.g. -1001234567890).
     $sharedChatId = $update['message']['chat_shared']['chat_id'] ?? 0;
+    if (!$sharedChatId && preg_match('/^-?\d{5,20}$/', trim((string) $text))) {
+        $sharedChatId = trim((string) $text);
+    }
     if (!$sharedChatId) {
         sendmessage($from_id, $textbotlang['Admin']['Channel']['selectGroupHint'], null, 'HTML');
         return;
@@ -2583,8 +2588,8 @@ elseif ($datain == "systemsms") {
             $message = strtr($text_x_ui, $replace);
             sendmessage($from_id, $message, $panelOptions['x-ui_single'], 'HTML');
         }
-    } elseif ($marzban_list_get['type'] == "mirza_agent") {
-        sendmessage($from_id, $textbotlang['users']['selectoption'], $panelOptions['mirza_agent'], 'HTML');
+    } elseif ($marzban_list_get['type'] == "modasr_agent") {
+        sendmessage($from_id, $textbotlang['users']['selectoption'], $panelOptions['modasr_agent'], 'HTML');
     } elseif ($marzban_list_get['type'] == "hiddify") {
         $System_Stats = serverstatus($marzban_list_get['name_panel']);
         if (!empty($System_Stats['status']) && $System_Stats['status'] != 200) {
@@ -9498,16 +9503,16 @@ if ($datain == "settimecornday" && $adminrulecheck['rule'] == "administrator") {
     $list_panel_keyboard = ['inline_keyboard' => []];
     foreach ($list_panel as $result) {
         $list_panel_keyboard['inline_keyboard'][] = [
-            ['text' => $result['name_panel'], 'callback_data' => "set_panel_id_mirza:{$result['id']}:{$panel['id']}"],
+            ['text' => $result['name_panel'], 'callback_data' => "set_panel_id_modasr:{$result['id']}:{$panel['id']}"],
         ];
     }
     sendmessage($from_id, $textbotlang['Admin']['addorder']['selectPanel'], json_encode($list_panel_keyboard), 'HTML');
-} elseif (preg_match('/set_panel_id_mirza:(.*):(.*)/', $datain, $dataget)) {
-    $panel_id_mirza = $dataget[1];
+} elseif (preg_match('/set_panel_id_modasr:(.*):(.*)/', $datain, $dataget)) {
+    $panel_id_modasr = $dataget[1];
     $panel_id = $dataget[2];
     deletemessage($from_id, $message_id);
-    update("marzban_panel", "inbounds", $panel_id_mirza, "id", $panel_id);
-    sendmessage($from_id, $textbotlang['Admin']['addorder']['panelSelected'], $panelOptions['mirza_agent'], 'HTML');
+    update("marzban_panel", "inbounds", $panel_id_modasr, "id", $panel_id);
+    sendmessage($from_id, $textbotlang['Admin']['addorder']['panelSelected'], $panelOptions['modasr_agent'], 'HTML');
 } elseif ($text == $textbotlang['bottext']['open_button']) {
     $bt_home = strtr($textbotlang['bottext']['home_text'], ['{lang}' => $textbotlang['bottext']['langs'][$user['lang']] ?? $bt_lang]);
     sendmessage($from_id, $bt_home, keyboard_list_text($user['lang']), 'HTML');

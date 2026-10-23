@@ -1,6 +1,6 @@
 <?php
 
-class MirzaAgentPanelDriver extends BasePanelDriver
+class MODASRAgentPanelDriver extends BasePanelDriver
 {
     public function create(array $vars)
     {
@@ -12,7 +12,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $invoice = $vars['invoice'];
         $domainhosts = $vars['domainhosts'];
         //create user
-        $ConnectToPanel = create_user_mirza($Get_Data_Panel, $data_limit / pow(1024, 3), $expire == 0 ? 0 : ($expire - time()) / 86400, $usernameC);
+        $ConnectToPanel = create_user_modasr($Get_Data_Panel, $data_limit / pow(1024, 3), $expire == 0 ? 0 : ($expire - time()) / 86400, $usernameC);
         if (!empty($ConnectToPanel['status']) && $ConnectToPanel['status'] != 200) {
             return array(
                 'status' => 'Unsuccessful',
@@ -53,7 +53,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $Output = $vars['Output'];
         $invoice = $vars['invoice'];
         $domainhosts = $vars['domainhosts'];
-        $UsernameData = get_user_data_mirza($Get_Data_Panel, $username);
+        $UsernameData = get_user_data_modasr($Get_Data_Panel, $username);
         if (!empty($UsernameData['error'])) {
             $Output = array(
                 'status' => 'Unsuccessful',
@@ -100,7 +100,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $username = $vars['username'];
         $Output = $vars['Output'];
         $name_panel = $vars['name_panel'];
-        $revoke_sub = revoke_service_mirza($Get_Data_Panel, $username);
+        $revoke_sub = revoke_service_modasr($Get_Data_Panel, $username);
         if (!empty($revoke_sub['error'])) {
             $Output = array(
                 'status' => 'Unsuccessful',
@@ -127,7 +127,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $Get_Data_Panel = $vars['Get_Data_Panel'];
         $username = $vars['username'];
         $Output = $vars['Output'];
-        $UsernameData = remove_service_mirza($Get_Data_Panel, $username);
+        $UsernameData = remove_service_modasr($Get_Data_Panel, $username);
         if (isset($UsernameData['error'])) {
             $Output = array(
                 'status' => 'Unsuccessful',
@@ -168,7 +168,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $new_limit = $vars['new_limit'];
         $time_day = $vars['time_day'];
         $username = $vars['username'];
-        $extend = extend_service_mirza($panel, $new_limit, $time_day, $username);
+        $extend = extend_service_modasr($panel, $new_limit, $time_day, $username);
         if (!in_array($extend['status'], [200, 400])) {
             return array(
                 'status' => false,
@@ -198,7 +198,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $panel = $vars['panel'];
         $limit_volume_new = $vars['limit_volume_new'];
         $username_account = $vars['username_account'];
-        $volume_add = add_volume_service_mirza($panel, $limit_volume_new, $username_account);
+        $volume_add = add_volume_service_modasr($panel, $limit_volume_new, $username_account);
         if (!in_array($volume_add['status'], [200, 400])) {
             return array(
                 'status' => false,
@@ -230,7 +230,7 @@ class MirzaAgentPanelDriver extends BasePanelDriver
         $panel = $vars['panel'];
         $username_account = $vars['username_account'];
         $new_limit = $limit_time_new;
-        $time_add = add_time_service_mirza($panel, $new_limit, $username_account);
+        $time_add = add_time_service_modasr($panel, $new_limit, $username_account);
         if (!in_array($time_add['status'], [200, 400])) {
             return array(
                 'status' => false,

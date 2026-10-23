@@ -4179,7 +4179,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'setEducationVariza' => 'Variza tutorial',
                 'zeroBalance' => '0️⃣ Reset balance to zero',
                 'panelSetting' => '🎛 Panel Settings',
-                'mirzaAgentPanel' => 'MODASR Agent',
+                'modasrAgentPanel' => 'MODASR Agent',
                 'setGroupName' => '🎛 Set group name',
                 'subLinkDomain' => '🔗 Subscription link domain',
                 'panelTypeSanaei' => 'Sanaei single port',

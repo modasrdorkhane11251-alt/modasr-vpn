@@ -46,13 +46,13 @@ if (!is_executable($phpBin)) {
     $phpBin = is_executable('/usr/bin/php') ? '/usr/bin/php' : 'php';
 }
 
-$existing = mirza_read_crontab($crontabBin, $user);
+$existing = modasr_read_crontab($crontabBin, $user);
 $roots = [];
 
 if (isset($opts['roots']) && trim((string) $opts['roots']) !== '') {
     foreach (explode(',', (string) $opts['roots']) as $root) {
         $root = rtrim(trim($root), '/');
-        if ($root !== '' && mirza_is_bot_root($root)) {
+        if ($root !== '' && modasr_is_bot_root($root)) {
             $roots[$root] = true;
         }
     }
@@ -64,17 +64,17 @@ if (isset($opts['roots']) && trim((string) $opts['roots']) !== '') {
         }, explode(',', (string) $opts['scan']));
     }
 
-    foreach (mirza_roots_from_crontab($existing) as $root) {
+    foreach (modasr_roots_from_crontab($existing) as $root) {
         $roots[$root] = true;
     }
-    foreach (mirza_roots_from_vhosts() as $root) {
+    foreach (modasr_roots_from_vhosts() as $root) {
         $roots[$root] = true;
     }
     foreach ($scanDirs as $dir) {
         if ($dir === '' || !is_dir($dir)) {
             continue;
         }
-        foreach (mirza_scan_bot_roots($dir, 5) as $root) {
+        foreach (modasr_scan_bot_roots($dir, 5) as $root) {
             $roots[$root] = true;
         }
     }
@@ -83,10 +83,10 @@ if (isset($opts['roots']) && trim((string) $opts['roots']) !== '') {
 $roots = array_keys($roots);
 sort($roots);
 
-$hostMap = mirza_vhost_host_map();
+$hostMap = modasr_vhost_host_map();
 $domainRoots = [];
 foreach ($roots as $root) {
-    $domain = mirza_domain_from_config($root);
+    $domain = modasr_domain_from_config($root);
     if ($domain !== '') {
         $domainRoots[$domain] = $root;
     }
@@ -95,10 +95,10 @@ foreach ($roots as $root) {
 $kept = [];
 $removed = 0;
 foreach ($existing as $line) {
-    if (mirza_is_cronbot_line($line)) {
+    if (modasr_is_cronbot_line($line)) {
         $removed++;
-        $discovered = mirza_root_from_cron_line($line, $hostMap, $domainRoots);
-        if ($discovered !== null && mirza_is_bot_root($discovered)) {
+        $discovered = modasr_root_from_cron_line($line, $hostMap, $domainRoots);
+        if ($discovered !== null && modasr_is_bot_root($discovered)) {
             $roots[] = $discovered;
         }
         continue;
@@ -118,7 +118,7 @@ foreach ($roots as $root) {
         $skipped[] = $root . ' (missing cronbot/run.php)';
         continue;
     }
-    $seed = mirza_domain_from_config($root);
+    $seed = modasr_domain_from_config($root);
     if ($seed === '') {
         $seed = $root;
     }
@@ -155,7 +155,7 @@ $backup = rtrim($backupDir, '/') . '/www-data.cron.bak.' . date('YmdHis');
 file_put_contents($backup, ($existing === [] ? '' : implode(PHP_EOL, $existing) . PHP_EOL));
 fwrite(STDOUT, 'Backup: ' . $backup . PHP_EOL);
 
-$tmp = tempnam(sys_get_temp_dir(), 'mirza-cron');
+$tmp = tempnam(sys_get_temp_dir(), 'modasr-cron');
 if ($tmp === false) {
     fwrite(STDERR, "Unable to create temp file\n");
     exit(1);
@@ -175,7 +175,7 @@ exit(0);
 /**
  * @return list<string>
  */
-function mirza_read_crontab(string $bin, string $user): array
+function modasr_read_crontab(string $bin, string $user): array
 {
     $cmd = escapeshellarg($bin) . ' -u ' . escapeshellarg($user) . ' -l 2>/dev/null';
     $raw = (string) shell_exec($cmd);
@@ -190,7 +190,7 @@ function mirza_read_crontab(string $bin, string $user): array
     }));
 }
 
-function mirza_is_bot_root(string $root): bool
+function modasr_is_bot_root(string $root): bool
 {
     $root = rtrim($root, '/');
     return is_file($root . '/config.php')
@@ -199,7 +199,7 @@ function mirza_is_bot_root(string $root): bool
         && strpos($root, '/vpnbot/') === false;
 }
 
-function mirza_is_cronbot_line(string $line): bool
+function modasr_is_cronbot_line(string $line): bool
 {
     return strpos($line, '/cronbot/') !== false;
 }
@@ -208,11 +208,11 @@ function mirza_is_cronbot_line(string $line): bool
  * @param array<string, string> $hostMap
  * @param array<string, string> $domainRoots
  */
-function mirza_root_from_cron_line(string $line, array $hostMap, array $domainRoots): ?string
+function modasr_root_from_cron_line(string $line, array $hostMap, array $domainRoots): ?string
 {
     if (preg_match('#(/[^\\s]+)/cronbot/(?:run\\.php|[A-Za-z0-9_]+\\.php)#', $line, $m)) {
         $root = $m[1];
-        if (mirza_is_bot_root($root)) {
+        if (modasr_is_bot_root($root)) {
             return $root;
         }
     }
@@ -221,7 +221,7 @@ function mirza_root_from_cron_line(string $line, array $hostMap, array $domainRo
         if (isset($domainRoots[$host])) {
             return $domainRoots[$host];
         }
-        if (isset($hostMap[$host]) && mirza_is_bot_root($hostMap[$host])) {
+        if (isset($hostMap[$host]) && modasr_is_bot_root($hostMap[$host])) {
             return $hostMap[$host];
         }
     }
@@ -233,13 +233,13 @@ function mirza_root_from_cron_line(string $line, array $hostMap, array $domainRo
  * @param list<string> $lines
  * @return list<string>
  */
-function mirza_roots_from_crontab(array $lines): array
+function modasr_roots_from_crontab(array $lines): array
 {
     $roots = [];
     foreach ($lines as $line) {
         if (preg_match('#(/[^\\s]+)/cronbot/(?:run\\.php|[A-Za-z0-9_]+\\.php)#', $line, $m)) {
             $root = $m[1];
-            if (mirza_is_bot_root($root)) {
+            if (modasr_is_bot_root($root)) {
                 $roots[] = $root;
             }
         }
@@ -251,11 +251,11 @@ function mirza_roots_from_crontab(array $lines): array
 /**
  * @return list<string>
  */
-function mirza_roots_from_vhosts(): array
+function modasr_roots_from_vhosts(): array
 {
     $roots = [];
-    foreach (mirza_vhost_host_map() as $root) {
-        if (mirza_is_bot_root($root)) {
+    foreach (modasr_vhost_host_map() as $root) {
+        if (modasr_is_bot_root($root)) {
             $roots[] = $root;
         }
     }
@@ -266,7 +266,7 @@ function mirza_roots_from_vhosts(): array
 /**
  * @return array<string, string> host => document root
  */
-function mirza_vhost_host_map(): array
+function modasr_vhost_host_map(): array
 {
     static $map;
     if (is_array($map)) {
@@ -322,7 +322,7 @@ function mirza_vhost_host_map(): array
 /**
  * @return list<string>
  */
-function mirza_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
+function modasr_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
 {
     $found = [];
     if ($depth > $maxDepth || !is_dir($dir)) {
@@ -334,7 +334,7 @@ function mirza_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
         return $found;
     }
 
-    if (mirza_is_bot_root($dir)) {
+    if (modasr_is_bot_root($dir)) {
         return [$dir];
     }
 
@@ -350,7 +350,7 @@ function mirza_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
         if (!is_dir($path) || is_link($path)) {
             continue;
         }
-        foreach (mirza_scan_bot_roots($path, $maxDepth, $depth + 1) as $root) {
+        foreach (modasr_scan_bot_roots($path, $maxDepth, $depth + 1) as $root) {
             $found[] = $root;
         }
     }
@@ -358,7 +358,7 @@ function mirza_scan_bot_roots(string $dir, int $maxDepth, int $depth = 0): array
     return $found;
 }
 
-function mirza_domain_from_config(string $root): string
+function modasr_domain_from_config(string $root): string
 {
     $config = @file_get_contents($root . '/config.php');
     if (!is_string($config)) {

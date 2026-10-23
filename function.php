@@ -1888,7 +1888,7 @@ function addCronIfNotExists($cronCommand)
         return false;
     }
 
-    $applyMarker = 'MIRZA_CRON_OK';
+    $applyMarker = 'MODASR_CRON_OK';
     $applyOutput = runShellCommand(sprintf(
         '%s %s >/dev/null 2>&1 && echo %s',
         escapeshellarg($crontabBinary),
@@ -1934,7 +1934,7 @@ function activecron()
     removeCron("https://$domainhosts/cronbot/");
     removeCron(__DIR__ . '/cronbot/');
 
-    addCronIfNotExists(mirza_cron_dispatcher_command($domainhosts));
+    addCronIfNotExists(modasr_cron_dispatcher_command($domainhosts));
 }
 function createInvoice($amount)
 {
@@ -2390,7 +2390,7 @@ function createqrcode($contents)
 }
 function qrTempPath($filename)
 {
-    $dir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'mirzabot_qr';
+    $dir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'modasrbot_qr';
     if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
         $dir = sys_get_temp_dir();
     }
@@ -2718,7 +2718,7 @@ function parseConfigs($input)
     return $configs;
 }
 
-function mirzaRemoveInstallerPath($path)
+function modasrRemoveInstallerPath($path)
 {
     if (is_link($path) || is_file($path)) {
         return @unlink($path);
@@ -2737,13 +2737,13 @@ function mirzaRemoveInstallerPath($path)
         if ($entry === '.' || $entry === '..') {
             continue;
         }
-        $removed = mirzaRemoveInstallerPath($path . '/' . $entry) && $removed;
+        $removed = modasrRemoveInstallerPath($path . '/' . $entry) && $removed;
     }
 
     return @rmdir($path) && $removed;
 }
 
-function mirzaInstallerNoticeTexts()
+function modasrInstallerNoticeTexts()
 {
     global $textbotlang;
     $lang = is_array($textbotlang) && !empty($textbotlang) ? $textbotlang : null;
@@ -2757,7 +2757,7 @@ function mirzaInstallerNoticeTexts()
     ];
 }
 
-function mirzaShouldAlertInstallerAdmin($cooldown = 3600)
+function modasrShouldAlertInstallerAdmin($cooldown = 3600)
 {
     $cacheDir = __DIR__ . '/storage/cache';
     if (!is_dir($cacheDir) && !@mkdir($cacheDir, 0775, true) && !is_dir($cacheDir)) {
@@ -2772,28 +2772,28 @@ function mirzaShouldAlertInstallerAdmin($cooldown = 3600)
     return true;
 }
 
-function mirzaNotifyInstallerBlocked()
+function modasrNotifyInstallerBlocked()
 {
     global $from_id, $adminnumber;
     if (!function_exists('sendmessage')) {
         return;
     }
-    $texts = mirzaInstallerNoticeTexts();
+    $texts = modasrInstallerNoticeTexts();
     $adminId = isset($adminnumber) ? trim((string) $adminnumber) : '';
     $userId = isset($from_id) ? trim((string) $from_id) : '';
     $userIsAdmin = $adminId !== '' && $userId === $adminId;
     if ($userId !== '' && !isTelegramChatIdEmpty($userId)) {
         sendmessage($userId, $userIsAdmin ? $texts['admin'] : $texts['user'], null, 'HTML');
     }
-    if (!$userIsAdmin && $adminId !== '' && mirzaShouldAlertInstallerAdmin()) {
+    if (!$userIsAdmin && $adminId !== '' && modasrShouldAlertInstallerAdmin()) {
         sendmessage($adminId, $texts['admin'], null, 'HTML');
     }
 }
 
-function mirzaStopForInstaller($message)
+function modasrStopForInstaller($message)
 {
     error_log($message);
-    mirzaNotifyInstallerBlocked();
+    modasrNotifyInstallerBlocked();
     if (!headers_sent()) {
         http_response_code(200);
         header('Content-Type: text/plain; charset=utf-8');
@@ -2803,14 +2803,14 @@ function mirzaStopForInstaller($message)
     exit;
 }
 
-function mirzaEnsureInstallerRemoved()
+function modasrEnsureInstallerRemoved()
 {
     $installerDirectory = __DIR__ . '/install';
     if (!is_dir($installerDirectory)) {
         return;
     }
 
-    if (!mirzaRemoveInstallerPath($installerDirectory)) {
-        mirzaStopForInstaller('MODASR install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
+    if (!modasrRemoveInstallerPath($installerDirectory)) {
+        modasrStopForInstaller('MODASR install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
     }
 }

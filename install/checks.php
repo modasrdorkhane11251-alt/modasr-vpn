@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-function mirza_install_root(): string
+function modasr_install_root(): string
 {
     return dirname(__DIR__);
 }
 
-function mirza_install_lock_file(): string
+function modasr_install_lock_file(): string
 {
     return __DIR__ . '/.installed';
 }
 
-function mirza_install_state_dir(): string
+function modasr_install_state_dir(): string
 {
     $directory = __DIR__ . '/state';
     if (!is_dir($directory)) {
@@ -22,7 +22,7 @@ function mirza_install_state_dir(): string
     return $directory;
 }
 
-function mirza_install_result(array $items): array
+function modasr_install_result(array $items): array
 {
     $failed = 0;
     $warned = 0;
@@ -42,7 +42,7 @@ function mirza_install_result(array $items): array
     ];
 }
 
-function mirza_install_item(string $status, string $label, string $value = '', string $hint = ''): array
+function modasr_install_item(string $status, string $label, string $value = '', string $hint = ''): array
 {
     return [
         'status' => $status,
@@ -52,7 +52,7 @@ function mirza_install_item(string $status, string $label, string $value = '', s
     ];
 }
 
-function mirza_install_host(): string
+function modasr_install_host(): string
 {
     $host = $_SERVER['HTTP_HOST'] ?? ($_SERVER['SERVER_NAME'] ?? '');
     $host = strtolower(trim((string) $host));
@@ -61,7 +61,7 @@ function mirza_install_host(): string
     return (string) $host;
 }
 
-function mirza_install_base_path(): string
+function modasr_install_base_path(): string
 {
     $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? '/install/index.php'));
     $directory = rtrim(dirname($scriptName), '/');
@@ -70,12 +70,12 @@ function mirza_install_base_path(): string
     return $base === '/' ? '' : (string) $base;
 }
 
-function mirza_install_base_url(): string
+function modasr_install_base_url(): string
 {
-    return 'https://' . mirza_install_host() . mirza_install_base_path();
+    return 'https://' . modasr_install_host() . modasr_install_base_path();
 }
 
-function mirza_install_is_https(): bool
+function modasr_install_is_https(): bool
 {
     if (!empty($_SERVER['HTTPS']) && strtolower((string) $_SERVER['HTTPS']) !== 'off') {
         return true;
@@ -90,25 +90,25 @@ function mirza_install_is_https(): bool
     return false;
 }
 
-function mirza_install_php_check(): array
+function modasr_install_php_check(): array
 {
     $items = [];
 
     $minimumVersion = '8.5.12';
     $items[] = version_compare(PHP_VERSION, $minimumVersion, '>=')
-        ? mirza_install_item('ok', 'نسخه PHP', PHP_VERSION, 'حداقل نسخه موردنیاز ' . $minimumVersion . ' است.')
-        : mirza_install_item('fail', 'نسخه PHP', PHP_VERSION, 'نسخه PHP باید ' . $minimumVersion . ' یا بالاتر باشد. از بخش Select PHP Version (یا MultiPHP Manager) در کنترل پنل هاست نسخه 8.5 را انتخاب کنید؛ اگر هاست این نسخه را ندارد از پشتیبانی هاست ارتقای PHP را بخواهید.');
+        ? modasr_install_item('ok', 'نسخه PHP', PHP_VERSION, 'حداقل نسخه موردنیاز ' . $minimumVersion . ' است.')
+        : modasr_install_item('fail', 'نسخه PHP', PHP_VERSION, 'نسخه PHP باید ' . $minimumVersion . ' یا بالاتر باشد. از بخش Select PHP Version (یا MultiPHP Manager) در کنترل پنل هاست نسخه 8.5 را انتخاب کنید؛ اگر هاست این نسخه را ندارد از پشتیبانی هاست ارتقای PHP را بخواهید.');
 
     if (version_compare(PHP_VERSION, '9.0.0', '>=')) {
-        $items[] = mirza_install_item('warn', 'سازگاری نسخه', PHP_VERSION, 'این نسخه هنوز روی ربات تست نشده است؛ نسخه 8.5 پیشنهاد می‌شود.');
+        $items[] = modasr_install_item('warn', 'سازگاری نسخه', PHP_VERSION, 'این نسخه هنوز روی ربات تست نشده است؛ نسخه 8.5 پیشنهاد می‌شود.');
     }
 
-    $items[] = mirza_install_item('ok', 'SAPI اجرایی', PHP_SAPI);
+    $items[] = modasr_install_item('ok', 'SAPI اجرایی', PHP_SAPI);
 
     return $items;
 }
 
-function mirza_install_webserver_check(): array
+function modasr_install_webserver_check(): array
 {
     $items = [];
     $software = trim((string) ($_SERVER['SERVER_SOFTWARE'] ?? ''));
@@ -116,26 +116,26 @@ function mirza_install_webserver_check(): array
     $isLiteSpeed = stripos($software, 'litespeed') !== false || stripos($software, 'lsws') !== false;
 
     if ($isApache) {
-        $items[] = mirza_install_item('ok', 'وب‌سرور', $software !== '' ? $software : 'Apache');
+        $items[] = modasr_install_item('ok', 'وب‌سرور', $software !== '' ? $software : 'Apache');
     } elseif ($isLiteSpeed) {
-        $items[] = mirza_install_item('warn', 'وب‌سرور', $software, 'LiteSpeed شناسایی شد. با فایل‌های .htaccess آپاچی سازگار است و ربات کار می‌کند، اما وب‌سرور رسمی پشتیبانی‌شده آپاچی است.');
+        $items[] = modasr_install_item('warn', 'وب‌سرور', $software, 'LiteSpeed شناسایی شد. با فایل‌های .htaccess آپاچی سازگار است و ربات کار می‌کند، اما وب‌سرور رسمی پشتیبانی‌شده آپاچی است.');
     } elseif ($software === '') {
-        $items[] = mirza_install_item('fail', 'وب‌سرور', 'نامشخص', 'نام وب‌سرور قابل تشخیص نیست. ربات به آپاچی و پشتیبانی از .htaccess نیاز دارد.');
+        $items[] = modasr_install_item('fail', 'وب‌سرور', 'نامشخص', 'نام وب‌سرور قابل تشخیص نیست. ربات به آپاچی و پشتیبانی از .htaccess نیاز دارد.');
     } else {
-        $items[] = mirza_install_item('fail', 'وب‌سرور', $software, 'وب‌سرور آپاچی نیست. مسیرهای بازنویسی (.htaccess) در پوشه api کار نخواهد کرد.');
+        $items[] = modasr_install_item('fail', 'وب‌سرور', $software, 'وب‌سرور آپاچی نیست. مسیرهای بازنویسی (.htaccess) در پوشه api کار نخواهد کرد.');
     }
 
     if (function_exists('apache_get_modules')) {
         $modules = apache_get_modules();
         $items[] = in_array('mod_rewrite', $modules, true)
-            ? mirza_install_item('ok', 'ماژول mod_rewrite', 'فعال')
-            : mirza_install_item('fail', 'ماژول mod_rewrite', 'غیرفعال', 'برای مسیرهای api باید mod_rewrite فعال باشد.');
+            ? modasr_install_item('ok', 'ماژول mod_rewrite', 'فعال')
+            : modasr_install_item('fail', 'ماژول mod_rewrite', 'غیرفعال', 'برای مسیرهای api باید mod_rewrite فعال باشد.');
     }
 
     return $items;
 }
 
-function mirza_install_required_extensions(): array
+function modasr_install_required_extensions(): array
 {
     return [
         'curl' => 'ارتباط با تلگرام و پنل‌ها',
@@ -160,7 +160,7 @@ function mirza_install_required_extensions(): array
     ];
 }
 
-function mirza_install_optional_extensions(): array
+function modasr_install_optional_extensions(): array
 {
     return [
         'intl' => 'قالب‌بندی عدد و تاریخ در خروجی اکسل',
@@ -170,26 +170,26 @@ function mirza_install_optional_extensions(): array
     ];
 }
 
-function mirza_install_extensions_check(): array
+function modasr_install_extensions_check(): array
 {
     $items = [];
 
-    foreach (mirza_install_required_extensions() as $extension => $reason) {
+    foreach (modasr_install_required_extensions() as $extension => $reason) {
         $items[] = extension_loaded($extension)
-            ? mirza_install_item('ok', 'اکستنشن ' . $extension, 'نصب است', $reason)
-            : mirza_install_item('fail', 'اکستنشن ' . $extension, 'نصب نیست', $reason . ' — از بخش PHP Extensions کنترل پنل هاست فعالش کنید.');
+            ? modasr_install_item('ok', 'اکستنشن ' . $extension, 'نصب است', $reason)
+            : modasr_install_item('fail', 'اکستنشن ' . $extension, 'نصب نیست', $reason . ' — از بخش PHP Extensions کنترل پنل هاست فعالش کنید.');
     }
 
-    foreach (mirza_install_optional_extensions() as $extension => $reason) {
+    foreach (modasr_install_optional_extensions() as $extension => $reason) {
         if (!extension_loaded($extension)) {
-            $items[] = mirza_install_item('warn', 'اکستنشن ' . $extension, 'نصب نیست', $reason . ' — اختیاری است.');
+            $items[] = modasr_install_item('warn', 'اکستنشن ' . $extension, 'نصب نیست', $reason . ' — اختیاری است.');
         }
     }
 
     return $items;
 }
 
-function mirza_install_disabled_functions(): array
+function modasr_install_disabled_functions(): array
 {
     $raw = (string) ini_get('disable_functions');
     if (trim($raw) === '') {
@@ -199,51 +199,51 @@ function mirza_install_disabled_functions(): array
     return array_filter(array_map('trim', explode(',', $raw)));
 }
 
-function mirza_install_shell_exec_available(): bool
+function modasr_install_shell_exec_available(): bool
 {
-    return function_exists('shell_exec') && !in_array('shell_exec', mirza_install_disabled_functions(), true);
+    return function_exists('shell_exec') && !in_array('shell_exec', modasr_install_disabled_functions(), true);
 }
 
-function mirza_install_ini_check(): array
+function modasr_install_ini_check(): array
 {
     $items = [];
-    $disabled = mirza_install_disabled_functions();
+    $disabled = modasr_install_disabled_functions();
     $criticalFunctions = ['curl_init', 'curl_exec', 'file_get_contents', 'file_put_contents', 'fopen', 'json_encode'];
 
     foreach ($criticalFunctions as $criticalFunction) {
         if (!function_exists($criticalFunction) || in_array($criticalFunction, $disabled, true)) {
-            $items[] = mirza_install_item('fail', 'تابع ' . $criticalFunction, 'غیرفعال', 'این تابع برای کارکرد ربات ضروری است و روی هاست غیرفعال شده است.');
+            $items[] = modasr_install_item('fail', 'تابع ' . $criticalFunction, 'غیرفعال', 'این تابع برای کارکرد ربات ضروری است و روی هاست غیرفعال شده است.');
         }
     }
 
-    $items[] = mirza_install_shell_exec_available()
-        ? mirza_install_item('ok', 'تابع shell_exec', 'فعال', 'کرون‌ها خودکار ثبت می‌شوند و مرحله کرون از نصب حذف می‌شود.')
-        : mirza_install_item('warn', 'تابع shell_exec', 'غیرفعال', 'ثبت خودکار کرون ممکن نیست و باید کرون‌ها را دستی ست کنید (در گام کرون آموزش داده می‌شود). همچنین پشتیبان‌گیری خودکار ربات‌ساز غیرفعال خواهد بود.');
+    $items[] = modasr_install_shell_exec_available()
+        ? modasr_install_item('ok', 'تابع shell_exec', 'فعال', 'کرون‌ها خودکار ثبت می‌شوند و مرحله کرون از نصب حذف می‌شود.')
+        : modasr_install_item('warn', 'تابع shell_exec', 'غیرفعال', 'ثبت خودکار کرون ممکن نیست و باید کرون‌ها را دستی ست کنید (در گام کرون آموزش داده می‌شود). همچنین پشتیبان‌گیری خودکار ربات‌ساز غیرفعال خواهد بود.');
 
     $memoryLimit = (string) ini_get('memory_limit');
-    $memoryBytes = mirza_install_bytes($memoryLimit);
+    $memoryBytes = modasr_install_bytes($memoryLimit);
     $items[] = ($memoryBytes === -1 || $memoryBytes >= 134217728)
-        ? mirza_install_item('ok', 'memory_limit', $memoryLimit)
-        : mirza_install_item('warn', 'memory_limit', $memoryLimit, 'حداقل 128M پیشنهاد می‌شود.');
+        ? modasr_install_item('ok', 'memory_limit', $memoryLimit)
+        : modasr_install_item('warn', 'memory_limit', $memoryLimit, 'حداقل 128M پیشنهاد می‌شود.');
 
     $executionTime = (int) ini_get('max_execution_time');
     $items[] = ($executionTime === 0 || $executionTime >= 60)
-        ? mirza_install_item('ok', 'max_execution_time', $executionTime === 0 ? 'نامحدود' : $executionTime . ' ثانیه')
-        : mirza_install_item('warn', 'max_execution_time', $executionTime . ' ثانیه', 'حداقل 60 ثانیه پیشنهاد می‌شود؛ ساخت جداول و پشتیبان‌گیری زمان‌بر است.');
+        ? modasr_install_item('ok', 'max_execution_time', $executionTime === 0 ? 'نامحدود' : $executionTime . ' ثانیه')
+        : modasr_install_item('warn', 'max_execution_time', $executionTime . ' ثانیه', 'حداقل 60 ثانیه پیشنهاد می‌شود؛ ساخت جداول و پشتیبان‌گیری زمان‌بر است.');
 
     $uploadSize = (string) ini_get('upload_max_filesize');
-    $items[] = mirza_install_bytes($uploadSize) >= 8388608
-        ? mirza_install_item('ok', 'upload_max_filesize', $uploadSize)
-        : mirza_install_item('warn', 'upload_max_filesize', $uploadSize, 'حداقل 8M پیشنهاد می‌شود.');
+    $items[] = modasr_install_bytes($uploadSize) >= 8388608
+        ? modasr_install_item('ok', 'upload_max_filesize', $uploadSize)
+        : modasr_install_item('warn', 'upload_max_filesize', $uploadSize, 'حداقل 8M پیشنهاد می‌شود.');
 
     $items[] = ini_get('allow_url_fopen')
-        ? mirza_install_item('ok', 'allow_url_fopen', 'فعال')
-        : mirza_install_item('fail', 'allow_url_fopen', 'غیرفعال', 'برای دریافت فایل‌ها و تصاویر از آدرس‌های خارجی ضروری است. از بخش تنظیمات PHP کنترل پنل هاست (MultiPHP INI Editor یا PHP Settings) گزینه allow_url_fopen را روی On بگذارید.');
+        ? modasr_install_item('ok', 'allow_url_fopen', 'فعال')
+        : modasr_install_item('fail', 'allow_url_fopen', 'غیرفعال', 'برای دریافت فایل‌ها و تصاویر از آدرس‌های خارجی ضروری است. از بخش تنظیمات PHP کنترل پنل هاست (MultiPHP INI Editor یا PHP Settings) گزینه allow_url_fopen را روی On بگذارید.');
 
     return $items;
 }
 
-function mirza_install_bytes(string $value): int
+function modasr_install_bytes(string $value): int
 {
     $value = trim($value);
     if ($value === '') {
@@ -269,69 +269,69 @@ function mirza_install_bytes(string $value): int
     return $number;
 }
 
-function mirza_install_ssl_check(): array
+function modasr_install_ssl_check(): array
 {
     $items = [];
-    $host = mirza_install_host();
+    $host = modasr_install_host();
 
     if ($host === '') {
-        return [mirza_install_item('fail', 'دامنه', 'نامشخص', 'دامنه از روی درخواست قابل تشخیص نیست.')];
+        return [modasr_install_item('fail', 'دامنه', 'نامشخص', 'دامنه از روی درخواست قابل تشخیص نیست.')];
     }
 
-    $items[] = mirza_install_item('ok', 'دامنه نصب', $host);
+    $items[] = modasr_install_item('ok', 'دامنه نصب', $host);
 
     if (filter_var($host, FILTER_VALIDATE_IP)) {
-        $items[] = mirza_install_item('fail', 'نوع آدرس', 'آی‌پی', 'تلگرام برای وبهوک به دامنه با گواهی معتبر نیاز دارد؛ نصب روی آی‌پی خام ممکن نیست.');
+        $items[] = modasr_install_item('fail', 'نوع آدرس', 'آی‌پی', 'تلگرام برای وبهوک به دامنه با گواهی معتبر نیاز دارد؛ نصب روی آی‌پی خام ممکن نیست.');
 
         return $items;
     }
 
-    $items[] = mirza_install_is_https()
-        ? mirza_install_item('ok', 'اتصال فعلی', 'HTTPS')
-        : mirza_install_item('warn', 'اتصال فعلی', 'HTTP', 'این صفحه را با https باز کنید تا اطلاعات ورودی رمزنگاری شود.');
+    $items[] = modasr_install_is_https()
+        ? modasr_install_item('ok', 'اتصال فعلی', 'HTTPS')
+        : modasr_install_item('warn', 'اتصال فعلی', 'HTTP', 'این صفحه را با https باز کنید تا اطلاعات ورودی رمزنگاری شود.');
 
-    $certificate = mirza_install_read_certificate($host);
+    $certificate = modasr_install_read_certificate($host);
 
     if ($certificate === null) {
-        $items[] = mirza_install_item('fail', 'گواهی SSL', 'در دسترس نیست', 'اتصال امن به https://' . $host . ' برقرار نشد. از بخش SSL هاست (یا Let\'s Encrypt) گواهی نصب کنید.');
+        $items[] = modasr_install_item('fail', 'گواهی SSL', 'در دسترس نیست', 'اتصال امن به https://' . $host . ' برقرار نشد. از بخش SSL هاست (یا Let\'s Encrypt) گواهی نصب کنید.');
 
         return $items;
     }
 
     if (!empty($certificate['error'])) {
-        $items[] = mirza_install_item('fail', 'گواهی SSL', 'نامعتبر', (string) $certificate['error']);
+        $items[] = modasr_install_item('fail', 'گواهی SSL', 'نامعتبر', (string) $certificate['error']);
 
         return $items;
     }
 
-    $items[] = mirza_install_item('ok', 'گواهی SSL', 'معتبر', 'صادرکننده: ' . $certificate['issuer']);
+    $items[] = modasr_install_item('ok', 'گواهی SSL', 'معتبر', 'صادرکننده: ' . $certificate['issuer']);
 
     $daysLeft = (int) $certificate['days_left'];
     if ($daysLeft < 0) {
-        $items[] = mirza_install_item('fail', 'اعتبار گواهی', 'منقضی شده', 'تاریخ انقضا: ' . $certificate['valid_to']);
+        $items[] = modasr_install_item('fail', 'اعتبار گواهی', 'منقضی شده', 'تاریخ انقضا: ' . $certificate['valid_to']);
     } elseif ($daysLeft < 15) {
-        $items[] = mirza_install_item('warn', 'اعتبار گواهی', $daysLeft . ' روز', 'تاریخ انقضا: ' . $certificate['valid_to'] . ' — به‌زودی باید تمدید شود.');
+        $items[] = modasr_install_item('warn', 'اعتبار گواهی', $daysLeft . ' روز', 'تاریخ انقضا: ' . $certificate['valid_to'] . ' — به‌زودی باید تمدید شود.');
     } else {
-        $items[] = mirza_install_item('ok', 'اعتبار گواهی', $daysLeft . ' روز مانده', 'تاریخ انقضا: ' . $certificate['valid_to']);
+        $items[] = modasr_install_item('ok', 'اعتبار گواهی', $daysLeft . ' روز مانده', 'تاریخ انقضا: ' . $certificate['valid_to']);
     }
 
     if (!$certificate['host_match']) {
-        $items[] = mirza_install_item('fail', 'تطابق دامنه گواهی', 'ناسازگار', 'گواهی برای دامنه ' . $host . ' صادر نشده است.');
+        $items[] = modasr_install_item('fail', 'تطابق دامنه گواهی', 'ناسازگار', 'گواهی برای دامنه ' . $host . ' صادر نشده است.');
     } else {
-        $items[] = mirza_install_item('ok', 'تطابق دامنه گواهی', 'سازگار');
+        $items[] = modasr_install_item('ok', 'تطابق دامنه گواهی', 'سازگار');
     }
 
-    $reachable = mirza_install_http_probe(mirza_install_base_url() . '/install/probe.php');
-    if ($reachable['ok'] && strpos((string) $reachable['body'], 'MIRZA_REWRITE_OK') !== false) {
-        $items[] = mirza_install_item('ok', 'دسترسی خارجی به دامنه', 'برقرار', 'تلگرام می‌تواند به وبهوک متصل شود.');
+    $reachable = modasr_install_http_probe(modasr_install_base_url() . '/install/probe.php');
+    if ($reachable['ok'] && strpos((string) $reachable['body'], 'MODASR_REWRITE_OK') !== false) {
+        $items[] = modasr_install_item('ok', 'دسترسی خارجی به دامنه', 'برقرار', 'تلگرام می‌تواند به وبهوک متصل شود.');
     } else {
-        $items[] = mirza_install_item('warn', 'دسترسی خارجی به دامنه', 'تأیید نشد', 'درخواست HTTPS از خود سرور به دامنه پاسخ نداد: ' . $reachable['error'] . ' — اگر هاست اتصال حلقه‌ای را مسدود کرده باشد طبیعی است.');
+        $items[] = modasr_install_item('warn', 'دسترسی خارجی به دامنه', 'تأیید نشد', 'درخواست HTTPS از خود سرور به دامنه پاسخ نداد: ' . $reachable['error'] . ' — اگر هاست اتصال حلقه‌ای را مسدود کرده باشد طبیعی است.');
     }
 
     return $items;
 }
 
-function mirza_install_read_certificate(string $host): ?array
+function modasr_install_read_certificate(string $host): ?array
 {
     if (!function_exists('stream_socket_client') || !function_exists('openssl_x509_parse')) {
         return null;
@@ -393,11 +393,11 @@ function mirza_install_read_certificate(string $host): ?array
         'issuer' => (string) ($parsed['issuer']['O'] ?? ($parsed['issuer']['CN'] ?? 'نامشخص')),
         'valid_to' => $validTo > 0 ? date('Y-m-d H:i', $validTo) : 'نامشخص',
         'days_left' => $validTo > 0 ? (int) floor(($validTo - time()) / 86400) : 0,
-        'host_match' => mirza_install_host_matches_certificate($host, $names),
+        'host_match' => modasr_install_host_matches_certificate($host, $names),
     ];
 }
 
-function mirza_install_host_matches_certificate(string $host, array $names): bool
+function modasr_install_host_matches_certificate(string $host, array $names): bool
 {
     foreach ($names as $name) {
         $name = strtolower(trim($name));
@@ -415,7 +415,7 @@ function mirza_install_host_matches_certificate(string $host, array $names): boo
     return false;
 }
 
-function mirza_install_http_probe(string $url, int $timeout = 12): array
+function modasr_install_http_probe(string $url, int $timeout = 12): array
 {
     if (!function_exists('curl_init')) {
         return ['ok' => false, 'body' => '', 'code' => 0, 'error' => 'اکستنشن curl در دسترس نیست'];
@@ -431,7 +431,7 @@ function mirza_install_http_probe(string $url, int $timeout = 12): array
         CURLOPT_CONNECTTIMEOUT => $timeout,
         CURLOPT_SSL_VERIFYPEER => true,
         CURLOPT_SSL_VERIFYHOST => 2,
-        CURLOPT_USERAGENT => 'MirzaInstaller',
+        CURLOPT_USERAGENT => 'MODASRInstaller',
     ]);
 
     $body = curl_exec($handle);
@@ -447,7 +447,7 @@ function mirza_install_http_probe(string $url, int $timeout = 12): array
     ];
 }
 
-function mirza_install_required_directories(): array
+function modasr_install_required_directories(): array
 {
     return [
         'api' => 'وب‌سرویس مینی‌اپ',
@@ -466,7 +466,7 @@ function mirza_install_required_directories(): array
     ];
 }
 
-function mirza_install_required_files(): array
+function modasr_install_required_files(): array
 {
     return [
         'index.php' => 'ورودی وبهوک تلگرام',
@@ -498,7 +498,7 @@ function mirza_install_required_files(): array
         'panels/Api/hiddify.php' => 'پنل هیدیفای',
         'panels/Api/x-ui_single.php' => 'پنل X-UI',
         'panels/Api/mikrotik.php' => 'پنل میکروتیک',
-        'panels/Api/mirza_agent.php' => 'ایجنت مدثر',
+        'panels/Api/modasr_agent.php' => 'ایجنت مدثر',
         'panels/Api/Rebeca.php' => 'پنل ربکا',
         'panels/Api/nexora.php' => 'پنل Nexora',
         'panels/Api/wgmate.php' => 'پنل WG-Mate',
@@ -507,12 +507,12 @@ function mirza_install_required_files(): array
     ];
 }
 
-function mirza_install_required_htaccess(): array
+function modasr_install_required_htaccess(): array
 {
     return ['.htaccess', 'api/.htaccess', 'app/.htaccess', 'cronbot/.htaccess', 'sub/.htaccess'];
 }
 
-function mirza_install_writable_paths(): array
+function modasr_install_writable_paths(): array
 {
     return [
         '.' => 'ذخیره لاگ و فایل‌های موقت ربات',
@@ -523,110 +523,110 @@ function mirza_install_writable_paths(): array
     ];
 }
 
-function mirza_install_paths_check(): array
+function modasr_install_paths_check(): array
 {
     $items = [];
-    $root = mirza_install_root();
+    $root = modasr_install_root();
 
-    foreach (mirza_install_required_directories() as $directory => $reason) {
+    foreach (modasr_install_required_directories() as $directory => $reason) {
         $items[] = is_dir($root . '/' . $directory)
-            ? mirza_install_item('ok', 'پوشه ' . $directory, 'موجود است', $reason)
-            : mirza_install_item('fail', 'پوشه ' . $directory, 'یافت نشد', $reason . ($directory === 'vendor' ? ' — به‌جای زیپ سورس گیت‌هاب، فایل mirzabot-hosting-<نسخه>.zip را از بخش Releases دانلود و در ریشه هاست اکسترکت کنید؛ آن نسخه شامل پوشه vendor است.' : ' — فایل‌های سورس ناقص آپلود شده‌اند.'));
+            ? modasr_install_item('ok', 'پوشه ' . $directory, 'موجود است', $reason)
+            : modasr_install_item('fail', 'پوشه ' . $directory, 'یافت نشد', $reason . ($directory === 'vendor' ? ' — به‌جای زیپ سورس گیت‌هاب، فایل modasrbot-hosting-<نسخه>.zip را از بخش Releases دانلود و در ریشه هاست اکسترکت کنید؛ آن نسخه شامل پوشه vendor است.' : ' — فایل‌های سورس ناقص آپلود شده‌اند.'));
     }
 
     $missingFiles = [];
-    foreach (mirza_install_required_files() as $file => $reason) {
+    foreach (modasr_install_required_files() as $file => $reason) {
         if (!is_file($root . '/' . $file)) {
             $missingFiles[] = $file;
-            $items[] = mirza_install_item('fail', 'فایل ' . $file, 'یافت نشد', $reason);
+            $items[] = modasr_install_item('fail', 'فایل ' . $file, 'یافت نشد', $reason);
         }
     }
     if ($missingFiles === []) {
-        $items[] = mirza_install_item('ok', 'فایل‌های اصلی', count(mirza_install_required_files()) . ' فایل بررسی شد', 'همه فایل‌های ضروری سورس موجود هستند.');
+        $items[] = modasr_install_item('ok', 'فایل‌های اصلی', count(modasr_install_required_files()) . ' فایل بررسی شد', 'همه فایل‌های ضروری سورس موجود هستند.');
     }
 
-    foreach (mirza_install_cron_jobs() as $job) {
+    foreach (modasr_install_cron_jobs() as $job) {
         if (!is_file($root . '/cronbot/' . $job['job'] . '.php')) {
-            $items[] = mirza_install_item('fail', 'فایل cronbot/' . $job['job'] . '.php', 'یافت نشد', $job['title']);
+            $items[] = modasr_install_item('fail', 'فایل cronbot/' . $job['job'] . '.php', 'یافت نشد', $job['title']);
         }
     }
     foreach (['jobs.php' => 'فهرست کارهای کرون', 'run.php' => 'اجرای کرون ربات'] as $file => $reason) {
         $items[] = is_file($root . '/cronbot/' . $file)
-            ? mirza_install_item('ok', 'فایل cronbot/' . $file, 'موجود است', $reason)
-            : mirza_install_item('fail', 'فایل cronbot/' . $file, 'یافت نشد', $reason);
+            ? modasr_install_item('ok', 'فایل cronbot/' . $file, 'موجود است', $reason)
+            : modasr_install_item('fail', 'فایل cronbot/' . $file, 'یافت نشد', $reason);
     }
 
     $missingHtaccess = [];
-    foreach (mirza_install_required_htaccess() as $htaccess) {
+    foreach (modasr_install_required_htaccess() as $htaccess) {
         if (!is_file($root . '/' . $htaccess)) {
             $missingHtaccess[] = $htaccess;
         }
     }
     $items[] = $missingHtaccess === []
-        ? mirza_install_item('ok', 'فایل‌های .htaccess', 'کامل است', 'محافظت از فایل‌های حساس فعال است.')
-        : mirza_install_item('fail', 'فایل‌های .htaccess', 'ناقص: ' . implode('، ', $missingHtaccess), 'بدون این فایل‌ها فایل‌های json و پشتیبان از اینترنت قابل دانلود می‌شوند.');
+        ? modasr_install_item('ok', 'فایل‌های .htaccess', 'کامل است', 'محافظت از فایل‌های حساس فعال است.')
+        : modasr_install_item('fail', 'فایل‌های .htaccess', 'ناقص: ' . implode('، ', $missingHtaccess), 'بدون این فایل‌ها فایل‌های json و پشتیبان از اینترنت قابل دانلود می‌شوند.');
 
-    foreach (mirza_install_writable_paths() as $path => $reason) {
+    foreach (modasr_install_writable_paths() as $path => $reason) {
         $absolute = $path === '.' ? $root : $root . '/' . $path;
         if (!is_dir($absolute)) {
             @mkdir($absolute, 0775, true);
         }
         $items[] = is_writable($absolute)
-            ? mirza_install_item('ok', 'دسترسی نوشتن ' . $path, 'دارد', $reason)
-            : mirza_install_item('fail', 'دسترسی نوشتن ' . $path, 'ندارد', $reason . ' — سطح دسترسی این مسیر را روی 755 (یا 775) تنظیم کنید.');
+            ? modasr_install_item('ok', 'دسترسی نوشتن ' . $path, 'دارد', $reason)
+            : modasr_install_item('fail', 'دسترسی نوشتن ' . $path, 'ندارد', $reason . ' — سطح دسترسی این مسیر را روی 755 (یا 775) تنظیم کنید.');
     }
 
-    foreach (mirza_install_document_root_check() as $rootItem) {
+    foreach (modasr_install_document_root_check() as $rootItem) {
         $items[] = $rootItem;
     }
 
-    $items[] = mirza_install_rewrite_check();
-    $items[] = mirza_install_guard_files_check();
-    $items[] = mirza_install_guard_active_check();
+    $items[] = modasr_install_rewrite_check();
+    $items[] = modasr_install_guard_files_check();
+    $items[] = modasr_install_guard_active_check();
 
     $composerLock = $root . '/composer.lock';
     $autoload = $root . '/vendor/autoload.php';
     if (is_file($composerLock) && is_file($autoload)) {
-        $items[] = mirza_install_item('ok', 'وابستگی‌های کامپوزر', 'نصب شده است');
+        $items[] = modasr_install_item('ok', 'وابستگی‌های کامپوزر', 'نصب شده است');
     }
 
     return $items;
 }
 
-function mirza_install_document_root_check(): array
+function modasr_install_document_root_check(): array
 {
     $items = [];
-    $root = mirza_install_root();
+    $root = modasr_install_root();
     $realRoot = realpath($root);
     $documentRoot = (string) ($_SERVER['DOCUMENT_ROOT'] ?? '');
     $realDocumentRoot = $documentRoot !== '' ? realpath($documentRoot) : false;
 
-    $items[] = mirza_install_item('ok', 'مسیر سورس روی هاست', $realRoot === false ? $root : $realRoot);
+    $items[] = modasr_install_item('ok', 'مسیر سورس روی هاست', $realRoot === false ? $root : $realRoot);
 
     if ($realDocumentRoot === false) {
-        $items[] = mirza_install_item('warn', 'ریشه هاست (DOCUMENT_ROOT)', 'قابل تشخیص نیست', 'مطمئن شوید فایل‌ها مستقیماً داخل public_html (یا ریشه ساب‌دامنه) آپلود شده‌اند و داخل زیرپوشه نیستند.');
+        $items[] = modasr_install_item('warn', 'ریشه هاست (DOCUMENT_ROOT)', 'قابل تشخیص نیست', 'مطمئن شوید فایل‌ها مستقیماً داخل public_html (یا ریشه ساب‌دامنه) آپلود شده‌اند و داخل زیرپوشه نیستند.');
     } elseif ($realRoot !== false && rtrim($realRoot, '/') === rtrim($realDocumentRoot, '/')) {
-        $items[] = mirza_install_item('ok', 'آپلود در ریشه هاست', 'تأیید شد', 'سورس ربات مستقیماً در ' . $realDocumentRoot . ' قرار دارد.');
+        $items[] = modasr_install_item('ok', 'آپلود در ریشه هاست', 'تأیید شد', 'سورس ربات مستقیماً در ' . $realDocumentRoot . ' قرار دارد.');
     } else {
-        $items[] = mirza_install_item('fail', 'آپلود در ریشه هاست', 'در زیرپوشه است', 'ریشه هاست ' . $realDocumentRoot . ' است ولی سورس در ' . $realRoot . ' آپلود شده. همه فایل‌ها و پوشه‌های ربات را مستقیماً داخل ریشه هاست (public_html یا ریشه ساب‌دامنه) منتقل کنید؛ آدرس وبهوک و کرون‌ها فقط با نصب در ریشه کار می‌کنند.');
+        $items[] = modasr_install_item('fail', 'آپلود در ریشه هاست', 'در زیرپوشه است', 'ریشه هاست ' . $realDocumentRoot . ' است ولی سورس در ' . $realRoot . ' آپلود شده. همه فایل‌ها و پوشه‌های ربات را مستقیماً داخل ریشه هاست (public_html یا ریشه ساب‌دامنه) منتقل کنید؛ آدرس وبهوک و کرون‌ها فقط با نصب در ریشه کار می‌کنند.');
     }
 
-    $items[] = mirza_install_base_path() === ''
-        ? mirza_install_item('ok', 'آدرس وب ربات', mirza_install_base_url() . '/index.php')
-        : mirza_install_item('fail', 'آدرس وب ربات', mirza_install_base_url() . '/index.php', 'ربات از زیرمسیر ' . mirza_install_base_path() . ' سرو می‌شود. آدرس وبهوک و کرون‌ها بر اساس ریشه دامنه ساخته می‌شوند و در زیرپوشه کار نمی‌کنند.');
+    $items[] = modasr_install_base_path() === ''
+        ? modasr_install_item('ok', 'آدرس وب ربات', modasr_install_base_url() . '/index.php')
+        : modasr_install_item('fail', 'آدرس وب ربات', modasr_install_base_url() . '/index.php', 'ربات از زیرمسیر ' . modasr_install_base_path() . ' سرو می‌شود. آدرس وبهوک و کرون‌ها بر اساس ریشه دامنه ساخته می‌شوند و در زیرپوشه کار نمی‌کنند.');
 
     $installerPath = __DIR__;
     $expectedInstaller = ($realRoot === false ? $root : $realRoot) . '/install';
     if (rtrim(str_replace('\\', '/', $installerPath), '/') !== rtrim(str_replace('\\', '/', $expectedInstaller), '/')) {
-        $items[] = mirza_install_item('fail', 'محل پوشه install', $installerPath, 'پوشه install باید دقیقاً کنار فایل index.php ربات باشد.');
+        $items[] = modasr_install_item('fail', 'محل پوشه install', $installerPath, 'پوشه install باید دقیقاً کنار فایل index.php ربات باشد.');
     }
 
     return $items;
 }
 
-function mirza_install_guard_files_check(): array
+function modasr_install_guard_files_check(): array
 {
-    $root = mirza_install_root();
+    $root = modasr_install_root();
     $missing = [];
     foreach (['.htaccess', 'api/.htaccess', 'app/.htaccess', 'sub/.htaccess'] as $file) {
         $contents = @file_get_contents($root . '/' . $file);
@@ -636,48 +636,48 @@ function mirza_install_guard_files_check(): array
     }
 
     if ($missing === []) {
-        return mirza_install_item('ok', 'قفل امنیتی زمان نصب', 'فعال است', 'تا وقتی پوشه install روی هاست باشد، ربات از دسترس خارج است.');
+        return modasr_install_item('ok', 'قفل امنیتی زمان نصب', 'فعال است', 'تا وقتی پوشه install روی هاست باشد، ربات از دسترس خارج است.');
     }
 
-    return mirza_install_item('fail', 'قفل امنیتی زمان نصب', 'ناقص: ' . implode('، ', $missing), 'این فایل‌ها باید قانون مسدودسازی ربات در زمان وجود پوشه install را داشته باشند. فایل‌های .htaccess را کامل (همراه فایل‌های مخفی) آپلود کنید.');
+    return modasr_install_item('fail', 'قفل امنیتی زمان نصب', 'ناقص: ' . implode('، ', $missing), 'این فایل‌ها باید قانون مسدودسازی ربات در زمان وجود پوشه install را داشته باشند. فایل‌های .htaccess را کامل (همراه فایل‌های مخفی) آپلود کنید.');
 }
 
-function mirza_install_guard_active_check(): array
+function modasr_install_guard_active_check(): array
 {
-    $probe = mirza_install_http_probe(mirza_install_base_url() . '/mirza-install-guard-probe');
+    $probe = modasr_install_http_probe(modasr_install_base_url() . '/modasr-install-guard-probe');
 
     if ($probe['code'] === 403) {
-        return mirza_install_item('ok', 'مسدود بودن ربات در حین نصب', 'تأیید شد', 'ربات تا حذف پوشه install پاسخ نمی‌دهد و در پایان نصب خودکار آزاد می‌شود.');
+        return modasr_install_item('ok', 'مسدود بودن ربات در حین نصب', 'تأیید شد', 'ربات تا حذف پوشه install پاسخ نمی‌دهد و در پایان نصب خودکار آزاد می‌شود.');
     }
     if ($probe['code'] === 0) {
-        return mirza_install_item('warn', 'مسدود بودن ربات در حین نصب', 'تأیید نشد', 'درخواست تست به دامنه پاسخ نداد (' . $probe['error'] . ').');
+        return modasr_install_item('warn', 'مسدود بودن ربات در حین نصب', 'تأیید نشد', 'درخواست تست به دامنه پاسخ نداد (' . $probe['error'] . ').');
     }
 
-    return mirza_install_item('warn', 'مسدود بودن ربات در حین نصب', 'کد پاسخ ' . $probe['code'], 'قانون .htaccess اجرا نشد؛ احتمالاً mod_rewrite یا AllowOverride روی هاست فعال نیست. لایه دوم محافظت داخل index.php همچنان فعال است و ربات تا حذف پوشه install بالا نمی‌آید.');
+    return modasr_install_item('warn', 'مسدود بودن ربات در حین نصب', 'کد پاسخ ' . $probe['code'], 'قانون .htaccess اجرا نشد؛ احتمالاً mod_rewrite یا AllowOverride روی هاست فعال نیست. لایه دوم محافظت داخل index.php همچنان فعال است و ربات تا حذف پوشه install بالا نمی‌آید.');
 }
 
-function mirza_install_rewrite_check(): array
+function modasr_install_rewrite_check(): array
 {
     if (function_exists('apache_get_modules')) {
         return in_array('mod_rewrite', apache_get_modules(), true)
-            ? mirza_install_item('ok', 'بازنویسی مسیر (.htaccess)', 'فعال')
-            : mirza_install_item('fail', 'بازنویسی مسیر (.htaccess)', 'غیرفعال', 'ماژول mod_rewrite باید فعال باشد تا مسیرهای پوشه api کار کنند.');
+            ? modasr_install_item('ok', 'بازنویسی مسیر (.htaccess)', 'فعال')
+            : modasr_install_item('fail', 'بازنویسی مسیر (.htaccess)', 'غیرفعال', 'ماژول mod_rewrite باید فعال باشد تا مسیرهای پوشه api کار کنند.');
     }
 
-    $probe = mirza_install_http_probe(mirza_install_base_url() . '/install/rewrite-check');
-    if ($probe['ok'] && strpos((string) $probe['body'], 'MIRZA_REWRITE_OK') !== false) {
-        return mirza_install_item('ok', 'بازنویسی مسیر (.htaccess)', 'فعال', 'قانون بازنویسی روی همین هاست تست و تأیید شد.');
+    $probe = modasr_install_http_probe(modasr_install_base_url() . '/install/rewrite-check');
+    if ($probe['ok'] && strpos((string) $probe['body'], 'MODASR_REWRITE_OK') !== false) {
+        return modasr_install_item('ok', 'بازنویسی مسیر (.htaccess)', 'فعال', 'قانون بازنویسی روی همین هاست تست و تأیید شد.');
     }
 
-    return mirza_install_item('warn', 'بازنویسی مسیر (.htaccess)', 'تأیید نشد', 'تست بازنویسی پاسخ نداد (' . $probe['error'] . '). اگر AllowOverride روی هاست فعال نباشد، مسیرهای api کار نمی‌کنند.');
+    return modasr_install_item('warn', 'بازنویسی مسیر (.htaccess)', 'تأیید نشد', 'تست بازنویسی پاسخ نداد (' . $probe['error'] . '). اگر AllowOverride روی هاست فعال نباشد، مسیرهای api کار نمی‌کنند.');
 }
 
-function mirza_install_config_path(): string
+function modasr_install_config_path(): string
 {
-    return mirza_install_root() . '/config.php';
+    return modasr_install_root() . '/config.php';
 }
 
-function mirza_install_config_values(): array
+function modasr_install_config_values(): array
 {
     $values = [
         'dbhost' => '',
@@ -690,7 +690,7 @@ function mirza_install_config_values(): array
         'usernamebot' => '',
     ];
 
-    $contents = @file_get_contents(mirza_install_config_path());
+    $contents = @file_get_contents(modasr_install_config_path());
     if (!is_string($contents)) {
         return $values;
     }
@@ -704,21 +704,21 @@ function mirza_install_config_values(): array
     return $values;
 }
 
-function mirza_install_is_placeholder(string $value): bool
+function modasr_install_is_placeholder(string $value): bool
 {
     return $value === '' || (strpos($value, '{') === 0 && substr($value, -1) === '}');
 }
 
-function mirza_install_is_configured(): bool
+function modasr_install_is_configured(): bool
 {
-    $values = mirza_install_config_values();
+    $values = modasr_install_config_values();
 
-    return !mirza_install_is_placeholder($values['APIKEY'])
-        && !mirza_install_is_placeholder($values['dbname'])
-        && !mirza_install_is_placeholder($values['adminnumber']);
+    return !modasr_install_is_placeholder($values['APIKEY'])
+        && !modasr_install_is_placeholder($values['dbname'])
+        && !modasr_install_is_placeholder($values['adminnumber']);
 }
 
-function mirza_install_webhook_secret(array $values): string
+function modasr_install_webhook_secret(array $values): string
 {
     try {
         $dsn = 'mysql:host=' . $values['dbhost'] . ';dbname=' . $values['dbname'] . ';charset=utf8mb4';
@@ -740,9 +740,9 @@ function mirza_install_webhook_secret(array $values): string
     return is_string($secret) ? $secret : '';
 }
 
-function mirza_install_write_config(array $values): array
+function modasr_install_write_config(array $values): array
 {
-    $path = mirza_install_config_path();
+    $path = modasr_install_config_path();
 
     if (is_file($path) && !is_writable($path)) {
         return ['ok' => false, 'error' => 'فایل config.php قابل نوشتن نیست؛ سطح دسترسی آن را روی 644 تنظیم کنید.'];
@@ -796,7 +796,7 @@ function mirza_install_write_config(array $values): array
     return ['ok' => true, 'error' => ''];
 }
 
-function mirza_install_database_version_check(string $version): array
+function modasr_install_database_version_check(string $version): array
 {
     $isMariaDb = stripos($version, 'mariadb') !== false;
     preg_match('/(\d+)\.(\d+)\.(\d+)/', $version, $matches);
@@ -804,16 +804,16 @@ function mirza_install_database_version_check(string $version): array
 
     if ($isMariaDb) {
         return version_compare($numeric, '10.2.0', '>=')
-            ? mirza_install_item('ok', 'نسخه دیتابیس', 'MariaDB ' . $numeric)
-            : mirza_install_item('fail', 'نسخه دیتابیس', 'MariaDB ' . $numeric, 'حداقل MariaDB 10.2 لازم است؛ جداول ربات از ستون JSON و utf8mb4 استفاده می‌کنند.');
+            ? modasr_install_item('ok', 'نسخه دیتابیس', 'MariaDB ' . $numeric)
+            : modasr_install_item('fail', 'نسخه دیتابیس', 'MariaDB ' . $numeric, 'حداقل MariaDB 10.2 لازم است؛ جداول ربات از ستون JSON و utf8mb4 استفاده می‌کنند.');
     }
 
     return version_compare($numeric, '5.7.8', '>=')
-        ? mirza_install_item('ok', 'نسخه دیتابیس', 'MySQL ' . $numeric)
-        : mirza_install_item('fail', 'نسخه دیتابیس', 'MySQL ' . $numeric, 'حداقل MySQL 5.7.8 لازم است؛ جداول ربات از ستون JSON و utf8mb4 استفاده می‌کنند.');
+        ? modasr_install_item('ok', 'نسخه دیتابیس', 'MySQL ' . $numeric)
+        : modasr_install_item('fail', 'نسخه دیتابیس', 'MySQL ' . $numeric, 'حداقل MySQL 5.7.8 لازم است؛ جداول ربات از ستون JSON و utf8mb4 استفاده می‌کنند.');
 }
 
-function mirza_install_test_database(array $values): array
+function modasr_install_test_database(array $values): array
 {
     $items = [];
 
@@ -827,23 +827,23 @@ function mirza_install_test_database(array $values): array
         return [
             'ok' => false,
             'error' => $exception->getMessage(),
-            'items' => [mirza_install_item('fail', 'اتصال به دیتابیس', 'ناموفق', mirza_install_database_hint($exception->getMessage()))],
+            'items' => [modasr_install_item('fail', 'اتصال به دیتابیس', 'ناموفق', modasr_install_database_hint($exception->getMessage()))],
         ];
     }
 
     $version = (string) $pdo->query('SELECT VERSION()')->fetchColumn();
-    $items[] = mirza_install_item('ok', 'اتصال به دیتابیس', 'برقرار شد', 'میزبان: ' . $values['dbhost']);
-    $items[] = mirza_install_database_version_check($version);
+    $items[] = modasr_install_item('ok', 'اتصال به دیتابیس', 'برقرار شد', 'میزبان: ' . $values['dbhost']);
+    $items[] = modasr_install_database_version_check($version);
 
     $activeDatabase = (string) $pdo->query('SELECT DATABASE()')->fetchColumn();
     $items[] = $activeDatabase === $values['dbname']
-        ? mirza_install_item('ok', 'دیتابیس فعال', $activeDatabase)
-        : mirza_install_item('fail', 'دیتابیس فعال', $activeDatabase === '' ? 'انتخاب نشده' : $activeDatabase, 'دیتابیس متصل با نام واردشده یکی نیست.');
+        ? modasr_install_item('ok', 'دیتابیس فعال', $activeDatabase)
+        : modasr_install_item('fail', 'دیتابیس فعال', $activeDatabase === '' ? 'انتخاب نشده' : $activeDatabase, 'دیتابیس متصل با نام واردشده یکی نیست.');
 
     $collation = $pdo->query("SHOW COLLATION LIKE 'utf8mb4_unicode_ci'")->fetch();
     $items[] = $collation
-        ? mirza_install_item('ok', 'پشتیبانی utf8mb4', 'utf8mb4_unicode_ci موجود است', 'برای ذخیره متن فارسی و ایموجی لازم است.')
-        : mirza_install_item('fail', 'پشتیبانی utf8mb4', 'موجود نیست', 'سرور دیتابیس از utf8mb4_unicode_ci پشتیبانی نمی‌کند و جداول ساخته نمی‌شوند.');
+        ? modasr_install_item('ok', 'پشتیبانی utf8mb4', 'utf8mb4_unicode_ci موجود است', 'برای ذخیره متن فارسی و ایموجی لازم است.')
+        : modasr_install_item('fail', 'پشتیبانی utf8mb4', 'موجود نیست', 'سرور دیتابیس از utf8mb4_unicode_ci پشتیبانی نمی‌کند و جداول ساخته نمی‌شوند.');
 
     $innodb = false;
     foreach ($pdo->query('SHOW ENGINES')->fetchAll() as $engine) {
@@ -853,30 +853,30 @@ function mirza_install_test_database(array $values): array
         }
     }
     $items[] = $innodb
-        ? mirza_install_item('ok', 'موتور InnoDB', 'فعال است')
-        : mirza_install_item('fail', 'موتور InnoDB', 'فعال نیست', 'همه جداول ربات با ENGINE=InnoDB ساخته می‌شوند.');
+        ? modasr_install_item('ok', 'موتور InnoDB', 'فعال است')
+        : modasr_install_item('fail', 'موتور InnoDB', 'فعال نیست', 'همه جداول ربات با ENGINE=InnoDB ساخته می‌شوند.');
 
-    $privilege = mirza_install_database_privilege_check($pdo);
+    $privilege = modasr_install_database_privilege_check($pdo);
     $items[] = $privilege;
 
     try {
         $tableCount = (int) $pdo->query('SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE()')->fetchColumn();
         if ($tableCount === 0) {
-            $items[] = mirza_install_item('ok', 'وضعیت دیتابیس', 'خالی است', 'نصب تازه انجام می‌شود.');
+            $items[] = modasr_install_item('ok', 'وضعیت دیتابیس', 'خالی است', 'نصب تازه انجام می‌شود.');
         } else {
-            $items[] = mirza_install_item('warn', 'وضعیت دیتابیس', $tableCount . ' جدول موجود است', 'جداول موجود پاک نمی‌شوند؛ اگر این دیتابیس قبلاً برای ربات استفاده شده، اطلاعات حفظ و ساختار به‌روزرسانی می‌شود.');
+            $items[] = modasr_install_item('warn', 'وضعیت دیتابیس', $tableCount . ' جدول موجود است', 'جداول موجود پاک نمی‌شوند؛ اگر این دیتابیس قبلاً برای ربات استفاده شده، اطلاعات حفظ و ساختار به‌روزرسانی می‌شود.');
         }
     } catch (Throwable $exception) {
-        $items[] = mirza_install_item('warn', 'وضعیت دیتابیس', 'قابل خواندن نیست', $exception->getMessage());
+        $items[] = modasr_install_item('warn', 'وضعیت دیتابیس', 'قابل خواندن نیست', $exception->getMessage());
     }
 
     try {
         $packet = (int) $pdo->query("SELECT @@max_allowed_packet")->fetchColumn();
         $items[] = $packet >= 4194304
-            ? mirza_install_item('ok', 'max_allowed_packet', round($packet / 1048576, 1) . ' مگابایت')
-            : mirza_install_item('warn', 'max_allowed_packet', round($packet / 1048576, 1) . ' مگابایت', 'مقدار کم است و ارسال پیام‌ها یا پشتیبان‌های بزرگ ممکن است خطا بدهد.');
+            ? modasr_install_item('ok', 'max_allowed_packet', round($packet / 1048576, 1) . ' مگابایت')
+            : modasr_install_item('warn', 'max_allowed_packet', round($packet / 1048576, 1) . ' مگابایت', 'مقدار کم است و ارسال پیام‌ها یا پشتیبان‌های بزرگ ممکن است خطا بدهد.');
     } catch (Throwable $exception) {
-        $items[] = mirza_install_item('warn', 'max_allowed_packet', 'قابل خواندن نیست', $exception->getMessage());
+        $items[] = modasr_install_item('warn', 'max_allowed_packet', 'قابل خواندن نیست', $exception->getMessage());
     }
 
     $failed = 0;
@@ -889,9 +889,9 @@ function mirza_install_test_database(array $values): array
     return ['ok' => $failed === 0, 'error' => '', 'items' => $items, 'version' => $version];
 }
 
-function mirza_install_database_privilege_check(PDO $pdo): array
+function modasr_install_database_privilege_check(PDO $pdo): array
 {
-    $table = 'mirza_install_probe';
+    $table = 'modasr_install_probe';
 
     try {
         $pdo->exec('DROP TABLE IF EXISTS `' . $table . '`');
@@ -899,24 +899,24 @@ function mirza_install_database_privilege_check(PDO $pdo): array
         $pdo->exec('INSERT INTO `' . $table . '` (payload, note) VALUES (\'{"ok":true}\', \'آزمایش فارسی\')');
         $stored = (string) $pdo->query('SELECT note FROM `' . $table . '` LIMIT 1')->fetchColumn();
         $pdo->exec('ALTER TABLE `' . $table . '` ADD COLUMN extra VARCHAR(50) NULL');
-        $pdo->exec('CREATE INDEX mirza_probe_idx ON `' . $table . '` (note)');
+        $pdo->exec('CREATE INDEX modasr_probe_idx ON `' . $table . '` (note)');
         $pdo->exec('UPDATE `' . $table . '` SET extra = \'1\'');
         $pdo->exec('DELETE FROM `' . $table . '`');
         $pdo->exec('DROP TABLE `' . $table . '`');
 
         if ($stored !== 'آزمایش فارسی') {
-            return mirza_install_item('fail', 'ذخیره متن فارسی', 'ناموفق', 'متن فارسی درست بازخوانی نشد؛ کدگذاری دیتابیس را روی utf8mb4 تنظیم کنید.');
+            return modasr_install_item('fail', 'ذخیره متن فارسی', 'ناموفق', 'متن فارسی درست بازخوانی نشد؛ کدگذاری دیتابیس را روی utf8mb4 تنظیم کنید.');
         }
 
-        return mirza_install_item('ok', 'دسترسی‌های کاربر دیتابیس', 'کامل است', 'CREATE، ALTER، INDEX، INSERT، UPDATE، DELETE و DROP تست و تأیید شد.');
+        return modasr_install_item('ok', 'دسترسی‌های کاربر دیتابیس', 'کامل است', 'CREATE، ALTER، INDEX، INSERT، UPDATE، DELETE و DROP تست و تأیید شد.');
     } catch (Throwable $exception) {
         @$pdo->exec('DROP TABLE IF EXISTS `' . $table . '`');
 
-        return mirza_install_item('fail', 'دسترسی‌های کاربر دیتابیس', 'ناکافی', 'اجرای تست ساخت جدول شکست خورد: ' . $exception->getMessage() . ' — در کنترل پنل هاست به این کاربر ALL PRIVILEGES بدهید.');
+        return modasr_install_item('fail', 'دسترسی‌های کاربر دیتابیس', 'ناکافی', 'اجرای تست ساخت جدول شکست خورد: ' . $exception->getMessage() . ' — در کنترل پنل هاست به این کاربر ALL PRIVILEGES بدهید.');
     }
 }
 
-function mirza_install_database_hint(string $message): string
+function modasr_install_database_hint(string $message): string
 {
     if (stripos($message, 'access denied') !== false) {
         return 'نام کاربری یا رمز دیتابیس اشتباه است، یا این کاربر به دیتابیس دسترسی ندارد: ' . $message;
@@ -931,9 +931,9 @@ function mirza_install_database_hint(string $message): string
     return $message;
 }
 
-function mirza_install_telegram(string $token, string $method, array $parameters = []): array
+function modasr_install_telegram(string $token, string $method, array $parameters = []): array
 {
-    $probe = mirza_install_telegram_request($token, $method, $parameters);
+    $probe = modasr_install_telegram_request($token, $method, $parameters);
     $decoded = json_decode($probe['body'], true);
 
     if (!is_array($decoded)) {
@@ -946,7 +946,7 @@ function mirza_install_telegram(string $token, string $method, array $parameters
     return ['ok' => true, 'error' => '', 'result' => is_array($decoded['result'] ?? null) ? $decoded['result'] : []];
 }
 
-function mirza_install_telegram_request(string $token, string $method, array $parameters): array
+function modasr_install_telegram_request(string $token, string $method, array $parameters): array
 {
     $handle = curl_init();
     curl_setopt_array($handle, [
@@ -964,31 +964,31 @@ function mirza_install_telegram_request(string $token, string $method, array $pa
     return ['body' => is_string($body) ? $body : '', 'error' => $error];
 }
 
-function mirza_install_cron_jobs(): array
+function modasr_install_cron_jobs(): array
 {
-    require_once mirza_install_root() . '/cronbot/jobs.php';
+    require_once modasr_install_root() . '/cronbot/jobs.php';
 
-    return mirza_cron_jobs();
+    return modasr_cron_jobs();
 }
 
-function mirza_install_probe_command(): string
+function modasr_install_probe_command(): string
 {
-    return '*/1 * * * * curl -s ' . mirza_install_base_url() . '/install/cron-check.php > /dev/null 2>&1';
+    return '*/1 * * * * curl -s ' . modasr_install_base_url() . '/install/cron-check.php > /dev/null 2>&1';
 }
 
-function mirza_install_probe_command_php(): string
+function modasr_install_probe_command_php(): string
 {
     return '*/1 * * * * /usr/bin/php ' . __DIR__ . '/cron-check.php > /dev/null 2>&1';
 }
 
-function mirza_install_probe_file(): string
+function modasr_install_probe_file(): string
 {
-    return mirza_install_state_dir() . '/cron-probe.json';
+    return modasr_install_state_dir() . '/cron-probe.json';
 }
 
-function mirza_install_probe_read(): array
+function modasr_install_probe_read(): array
 {
-    $raw = @file_get_contents(mirza_install_probe_file());
+    $raw = @file_get_contents(modasr_install_probe_file());
     if (!is_string($raw) || $raw === '') {
         return ['started_at' => 0, 'hits' => []];
     }
@@ -1003,14 +1003,14 @@ function mirza_install_probe_read(): array
     ];
 }
 
-function mirza_install_probe_reset(): void
+function modasr_install_probe_reset(): void
 {
-    @file_put_contents(mirza_install_probe_file(), json_encode(['started_at' => time(), 'hits' => []]), LOCK_EX);
+    @file_put_contents(modasr_install_probe_file(), json_encode(['started_at' => time(), 'hits' => []]), LOCK_EX);
 }
 
-function mirza_install_probe_record(): void
+function modasr_install_probe_record(): void
 {
-    $state = mirza_install_probe_read();
+    $state = modasr_install_probe_read();
     if ($state['started_at'] === 0) {
         $state['started_at'] = time();
     }
@@ -1018,10 +1018,10 @@ function mirza_install_probe_record(): void
     if (count($state['hits']) > 30) {
         $state['hits'] = array_slice($state['hits'], -30);
     }
-    @file_put_contents(mirza_install_probe_file(), json_encode($state), LOCK_EX);
+    @file_put_contents(modasr_install_probe_file(), json_encode($state), LOCK_EX);
 }
 
-function mirza_install_relative_time(int $timestamp): string
+function modasr_install_relative_time(int $timestamp): string
 {
     if ($timestamp <= 0) {
         return 'هرگز';
@@ -1041,9 +1041,9 @@ function mirza_install_relative_time(int $timestamp): string
     return (int) floor($seconds / 86400) . ' روز پیش';
 }
 
-function mirza_install_probe_status(): array
+function modasr_install_probe_status(): array
 {
-    $state = mirza_install_probe_read();
+    $state = modasr_install_probe_read();
     $hits = $state['hits'];
     sort($hits);
     $count = count($hits);
@@ -1067,19 +1067,19 @@ function mirza_install_probe_status(): array
         'count' => $count,
         'first_run' => $first > 0 ? date('H:i:s', $first) : '',
         'last_run' => $last > 0 ? date('Y-m-d H:i:s', $last) : '',
-        'last_run_human' => mirza_install_relative_time($last),
+        'last_run_human' => modasr_install_relative_time($last),
         'span' => $span,
         'started_at_human' => $state['started_at'] > 0 ? date('Y-m-d H:i:s', $state['started_at']) : '',
         'waited_seconds' => $state['started_at'] > 0 ? time() - $state['started_at'] : 0,
         'message' => $message,
-        'command_curl' => mirza_install_probe_command(),
-        'command_php' => mirza_install_probe_command_php(),
+        'command_curl' => modasr_install_probe_command(),
+        'command_php' => modasr_install_probe_command_php(),
     ];
 }
 
-function mirza_install_cron_plan(): array
+function modasr_install_cron_plan(): array
 {
-    require_once mirza_install_root() . '/cronbot/jobs.php';
+    require_once modasr_install_root() . '/cronbot/jobs.php';
 
     return [
         [
@@ -1087,18 +1087,18 @@ function mirza_install_cron_plan(): array
             'title' => 'اجرای کرون ربات (یک خط)',
             'schedule' => '* * * * *',
             'optional' => false,
-            'command_curl' => mirza_cron_dispatcher_curl_command(mirza_install_base_url()),
-            'command_php' => mirza_cron_dispatcher_command(mirza_install_base_url()),
+            'command_curl' => modasr_cron_dispatcher_curl_command(modasr_install_base_url()),
+            'command_php' => modasr_cron_dispatcher_command(modasr_install_base_url()),
         ],
     ];
 }
 
-function mirza_install_required_jobs(): array
+function modasr_install_required_jobs(): array
 {
     return ['dispatcher'];
 }
 
-function mirza_install_delete_tree(string $path): bool
+function modasr_install_delete_tree(string $path): bool
 {
     if (is_link($path) || is_file($path)) {
         return @unlink($path);
@@ -1117,7 +1117,7 @@ function mirza_install_delete_tree(string $path): bool
         if ($entry === '.' || $entry === '..') {
             continue;
         }
-        $removed = mirza_install_delete_tree($path . '/' . $entry) && $removed;
+        $removed = modasr_install_delete_tree($path . '/' . $entry) && $removed;
     }
 
     return @rmdir($path) && $removed;

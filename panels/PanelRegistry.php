@@ -11,7 +11,7 @@ class PanelRegistry
         'WGDashboard' => 'WGDashboard',
         'ibsng' => 'Ibsng',
         'mikrotik' => 'Mikrotik',
-        'mirza_agent' => 'MirzaAgent',
+        'modasr_agent' => 'MODASRAgent',
         'rebecca' => 'Rebeca',
         'nexora' => 'Nexora',
         'wg_mate' => 'WGMate',

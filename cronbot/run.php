@@ -18,7 +18,7 @@ if (!flock($lockFh, LOCK_EX | LOCK_NB)) {
     exit(0);
 }
 
-$slotFh = mirza_cron_try_host_slot(3, 2);
+$slotFh = modasr_cron_try_host_slot(3, 2);
 $scorestatus = null;
 $cronStatusFile = dirname($cronbotDir) . '/storage/cron_status.json';
 $cronStatus = json_decode((string) @file_get_contents($cronStatusFile), true) ?: [];
@@ -28,13 +28,13 @@ $cronStatus['php_cli'] = PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
 $cronStatus['pdo_mysql'] = extension_loaded('pdo_mysql');
 
 try {
-    foreach ($cronStatus['pdo_mysql'] ? mirza_cron_jobs() : [] as $job) {
+    foreach ($cronStatus['pdo_mysql'] ? modasr_cron_jobs() : [] as $job) {
         $script = $cronbotDir . '/' . $job['job'] . '.php';
         if (!is_file($script)) {
             continue;
         }
 
-        if (!mirza_cron_is_due($job['schedule'], $dispatchNow)) {
+        if (!modasr_cron_is_due($job['schedule'], $dispatchNow)) {
             continue;
         }
 
@@ -60,22 +60,22 @@ try {
             include $script;
         } catch (Throwable $e) {
             $jobError = $e->getMessage();
-            error_log('mirza cron: ' . $job['job'] . ': ' . $jobError);
+            error_log('modasr cron: ' . $job['job'] . ': ' . $jobError);
         }
         $cronStatus['jobs'][$job['job']] = ['time' => $jobStart, 'error' => $jobError];
     }
 } finally {
     @mkdir(dirname($cronStatusFile), 0775, true);
     @file_put_contents($cronStatusFile, json_encode($cronStatus));
-    mirza_cron_release_host_slot($slotFh);
+    modasr_cron_release_host_slot($slotFh);
     flock($lockFh, LOCK_UN);
     fclose($lockFh);
 }
 
 /** @return resource|null */
-function mirza_cron_try_host_slot(int $maxSlots, int $waitSeconds)
+function modasr_cron_try_host_slot(int $maxSlots, int $waitSeconds)
 {
-    $dir = '/tmp/mirza-cron-slots';
+    $dir = '/tmp/modasr-cron-slots';
     if ((!is_dir($dir) && !@mkdir($dir, 0777, true) && !is_dir($dir)) || !is_writable($dir)) {
         return null;
     }
@@ -100,7 +100,7 @@ function mirza_cron_try_host_slot(int $maxSlots, int $waitSeconds)
 }
 
 /** @param resource|null $slotFh */
-function mirza_cron_release_host_slot($slotFh): void
+function modasr_cron_release_host_slot($slotFh): void
 {
     if ($slotFh === null || !is_resource($slotFh)) {
         return;
@@ -109,7 +109,7 @@ function mirza_cron_release_host_slot($slotFh): void
     fclose($slotFh);
 }
 
-function mirza_cron_is_due(string $expression, ?DateTimeInterface $now = null): bool
+function modasr_cron_is_due(string $expression, ?DateTimeInterface $now = null): bool
 {
     $now = $now ?? new DateTimeImmutable('now');
     $parts = preg_split('/\s+/', trim($expression));
@@ -129,7 +129,7 @@ function mirza_cron_is_due(string $expression, ?DateTimeInterface $now = null): 
     $mins = [0, 0, 1, 1, 0];
 
     for ($i = 0; $i < 5; $i++) {
-        if (!mirza_cron_field_matches($fields[$i], $values[$i], $mins[$i])) {
+        if (!modasr_cron_field_matches($fields[$i], $values[$i], $mins[$i])) {
             return false;
         }
     }
@@ -137,7 +137,7 @@ function mirza_cron_is_due(string $expression, ?DateTimeInterface $now = null): 
     return true;
 }
 
-function mirza_cron_field_matches(string $field, int $value, int $min): bool
+function modasr_cron_field_matches(string $field, int $value, int $min): bool
 {
     foreach (explode(',', $field) as $piece) {
         $piece = trim($piece);

@@ -14,7 +14,7 @@ if (session_status() === PHP_SESSION_NONE) {
     @session_start();
 }
 
-function mirza_install_json(array $payload, int $code = 200): void
+function modasr_install_json(array $payload, int $code = 200): void
 {
     http_response_code($code);
     header('Content-Type: application/json; charset=utf-8');
@@ -23,21 +23,21 @@ function mirza_install_json(array $payload, int $code = 200): void
     exit;
 }
 
-function mirza_install_locked(): bool
+function modasr_install_locked(): bool
 {
-    return is_file(mirza_install_lock_file());
+    return is_file(modasr_install_lock_file());
 }
 
-function mirza_install_authorized(): bool
+function modasr_install_authorized(): bool
 {
-    if (!mirza_install_is_configured()) {
+    if (!modasr_install_is_configured()) {
         return true;
     }
 
-    return !empty($_SESSION['mirza_install_authorized']);
+    return !empty($_SESSION['modasr_install_authorized']);
 }
 
-function mirza_install_group(string $group, array $items): array
+function modasr_install_group(string $group, array $items): array
 {
     foreach ($items as $index => $item) {
         $items[$index]['group'] = $group;
@@ -48,68 +48,68 @@ function mirza_install_group(string $group, array $items): array
 
 $action = (string) ($_POST['action'] ?? ($_GET['action'] ?? ''));
 
-$mirza_install_mutating_actions = ['auth', 'config_write', 'bootstrap', 'probe_begin', 'finish'];
-if (in_array($action, $mirza_install_mutating_actions, true) && ($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-    mirza_install_json(['error' => 'POST required'], 405);
+$modasr_install_mutating_actions = ['auth', 'config_write', 'bootstrap', 'probe_begin', 'finish'];
+if (in_array($action, $modasr_install_mutating_actions, true) && ($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+    modasr_install_json(['error' => 'POST required'], 405);
 }
 
 if ($action !== '') {
-    if (mirza_install_locked() && $action !== 'state') {
-        mirza_install_json(['error' => 'نصب قبلاً انجام شده است. برای اجرای مجدد فایل install/.installed را حذف کنید.'], 423);
+    if (modasr_install_locked() && $action !== 'state') {
+        modasr_install_json(['error' => 'نصب قبلاً انجام شده است. برای اجرای مجدد فایل install/.installed را حذف کنید.'], 423);
     }
 
     if ($action === 'state') {
-        mirza_install_json([
-            'locked' => mirza_install_locked(),
-            'configured' => mirza_install_is_configured(),
-            'authorized' => mirza_install_authorized(),
-            'shell_exec' => mirza_install_shell_exec_available(),
-            'host' => mirza_install_host(),
-            'base_url' => mirza_install_base_url(),
-            'root' => mirza_install_root(),
+        modasr_install_json([
+            'locked' => modasr_install_locked(),
+            'configured' => modasr_install_is_configured(),
+            'authorized' => modasr_install_authorized(),
+            'shell_exec' => modasr_install_shell_exec_available(),
+            'host' => modasr_install_host(),
+            'base_url' => modasr_install_base_url(),
+            'root' => modasr_install_root(),
         ]);
     }
 
     if ($action === 'auth') {
         $secret = trim((string) ($_POST['secret'] ?? ''));
-        $values = mirza_install_config_values();
+        $values = modasr_install_config_values();
         $matches = $secret !== '' && hash_equals($values['APIKEY'], $secret);
 
         if (!$matches) {
             usleep(700000);
-            mirza_install_json(['ok' => false, 'error' => 'توکن ربات نادرست است.'], 403);
+            modasr_install_json(['ok' => false, 'error' => 'توکن ربات نادرست است.'], 403);
         }
 
-        $_SESSION['mirza_install_authorized'] = true;
-        mirza_install_json(['ok' => true]);
+        $_SESSION['modasr_install_authorized'] = true;
+        modasr_install_json(['ok' => true]);
     }
 
-    if (!mirza_install_authorized()) {
-        mirza_install_json(['error' => 'برای ادامه ابتدا هویت خود را تأیید کنید.'], 403);
+    if (!modasr_install_authorized()) {
+        modasr_install_json(['error' => 'برای ادامه ابتدا هویت خود را تأیید کنید.'], 403);
     }
 
     if ($action === 'requirements') {
         $items = array_merge(
-            mirza_install_group('نسخه PHP', mirza_install_php_check()),
-            mirza_install_group('وب‌سرور', mirza_install_webserver_check()),
-            mirza_install_group('اکستنشن‌ها', mirza_install_extensions_check()),
-            mirza_install_group('تنظیمات PHP', mirza_install_ini_check())
+            modasr_install_group('نسخه PHP', modasr_install_php_check()),
+            modasr_install_group('وب‌سرور', modasr_install_webserver_check()),
+            modasr_install_group('اکستنشن‌ها', modasr_install_extensions_check()),
+            modasr_install_group('تنظیمات PHP', modasr_install_ini_check())
         );
-        mirza_install_json(mirza_install_result($items));
+        modasr_install_json(modasr_install_result($items));
     }
 
     if ($action === 'ssl') {
-        mirza_install_json(mirza_install_result(mirza_install_group('دامنه و گواهی', mirza_install_ssl_check())));
+        modasr_install_json(modasr_install_result(modasr_install_group('دامنه و گواهی', modasr_install_ssl_check())));
     }
 
     if ($action === 'paths') {
-        mirza_install_json(mirza_install_result(mirza_install_group('ساختار فایل‌ها', mirza_install_paths_check())));
+        modasr_install_json(modasr_install_result(modasr_install_group('ساختار فایل‌ها', modasr_install_paths_check())));
     }
 
     if ($action === 'config_load') {
-        $values = mirza_install_config_values();
+        $values = modasr_install_config_values();
         foreach ($values as $key => $value) {
-            if (mirza_install_is_placeholder($value)) {
+            if (modasr_install_is_placeholder($value)) {
                 $values[$key] = '';
             }
         }
@@ -117,8 +117,8 @@ if ($action !== '') {
         if ($values['dbhost'] === '') {
             $values['dbhost'] = 'localhost';
         }
-        $values['domainhosts'] = mirza_install_host();
-        mirza_install_json(['ok' => true, 'values' => $values]);
+        $values['domainhosts'] = modasr_install_host();
+        modasr_install_json(['ok' => true, 'values' => $values]);
     }
 
     if ($action === 'config_check') {
@@ -129,27 +129,27 @@ if ($action !== '') {
             'passworddb' => (string) ($_POST['passworddb'] ?? ''),
             'APIKEY' => trim((string) ($_POST['APIKEY'] ?? '')),
             'adminnumber' => trim((string) ($_POST['adminnumber'] ?? '')),
-            'domainhosts' => mirza_install_host(),
+            'domainhosts' => modasr_install_host(),
             'usernamebot' => '',
         ];
 
         if ($values['dbname'] === '' || $values['usernamedb'] === '' || $values['APIKEY'] === '' || $values['adminnumber'] === '') {
-            mirza_install_json(['ok' => false, 'error' => 'نام دیتابیس، کاربر دیتابیس، توکن ربات و آیدی عددی مدیر الزامی هستند.', 'items' => []], 400);
+            modasr_install_json(['ok' => false, 'error' => 'نام دیتابیس، کاربر دیتابیس، توکن ربات و آیدی عددی مدیر الزامی هستند.', 'items' => []], 400);
         }
         if ($values['dbhost'] === '') {
             $values['dbhost'] = 'localhost';
         }
         if (!preg_match('/^\d{5,15}$/', $values['adminnumber'])) {
-            mirza_install_json(['ok' => false, 'error' => 'آیدی عددی مدیر باید فقط عدد باشد.', 'items' => []], 400);
+            modasr_install_json(['ok' => false, 'error' => 'آیدی عددی مدیر باید فقط عدد باشد.', 'items' => []], 400);
         }
         if (!preg_match('/^\d{6,}:[A-Za-z0-9_-]{30,}$/', $values['APIKEY'])) {
-            mirza_install_json(['ok' => false, 'error' => 'قالب توکن ربات نادرست است.', 'items' => []], 400);
+            modasr_install_json(['ok' => false, 'error' => 'قالب توکن ربات نادرست است.', 'items' => []], 400);
         }
 
-        $database = mirza_install_test_database($values);
-        $_SESSION['mirza_install_values'] = $values;
+        $database = modasr_install_test_database($values);
+        $_SESSION['modasr_install_values'] = $values;
 
-        mirza_install_json([
+        modasr_install_json([
             'ok' => $database['ok'],
             'error' => $database['ok'] ? '' : 'بررسی دیتابیس با خطا مواجه شد؛ موارد قرمز را برطرف کنید.',
             'items' => $database['items'],
@@ -157,74 +157,74 @@ if ($action !== '') {
     }
 
     if ($action === 'config_token') {
-        $values = $_SESSION['mirza_install_values'] ?? null;
+        $values = $_SESSION['modasr_install_values'] ?? null;
         if (!is_array($values)) {
-            mirza_install_json(['ok' => false, 'error' => 'اطلاعات فرم یافت نشد؛ صفحه را دوباره باز کنید.', 'items' => []], 400);
+            modasr_install_json(['ok' => false, 'error' => 'اطلاعات فرم یافت نشد؛ صفحه را دوباره باز کنید.', 'items' => []], 400);
         }
 
-        $bot = mirza_install_telegram($values['APIKEY'], 'getMe');
+        $bot = modasr_install_telegram($values['APIKEY'], 'getMe');
         if (!$bot['ok']) {
-            mirza_install_json([
+            modasr_install_json([
                 'ok' => false,
                 'error' => 'توکن ربات معتبر نیست: ' . $bot['error'],
-                'items' => [mirza_install_item('fail', 'اعتبارسنجی توکن', 'ناموفق', $bot['error'])],
+                'items' => [modasr_install_item('fail', 'اعتبارسنجی توکن', 'ناموفق', $bot['error'])],
             ], 400);
         }
 
         $values['usernamebot'] = ltrim(trim((string) ($bot['result']['username'] ?? '')), '@');
         if ($values['usernamebot'] === '') {
-            mirza_install_json([
+            modasr_install_json([
                 'ok' => false,
                 'error' => 'یوزرنیم ربات از تلگرام دریافت نشد.',
-                'items' => [mirza_install_item('fail', 'یوزرنیم ربات', 'دریافت نشد', 'پاسخ تلگرام یوزرنیم نداشت؛ توکن را بررسی کنید.')],
+                'items' => [modasr_install_item('fail', 'یوزرنیم ربات', 'دریافت نشد', 'پاسخ تلگرام یوزرنیم نداشت؛ توکن را بررسی کنید.')],
             ], 400);
         }
-        $_SESSION['mirza_install_values'] = $values;
+        $_SESSION['modasr_install_values'] = $values;
 
         $items = [
-            mirza_install_item('ok', 'ارتباط با API تلگرام', 'برقرار است'),
-            mirza_install_item('ok', 'ربات شناسایی شد', '@' . $values['usernamebot'], (string) ($bot['result']['first_name'] ?? '')),
+            modasr_install_item('ok', 'ارتباط با API تلگرام', 'برقرار است'),
+            modasr_install_item('ok', 'ربات شناسایی شد', '@' . $values['usernamebot'], (string) ($bot['result']['first_name'] ?? '')),
         ];
 
-        mirza_install_json(['ok' => true, 'error' => '', 'items' => $items]);
+        modasr_install_json(['ok' => true, 'error' => '', 'items' => $items]);
     }
 
     if ($action === 'config_write') {
-        $values = $_SESSION['mirza_install_values'] ?? null;
+        $values = $_SESSION['modasr_install_values'] ?? null;
         if (!is_array($values) || $values['usernamebot'] === '') {
-            mirza_install_json(['ok' => false, 'error' => 'ابتدا باید توکن ربات تأیید شود.', 'items' => []], 400);
+            modasr_install_json(['ok' => false, 'error' => 'ابتدا باید توکن ربات تأیید شود.', 'items' => []], 400);
         }
 
-        $written = mirza_install_write_config($values);
+        $written = modasr_install_write_config($values);
         if (!$written['ok']) {
-            mirza_install_json([
+            modasr_install_json([
                 'ok' => false,
                 'error' => $written['error'],
-                'items' => [mirza_install_item('fail', 'نوشتن config.php', 'ناموفق', $written['error'])],
+                'items' => [modasr_install_item('fail', 'نوشتن config.php', 'ناموفق', $written['error'])],
             ], 500);
         }
 
-        $_SESSION['mirza_install_authorized'] = true;
+        $_SESSION['modasr_install_authorized'] = true;
 
-        mirza_install_json([
+        modasr_install_json([
             'ok' => true,
             'error' => '',
             'items' => [
-                mirza_install_item('ok', 'فایل config.php ساخته شد', $values['domainhosts'], 'نسخه قبلی در install/state بکاپ گرفته شد.'),
+                modasr_install_item('ok', 'فایل config.php ساخته شد', $values['domainhosts'], 'نسخه قبلی در install/state بکاپ گرفته شد.'),
             ],
         ]);
     }
 
     if ($action === 'bootstrap') {
-        $mirzaRoot = mirza_install_root();
-        $mirzaPreviousDirectory = getcwd();
-        @chdir($mirzaRoot);
+        $modasrRoot = modasr_install_root();
+        $modasrPreviousDirectory = getcwd();
+        @chdir($modasrRoot);
         @set_time_limit(300);
-        $mirzaBootstrapError = '';
-        $mirzaBootstrapCompleted = false;
+        $modasrBootstrapError = '';
+        $modasrBootstrapCompleted = false;
 
-        register_shutdown_function(static function () use (&$mirzaBootstrapCompleted) {
-            if ($mirzaBootstrapCompleted) {
+        register_shutdown_function(static function () use (&$modasrBootstrapCompleted) {
+            if ($modasrBootstrapCompleted) {
                 return;
             }
             $output = ob_get_level() > 0 ? trim((string) ob_get_clean()) : '';
@@ -235,93 +235,93 @@ if ($action !== '') {
             echo json_encode([
                 'ok' => false,
                 'error' => 'ساخت جداول نیمه‌کاره متوقف شد: ' . ($output !== '' ? $output : 'خطای نامشخص سرور'),
-                'items' => [mirza_install_item('fail', 'ساخت جداول', 'متوقف شد', $output !== '' ? $output : 'پاسخی از سرور دریافت نشد.')],
+                'items' => [modasr_install_item('fail', 'ساخت جداول', 'متوقف شد', $output !== '' ? $output : 'پاسخی از سرور دریافت نشد.')],
             ], JSON_UNESCAPED_UNICODE);
         });
 
         ob_start();
         try {
-            require_once $mirzaRoot . '/db/bootstrap.php';
-        } catch (Throwable $mirzaBootstrapException) {
-            $mirzaBootstrapError = $mirzaBootstrapException->getMessage();
+            require_once $modasrRoot . '/db/bootstrap.php';
+        } catch (Throwable $modasrBootstrapException) {
+            $modasrBootstrapError = $modasrBootstrapException->getMessage();
         }
         ob_end_clean();
-        $mirzaBootstrapCompleted = true;
+        $modasrBootstrapCompleted = true;
 
-        if ($mirzaPreviousDirectory !== false) {
-            @chdir($mirzaPreviousDirectory);
+        if ($modasrPreviousDirectory !== false) {
+            @chdir($modasrPreviousDirectory);
         }
 
-        if ($mirzaBootstrapError !== '') {
-            mirza_install_json([
+        if ($modasrBootstrapError !== '') {
+            modasr_install_json([
                 'ok' => false,
-                'error' => 'ساخت جداول ناموفق بود: ' . $mirzaBootstrapError,
-                'items' => [mirza_install_item('fail', 'ساخت جداول', 'ناموفق', $mirzaBootstrapError)],
+                'error' => 'ساخت جداول ناموفق بود: ' . $modasrBootstrapError,
+                'items' => [modasr_install_item('fail', 'ساخت جداول', 'ناموفق', $modasrBootstrapError)],
             ], 500);
         }
 
-        mirza_install_json([
+        modasr_install_json([
             'ok' => true,
             'error' => '',
             'items' => [
-                mirza_install_item('ok', 'جداول دیتابیس', 'ساخته و به‌روزرسانی شد', 'جداول، ایندکس‌ها و مهاجرت‌ها اعمال شدند.'),
-                mirza_install_item('ok', 'وبهوک تلگرام', 'در مرحله پایانی ست می‌شود'),
+                modasr_install_item('ok', 'جداول دیتابیس', 'ساخته و به‌روزرسانی شد', 'جداول، ایندکس‌ها و مهاجرت‌ها اعمال شدند.'),
+                modasr_install_item('ok', 'وبهوک تلگرام', 'در مرحله پایانی ست می‌شود'),
             ],
         ]);
     }
 
     if ($action === 'cron_plan') {
-        mirza_install_json([
+        modasr_install_json([
             'ok' => true,
-            'jobs' => mirza_install_cron_plan(),
-            'required' => mirza_install_required_jobs(),
-            'probe' => mirza_install_probe_status(),
+            'jobs' => modasr_install_cron_plan(),
+            'required' => modasr_install_required_jobs(),
+            'probe' => modasr_install_probe_status(),
         ]);
     }
 
     if ($action === 'probe_begin') {
-        mirza_install_probe_reset();
-        mirza_install_json(mirza_install_probe_status());
+        modasr_install_probe_reset();
+        modasr_install_json(modasr_install_probe_status());
     }
 
     if ($action === 'probe_status') {
-        mirza_install_json(mirza_install_probe_status());
+        modasr_install_json(modasr_install_probe_status());
     }
 
     if ($action === 'finish') {
-        if (!mirza_install_shell_exec_available()) {
-            $probe = mirza_install_probe_status();
+        if (!modasr_install_shell_exec_available()) {
+            $probe = modasr_install_probe_status();
             if (!$probe['verified']) {
-                mirza_install_json(['ok' => false, 'error' => 'اجرای کرون هاست هنوز تأیید نشده است.'], 400);
+                modasr_install_json(['ok' => false, 'error' => 'اجرای کرون هاست هنوز تأیید نشده است.'], 400);
             }
 
             $confirmed = json_decode((string) ($_POST['confirmed'] ?? '[]'), true);
             $confirmed = is_array($confirmed) ? array_map('strval', $confirmed) : [];
-            $missing = array_diff(mirza_install_required_jobs(), $confirmed);
+            $missing = array_diff(modasr_install_required_jobs(), $confirmed);
             if ($missing !== []) {
-                mirza_install_json(['ok' => false, 'error' => 'کرون ربات هنوز تأیید نشده است.'], 400);
+                modasr_install_json(['ok' => false, 'error' => 'کرون ربات هنوز تأیید نشده است.'], 400);
             }
         }
 
-        if (!mirza_install_is_configured()) {
-            mirza_install_json(['ok' => false, 'error' => 'ابتدا باید مرحله تنظیمات ربات کامل شود.'], 400);
+        if (!modasr_install_is_configured()) {
+            modasr_install_json(['ok' => false, 'error' => 'ابتدا باید مرحله تنظیمات ربات کامل شود.'], 400);
         }
 
-        $values = mirza_install_config_values();
+        $values = modasr_install_config_values();
         $webhookUrl = 'https://' . $values['domainhosts'] . '/index.php';
-        $webhookSecret = mirza_install_webhook_secret($values);
+        $webhookSecret = modasr_install_webhook_secret($values);
         $webhookTarget = $webhookSecret === ''
             ? $webhookUrl
             : $webhookUrl . '?secret=' . rawurlencode($webhookSecret);
         $reactivateUrl = 'https://' . $values['domainhosts'] . '/table.php';
 
-        @file_put_contents(mirza_install_lock_file(), (string) time());
-        $deleted = mirza_install_delete_tree(__DIR__);
+        @file_put_contents(modasr_install_lock_file(), (string) time());
+        $deleted = modasr_install_delete_tree(__DIR__);
 
         if (!$deleted) {
-            mirza_install_telegram($values['APIKEY'], 'deleteWebhook', []);
+            modasr_install_telegram($values['APIKEY'], 'deleteWebhook', []);
 
-            mirza_install_json([
+            modasr_install_json([
                 'ok' => false,
                 'deleted' => false,
                 'disabled' => true,
@@ -336,12 +336,12 @@ if ($action !== '') {
 
         $steps = [['status' => 'ok', 'label' => 'حذف پوشه install', 'detail' => 'نصب‌کننده از روی هاست پاک شد و مسدودسازی ربات برداشته شد']];
 
-        $webhook = mirza_install_telegram($values['APIKEY'], 'setWebhook', [
+        $webhook = modasr_install_telegram($values['APIKEY'], 'setWebhook', [
             'url' => $webhookTarget,
             'max_connections' => 40,
         ]);
         if (!$webhook['ok']) {
-            mirza_install_json([
+            modasr_install_json([
                 'ok' => false,
                 'deleted' => true,
                 'steps' => $steps,
@@ -352,7 +352,7 @@ if ($action !== '') {
 
         $steps[] = ['status' => 'ok', 'label' => 'تنظیم وبهوک تلگرام', 'detail' => $webhookUrl];
 
-        $info = mirza_install_telegram($values['APIKEY'], 'getWebhookInfo');
+        $info = modasr_install_telegram($values['APIKEY'], 'getWebhookInfo');
         if ($info['ok']) {
             $lastError = (string) ($info['result']['last_error_message'] ?? '');
             $steps[] = [
@@ -364,12 +364,12 @@ if ($action !== '') {
             ];
         }
 
-        mirza_install_telegram($values['APIKEY'], 'sendMessage', [
+        modasr_install_telegram($values['APIKEY'], 'sendMessage', [
             'chat_id' => $values['adminnumber'],
             'text' => 'مدثر بات روی هاست نصب شد. برای شروع دستور /start را بفرستید.',
         ]);
 
-        mirza_install_json([
+        modasr_install_json([
             'ok' => true,
             'deleted' => true,
             'steps' => $steps,
@@ -377,13 +377,13 @@ if ($action !== '') {
         ]);
     }
 
-    mirza_install_json(['error' => 'درخواست نامعتبر است.'], 400);
+    modasr_install_json(['error' => 'درخواست نامعتبر است.'], 400);
 }
 
-$locked = mirza_install_locked();
-$configured = mirza_install_is_configured();
-$authorized = mirza_install_authorized();
-$host = mirza_install_host();
+$locked = modasr_install_locked();
+$configured = modasr_install_is_configured();
+$authorized = modasr_install_authorized();
+$host = modasr_install_host();
 
 ?>
 <!DOCTYPE html>
@@ -1227,7 +1227,7 @@ $host = mirza_install_host();
     </div>
     <?php if (!$locked && $authorized): ?>
         <script>
-            const SHELL_EXEC_AVAILABLE = <?php echo mirza_install_shell_exec_available() ? 'true' : 'false'; ?>;
+            const SHELL_EXEC_AVAILABLE = <?php echo modasr_install_shell_exec_available() ? 'true' : 'false'; ?>;
             const STEPS = [
                 { key: 'requirements', title: 'پیش‌نیازهای سرور' },
                 { key: 'cron', title: 'کرون‌ها' },

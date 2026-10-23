@@ -4179,7 +4179,7 @@ ID пользователя : %s
                 'zarinPalMerchant' => 'Продавец ZarinPal',
                 'zeroBalance' => '0️⃣ Обнулить баланс',
                 'panelSetting' => '🎛 Настройка панели',
-                'mirzaAgentPanel' => 'Агент MODASR',
+                'modasrAgentPanel' => 'Агент MODASR',
                 'setGroupName' => '🎛 Настройка имени группы',
                 'subLinkDomain' => '🔗 Домен ссылки подписки',
                 'panelTypeSanaei' => 'Sanaei один порт',

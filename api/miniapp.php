@@ -70,7 +70,7 @@ if (!$usercheck || !is_string($usercheck['token']) || !hash_equals($usercheck['t
 $data['user_id'] = $usercheck['id'];
 if ($method !== "GET") {
     $userLock = $pdo->prepare("SELECT GET_LOCK(?, 0)");
-    $userLock->execute(["mirza_user_" . $usercheck['id']]);
+    $userLock->execute(["modasr_user_" . $usercheck['id']]);
     if ((int) $userLock->fetchColumn() !== 1) {
         http_response_code(429);
         echo json_encode([

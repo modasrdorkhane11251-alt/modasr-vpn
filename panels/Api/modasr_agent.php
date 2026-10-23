@@ -18,7 +18,7 @@ function get_panel_list(array $panel)
 }
 
 
-function create_user_mirza(array $panel, int $data_limit_gb, int $expire_days, string $username)
+function create_user_modasr(array $panel, int $data_limit_gb, int $expire_days, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
@@ -39,7 +39,7 @@ function create_user_mirza(array $panel, int $data_limit_gb, int $expire_days, s
 }
 
 
-function get_user_data_mirza(array $panel, string $username)
+function get_user_data_modasr(array $panel, string $username)
 {
     $url = $panel['url_panel'] . '?actions=get_user_data&username=' . urlencode($username);
     $headers = array(
@@ -51,7 +51,7 @@ function get_user_data_mirza(array $panel, string $username)
     $response = $req->get();
     return $response;
 }
-function add_time_service_mirza(array $panel, int $expire_days, string $username)
+function add_time_service_modasr(array $panel, int $expire_days, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
@@ -70,7 +70,7 @@ function add_time_service_mirza(array $panel, int $expire_days, string $username
 }
 
 
-function add_volume_service_mirza(array $panel, int $data_limit_gb, string $username)
+function add_volume_service_modasr(array $panel, int $data_limit_gb, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
@@ -90,7 +90,7 @@ function add_volume_service_mirza(array $panel, int $data_limit_gb, string $user
 
 
 
-function extend_service_mirza(array $panel, int $data_limit_gb, int $time_day, string $username)
+function extend_service_modasr(array $panel, int $data_limit_gb, int $time_day, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
@@ -109,7 +109,7 @@ function extend_service_mirza(array $panel, int $data_limit_gb, int $time_day, s
     return $response;
 }
 
-function remove_service_mirza(array $panel, string $username)
+function remove_service_modasr(array $panel, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
@@ -127,7 +127,7 @@ function remove_service_mirza(array $panel, string $username)
 }
 
 
-function revoke_service_mirza(array $panel, string $username)
+function revoke_service_modasr(array $panel, string $username)
 {
     $url = $panel['url_panel'];
     $headers = array(
