@@ -55,7 +55,7 @@ _step_eta() {
         "Configuring firewall"*)             echo 15 ;;
         "Restarting Apache"*)                echo 5  ;;
         "Setting PHP as the active"*|"Setting PHP "*) echo 6  ;;
-        "Downloading Mirza"*)                echo 20 ;;
+        "Downloading MODASR"*)                echo 20 ;;
         "Extracting source files"*)          echo 5  ;;
         "Configuring MySQL root access"*)    echo 10 ;;
         "Opening firewall ports"*)           echo 4  ;;
@@ -170,7 +170,7 @@ _drule()  { printf "  ${C_BORDER}%s${CR}\n" "$(_repeat "━" "$UI_W")"; }
 banner()  {
     echo
     _drule
-    printf "  ${C_OK}▌${CR} ${C_TITLE}MIRZA${CR}  ${C_DIM}— VPN Subscription Management${CR}\n"
+    printf "  ${C_OK}▌${CR} ${C_TITLE}MODASR${CR}  ${C_DIM}— VPN Subscription Management${CR}\n"
     _drule
 }
 # Menu item row: [n] label  (left-aligned, no right border)
@@ -917,8 +917,8 @@ version_section() {
     else
         _kv "Latest" "$(_dot warn) ${C_DIM}unknown (offline)${CR}"
     fi
-    _kv "Channel" "${C_DIM}t.me/mirzapanel${CR}"
-    _kv "Group" "${C_DIM}t.me/mirzapanelgroup${CR}"
+    _kv "Channel" "${C_DIM}t.me/MODASRbot${CR}"
+    _kv "Group" "${C_DIM}t.me/MODASRbot${CR}"
 }
 
 bot_section() {
@@ -1077,7 +1077,7 @@ function renew_ssl() {
     _kv "Domain" "${C_KEY}${domain}${CR}"
 
     if ! command -v certbot >/dev/null 2>&1; then
-        echo -e "  ${C_BAD}●${CR} ${C_BAD}certbot is not installed. Install Mirza first.${CR}"
+        echo -e "  ${C_BAD}●${CR} ${C_BAD}certbot is not installed. Install MODASR first.${CR}"
         sleep 1; show_menu; return 1
     fi
 
@@ -1127,7 +1127,7 @@ function backup_bot() {
 
     CONFIG_PATH="/var/www/html/mirzaprobotconfig/config.php"
     if [ ! -f "$CONFIG_PATH" ]; then
-        printf "    ${C_BAD}●${CR} ${C_BAD}Mirza is not installed. config.php not found.${CR}\n"
+        printf "    ${C_BAD}●${CR} ${C_BAD}MODASR is not installed. config.php not found.${CR}\n"
         echo ""
         printf "  ${C_PROMPT}❯${CR} Press Enter to return to the menu... "
         read -r _
@@ -1177,7 +1177,7 @@ function backup_bot() {
         send_result=$(curl -s -o /dev/null -w "%{http_code}" \
             -F "chat_id=${admin_id}" \
             -F "document=@${backup_file}" \
-            -F "caption=📦 Mirza DB Backup (${backup_date})" \
+            -F "caption=📦 MODASR DB Backup (${backup_date})" \
             "https://api.telegram.org/bot${bot_token}/sendDocument" 2>/dev/null)
         if [ "$send_result" = "200" ]; then
             _kv "Telegram" "$(_dot ok) ${C_OK}Backup sent to admin chat (${admin_id})${CR}"
@@ -1205,7 +1205,7 @@ function import_bot() {
 
     CONFIG_PATH="/var/www/html/mirzaprobotconfig/config.php"
     if [ ! -f "$CONFIG_PATH" ]; then
-        printf "    ${C_BAD}●${CR} ${C_BAD}Mirza is not installed. config.php not found.${CR}\n"
+        printf "    ${C_BAD}●${CR} ${C_BAD}MODASR is not installed. config.php not found.${CR}\n"
         echo ""
         printf "  ${C_PROMPT}❯${CR} Press Enter to return to the menu... "
         read -r _
@@ -1921,7 +1921,7 @@ function install_bot() {
 
         TEMP_DIR="/tmp/mirzaprobot"
         rm -rf "$TEMP_DIR"; mkdir -p "$TEMP_DIR"
-        run_step "Downloading Mirza (${SRC_LABEL_RESUME})" "wget -O '$TEMP_DIR/bot.zip' '$ZIP_URL'" \
+        run_step "Downloading MODASR (${SRC_LABEL_RESUME})" "wget -O '$TEMP_DIR/bot.zip' '$ZIP_URL'" \
             || { show_step_error; install_pause "Downloading bot files"; }
         run_step "Extracting source files" "unzip -o '$TEMP_DIR/bot.zip' -d '$TEMP_DIR'" \
             || { show_step_error; install_pause "Extracting bot files"; }
@@ -2139,6 +2139,16 @@ EOF
         state_set BOT_TOKEN "$YOUR_BOT_TOKEN"
     fi
 
+    # Optional: Telegram bot token for the reports group (forum topics) when
+    # the main platform is Bale/Rubika. Press Enter to skip.
+    MODASR_REPORTS_TOKEN="$(state_get REPORTS_TOKEN)"
+    if [ "${MODASR_PLATFORM:-telegram}" != "telegram" ] && [ -z "$MODASR_REPORTS_TOKEN" ]; then
+        echo -e "  ${C_DIM}Optional: Telegram bot token for the reports group (topics). Enter to skip.${CR}"
+        printf "\e[33m[+] \e[36mReports bot token (Telegram, optional): \033[0m"
+        read MODASR_REPORTS_TOKEN
+        state_set REPORTS_TOKEN "$MODASR_REPORTS_TOKEN"
+    fi
+
     YOUR_CHAT_ID="$(state_get CHAT_ID)"
     if [ -n "$YOUR_CHAT_ID" ]; then
         echo -e "\e[33m[+] \e[36mChat id (resumed):\e[0m ${YOUR_CHAT_ID}"
@@ -2287,6 +2297,7 @@ EOF
 try { \$pdo = new PDO(\$dsn, \$usernamedb, \$passworddb, \$options); } catch (\PDOException \$e) { error_log("Database connection failed: " . \$e->getMessage()); die("error: database connection failed"); }
 \$APIKEY = '${YOUR_BOT_TOKEN}';
 \$platform = '${MODASR_PLATFORM:-telegram}';
+\$REPORTS_BOT_TOKEN = '${MODASR_REPORTS_TOKEN:-}';
 \$adminnumber = '${YOUR_CHAT_ID}';
 \$domainhosts = '${YOUR_DOMAIN}';
 \$usernamebot = '${YOUR_BOTNAME}';
@@ -2370,7 +2381,7 @@ function update_bot() {
     BOT_DIR="/var/www/html/mirzaprobotconfig"
     if [ ! -d "$BOT_DIR" ]; then
         _sec "Update"
-        printf "    ${C_BAD}●${CR} ${C_BAD}Mirza is not installed. Install it first.${CR}\n"
+        printf "    ${C_BAD}●${CR} ${C_BAD}MODASR is not installed. Install it first.${CR}\n"
         sleep 2
         show_menu
         return 1
@@ -2778,6 +2789,7 @@ function migrate_to_pro() {
     OLD_API_KEY=$(grep '$APIKEY' "$OLD_CONFIG" | cut -d"'" -f2)
     OLD_PLATFORM=$(grep '$platform' "$OLD_CONFIG" | cut -d"'" -f2)
     OLD_PLATFORM=${OLD_PLATFORM:-telegram}
+    OLD_REPORTS_TOKEN=$(grep '$REPORTS_BOT_TOKEN' "$OLD_CONFIG" | cut -d"'" -f2)
     OLD_ADMIN_ID=$(grep '$adminnumber' "$OLD_CONFIG" | cut -d"'" -f2)
     OLD_BOT_NAME=$(grep '$usernamebot' "$OLD_CONFIG" | cut -d"'" -f2)
     OLD_DOMAIN_FULL=$(grep '$domainhosts' "$OLD_CONFIG" | cut -d"'" -f2)
@@ -2789,7 +2801,7 @@ function migrate_to_pro() {
     ZIP_URL="https://github.com/${GIT_REPO}/archive/refs/heads/main.zip"
     TEMP_DIR="/tmp/mirzabot_mig"
     mkdir -p "$TEMP_DIR"
-    run_step "Downloading Mirza source" "wget -q -O '$TEMP_DIR/bot.zip' '$ZIP_URL'" \
+    run_step "Downloading MODASR source" "wget -q -O '$TEMP_DIR/bot.zip' '$ZIP_URL'" \
         || { show_step_error; echo -e "\033[31mError: Failed to download Mirza source.\033[0m"; exit 1; }
     run_step "Extracting source files" "unzip -o -q '$TEMP_DIR/bot.zip' -d '$TEMP_DIR'" \
         || { show_step_error; echo -e "\033[31mError: Failed to extract source files.\033[0m"; exit 1; }
@@ -2816,6 +2828,7 @@ function migrate_to_pro() {
 try { \$pdo = new PDO(\$dsn, \$usernamedb, \$passworddb, \$options); } catch (\PDOException \$e) { error_log("Database connection failed: " . \$e->getMessage()); die("error: database connection failed"); }
 \$APIKEY = '${OLD_API_KEY}';
 \$platform = '${OLD_PLATFORM}';
+\$REPORTS_BOT_TOKEN = '${OLD_REPORTS_TOKEN}';
 \$adminnumber = '${OLD_ADMIN_ID}';
 \$domainhosts = '${DOMAIN_NAME}';
 \$usernamebot = '${OLD_BOT_NAME}';
