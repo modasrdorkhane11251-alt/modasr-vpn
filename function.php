@@ -1,6 +1,7 @@
 <?php
 require_once 'vendor/autoload.php';
 require 'config.php';
+require_once __DIR__ . '/brand.php';
 ini_set('error_log', 'error_log');
 
 use Endroid\QrCode\Builder\Builder;
@@ -1832,6 +1833,34 @@ function setAgentWebhook($token, $id_user, $username, $secret)
     return telegram('setWebhook', [
         'url' => "https://$domainhosts/vpnbot/{$id_user}{$username}/index.php?secret=$secret",
     ], $token);
+}
+
+/**
+ * One-time migration for webhooks registered before secret enforcement
+ * (e.g. Bale webhooks created without the ?secret= parameter). Re-registers
+ * the webhook with the secret URL and lets the current update through; the
+ * flag file guarantees this grace path can only be used once per platform,
+ * so a forged request cannot keep bypassing the check afterwards.
+ */
+function migrateWebhookSecretForPlatform(string $platform, string $secret): bool
+{
+    $flagDir = __DIR__ . '/storage/cache';
+    $flag = $flagDir . '/webhook_secret_migrated_' . $platform;
+    if (is_file($flag)) {
+        return false;
+    }
+    if (!is_dir($flagDir)) {
+        @mkdir($flagDir, 0775, true);
+    }
+    global $domainhosts;
+    $result = telegram('setWebhook', [
+        'url' => "https://$domainhosts/index.php?platform=$platform&secret=$secret",
+    ]);
+    if (!($result['ok'] ?? false)) {
+        return false;
+    }
+    @file_put_contents($flag, date('c'));
+    return true;
 }
 
 function ensureAgentWebhookSecret($bot)

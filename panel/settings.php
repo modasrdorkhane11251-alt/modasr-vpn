@@ -261,7 +261,7 @@ include __DIR__ . '/inc/layout_head.php';
             </div>
             <div class="kv">
                 <span class="kv-key"><?= $textbotlang['panel']['settingsDonate'] ?></span>
-                <a class="btn-glass" href="https://nowpayments.io/donation/mahdi" target="_blank" rel="noopener"><?= icon('heart', 14) ?> <?= $textbotlang['panel']['settingsDonateLink'] ?></a>
+                <a class="btn-glass" href="<?= htmlspecialchars(brand('donation')) ?>" target="_blank" rel="noopener"><?= icon('heart', 14) ?> <?= $textbotlang['panel']['settingsDonateLink'] ?></a>
             </div>
         </div>
     </div>

@@ -10,8 +10,8 @@ if (session_status() === PHP_SESSION_NONE) {
     ]);
 }
 
-require __DIR__ . '/../../config.php';
-require __DIR__ . '/../../function.php';
+require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../function.php';
 
 date_default_timezone_set('Asia/Tehran');
 

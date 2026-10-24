@@ -19,10 +19,17 @@ if (!checktelegramip())
     die("Unauthorized access");
 #-----------end telegram_ip_ranges------------#
 $webhookSecret = ensureWebhookSecret();
-// Webhook secret only applies to Telegram; Bale/Rubika webhooks cannot carry
-// our secret query param, and Bale is additionally identified by its own token.
-if (modasr_platform() === 'telegram' && !$webhookSecret['created'] && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret']))
-    die("Unauthorized access");
+// The webhook secret applies to Telegram and Bale. Rubika webhooks are
+// registered in the Rubika bot panel and cannot carry our secret query
+// param — a documented platform limitation.
+$webhookPlatform = modasr_platform();
+if (in_array($webhookPlatform, ['telegram', 'bale'], true) && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret'])) {
+    // Webhooks registered before secret enforcement do not carry the secret
+    // yet: re-register once with the secret URL (grace), then enforce.
+    if (!migrateWebhookSecretForPlatform($webhookPlatform, $webhookSecret['secret'])) {
+        die("Unauthorized access");
+    }
+}
 if ($is_bot)
     return;
 if (isset($update['chat_member'])) {
@@ -419,7 +426,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $donateKeyboard = json_encode([
         'inline_keyboard' => [
             [
-                ['text' => $textbotlang['keyboard']['donate'], 'url' => 'https://nowpayments.io/donation/Modasrbot'],
+                ['text' => $textbotlang['keyboard']['donate'], 'url' => brand('donation')],
             ],
         ]
     ]);

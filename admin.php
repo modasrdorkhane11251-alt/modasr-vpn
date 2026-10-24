@@ -3,7 +3,7 @@
 $version = file_get_contents('version');
 $textadmin = ["panel", "/panel", $textbotlang['Admin']['panelAdmin']];
 $text_panel_admin_login_template = sprintf($textbotlang['Admin']['report']['aboutBot'], $version);
-$aboutBotKeyboard = json_encode(['inline_keyboard' => [[['text' => $textbotlang['Admin']['report']['btnDonate'], 'url' => 'https://nowpayments.io/donation/mahdi']]]]);
+$aboutBotKeyboard = json_encode(['inline_keyboard' => [[['text' => $textbotlang['Admin']['report']['btnDonate'], 'url' => brand('donation')]]]]);
 
 if (!in_array($from_id, $admin_ids))
     return;

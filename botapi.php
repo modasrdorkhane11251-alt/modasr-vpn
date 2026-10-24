@@ -482,11 +482,7 @@ function isDuplicateUpdate($updateId)
     return false;
 }
 // #-----------------------------#
-$modasr_raw_body = file_get_contents("php://input");
-if (modasr_platform() === 'rubika') {
-    @file_put_contents(__DIR__ . '/storage/cache/rubika_raw.log', date('H:i:s') . ' ' . $modasr_raw_body . "\n", FILE_APPEND);
-}
-$update = json_decode($modasr_raw_body, true);
+$update = json_decode(file_get_contents("php://input"), true);
 $update = modasr_normalize_incoming_update($update);
 $update_id = $update['update_id'] ?? 0;
 if (isDuplicateUpdate($update_id)) {

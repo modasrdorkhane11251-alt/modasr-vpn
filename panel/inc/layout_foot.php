@@ -24,7 +24,7 @@
     </div>
     <div class="modal-body" style="line-height:1.9;font-size:.86rem;color:var(--mute)"><?= $textbotlang['panel']['donatePopupText'] ?></div>
     <div class="modal-foot">
-      <a class="btn-glass" href="https://nowpayments.io/donation/mahdi" target="_blank" rel="noopener" onclick="closeModal('donateModal')"><?= icon('heart', 14) ?> <?= $textbotlang['panel']['settingsDonateLink'] ?></a>
+      <a class="btn-glass" href="<?= htmlspecialchars(brand('donation')) ?>" target="_blank" rel="noopener" onclick="closeModal('donateModal')"><?= icon('heart', 14) ?> <?= $textbotlang['panel']['settingsDonateLink'] ?></a>
       <button type="button" class="btn btn-ghost" onclick="closeModal('donateModal')"><?= $textbotlang['panel']['donatePopupLater'] ?></button>
     </div>
   </div>

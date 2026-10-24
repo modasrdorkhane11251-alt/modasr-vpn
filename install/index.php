@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 @set_time_limit(300);
 
 require_once __DIR__ . '/checks.php';
+require_once dirname(__DIR__) . '/brand.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     @session_start();
@@ -393,7 +394,7 @@ $host = modasr_install_host();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>نصب مدثر بات</title>
+    <title><?= htmlspecialchars('نصب ' . brand('name_fa', 'MODASR BOT')) ?></title>
     <style>
         @font-face {
             font-family: Vazirmatn;
@@ -1176,7 +1177,7 @@ $host = modasr_install_host();
 <body>
     <div class="wrap">
         <header class="top">
-            <h1>نصب مدثر بات</h1>
+            <h1><?= htmlspecialchars('نصب ' . brand('name_fa', 'MODASR BOT')) ?></h1>
             <p>دامنه <b><?php echo htmlspecialchars($host, ENT_QUOTES, 'UTF-8'); ?></b></p>
         </header>
 
