@@ -477,7 +477,7 @@ Use the button below to pay👇🏻',
                                 'unlinked' => '✅ Account unlinked.',
                                 'isSecondary' => "ℹ️ This account is linked to primary account <code>%s</code>.",
                                 'openMiniapp' => '🌐 Open mini-app (one-time link)',
-                                'miniappLink' => "🌐 <b>Mini-app sign-in link</b>\n\nTap the button below to open the mini-app with your account:\n\n⏱ The link is valid for 10 minutes and can be used only once.\n⚠️ Do not share this link with anyone.",
+                                'miniappLink' => "🌐 <b>Persistent mini-app sign-in link</b>\n\nTap the button below to open the mini-app with your account. This link never expires.\n\n⚠️ Treat it like a password — do not share it. If it leaks, reset it from the mini-app account tab.",
                                 'miniappRateLimit' => '❌ Too many active links. Please wait a few minutes.',
                                 'miniappNative' => "🌐 <b>Mini-app</b>\n\nTap the button below to open the mini-app with your account:",
                                 'errors' => [

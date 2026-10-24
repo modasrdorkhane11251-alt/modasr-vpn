@@ -12,25 +12,37 @@
  */
 
 $authToken = isset($_GET['auth_token']) && is_string($_GET['auth_token']) ? trim($_GET['auth_token']) : '';
+$persistentKey = isset($_GET['key']) && is_string($_GET['key']) ? trim($_GET['key']) : '';
 $injectedSession = null;
 
-if ($authToken !== '') {
+if ($authToken !== '' || $persistentKey !== '') {
     require_once __DIR__ . '/../config.php';
     require_once __DIR__ . '/../function.php';
 
-    $auth = miniapp_consume_auth_token($authToken);
-    if ($auth !== null) {
-        $platformUser = select('user', '*', 'id', (string) $auth['user_id'], 'select');
-        if ($platformUser && $platformUser['User_Status'] !== 'block') {
-            $primaryId = modasr_primary_user_id((string) $auth['user_id']);
-            $primary = select('user', '*', 'id', $primaryId, 'select') ?: $platformUser;
-            try {
-                $sessionToken = miniapp_issue_session((string) $auth['user_id'], (string) $auth['platform']);
-                $displayName = trim((string) ($primary['namecustom'] ?? ''));
-                if ($displayName === '') {
-                    $displayName = trim((string) ($primary['username'] ?? ''));
-                }
-                $sessionPayload = [
+    // Two entry modes: one-time auth_token (bot magic link / Google bounce)
+    // or the persistent per-account key (survives across visits).
+    $platformUser = null;
+    $entryPlatform = 'web';
+    if ($authToken !== '') {
+        $auth = miniapp_consume_auth_token($authToken);
+        if ($auth !== null) {
+            $platformUser = select('user', '*', 'id', (string) $auth['user_id'], 'select');
+            $entryPlatform = (string) $auth['platform'];
+        }
+    } else {
+        $keyUser = miniapp_resolve_key($persistentKey);
+        if ($keyUser) {
+            $platformUser = $keyUser;
+            $entryPlatform = (string) ($keyUser['platform'] ?? 'web');
+        }
+    }
+    if ($platformUser && $platformUser['User_Status'] !== 'block') {
+        $primaryId = modasr_primary_user_id((string) $platformUser['id']);
+        $primary = select('user', '*', 'id', $primaryId, 'select') ?: $platformUser;
+        try {
+            $sessionToken = miniapp_issue_session((string) $platformUser['id'], $entryPlatform);
+            $displayName = miniapp_display_name($primary);
+            $sessionPayload = [
                     'user' => [
                         'id' => is_numeric($primary['id']) ? (int) $primary['id'] : $primary['id'],
                         'first_name' => $displayName !== '' ? $displayName : 'کاربر',
@@ -45,12 +57,11 @@ if ($authToken !== '') {
                     'n8lE/qNXK7YC64+QH7BQb0IRN0WGm3kbaRgey1xsBp0='
                 );
             } catch (Throwable $e) {
-                error_log('miniapp auth_token exchange failed: ' . $e->getMessage());
+                error_log('miniapp auth exchange failed: ' . $e->getMessage());
             }
-        }
     }
-    // Invalid/expired/consumed token: fall through and render the app; the
-    // bundle will show its regular login state.
+    // Invalid/expired/consumed credential: fall through and render the app;
+    // the bundle will show its regular login state.
 }
 ?>
 <!DOCTYPE html>
@@ -60,7 +71,7 @@ if ($authToken !== '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MODASR BOT — Mini App</title>
     <script src="./js/telegram-web-app.js"></script>
-    <script src="./js/linking.js?v=0.2.0"></script>
+    <script src="./js/linking.js?v=0.3.0"></script>
 <?php if ($injectedSession !== null): ?>
     <script>
     (function () {

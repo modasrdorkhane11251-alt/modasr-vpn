@@ -122,6 +122,7 @@ function mini_session_info(array $data, string $method): void
         ];
     }
     $sessionPlatform = (string) ($usercheck['__session_platform'] ?? $usercheck['platform'] ?? '');
+    $domain = isset($GLOBALS['domainhosts']) ? (string) $GLOBALS['domainhosts'] : '';
     echo json_encode([
         'status' => true,
         'msg' => 'ok',
@@ -133,8 +134,91 @@ function mini_session_info(array $data, string $method): void
             'primary' => $overview['primary'],
             'links' => $links,
             'balance' => (int) $usercheck['Balance'],
+            'name' => miniapp_display_name($usercheck),
+            'phone' => ((string) ($usercheck['number'] ?? 'none') !== 'none') ? (string) $usercheck['number'] : '',
+            'google_email' => (string) ($usercheck['google_email'] ?? ''),
+            'miniapp_url' => $domain !== '' ? ('https://' . $domain . '/app/?key=' . miniapp_get_or_create_key((string) $usercheck['id'])) : '',
         ],
     ], JSON_UNESCAPED_UNICODE);
+    return;
+}
+
+function mini_set_phone(array $data, string $method): void
+{
+    global $pdo, $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    $phone = preg_replace('/[^0-9+]/', '', (string) ($data['phone'] ?? ''));
+    // Iranian mobile or generic international format.
+    if (!preg_match('/^(09\d{9}|\+98\d{10}|0098\d{10})$/', $phone)) {
+        echo json_encode(['status' => false, 'msg' => 'invalid_phone']);
+        return;
+    }
+    $stmt = $pdo->prepare("UPDATE user SET number = ? WHERE id = ?");
+    $stmt->execute([$phone, (string) $usercheck['id']]);
+    clearSelectCache('user');
+    echo json_encode(['status' => true, 'msg' => 'ok', 'obj' => ['phone' => $phone]]);
+    return;
+}
+
+function mini_google_link_url(array $data, string $method): void
+{
+    global $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    if (empty($GLOBALS['GOOGLE_CLIENT_ID'])) {
+        echo json_encode(['status' => false, 'msg' => 'google_not_configured']);
+        return;
+    }
+    // One-time state token: the OAuth callback binds the Google identity to
+    // exactly this account, and only within 10 minutes.
+    $state = miniapp_issue_auth_token((string) $usercheck['id'], 'google-link');
+    if ($state === null) {
+        echo json_encode(['status' => false, 'msg' => 'rate_limited']);
+        return;
+    }
+    $domain = isset($GLOBALS['domainhosts']) ? (string) $GLOBALS['domainhosts'] : '';
+    echo json_encode(['status' => true, 'msg' => 'ok', 'obj' => [
+        'url' => 'https://' . $domain . '/api/google_oauth.php?mode=link&state=' . $state,
+    ]]);
+    return;
+}
+
+function mini_google_unlink(array $data, string $method): void
+{
+    global $pdo, $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    $stmt = $pdo->prepare("UPDATE user SET google_sub = NULL, google_email = NULL WHERE id = ?");
+    $stmt->execute([(string) $usercheck['id']]);
+    clearSelectCache('user');
+    echo json_encode(['status' => true, 'msg' => 'ok']);
+    return;
+}
+
+function mini_key_regenerate(array $data, string $method): void
+{
+    global $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    $domain = isset($GLOBALS['domainhosts']) ? (string) $GLOBALS['domainhosts'] : '';
+    try {
+        $key = miniapp_regenerate_key((string) $usercheck['id']);
+    } catch (Throwable $e) {
+        echo json_encode(['status' => false, 'msg' => 'error']);
+        return;
+    }
+    echo json_encode(['status' => true, 'msg' => 'ok', 'obj' => [
+        'miniapp_url' => $domain !== '' ? ('https://' . $domain . '/app/?key=' . $key) : '',
+    ]]);
     return;
 }
 
@@ -1285,6 +1369,10 @@ match ($action) {
     'link_issue' => mini_link_issue($data, $method),
     'link_redeem' => mini_link_redeem($data, $method),
     'link_unlink' => mini_link_unlink($data, $method),
+    'set_phone' => mini_set_phone($data, $method),
+    'key_regenerate' => mini_key_regenerate($data, $method),
+    'google_link_url' => mini_google_link_url($data, $method),
+    'google_unlink' => mini_google_unlink($data, $method),
     default => sendJsonResponse(false, "Action Invalid", []),
 };
 

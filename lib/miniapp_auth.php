@@ -276,3 +276,69 @@ function miniapp_cryptojs_encrypt(string $plaintext, string $passphrase): string
     $ciphertext = openssl_encrypt($plaintext, 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv);
     return base64_encode('Salted__' . $salt . $ciphertext);
 }
+
+
+/**
+ * Persistent mini-app login key (one per account). Stored on the platform
+ * account row that requested it; exchanged at /app/?key=... for a session
+ * on the PRIMARY account. Regeneration revokes the previous key.
+ */
+function miniapp_get_or_create_key(string $userId): string
+{
+    global $pdo;
+    $row = select('user', '*', 'id', $userId, 'select');
+    if ($row && !empty($row['miniapp_key'])) {
+        return (string) $row['miniapp_key'];
+    }
+    return miniapp_regenerate_key($userId);
+}
+
+function miniapp_regenerate_key(string $userId): string
+{
+    global $pdo;
+    for ($attempt = 0; $attempt < 3; $attempt++) {
+        $key = bin2hex(random_bytes(24));
+        try {
+            $stmt = $pdo->prepare("UPDATE user SET miniapp_key = ? WHERE id = ?");
+            $stmt->execute([$key, $userId]);
+            if ($stmt->rowCount() === 1) {
+                clearSelectCache('user');
+                return $key;
+            }
+        } catch (Throwable $e) {
+            // UNIQUE collision — retry with a fresh key.
+        }
+    }
+    throw new RuntimeException('could not allocate miniapp key');
+}
+
+/** Resolve a persistent key to its account row, or null. */
+function miniapp_resolve_key(string $key): ?array
+{
+    global $pdo;
+    if (!preg_match('/^[a-f0-9]{48}$/', $key)) {
+        return null;
+    }
+    $stmt = $pdo->prepare("SELECT * FROM user WHERE miniapp_key = ? LIMIT 1");
+    $stmt->execute([$key]);
+    $row = $stmt->fetch();
+    return $row ?: null;
+}
+
+/** Best display name for the mini-app profile. */
+function miniapp_display_name(array $user): string
+{
+    $name = trim((string) ($user['display_name'] ?? ''));
+    if ($name !== '' && $name !== 'none') {
+        return $name;
+    }
+    $custom = trim((string) ($user['namecustom'] ?? ''));
+    if ($custom !== '' && $custom !== 'none') {
+        return $custom;
+    }
+    $username = trim((string) ($user['username'] ?? ''));
+    if ($username !== '' && stripos($username, 'NOT_USERNAME') === false) {
+        return $username;
+    }
+    return 'کاربر';
+}

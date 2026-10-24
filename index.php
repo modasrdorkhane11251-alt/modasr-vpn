@@ -123,6 +123,21 @@ if ($from_id != 0) {
     }
 }
 $user = select("user", "*", "id", $from_id, "select");
+// Keep a real display name per account (powers the mini-app profile, which
+// otherwise falls back to "none" for messengers without signed webviews).
+if (is_array($user) && $user && $first_name !== '' && $first_name !== 'none') {
+    $existingName = (string) ($user['display_name'] ?? '');
+    if ($existingName !== $first_name) {
+        try {
+            $stmtName = $pdo->prepare("UPDATE user SET display_name = ? WHERE id = ?");
+            $stmtName->execute([$first_name, $from_id]);
+            clearSelectCache('user');
+            $user['display_name'] = $first_name;
+        } catch (Throwable $e) {
+            // Column may not exist yet on a partially migrated install.
+        }
+    }
+}
 $user = modasr_apply_primary_wallet(is_array($user) ? $user : []);
 // All ids of this (possibly linked) account as a quoted SQL fragment —
 // used by the service/payment list queries so linked platforms see ONE
@@ -261,7 +276,7 @@ if (preg_match('#^/start link_(\d{6})$#', $text, $linkMatch)) {
 
 if (strpos($text, "/start ") !== false && $user['step'] != "gettextSystemMessage") {
     $affiliatesid = explode(" ", $text)[1];
-    if (!in_array($affiliatesid, ['start', "usertest", "/start", "buy", "help"])) {
+    if (!in_array($affiliatesid, ['start', "usertest", "/start", "buy", "help", "app"])) {
         isValidInvitationCode($setting, $from_id, $user['verify']);
         if (!check_active_btn($setting['keyboardmain'], "text_affiliates")) {
             sendmessage($from_id, $textbotlang['users']['affiliates']['offaffiliates'], $keyboard, 'HTML');
@@ -3508,7 +3523,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     }
     Editmessagetext($from_id, $message_id, sprintf($linkLang['codeIssued'], $codeOrErr, $codeOrErr), $backKeyboard);
     return;
-} elseif ($datain == "miniapp_link" || $text == "/app") {
+} elseif ($datain == "miniapp_link" || $text == "/app" || $text == "/start app") {
     // One-time magic link that opens the mini-app already signed in —
     // for platforms without signed webview initData (rubika, browsers).
     $linkLang = $textbotlang['users']['account']['linking'];
@@ -3524,17 +3539,15 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         ]], JSON_UNESCAPED_UNICODE);
         $miniappText = $linkLang['miniappNative'];
     } else {
-        $authToken = miniapp_issue_auth_token($from_id, modasr_platform());
-        if ($authToken === null) {
-            $rateText = $linkLang['miniappRateLimit'];
-            if ($datain == "miniapp_link") {
-                Editmessagetext($from_id, $message_id, $rateText, $backKeyboard);
-            } else {
-                sendmessage($from_id, $rateText, $backKeyboard, 'HTML');
-            }
+        // Persistent per-account login link (regeneratable from the mini-app
+        // account hub; regenerating revokes the previous link).
+        try {
+            $persistentKey = miniapp_get_or_create_key($from_id);
+        } catch (Throwable $e) {
+            sendmessage($from_id, $linkLang['errors']['error'], $backKeyboard, 'HTML');
             return;
         }
-        $miniappUrl = 'https://' . $domainhosts . '/app/?auth_token=' . $authToken;
+        $miniappUrl = 'https://' . $domainhosts . '/app/?key=' . $persistentKey;
         $linkBtnKeyboard = json_encode(['inline_keyboard' => [
             [['text' => $linkLang['openMiniapp'], 'url' => $miniappUrl]],
             [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],

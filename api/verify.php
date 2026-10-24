@@ -157,6 +157,7 @@ if ($identified === null) {
                 . ' uid=' . (string) ($dbgUser['id'] ?? '?')
                 . ' auth_date=' . (string) ($dbg['auth_date'] ?? '?')
                 . ' platforms_tried=' . implode(',', array_keys(array_filter((array) $PLATFORM_TOKENS))));
+            error_log('miniapp verify-debug-raw: ' . substr($candidate, 0, 2000));
         }
     }
     respond_json($sawSignatureFailure ? 403 : 400, [
