@@ -1291,6 +1291,9 @@ The <code>install</code> folder still exists on the server and the bot could not
                         'addBalanceUser' => '✅ The amount was added to the user\'s balance',
                         'addBalanceUsers' => '✅ The amount was added to the users\' balances',
                         'invalidPrice' => 'The amount is invalid',
+                        'askAdjustReason' => '📌 This user is a reseller. Please enter the reason for the balance change (recorded in the ledger with your identity):',
+                        'adjustDoneAgent' => '✅ The reseller balance change was applied and journaled.',
+                        'adjustFailedAgent' => '❌ The reseller balance change failed (insufficient balance/limit or duplicate request).',
                         'askUserGroup' => '📌 Which of the following user groups should the top-up be deposited to?',
                         'askTargetUsers' => '📌 Which user should the public top-up be sent to?',
                         'askNotify' => '📌 Should a top-up notification message be sent to the users or not?

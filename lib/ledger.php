@@ -325,3 +325,113 @@ function ledgerVerifyExtendDelivery(array $op): array
     }
     return ['result' => 'mismatch', 'user' => $user];
 }
+
+/* ----------------------------------------------------------------------- */
+/*  Reconciliation (STRICTLY READ-ONLY)                                     */
+/* ----------------------------------------------------------------------- */
+
+/**
+ * Read-only reconciliation. Never writes anything. Categories are kept
+ * separate on purpose: in-flight and unknown operations are NOT mismatches;
+ * charges on charged/delivering/unknown ops are normal states, not errors.
+ *
+ * @return array{
+ *   stale_started: array,   // ops stuck in 'started' (no money moved; safe)
+ *   in_flight: array,       // charged/delivering: money moved, delivery open
+ *   unknown: array,         // unverifiable delivery; no auto-refund happened
+ *   refund_pending: array,  // refund decided but not completed
+ *   refunded: array,        // summary only
+ *   charge_journal_missing: array,  // definitive mismatch
+ *   refund_journal_missing: array,  // definitive mismatch
+ *   refund_without_charge: array,   // definitive mismatch (over-refund risk)
+ *   legacy_journal: array,          // pre-ledger wholesale journal rows
+ *   invoice_without_op: array       // active agent-bot invoices w/o op row
+ * }
+ */
+function ledgerReconcile(int $staleMinutes = 10, int $limit = 200): array
+{
+    global $pdo;
+    $out = [
+        'stale_started' => [],
+        'in_flight' => [],
+        'unknown' => [],
+        'refund_pending' => [],
+        'refunded' => ['count' => 0, 'amount' => 0],
+        'charge_journal_missing' => [],
+        'refund_journal_missing' => [],
+        'refund_without_charge' => [],
+        'legacy_journal' => ['count' => 0, 'amount' => 0, 'rows' => []],
+        'invoice_without_op' => [],
+    ];
+    if (!$pdo) {
+        return $out;
+    }
+    $table = $pdo->query("SHOW TABLES LIKE 'reseller_operation'")->fetchColumn();
+    if (!$table) {
+        return $out;
+    }
+    $staleBefore = date('Y-m-d H:i:s', time() - $staleMinutes * 60);
+
+    $stmt = $pdo->prepare("SELECT * FROM reseller_operation WHERE status = 'started' AND created_at < ? LIMIT $limit");
+    $stmt->execute([$staleBefore]);
+    $out['stale_started'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $out['in_flight'] = $pdo->query("SELECT * FROM reseller_operation WHERE status IN ('charged','delivering') LIMIT $limit")->fetchAll(PDO::FETCH_ASSOC);
+    $out['unknown'] = $pdo->query("SELECT * FROM reseller_operation WHERE status = 'unknown' LIMIT $limit")->fetchAll(PDO::FETCH_ASSOC);
+    $out['refund_pending'] = $pdo->query("SELECT * FROM reseller_operation WHERE status = 'refund_pending' LIMIT $limit")->fetchAll(PDO::FETCH_ASSOC);
+
+    $refunded = $pdo->query("SELECT COUNT(*) AS c, COALESCE(SUM(amount),0) AS s FROM reseller_operation WHERE status = 'refunded'")->fetch(PDO::FETCH_ASSOC);
+    $out['refunded'] = ['count' => (int) $refunded['c'], 'amount' => (int) $refunded['s']];
+
+    // Definitive mismatches: op state vs journal.
+    $out['charge_journal_missing'] = $pdo->query(
+        "SELECT o.* FROM reseller_operation o
+         LEFT JOIN agent_transaction j ON j.ref = CONCAT('wholesale_', o.type, '_', o.op_id)
+         WHERE o.status IN ('charged','delivering','succeeded','refund_pending','refunded') AND j.id IS NULL
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+
+    $out['refund_journal_missing'] = $pdo->query(
+        "SELECT o.* FROM reseller_operation o
+         LEFT JOIN agent_transaction j ON j.ref = CONCAT('refund_', o.type, '_', o.op_id)
+         WHERE o.status = 'refunded' AND j.id IS NULL AND o.amount > 0
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+
+    $out['refund_without_charge'] = $pdo->query(
+        "SELECT o.* FROM reseller_operation o
+         JOIN agent_transaction jr ON jr.ref = CONCAT('refund_', o.type, '_', o.op_id)
+         LEFT JOIN agent_transaction jc ON jc.ref = CONCAT('wholesale_', o.type, '_', o.op_id)
+         WHERE o.status = 'refunded' AND jc.id IS NULL
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+
+    // Legacy wholesale journal rows (pre-ledger): ref suffix matches no op.
+    $legacy = $pdo->query(
+        "SELECT j.* FROM agent_transaction j
+         LEFT JOIN reseller_operation o
+           ON j.ref = CONCAT('wholesale_', o.type, '_', o.op_id)
+          OR j.ref = CONCAT('refund_', o.type, '_', o.op_id)
+         WHERE (j.type LIKE 'wholesale\\_%' OR j.type LIKE 'refund\\_%') AND o.id IS NULL
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+    $sum = 0;
+    foreach ($legacy as $row) {
+        $sum += (int) $row['amount'];
+    }
+    $out['legacy_journal'] = ['count' => count($legacy), 'amount' => $sum, 'rows' => $legacy];
+
+    // Active invoices created through agent bots without any operation row.
+    // Informational only: invoices predating the ledger legitimately have none.
+    $out['invoice_without_op'] = $pdo->query(
+        "SELECT i.id_invoice, i.id_user, i.username, i.Service_location, i.price_product, i.time_sell, i.bottype
+         FROM invoice i
+         JOIN botsaz b ON b.bot_token = i.bottype
+         LEFT JOIN reseller_operation o ON o.op_id = CONCAT('p_', i.id_invoice)
+         WHERE i.Status = 'active' AND o.id IS NULL
+         ORDER BY i.time_sell DESC
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+
+    return $out;
+}

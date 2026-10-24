@@ -197,6 +197,55 @@ function resellerJournalExists(string $ref): bool
 }
 
 /* ----------------------------------------------------------------------- */
+/*  Wallet charge + manual adjustment (Phase E, E-3)                        */
+/* ----------------------------------------------------------------------- */
+
+/** Is this user row an agent (wholesale wallet holder)? */
+function resellerUserIsAgent($userRow): bool
+{
+    return is_array($userRow) && in_array($userRow['agent'] ?? 'f', ['n1', 'n2'], true);
+}
+
+/**
+ * Journal a wallet top-up for an agent (idempotent per payment order).
+ * Used when an agent's wholesale wallet is credited through a payment.
+ * Returns the journal row id, or 0 when it already existed.
+ */
+function resellerJournalWalletCharge(string $agentId, int $amount, string $orderId, array $meta = []): int
+{
+    if ($amount <= 0) {
+        return 0;
+    }
+    return resellerJournal($agentId, 'wallet_charge', $amount, 'wallet_charge_' . $orderId, $meta + ['order' => $orderId]);
+}
+
+/**
+ * Admin manual adjustment of an agent wallet.
+ * Reason AND admin identity are mandatory; the ref must be unique per
+ * adjustment (derived from the Payment_report order id by the caller).
+ * Positive amounts are journaled as wallet_charge, negative as
+ * manual_adjustment. Returns the new balance or null when refused.
+ */
+function resellerWalletAdjust(string $agentId, int $amount, string $reason, string $adminId, string $ref): ?int
+{
+    global $pdo;
+    if ($amount === 0 || trim($reason) === '' || trim($adminId) === '' || trim($ref) === '') {
+        return null;
+    }
+    $meta = ['reason' => $reason, 'admin' => $adminId];
+    if ($amount > 0) {
+        return resellerCreditWallet($agentId, $amount, 'wallet_charge', $ref, $meta);
+    }
+    $stmt = $pdo->prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
+    $stmt->execute([$agentId]);
+    $agent = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($agent === false) {
+        return null;
+    }
+    return resellerChargeWallet($agent, -$amount, 'manual_adjustment', $ref, $meta);
+}
+
+/* ----------------------------------------------------------------------- */
 /*  Activation fee (one-time, separate from wholesale balance)              */
 /* ----------------------------------------------------------------------- */
 

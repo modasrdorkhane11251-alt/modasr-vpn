@@ -97,6 +97,7 @@ if ($adminrulecheck['rule'] != "administrator") {
     ];
     $limitedRoleSteps = [
         "GetusernameconfigAndOrdedrs", "addbalancemanual", "addbalanceuser", "addbalanceusercurrent", "adddecriptionblock", "get_number_limit",
+        "agentadjustreasonadd", "agentadjustreasonlow",
         "getlimitchangenewbyuser", "getmaxpricevolumesrc", "getmaxpricetimesrc", "getmessageAsAdmin", "getpanelhidebotsaz", "getpricetimesrc", "getpricevolumesrc", "getremovehidepanel",
         "gettimecustomvolomforextendadmin", "getuserhide", "getvolumecustomuserforextendadmin", "reject-dec", "sendmessagetext",
         "sendmessagetid", "show_info",
@@ -3648,6 +3649,15 @@ elseif ($datain == "systemsms") {
         sendmessage($from_id, $textbotlang['Admin']['Balance']['maxAmountToman'], $backadmin, 'HTML');
         return;
     }
+    // Phase E: agent wallets are journaled and require a recorded reason.
+    $targetUser = select("user", "*", "id", $user['Processing_value'], "select");
+    if (resellerUserIsAgent($targetUser)) {
+        update("user", "Processing_value_one", $text, "id", $from_id);
+        update("user", "Processing_value_tow", bin2hex(random_bytes(5)), "id", $from_id);
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['askAdjustReason'], $backadmin, 'HTML');
+        step('agentadjustreasonadd', $from_id);
+        return;
+    }
     $dateacc = date('Y/m/d H:i:s');
     $randomString = bin2hex(random_bytes(5));
     $stmt = $pdo->prepare("INSERT INTO Payment_report (id_user,id_order,time,price,payment_Status,Payment_Method,id_invoice) VALUES (?,?,?,?,?,?,?)");
@@ -3685,6 +3695,38 @@ elseif ($datain == "systemsms") {
         'reply_to_message_id' => $message_id,
     ]);
     step('addbalanceuser', $from_id);
+} elseif ($user['step'] == "agentadjustreasonadd") {
+    // Phase E: agent wallet top-up with mandatory reason + admin identity.
+    $reason = trim($text);
+    if ($reason === '') {
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['askAdjustReason'], $backadmin, 'HTML');
+        return;
+    }
+    $targetId = $user['Processing_value'];
+    $amount = intval($user['Processing_value_one']);
+    $orderId = $user['Processing_value_tow'];
+    $res = resellerWalletAdjust((string) $targetId, $amount, $reason, (string) $from_id, 'wallet_charge_' . $orderId);
+    if ($res === null) {
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['adjustFailedAgent'], $keyboardadmin, 'html');
+        step('home', $from_id);
+        return;
+    }
+    $dateacc = date('Y/m/d H:i:s');
+    $stmt = $pdo->prepare("INSERT INTO Payment_report (id_user,id_order,time,price,payment_Status,Payment_Method,id_invoice) VALUES (?,?,?,?,?,?,?)");
+    $stmt->execute([$targetId, $orderId, $dateacc, $amount, "paid", "add balance by admin", null]);
+    sendmessage($from_id, $textbotlang['Admin']['Balance']['adjustDoneAgent'], $keyboardadmin, 'html');
+    $textadd = sprintf($textbotlang['users']['Balance']['addedNotice'], number_format($amount, 0));
+    sendmessage($targetId, $textadd, null, 'HTML');
+    step('home', $from_id);
+    if (strlen($setting['Channel_Report']) > 0) {
+        $textaddbalance = sprintf($textbotlang['Admin']['reportgroup']['balanceIncreased'], $username, $from_id, $targetId, number_format($amount), number_format($res));
+        telegram('sendmessage', [
+            'chat_id' => $setting['Channel_Report'],
+            'message_thread_id' => $paymentreports,
+            'text' => $textaddbalance,
+            'parse_mode' => "HTML"
+        ]);
+    }
 } elseif ($user['step'] == "addbalanceuser") {
     if (!ctype_digit($text)) {
         sendmessage($from_id, $textbotlang['Admin']['Balance']['invalidPrice'], $backadmin, 'HTML');
@@ -3692,6 +3734,15 @@ elseif ($datain == "systemsms") {
     }
     if ($text > 100000000) {
         sendmessage($from_id, $textbotlang['Admin']['Balance']['maxAmountToman'], $backadmin, 'HTML');
+        return;
+    }
+    // Phase E: agent wallets are journaled and require a recorded reason.
+    $targetUser = select("user", "*", "id", $user['Processing_value'], "select");
+    if (resellerUserIsAgent($targetUser)) {
+        update("user", "Processing_value_one", $text, "id", $from_id);
+        update("user", "Processing_value_tow", bin2hex(random_bytes(5)), "id", $from_id);
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['askAdjustReason'], $backadmin, 'HTML');
+        step('agentadjustreasonlow', $from_id);
         return;
     }
     $dateacc = date('Y/m/d H:i:s');
@@ -3712,6 +3763,38 @@ elseif ($datain == "systemsms") {
     $Balance_user_afters = number_format(select("user", "*", "id", $user['Processing_value'], "select")['Balance']);
     if (strlen($setting['Channel_Report']) > 0) {
         $textaddbalance = sprintf($textbotlang['Admin']['reportgroup']['balanceDecreased2'], $username, $from_id, $user['Processing_value'], $text, $Balance_user_afters);
+        telegram('sendmessage', [
+            'chat_id' => $setting['Channel_Report'],
+            'message_thread_id' => $paymentreports,
+            'text' => $textaddbalance,
+            'parse_mode' => "HTML"
+        ]);
+    }
+} elseif ($user['step'] == "agentadjustreasonlow") {
+    // Phase E: agent wallet deduction with mandatory reason + admin identity.
+    $reason = trim($text);
+    if ($reason === '') {
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['askAdjustReason'], $backadmin, 'HTML');
+        return;
+    }
+    $targetId = $user['Processing_value'];
+    $amount = intval($user['Processing_value_one']);
+    $orderId = $user['Processing_value_tow'];
+    $res = resellerWalletAdjust((string) $targetId, -$amount, $reason, (string) $from_id, 'adjustment_' . $orderId);
+    if ($res === null) {
+        sendmessage($from_id, $textbotlang['Admin']['Balance']['adjustFailedAgent'], $keyboardadmin, 'html');
+        step('home', $from_id);
+        return;
+    }
+    $dateacc = date('Y/m/d H:i:s');
+    $stmt = $pdo->prepare("INSERT INTO Payment_report (id_user,id_order,time,price,payment_Status,Payment_Method,id_invoice) VALUES (?,?,?,?,?,?,?)");
+    $stmt->execute([$targetId, $orderId, $dateacc, $amount, "paid", "low balance by admin", null]);
+    sendmessage($from_id, $textbotlang['Admin']['Balance']['adjustDoneAgent'], $keyboardadmin, 'html');
+    $textkam = sprintf($textbotlang['users']['Balance']['deductedNotice2'], number_format($amount, 0));
+    sendmessage($targetId, $textkam, null, 'HTML');
+    step('home', $from_id);
+    if (strlen($setting['Channel_Report']) > 0) {
+        $textaddbalance = sprintf($textbotlang['Admin']['reportgroup']['balanceDecreased2'], $username, $from_id, $targetId, $amount, number_format($res));
         telegram('sendmessage', [
             'chat_id' => $setting['Channel_Report'],
             'message_thread_id' => $paymentreports,

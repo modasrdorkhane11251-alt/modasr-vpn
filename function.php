@@ -1074,6 +1074,9 @@ function DirectPayment($order_id, $image = 'images.jpg')
     $service_order = $linkedOrder['service'];
     if (($get_invoice && $get_invoice['Status'] == "active") || (!$get_invoice && $service_order && $service_order['status'] == "paid")) {
         addBalance($Balance_id['id'], intval($Payment_report['price']));
+        if (function_exists('resellerUserIsAgent') && resellerUserIsAgent($Balance_id)) {
+            resellerJournalWalletCharge((string) $Balance_id['id'], intval($Payment_report['price']), (string) $Payment_report['id_order'], ['method' => $Payment_report['Payment_Method'] ?? '']);
+        }
         sendmessage($Balance_id['id'], sprintf($textbotlang['users']['Balance']['addedNotice5'], number_format(intval($Payment_report['price']))), $keyboard, 'HTML');
         return;
     }
@@ -1536,6 +1539,9 @@ function DirectPayment($order_id, $image = 'images.jpg')
         }
     } else {
         addBalance($Payment_report['id_user'], intval($Payment_report['price']));
+        if (function_exists('resellerUserIsAgent') && resellerUserIsAgent($Balance_id)) {
+            resellerJournalWalletCharge((string) $Balance_id['id'], intval($Payment_report['price']), (string) $Payment_report['id_order'], ['method' => $Payment_report['Payment_Method'] ?? '']);
+        }
         update("Payment_report", "payment_Status", "paid", "id_order", $Payment_report['id_order']);
         $Payment_report['price'] = number_format($Payment_report['price'], 0);
         $format_price_cart = $Payment_report['price'];
