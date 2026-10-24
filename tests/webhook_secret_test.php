@@ -23,15 +23,19 @@ ok(webhookSecretMatches($secret) === false, 'empty secret rejected');
 // migrateWebhookSecretForPlatform: the telegram() stub (defined in
 // channel_platform_test.php) reports success, so the first migration call
 // must succeed and write the flag; the second call must be refused by the
-// flag guard. The flag file is removed afterwards so production state is
-// never affected by tests.
+// flag guard. A pre-existing production flag is backed up and restored so
+// tests never weaken live webhook enforcement.
 $_GET['platform'] = 'bale';
 $flag = __DIR__ . '/../storage/cache/webhook_secret_migrated_bale';
+$flagBackup = is_file($flag) ? file_get_contents($flag) : null;
 @unlink($flag);
 $first = migrateWebhookSecretForPlatform('bale', $secret);
 ok($first === true && is_file($flag), 'first migration re-registers webhook and writes flag');
 $second = migrateWebhookSecretForPlatform('bale', $secret);
 ok($second === false, 'second migration refused (grace usable only once)');
 @unlink($flag);
-ok(!is_file($flag), 'test cleaned up the migration flag');
+if ($flagBackup !== null) {
+    file_put_contents($flag, $flagBackup);
+}
+ok($flagBackup === null ? !is_file($flag) : is_file($flag), 'production migration flag restored after test');
 unset($_GET['platform']);
