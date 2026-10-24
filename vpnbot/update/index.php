@@ -1877,6 +1877,7 @@ $output
     ));
     $type = "extend_user";
     $stmt->execute([$from_id, $nameloc['username'], $value, $type, $dateacc, $datafactor['price_product'], json_encode($extend)]);
+    $extendOpId = (int) $pdo->lastInsertId();
     update("invoice", "Status", "active", "id_invoice", $id_invoice);
     if (intval($datafactor['price_product']) != 0) {
         $Balance_prim = $user['Balance'] - $datafactor['price_product'];
@@ -1888,7 +1889,7 @@ $output
         $resultper = ($datafactor['price_productMain'] * $userbotbalance['pricediscount']) / 100;
         $datafactor['price_productMain'] = $datafactor['price_productMain'] - $resultper;
     }
-    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_extend', 'wholesale_extend_' . $id_invoice, ['invoice' => $id_invoice, 'buyer' => $from_id]);
+    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_extend', 'wholesale_extend_' . $id_invoice . '_' . $extendOpId, ['invoice' => $id_invoice, 'extend_op' => $extendOpId, 'buyer' => $from_id]);
     if ($chargeResult === null) {
         error_log("wholesale extend charge failed after delivery: invoice=$id_invoice agent={$userbotbalance['id']}");
         if (strlen($settingmain['Channel_Report'] ?? '') > 0) {

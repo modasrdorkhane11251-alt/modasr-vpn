@@ -76,3 +76,75 @@ clearSelectCache('Requestagent');
 clearSelectCache('agent_transaction');
 clearSelectCache('user');
 ok(resellerGetRequest($testAgentId) === null, 'test rows cleaned up');
+
+section('reseller — adversarial');
+
+/* ---------- simulated concurrency: two charges racing for the same funds ---------- */
+global $pdo;
+$raceAgent = 'race_' . bin2hex(random_bytes(4));
+$pdo->exec("SET SESSION sql_mode=''");
+$pdo->prepare("INSERT INTO user (id, step, Balance, agent) VALUES (?, 'none', 500, 'n')")->execute([$raceAgent]);
+clearSelectCache('user');
+$raceUser = select("user", "*", "id", $raceAgent, "select");
+// two concurrent purchases of 400 each: only ONE may succeed
+$r1 = resellerChargeWallet($raceUser, 400, 'wholesale_purchase', 'race_a');
+clearSelectCache('user');
+$raceUser2 = select("user", "*", "id", $raceAgent, "select");
+$r2 = resellerChargeWallet($raceUser2, 400, 'wholesale_purchase', 'race_b');
+ok($r1 === 100 && $r2 === null, 'racing charges: first succeeds, second refused (no overdraw)');
+clearSelectCache('user');
+ok(intval(select("user", "Balance", "id", $raceAgent, "select")['Balance']) === 100, 'balance consistent after race (100 left)');
+
+/* ---------- n2 credit-limit race ---------- */
+$pdo->prepare("UPDATE user SET agent = 'n2', maxbuyagent = 300 WHERE id = ?")->execute([$raceAgent]);
+clearSelectCache('user');
+$u = select("user", "*", "id", $raceAgent, "select");
+$c1 = resellerChargeWallet($u, 700, 'wholesale_purchase', 'race_c'); // 100-700 = -600 < -300 -> refuse
+ok($c1 === null, 'n2 charge beyond credit limit refused');
+$c2 = resellerChargeWallet($u, 350, 'wholesale_purchase', 'race_d'); // 100-350 = -250 >= -300 -> ok
+ok($c2 === -250, 'n2 charge within credit limit succeeds (negative balance allowed)');
+$pdo->prepare("DELETE FROM user WHERE id = ?")->execute([$raceAgent]);
+$pdo->prepare("DELETE FROM agent_transaction WHERE agent_id = ?")->execute([$raceAgent]);
+
+/* ---------- duplicate activation-fee callback (simulated double-click) ---------- */
+$dupAgent = 'dup_' . bin2hex(random_bytes(4));
+$pdo->prepare("INSERT INTO user (id, step, Balance, agent) VALUES (?, 'none', 0, 'f')")->execute([$dupAgent]);
+resellerSubmitRequest(['id' => $dupAgent, 'username' => 'd'], 't');
+resellerApproveRequest($dupAgent);
+// fee is 0 on this server; pay twice — second must be refused
+$pay1 = resellerPayActivationFee(['id' => $dupAgent, 'Balance' => '0', 'agent' => 'f', 'maxbuyagent' => '0']);
+$pay2 = resellerPayActivationFee(['id' => $dupAgent, 'Balance' => '0', 'agent' => 'f', 'maxbuyagent' => '0']);
+ok($pay1 === 'paid' && $pay2 === 'bad_state', 'double fee callback: second refused');
+// activation is also a one-way conditional transition
+ok(resellerActivate($dupAgent) === true, 'activation from paid works');
+ok(resellerActivate($dupAgent) === false, 'double activation refused');
+ok(resellerRejectRequest($dupAgent) === false, 'rejection of active reseller refused');
+clearSelectCache('Requestagent');
+ok(resellerGetRequest($dupAgent)['status'] === 'active', 'final state is active');
+$pdo->prepare("DELETE FROM user WHERE id = ?")->execute([$dupAgent]);
+$pdo->prepare("DELETE FROM Requestagent WHERE id = ?")->execute([$dupAgent]);
+$pdo->prepare("DELETE FROM agent_transaction WHERE agent_id = ?")->execute([$dupAgent]);
+
+/* ---------- cross-tenant isolation: owner resolution only via token ---------- */
+$tokA = '111111:AAAA' . bin2hex(random_bytes(8));
+$tokB = '222222:BBBB' . bin2hex(random_bytes(8));
+$ownA = 'ownA_' . bin2hex(random_bytes(3));
+$ownB = 'ownB_' . bin2hex(random_bytes(3));
+foreach ([[$ownA, $tokA, 'botA'], [$ownB, $tokB, 'botB']] as [$oid, $tok, $uname]) {
+    $pdo->prepare("INSERT INTO user (id, step, Balance, agent) VALUES (?, 'none', 0, 'n')")->execute([$oid]);
+    $pdo->prepare("INSERT INTO botsaz (id_user, bot_token, admin_ids, username, time, setting, hide_panel, webhook_secret) VALUES (?, ?, '[]', ?, 't', '{}', '{}', 'x')")->execute([$oid, $tok, $uname]);
+}
+clearSelectCache('botsaz');
+$ownerFromA = resellerOwnerFromToken($tokA);
+ok(is_array($ownerFromA) && $ownerFromA['id'] === $ownA, 'token A resolves owner A');
+ok(resellerOwnerFromToken($tokB)['id'] === $ownB, 'token B resolves owner B');
+ok(resellerOwnerFromToken($tokA)['id'] !== $ownB, 'token A never resolves owner B');
+ok(resellerOwnerFromToken('999999:FORGED_token') === null, 'forged token resolves to nothing');
+// tenant B cannot suspend/read as tenant A: toggle is scoped by owner id
+resellerToggleBotStatus($ownA);
+clearSelectCache('botsaz');
+ok(resellerBotIsActive(resellerBotFromToken($tokA)) === false, 'bot A suspended via owner A');
+ok(resellerBotIsActive(resellerBotFromToken($tokB)) === true, 'bot B unaffected by action on A');
+$pdo->prepare("DELETE FROM botsaz WHERE bot_token IN (?, ?)")->execute([$tokA, $tokB]);
+$pdo->prepare("DELETE FROM user WHERE id IN (?, ?)")->execute([$ownA, $ownB]);
+clearSelectCache('botsaz');
