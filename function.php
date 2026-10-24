@@ -2,6 +2,7 @@
 require_once 'vendor/autoload.php';
 require 'config.php';
 require_once __DIR__ . '/brand.php';
+require_once __DIR__ . '/lib/reseller.php';
 ini_set('error_log', 'error_log');
 
 use Endroid\QrCode\Builder\Builder;
