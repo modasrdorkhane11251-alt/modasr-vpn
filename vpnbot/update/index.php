@@ -1084,6 +1084,31 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         step('get_price', $from_id);
         return;
     }
+    // --- Phase E ledger: create the operation and charge the wholesale
+    // wallet BEFORE any delivery attempt. Charge + journal + op status are
+    // committed atomically inside ledgerChargeOperation. ---
+    $wholesaleAmount = intval($datafactor['price_productMain']);
+    if (intval($userbotbalance['pricediscount']) != 0) {
+        $wholesaleAmount = $wholesaleAmount - intval(($wholesaleAmount * $userbotbalance['pricediscount']) / 100);
+    }
+    $opId = 'p_' . $randomString;
+    $ledgerOp = ledgerCreateOperation($opId, LEDGER_OP_PURCHASE, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $randomString, $marzban_list_get['name_panel'], $username_ac, $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '']);
+    if ($ledgerOp === null) {
+        sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+        step("home", $from_id);
+        return;
+    }
+    $chargeResult = ledgerChargeOperation($opId);
+    if ($chargeResult === null) {
+        ledgerMarkFailed($opId, 'wholesale wallet charge refused');
+        sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+        step("home", $from_id);
+        foreach ($admin_ids as $admin) {
+            sendmessage($admin, "❌ ادمین عزیز کسر وجه عمده ناموفق بود؛ موجودی یا سقف خرید کافی نیست. ربات خود را شارژ نمایید.", null, 'HTML');
+        }
+        return;
+    }
+    ledgerMarkDelivering($opId);
     Editmessagetext($from_id, $message_id, "♻️ در حال ساختن سرویس شما...", null);
     $datetimestep = strtotime("+" . $datafactor['Service_time'] . "days");
     if ($datafactor['Service_time'] == 0) {
@@ -1099,7 +1124,43 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         'type' => 'buy_agent_user_bot'
     );
     $dataoutput = $ManagePanel->createUser($marzban_list_get['name_panel'], $datafactor['code_product'], $username_ac, $datac);
+    if ($dataoutput['username'] == null && !empty($dataoutput['ambiguous'])) {
+        // Ambiguous delivery: verify on the panel before any decision.
+        // Only a reliable panel answer may trigger refund or recovery.
+        $verify = ledgerVerifyUserExists($marzban_list_get['name_panel'], $username_ac);
+        if ($verify['result'] === 'present') {
+            // The service was actually created; recover and deliver the link.
+            $dataoutput = array(
+                'status' => 'successful',
+                'username' => $username_ac,
+                'subscription_url' => $verify['user']['subscription_url'] ?? '',
+                'configs' => array(),
+            );
+        } elseif ($verify['result'] !== 'absent') {
+            // unknown / unsupported panel: NO refund, NO retry — reconcile later.
+            ledgerMarkUnknown($opId, 'create ambiguous: ' . json_encode($dataoutput['msg'] ?? ''));
+            sendmessage($from_id, "⏳ وضعیت سرویس شما در حال بررسی است؛ نتیجه به زودی اطلاع‌رسانی می‌شود. کد پیگیری: $randomString", $keyboard, 'HTML');
+            $textunknown = "⚠️ وضعیت نامشخص ساخت سرویس (unknown)
+کد عملیات: $opId
+فاکتور: $randomString
+نام کاربری: $username_ac
+پنل: {$marzban_list_get['name_panel']}
+نماینده: {$userbotbalance['id']}
+بدون برگشت وجه خودکار — نیازمند بررسی";
+            if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
+                telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'message_thread_id' => $errorreport, 'text' => $textunknown, 'parse_mode' => "HTML"], $APIKEY);
+            }
+            step('home', $from_id);
+            return;
+        }
+        // 'absent' with a reliable panel answer -> definitive failure, falls
+        // through to the refund branch below.
+    }
     if ($dataoutput['username'] == null) {
+        // Definitive delivery failure: the wholesale charge is refunded
+        // idempotently; the retail (JSON) balance was never deducted.
+        ledgerRefundOperation($opId, 'delivery failed: ' . json_encode($dataoutput['msg'] ?? ''));
+        update("invoice", "Status", "Unsuccessful", "id_invoice", $randomString);
         $dataoutput['msg'] = json_encode($dataoutput['msg']);
         sendmessage($from_id, $textbotlang['users']['sell']['errorConfig'], $keyboard, 'HTML');
         $texterros = "⭕️ خطای ساخت اشتراک  در ربات نماینده
@@ -1119,6 +1180,7 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         step('home', $from_id);
         return;
     }
+    ledgerMarkSucceeded($opId);
     update("invoice", "Status", "active", "username", $username_ac);
     $configqr = "";
     $output_config_link = "";
@@ -1228,24 +1290,16 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         }
     }
     sendmessage($from_id, $textbotlang['users']['selectoption'], $keyboard, 'HTML');
-    if (intval($userbotbalance['pricediscount']) != 0) {
-        $resultper = ($datafactor['price_productMain'] * $userbotbalance['pricediscount']) / 100;
-        $datafactor['price_productMain'] = $datafactor['price_productMain'] - $resultper;
-    }
     if (intval($datafactor['price_product']) != 0) {
         $Balance_prim = $user['Balance'] - $datafactor['price_product'];
         $userbalance = json_decode(file_get_contents("data/$from_id/$from_id.json"), true);
         $userbalance['Balance'] = $Balance_prim;
         file_put_contents("data/$from_id/$from_id.json", json_encode($userbalance));
     }
-    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_purchase', 'wholesale_purchase_' . $randomString, ['invoice' => $randomString, 'buyer' => $from_id, 'product' => $datafactor['name_product'] ?? '']);
-    if ($chargeResult === null) {
-        error_log("wholesale charge failed after delivery: invoice=$randomString agent={$userbotbalance['id']}");
-        if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
-            telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'text' => "⚠️ کسر وجه عمده پس از تحویل سرویس ناموفق بود\nفاکتور: $randomString\nنماینده: {$userbotbalance['id']}", 'parse_mode' => "HTML"], $APIKEY);
-        }
-    }
-    $Balancebot = $chargeResult ?? ($userbotbalance['Balance'] - $datafactor['price_productMain']);
+    // Wholesale charge already happened before delivery (ledger op $opId).
+    $stmtBal = $pdo->prepare("SELECT Balance FROM user WHERE id = ?");
+    $stmtBal->execute([$userbotbalance['id']]);
+    $Balancebot = (int) $stmtBal->fetchColumn();
     if (in_array(usernameMethodKey($marzban_list_get['MethodUsername']), ['customTextSequential', 'usernameSequential', 'numericIdSequential', 'agentCustomTextSequential'], true)) {
         $value = intval($user['number_username']) + 1;
         update("user", "number_username", $value, "id", $from_id);
@@ -1844,9 +1898,68 @@ $output
         step('get_price', $from_id);
         return;
     }
+    // --- Phase E ledger: charge the wholesale wallet BEFORE the extend. ---
+    $wholesaleAmount = intval($datafactor['price_productMain']);
+    if (intval($userbotbalance['pricediscount']) != 0) {
+        $wholesaleAmount = $wholesaleAmount - intval(($wholesaleAmount * $userbotbalance['pricediscount']) / 100);
+    }
+    $opId = 'e_' . bin2hex(random_bytes(6));
+    $ledgerOp = ledgerCreateOperation($opId, LEDGER_OP_EXTEND, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $id_invoice, $marzban_list_get['name_panel'], $nameloc['username'], $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '']);
+    if ($ledgerOp === null) {
+        sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+        step("home", $from_id);
+        return;
+    }
+    $chargeResult = ledgerChargeOperation($opId);
+    if ($chargeResult === null) {
+        ledgerMarkFailed($opId, 'wholesale wallet charge refused');
+        sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+        step("home", $from_id);
+        foreach ($admin_ids as $admin) {
+            sendmessage($admin, "❌ ادمین عزیز کسر وجه عمده تمدید ناموفق بود؛ موجودی یا سقف خرید کافی نیست. ربات خود را شارژ نمایید.", null, 'HTML');
+        }
+        return;
+    }
+    ledgerMarkDelivering($opId);
     $DataUserOut = $ManagePanel->DataUser($nameloc['Service_location'], $nameloc['username']);
     $extend = $ManagePanel->extend($marzban_list_get['Methodextend'], $datafactor['Volume_constraint'], $datafactor['Service_time'], $nameloc['username'], $datafactor['code_product'], $marzban_list_get['code_panel']);
+    if (!empty($extend['expected_data_limit']) || !empty($extend['expected_expire'])) {
+        // Store the values the extend was supposed to set for verification.
+        ledgerTransition($opId, ['delivering'], 'delivering', [
+            'expected_data_limit' => $extend['expected_data_limit'] ?? null,
+            'expected_expire' => $extend['expected_expire'] ?? null,
+        ]);
+    }
+    if ($extend['status'] == false && !empty($extend['ambiguous'])) {
+        // Ambiguous extend: verify the EXPECTED values on the panel.
+        $opRow = ledgerGetOperation($opId);
+        $verify = $opRow ? ledgerVerifyExtendDelivery($opRow) : ['result' => 'unknown'];
+        if ($verify['result'] === 'delivered') {
+            $extend = array('status' => true, 'msg' => 'verified after ambiguous response');
+        } elseif ($verify['result'] === 'absent') {
+            // Panel reliably says the user does not exist -> definitive failure.
+            $extend = array('status' => false, 'msg' => 'user absent on panel');
+        } else {
+            // unknown / mismatch / unsupported: NO refund, NO retry.
+            ledgerMarkUnknown($opId, 'extend ambiguous: ' . json_encode($extend['msg'] ?? ''));
+            sendmessage($from_id, "⏳ وضعیت تمدید سرویس شما در حال بررسی است؛ نتیجه به زودی اطلاع‌رسانی می‌شود. کد پیگیری: $id_invoice", null, 'HTML');
+            $textunknown = "⚠️ وضعیت نامشخص تمدید سرویس (unknown)
+کد عملیات: $opId
+فاکتور: $id_invoice
+نام کاربری سرویس: {$nameloc['username']}
+پنل: {$marzban_list_get['name_panel']}
+نماینده: {$userbotbalance['id']}
+نتیجه بررسی پنل: {$verify['result']}
+بدون برگشت وجه خودکار — نیازمند بررسی";
+            if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
+                telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'message_thread_id' => $errorreport, 'text' => $textunknown, 'parse_mode' => "HTML"], $APIKEY);
+            }
+            return;
+        }
+    }
     if ($extend['status'] == false) {
+        // Definitive delivery failure -> idempotent refund of the charge.
+        ledgerRefundOperation($opId, 'extend failed: ' . json_encode($extend['msg'] ?? ''));
         $extend['msg'] = json_encode($extend['msg']);
         $textreports = "
 خطای تمدید سرویس در ربات نماینده
@@ -1873,30 +1986,23 @@ $output
         "oldvolume" => $DataUserOut['data_limit'],
         "oldtime" => $DataUserOut['expire'],
         'code_product' => $datafactor['code_product'],
-        'id_order' => $nameloc['id_invoice']
+        'id_order' => $nameloc['id_invoice'],
+        'op_id' => $opId
     ));
     $type = "extend_user";
     $stmt->execute([$from_id, $nameloc['username'], $value, $type, $dateacc, $datafactor['price_product'], json_encode($extend)]);
-    $extendOpId = (int) $pdo->lastInsertId();
     update("invoice", "Status", "active", "id_invoice", $id_invoice);
+    ledgerMarkSucceeded($opId);
     if (intval($datafactor['price_product']) != 0) {
         $Balance_prim = $user['Balance'] - $datafactor['price_product'];
         $userbalance = json_decode(file_get_contents("data/$from_id/$from_id.json"), true);
         $userbalance['Balance'] = $Balance_prim;
         file_put_contents("data/$from_id/$from_id.json", json_encode($userbalance));
     }
-    if (intval($userbotbalance['pricediscount']) != 0) {
-        $resultper = ($datafactor['price_productMain'] * $userbotbalance['pricediscount']) / 100;
-        $datafactor['price_productMain'] = $datafactor['price_productMain'] - $resultper;
-    }
-    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_extend', 'wholesale_extend_' . $id_invoice . '_' . $extendOpId, ['invoice' => $id_invoice, 'extend_op' => $extendOpId, 'buyer' => $from_id]);
-    if ($chargeResult === null) {
-        error_log("wholesale extend charge failed after delivery: invoice=$id_invoice agent={$userbotbalance['id']}");
-        if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
-            telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'text' => "⚠️ کسر وجه عمده تمدید پس از تحویل ناموفق بود\nفاکتور: $id_invoice\nنماینده: {$userbotbalance['id']}", 'parse_mode' => "HTML"], $APIKEY);
-        }
-    }
-    $Balancebot = $chargeResult ?? ($userbotbalance['Balance'] - $datafactor['price_productMain']);
+    // Wholesale charge already happened before delivery (ledger op $opId).
+    $stmtBal = $pdo->prepare("SELECT Balance FROM user WHERE id = ?");
+    $stmtBal->execute([$userbotbalance['id']]);
+    $Balancebot = (int) $stmtBal->fetchColumn();
     $keyboardextendfnished = json_encode([
         'inline_keyboard' => [
             [
