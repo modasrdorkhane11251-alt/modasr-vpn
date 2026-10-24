@@ -6158,13 +6158,8 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         sendmessage($from_id, $textbotlang['users']['buttonDisabled'], null, 'HTML');
         return;
     }
-    if ($user['Balance'] < $setting['agentreqprice']) {
-        $priceagent = number_format($setting['agentreqprice']);
-        sendmessage($from_id, sprintf($textbotlang['users']['agent']['insufficientbalanceagent'], $priceagent), $backuser, 'HTML');
-        return;
-    }
-    $countagentrequest = select("Requestagent", "*", "id", $from_id, "count");
-    if ($countagentrequest != 0) {
+    $existingRequest = resellerGetRequest((string) $from_id);
+    if ($existingRequest !== null && !in_array($existingRequest['status'], ['rejected', 'reject'], true)) {
         sendmessage($from_id, $textbotlang['users']['agent']['requestreport'], null, 'html');
         return;
     }
@@ -6179,72 +6174,15 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     }
     step("getagentrequest", $from_id);
 } elseif ($user['step'] == "getagentrequest" && $text) {
-    if (!deductBalance($user, intval($setting['agentreqprice']))) {
-        sendmessage($from_id, $textbotlang['users']['Balance']['notEnoughBalance'], $keyboard, 'HTML');
+    $description = preg_replace('/[\x{10000}-\x{10FFFF}]/u', '', $text); // strip 4-byte emoji for safety
+    $requestAgentInserted = resellerSubmitRequest(['id' => $from_id, 'username' => $username], $description);
+    if (!$requestAgentInserted) {
+        sendmessage($from_id, $textbotlang['users']['agent']['requestreport'], $keyboard, 'html');
         step("home", $from_id);
         return;
     }
     sendmessage($from_id, $textbotlang['users']['agent']['endrequest'], $keyboard, 'html');
     step("home", $from_id);
-    $stmt = $pdo->prepare("INSERT INTO Requestagent (id, username, time, Description, status, type) VALUES (:id, :username, :time, :description, :status, :type)");
-    $status = "waiting";
-    $type = "None";
-    $current_time = time();
-    $description = $text;
-    $requestAgentInserted = false;
-    try {
-        $stmt->execute([
-            ':id' => $from_id,
-            ':username' => $username,
-            ':time' => $current_time,
-            ':description' => $description,
-            ':status' => $status,
-            ':type' => $type,
-        ]);
-        $requestAgentInserted = true;
-    } catch (PDOException $e) {
-        if (strpos($e->getMessage(), 'Incorrect string value') !== false) {
-            $tableConverted = ensureTableUtf8mb4('Requestagent');
-            if ($tableConverted) {
-                try {
-                    $stmt->execute([
-                        ':id' => $from_id,
-                        ':username' => $username,
-                        ':time' => $current_time,
-                        ':description' => $description,
-                        ':status' => $status,
-                        ':type' => $type,
-                    ]);
-                    $requestAgentInserted = true;
-                } catch (PDOException $retryException) {
-                    error_log('Retry after charset conversion failed: ' . $retryException->getMessage());
-                }
-            }
-
-            if (!$requestAgentInserted) {
-                $sanitisedDescription = preg_replace('/[\x{10000}-\x{10FFFF}]/u', '', $description);
-                if ($sanitisedDescription !== $description) {
-                    $stmt->execute([
-                        ':id' => $from_id,
-                        ':username' => $username,
-                        ':time' => $current_time,
-                        ':description' => $sanitisedDescription,
-                        ':status' => $status,
-                        ':type' => $type,
-                    ]);
-                    $requestAgentInserted = true;
-                } else {
-                    throw $e;
-                }
-            }
-        } else {
-            throw $e;
-        }
-    }
-
-    if (!$requestAgentInserted) {
-        throw new RuntimeException('Failed to persist agent request description.');
-    }
     $textrequestagent = sprintf($textbotlang['users']['agent']['agentRequest'], $from_id, $username, $first_name, $text);
     $keyboardmanage = json_encode([
         'inline_keyboard' => [
@@ -6256,6 +6194,58 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     ]);
     foreach ($admin_ids as $admin) {
         sendmessage($admin, $textrequestagent, $keyboardmanage, 'HTML');
+    }
+} elseif ($datain == "payagentfee") {
+    $result = resellerPayActivationFee($user);
+    if ($result === 'paid') {
+        step("getagentbottoken", $from_id);
+        $skipKeyboard = json_encode([
+            'inline_keyboard' => [
+                [['text' => $textbotlang['users']['agent']['skipBotCreation'], 'callback_data' => "skipagentbot"]],
+            ]
+        ], JSON_UNESCAPED_UNICODE);
+        sendmessage($from_id, $textbotlang['users']['agent']['feePaidAskToken'], $skipKeyboard, 'HTML');
+    } elseif ($result === 'no_balance') {
+        sendmessage($from_id, sprintf($textbotlang['users']['agent']['insufficientbalanceagent'], number_format(resellerActivationFee())), $backuser, 'HTML');
+    } elseif ($result === 'already') {
+        sendmessage($from_id, $textbotlang['users']['agent']['isagent'], $backuser, 'HTML');
+    } else {
+        sendmessage($from_id, $textbotlang['users']['agent']['requestreport'], $backuser, 'HTML');
+    }
+} elseif ($datain == "skipagentbot") {
+    $request = resellerGetRequest((string) $from_id);
+    if ($request !== null && $request['status'] === 'paid' && resellerActivate((string) $from_id)) {
+        step("home", $from_id);
+        Editmessagetext($from_id, $message_id, $textbotlang['users']['agent']['activatedNoBot'], null);
+        foreach ($admin_ids as $admin) {
+            sendmessage($admin, sprintf($textbotlang['Admin']['agent']['resellerActivatedNoBot'], $from_id), null, 'HTML');
+        }
+    }
+} elseif ($user['step'] == "getagentbottoken" && $text) {
+    $request = resellerGetRequest((string) $from_id);
+    if ($request === null || $request['status'] !== 'paid') {
+        step("home", $from_id);
+        sendmessage($from_id, $textbotlang['users']['agent']['requestreport'], $keyboard, 'HTML');
+        return;
+    }
+    [$tokenOk, $tokenErr, $botUsername] = resellerRegisterBotToken($user, $text, 'telegram');
+    if (!$tokenOk) {
+        $msgKey = ['invalid_token' => 'invalidToken', 'token_exists' => 'tokenExists', 'already_has_bot' => 'alreadyHasBot'][$tokenErr] ?? 'invalidToken';
+        sendmessage($from_id, $textbotlang['users']['agent'][$msgKey], $backuser, 'HTML');
+        return;
+    }
+    [$botOk, $botErr] = resellerCreateAgentBot((string) $from_id, trim($text), $botUsername);
+    if (!$botOk) {
+        error_log("reseller bot provisioning failed for $from_id: $botErr");
+        sendmessage($from_id, $textbotlang['users']['agent']['botCreateFailed'], $keyboard, 'HTML');
+        step("home", $from_id);
+        return;
+    }
+    resellerActivate((string) $from_id);
+    step("home", $from_id);
+    sendmessage($from_id, sprintf($textbotlang['users']['agent']['botCreated'], $botUsername), $keyboard, 'HTML');
+    foreach ($admin_ids as $admin) {
+        sendmessage($admin, sprintf($textbotlang['Admin']['agent']['resellerActivated'], $from_id, $botUsername), null, 'HTML');
     }
 } elseif ($text == "/privacy") {
     sendmessage($from_id, $textbotlang['textbot']['rules'], null, 'HTML');
