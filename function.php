@@ -1073,9 +1073,18 @@ function DirectPayment($order_id, $image = 'images.jpg')
     $get_invoice = $linkedOrder['invoice'];
     $service_order = $linkedOrder['service'];
     if (($get_invoice && $get_invoice['Status'] == "active") || (!$get_invoice && $service_order && $service_order['status'] == "paid")) {
-        addBalance($Balance_id['id'], intval($Payment_report['price']));
+        $amountPaid = intval($Payment_report['price']);
         if (function_exists('resellerUserIsAgent') && resellerUserIsAgent($Balance_id)) {
-            resellerJournalWalletCharge((string) $Balance_id['id'], intval($Payment_report['price']), (string) $Payment_report['id_order'], ['method' => $Payment_report['Payment_Method'] ?? '']);
+            // F1: atomic credit + journal for agent wallets. On replay the
+            // journal ref makes it a no-op (duplicate), not a failure.
+            $chargeRef = 'wallet_charge_' . $Payment_report['id_order'];
+            $credited = resellerCreditWallet((string) $Balance_id['id'], $amountPaid, 'wallet_charge', $chargeRef, ['method' => $Payment_report['Payment_Method'] ?? '', 'order' => (string) $Payment_report['id_order']]);
+            if ($credited === null && !resellerJournalExists($chargeRef)) {
+                error_log('DirectPayment: agent credit FAILED for order ' . $Payment_report['id_order'] . ' (paid without credit — see reconcile paid_topups_without_journal)');
+                return;
+            }
+        } else {
+            addBalance($Balance_id['id'], $amountPaid);
         }
         sendmessage($Balance_id['id'], sprintf($textbotlang['users']['Balance']['addedNotice5'], number_format(intval($Payment_report['price']))), $keyboard, 'HTML');
         return;
@@ -1538,9 +1547,18 @@ function DirectPayment($order_id, $image = 'images.jpg')
             ]);
         }
     } else {
-        addBalance($Payment_report['id_user'], intval($Payment_report['price']));
+        $amountPaid = intval($Payment_report['price']);
         if (function_exists('resellerUserIsAgent') && resellerUserIsAgent($Balance_id)) {
-            resellerJournalWalletCharge((string) $Balance_id['id'], intval($Payment_report['price']), (string) $Payment_report['id_order'], ['method' => $Payment_report['Payment_Method'] ?? '']);
+            // F1: atomic credit + journal for agent wallets. On replay the
+            // journal ref makes it a no-op (duplicate), not a failure.
+            $chargeRef = 'wallet_charge_' . $Payment_report['id_order'];
+            $credited = resellerCreditWallet((string) $Balance_id['id'], $amountPaid, 'wallet_charge', $chargeRef, ['method' => $Payment_report['Payment_Method'] ?? '', 'order' => (string) $Payment_report['id_order']]);
+            if ($credited === null && !resellerJournalExists($chargeRef)) {
+                error_log('DirectPayment: agent top-up credit FAILED for order ' . $Payment_report['id_order'] . ' (paid without credit — see reconcile paid_topups_without_journal)');
+                return;
+            }
+        } else {
+            addBalance($Payment_report['id_user'], $amountPaid);
         }
         update("Payment_report", "payment_Status", "paid", "id_order", $Payment_report['id_order']);
         $Payment_report['price'] = number_format($Payment_report['price'], 0);

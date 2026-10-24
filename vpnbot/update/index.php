@@ -1091,8 +1091,16 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
     if (intval($userbotbalance['pricediscount']) != 0) {
         $wholesaleAmount = $wholesaleAmount - intval(($wholesaleAmount * $userbotbalance['pricediscount']) / 100);
     }
+    // F2: double-tap of the same order creates a second invoice + a second
+    // operation (random ids differ). Refuse a new purchase while an identical
+    // one (same agent/buyer/panel/product/volume/time) is still in flight.
+    // Finished operations never block: intentional repeat buys stay possible.
+    if (ledgerHasInflightPurchase((string) $userbotbalance['id'], (string) $from_id, (string) $marzban_list_get['name_panel'], (string) ($datafactor['name_product'] ?? ''), (string) $datafactor['Volume_constraint'], (string) $datafactor['Service_time'])) {
+        Editmessagetext($from_id, $message_id, "⏳ سفارش مشابه شما در حال پردازش است؛ لطفاً چند لحظه صبر کنید و دوباره تلاش نکنید.", null);
+        return;
+    }
     $opId = 'p_' . $randomString;
-    $ledgerOp = ledgerCreateOperation($opId, LEDGER_OP_PURCHASE, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $randomString, $marzban_list_get['name_panel'], $username_ac, $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '']);
+    $ledgerOp = ledgerCreateOperation($opId, LEDGER_OP_PURCHASE, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $randomString, $marzban_list_get['name_panel'], $username_ac, $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '', 'volume' => (string) $datafactor['Volume_constraint'], 'time' => (string) $datafactor['Service_time']]);
     if ($ledgerOp === null) {
         sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
         step("home", $from_id);
@@ -1130,10 +1138,11 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         $verify = ledgerVerifyUserExists($marzban_list_get['name_panel'], $username_ac);
         if ($verify['result'] === 'present') {
             // The service was actually created; recover and deliver the link.
+            // F3: the panel may return a relative link — normalize it.
             $dataoutput = array(
                 'status' => 'successful',
                 'username' => $username_ac,
-                'subscription_url' => $verify['user']['subscription_url'] ?? '',
+                'subscription_url' => absoluteSubscriptionUrl($verify['user']['subscription_url'] ?? '', $marzban_list_get['url_panel'] ?? ''),
                 'configs' => array(),
             );
         } elseif ($verify['result'] !== 'absent') {
@@ -1903,13 +1912,21 @@ $output
     if (intval($userbotbalance['pricediscount']) != 0) {
         $wholesaleAmount = $wholesaleAmount - intval(($wholesaleAmount * $userbotbalance['pricediscount']) / 100);
     }
-    $opId = 'e_' . bin2hex(random_bytes(6));
-    $ledgerOp = ledgerCreateOperation($opId, LEDGER_OP_EXTEND, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $id_invoice, $marzban_list_get['name_panel'], $nameloc['username'], $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '']);
-    if ($ledgerOp === null) {
-        sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+    // F2: deterministic claim on the invoice. A duplicate tap while a
+    // previous extend of THIS service is in flight is refused; once that
+    // cycle reached a terminal state (succeeded/refunded/failed), a new
+    // intentional extend gets a suffixed op_id and is never blocked.
+    $claim = ledgerClaimExtendOperation((string) $id_invoice, (string) $userbotbalance['id'], (int) ($botbalance['id'] ?? 0), (string) $from_id, $marzban_list_get['name_panel'], $nameloc['username'], $wholesaleAmount, ['product' => $datafactor['name_product'] ?? '', 'volume' => (string) $datafactor['Volume_constraint'], 'time' => (string) $datafactor['Service_time'], 'retail_price' => intval($datafactor['price_product'])]);
+    if (!$claim['claimed']) {
+        if ($claim['status'] === 'too_many_ops') {
+            sendmessage($from_id, "❌ خطایی در خرید رخ داده است برای رفع مشکل با پشتیبانی در ارتباط باشید", $keyboard, 'HTML');
+        } else {
+            sendmessage($from_id, "⏳ تمدید قبلی این سرویس هنوز در حال پردازش است؛ لطفاً تا اعلام نتیجه دوباره تلاش نکنید.", $keyboard, 'HTML');
+        }
         step("home", $from_id);
         return;
     }
+    $opId = $claim['op_id'];
     $chargeResult = ledgerChargeOperation($opId);
     if ($chargeResult === null) {
         ledgerMarkFailed($opId, 'wholesale wallet charge refused');

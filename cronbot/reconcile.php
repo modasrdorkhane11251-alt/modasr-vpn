@@ -84,4 +84,10 @@ foreach ($r['invoice_without_op'] as $row) {
     echo sprintf("  invoice=%s | user=%s | service=%s@%s | price=%s | time=%s\n", $row['id_invoice'], $row['id_user'], $row['username'], $row['Service_location'], number_format((int) $row['price_product']), $row['time_sell']);
 }
 
+echo "\n[11] Paid agent top-ups WITHOUT a wallet_charge journal (paid but never credited — repair via ledgerRepairAgentTopup)\n";
+echo count($r['paid_topups_without_journal']) ? '' : "  none\n";
+foreach ($r['paid_topups_without_journal'] as $row) {
+    echo sprintf("  order=%s | agent=%s | price=%s | method=%s | time=%s\n", $row['id_order'], $row['id_user'], number_format((int) $row['price']), $row['Payment_Method'], $row['time']);
+}
+
 echo "\n$line\nEnd of report.\n";

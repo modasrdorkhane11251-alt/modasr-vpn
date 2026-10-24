@@ -302,28 +302,67 @@ function ledgerVerifyUserExists(string $panelName, string $username): array
  * definitive failure (another change may have raced us) — it stays
  * 'mismatch', which callers must treat like 'unknown' (no auto-refund).
  */
+/**
+ * Normalize a panel expire value to a unix timestamp (or null when
+ * unreadable). Panels return either an integer timestamp or an ISO-8601
+ * datetime string (Marzban version_panel=1), and 0 means "unlimited".
+ */
+function ledgerNormalizeExpire($value): ?int
+{
+    if ($value === null || $value === '') {
+        return null;
+    }
+    if (is_numeric($value)) {
+        return (int) $value;
+    }
+    $t = strtotime((string) $value);
+    return $t === false ? null : $t;
+}
+
+/**
+ * Pure comparison of expected extend values against a live panel user row.
+ * Returns true (match), false (real mismatch), or null (unreadable panel
+ * values — callers must treat null like 'unknown', never as failure).
+ */
+function ledgerExtendValuesMatch($expLimit, $expExpire, array $user): ?bool
+{
+    if ($expLimit === null && $expExpire === null) {
+        return null; // nothing stored to compare against
+    }
+    if ($expLimit !== null) {
+        if (!isset($user['data_limit']) || !is_numeric($user['data_limit'])) {
+            return null;
+        }
+        if ((int) $user['data_limit'] !== (int) $expLimit) {
+            return false;
+        }
+    }
+    if ($expExpire !== null) {
+        $actual = ledgerNormalizeExpire($user['expire'] ?? null);
+        if ($actual === null) {
+            return null;
+        }
+        if (abs($actual - (int) $expExpire) > 300) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function ledgerVerifyExtendDelivery(array $op): array
 {
     $v = ledgerVerifyUserExists((string) $op['panel_name'], (string) $op['panel_username']);
     if ($v['result'] !== 'present') {
         return $v;
     }
-    $user = $v['user'];
-    $expLimit = $op['expected_data_limit'];
-    $expExpire = $op['expected_expire'];
-    if ($expLimit === null && $expExpire === null) {
-        return ['result' => 'unknown', 'user' => $user];
+    $match = ledgerExtendValuesMatch($op['expected_data_limit'], $op['expected_expire'], $v['user']);
+    if ($match === true) {
+        return ['result' => 'delivered', 'user' => $v['user']];
     }
-    $limitOk = $expLimit === null ? true : (int) ($user['data_limit'] ?? -1) === (int) $expLimit;
-    $expireOk = true;
-    if ($expExpire !== null) {
-        $actual = (int) ($user['expire'] ?? -1);
-        $expireOk = abs($actual - (int) $expExpire) <= 300;
+    if ($match === null) {
+        return ['result' => 'unknown', 'user' => $v['user']];
     }
-    if ($limitOk && $expireOk) {
-        return ['result' => 'delivered', 'user' => $user];
-    }
-    return ['result' => 'mismatch', 'user' => $user];
+    return ['result' => 'mismatch', 'user' => $v['user']];
 }
 
 /* ----------------------------------------------------------------------- */
@@ -433,5 +472,241 @@ function ledgerReconcile(int $staleMinutes = 10, int $limit = 200): array
          LIMIT $limit"
     )->fetchAll(PDO::FETCH_ASSOC);
 
+    // Paid top-ups of agent wallets with no wallet_charge journal row.
+    // Only orders NOT linked to any invoice/service_other qualify: a linked
+    // order may be a purchase (money went to the service, not the wallet),
+    // which legitimately has no wallet_charge — those are not listed.
+    $out['paid_topups_without_journal'] = $pdo->query(
+        "SELECT pr.id_order, pr.id_user, pr.price, pr.Payment_Method, pr.time
+         FROM Payment_report pr
+         JOIN user u ON u.id = pr.id_user AND u.agent IN ('n1','n2')
+         LEFT JOIN invoice i ON i.id_payment = pr.id_order
+         LEFT JOIN service_other s ON s.id_payment = pr.id_order
+         WHERE pr.payment_Status = 'paid' AND i.id_invoice IS NULL AND s.id IS NULL
+           AND NOT EXISTS (SELECT 1 FROM agent_transaction j WHERE j.ref = CONCAT('wallet_charge_', pr.id_order))
+         ORDER BY pr.time DESC
+         LIMIT $limit"
+    )->fetchAll(PDO::FETCH_ASSOC);
+
     return $out;
+}
+
+/* ----------------------------------------------------------------------- */
+/*  Duplicate-intent claims (F2)                                            */
+/* ----------------------------------------------------------------------- */
+
+/**
+ * Claim an extend operation for an invoice. The first tap owns the
+ * deterministic op_id `e_{invoice}`; a duplicate tap while that op is still
+ * in flight is refused. Once the previous cycle reached a terminal state
+ * (succeeded/refunded/failed) — or died in 'started' without ever moving
+ * money (stale, older than $staleSeconds) — a NEW intentional extend gets a
+ * suffixed op_id, so legitimate repeat extends are never rejected.
+ *
+ * @return array{claimed: bool, op_id: ?string, status: ?string, op: ?array}
+ */
+function ledgerClaimExtendOperation(string $invoiceId, string $agentId, ?int $botId, ?string $buyerId, ?string $panelName, ?string $panelUsername, int $amount, array $meta = [], int $staleSeconds = 600): array
+{
+    global $pdo;
+    $base = 'e_' . $invoiceId;
+    for ($i = 0; $i < 20; $i++) {
+        $candidate = $i === 0 ? $base : $base . '_' . $i;
+        $now = date('Y-m-d H:i:s');
+        $stmt = $pdo->prepare(
+            "INSERT IGNORE INTO reseller_operation
+                (op_id, type, agent_id, bot_id, buyer_id, invoice_id, panel_name, panel_username, amount, status, meta, created_at, updated_at)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'started', ?, ?, ?)"
+        );
+        $stmt->execute([
+            $candidate, LEDGER_OP_EXTEND, $agentId, $botId, $buyerId,
+            $invoiceId, $panelName, $panelUsername, $amount,
+            json_encode($meta, JSON_UNESCAPED_UNICODE), $now, $now,
+        ]);
+        if ($stmt->rowCount() === 1) {
+            return ['claimed' => true, 'op_id' => $candidate, 'status' => 'started', 'op' => ledgerGetOperation($candidate)];
+        }
+        $existing = ledgerGetOperation($candidate);
+        if ($existing === null) {
+            continue; // row vanished between insert and read; try next suffix
+        }
+        $st = $existing['status'];
+        $isStaleStarted = $st === 'started' && strtotime((string) $existing['created_at']) < time() - $staleSeconds;
+        if (in_array($st, ['charged', 'delivering', 'refund_pending', 'unknown'], true) || ($st === 'started' && !$isStaleStarted)) {
+            // A previous extend of THIS invoice is still in flight.
+            return ['claimed' => false, 'op_id' => $candidate, 'status' => $st, 'op' => $existing];
+        }
+        // Terminal or abandoned op: the user intentionally extends again.
+    }
+    return ['claimed' => false, 'op_id' => null, 'status' => 'too_many_ops', 'op' => null];
+}
+
+/**
+ * Conservative duplicate guard for purchases: true when the SAME buyer has
+ * an unresolved (or just-created) operation for the SAME product, volume and
+ * time on the SAME panel within the last $windowSeconds. Finished operations
+ * (succeeded/refunded/failed) never block a new purchase.
+ */
+function ledgerHasInflightPurchase(string $agentId, string $buyerId, string $panelName, string $product, string $volume, string $time, int $windowSeconds = 120): bool
+{
+    global $pdo;
+    $since = date('Y-m-d H:i:s', time() - $windowSeconds);
+    $stmt = $pdo->prepare(
+        "SELECT 1 FROM reseller_operation
+         WHERE type = 'purchase' AND agent_id = ? AND buyer_id = ? AND panel_name = ?
+           AND status IN ('started','charged','delivering','unknown')
+           AND created_at >= ?
+           AND meta->>'$.product' = ?
+           AND COALESCE(meta->>'$.volume','') = ?
+           AND COALESCE(meta->>'$.time','') = ?
+         LIMIT 1"
+    );
+    $stmt->execute([$agentId, $buyerId, $panelName, $since, $product, $volume, $time]);
+    return (bool) $stmt->fetchColumn();
+}
+
+/* ----------------------------------------------------------------------- */
+/*  Manual recovery (F5) — never re-creates, never re-charges               */
+/* ----------------------------------------------------------------------- */
+
+/**
+ * Finalize a purchase op stuck in 'delivering' after the service was
+ * actually created on the panel. Touches NOTHING financial: the wholesale
+ * charge was already journaled at charge time and the retail (JSON) balance
+ * is deliberately left untouched — it is flagged `retail_pending` in the op
+ * meta for manual settlement by the agent.
+ *
+ * $verification: pass a precomputed ledgerVerifyUserExists() result (used by
+ * tests); null performs a live panel check.
+ *
+ * @return array{ok: bool, reason: string}
+ */
+function ledgerFinalizeDeliveredPurchase(string $opId, ?array $verification = null): array
+{
+    global $pdo;
+    $op = ledgerGetOperation($opId);
+    if ($op === null) {
+        return ['ok' => false, 'reason' => 'op not found'];
+    }
+    if ($op['type'] !== LEDGER_OP_PURCHASE) {
+        return ['ok' => false, 'reason' => 'not a purchase op'];
+    }
+    if ($op['status'] !== 'delivering') {
+        return ['ok' => false, 'reason' => 'op is not delivering (status=' . $op['status'] . ')'];
+    }
+    $v = $verification ?? ledgerVerifyUserExists((string) $op['panel_name'], (string) $op['panel_username']);
+    if ($v['result'] !== 'present') {
+        return ['ok' => false, 'reason' => 'panel verification: ' . $v['result']];
+    }
+    $meta = json_decode((string) ($op['meta'] ?? ''), true) ?: [];
+    $meta['retail_pending'] = true;
+    $meta['finalized_at'] = date('Y-m-d H:i:s');
+    $meta['finalized_by'] = 'manual_finalize';
+    if (!ledgerTransition($opId, ['delivering'], 'succeeded', ['meta' => $meta])) {
+        return ['ok' => false, 'reason' => 'state changed concurrently'];
+    }
+    $claimedInvoice = 0;
+    if (!empty($op['invoice_id'])) {
+        $stmt = $pdo->prepare("UPDATE invoice SET Status = 'active' WHERE id_invoice = ? AND Status <> 'active'");
+        $stmt->execute([$op['invoice_id']]);
+        $claimedInvoice = $stmt->rowCount();
+        clearSelectCache('invoice');
+    }
+    return ['ok' => true, 'reason' => 'finalized', 'invoice_activated' => $claimedInvoice === 1, 'retail_pending' => true];
+}
+
+/**
+ * Finalize an extend op stuck in 'delivering' after verification proves the
+ * expected values are live on the panel. Same money rules as purchases.
+ *
+ * @return array{ok: bool, reason: string}
+ */
+function ledgerFinalizeDeliveredExtend(string $opId, ?array $verification = null): array
+{
+    global $pdo;
+    $op = ledgerGetOperation($opId);
+    if ($op === null) {
+        return ['ok' => false, 'reason' => 'op not found'];
+    }
+    if ($op['type'] !== LEDGER_OP_EXTEND) {
+        return ['ok' => false, 'reason' => 'not an extend op'];
+    }
+    if ($op['status'] !== 'delivering') {
+        return ['ok' => false, 'reason' => 'op is not delivering (status=' . $op['status'] . ')'];
+    }
+    $v = $verification ?? ledgerVerifyExtendDelivery($op);
+    if ($v['result'] !== 'delivered') {
+        return ['ok' => false, 'reason' => 'panel verification: ' . $v['result']];
+    }
+    $meta = json_decode((string) ($op['meta'] ?? ''), true) ?: [];
+    $meta['retail_pending'] = true;
+    $meta['finalized_at'] = date('Y-m-d H:i:s');
+    $meta['finalized_by'] = 'manual_finalize';
+    if (!ledgerTransition($opId, ['delivering'], 'succeeded', ['meta' => $meta])) {
+        return ['ok' => false, 'reason' => 'state changed concurrently'];
+    }
+    if (!empty($op['invoice_id'])) {
+        $stmt = $pdo->prepare("UPDATE invoice SET Status = 'active' WHERE id_invoice = ? AND Status <> 'active'");
+        $stmt->execute([$op['invoice_id']]);
+        clearSelectCache('invoice');
+    }
+    // Best-effort history record (idempotent via the op_id marker).
+    $check = $pdo->prepare("SELECT 1 FROM service_other WHERE type = 'extend_user' AND value LIKE ? LIMIT 1");
+    $check->execute(['%"op_id":"' . $opId . '"%']);
+    if (!$check->fetchColumn()) {
+        $value = json_encode([
+            'volumebuy' => $meta['volume'] ?? null,
+            'Service_time' => $meta['time'] ?? null,
+            'code_product' => $meta['code_product'] ?? null,
+            'id_order' => $op['invoice_id'],
+            'op_id' => $opId,
+            'recovered' => true,
+        ], JSON_UNESCAPED_UNICODE);
+        $stmt = $pdo->prepare("INSERT INTO service_other (id_user, username, value, type, time, price, output) VALUES (?, ?, ?, 'extend_user', ?, ?, ?)");
+        $stmt->execute([$op['buyer_id'], $op['panel_username'], $value, date('Y/m/d H:i:s'), (int) ($meta['retail_price'] ?? 0), 'recovered by finalize']);
+        clearSelectCache('service_other');
+    }
+    return ['ok' => true, 'reason' => 'finalized', 'retail_pending' => true];
+}
+
+/**
+ * Repair a paid agent top-up that was never credited (crash between the
+ * payment claim and the credit). Idempotent: the journal ref is the same
+ * `wallet_charge_{order_id}` the normal path uses, and the credit+journal
+ * are one transaction — replaying a repaired order is a no-op.
+ *
+ * @return array{ok: bool, reason: string}
+ */
+function ledgerRepairAgentTopup(string $orderId): array
+{
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT * FROM Payment_report WHERE id_order = ? AND payment_Status = 'paid' LIMIT 1");
+    $stmt->execute([$orderId]);
+    $payment = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($payment === false) {
+        return ['ok' => false, 'reason' => 'paid order not found'];
+    }
+    // Pure top-ups only: an order linked to an invoice/service is a purchase.
+    $linked = $pdo->prepare("SELECT (SELECT COUNT(*) FROM invoice WHERE id_payment = ?) + (SELECT COUNT(*) FROM service_other WHERE id_payment = ?)");
+    $linked->execute([$orderId, $orderId]);
+    if ((int) $linked->fetchColumn() > 0) {
+        return ['ok' => false, 'reason' => 'order is linked to a purchase, not a top-up'];
+    }
+    $userStmt = $pdo->prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
+    $userStmt->execute([$payment['id_user']]);
+    $target = $userStmt->fetch(PDO::FETCH_ASSOC);
+    if (!resellerUserIsAgent($target)) {
+        return ['ok' => false, 'reason' => 'order owner is not an agent'];
+    }
+    $ref = 'wallet_charge_' . $orderId;
+    if (resellerJournalExists($ref)) {
+        return ['ok' => true, 'reason' => 'already credited (journal exists)'];
+    }
+    $res = resellerCreditWallet((string) $target['id'], (int) $payment['price'], 'wallet_charge', $ref, [
+        'order' => $orderId,
+        'method' => $payment['Payment_Method'] ?? '',
+        'repair' => true,
+    ]);
+    return $res === null
+        ? ['ok' => false, 'reason' => 'credit failed']
+        : ['ok' => true, 'reason' => 'credited', 'balance_after' => $res];
 }
