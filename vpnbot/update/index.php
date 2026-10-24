@@ -25,6 +25,9 @@ if (!checktelegramip())
 
 $textbotlang = languagechange();
 $dataBase = select("botsaz", "*", "bot_token", $ApiToken, "select");
+if (is_array($dataBase) && function_exists('resellerBotIsActive') && !resellerBotIsActive($dataBase)) {
+    die("Bot suspended");
+}
 $agentWebhookSecret = ensureAgentWebhookSecret($dataBase);
 if (!$agentWebhookSecret['created'] && $agentWebhookSecret['secret'] !== '' && !webhookSecretMatches($agentWebhookSecret['secret']))
     die("Unauthorized access");
@@ -971,7 +974,7 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
             step("home", $from_id);
             return;
         }
-        $priceBot = $product['price_product'];
+        $priceBot = ($product['wholesale_price'] ?? '') !== '' && $product['wholesale_price'] !== null ? intval($product['wholesale_price']) : $product['price_product'];
         $productlist = json_decode(file_get_contents('product.json'), true);
         if (isset($productlist[$product['code_product']])) {
             $product['price_product'] = $productlist[$product['code_product']];
@@ -1235,9 +1238,14 @@ if ($text == $text_bot_var['btn_keyboard']['buy'] && $setting['active_step_note'
         $userbalance['Balance'] = $Balance_prim;
         file_put_contents("data/$from_id/$from_id.json", json_encode($userbalance));
     }
-    $Balancebot = $userbotbalance['Balance'] - $datafactor['price_productMain'];
-    $stmt = $pdo->prepare("UPDATE user SET Balance = Balance - :price WHERE id = :id");
-    $stmt->execute([':price' => $datafactor['price_productMain'], ':id' => $userbotbalance['id']]);
+    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_purchase', 'wholesale_purchase_' . $randomString, ['invoice' => $randomString, 'buyer' => $from_id, 'product' => $datafactor['name_product'] ?? '']);
+    if ($chargeResult === null) {
+        error_log("wholesale charge failed after delivery: invoice=$randomString agent={$userbotbalance['id']}");
+        if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
+            telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'text' => "⚠️ کسر وجه عمده پس از تحویل سرویس ناموفق بود\nفاکتور: $randomString\nنماینده: {$userbotbalance['id']}", 'parse_mode' => "HTML"], $APIKEY);
+        }
+    }
+    $Balancebot = $chargeResult ?? ($userbotbalance['Balance'] - $datafactor['price_productMain']);
     if (in_array(usernameMethodKey($marzban_list_get['MethodUsername']), ['customTextSequential', 'usernameSequential', 'numericIdSequential', 'agentCustomTextSequential'], true)) {
         $value = intval($user['number_username']) + 1;
         update("user", "number_username", $value, "id", $from_id);
@@ -1763,7 +1771,7 @@ $output
         $product = $userdate['code_product'];
         $product = select("product", "*", "code_product", $product);
         $productlist = json_decode(file_get_contents('product.json'), true);
-        $priceproductmain = $product['price_product'];
+        $priceproductmain = ($product['wholesale_price'] ?? '') !== '' && $product['wholesale_price'] !== null ? intval($product['wholesale_price']) : $product['price_product'];
         if (isset($productlist[$product['code_product']])) {
             $product['price_product'] = $productlist[$product['code_product']];
         }
@@ -1880,9 +1888,14 @@ $output
         $resultper = ($datafactor['price_productMain'] * $userbotbalance['pricediscount']) / 100;
         $datafactor['price_productMain'] = $datafactor['price_productMain'] - $resultper;
     }
-    $Balancebot = $userbotbalance['Balance'] - $datafactor['price_productMain'];
-    $stmt = $pdo->prepare("UPDATE user SET Balance = Balance - :price WHERE id = :id");
-    $stmt->execute([':price' => $datafactor['price_productMain'], ':id' => $userbotbalance['id']]);
+    $chargeResult = resellerChargeWallet($userbotbalance, intval($datafactor['price_productMain']), 'wholesale_extend', 'wholesale_extend_' . $id_invoice, ['invoice' => $id_invoice, 'buyer' => $from_id]);
+    if ($chargeResult === null) {
+        error_log("wholesale extend charge failed after delivery: invoice=$id_invoice agent={$userbotbalance['id']}");
+        if (strlen($settingmain['Channel_Report'] ?? '') > 0) {
+            telegram('sendmessage', ['chat_id' => $settingmain['Channel_Report'], 'text' => "⚠️ کسر وجه عمده تمدید پس از تحویل ناموفق بود\nفاکتور: $id_invoice\nنماینده: {$userbotbalance['id']}", 'parse_mode' => "HTML"], $APIKEY);
+        }
+    }
+    $Balancebot = $chargeResult ?? ($userbotbalance['Balance'] - $datafactor['price_productMain']);
     $keyboardextendfnished = json_encode([
         'inline_keyboard' => [
             [

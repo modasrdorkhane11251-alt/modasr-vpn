@@ -47,6 +47,10 @@ if ($text == "📞 تنظیم نام کاربری پشتیبانی") {
         sendmessage($from_id, "❌ قیمت حجم باید بزرگ تر از قیمت پایه حجم باشد.", $backadmin, 'HTML');
         return;
     }
+    if (intval($setting['maxpricevolume'] ?? 0) > 0 && intval($text) > intval($setting['maxpricevolume'])) {
+        sendmessage($from_id, "❌ قیمت حجم نمی‌تواند از سقف تعیین‌شده ({$setting['maxpricevolume']} تومان) بیشتر باشد.", $backadmin, 'HTML');
+        return;
+    }
     sendmessage($from_id, "✅ قیمت حجم با موفقیت تنظیم گردید.", $keyboardprice, 'HTML');
     step("home", $from_id);
     $setting['pricevolume'] = $text;
@@ -64,6 +68,10 @@ if ($text == "📞 تنظیم نام کاربری پشتیبانی") {
     }
     if (intval($text) < intval($setting['minpricetime'])) {
         sendmessage($from_id, "❌ قیمت زمان باید بزرگ تر از قیمت پایه زمان باشد.", $backadmin, 'HTML');
+        return;
+    }
+    if (intval($setting['maxpricetime'] ?? 0) > 0 && intval($text) > intval($setting['maxpricetime'])) {
+        sendmessage($from_id, "❌ قیمت زمان نمی‌تواند از سقف تعیین‌شده ({$setting['maxpricetime']} تومان) بیشتر باشد.", $backadmin, 'HTML');
         return;
     }
     sendmessage($from_id, "✅ قیمت زمان با موفقیت تنظیم گردید.", $keyboardprice, 'HTML');
@@ -496,6 +504,12 @@ if ($text == "📞 تنظیم نام کاربری پشتیبانی") {
     }
     if (intval($text) < intval($product['price_product'])) {
         sendmessage($from_id, "❌ قیمت شما کوچیک تر از قیمت پایه است.", null, 'HTML');
+        return;
+    }
+    if (function_exists('resellerRetailPriceAllowed') && !resellerRetailPriceAllowed($product, intval($text))) {
+        $minR = ($product['min_retail_price'] ?? '') !== '' && $product['min_retail_price'] !== null ? $product['min_retail_price'] : '—';
+        $maxR = ($product['max_retail_price'] ?? '') !== '' && $product['max_retail_price'] !== null ? $product['max_retail_price'] : '—';
+        sendmessage($from_id, "❌ قیمت خارج از بازه مجاز تعیین‌شده توسط مدیریت است.\nحداقل: $minR تومان\nحداکثر: $maxR تومان", null, 'HTML');
         return;
     }
     $productlist = json_decode(file_get_contents('product.json'), true);
