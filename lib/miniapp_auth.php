@@ -178,12 +178,13 @@ function miniapp_resolve_session(string $token): ?array
         return null;
     }
     try {
-        $stmt = $pdo->prepare("SELECT user_id FROM miniapp_session WHERE token = ? AND expires_at > NOW() LIMIT 1");
+        $stmt = $pdo->prepare("SELECT user_id, platform FROM miniapp_session WHERE token = ? AND expires_at > NOW() LIMIT 1");
         $stmt->execute([$token]);
-        $sessionUserId = $stmt->fetchColumn();
-        if ($sessionUserId !== false) {
-            $user = select('user', '*', 'id', (string) $sessionUserId, 'select');
+        $session = $stmt->fetch();
+        if ($session) {
+            $user = select('user', '*', 'id', (string) $session['user_id'], 'select');
             if ($user) {
+                $user['__session_platform'] = (string) $session['platform'];
                 return $user;
             }
         }
@@ -192,6 +193,7 @@ function miniapp_resolve_session(string $token): ?array
     }
     $legacy = select('user', '*', 'token', $token, 'select');
     if ($legacy && is_string($legacy['token']) && hash_equals($legacy['token'], $token)) {
+        $legacy['__session_platform'] = (string) ($legacy['platform'] ?? 'telegram');
         return $legacy;
     }
     return null;

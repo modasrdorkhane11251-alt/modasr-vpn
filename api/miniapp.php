@@ -96,6 +96,104 @@ $porsantreport = topicId('porsantreport');
 $buyreport = topicId('buyreport');
 $action = $data['actions'] ?? '';
 
+/**
+ * Account-linking + session info endpoints for the mini-app account tab.
+ * The session always resolves to the PRIMARY account, so the mini-app
+ * naturally manages the shared identity.
+ */
+function mini_session_info(array $data, string $method): void
+{
+    global $usercheck, $textbotlang;
+    if ($method !== "GET") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be GET"]);
+        return;
+    }
+    $labels = ['telegram' => '📱 تلگرام', 'bale' => '🟡 بله', 'rubika' => '🟢 روبیکا', 'splus' => '🔵 سروش پلاس'];
+    if (($textbotlang['users']['lang'] ?? '') === 'en' || (isset($textbotlang['users']['account']['linking']['openMiniapp']) && strpos($textbotlang['users']['account']['linking']['openMiniapp'], 'Open') === 0)) {
+        $labels = ['telegram' => '📱 Telegram', 'bale' => '🟡 Bale', 'rubika' => '🟢 Rubika', 'splus' => '🔵 Soroush Plus'];
+    }
+    $overview = accountLinkList((string) $usercheck['id']);
+    $links = [];
+    foreach ($overview['links'] as $lnk) {
+        $links[] = [
+            'id' => $lnk['linked_user_id'],
+            'platform' => $lnk['platform'],
+            'platform_label' => $labels[$lnk['platform']] ?? $lnk['platform'],
+        ];
+    }
+    $sessionPlatform = (string) ($usercheck['__session_platform'] ?? $usercheck['platform'] ?? '');
+    echo json_encode([
+        'status' => true,
+        'msg' => 'ok',
+        'obj' => [
+            'account' => (string) $usercheck['id'],
+            'platform' => $sessionPlatform,
+            'platform_label' => $labels[$sessionPlatform] ?? $sessionPlatform,
+            'is_secondary' => $overview['is_secondary'],
+            'primary' => $overview['primary'],
+            'links' => $links,
+            'balance' => (int) $usercheck['Balance'],
+        ],
+    ], JSON_UNESCAPED_UNICODE);
+    return;
+}
+
+function mini_link_issue(array $data, string $method): void
+{
+    global $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    [$ok, $codeOrErr] = accountLinkIssueCode((string) $usercheck['id']);
+    if (!$ok) {
+        echo json_encode(['status' => false, 'msg' => $codeOrErr]);
+        return;
+    }
+    echo json_encode(['status' => true, 'msg' => 'ok', 'obj' => ['code' => $codeOrErr]]);
+    return;
+}
+
+function mini_link_redeem(array $data, string $method): void
+{
+    global $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    $code = isset($data['code']) ? trim((string) $data['code']) : '';
+    if (!preg_match('/^\d{6}$/', $code)) {
+        echo json_encode(['status' => false, 'msg' => 'invalid_code']);
+        return;
+    }
+    $platform = (string) ($usercheck['__session_platform'] ?? $usercheck['platform'] ?? 'telegram');
+    [$ok, $err, $merged] = accountLinkRedeemCode($code, (string) $usercheck['id'], $platform);
+    if (!$ok) {
+        echo json_encode(['status' => false, 'msg' => $err]);
+        return;
+    }
+    echo json_encode(['status' => true, 'msg' => 'ok', 'obj' => ['merged' => $merged]]);
+    return;
+}
+
+function mini_link_unlink(array $data, string $method): void
+{
+    global $usercheck;
+    if ($method !== "POST") {
+        echo json_encode(['status' => false, 'msg' => "Method invalid; must be POST"]);
+        return;
+    }
+    $linkedId = isset($data['linked_id']) ? trim((string) $data['linked_id']) : '';
+    if ($linkedId === '' || strlen($linkedId) > 200) {
+        echo json_encode(['status' => false, 'msg' => 'invalid_target']);
+        return;
+    }
+    $ok = accountLinkUnlink((string) $usercheck['id'], $linkedId);
+    echo json_encode(['status' => $ok, 'msg' => $ok ? 'ok' : 'unlink_failed']);
+    return;
+}
+
+
 function mini_invoices(array $data, string $method): void
 {
     global $pdo, $textbotlang, $ManagePanel;
@@ -1183,6 +1281,10 @@ match ($action) {
     'services' => mini_services($data, $method),
     'custom_price' => mini_custom_price($data, $method),
     'purchase' => mini_purchase($data, $method),
+    'session_info' => mini_session_info($data, $method),
+    'link_issue' => mini_link_issue($data, $method),
+    'link_redeem' => mini_link_redeem($data, $method),
+    'link_unlink' => mini_link_unlink($data, $method),
     default => sendJsonResponse(false, "Action Invalid", []),
 };
 

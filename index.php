@@ -3515,25 +3515,36 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $backKeyboard = json_encode(['inline_keyboard' => [
         [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
     ]], JSON_UNESCAPED_UNICODE);
-    $authToken = miniapp_issue_auth_token($from_id, modasr_platform());
-    if ($authToken === null) {
-        $rateText = $linkLang['miniappRateLimit'];
-        if ($datain == "miniapp_link") {
-            Editmessagetext($from_id, $message_id, $rateText, $backKeyboard);
-        } else {
-            sendmessage($from_id, $rateText, $backKeyboard, 'HTML');
-        }
-        return;
-    }
-    $miniappUrl = 'https://' . $domainhosts . '/app/?auth_token=' . $authToken;
-    $linkBtnKeyboard = json_encode(['inline_keyboard' => [
-        [['text' => $linkLang['openMiniapp'], 'url' => $miniappUrl]],
-        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
-    ]], JSON_UNESCAPED_UNICODE);
-    if ($datain == "miniapp_link") {
-        Editmessagetext($from_id, $message_id, $linkLang['miniappLink'], $linkBtnKeyboard);
+    // Native webview platforms get a web_app button (no token in the URL —
+    // the messenger signs the user in itself); the rest get the magic link.
+    if (in_array(modasr_platform(), ['telegram', 'bale'], true)) {
+        $linkBtnKeyboard = json_encode(['inline_keyboard' => [
+            [['text' => $linkLang['openMiniapp'], 'web_app' => ['url' => 'https://' . $domainhosts . '/app/']]],
+            [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+        ]], JSON_UNESCAPED_UNICODE);
+        $miniappText = $linkLang['miniappNative'];
     } else {
-        sendmessage($from_id, $linkLang['miniappLink'], $linkBtnKeyboard, 'HTML');
+        $authToken = miniapp_issue_auth_token($from_id, modasr_platform());
+        if ($authToken === null) {
+            $rateText = $linkLang['miniappRateLimit'];
+            if ($datain == "miniapp_link") {
+                Editmessagetext($from_id, $message_id, $rateText, $backKeyboard);
+            } else {
+                sendmessage($from_id, $rateText, $backKeyboard, 'HTML');
+            }
+            return;
+        }
+        $miniappUrl = 'https://' . $domainhosts . '/app/?auth_token=' . $authToken;
+        $linkBtnKeyboard = json_encode(['inline_keyboard' => [
+            [['text' => $linkLang['openMiniapp'], 'url' => $miniappUrl]],
+            [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+        ]], JSON_UNESCAPED_UNICODE);
+        $miniappText = $linkLang['miniappLink'];
+    }
+    if ($datain == "miniapp_link") {
+        Editmessagetext($from_id, $message_id, $miniappText, $linkBtnKeyboard);
+    } else {
+        sendmessage($from_id, $miniappText, $linkBtnKeyboard, 'HTML');
     }
     return;
 } elseif ($datain == "link_enter_code") {

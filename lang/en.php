@@ -479,6 +479,7 @@ Use the button below to pay👇🏻',
                                 'openMiniapp' => '🌐 Open mini-app (one-time link)',
                                 'miniappLink' => "🌐 <b>Mini-app sign-in link</b>\n\nTap the button below to open the mini-app with your account:\n\n⏱ The link is valid for 10 minutes and can be used only once.\n⚠️ Do not share this link with anyone.",
                                 'miniappRateLimit' => '❌ Too many active links. Please wait a few minutes.',
+                                'miniappNative' => "🌐 <b>Mini-app</b>\n\nTap the button below to open the mini-app with your account:",
                                 'errors' => [
                                         'invalid_code' => '❌ Invalid or already-used code.',
                                         'expired' => '❌ Code expired. Get a new one.',

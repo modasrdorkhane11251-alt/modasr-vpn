@@ -60,6 +60,7 @@ if ($authToken !== '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MODASR BOT — Mini App</title>
     <script src="./js/telegram-web-app.js"></script>
+    <script src="./js/linking.js?v=0.2.0"></script>
 <?php if ($injectedSession !== null): ?>
     <script>
     (function () {
