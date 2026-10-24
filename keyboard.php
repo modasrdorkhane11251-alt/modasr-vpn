@@ -143,6 +143,9 @@ $keyboardPanel = json_encode([
             ['text' => $textbotlang['textbot']['addBalance'], 'callback_data' => "Add_Balance"]
         ],
         [
+            ['text' => '🔗 اتصال پلتفرم‌ها', 'callback_data' => "account_links"],
+        ],
+        [
             ['text' => $textbotlang['language']['changeButton'], 'callback_data' => "ّchange_language"],
         ],
         [['text' => $textbotlang['users']['backbtn'], 'callback_data' => "backuser"]],

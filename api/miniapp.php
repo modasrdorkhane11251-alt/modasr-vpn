@@ -300,7 +300,7 @@ function mini_user_info(array $data, string $method): void
         ]);
         return;
     }
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         if ($user_info['codeInvitation'] == null) {
             $randomString = bin2hex(random_bytes(4));
@@ -366,7 +366,7 @@ function mini_countries(array $data, string $method): void
         ]);
         return;
     }
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         $stmt = $pdo->prepare("SELECT * FROM marzban_panel WHERE status = 'active' AND (agent = :agent OR agent = 'all') AND type != 'Manualsale' ORDER BY display_order, id");
         $stmt->bindParam(':agent', $user_info['agent']);
@@ -427,7 +427,7 @@ function mini_categories(array $data, string $method): void
         ]);
         return;
     }
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         $setting = select("setting", "*", null, null, "select");
         if ($setting['statuscategorygenral'] == "offcategorys") {
@@ -487,7 +487,7 @@ function mini_time_ranges(array $data, string $method): void
         ]);
         return;
     }
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         $setting = select("setting", "*", null, null, "select");
         if ($setting['statuscategory'] == "offcategory") {
@@ -636,7 +636,7 @@ function mini_services(array $data, string $method): void
         return;
     }
     $product_list = [];
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         $panel = select("marzban_panel", "*", "code_panel", $data['id_panel'], "select");
         if (empty($panel)) {
@@ -730,7 +730,7 @@ function mini_custom_price(array $data, string $method): void
         ]);
         return;
     }
-    $user_info = select("user", "*", "token", $tokencheck, "select");
+    $user_info = modasr_apply_primary_wallet((array) select("user", "*", "token", $tokencheck, "select"));
     if ($user_info) {
         $panel = select("marzban_panel", "*", "code_panel", $data['id_panel'], "select");
         if (empty($panel)) {
@@ -937,7 +937,7 @@ function mini_purchase(array $data, string $method): void
             $error_msg = $textbotlang['users']['Balance']['lessThanPrice'];
         }
         $stmt = $pdo->prepare("UPDATE user SET Balance = Balance - :price WHERE id = :id AND Balance - :price_check >= :min_balance");
-        $stmt->execute([':price' => $price_product, ':id' => $user_info['id'], ':price_check' => $price_product, ':min_balance' => $min_balance]);
+        $stmt->execute([':price' => $price_product, ':id' => modasr_primary_user_id($user_info['id']), ':price_check' => $price_product, ':min_balance' => $min_balance]);
         if ($stmt->rowCount() === 0) {
             http_response_code(500);
             echo json_encode(array(
@@ -971,7 +971,7 @@ function mini_purchase(array $data, string $method): void
 
         try {
             $stmt = $pdo->prepare("UPDATE user SET Balance = Balance + :price WHERE id = :id");
-            $stmt->execute([':price' => $price_product, ':id' => $user_info['id']]);
+            $stmt->execute([':price' => $price_product, ':id' => modasr_primary_user_id($user_info['id'])]);
             $charged = false;
         } catch (Exception $e) {
             error_log("Failed to refund user {$user_info['id']}: " . $e->getMessage());

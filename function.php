@@ -4,6 +4,7 @@ require 'config.php';
 require_once __DIR__ . '/brand.php';
 require_once __DIR__ . '/lib/reseller.php';
 require_once __DIR__ . '/lib/ledger.php';
+require_once __DIR__ . '/lib/account_link.php';
 ini_set('error_log', 'error_log');
 
 use Endroid\QrCode\Builder\Builder;
@@ -765,7 +766,14 @@ function isValidDate($date)
 }
 function invoiceBelongsToUser($invoice, $userId)
 {
-    return is_array($invoice) && isset($invoice['id_user']) && (string) $invoice['id_user'] === (string) $userId;
+    if (!is_array($invoice) || !isset($invoice['id_user'])) {
+        return false;
+    }
+    // Link-aware ownership: every id of a linked account counts.
+    if (function_exists('modasr_linked_user_ids')) {
+        return in_array((string) $invoice['id_user'], modasr_linked_user_ids($userId), true);
+    }
+    return (string) $invoice['id_user'] === (string) $userId;
 }
 function cubepayFeeValue()
 {
@@ -1003,9 +1011,13 @@ function deductBalance($user, $amount)
     if ($amount <= 0) {
         return true;
     }
+    // Linked accounts share the PRIMARY wallet: charge the primary row.
+    $walletUserId = function_exists('modasr_primary_user_id')
+        ? modasr_primary_user_id($user['id'])
+        : (string) $user['id'];
     $minBalance = $user['agent'] == "n2" ? (intval($user['maxbuyagent']) != 0 ? -intval($user['maxbuyagent']) : null) : 0;
     $stmt = $pdo->prepare("UPDATE user SET Balance = Balance - ? WHERE id = ? AND (? IS NULL OR Balance - ? >= ?)");
-    $stmt->execute([$amount, $user['id'], $minBalance, $amount, $minBalance]);
+    $stmt->execute([$amount, $walletUserId, $minBalance, $amount, $minBalance]);
     clearSelectCache('user');
     return $stmt->rowCount() === 1;
 }
@@ -1015,8 +1027,12 @@ function addBalance($userId, $amount)
     if ($amount <= 0) {
         return;
     }
+    // Linked accounts share the PRIMARY wallet: credit the primary row.
+    $walletUserId = function_exists('modasr_primary_user_id')
+        ? modasr_primary_user_id($userId)
+        : (string) $userId;
     $stmt = $pdo->prepare("UPDATE user SET Balance = Balance + ? WHERE id = ?");
-    $stmt->execute([$amount, $userId]);
+    $stmt->execute([$amount, $walletUserId]);
     clearSelectCache('user');
 }
 function cancelPendingGatewayOrders($id_user): void

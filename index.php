@@ -123,7 +123,12 @@ if ($from_id != 0) {
     }
 }
 $user = select("user", "*", "id", $from_id, "select");
-if ($user == false) {
+$user = modasr_apply_primary_wallet(is_array($user) ? $user : []);
+// All ids of this (possibly linked) account as a quoted SQL fragment —
+// used by the service/payment list queries so linked platforms see ONE
+// shared account.
+$linkedIdsSql = modasr_linked_ids_sql($from_id);
+if ($user == false || $user === []) {
     $user = array();
     $user = array(
         'step' => '',
@@ -451,8 +456,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     update("user", "number", $user_phone, "id", $from_id);
     step('home', $from_id);
 } elseif ($text == $textbotlang['textbot']['purchasedServices'] || $datain == "backorder" || $text == "/services") {
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :id_user AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
-    $stmt->bindParam(':id_user', $from_id);
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
     $stmt->execute();
     $invoices = $stmt->fetch(PDO::FETCH_ASSOC);
     if (is_null($invoices) && $setting['NotUser'] == "offnotuser") {
@@ -468,8 +472,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $keyboardlists = [
         'inline_keyboard' => [],
     ];
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $stmt->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $stmt->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $stmt->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $stmt->execute();
@@ -533,8 +536,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $keyboardlists = [
         'inline_keyboard' => [],
     ];
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $stmt->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $stmt->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $stmt->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $stmt->execute();
@@ -602,8 +604,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $keyboardlists = [
         'inline_keyboard' => [],
     ];
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $stmt->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $stmt->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $stmt->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $stmt->execute();
@@ -3407,15 +3408,12 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     } else {
         $numberphone = $numberphone;
     }
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :id_user AND name_product != :mp1 AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND name_product != :mp1 AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
     $stmt->bindValue(':mp1', $textbotlang['common']['labels']['testServiceName'], PDO::PARAM_STR);
-    $stmt->bindValue(':id_user', $from_id, PDO::PARAM_INT);
     $stmt->execute();
     $countorder = $stmt->rowCount();
-    $stmt = $pdo->prepare("SELECT * FROM Payment_report WHERE id_user = :from_id AND payment_Status = 'paid'");
-    $stmt->execute([
-        ':from_id' => $from_id
-    ]);
+    $stmt = $pdo->prepare("SELECT * FROM Payment_report WHERE id_user IN ($linkedIdsSql) AND payment_Status = 'paid'");
+    $stmt->execute();
     $countpayment = $stmt->rowCount();
     $groupuser = [
         'f' => $textbotlang['common']['roles']['normalAlt'],
@@ -3439,6 +3437,101 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         sendmessage($from_id, $text_account, $keyboardPanel, 'HTML');
     }
     step('home', $from_id);
+    return;
+} elseif ($datain == "account_links") {
+    // Cross-platform account linking overview.
+    $linkLang = $textbotlang['users']['account']['linking'];
+    $overview = accountLinkList($from_id);
+    $lines = '';
+    if ($overview['is_secondary']) {
+        $lines = sprintf($linkLang['isSecondary'], $overview['primary']);
+    } elseif ($overview['links'] === []) {
+        $lines = $linkLang['noLinks'];
+    } else {
+        $platformLabels = ['telegram' => '📱 تلگرام', 'bale' => '🟡 بله', 'rubika' => '🟢 روبیکا', 'splus' => '🔵 سروش'];
+        foreach ($overview['links'] as $lnk) {
+            $lines .= sprintf($linkLang['linkRow'], $platformLabels[$lnk['platform']] ?? $lnk['platform'], $lnk['linked_user_id']);
+        }
+    }
+    $linkKeyboard = ['inline_keyboard' => [
+        [['text' => $linkLang['getCode'], 'callback_data' => 'link_get_code']],
+        [['text' => $linkLang['enterCode'], 'callback_data' => 'link_enter_code']],
+    ]];
+    if (!$overview['is_secondary']) {
+        foreach ($overview['links'] as $lnk) {
+            $linkKeyboard['inline_keyboard'][] = [[
+                'text' => '❌ قطع اتصال ' . $lnk['linked_user_id'],
+                'callback_data' => 'unlinkask_' . $lnk['linked_user_id'],
+            ]];
+        }
+    } else {
+        $linkKeyboard['inline_keyboard'][] = [[
+            'text' => '❌ قطع اتصال این حساب',
+            'callback_data' => 'unlinkask_' . $from_id,
+        ]];
+    }
+    $linkKeyboard['inline_keyboard'][] = [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account']];
+    Editmessagetext($from_id, $message_id, sprintf($linkLang['menuTitle'], $overview['primary'], $lines), json_encode($linkKeyboard, JSON_UNESCAPED_UNICODE));
+    return;
+} elseif ($datain == "link_get_code") {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    [$ok, $codeOrErr] = accountLinkIssueCode($from_id);
+    $backKeyboard = json_encode(['inline_keyboard' => [
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE);
+    if (!$ok) {
+        Editmessagetext($from_id, $message_id, $linkLang['errors'][$codeOrErr] ?? $linkLang['errors']['error'], $backKeyboard);
+        return;
+    }
+    Editmessagetext($from_id, $message_id, sprintf($linkLang['codeIssued'], $codeOrErr), $backKeyboard);
+    return;
+} elseif ($datain == "link_enter_code") {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    step('enter_link_code', $from_id);
+    Editmessagetext($from_id, $message_id, $linkLang['askCode'], json_encode(['inline_keyboard' => [
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE));
+    return;
+} elseif (preg_match('/^unlinkask_(.+)$/', $datain, $unlinkMatch)) {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    $targetId = $unlinkMatch[1];
+    $overview = accountLinkList($from_id);
+    $platformLabels = ['telegram' => '📱 تلگرام', 'bale' => '🟡 بله', 'rubika' => '🟢 روبیکا', 'splus' => '🔵 سروش'];
+    $targetPlatform = '';
+    foreach ($overview['links'] as $lnk) {
+        if ((string) $lnk['linked_user_id'] === $targetId) {
+            $targetPlatform = $platformLabels[$lnk['platform']] ?? $lnk['platform'];
+        }
+    }
+    if ($overview['is_secondary'] && $targetId === (string) $from_id) {
+        $targetPlatform = $platformLabels[modasr_platform()] ?? modasr_platform();
+    }
+    $confirmKeyboard = json_encode(['inline_keyboard' => [
+        [['text' => '✅ بله، قطع شود', 'callback_data' => 'unlinkyes_' . $targetId]],
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE);
+    Editmessagetext($from_id, $message_id, sprintf($linkLang['unlinkConfirm'], $targetId, $targetPlatform), $confirmKeyboard);
+    return;
+} elseif (preg_match('/^unlinkyes_(.+)$/', $datain, $unlinkMatch)) {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    $removed = accountLinkUnlink($from_id, $unlinkMatch[1]);
+    Editmessagetext($from_id, $message_id, $removed ? $linkLang['unlinked'] : $linkLang['errors']['error'], json_encode(['inline_keyboard' => [
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE));
+    return;
+} elseif ($user['step'] == "enter_link_code" && $text) {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    step('home', $from_id);
+    [$ok, $err, $merged] = accountLinkRedeemCode(trim($text), $from_id, modasr_platform());
+    if (!$ok) {
+        sendmessage($from_id, $linkLang['errors'][$err] ?? $linkLang['errors']['error'], $keyboard, 'HTML');
+        return;
+    }
+    // Notify BOTH sides (the merge is auditable; the notice is a security control).
+    $primaryId = modasr_primary_user_id($from_id);
+    $platformLabels = ['telegram' => '📱 تلگرام', 'bale' => '🟡 بله', 'rubika' => '🟢 روبیکا', 'splus' => '🔵 سروش'];
+    sendmessage($from_id, sprintf($linkLang['linkOk'], number_format($merged)), $keyboard, 'HTML');
+    sendmessage($primaryId, sprintf($linkLang['linkedNoticePrimary'], $from_id, $platformLabels[modasr_platform()] ?? modasr_platform(), number_format($merged)), null, 'HTML');
     return;
 } elseif (($text == $textbotlang['textbot']['sell'] || $datain == "buy" || $datain == "buyback" || $text == "/buy" || $text == "buy") && $statusnote) {
     if ($setting['get_number'] == "onAuthenticationphone" && $user['step'] != "get_number" && $user['number'] == "none") {
@@ -4288,8 +4381,8 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         return;
     }
     if ($SellDiscountlimit['usefirst'] == "1") {
-        $countinvoice = $pdo->prepare("SELECT * FROM invoice WHERE id_user = ? AND name_product != ? AND  (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
-        $countinvoice->execute([$from_id, $textbotlang['common']['labels']['testServiceName']]);
+        $countinvoice = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND name_product != ? AND  (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
+        $countinvoice->execute([$textbotlang['common']['labels']['testServiceName']]);
         if (($countinvoice)->rowCount() != 0) {
             sendmessage($from_id, $textbotlang['users']['Discount']['firstdiscount'], null, 'HTML');
             return;
@@ -6358,8 +6451,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $price = $rates['USD'];
     sendmessage($from_id, sprintf($textbotlang['users']['priceArze']['tetherPrice'], $price), null, 'HTML');
 } elseif ($text == $textbotlang['textbot']['extend'] or $datain == "extendbtn") {
-    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :id_user AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
-    $stmt->bindParam(':id_user', $from_id);
+    $stmt = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold')");
     $stmt->execute();
     $invoices = $stmt->rowCount();
     if ($invoices == 0) {
@@ -6371,8 +6463,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $page = 1;
     $items_per_page = 20;
     $start_index = ($page - 1) * $items_per_page;
-    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $result->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $result->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $result->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $result->execute();
@@ -6432,8 +6523,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         $next_page = $page + 1;
     }
     $start_index = ($next_page - 1) * $items_per_page;
-    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $result->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $result->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $result->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $result->execute();
@@ -6497,8 +6587,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         $previous_page = 1;
     }
     $start_index = ($previous_page - 1) * $items_per_page;
-    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user = :from_id AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
-    $result->bindParam(':from_id', $from_id, PDO::PARAM_STR);
+    $result = $pdo->prepare("SELECT * FROM invoice WHERE id_user IN ($linkedIdsSql) AND (status = 'active' OR status = 'end_of_time'  OR status = 'end_of_volume' OR status = 'sendedwarn' OR Status = 'send_on_hold') ORDER BY time_sell DESC LIMIT :start_index, :items_per_page");
     $result->bindParam(':start_index', $start_index, PDO::PARAM_INT);
     $result->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
     $result->execute();
