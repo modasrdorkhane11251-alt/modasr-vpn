@@ -143,6 +143,22 @@ foreach ($candidates as $candidate) {
 }
 
 if ($identified === null) {
+    // TEMP DIAGNOSTIC (splus webview investigation): log the shape of failed
+    // initData — keys + user id only, never the hash or personal fields.
+    if ($sawSignatureFailure) {
+        foreach ($candidates as $candidate) {
+            if (!is_string($candidate)) {
+                continue;
+            }
+            parse_str(html_entity_decode($candidate, ENT_QUOTES | ENT_HTML5, 'UTF-8'), $dbg);
+            $dbgKeys = array_keys($dbg);
+            $dbgUser = json_decode((string) ($dbg['user'] ?? ''), true);
+            error_log('miniapp verify-debug: keys=' . implode(',', $dbgKeys)
+                . ' uid=' . (string) ($dbgUser['id'] ?? '?')
+                . ' auth_date=' . (string) ($dbg['auth_date'] ?? '?')
+                . ' platforms_tried=' . implode(',', array_keys(array_filter((array) $PLATFORM_TOKENS))));
+        }
+    }
     respond_json($sawSignatureFailure ? 403 : 400, [
         'status' => false,
         'msg' => $sawSignatureFailure ? 'User verification failed' : 'Telegram init data is missing or invalid',
