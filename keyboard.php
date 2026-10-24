@@ -1037,6 +1037,7 @@ $change_product = json_encode([
         [['text' => $textbotlang['keyboard']['productLocation']], ['text' => $textbotlang['keyboard']['category']]],
         [['text' => $textbotlang['keyboard']['setInbound']], ['text' => $textbotlang['keyboard']['showFirstPurchase']]],
         [['text' => $textbotlang['keyboard']['productSaleStatus']]],
+        [['text' => $textbotlang['keyboard']['wholesalePrice']], ['text' => $textbotlang['keyboard']['minRetailPrice']], ['text' => $textbotlang['keyboard']['maxRetailPrice']]],
         [['text' => $textbotlang['keyboard']['hidePanel']], ['text' => $textbotlang['keyboard']['deleteAllHiddenPanels']]],
         [['text' => $textbotlang['Admin']['backAdminBtn']], ['text' => $textbotlang['Admin']['backMenuBtn']]]
     ],

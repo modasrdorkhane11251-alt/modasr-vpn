@@ -92,12 +92,12 @@ if ($adminrulecheck['rule'] != "administrator") {
         "confirmchannel-", "confirmnumber_", "confirmremovefulls-", "confirmserivceadmin-", "disableconfig-", "extendadmin_", "hidepanel_",
         "limitusertest_", "lowbalanceuser_", "manageinvoice_", "manageuser_", "next_pageinvoice_", "next_pageuseragent_",
         "previous_pageinvoice_", "previous_pageuseragent_", "reject_pay_", "removeaffiliate-", "removeaffiliateuser-", "removebotsell_",
-        "removefull-", "removehide_", "removeservice-", "removeserviceandback-", "sendmessageuser_", "settimepricesrc_", "setvolumesrc_",
+        "removefull-", "removehide_", "removeservice-", "removeserviceandback-", "sendmessageuser_", "settimepricesrc_", "setvolumesrc_", "setmaxvolumesrc_", "setmaxtimesrc_",
         "showcarduser-", "statuscronuser-", "unbanuserr_", "unverify-", "updateinfouser_", "verify_", "vieworderuser_", "viewpaymentuser_",
     ];
     $limitedRoleSteps = [
         "GetusernameconfigAndOrdedrs", "addbalancemanual", "addbalanceuser", "addbalanceusercurrent", "adddecriptionblock", "get_number_limit",
-        "getlimitchangenewbyuser", "getmessageAsAdmin", "getpanelhidebotsaz", "getpricetimesrc", "getpricevolumesrc", "getremovehidepanel",
+        "getlimitchangenewbyuser", "getmaxpricevolumesrc", "getmaxpricetimesrc", "getmessageAsAdmin", "getpanelhidebotsaz", "getpricetimesrc", "getpricevolumesrc", "getremovehidepanel",
         "gettimecustomvolomforextendadmin", "getuserhide", "getvolumecustomuserforextendadmin", "reject-dec", "sendmessagetext",
         "sendmessagetid", "show_info",
     ];
@@ -1938,6 +1938,48 @@ elseif ($datain == "systemsms") {
     $stmt->execute();
     sendmessage($from_id, $textbotlang['Admin']['Product']['priceUpdated'], $shopkeyboard, 'HTML');
     step('home', $from_id);
+} elseif ($text == $textbotlang['keyboard']['wholesalePrice'] && $adminrulecheck['rule'] == "administrator") {
+    sendmessage($from_id, $textbotlang['Admin']['Product']['askWholesalePrice'], $backadmin, 'HTML');
+    step('change_wholesale', $from_id);
+} elseif ($user['step'] == "change_wholesale") {
+    if (!ctype_digit($text)) {
+        sendmessage($from_id, $textbotlang['Admin']['Product']['invalidPrice'], $backadmin, 'HTML');
+        return;
+    }
+    $panel = select("marzban_panel", "*", "code_panel", $user['Processing_value_one'], "select");
+    $stmt = $pdo->prepare("UPDATE product SET wholesale_price = :p WHERE id = :id AND (Location = :Location OR Location = '/all') AND agent = :agent");
+    $stmt->execute([':p' => $text, ':id' => $user['Processing_value'], ':Location' => $panel['name_panel'], ':agent' => $user['Processing_value_tow']]);
+    clearSelectCache('product');
+    sendmessage($from_id, $textbotlang['Admin']['Product']['priceUpdated'], $shopkeyboard, 'HTML');
+    step('home', $from_id);
+} elseif ($text == $textbotlang['keyboard']['minRetailPrice'] && $adminrulecheck['rule'] == "administrator") {
+    sendmessage($from_id, $textbotlang['Admin']['Product']['askMinRetail'], $backadmin, 'HTML');
+    step('change_minretail', $from_id);
+} elseif ($user['step'] == "change_minretail") {
+    if (!ctype_digit($text)) {
+        sendmessage($from_id, $textbotlang['Admin']['Product']['invalidPrice'], $backadmin, 'HTML');
+        return;
+    }
+    $panel = select("marzban_panel", "*", "code_panel", $user['Processing_value_one'], "select");
+    $stmt = $pdo->prepare("UPDATE product SET min_retail_price = :p WHERE id = :id AND (Location = :Location OR Location = '/all') AND agent = :agent");
+    $stmt->execute([':p' => $text, ':id' => $user['Processing_value'], ':Location' => $panel['name_panel'], ':agent' => $user['Processing_value_tow']]);
+    clearSelectCache('product');
+    sendmessage($from_id, $textbotlang['Admin']['Product']['priceUpdated'], $shopkeyboard, 'HTML');
+    step('home', $from_id);
+} elseif ($text == $textbotlang['keyboard']['maxRetailPrice'] && $adminrulecheck['rule'] == "administrator") {
+    sendmessage($from_id, $textbotlang['Admin']['Product']['askMaxRetail'], $backadmin, 'HTML');
+    step('change_maxretail', $from_id);
+} elseif ($user['step'] == "change_maxretail") {
+    if (!ctype_digit($text)) {
+        sendmessage($from_id, $textbotlang['Admin']['Product']['invalidPrice'], $backadmin, 'HTML');
+        return;
+    }
+    $panel = select("marzban_panel", "*", "code_panel", $user['Processing_value_one'], "select");
+    $stmt = $pdo->prepare("UPDATE product SET max_retail_price = :p WHERE id = :id AND (Location = :Location OR Location = '/all') AND agent = :agent");
+    $stmt->execute([':p' => $text, ':id' => $user['Processing_value'], ':Location' => $panel['name_panel'], ':agent' => $user['Processing_value_tow']]);
+    clearSelectCache('product');
+    sendmessage($from_id, $textbotlang['Admin']['Product']['priceUpdated'], $shopkeyboard, 'HTML');
+    step('home', $from_id);
 } elseif ($text == $textbotlang['keyboard']['note'] && $adminrulecheck['rule'] == "administrator") {
     sendmessage($from_id, $textbotlang['Admin']['Product']['askNewNote'], $backadmin, 'HTML');
     step('change_note', $from_id);
@@ -2269,6 +2311,13 @@ elseif ($datain == "systemsms") {
         $keyboardmanage['inline_keyboard'][] = [
             ['text' => $textbotlang['keyboard']['baseVolumePrice'], 'callback_data' => "setvolumesrc_" . $id_user],
             ['text' => $textbotlang['keyboard']['baseTimePrice'], 'callback_data' => "settimepricesrc_" . $id_user]
+        ];
+        $keyboardmanage['inline_keyboard'][] = [
+            ['text' => $textbotlang['keyboard']['maxVolumePrice'], 'callback_data' => "setmaxvolumesrc_" . $id_user],
+            ['text' => $textbotlang['keyboard']['maxTimePrice'], 'callback_data' => "setmaxtimesrc_" . $id_user]
+        ];
+        $keyboardmanage['inline_keyboard'][] = [
+            ['text' => $textbotlang['keyboard']['suspendSalesBot'], 'callback_data' => "suspendbot_" . $id_user]
         ];
         $keyboardmanage['inline_keyboard'][] = [
             ['text' => $textbotlang['keyboard']['hidePanelForAgent'], 'callback_data' => "hidepanel_" . $id_user],
@@ -5131,9 +5180,7 @@ if ($datain == "settimecornremove" && $adminrulecheck['rule'] == "administrator"
     step("home", $from_id);
 } elseif (preg_match('/rejectrequesta_(\w+)/', $datain, $datagetr)) {
     $id_user = $datagetr[1];
-    $stmt = $pdo->prepare("UPDATE Requestagent SET status = 'reject' WHERE id = ? AND status NOT IN ('reject', 'accept')");
-    $stmt->execute([$id_user]);
-    if ($stmt->rowCount() === 0) {
+    if (!resellerRejectRequest($id_user)) {
         telegram('answerCallbackQuery', array(
             'callback_query_id' => $callback_query_id,
             'text' => $textbotlang['keyboard']['alreadyReviewed'],
@@ -5144,7 +5191,9 @@ if ($datain == "settimecornremove" && $adminrulecheck['rule'] == "administrator"
     }
     clearSelectCache('Requestagent');
     $request_agent = select("Requestagent", "*", "id", $id_user, "select");
-    addBalance($id_user, intval($setting['agentreqprice']));
+    if (is_array($request_agent) && resellerIsLegacyRequest($request_agent)) {
+        addBalance($id_user, intval($setting['agentreqprice'])); // legacy requests were pre-charged
+    }
     $keyboardreject = json_encode([
         'inline_keyboard' => [
             [['text' => $textbotlang['keyboard']['requestRejected'], 'callback_data' => "reject"]],
@@ -5166,7 +5215,7 @@ if ($datain == "settimecornremove" && $adminrulecheck['rule'] == "administrator"
         ));
         return;
     }
-    if ($request_agent['status'] == "reject" || $request_agent['status'] == "accept") {
+    if (!in_array($request_agent['status'], ['waiting'], true)) {
         telegram('answerCallbackQuery', array(
             'callback_query_id' => $callback_query_id,
             'text' => $textbotlang['keyboard']['alreadyReviewed'],
@@ -5180,12 +5229,33 @@ if ($datain == "settimecornremove" && $adminrulecheck['rule'] == "administrator"
         'n' => $textbotlang['keyboard']['normalAgent'],
         'n2' => $textbotlang['keyboard']['advancedAgent'],
     ];
-    update("Requestagent", "status", "accept", "id", $id_user);
+    if (!resellerApproveRequest($id_user)) {
+        telegram('answerCallbackQuery', array(
+            'callback_query_id' => $callback_query_id,
+            'text' => $textbotlang['keyboard']['alreadyReviewed'],
+            'show_alert' => true,
+            'cache_time' => 5,
+        ));
+        return;
+    }
     update("Requestagent", "type", $defaultAgentType, "id", $id_user);
-    update("user", "agent", $defaultAgentType, "id", $id_user);
-    update("user", "expire", null, "id", $id_user);
-    sendmessage($id_user, $textbotlang['users']['agent']['requestApproved'], null, 'HTML');
-    sendmessage($from_id, $textbotlang['Admin']['agent']['userAgented'], $keyboardadmin, 'HTML');
+    clearSelectCache('Requestagent');
+    if (resellerIsLegacyRequest($request_agent)) {
+        // Legacy: the fee was already charged at request time — activate now.
+        update("Requestagent", "status", "paid", "id", $id_user);
+        clearSelectCache('Requestagent');
+        resellerActivate($id_user);
+        sendmessage($id_user, $textbotlang['users']['agent']['requestApproved'], null, 'HTML');
+        sendmessage($from_id, $textbotlang['Admin']['agent']['userAgented'], $keyboardadmin, 'HTML');
+    } else {
+        $feeKeyboard = json_encode([
+            'inline_keyboard' => [
+                [['text' => sprintf($textbotlang['users']['agent']['payFeeBtn'], number_format(resellerActivationFee())), 'callback_data' => "payagentfee"]],
+            ]
+        ], JSON_UNESCAPED_UNICODE);
+        sendmessage($id_user, sprintf($textbotlang['users']['agent']['requestApprovedPayFee'], number_format(resellerActivationFee())), $feeKeyboard, 'HTML');
+        sendmessage($from_id, $textbotlang['Admin']['agent']['userAgented'], $keyboardadmin, 'HTML');
+    }
     $agentTypeButtons = [];
     foreach ($agentTypeLabels as $typeCode => $label) {
         $buttonText = ($typeCode === $defaultAgentType ? "✅ " : "") . $label;
@@ -5228,9 +5298,12 @@ if ($datain == "settimecornremove" && $adminrulecheck['rule'] == "administrator"
         ));
         return;
     }
-    update("user", "agent", $selectedType, "id", $id_user);
     update("Requestagent", "type", $selectedType, "id", $id_user);
+    clearSelectCache('Requestagent');
     $request_agent = select("Requestagent", "*", "id", $id_user, "select");
+    if ($request_agent && in_array($request_agent['status'], ['active', 'accept'], true)) {
+        update("user", "agent", $selectedType, "id", $id_user);
+    }
     if ($request_agent) {
         $agentTypeButtons = [];
         foreach ($agentTypeLabels as $typeCode => $label) {
@@ -8092,43 +8165,12 @@ if (isset($update["inline_query"])) {
     }
     $userdate = json_decode($user['Processing_value'], true);
     step("home", $from_id);
-    $admin_ids = json_encode(array_values(array_unique([strval($userdate['id_user']), $text])));
-    $destination = getcwd();
-    $dirsource = "$destination/vpnbot/{$userdate['id_user']}{$userdate['username']}";
-    if (is_dir($dirsource) && !deleteDirectory($dirsource)) {
-        error_log('Failed to remove existing bot directory: ' . $dirsource);
+    [$botOk, $botErr] = resellerCreateAgentBot((string) $userdate['id_user'], (string) $userdate['token'], (string) $userdate['username'], [$text]);
+    if (!$botOk) {
+        sendmessage($from_id, $textbotlang['Admin']['agentbot']['createFailed'], $keyboardadmin, 'HTML');
+        return;
     }
-    if (!copyDirectoryContents($destination . '/vpnbot/Default', $dirsource)) {
-        error_log('Failed to copy default bot files into: ' . $dirsource);
-    }
-    $contentconfig = file_get_contents($dirsource . "/config.php");
-    $new_code = str_replace('BotTokenNew', $userdate['token'], $contentconfig);
-    file_put_contents($dirsource . "/config.php", $new_code);
-    $agent_secret = bin2hex(random_bytes(24));
-    setAgentWebhook($userdate['token'], $userdate['id_user'], $userdate['username'], $agent_secret);
     file_get_contents(sprintf($textbotlang['Admin']['agentbot']['activatedUrlAlt'], $userdate['token'], $userdate['id_user']));
-    $datasetting = json_encode(array(
-        "minpricetime" => 4000,
-        "pricetime" => 4000,
-        "minpricevolume" => 4000,
-        "pricevolume" => 4000,
-        "support_username" => "@support",
-        "Channel_Report" => 0,
-        "cart_info" => $textbotlang['users']['Balance']['cardInstructionAlt'],
-        'show_product' => true,
-    ));
-    $value = "{}";
-    $stmt = $pdo->prepare("INSERT INTO botsaz (id_user,bot_token,admin_ids,username,time,setting,hide_panel,webhook_secret) VALUES (:id_user,:bot_token,:admin_ids,:username,:time,:setting,:hide_panel,:webhook_secret)");
-    $stmt->bindParam(':id_user', $userdate['id_user'], PDO::PARAM_STR);
-    $stmt->bindParam(':bot_token', $userdate['token'], PDO::PARAM_STR);
-    $stmt->bindParam(':admin_ids', $admin_ids);
-    $stmt->bindParam(':username', $userdate['username'], PDO::PARAM_STR);
-    $time = date('Y/m/d H:i:s');
-    $stmt->bindParam(':time', $time, PDO::PARAM_STR);
-    $stmt->bindParam(':setting', $datasetting, PDO::PARAM_STR);
-    $stmt->bindParam(':hide_panel', $value, PDO::PARAM_STR);
-    $stmt->bindParam(':webhook_secret', $agent_secret, PDO::PARAM_STR);
-    $stmt->execute();
     $texbot = sprintf($textbotlang['Admin']['agentbot']['created'], $userdate['username'], $userdate['token']);
     sendmessage($from_id, $texbot, $keyboardadmin, 'HTML');
 } elseif (preg_match('/removebotsell_(\w+)/', $datain, $datagetr)) {
@@ -8146,6 +8188,16 @@ if (isset($update["inline_query"])) {
     $stmt->bindParam(':id_user', $id_user, PDO::PARAM_STR);
     $stmt->execute();
     sendmessage($from_id, $textbotlang['Admin']['agentbot']['deleted'], $keyboardadmin, 'HTML');
+} elseif (preg_match('/suspendbot_(\w+)/', $datain, $datagetr) && $adminrulecheck['rule'] == "administrator") {
+    $id_user = $datagetr[1];
+    $newStatus = resellerToggleBotStatus($id_user);
+    if ($newStatus === null) {
+        sendmessage($from_id, $textbotlang['Admin']['agentbot']['notFound'], $keyboardadmin, 'HTML');
+        return;
+    }
+    $msgKey = $newStatus === 'suspended' ? 'botSuspended' : 'botResumed';
+    sendmessage($from_id, $textbotlang['Admin']['agent'][$msgKey], $keyboardadmin, 'HTML');
+    sendmessage($id_user, $textbotlang['users']['agent'][$msgKey], null, 'HTML');
 } elseif (preg_match('/setvolumesrc_(\w+)/', $datain, $datagetr)) {
     $id_user = $datagetr[1];
     savedata("clear", "id_user", $id_user);
@@ -8177,6 +8229,40 @@ if (isset($update["inline_query"])) {
     $botinfo = json_decode(select("botsaz", "setting", "id_user", $userdate['id_user'], "select")['setting'], true);
     $botinfo['minpricetime'] = $text;
     update("botsaz", "setting", json_encode($botinfo), "id_user", $userdate['id_user']);
+    sendmessage($from_id, $textbotlang['Admin']['price']['saved'], $keyboardadmin, 'HTML');
+} elseif (preg_match('/setmaxvolumesrc_(\w+)/', $datain, $datagetr)) {
+    $id_user = $datagetr[1];
+    savedata("clear", "id_user", $id_user);
+    sendmessage($from_id, $textbotlang['Admin']['price']['askAgentMaxVolume'], $backadmin, 'HTML');
+    step("getmaxpricevolumesrc", $from_id);
+} elseif ($user['step'] == "getmaxpricevolumesrc") {
+    if (!ctype_digit($text)) {
+        sendmessage($from_id, $textbotlang['common']['invalidInput'], $backadmin, 'HTML');
+        return;
+    }
+    step("home", $from_id);
+    $userdate = json_decode($user['Processing_value'], true);
+    $botinfo = json_decode(select("botsaz", "setting", "id_user", $userdate['id_user'], "select")['setting'], true);
+    $botinfo['maxpricevolume'] = $text;
+    update("botsaz", "setting", json_encode($botinfo), "id_user", $userdate['id_user']);
+    clearSelectCache('botsaz');
+    sendmessage($from_id, $textbotlang['Admin']['price']['saved'], $keyboardadmin, 'HTML');
+} elseif (preg_match('/setmaxtimesrc_(\w+)/', $datain, $datagetr)) {
+    $id_user = $datagetr[1];
+    savedata("clear", "id_user", $id_user);
+    sendmessage($from_id, $textbotlang['Admin']['price']['askAgentMaxTime'], $backadmin, 'HTML');
+    step("getmaxpricetimesrc", $from_id);
+} elseif ($user['step'] == "getmaxpricetimesrc") {
+    if (!ctype_digit($text)) {
+        sendmessage($from_id, $textbotlang['common']['invalidInput'], $backadmin, 'HTML');
+        return;
+    }
+    step("home", $from_id);
+    $userdate = json_decode($user['Processing_value'], true);
+    $botinfo = json_decode(select("botsaz", "setting", "id_user", $userdate['id_user'], "select")['setting'], true);
+    $botinfo['maxpricetime'] = $text;
+    update("botsaz", "setting", json_encode($botinfo), "id_user", $userdate['id_user']);
+    clearSelectCache('botsaz');
     sendmessage($from_id, $textbotlang['Admin']['price']['saved'], $keyboardadmin, 'HTML');
 }
 if ($datain == "settimecornday" && $adminrulecheck['rule'] == "administrator") {
