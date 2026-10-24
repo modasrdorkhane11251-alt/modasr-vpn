@@ -5,7 +5,7 @@ $textadmin = ["panel", "/panel", $textbotlang['Admin']['panelAdmin']];
 $text_panel_admin_login_template = sprintf($textbotlang['Admin']['report']['aboutBot'], $version);
 $aboutBotKeyboard = json_encode(['inline_keyboard' => [[['text' => $textbotlang['Admin']['report']['btnDonate'], 'url' => brand('donation')]]]]);
 
-if (!in_array($from_id, $admin_ids))
+if (!modasr_is_admin($from_id))
     return;
 $domainhostsEscaped = htmlspecialchars($domainhosts, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
@@ -157,7 +157,7 @@ if ($datain == "paygwback") {
     step('home', $from_id);
     return;
 } elseif ($datain == "hide_mini_app_instruction") {
-    if (!in_array($from_id, $admin_ids))
+    if (!modasr_is_admin($from_id))
         return;
     if (($user['hide_mini_app_instruction'] ?? '0') !== '1') {
         update("user", "hide_mini_app_instruction", "1", "id", $from_id);
@@ -218,11 +218,14 @@ if ($datain == "paygwback") {
             [
                 ['text' => '🟢 روبیکا', 'callback_data' => 'chplatform_rubika'],
             ],
+            [
+                ['text' => '🔵 سروش پلاس', 'callback_data' => 'chplatform_splus'],
+            ],
         ]
     ]);
     sendmessage($from_id, $textbotlang['Admin']['channel']['askPlatform'], $platformKeyboard, 'HTML');
     step('home', $from_id);
-} elseif (preg_match('/^chplatform_(telegram|bale|rubika)$/', $datain, $dataget) && $adminrulecheck['rule'] == "administrator") {
+} elseif (preg_match('/^chplatform_(telegram|bale|rubika|splus)$/', $datain, $dataget) && $adminrulecheck['rule'] == "administrator") {
     $channelPlatform = $dataget[1];
     $userdata = json_decode($user['Processing_value'], true);
     if (!is_array($userdata)) {

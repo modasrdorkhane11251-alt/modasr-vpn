@@ -734,12 +734,12 @@ function channel(array $id_channel)
         if (isTelegramChatIdEmpty($channel)) {
             continue;
         }
-        if ($userPlatform === 'rubika') {
-            // The Rubika Bot API has no membership endpoint (getChat /
-            // getChatMember are rejected), so verification is impossible —
-            // the gate is soft: always show it until the user taps the
-            // confirm button (handled in index.php, which then marks the
-            // user as joined).
+        if ($userPlatform === 'rubika' || $userPlatform === 'splus') {
+            // Neither the Rubika nor the Soroush Plus Bot API exposes a
+            // membership endpoint (getChat / getChatMember are not
+            // supported), so verification is impossible — the gate is soft:
+            // always show it until the user taps the confirm button
+            // (handled in index.php, which then marks the user as joined).
             $channel_link[] = $channel;
             continue;
         }
@@ -1236,7 +1236,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
                 if ($countinvoice <= 1) {
                     $result = ($Payment_report['price'] * $setting['affiliatespercentage']) / 100;
                     $user_Balance = select("user", "*", "id", $Balance_id['affiliates'], "select");
-                    if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['affiliates'], $admin_ids)) {
+                    if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['affiliates'])) {
                         sendmessage($Balance_id['affiliates'], $textbotlang['users']['affiliates']['pointsEarned2Alt'], null, 'html');
                         $scorenew = $user_Balance['score'] + 2;
                         update("user", "score", $scorenew, "id", $Balance_id['affiliates']);
@@ -1260,7 +1260,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
 
                 $result = ($Payment_report['price'] * $setting['affiliatespercentage']) / 100;
                 $user_Balance = select("user", "*", "id", $Balance_id['affiliates'], "select");
-                if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['affiliates'], $admin_ids)) {
+                if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['affiliates'])) {
                     sendmessage($Balance_id['affiliates'], $textbotlang['users']['affiliates']['pointsEarned2Alt'], null, 'html');
                     $scorenew = $user_Balance['score'] + 2;
                     update("user", "score", $scorenew, "id", $Balance_id['affiliates']);
@@ -1314,7 +1314,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
                 'reply_markup' => $Response
             ]);
         }
-        if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['id'], $admin_ids)) {
+        if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['id'])) {
             sendmessage($Balance_id['id'], $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
             $scorenew = $Balance_id['score'] + 1;
             update("user", "score", $scorenew, "id", $Balance_id['id']);
@@ -1410,7 +1410,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
         $priceproductformat = number_format($prodcut['price_product']);
         $textextend = sprintf($textbotlang['users']['extend']['successFn'], $usernamepanel, $prodcut['name_product'], $priceproductformat);
         sendmessage($Balance_id['id'], $textextend, $keyboardextendfnished, 'HTML');
-        if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['id'], $admin_ids)) {
+        if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['id'])) {
             sendmessage($Balance_id['id'], $textbotlang['users']['affiliates']['pointsEarned2Alt'], null, 'html');
             $scorenew = $Balance_id['score'] + 2;
             update("user", "score", $scorenew, "id", $Balance_id['id']);
@@ -1466,7 +1466,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
             ]
         ]);
         $volumesformat = number_format($Payment_report['price'], 0);
-        if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['id'], $admin_ids)) {
+        if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['id'])) {
             sendmessage($Balance_id['id'], $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
             $scorenew = $Balance_id['score'] + 1;
             update("user", "score", $scorenew, "id", $Balance_id['id']);
@@ -1523,7 +1523,7 @@ function DirectPayment($order_id, $image = 'images.jpg')
             ]
         ]);
         $volumesformat = number_format($Payment_report['price']);
-        if (intval($setting['scorestatus']) == 1 and !in_array($Balance_id['id'], $admin_ids)) {
+        if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($Balance_id['id'])) {
             sendmessage($Balance_id['id'], $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
             $scorenew = $Balance_id['score'] + 1;
             update("user", "score", $scorenew, "id", $Balance_id['id']);

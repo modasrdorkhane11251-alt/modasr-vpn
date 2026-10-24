@@ -2,31 +2,33 @@
 /**
  * MODASR multi-platform layer.
  *
- * Allows the bot core to run on three messengers:
+ * Allows the bot core to run on four messengers:
  *   - telegram : native Bot API (default behaviour, unchanged)
  *   - bale     : Bale messenger Bot API (Telegram-compatible, different base URL)
  *   - rubika   : Rubika messenger Bot API (different schema, adapted by RubikaClient)
+ *   - splus    : Soroush Plus Bot API (Telegram-compatible, different base URL)
  *
  * The active platform is selected with $platform in config.php:
- *   $platform = 'telegram'; // or 'bale' | 'rubika'
+ *   $platform = 'telegram'; // or 'bale' | 'rubika' | 'splus'
  */
 
 require_once __DIR__ . '/RubikaClient.php';
+require_once __DIR__ . '/SoroushPlusClient.php';
 
 function modasr_platform(): string
 {
     global $platform;
     // Per-request override: webhooks for the secondary platforms carry
-    // ?platform=bale|rubika so one installation can serve all messengers
-    // at the same time on a single database.
+    // ?platform=bale|rubika|splus so one installation can serve all
+    // messengers at the same time on a single database.
     if (isset($_GET['platform'])) {
         $q = strtolower(trim((string) $_GET['platform']));
-        if (in_array($q, ['telegram', 'bale', 'rubika'], true)) {
+        if (in_array($q, ['telegram', 'bale', 'rubika', 'splus'], true)) {
             return $q;
         }
     }
     $p = isset($platform) ? strtolower(trim((string) $platform)) : 'telegram';
-    return in_array($p, ['telegram', 'bale', 'rubika'], true) ? $p : 'telegram';
+    return in_array($p, ['telegram', 'bale', 'rubika', 'splus'], true) ? $p : 'telegram';
 }
 
 /**
@@ -70,7 +72,7 @@ function modasr_platform_for_chat($chatId): string
             $result = '';
         }
     }
-    if (!in_array($result, ['telegram', 'bale', 'rubika'], true)) {
+    if (!in_array($result, ['telegram', 'bale', 'rubika', 'splus'], true)) {
         $result = modasr_platform();
     }
     $cache[$chatId] = $result;
@@ -114,9 +116,16 @@ function modasr_platform_request(string $method, array $datas, string $token, st
         return [true, modasr_bale_request($method, $datas, $token)];
     }
 
-    // rubika
-    $client = new RubikaClient($token);
-    return [true, $client->call($method, $datas)];
+    if ($p === 'splus') {
+        return [true, modasr_splus_request($method, $datas, $token)];
+    }
+
+    if ($p === 'rubika') {
+        $client = new RubikaClient($token);
+        return [true, $client->call($method, $datas)];
+    }
+
+    return [false, []]; // unknown platform: fall through to the original transport
 }
 
 /**
@@ -261,13 +270,13 @@ function modasr_telegram_api(string $token, string $method, array $datas): array
 /**
  * Prepend a platform tag (تلگرام / بله / روبیکا) to report-group messages
  * so the admin can see which messenger the user came from.
- */
-function modasr_tag_report_with_platform(array $datas): array
+ */function modasr_tag_report_with_platform(array $datas): array
 {
     $labels = [
         'telegram' => 'تلگرام',
         'bale'     => 'بله',
         'rubika'   => 'روبیکا',
+        'splus'    => 'سروش پلاس',
     ];
     $p = modasr_platform();
     $label = $labels[$p] ?? $p;
@@ -279,4 +288,97 @@ function modasr_tag_report_with_platform(array $datas): array
         }
     }
     return $datas;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Platform-qualified admin ids                                       */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Admin entries in the `admin` table may be stored either as a raw
+ * messenger id (legacy: numeric Telegram/Bale id or Rubika GUID) or as a
+ * platform-qualified "platform:id" pair (e.g. "splus:30770260").
+ *
+ * Rationale: numeric user ids are NOT unique across messengers — the same
+ * number can belong to a Telegram user and to an unrelated Soroush Plus
+ * user. A platform-qualified entry only grants admin rights to requests
+ * arriving through that messenger, closing the cross-platform collision.
+ *
+ * @return array{0:?string,1:string} [platform|null, raw id]
+ */
+function modasr_admin_id_parts(string $entry): array
+{
+    $entry = trim($entry);
+    if (preg_match('/^(telegram|bale|rubika|splus):(.+)$/', $entry, $m)) {
+        return [$m[1], $m[2]];
+    }
+    return [null, $entry];
+}
+
+/**
+ * Does an admin-table entry authorise this sender on the current request's
+ * platform? Unprefixed legacy entries keep their historical
+ * platform-agnostic behaviour so existing admins are never demoted.
+ */
+function modasr_admin_entry_matches(string $entry, $fromId): bool
+{
+    [$plat, $id] = modasr_admin_id_parts($entry);
+    if ($plat !== null && $plat !== modasr_platform()) {
+        return false;
+    }
+    return $id !== '' && $id === (string) $fromId;
+}
+
+/**
+ * Platform-aware replacement for in_array($from_id, $admin_ids).
+ * Uses the $admin_ids list already loaded by index.php when available;
+ * loads it from the database otherwise (cron / payment-callback contexts).
+ */
+function modasr_is_admin($fromId): bool
+{
+    global $admin_ids;
+    $ids = is_array($admin_ids) ? $admin_ids : null;
+    if ($ids === null && function_exists('select')) {
+        $ids = select("admin", "id_admin", null, null, "FETCH_COLUMN");
+    }
+    if (!is_array($ids)) {
+        return false;
+    }
+    foreach ($ids as $entry) {
+        if (modasr_admin_entry_matches((string) $entry, $fromId)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Raw messenger id of an admin entry (prefix stripped) — the value to use
+ * as chat_id when notifying this admin.
+ */
+function modasr_admin_chat_id(string $entry): string
+{
+    return modasr_admin_id_parts($entry)[1];
+}
+
+/**
+ * Platform-aware replacement for select("admin", "*", "id_admin", $from_id).
+ * Returns the matching admin row, or false when the sender is not an admin
+ * on the current platform.
+ */
+function modasr_admin_row_for($fromId)
+{
+    static $rows = null;
+    if ($rows === null) {
+        $rows = function_exists('select') ? select("admin", "*", null, null, "fetchAll") : [];
+        if (!is_array($rows)) {
+            $rows = [];
+        }
+    }
+    foreach ($rows as $row) {
+        if (is_array($row) && modasr_admin_entry_matches((string) ($row['id_admin'] ?? ''), $fromId)) {
+            return $row;
+        }
+    }
+    return false;
 }

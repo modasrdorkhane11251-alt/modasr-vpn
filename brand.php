@@ -21,6 +21,7 @@ $GLOBALS['MODASR_BRAND'] = [
         'telegram' => 'https://t.me/modasrpanel',
         'bale'     => 'https://ble.ir/modasrpanel',
         'rubika'   => 'https://rubika.ir/joing/BBIHBDHFD0NAYIDLGBSQYPOZBROKCTBQ',
+        'splus'    => 'https://splus.ir/MODASRbot',
     ],
     'donation'      => 'https://nowpayments.io/donation/Modasrbot',
     'colors'        => [

@@ -3,7 +3,7 @@ require_once 'config.php';
 $setting = select("setting", "*", null, null, "select");
 $textbotlang = languagechange();
 //-----------------------------[  text panel  ]-------------------------------
-$adminrulecheck = select("admin", "*", "id_admin", $from_id, "select");
+$adminrulecheck = modasr_admin_row_for($from_id);
 $admin_idss = $adminrulecheck ? 1 : 0;
 if (!$adminrulecheck) {
     $adminrulecheck = array(
@@ -758,7 +758,7 @@ $list_channels = [];
     $stmt = $pdo->prepare("SELECT * FROM channels");
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $platformTag = ['telegram' => '📱', 'bale' => '🟡', 'rubika' => '🟢'][$row['platform'] ?? 'telegram'] ?? '📱';
+        $platformTag = ['telegram' => '📱', 'bale' => '🟡', 'rubika' => '🟢', 'splus' => '🔵'][$row['platform'] ?? 'telegram'] ?? '📱';
         $list_channels[] = [$platformTag . ' ' . $row['link'], $row['link']];
     }
     $list_channels_join = [

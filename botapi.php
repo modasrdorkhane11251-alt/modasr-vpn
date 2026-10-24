@@ -161,6 +161,18 @@ function telegram($method, $datas = [], $token = null, $allowEmojiFallback = tru
     $tokenExplicit = $token !== null;
     $token = $token === null ? $APIKEY : $token;
 
+    // Platform-qualified chat ids ("splus:12345") force both the real
+    // chat_id and the routing platform — used for admin notification loops
+    // over platform-qualified admin entries (see modasr_admin_id_parts).
+    $forcedPlatform = null;
+    foreach (['chat_id', 'from_chat_id'] as $chatIdKey) {
+        if (isset($datas[$chatIdKey]) && is_string($datas[$chatIdKey])
+            && preg_match('/^(telegram|bale|rubika|splus):(.+)$/', $datas[$chatIdKey], $m)) {
+            $datas[$chatIdKey] = $m[2];
+            $forcedPlatform = $m[1];
+        }
+    }
+
     // Report-group traffic (forum topics / report channel) goes to Telegram,
     // because Telegram forum topics only exist on Telegram.
     if (function_exists('modasr_reports_route') && modasr_reports_route($method, $datas)) {
@@ -171,8 +183,8 @@ function telegram($method, $datas = [], $token = null, $allowEmojiFallback = tru
     // Decide which platform this call belongs to. With multi-platform setups
     // the recipient's chat_id tells us (Rubika GUIDs, or the user's stored
     // platform); single-platform installs just use the configured one.
-    $targetPlatform = modasr_platform();
-    if (isset($datas['chat_id']) && !isTelegramChatIdEmpty($datas['chat_id'])) {
+    $targetPlatform = $forcedPlatform ?? modasr_platform();
+    if ($forcedPlatform === null && isset($datas['chat_id']) && !isTelegramChatIdEmpty($datas['chat_id'])) {
         $targetPlatform = modasr_platform_for_chat($datas['chat_id']);
     }
     if (!$tokenExplicit) {
@@ -182,7 +194,7 @@ function telegram($method, $datas = [], $token = null, $allowEmojiFallback = tru
         }
     }
 
-    // Route through the target messenger platform (telegram / bale / rubika).
+    // Route through the target messenger platform (telegram / bale / rubika / splus).
     if ($targetPlatform !== 'telegram') {
         [$handled, $platformResult] = modasr_platform_request($method, $datas, $token, $targetPlatform);
         if ($handled) {

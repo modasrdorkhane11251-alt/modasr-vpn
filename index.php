@@ -19,11 +19,12 @@ if (!checktelegramip())
     die("Unauthorized access");
 #-----------end telegram_ip_ranges------------#
 $webhookSecret = ensureWebhookSecret();
-// The webhook secret applies to Telegram and Bale. Rubika webhooks are
-// registered in the Rubika bot panel and cannot carry our secret query
-// param — a documented platform limitation.
+// The webhook secret applies to Telegram, Bale and Soroush Plus (all three
+// register their webhook URL themselves, so it can carry our ?secret= query
+// param). Rubika webhooks are registered in the Rubika bot panel and cannot
+// carry our secret query param — a documented platform limitation.
 $webhookPlatform = modasr_platform();
-if (in_array($webhookPlatform, ['telegram', 'bale'], true) && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret'])) {
+if (in_array($webhookPlatform, ['telegram', 'bale', 'splus'], true) && $webhookSecret['secret'] !== '' && !webhookSecretMatches($webhookSecret['secret'])) {
     // Webhooks registered before secret enforcement do not carry the secret
     // yet: re-register once with the secret URL (grace), then enforce.
     if (!migrateWebhookSecretForPlatform($webhookPlatform, $webhookSecret['secret'])) {
@@ -61,8 +62,8 @@ if (is_array($keyboard_check) && preg_match('/[\x{600}-\x{6FF}\x{FB50}-\x{FDFF}]
     update("setting", "keyboardmain", $keyboardmain, null, null);
 }
 
-// Telegram user IDs are numeric; Bale IDs are numeric too, while Rubika
-// IDs are non-numeric GUIDs. Reject only empty/missing sender ids.
+// Telegram user IDs are numeric; Bale and Soroush Plus IDs are numeric too,
+// while Rubika IDs are non-numeric GUIDs. Reject only empty/missing sender ids.
 if (modasr_platform() === 'telegram') {
     if (intval($from_id) == 0)
         return;
@@ -192,7 +193,7 @@ if ($user['register'] == "none") {
 if (!in_array($user['agent'], ["n", "n2", "f"]))
     update("user", "agent", "f", "id", $from_id);
 #-----------User_Status------------#
-if ($user['User_Status'] == "block" && !in_array($from_id, $admin_ids)) {
+if ($user['User_Status'] == "block" && !modasr_is_admin($from_id)) {
     $textblock = sprintf($textbotlang['users']['block']['descriptions'], $user['description_blocking']);
     sendmessage($from_id, $textblock, null, 'html');
     return;
@@ -205,7 +206,7 @@ if (floor($TimeLastMessage / 60) >= 1) {
     $stmt->execute([$timebot, $from_id]);
     clearSelectCache('user');
 } else {
-    if (!in_array($from_id, $admin_ids)) {
+    if (!modasr_is_admin($from_id)) {
         $addmessage = intval($user['message_count']) + 1;
         update("user", "message_count", $addmessage, "id", $from_id);
         if (intval($addmessage) >= 35) {
@@ -277,7 +278,7 @@ if (strpos($text, "/start ") !== false && $user['step'] != "gettextSystemMessage
         $text = $affiliatesid;
     }
 }
-if (intval($user['verify']) == 0 && !in_array($from_id, $admin_ids) && $setting['verifystart'] == "onverify") {
+if (intval($user['verify']) == 0 && !modasr_is_admin($from_id) && $setting['verifystart'] == "onverify") {
     $textverify = sprintf($textbotlang['users']['account']['notVerifiedNotice'], $setting['id_support']);
     sendmessage($from_id, $textverify, null, 'html');
     return;
@@ -285,7 +286,7 @@ if (intval($user['verify']) == 0 && !in_array($from_id, $admin_ids) && $setting[
 ;
 
 #-----------roll------------#
-if ($setting['roll_Status'] == "rolleon" && $user['roll_Status'] == 0 && ($text != $textbotlang['keyboard']['acceptRulesButton'] and $datain != "acceptrule") && !in_array($from_id, $admin_ids)) {
+if ($setting['roll_Status'] == "rolleon" && $user['roll_Status'] == 0 && ($text != $textbotlang['keyboard']['acceptRulesButton'] and $datain != "acceptrule") && !modasr_is_admin($from_id)) {
     sendmessage($from_id, $textbotlang['textbot']['rules'], $confrimrolls, 'html');
     return;
 }
@@ -298,7 +299,7 @@ if ($text == $textbotlang['keyboard']['acceptRules'] or $datain == "acceptrule")
 }
 
 #-----------Bot_Status------------#
-if ($setting['Bot_Status'] == "botstatusoff" && !in_array($from_id, $admin_ids)) {
+if ($setting['Bot_Status'] == "botstatusoff" && !modasr_is_admin($from_id)) {
     sendmessage($from_id, $textbotlang['textbot']['botOff'], null, 'html');
     return;
 }
@@ -307,10 +308,10 @@ if ($user['joinchannel'] != "active") {
     if (count($channels_id) != 0) {
         $channels = channel($channels_id);
         if ($datain == "confirmchannel") {
-            // Rubika cannot verify channel membership through its API, so
-            // the gate is soft: tapping the confirm button is accepted and
-            // remembered for the user.
-            if (function_exists('modasr_platform') && modasr_platform() === 'rubika' && count($channels) != 0) {
+            // Rubika and Soroush Plus cannot verify channel membership
+            // through their APIs, so the gate is soft: tapping the confirm
+            // button is accepted and remembered for the user.
+            if (function_exists('modasr_platform') && in_array(modasr_platform(), ['rubika', 'splus'], true) && count($channels) != 0) {
                 update("user", "joinchannel", "active", "id", $from_id);
                 $channels = [];
             }
@@ -378,7 +379,7 @@ if ($user['joinchannel'] != "active") {
             }
             return;
         }
-        if (count($channels) != 0 && !in_array($from_id, $admin_ids)) {
+        if (count($channels) != 0 && !modasr_is_admin($from_id)) {
             $keyboardchannel = [
                 'inline_keyboard' => [],
             ];
@@ -1274,7 +1275,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     } else {
         $id_invoice = $dataget[1];
         $nameloc = select("invoice", "*", "id_invoice", $id_invoice, "select");
-        if ($nameloc && $nameloc['id_user'] != $from_id && !in_array($from_id, $admin_ids)) {
+        if ($nameloc && $nameloc['id_user'] != $from_id && !modasr_is_admin($from_id)) {
             $nameloc = false;
         }
     }
@@ -1296,7 +1297,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
 } elseif (preg_match('/configget_(.*)_(.*)/', $datain, $dataget)) {
     $id_invoice = $dataget[1];
     $nameloc = select("invoice", "*", "id_invoice", $id_invoice, "select");
-    if ($nameloc && $nameloc['id_user'] != $from_id && !in_array($from_id, $admin_ids)) {
+    if ($nameloc && $nameloc['id_user'] != $from_id && !modasr_is_admin($from_id)) {
         $nameloc = false;
     }
     if ($nameloc == false) {
@@ -1928,7 +1929,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $extend_json = json_encode($extend);
     $stmt->execute([$from_id, $nameloc['username'], $value, $type, $dateacc, $prodcut['price_product'], $extend_json, $status]);
     update("invoice", "Status", "active", "id_invoice", $id_invoice);
-    if (intval($setting['scorestatus']) == 1 and !in_array($from_id, $admin_ids)) {
+    if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['affiliates']['pointsEarned2Alt'], null, 'html');
         $scorenew = $user['score'] + 2;
         update("user", "score", $scorenew, "id", $from_id);
@@ -2197,7 +2198,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
             ]
         ]
     ]);
-    if (intval($setting['scorestatus']) == 1 and !in_array($from_id, $admin_ids)) {
+    if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
         $scorenew = $user['score'] + 1;
         update("user", "score", $scorenew, "id", $from_id);
@@ -2752,7 +2753,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
             ]
         ]
     ]);
-    if (intval($setting['scorestatus']) == 1 and !in_array($from_id, $admin_ids)) {
+    if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
         $scorenew = $user['score'] + 1;
         update("user", "score", $scorenew, "id", $from_id);
@@ -2897,7 +2898,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     ]);
     foreach ($admin_ids as $admin) {
         sendmessage($admin, $textinfoadmin, $confirmremoveadmin, 'html');
-        step("home", $admin);
+        step("home", modasr_admin_chat_id((string) $admin));
     }
     deletemessage($from_id, $message_id);
     sendmessage($from_id, $textbotlang['users']['status']['sendrequestsremove'], $keyboard, 'html');
@@ -2976,7 +2977,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         return;
     }
     $userlimit = select("user", "*", "id", $from_id, "select");
-    if ($userlimit['limit_usertest'] <= 0 && !in_array($from_id, $admin_ids)) {
+    if ($userlimit['limit_usertest'] <= 0 && !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['usertest']['limitwarning'], $keyboard_buy, 'html');
         return;
     }
@@ -4205,7 +4206,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
             sendmessage($user['affiliates'], $textadd, null, 'HTML');
         }
     }
-    if (intval($setting['scorestatus']) == 1 and !in_array($from_id, $admin_ids)) {
+    if (intval($setting['scorestatus']) == 1 and !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['affiliates']['pointsEarned1Alt'], null, 'html');
         $scorenew = $user['score'] + 1;
         update("user", "score", $scorenew, "id", $from_id);
@@ -5570,7 +5571,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $stmt->bindParam(':timefivemin', $timefivemin, PDO::PARAM_STR);
     $stmt->execute();
     $paymentcount = $stmt->rowCount();
-    if ($paymentcount != 0 and !in_array($from_id, $admin_ids)) {
+    if ($paymentcount != 0 and !modasr_is_admin($from_id)) {
         sendmessage($from_id, $textbotlang['users']['Balance']['receiptCooldown'], null, 'HTML');
         return;
     }
@@ -6838,10 +6839,10 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         ]
     ]);
     Editmessagetext($from_id, $message_id, $textbotlang['language']['setSuccess'], $keyboard_back);
-} elseif ($text != "" && $Chat_type == "private" && !in_array($from_id, $admin_ids)) {
+} elseif ($text != "" && $Chat_type == "private" && !modasr_is_admin($from_id)) {
     sendmessage($from_id, $textbotlang['users']['invalidCommand'], $keyboard, 'HTML');
 }
-if (in_array($from_id, $admin_ids))
+if (modasr_is_admin($from_id))
     require_once 'admin.php';
 
 $pdo = null;
