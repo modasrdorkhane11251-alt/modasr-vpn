@@ -20,11 +20,27 @@ try {
     die("error: database connection failed");
 }
 $APIKEY = '{API_KEY}';
-// Active messenger platform: 'telegram' | 'bale' | 'rubika'
+// Active messenger platform: 'telegram' | 'bale' | 'rubika' | 'splus'
 // For Bale use the token from @BotFather in Bale; for Rubika use the token
-// from the Rubika bot panel. Webhooks for Bale/Rubika are configured in their
-// respective bot panels, pointing to this same index.php endpoint.
+// from the Rubika bot panel; for Soroush Plus use the token from
+// splus.ir/botfather. Webhooks for Bale/Rubika/Soroush Plus point to this
+// same index.php endpoint with ?platform=... (and the webhook secret).
 $platform = '{platform}';
+// Multi-platform: tokens of the other messengers when running several
+// platforms at once on one installation. The token of the main platform
+// above ($APIKEY) can be left in its slot or here; both work.
+$PLATFORM_TOKENS = [
+    'telegram' => '{telegram_token}',
+    'bale'     => '{bale_token}',
+    'rubika'   => '{rubika_token}',
+    'splus'    => '{splus_token}',
+];
+// Optional: Telegram bot token used ONLY for the reports group (forum topics).
+// When the main platform is Bale/Rubika but you want the classic Telegram
+// topic-based report group, create a Telegram bot via @BotFather, put its
+// token here, add it to a Telegram supergroup with Topics enabled, then set
+// the group id from the bot admin panel (Report group setting).
+$REPORTS_BOT_TOKEN = '{reports_token}';
 $adminnumber = '{admin_number}';
 $domainhosts = '{domain_name}';
 $usernamebot = '{username_bot}';
