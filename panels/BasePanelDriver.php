@@ -79,11 +79,12 @@ abstract class BasePanelDriver
     protected function applyModify($username, $name_panel, $data)
     {
         $result = $this->manager->Modifyuser($username, $name_panel, $data);
-        if ($result['status'] == false) {
-            return array(
-                'status' => false,
-                'msg' => $result['msg']
-            );
+        if (!is_array($result) || ($result['status'] ?? false) == false) {
+            // Preserve extra classifier keys (ambiguous/http) for the ledger.
+            $out = is_array($result) ? $result : array();
+            $out['status'] = false;
+            $out['msg'] = $out['msg'] ?? null;
+            return $out;
         }
         return $result;
     }

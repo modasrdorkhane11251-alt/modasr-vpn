@@ -15,20 +15,42 @@ class MarzbanPanelDriver extends BasePanelDriver
         $domainhosts = $vars['domainhosts'];
         //create user
         $ConnectToPanel = adduser($Get_Data_Panel['name_panel'], $data_limit, $usernameC, $expire, $note, $Get_Data_Product['data_limit_reset'], $Get_Data_Product['name_product']);
-        if (!empty($ConnectToPanel['status']) && $ConnectToPanel['status'] >= 400) {
+        // Ambiguity classification (Phase E): only a reliable panel answer may
+        // be treated as definitive failure. curl errors / no HTTP status /
+        // 5xx / unreadable bodies mean the user may actually exist -> ambiguous.
+        if (!empty($ConnectToPanel['error']) || empty($ConnectToPanel['status'])) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => $ConnectToPanel['error'] ?? 'no response from panel',
+                'ambiguous' => true
+            );
+        }
+        if ($ConnectToPanel['status'] >= 500) {
             $errBody = json_decode($ConnectToPanel['body'] ?? '', true);
             return array(
                 'status' => 'Unsuccessful',
-                'msg' => is_array($errBody) && !empty($errBody['detail']) ? $errBody['detail'] : $ConnectToPanel['status']
+                'msg' => is_array($errBody) && !empty($errBody['detail']) ? $errBody['detail'] : $ConnectToPanel['status'],
+                'ambiguous' => true,
+                'http' => $ConnectToPanel['status']
             );
         }
-        if (!empty($ConnectToPanel['error'])) {
+        if ($ConnectToPanel['status'] >= 400) {
+            // 4xx = the panel reliably refused (duplicate username, validation, ...)
+            $errBody = json_decode($ConnectToPanel['body'] ?? '', true);
             return array(
                 'status' => 'Unsuccessful',
-                'msg' => $ConnectToPanel['error']
+                'msg' => is_array($errBody) && !empty($errBody['detail']) ? $errBody['detail'] : $ConnectToPanel['status'],
+                'http' => $ConnectToPanel['status']
             );
         }
         $data_Output = json_decode($ConnectToPanel['body'], true);
+        if (!is_array($data_Output)) {
+            return array(
+                'status' => 'Unsuccessful',
+                'msg' => 'invalid response body',
+                'ambiguous' => true
+            );
+        }
         if (!empty($data_Output['detail']) && $data_Output['detail']) {
             $Output['status'] = 'Unsuccessful';
             if ($data_Output['detail']) {
@@ -211,22 +233,42 @@ class MarzbanPanelDriver extends BasePanelDriver
             $config['proxy_settings'] = $result['proxy_settings'];
         }
         $modify = Modifyuser($name_panel, $username, $config);
+        // Phase E ambiguity classification: curl errors / missing status /
+        // 5xx / unreadable bodies mean the modification may have been applied.
         if (!empty($modify['error'])) {
             return array(
                 'status' => false,
-                'msg' => $modify['error']
+                'msg' => $modify['error'],
+                'ambiguous' => true
             );
-        } elseif (!empty($modify['status']) && $modify['status'] == 500) {
+        } elseif (empty($modify['status'])) {
             return array(
                 'status' => false,
-                'msg' => 'error code : ' . $modify['status']
+                'msg' => 'no response from panel',
+                'ambiguous' => true
+            );
+        } elseif ($modify['status'] >= 500) {
+            return array(
+                'status' => false,
+                'msg' => 'error code : ' . $modify['status'],
+                'ambiguous' => true,
+                'http' => $modify['status']
             );
         }
         $modifycheck = json_decode($modify['body'], true);
-        if (!empty($modifycheck['detail'])) {
+        if (!is_array($modifycheck)) {
             return array(
                 'status' => false,
-                'msg' => $modifycheck['detail']
+                'msg' => 'invalid response body',
+                'ambiguous' => true
+            );
+        }
+        if (!empty($modifycheck['detail'])) {
+            // 4xx detail = reliable refusal (e.g. user not found) -> definitive
+            return array(
+                'status' => false,
+                'msg' => $modifycheck['detail'],
+                'http' => $modify['status']
             );
         }
         return array(

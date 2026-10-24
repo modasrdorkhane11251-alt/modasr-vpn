@@ -252,15 +252,25 @@ class ManagePanel
         }
         $driver = PanelRegistry::driver($panel['type'], $this);
         if ($driver !== null && ($result = $driver->extendService(get_defined_vars())) !== BasePanelDriver::UNSUPPORTED) {
+            // Phase E: expose the values the extend was supposed to set so the
+            // ledger can verify delivery separately from mere user existence.
+            if (is_array($result)) {
+                $result['expected_data_limit'] = $data_limit_new;
+                $result['expected_expire'] = $time_new;
+            }
             return $result;
         }
         $extend = $this->Modifyuser($username, $panel['name_panel'], $data);
-        if ($extend['status'] == false) {
-            return array(
-                'status' => false,
-                'msg' => $extend['msg']
-            );
+        if (!is_array($extend) || $extend['status'] == false) {
+            $out = is_array($extend) ? $extend : array();
+            $out['status'] = false;
+            $out['msg'] = $out['msg'] ?? null;
+            $out['expected_data_limit'] = $data_limit_new;
+            $out['expected_expire'] = $time_new;
+            return $out;
         }
+        $extend['expected_data_limit'] = $data_limit_new;
+        $extend['expected_expire'] = $time_new;
         return $extend;
     }
     function extra_volume($username_account, $code_panel, $limit_volume_new)
