@@ -5,6 +5,7 @@ require_once __DIR__ . '/brand.php';
 require_once __DIR__ . '/lib/reseller.php';
 require_once __DIR__ . '/lib/ledger.php';
 require_once __DIR__ . '/lib/account_link.php';
+require_once __DIR__ . '/lib/miniapp_auth.php';
 ini_set('error_log', 'error_log');
 
 use Endroid\QrCode\Builder\Builder;

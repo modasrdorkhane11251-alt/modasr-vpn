@@ -58,8 +58,9 @@ if ($tokencheck === '') {
 
 // Authenticate before touching anything else: the session token, not the
 // client-supplied user_id, decides whose account this request acts on.
-$usercheck = select('user', "*", "token", $tokencheck, "select");
-if (!$usercheck || !is_string($usercheck['token']) || !hash_equals($usercheck['token'], $tokencheck)) {
+// Multi-session aware (miniapp_session) with legacy user.token fallback.
+$usercheck = miniapp_resolve_session($tokencheck);
+if (!$usercheck) {
     http_response_code(403);
     echo json_encode([
         'status' => false,

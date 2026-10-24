@@ -3473,6 +3473,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     $linkKeyboard = ['inline_keyboard' => [
         [['text' => $linkLang['getCode'], 'callback_data' => 'link_get_code']],
         [['text' => $linkLang['enterCode'], 'callback_data' => 'link_enter_code']],
+        [['text' => $linkLang['openMiniapp'], 'callback_data' => 'miniapp_link']],
     ]];
     if (!$overview['is_secondary']) {
         foreach ($overview['links'] as $lnk) {
@@ -3506,6 +3507,34 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         return;
     }
     Editmessagetext($from_id, $message_id, sprintf($linkLang['codeIssued'], $codeOrErr, $codeOrErr), $backKeyboard);
+    return;
+} elseif ($datain == "miniapp_link" || $text == "/app") {
+    // One-time magic link that opens the mini-app already signed in —
+    // for platforms without signed webview initData (rubika, browsers).
+    $linkLang = $textbotlang['users']['account']['linking'];
+    $backKeyboard = json_encode(['inline_keyboard' => [
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE);
+    $authToken = miniapp_issue_auth_token($from_id, modasr_platform());
+    if ($authToken === null) {
+        $rateText = $linkLang['miniappRateLimit'];
+        if ($datain == "miniapp_link") {
+            Editmessagetext($from_id, $message_id, $rateText, $backKeyboard);
+        } else {
+            sendmessage($from_id, $rateText, $backKeyboard, 'HTML');
+        }
+        return;
+    }
+    $miniappUrl = 'https://' . $domainhosts . '/app/?auth_token=' . $authToken;
+    $linkBtnKeyboard = json_encode(['inline_keyboard' => [
+        [['text' => $linkLang['openMiniapp'], 'url' => $miniappUrl]],
+        [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account_links']],
+    ]], JSON_UNESCAPED_UNICODE);
+    if ($datain == "miniapp_link") {
+        Editmessagetext($from_id, $message_id, $linkLang['miniappLink'], $linkBtnKeyboard);
+    } else {
+        sendmessage($from_id, $linkLang['miniappLink'], $linkBtnKeyboard, 'HTML');
+    }
     return;
 } elseif ($datain == "link_enter_code") {
     $linkLang = $textbotlang['users']['account']['linking'];

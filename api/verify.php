@@ -33,102 +33,6 @@ if (!function_exists('getallheaders')) {
     }
 }
 
-function normalize_init_value($value): string
-{
-    if (is_bool($value)) {
-        return $value ? 'true' : 'false';
-    }
-
-    if (is_array($value)) {
-        return json_encode($value, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-    }
-
-    if ($value === null) {
-        return '';
-    }
-
-    return (string) $value;
-}
-
-function validate_telegram_init_data($rawData, string $botToken): array
-{
-    if (is_string($rawData)) {
-        $rawData = trim($rawData);
-        if ($rawData === '') {
-            throw new InvalidArgumentException('Telegram init data is missing or invalid');
-        }
-
-        $decodedQuery = html_entity_decode($rawData, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-        parse_str($decodedQuery, $initData);
-    } elseif (is_array($rawData)) {
-        $initData = $rawData;
-    } else {
-        throw new InvalidArgumentException('Telegram init data is missing or invalid');
-    }
-
-    if (!is_array($initData) || $initData === []) {
-        throw new InvalidArgumentException('Telegram init data payload is empty');
-    }
-
-    if (!isset($initData['hash'])) {
-        throw new InvalidArgumentException('Telegram init data is missing required signature');
-    }
-
-    $receivedHash = (string) $initData['hash'];
-    unset($initData['hash']);
-
-    $dataCheckArray = [];
-    foreach ($initData as $key => $value) {
-        if ($value === null) {
-            continue;
-        }
-
-        $stringValue = normalize_init_value($value);
-        if ($stringValue === '') {
-            continue;
-        }
-
-        $dataCheckArray[] = $key . '=' . $stringValue;
-    }
-
-    if ($dataCheckArray === []) {
-        throw new InvalidArgumentException('Telegram init data payload is empty');
-    }
-
-    sort($dataCheckArray, SORT_STRING);
-    $dataCheckString = implode("\n", $dataCheckArray);
-
-    $secretKey = hash_hmac('sha256', $botToken, 'WebAppData', true);
-    $calculatedHash = hash_hmac('sha256', $dataCheckString, $secretKey);
-
-    if (!hash_equals($calculatedHash, $receivedHash)) {
-        throw new RuntimeException('User verification failed');
-    }
-
-    $authDate = isset($initData['auth_date']) ? (int) $initData['auth_date'] : 0;
-    if ($authDate <= 0) {
-        throw new RuntimeException('Telegram init data is missing auth_date');
-    }
-    if (time() - $authDate > 86400) {
-        throw new RuntimeException('Telegram init data has expired');
-    }
-
-    $userRaw = $initData['user'] ?? null;
-    if (is_string($userRaw)) {
-        $userData = json_decode($userRaw, true);
-    } elseif (is_array($userRaw)) {
-        $userData = $userRaw;
-    } else {
-        $userData = null;
-    }
-
-    if (!is_array($userData) || !isset($userData['id'])) {
-        throw new RuntimeException('User data is missing or malformed in init data');
-    }
-
-    return $userData;
-}
-
 $rawInput = file_get_contents('php://input');
 
 if ($rawInput === false) {
@@ -219,34 +123,37 @@ if ($candidates === []) {
     ]);
 }
 
-$lastException = null;
-$userData = null;
-
+// Multi-platform: the same initData scheme is used by telegram, bale and
+// splus webviews — each signs with ITS OWN bot token. Try every configured
+// platform token; the one whose signature matches tells us the platform.
+$identified = null;
+$sawSignatureFailure = false;
 foreach ($candidates as $candidate) {
     try {
-        $userData = validate_telegram_init_data($candidate, $APIKEY);
+        $identified = miniapp_identify_platform($candidate);
+    } catch (Throwable $e) {
+        $identified = null;
+    }
+    if ($identified !== null) {
         break;
-    } catch (InvalidArgumentException $exception) {
-        $lastException = $exception;
-        continue;
-    } catch (RuntimeException $exception) {
-        $lastException = $exception;
-        continue;
+    }
+    if (is_string($candidate) && strpos($candidate, 'hash=') !== false) {
+        $sawSignatureFailure = true;
     }
 }
 
-if ($userData === null) {
-    $message = $lastException ? $lastException->getMessage() : 'Telegram init data is missing or invalid';
-    $statusCode = $lastException instanceof RuntimeException ? 403 : 400;
-
-    respond_json($statusCode, [
+if ($identified === null) {
+    respond_json($sawSignatureFailure ? 403 : 400, [
         'status' => false,
-        'msg' => $message,
+        'msg' => $sawSignatureFailure ? 'User verification failed' : 'Telegram init data is missing or invalid',
         'token' => null,
     ]);
 }
 
-$userId = $userData['id'];
+$platform = $identified['platform'];
+$userData = $identified['user'];
+$userId = (string) $userData['id'];
+
 $userRecord = select('user', '*', 'id', $userId, 'select');
 
 if (!$userRecord) {
@@ -257,10 +164,25 @@ if (!$userRecord) {
     ]);
 }
 
+// The messenger id must belong to an account of the SAME platform the
+// signature came from — otherwise a numeric id collision across platforms
+// would let one platform's login open another platform's account.
+$recordPlatform = isset($userRecord['platform']) ? (string) $userRecord['platform'] : '';
+if ($recordPlatform !== '' && $recordPlatform !== $platform) {
+    error_log("miniapp verify: platform mismatch for user (signed=$platform, stored=$recordPlatform)");
+    respond_json(403, [
+        'status' => false,
+        'msg' => 'User verification failed',
+        'token' => null,
+    ]);
+}
+
+// Session is issued on the PRIMARY account (account linking), so the
+// mini-app always shows the shared wallet/services.
 try {
-    $randomString = bin2hex(random_bytes(20));
-} catch (Exception $exception) {
-    error_log('Failed to generate random token: ' . $exception->getMessage());
+    $sessionToken = miniapp_issue_session($userId, $platform);
+} catch (Throwable $exception) {
+    error_log('Failed to generate session token: ' . $exception->getMessage());
     respond_json(500, [
         'status' => false,
         'msg' => 'Failed to generate session token',
@@ -268,10 +190,8 @@ try {
     ]);
 }
 
-update('user', 'token', $randomString, 'id', $userId);
-
 respond_json(200, [
     'status' => true,
     'msg' => 'User verified',
-    'token' => $randomString,
+    'token' => $sessionToken,
 ]);
