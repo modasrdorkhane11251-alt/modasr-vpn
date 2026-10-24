@@ -28,6 +28,7 @@ $replacements = [
     'text_support' => $textbotlang['textbot']['support'],
     'text_help' => $textbotlang['textbot']['help'],
     'accountwallet' => $textbotlang['textbot']['accountWallet'],
+    'text_linkaccounts' => $textbotlang['textbot']['linkAccounts'],
     'text_sell' => $textbotlang['textbot']['sell'],
     'text_Tariff_list' => $textbotlang['textbot']['tariffList'],
     'text_affiliates' => $textbotlang['textbot']['affiliates'],
@@ -80,6 +81,9 @@ if ($setting['inlinebtnmain'] == "oninline" && !empty($keyboardRows)) {
             }
             if ($keyboard['text'] == "accountwallet") {
                 $trace_keyboard[$key][$keyboard_key]['callback_data'] = "account";
+            }
+            if ($keyboard['text'] == "text_linkaccounts") {
+                $trace_keyboard[$key][$keyboard_key]['callback_data'] = "account_links";
             }
             if ($keyboard['text'] == "text_Tariff_list") {
                 $trace_keyboard[$key][$keyboard_key]['callback_data'] = "Tariff_list";

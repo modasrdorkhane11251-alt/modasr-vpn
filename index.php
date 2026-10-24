@@ -58,7 +58,7 @@ $setting = select("setting", "*");
 $ManagePanel = new ManagePanel();
 $keyboard_check = json_decode($setting['keyboardmain'], true);
 if (is_array($keyboard_check) && preg_match('/[\x{600}-\x{6FF}\x{FB50}-\x{FDFF}]/u', $keyboard_check['keyboard'][0][0]['text'])) {
-    $keyboardmain = '{"keyboard":[[{"text":"text_sell"},{"text":"text_extend"}],[{"text":"text_usertest"},{"text":"text_wheel_luck"}],[{"text":"text_Purchased_services"},{"text":"accountwallet"}],[{"text":"text_affiliates"},{"text":"text_Tariff_list"}],[{"text":"text_support"},{"text":"text_help"}],[{"text":"text_agentpanel"},{"text":"text_requestagent"}]]}';
+    $keyboardmain = '{"keyboard":[[{"text":"text_sell"},{"text":"text_extend"}],[{"text":"text_usertest"},{"text":"text_wheel_luck"}],[{"text":"text_Purchased_services"},{"text":"accountwallet"}],[{"text":"text_linkaccounts"}],[{"text":"text_affiliates"},{"text":"text_Tariff_list"}],[{"text":"text_support"},{"text":"text_help"}],[{"text":"text_agentpanel"},{"text":"text_requestagent"}]]}';
     update("setting", "keyboardmain", $keyboardmain, null, null);
 }
 
@@ -241,6 +241,23 @@ if (floor($TimeLastMessage / 60) >= 1) {
     }
 }
 
+
+// Deep-link account linking: /start link_482916 redeems a link code
+// directly, without navigating the menu. Must run before the generic
+// /start affiliate parser below.
+if (preg_match('#^/start link_(\d{6})$#', $text, $linkMatch)) {
+    $linkLang = $textbotlang['users']['account']['linking'];
+    [$linkOk, $linkErr, $linkMerged] = accountLinkRedeemCode($linkMatch[1], $from_id, modasr_platform());
+    if ($linkOk) {
+        $linkPrimaryId = modasr_primary_user_id($from_id);
+        $linkPlatformLabels = ['telegram' => '📱 تلگرام', 'bale' => '🟡 بله', 'rubika' => '🟢 روبیکا', 'splus' => '🔵 سروش'];
+        sendmessage($from_id, sprintf($linkLang['linkOk'], number_format($linkMerged)), $keyboard, 'HTML');
+        sendmessage($linkPrimaryId, sprintf($linkLang['linkedNoticePrimary'], $from_id, $linkPlatformLabels[modasr_platform()] ?? modasr_platform(), number_format($linkMerged)), null, 'HTML');
+    } else {
+        sendmessage($from_id, $linkLang['errors'][$linkErr] ?? $linkLang['errors']['error'], $keyboard, 'HTML');
+    }
+    return;
+}
 
 if (strpos($text, "/start ") !== false && $user['step'] != "gettextSystemMessage") {
     $affiliatesid = explode(" ", $text)[1];
@@ -3438,7 +3455,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
     }
     step('home', $from_id);
     return;
-} elseif ($datain == "account_links") {
+} elseif ($datain == "account_links" || $text == $textbotlang['textbot']['linkAccounts'] || $text == "/link") {
     // Cross-platform account linking overview.
     $linkLang = $textbotlang['users']['account']['linking'];
     $overview = accountLinkList($from_id);
@@ -3471,7 +3488,12 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         ]];
     }
     $linkKeyboard['inline_keyboard'][] = [['text' => $textbotlang['users']['backbtn'], 'callback_data' => 'account']];
-    Editmessagetext($from_id, $message_id, sprintf($linkLang['menuTitle'], $overview['primary'], $lines), json_encode($linkKeyboard, JSON_UNESCAPED_UNICODE));
+    $linkText = sprintf($linkLang['menuTitle'], $overview['primary'], $lines);
+    if ($datain == "account_links") {
+        Editmessagetext($from_id, $message_id, $linkText, json_encode($linkKeyboard, JSON_UNESCAPED_UNICODE));
+    } else {
+        sendmessage($from_id, $linkText, json_encode($linkKeyboard, JSON_UNESCAPED_UNICODE), 'HTML');
+    }
     return;
 } elseif ($datain == "link_get_code") {
     $linkLang = $textbotlang['users']['account']['linking'];
@@ -3483,7 +3505,7 @@ if ($text == "/start" || $datain == "start" || $text == "start") {
         Editmessagetext($from_id, $message_id, $linkLang['errors'][$codeOrErr] ?? $linkLang['errors']['error'], $backKeyboard);
         return;
     }
-    Editmessagetext($from_id, $message_id, sprintf($linkLang['codeIssued'], $codeOrErr), $backKeyboard);
+    Editmessagetext($from_id, $message_id, sprintf($linkLang['codeIssued'], $codeOrErr, $codeOrErr), $backKeyboard);
     return;
 } elseif ($datain == "link_enter_code") {
     $linkLang = $textbotlang['users']['account']['linking'];

@@ -469,7 +469,7 @@ Use the button below to pay👇🏻',
                                 'linkRow' => "\n▫️ %s — <code>%s</code>",
                                 'getCode' => '➕ Get link code (this account stays primary)',
                                 'enterCode' => '📥 Enter link code (link this account)',
-                                'codeIssued' => "🔑 Your link code: <code>%s</code>\n\n⏱ Valid for 5 minutes, one-time use.\n\nOpen the bot on your other messenger, go to “Linked platform accounts” and enter this code.",
+                                'codeIssued' => "🔑 Your link code: <code>%s</code>\n\n⏱ Valid for 5 minutes, one-time use.\n\n📥 Option 1: in the bot on your other messenger tap «🔗 Linked platforms» → «Enter link code» and send the code.\n\n⚡️ Option 2 (quick): just send this command in the other bot:\n<code>/start link_%s</code>",
                                 'askCode' => '📥 Send the 6-digit link code you received in the bot on your other messenger:',
                                 'linkOk' => "✅ Accounts linked successfully.\n💰 %s Toman was moved to the primary account.\nYour balance and services are now shared across all platforms.",
                                 'linkedNoticePrimary' => "🔗 Account <code>%s</code> (%s) was linked to your account.\n💰 %s Toman was added to your balance.\nIf this wasn't you, unlink it from “Linked platform accounts”.",
@@ -3609,6 +3609,7 @@ Follow the steps above, then send the address below:
         ],
         'textbot' => [
                 'accountWallet' => '🏦 Wallet + Top-up',
+                'linkAccounts' => '🔗 Linked platforms',
                 'addBalance' => '💰 Increase balance',
                 'affiliates' => '👥 Referral collection',
                 'afterPay' => '✅ Service was created successfully
