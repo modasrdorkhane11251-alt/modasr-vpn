@@ -95,7 +95,7 @@ ledgerChargeOperation($op4);
 ok(ledgerMarkUnknown($op4, 'timeout') === true, 'charged -> unknown');
 ok(ledgerRefundOperation($op4, 'try auto refund') === false, 'refund on unknown op REFUSED (no auto-refund without verification)');
 ok($balOf($LA) === 400, 'unknown op keeps the charge in place');
-ok(ledgerTransition($op4, ['unknown'], 'succeeded') === false, 'unknown -> succeeded refused (terminal for automation)');
+ok(ledgerMarkSucceeded($op4) === false, 'unknown -> succeeded refused via safe wrapper (terminal for automation)');
 
 /* ---------- 7. zero-amount op ---------- */
 $op5 = 'lt_op5_' . bin2hex(random_bytes(3));
@@ -173,6 +173,7 @@ ok(ledgerClassifyMarzbanGetuser(null)['result'] === 'unknown', 'null response = 
 ok(ledgerClassifyMarzbanGetuser(['error' => 'token failed'])['result'] === 'unknown', 'token error = unknown');
 
 /* ---------- panel unreachable -> verification stays unknown ---------- */
+require_once __DIR__ . '/../panels.php'; // provides getuser() for marzban panels
 $pdo->exec("INSERT INTO marzban_panel (name_panel, url_panel, username_panel, password_panel, type, code_panel) VALUES ('lt_panel_dead', 'https://127.0.0.1:9', 'x', 'x', 'marzban', 'ltdead')");
 clearSelectCache('marzban_panel');
 $v = ledgerVerifyUserExists('lt_panel_dead', 'somebody');
